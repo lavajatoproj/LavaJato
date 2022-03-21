@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Filtro View Controller-->
+        <!--Filtros-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="FiltroViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,6 +80,9 @@
                             <constraint firstItem="RNh-pd-yyo" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="v0I-pC-2M1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Filtros" id="t6j-rC-btB">
+                        <barButtonItem key="backBarButtonItem" title=" " id="LfM-6U-Jzx"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="obu-ie-ub5" kind="show" identifier="maps" id="DWh-Om-Jj5"/>
                     </connections>
