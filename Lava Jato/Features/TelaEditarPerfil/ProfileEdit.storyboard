@@ -259,8 +259,8 @@
                             <constraint firstItem="RXb-AY-L5K" firstAttribute="leading" secondItem="7EX-0E-LFI" secondAttribute="leading" id="yTY-kk-BAG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Editar Perfil" id="QJ4-wp-AQc">
-                        <barButtonItem key="backBarButtonItem" title=" " id="GRG-Of-Cyp"/>
+                    <navigationItem key="navigationItem" title="Editar Perfil" id="5pU-bN-tsH">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Q4D-gM-PMw"/>
                     </navigationItem>
                     <connections>
                         <outlet property="changePasswordButton" destination="90K-Yo-nex" id="puk-qD-joq"/>

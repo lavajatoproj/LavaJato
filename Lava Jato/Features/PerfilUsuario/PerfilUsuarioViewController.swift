@@ -68,6 +68,7 @@ class PerfilUsuarioViewController: UIViewController {
     func Style(){
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
+        
     }
 
     // método para configurar o Gesture
