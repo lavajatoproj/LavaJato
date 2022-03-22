@@ -16,7 +16,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmS-bZ-5AY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4418" y="99"/>
+            <point key="canvasLocation" x="4457" y="117"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="s0d-6b-0kx">
@@ -199,7 +199,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="59H-Fn-VK9" kind="show" identifier="helpPageSegue" id="6nG-bX-m1D"/>
+                                                    <action selector="tappedHelpButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NpL-ed-2Lr"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1o-0R-MAO">
@@ -261,8 +261,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="tappedLogoutButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZfS-bx-4YG"/>
-                                                    <segue destination="ua3-jT-l4T" kind="presentation" identifier="exitAppSegue" modalPresentationStyle="fullScreen" id="XXd-3H-QLF"/>
+                                                    <action selector="tappedLogoutButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ulh-sp-CEg"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="74U-2Q-I6K">
@@ -355,7 +354,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="A9D-wy-DN1" kind="show" identifier="editProfileSegue" id="Oph-2P-817"/>
+                                    <action selector="tappedEditProfile:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="M49-BE-4Rv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -406,6 +405,9 @@
                         <outlet property="tappedRecomendButton" destination="p1o-0R-MAO" id="bHF-QE-Rah"/>
                         <segue destination="BOT-9x-kaN" kind="show" identifier="notificationSegue" id="Wnc-5k-UgM"/>
                         <segue destination="9Dx-YO-fqB" kind="show" identifier="meusServicos" id="GuJ-sl-Wce"/>
+                        <segue destination="A9D-wy-DN1" kind="show" id="rEc-3z-YS6"/>
+                        <segue destination="59H-Fn-VK9" kind="show" id="Xdz-s3-xvG"/>
+                        <segue destination="LKo-W8-IxJ" kind="show" id="iy2-5i-sOz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -425,12 +427,12 @@
         <!--meusServicos-->
         <scene sceneID="znc-0s-S20">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G8X-bY-Dae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="meusServicos" id="9Dx-YO-fqB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="MOE-CQ-ghO"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8X-bY-Dae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4470" y="135"/>
+            <point key="canvasLocation" x="4458" y="173"/>
         </scene>
         <!--ScreenHelp-->
         <scene sceneID="lIV-ut-cB9">
@@ -440,17 +442,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRz-2a-U4w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4449" y="171"/>
+            <point key="canvasLocation" x="4459" y="238"/>
         </scene>
         <!--Login-->
-        <scene sceneID="NdT-4B-vtH">
+        <scene sceneID="RBi-No-43y">
             <objects>
-                <viewControllerPlaceholder storyboardName="Login" id="ua3-jT-l4T" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Y4B-Cd-6e8"/>
+                <viewControllerPlaceholder storyboardName="Login" id="LKo-W8-IxJ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FhF-zV-2Zp"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sRG-lT-zWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2x-Af-k6L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4421" y="204"/>
+            <point key="canvasLocation" x="4449" y="306"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nj7-eA-mrb">

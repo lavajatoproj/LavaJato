@@ -12,7 +12,7 @@
         <!--Editar Perfil-->
         <scene sceneID="s2g-S8-ehW">
             <objects>
-                <viewController id="kqS-JS-xWW" customClass="profileEditViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileEdit" id="kqS-JS-xWW" customClass="profileEditViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3l6-yM-uW3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="tappedChangePassword:" destination="kqS-JS-xWW" eventType="touchUpInside" id="afR-fA-Rt7"/>
-                                            <segue destination="ZNf-8G-49D" kind="show" identifier="changePasswordSegue" id="UZQ-c0-qaq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz7-UV-nXV">
@@ -261,7 +260,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Editar Perfil" id="QJ4-wp-AQc">
-                        <barButtonItem key="backBarButtonItem" title="&quot;&quot;" id="cde-gH-jKT"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="GRG-Of-Cyp"/>
                     </navigationItem>
                     <connections>
                         <outlet property="changePasswordButton" destination="90K-Yo-nex" id="puk-qD-joq"/>
@@ -272,32 +271,11 @@
                         <outlet property="nameTextField" destination="Zf4-eB-7vG" id="OXK-Ak-txY"/>
                         <outlet property="numberTextField" destination="wpg-XO-tLY" id="slb-V8-b1K"/>
                         <outlet property="saveButton" destination="U0R-wB-3nJ" id="0Bf-Ju-cmX"/>
-                        <segue destination="NcF-tP-r6G" kind="show" id="Sp6-42-BUV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6W-CE-YPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1300" y="39.508928571428569"/>
-        </scene>
-        <!--meusServicos-->
-        <scene sceneID="oHA-w8-nvR">
-            <objects>
-                <viewControllerPlaceholder storyboardName="meusServicos" id="NcF-tP-r6G" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="OUf-at-mvY"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tFa-5T-ufI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2071" y="-15"/>
-        </scene>
-        <!--RecuperarSenha-->
-        <scene sceneID="6ZE-Kc-6L7">
-            <objects>
-                <viewControllerPlaceholder storyboardName="RecuperarSenha" id="ZNf-8G-49D" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="1dC-4R-U3N"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z4D-py-ZIq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2009" y="55"/>
         </scene>
     </scenes>
     <resources>

@@ -42,6 +42,56 @@ extension TelaPrincipal:UICollectionViewDataSource{
         cell.desingMyCell()
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.item == 0 {
+            let storyboard = UIStoryboard(name: "listaDeServicos", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "listaDeServicos")
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        if indexPath.item == 1 {
+            let storyboard = UIStoryboard(name: "listaDeServicos", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "listaDeServicos")
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        if indexPath.item == 2 {
+            let storyboard = UIStoryboard(name: "listaDeServicos", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "listaDeServicos")
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        if indexPath.item == 3 {
+            let storyboard = UIStoryboard(name: "listaDeServicos", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "listaDeServicos")
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        if indexPath.item == 4 {
+            let storyboard = UIStoryboard(name: "listaDeServicos", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "listaDeServicos")
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        if indexPath.item == 5 {
+            let storyboard = UIStoryboard(name: "listaDeServicos", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "listaDeServicos")
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        if indexPath.item == 6 {
+            let storyboard = UIStoryboard(name: "listaDeServicos", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "listaDeServicos")
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        if indexPath.item == 7 {
+            let storyboard = UIStoryboard(name: "listaDeServicos", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "listaDeServicos")
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 }
 
 

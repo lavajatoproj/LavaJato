@@ -23,16 +23,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showResetPassword(_ sender: Any) {
-        performSegue(withIdentifier: "password", sender: nil)
+//        let storyboard = UIStoryboard(name: "RecuperarSenha", bundle: nil)
+//        let vC = storyboard.instantiateViewController(withIdentifier: "RecuperarSenha")
+//        navigationController?.pushViewController(vC, animated: true)
+        
+        self.performSegue(withIdentifier: "RecuperarSenha", sender: nil)
     }
     
     @IBAction func Login(_ sender: Any) {
-        self.performSegue(withIdentifier: "telaPrincipal", sender: nil)
+        self.performSegue(withIdentifier: "telaPrincipalsegue", sender: nil)
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "screenRegisterSegue", sender: nil)
+        self.performSegue(withIdentifier: "screenRegister", sender: nil)
     }
+    
+    
     
     
     func setupLayout(){

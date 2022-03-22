@@ -13,12 +13,12 @@
         <!--Meus Serviços-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="meusServicosViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="meusServicos" id="Y6W-OH-hqX" customClass="meusServicosViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-Sc-fkL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-Sc-fkL">
                                 <rect key="frame" x="0.0" y="-15" width="414" height="911"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYd-vd-LMw">
@@ -41,7 +41,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.8519124416326056" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Vuo-ss-rjR" firstAttribute="leading" secondItem="RYd-vd-LMw" secondAttribute="leading" id="1pH-KV-kR4"/>
                                     <constraint firstItem="Vuo-ss-rjR" firstAttribute="top" secondItem="RYd-vd-LMw" secondAttribute="top" id="D5j-rS-Hjw"/>
@@ -177,13 +177,14 @@
         <!--Navigation Controller-->
         <scene sceneID="Zf5-r1-LEP">
             <objects>
-                <navigationController storyboardIdentifier="meusServicos" automaticallyAdjustsScrollViewInsets="NO" id="1H9-Z1-aIq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1H9-Z1-aIq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="buttom_car" id="dm9-nd-NZp"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="atY-kE-Y5y">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="ColorDefault"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" name="ColorDefault"/>
                         </textAttributes>
