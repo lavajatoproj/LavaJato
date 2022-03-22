@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pME-Od-2HJ">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
         <!--Cadastro-->
         <scene sceneID="eaI-ix-Dm2">
             <objects>
-                <viewController id="pME-Od-2HJ" customClass="cadastroViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="screenRegister" id="pME-Od-2HJ" customClass="cadastroViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yc7-b6-1lZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -372,7 +372,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="tappedBackLogin:" destination="pME-Od-2HJ" eventType="touchUpInside" id="hYo-Gz-dZr"/>
-                                    <segue destination="dTW-xF-upF" kind="presentation" identifier="backLoginSegue" modalPresentationStyle="fullScreen" id="RVC-lD-yPB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -420,16 +419,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zen-tO-b8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2097" y="284"/>
-        </scene>
-        <!--Login-->
-        <scene sceneID="crs-hG-jDX">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Login" id="dTW-xF-upF" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="PFU-Ah-KZW"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c5W-kT-Tmd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1604" y="489"/>
         </scene>
     </scenes>
     <resources>

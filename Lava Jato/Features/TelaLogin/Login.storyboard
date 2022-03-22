@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login-->
+        <!--View Controller-->
         <scene sceneID="Gfu-v7-9af">
             <objects>
-                <viewController title="Login" modalPresentationStyle="fullScreen" id="S5w-gv-iWR" customClass="ViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" modalPresentationStyle="fullScreen" id="S5w-gv-iWR" customClass="ViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e76-do-izW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="9eb-xb-DRX">
-                                <rect key="frame" x="0.0" y="-44" width="414" height="946"/>
+                                <rect key="frame" x="0.0" y="-56" width="414" height="958"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cHC-hS-hhb">
                                 <rect key="frame" x="20" y="104" width="374" height="89"/>
@@ -68,7 +68,7 @@
                                     <color key="baseForegroundColor" red="0.0" green="0.21960784310000001" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="Login:" destination="S5w-gv-iWR" eventType="touchUpInside" id="Rez-OK-BzT"/>
+                                    <action selector="Login:" destination="S5w-gv-iWR" eventType="touchUpInside" id="vXX-SW-mNd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ad-ji-L26">
@@ -90,8 +90,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="tappedRegisterButton:" destination="S5w-gv-iWR" eventType="touchUpInside" id="eEK-bh-VTr"/>
-                                    <segue destination="9qQ-ad-ATC" kind="presentation" identifier="screenRegisterSegue" modalPresentationStyle="fullScreen" id="5au-jC-yla"/>
+                                    <action selector="tappedRegisterButton:" destination="S5w-gv-iWR" eventType="touchUpInside" id="4Up-UU-SQe"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face 1" translatesAutoresizingMaskIntoConstraints="NO" id="EIM-yt-Xeh">
@@ -118,7 +117,7 @@
                                     <color key="baseForegroundColor" red="0.95686274510000002" green="0.73725490199999999" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="showResetPassword:" destination="S5w-gv-iWR" eventType="touchUpInside" id="FcL-8W-U1Y"/>
+                                    <action selector="showResetPassword:" destination="S5w-gv-iWR" eventType="touchUpInside" id="GX8-AK-MQc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -146,7 +145,7 @@
                             <constraint firstItem="LT6-K7-MEb" firstAttribute="trailing" secondItem="UQ5-zM-Lo6" secondAttribute="trailing" constant="40" id="gjV-bX-Ite"/>
                             <constraint firstItem="qf8-qH-4ez" firstAttribute="leading" secondItem="LT6-K7-MEb" secondAttribute="leading" constant="40" id="hNA-JT-D4u"/>
                             <constraint firstItem="LT6-K7-MEb" firstAttribute="trailing" secondItem="qf8-qH-4ez" secondAttribute="trailing" constant="40" id="i3F-jE-jer"/>
-                            <constraint firstItem="9eb-xb-DRX" firstAttribute="top" secondItem="LT6-K7-MEb" secondAttribute="top" constant="-88" id="jZi-VW-JU4"/>
+                            <constraint firstItem="9eb-xb-DRX" firstAttribute="top" secondItem="LT6-K7-MEb" secondAttribute="top" constant="-100" id="jZi-VW-JU4"/>
                             <constraint firstItem="LT6-K7-MEb" firstAttribute="trailing" secondItem="9eb-xb-DRX" secondAttribute="trailing" id="l26-LN-wDW"/>
                             <constraint firstItem="cHC-hS-hhb" firstAttribute="top" secondItem="LT6-K7-MEb" secondAttribute="top" constant="60" id="lVc-M4-AkY"/>
                             <constraint firstItem="EIM-yt-Xeh" firstAttribute="top" secondItem="KNt-Lj-FFi" secondAttribute="bottom" constant="20" id="m1h-zi-BXe"/>
@@ -162,28 +161,31 @@
                         <outlet property="btRegister" destination="0ad-ji-L26" id="nTn-nV-hoO"/>
                         <outlet property="tfEmail" destination="UQ5-zM-Lo6" id="6cl-Xu-xlr"/>
                         <outlet property="tfPassword" destination="P1U-qE-vra" id="oL6-uc-GLA"/>
-                        <segue destination="AXu-fg-QEO" kind="presentation" identifier="telaPrincipal" modalPresentationStyle="fullScreen" id="qmY-Tu-FYC"/>
-                        <segue destination="Y64-TY-bWd" kind="show" identifier="password" id="5m2-l3-w9X"/>
+                        <segue destination="lr5-3J-2vj" kind="show" identifier="RecuperarSenha" id="Cnq-9R-66F"/>
+                        <segue destination="9qQ-ad-ATC" kind="show" identifier="screenRegister" id="FjF-KU-NeZ"/>
+                        <segue destination="AXu-fg-QEO" kind="presentation" identifier="telaPrincipalsegue" modalPresentationStyle="fullScreen" id="0k3-hu-VMG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9R-q9-3UQ" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="257" y="78"/>
         </scene>
-        <!--password-->
-        <scene sceneID="M9Q-Wa-3xO">
+        <!--RecuperarSenha-->
+        <scene sceneID="RBF-2s-3wq">
             <objects>
-                <viewControllerPlaceholder storyboardName="RecuperarSenha" referencedIdentifier="password" id="Y64-TY-bWd" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="2af-l9-vjd"/>
+                <viewControllerPlaceholder storyboardName="RecuperarSenha" id="lr5-3J-2vj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gwF-OR-kVk"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IbC-9d-6eC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j4S-SC-jow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="-38"/>
+            <point key="canvasLocation" x="942" y="-8"/>
         </scene>
         <!--TelaPrincipal-->
         <scene sceneID="D0r-s1-Vsq">
             <objects>
-                <viewControllerPlaceholder storyboardName="TelaPrincipal" id="AXu-fg-QEO" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="TelaPrincipal" id="AXu-fg-QEO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4h0-jU-l6R"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ie4-K8-Wnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1032" y="106"/>
@@ -196,7 +198,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1Q-WQ-RQD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="268"/>
+            <point key="canvasLocation" x="998" y="190"/>
         </scene>
     </scenes>
     <resources>

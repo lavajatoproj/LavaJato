@@ -25,6 +25,7 @@ class listaDeServicosViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedRow = self.arrayNomes[indexPath.row]
         performSegue(withIdentifier: "solicitacaoDeServico", sender: selectedRow)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
     

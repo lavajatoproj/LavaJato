@@ -117,9 +117,7 @@ class cadastroViewController: UIViewController {
             self.tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height, width: frames.width, height: 0)
         }, completion: nil)
     }
-    
-    /////////////////////////////////////////////////////////////////
-    
+
     
     //barra com botao done para o datepicker
     func createToolbar () -> UIToolbar {
@@ -155,7 +153,7 @@ class cadastroViewController: UIViewController {
         selectedButton = btnSelectGender
         addTransparentView(frames: btnSelectGender.frame)
     }
-    ////////////////////////////////////////////////////////////////
+
 
     //configurações do checkbox dos termos de uso
     @IBAction func tappedCheckBox(_ sender: UIButton) {
@@ -175,7 +173,7 @@ class cadastroViewController: UIViewController {
     }
     
     @IBAction func tappedBackLogin(_ sender: UIButton) {
-        performSegue(withIdentifier: "backLoginSegue", sender: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     func Style(){

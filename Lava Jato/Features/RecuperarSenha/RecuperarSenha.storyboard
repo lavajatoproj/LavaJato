@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Reset Password View Controller-->
+        <!--Recuperar Senha-->
         <scene sceneID="i9v-tw-TdO">
             <objects>
-                <viewController storyboardIdentifier="password" id="eKJ-vl-At3" customClass="resetPasswordViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecuperarSenha" id="eKJ-vl-At3" customClass="resetPasswordViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zw0-Gg-OpI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
                             <constraint firstAttribute="bottom" secondItem="WmL-Ve-dME" secondAttribute="bottom" constant="-40" id="veF-2h-1vW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mtq-1o-Wum"/>
+                    <navigationItem key="navigationItem" title="Recuperar Senha" id="FCw-cZ-vfd"/>
                     <connections>
                         <outlet property="changerEmail" destination="gWR-hY-Ssv" id="LHD-YD-Up1"/>
                         <outlet property="sendEmail" destination="eAn-ks-dEa" id="GLh-8I-3g2"/>

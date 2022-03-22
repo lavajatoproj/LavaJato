@@ -11,7 +11,7 @@
         <!--Ajuda-->
         <scene sceneID="uRy-nh-5eQ">
             <objects>
-                <viewController id="eE9-TG-Yrr" customClass="HelpViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScreenHelp" id="eE9-TG-Yrr" customClass="HelpViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gXh-ZU-83t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

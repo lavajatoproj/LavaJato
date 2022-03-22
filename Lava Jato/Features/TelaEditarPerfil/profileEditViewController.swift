@@ -114,12 +114,15 @@ class profileEditViewController: UIViewController {
     }
     
     @IBAction func tappedChangePassword(_ sender: UIButton) {
-//        performSegue(withIdentifier: "changePasswordSegue", sender: nil)
+        let storyboard = UIStoryboard(name: "ChangePasswordViewController", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "ChangePasswordViewController")
+        navigationController?.pushViewController(vC, animated: true)
     }
     
     @IBAction func tappedChangeService(_ sender: UIButton) {
-        let myVC = storyboard?.instantiateViewController(withIdentifier: "meusServicos") as! meusServicosViewController
-        navigationController?.pushViewController(myVC, animated: true)
+        let storyboard = UIStoryboard(name: "meusServicos", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "meusServicos")
+        navigationController?.pushViewController(vC, animated: true)
     }
     
     

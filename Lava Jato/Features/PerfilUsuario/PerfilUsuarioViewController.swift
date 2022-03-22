@@ -9,7 +9,6 @@ import UIKit
 
 class PerfilUsuarioViewController: UIViewController {
 
-    
     @IBOutlet weak var tappedMuteSwitch: UISwitch!
     @IBOutlet weak var muteImageView: UIImageView!
     @IBOutlet weak var tappedMyServiceButton: UIButton!
@@ -24,30 +23,45 @@ class PerfilUsuarioViewController: UIViewController {
 //        configGesture()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     @IBAction func tappedMuteSwitch(_ sender: UISwitch) {
     }
     
     
     @IBAction func tappedMyServiceButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "meusServicos", sender: nil)
+        let storyboard = UIStoryboard(name: "meusServicos", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "meusServicos")
+        navigationController?.pushViewController(vC, animated: true)
     }
     
     @IBAction func tappedHelpButton(_ sender: UIButton) {
-//        performSegue(withIdentifier: "helpPageSegue", sender: nil)
+        let storyboard = UIStoryboard(name: "ScreenHelp", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "ScreenHelp")
+        navigationController?.pushViewController(vC, animated: true)
     }
     
     @IBAction func tappedRecomendButton(_ sender: UIButton) {
     }
     
     @IBAction func tappedLogoutButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "exitAppSegue", sender: nil)
+        let storyboard = UIStoryboard(name: "Login", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "Login")
+        UIApplication.shared.keyWindow?.rootViewController = vC
     }
     
     @IBAction func tappedEditProfile(_ sender: UIButton) {
-//        performSegue(withIdentifier: "editProfileSegue", sender: nil)
+        let storyboard = UIStoryboard(name: "ProfileEdit", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "ProfileEdit")
+        navigationController?.pushViewController(vC, animated: true)
     }
+    
     @IBAction func tappedNotification(_ sender: UIButton) {
-        performSegue(withIdentifier: "notificationSegue", sender: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "Main")
+        navigationController?.pushViewController(vC, animated: true)
     }
     
     

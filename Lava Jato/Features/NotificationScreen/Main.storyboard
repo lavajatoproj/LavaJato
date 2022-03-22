@@ -11,7 +11,7 @@
         <!--Notificações-->
         <scene sceneID="x7S-zA-3JF">
             <objects>
-                <viewController id="mBV-G2-uKt" customClass="NotificationViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="mBV-G2-uKt" customClass="NotificationViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AGg-Sf-acf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

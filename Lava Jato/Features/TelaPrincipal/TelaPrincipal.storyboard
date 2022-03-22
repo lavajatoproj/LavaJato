@@ -12,7 +12,7 @@
         <!--Serviços-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="TelaPrincipal" customModule="Lava_Jato" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="telaPrincipal" id="Y6W-OH-hqX" customClass="TelaPrincipal" customModule="Lava_Jato" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +71,6 @@
                                         <connections>
                                             <outlet property="nameServicoLabel" destination="Gnm-IK-V7w" id="wWH-JX-Dqp"/>
                                             <outlet property="servicoImageView" destination="yqj-Jb-Whb" id="j6I-Hx-M5w"/>
-                                            <segue destination="FN2-4S-NbJ" kind="show" id="Dy4-vO-hsq"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -90,10 +89,13 @@
                             <constraint firstItem="8p8-25-6UH" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="vml-I7-myD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Serviços" largeTitleDisplayMode="always" id="Su0-aN-W4q"/>
+                    <navigationItem key="navigationItem" title="Serviços" largeTitleDisplayMode="always" id="Su0-aN-W4q">
+                        <barButtonItem key="backBarButtonItem" title=" " id="oob-M9-Ayc"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cvCollectionView" destination="2wB-1a-sel" id="lK7-FP-VTK"/>
+                        <segue destination="FN2-4S-NbJ" kind="show" id="Zwf-Y7-27c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -143,7 +145,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="J7x-vJ-BxK">
             <objects>
-                <tabBarController storyboardIdentifier="telaPrincipal" automaticallyAdjustsScrollViewInsets="NO" id="UQ5-09-E9z" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="UQ5-09-E9z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U50-31-ZAL">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
