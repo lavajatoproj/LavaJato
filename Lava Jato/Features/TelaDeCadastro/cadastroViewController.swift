@@ -168,6 +168,15 @@ class cadastroViewController: UIViewController {
             sender.setBackgroundImage(UIImage(named: "checkbox1"), for: UIControl.State.normal)
             checkboxFlag = false
         }
+        if self.checkboxFlag == true {
+            if self.nameRegisterTextField.textColor != UIColor.red && self.numberRegisterTextField.textColor != UIColor.red && self.dateRegisterTextField.textColor != UIColor.red && self.documentRegisterTextField.textColor != UIColor.red && self.estadoCivilRegisterTextField.textColor != UIColor.red && self.estadoCivilRegisterTextField.layer.borderColor != UIColor.red.cgColor && self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.estadoCivilRegisterTextField.text != "" && self.btnSelectGender.titleLabel?.text != "" && self.emailRegisterTextField.text != ""{
+                self.registerButton.isEnabled = true
+            }else{
+                self.registerButton.isEnabled = false
+            }
+        }else{
+            self.registerButton.isEnabled = false
+        }
     }
     //definindo ações para os botões
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
@@ -204,8 +213,6 @@ class cadastroViewController: UIViewController {
     
     
     @IBAction func tappedTermsOfUse(_ sender: UIButton) {
-        
-        
         }
     
     //validação do telefone
