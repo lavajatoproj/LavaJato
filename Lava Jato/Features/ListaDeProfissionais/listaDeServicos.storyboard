@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rJK-ar-zkU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rJK-ar-zkU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,30 +28,30 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
-                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Procure pelo nome ou pela cidade" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3en-Oi-6Ux">
-                                        <rect key="frame" x="20" y="30" width="374" height="51"/>
-                                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha o profissional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NX-x6-uB4">
                                         <rect key="frame" x="20" y="111" width="374" height="36"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="26"/>
                                         <color key="textColor" name="ColorDefault"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Procure pelo nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Yw-tP-Qfe">
+                                        <rect key="frame" x="20" y="39" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="D1E-jc-AOR" firstAttribute="leading" secondItem="pmC-Kh-D4x" secondAttribute="leading" id="1YX-L0-R6J"/>
-                                    <constraint firstItem="3en-Oi-6Ux" firstAttribute="leading" secondItem="pmC-Kh-D4x" secondAttribute="leading" constant="20" id="1yL-pI-MXq"/>
                                     <constraint firstAttribute="trailing" secondItem="D1E-jc-AOR" secondAttribute="trailing" id="6KM-sa-naG"/>
                                     <constraint firstItem="D1E-jc-AOR" firstAttribute="top" secondItem="7NX-x6-uB4" secondAttribute="bottom" id="9ir-aS-sYB"/>
+                                    <constraint firstItem="6Yw-tP-Qfe" firstAttribute="leading" secondItem="pmC-Kh-D4x" secondAttribute="leading" constant="20" id="CwM-sR-25U"/>
                                     <constraint firstItem="7NX-x6-uB4" firstAttribute="leading" secondItem="pmC-Kh-D4x" secondAttribute="leading" constant="20" id="DT7-L6-kSv"/>
-                                    <constraint firstAttribute="trailing" secondItem="3en-Oi-6Ux" secondAttribute="trailing" constant="20" id="G3T-rG-3Fz"/>
-                                    <constraint firstItem="7NX-x6-uB4" firstAttribute="top" secondItem="3en-Oi-6Ux" secondAttribute="bottom" constant="30" id="GQO-8l-XjL"/>
+                                    <constraint firstItem="7NX-x6-uB4" firstAttribute="top" secondItem="6Yw-tP-Qfe" secondAttribute="bottom" constant="38" id="I5L-5e-NHX"/>
                                     <constraint firstAttribute="trailing" secondItem="7NX-x6-uB4" secondAttribute="trailing" constant="20" id="LuU-RQ-Pah"/>
                                     <constraint firstAttribute="bottom" secondItem="D1E-jc-AOR" secondAttribute="bottom" id="Nlj-Kv-f7j"/>
-                                    <constraint firstItem="3en-Oi-6Ux" firstAttribute="top" secondItem="pmC-Kh-D4x" secondAttribute="top" constant="30" id="YMj-16-2fN"/>
+                                    <constraint firstItem="6Yw-tP-Qfe" firstAttribute="top" secondItem="pmC-Kh-D4x" secondAttribute="top" constant="39" id="nPv-Tu-FcS"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Yw-tP-Qfe" secondAttribute="trailing" constant="20" id="zM1-vI-GbB"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -74,7 +74,7 @@
                     <connections>
                         <outlet property="background2View" destination="pmC-Kh-D4x" id="jI8-al-Vg1"/>
                         <outlet property="backgroundImageView" destination="ynY-2N-jIB" id="NhJ-Ig-CPj"/>
-                        <outlet property="pesquisaSearchBar" destination="3en-Oi-6Ux" id="GIZ-Gg-4Nu"/>
+                        <outlet property="searchTextField" destination="6Yw-tP-Qfe" id="vtl-eJ-5uQ"/>
                         <outlet property="tableView" destination="D1E-jc-AOR" id="UX6-PO-hfM"/>
                         <outlet property="titulo2Label" destination="7NX-x6-uB4" id="dMF-Gw-rdI"/>
                         <segue destination="uZj-Ei-I2i" kind="show" identifier="solicitacaoDeServico" id="gD9-to-acs"/>
