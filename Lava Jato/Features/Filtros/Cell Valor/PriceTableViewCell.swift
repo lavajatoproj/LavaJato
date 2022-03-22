@@ -45,8 +45,9 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     
     
     @IBAction func selectSlider(_ sender: UISlider) {
-        let choose = String(format: "%.10f", sender.value)
-        self.priceMax.text = "\(choose) reais"
+//        let choose = String(format: "%10.f", sender.value)
+        let choose = Int(sender.value)
+        self.priceMax.text = "R$\(choose),00 Reais"
     }
     
     

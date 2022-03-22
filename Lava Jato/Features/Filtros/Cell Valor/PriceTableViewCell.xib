@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhs-6e-gIT">
-                        <rect key="frame" x="36" y="10" width="307" height="22"/>
+                        <rect key="frame" x="36" y="10" width="301" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="KD4-B1-V6i"/>
                         </constraints>
@@ -25,8 +25,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="e0p-Ze-UwL">
-                        <rect key="frame" x="34" y="40" width="311" height="31"/>
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="20" maxValue="800" translatesAutoresizingMaskIntoConstraints="NO" id="e0p-Ze-UwL">
+                        <rect key="frame" x="34" y="40" width="305" height="31"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="fK7-0W-mIh"/>
                         </constraints>
@@ -48,7 +48,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__________________________________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8j-it-vha">
-                        <rect key="frame" x="28" y="107" width="323" height="21"/>
+                        <rect key="frame" x="28" y="107" width="317" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="fwt-Vq-0qK"/>
                         </constraints>
@@ -57,7 +57,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pv-Ro-5yr">
-                        <rect key="frame" x="36" y="136" width="283" height="21"/>
+                        <rect key="frame" x="36" y="136" width="277" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Wg4-nq-JJh"/>
                         </constraints>
@@ -65,8 +65,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8md-bt-wQ6">
-                        <rect key="frame" x="262" y="78" width="81" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8md-bt-wQ6">
+                        <rect key="frame" x="239" y="78" width="81" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="81" id="l6S-Q8-Ngi"/>
                             <constraint firstAttribute="height" constant="21" id="u4Z-ag-I2a"/>
@@ -76,7 +76,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YpE-oa-Dae">
-                        <rect key="frame" x="0.0" y="165" width="379" height="200"/>
+                        <rect key="frame" x="0.0" y="165" width="373" height="200"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.41960784309999999" green="0.42745098040000001" blue="0.50588235290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -90,7 +90,7 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MC-9L-kb6">
-                        <rect key="frame" x="92" y="379" width="170" height="50"/>
+                        <rect key="frame" x="92" y="379" width="164" height="50"/>
                         <color key="backgroundColor" red="0.10980392160000001" green="0.28235294119999998" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="bnc-ZN-uOo"/>
@@ -122,6 +122,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="M8j-it-vha" secondAttribute="trailing" constant="8" id="ZV5-uu-lji"/>
                     <constraint firstItem="M8j-it-vha" firstAttribute="top" secondItem="6q6-ci-eJB" secondAttribute="bottom" constant="8" id="aKg-EO-wBY"/>
                     <constraint firstItem="6MC-9L-kb6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="72" id="bcP-hU-fuz"/>
+                    <constraint firstItem="8md-bt-wQ6" firstAttribute="leading" secondItem="6q6-ci-eJB" secondAttribute="trailing" constant="90" id="bfq-Nn-HhN"/>
                     <constraint firstItem="8md-bt-wQ6" firstAttribute="top" secondItem="e0p-Ze-UwL" secondAttribute="bottom" constant="8" id="oFd-GE-Nyq"/>
                     <constraint firstItem="YpE-oa-Dae" firstAttribute="top" secondItem="2Pv-Ro-5yr" secondAttribute="bottom" constant="8" id="pAV-Kb-RJc"/>
                     <constraint firstItem="6MC-9L-kb6" firstAttribute="top" secondItem="YpE-oa-Dae" secondAttribute="bottom" constant="14" id="prh-Iz-Mqn"/>
