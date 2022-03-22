@@ -14,8 +14,17 @@
 		445C7C0F27DD113F000E9CD2 /* ServicoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445C7C0E27DD113F000E9CD2 /* ServicoCollectionViewCell.swift */; };
 		445C7C1227DD140D000E9CD2 /* Servico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445C7C1127DD140C000E9CD2 /* Servico.swift */; };
 		449EFAA727DE3AF4002111DE /* PerfilUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449EFAA627DE3AF3002111DE /* PerfilUsuarioViewController.swift */; };
-		449EFAD327DE7995002111DE /* FiltroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449EFAD227DE7995002111DE /* FiltroViewController.swift */; };
-		449EFAD527DE79BE002111DE /* FiltroStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449EFAD427DE79BE002111DE /* FiltroStoryboard.storyboard */; };
+		44CB761E27E941B600A029FA /* PlaceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CB761C27E941B600A029FA /* PlaceCollectionViewCell.xib */; };
+		44CB761F27E941B600A029FA /* PlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB761D27E941B600A029FA /* PlaceCollectionViewCell.swift */; };
+		44CB762327E941C200A029FA /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB762127E941C200A029FA /* PriceTableViewCell.swift */; };
+		44CB762427E941C200A029FA /* PriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CB762227E941C200A029FA /* PriceTableViewCell.xib */; };
+		44CB762827E941C800A029FA /* ElementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB762627E941C800A029FA /* ElementTableViewCell.swift */; };
+		44CB762927E941C800A029FA /* ElementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CB762727E941C800A029FA /* ElementTableViewCell.xib */; };
+		44CB762E27E941D000A029FA /* ProfileBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB762B27E941CF00A029FA /* ProfileBanner.swift */; };
+		44CB762F27E941D000A029FA /* ProfilePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB762C27E941CF00A029FA /* ProfilePrice.swift */; };
+		44CB763027E941D000A029FA /* ProfileGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB762D27E941CF00A029FA /* ProfileGenre.swift */; };
+		44CB763227E941F700A029FA /* FiltroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB763127E941F700A029FA /* FiltroViewController.swift */; };
+		44CB763427E941FD00A029FA /* FiltroStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CB763327E941FD00A029FA /* FiltroStoryboard.storyboard */; };
 		A20B841827DF051B00F29991 /* cellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B841627DF051B00F29991 /* cellTableViewCell.swift */; };
 		A20B841927DF051B00F29991 /* cellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A20B841727DF051B00F29991 /* cellTableViewCell.xib */; };
 		A212221127D13E3500B24208 /* solicitacaoDeServico.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A212221027D13E3500B24208 /* solicitacaoDeServico.storyboard */; };
@@ -71,8 +80,17 @@
 		445C7C0E27DD113F000E9CD2 /* ServicoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicoCollectionViewCell.swift; sourceTree = "<group>"; };
 		445C7C1127DD140C000E9CD2 /* Servico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servico.swift; sourceTree = "<group>"; };
 		449EFAA627DE3AF3002111DE /* PerfilUsuarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilUsuarioViewController.swift; sourceTree = "<group>"; };
-		449EFAD227DE7995002111DE /* FiltroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltroViewController.swift; sourceTree = "<group>"; };
-		449EFAD427DE79BE002111DE /* FiltroStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FiltroStoryboard.storyboard; sourceTree = "<group>"; };
+		44CB761C27E941B600A029FA /* PlaceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceCollectionViewCell.xib; sourceTree = "<group>"; };
+		44CB761D27E941B600A029FA /* PlaceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCollectionViewCell.swift; sourceTree = "<group>"; };
+		44CB762127E941C200A029FA /* PriceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
+		44CB762227E941C200A029FA /* PriceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PriceTableViewCell.xib; sourceTree = "<group>"; };
+		44CB762627E941C800A029FA /* ElementTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementTableViewCell.swift; sourceTree = "<group>"; };
+		44CB762727E941C800A029FA /* ElementTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ElementTableViewCell.xib; sourceTree = "<group>"; };
+		44CB762B27E941CF00A029FA /* ProfileBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileBanner.swift; sourceTree = "<group>"; };
+		44CB762C27E941CF00A029FA /* ProfilePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePrice.swift; sourceTree = "<group>"; };
+		44CB762D27E941CF00A029FA /* ProfileGenre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileGenre.swift; sourceTree = "<group>"; };
+		44CB763127E941F700A029FA /* FiltroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltroViewController.swift; sourceTree = "<group>"; };
+		44CB763327E941FD00A029FA /* FiltroStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FiltroStoryboard.storyboard; sourceTree = "<group>"; };
 		A20B841627DF051B00F29991 /* cellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellTableViewCell.swift; sourceTree = "<group>"; };
 		A20B841727DF051B00F29991 /* cellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellTableViewCell.xib; sourceTree = "<group>"; };
 		A212221027D13E3500B24208 /* solicitacaoDeServico.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = solicitacaoDeServico.storyboard; sourceTree = "<group>"; };
@@ -147,8 +165,12 @@
 		442DD11327D05AD300C4F033 /* Filtros */ = {
 			isa = PBXGroup;
 			children = (
-				449EFAD227DE7995002111DE /* FiltroViewController.swift */,
-				449EFAD427DE79BE002111DE /* FiltroStoryboard.storyboard */,
+				44CB763327E941FD00A029FA /* FiltroStoryboard.storyboard */,
+				44CB763127E941F700A029FA /* FiltroViewController.swift */,
+				44CB762A27E941CF00A029FA /* Model */,
+				44CB762527E941C800A029FA /* Cell Element */,
+				44CB762027E941C200A029FA /* Cell Valor */,
+				44CB761B27E941B600A029FA /* Cell Place */,
 			);
 			path = Filtros;
 			sourceTree = "<group>";
@@ -198,6 +220,43 @@
 			isa = PBXGroup;
 			children = (
 				445C7C1127DD140C000E9CD2 /* Servico.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44CB761B27E941B600A029FA /* Cell Place */ = {
+			isa = PBXGroup;
+			children = (
+				44CB761C27E941B600A029FA /* PlaceCollectionViewCell.xib */,
+				44CB761D27E941B600A029FA /* PlaceCollectionViewCell.swift */,
+			);
+			path = "Cell Place";
+			sourceTree = "<group>";
+		};
+		44CB762027E941C200A029FA /* Cell Valor */ = {
+			isa = PBXGroup;
+			children = (
+				44CB762127E941C200A029FA /* PriceTableViewCell.swift */,
+				44CB762227E941C200A029FA /* PriceTableViewCell.xib */,
+			);
+			path = "Cell Valor";
+			sourceTree = "<group>";
+		};
+		44CB762527E941C800A029FA /* Cell Element */ = {
+			isa = PBXGroup;
+			children = (
+				44CB762627E941C800A029FA /* ElementTableViewCell.swift */,
+				44CB762727E941C800A029FA /* ElementTableViewCell.xib */,
+			);
+			path = "Cell Element";
+			sourceTree = "<group>";
+		};
+		44CB762A27E941CF00A029FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44CB762B27E941CF00A029FA /* ProfileBanner.swift */,
+				44CB762C27E941CF00A029FA /* ProfilePrice.swift */,
+				44CB762D27E941CF00A029FA /* ProfileGenre.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -494,6 +553,8 @@
 			files = (
 				E162E08327ADF54000C6AD32 /* LaunchScreen.storyboard in Resources */,
 				DA9954CE27DF8A2D00C89D76 /* Main.storyboard in Resources */,
+				44CB762927E941C800A029FA /* ElementTableViewCell.xib in Resources */,
+				44CB763427E941FD00A029FA /* FiltroStoryboard.storyboard in Resources */,
 				442DD11E27D05D0900C4F033 /* PerfilUsuario.storyboard in Resources */,
 				E13E5B2027D5965B000CB644 /* ErrorConection.storyboard in Resources */,
 				E13E5B2927D6EBF6000CB644 /* ScreenRegister.storyboard in Resources */,
@@ -506,14 +567,15 @@
 				E13E5B3827D7005E000CB644 /* SF-Pro-Text-Semibold.otf in Resources */,
 				A212221927D13E9700B24208 /* listaDeServicos.storyboard in Resources */,
 				A20B841927DF051B00F29991 /* cellTableViewCell.xib in Resources */,
-				449EFAD527DE79BE002111DE /* FiltroStoryboard.storyboard in Resources */,
 				A212221527D13E6C00B24208 /* meusServicos.storyboard in Resources */,
 				A2F799CF27DC6A49005A53A3 /* CustomRowTableViewCell.xib in Resources */,
 				E162E08027ADF54000C6AD32 /* Assets.xcassets in Resources */,
+				44CB762427E941C200A029FA /* PriceTableViewCell.xib in Resources */,
 				A212221127D13E3500B24208 /* solicitacaoDeServico.storyboard in Resources */,
 				E15CA71627D52E5B002355B9 /* Login.storyboard in Resources */,
 				E13E5B3A27D70086000CB644 /* SF-Pro-Text-Light.otf in Resources */,
 				E15CA71927D52F1D002355B9 /* RecuperarSenha.storyboard in Resources */,
+				44CB761E27E941B600A029FA /* PlaceCollectionViewCell.xib in Resources */,
 				A212222027D13EE500B24208 /* MyCustomCell.xib in Resources */,
 				E13E5B3C27D700A1000CB644 /* SF-Pro-Text-Medium.otf in Resources */,
 				443BAE9827BF4DE400751C16 /* TelaPrincipal.storyboard in Resources */,
@@ -572,25 +634,31 @@
 				E15CA72027D56A2E002355B9 /* MapsViewController.swift in Sources */,
 				E162E07B27ADF53E00C6AD32 /* ViewController.swift in Sources */,
 				DA9954C927DF899600C89D76 /* NotificationTableViewCell.swift in Sources */,
-				449EFAD327DE7995002111DE /* FiltroViewController.swift in Sources */,
+				44CB761F27E941B600A029FA /* PlaceCollectionViewCell.swift in Sources */,
 				E162E07727ADF53E00C6AD32 /* AppDelegate.swift in Sources */,
 				445C7C1227DD140D000E9CD2 /* Servico.swift in Sources */,
 				A20B841827DF051B00F29991 /* cellTableViewCell.swift in Sources */,
+				44CB762827E941C800A029FA /* ElementTableViewCell.swift in Sources */,
 				E13E5B3227D6F7FA000CB644 /* UIViewController.swift in Sources */,
 				DAB173D027D1508A00104761 /* cadastroViewController.swift in Sources */,
 				A212221B27D13EB000B24208 /* listaDeServicosViewController.swift in Sources */,
 				E13E5B2C27D6F5F1000CB644 /* UIcolor.swift in Sources */,
 				DA12C77A27D105BA00B6F080 /* profileEditViewController.swift in Sources */,
 				DA99553B27E2CE8000C89D76 /* PopUpWindow.swift in Sources */,
+				44CB763227E941F700A029FA /* FiltroViewController.swift in Sources */,
 				445C7C0F27DD113F000E9CD2 /* ServicoCollectionViewCell.swift in Sources */,
 				443BAE9A27BF51A100751C16 /* TelaPrincipal.swift in Sources */,
 				E13E5B1E27D59644000CB644 /* ErrorConectionViewController.swift in Sources */,
 				E13E5B3027D6F781000CB644 /* UITextField.swift in Sources */,
 				449EFAA727DE3AF4002111DE /* PerfilUsuarioViewController.swift in Sources */,
 				DA9954C627DF895700C89D76 /* Profile.swift in Sources */,
+				44CB762E27E941D000A029FA /* ProfileBanner.swift in Sources */,
 				E162E07927ADF53E00C6AD32 /* SceneDelegate.swift in Sources */,
 				DAF0152C27C45B38009E55F6 /* HelpViewController.swift in Sources */,
 				A212221727D13E7F00B24208 /* meusServicosViewController.swift in Sources */,
+				44CB762F27E941D000A029FA /* ProfilePrice.swift in Sources */,
+				44CB762327E941C200A029FA /* PriceTableViewCell.swift in Sources */,
+				44CB763027E941D000A029FA /* ProfileGenre.swift in Sources */,
 				A212221F27D13EE500B24208 /* MyCustomCell.swift in Sources */,
 				A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */,
 				DA9954D027DF8A8100C89D76 /* NotificationViewController.swift in Sources */,
