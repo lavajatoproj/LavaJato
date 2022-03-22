@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -362,25 +363,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="RPp-AE-yUQ" secondAttribute="bottom" id="0cI-gF-csn"/>
+                            <constraint firstItem="gLS-1S-zZD" firstAttribute="trailing" secondItem="RPp-AE-yUQ" secondAttribute="trailing" id="5c1-aH-hvm"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Dgw-kX-ccJ" secondAttribute="trailing" constant="7" id="7a8-Df-hgC"/>
                             <constraint firstItem="hUQ-Wl-f7e" firstAttribute="top" secondItem="Qt6-5g-wNm" secondAttribute="bottom" constant="0.5" id="7jT-zF-2Ki"/>
-                            <constraint firstItem="gLS-1S-zZD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="85G-YM-JTg"/>
                             <constraint firstItem="RPp-AE-yUQ" firstAttribute="top" secondItem="vmP-9e-Dtl" secondAttribute="bottom" constant="25" id="8QD-2q-Nwg"/>
                             <constraint firstItem="pfz-Ti-4K1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Abd-xi-QUz"/>
                             <constraint firstItem="RPp-AE-yUQ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Fua-0a-px0"/>
-                            <constraint firstItem="RPp-AE-yUQ" firstAttribute="leading" secondItem="gLS-1S-zZD" secondAttribute="leading" id="KAu-RX-rKy"/>
                             <constraint firstItem="vmP-9e-Dtl" firstAttribute="leading" secondItem="iyf-Mu-SeB" secondAttribute="leading" id="Ml5-4H-cQ4"/>
-                            <constraint firstItem="RPp-AE-yUQ" firstAttribute="trailing" secondItem="gLS-1S-zZD" secondAttribute="trailing" id="Otw-Yt-k8Z"/>
                             <constraint firstItem="Qt6-5g-wNm" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="21" id="RA1-2u-YBz"/>
-                            <constraint firstItem="gLS-1S-zZD" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="88" id="T5E-uy-R0f"/>
                             <constraint firstItem="iyf-Mu-SeB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="XHD-9j-2fz"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Qt6-5g-wNm" secondAttribute="trailing" constant="14" id="XbS-1K-H96"/>
                             <constraint firstItem="vmP-9e-Dtl" firstAttribute="trailing" secondItem="hUQ-Wl-f7e" secondAttribute="trailing" id="Xe6-SZ-nSf"/>
                             <constraint firstItem="bWT-qR-RXD" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="Xvl-cu-Dgn"/>
                             <constraint firstItem="pfz-Ti-4K1" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Z8v-4c-f5x"/>
-                            <constraint firstAttribute="bottom" secondItem="gLS-1S-zZD" secondAttribute="bottom" constant="43" id="cn4-RB-ved"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gLS-1S-zZD" secondAttribute="trailing" id="cwW-fr-FcM"/>
+                            <constraint firstItem="gLS-1S-zZD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="e9I-5q-5mr"/>
                             <constraint firstItem="Dgw-kX-ccJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="22" id="erl-tt-wjC"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="gLS-1S-zZD" secondAttribute="bottom" constant="-40" id="fOw-ab-Aq6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pfz-Ti-4K1" secondAttribute="trailing" id="ffI-rm-Mfx"/>
                             <constraint firstItem="iyf-Mu-SeB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="21" id="g4M-x5-iUU"/>
                             <constraint firstItem="hUQ-Wl-f7e" firstAttribute="top" secondItem="Qt6-5g-wNm" secondAttribute="bottom" constant="0.5" id="hTI-bi-UD8"/>
@@ -390,6 +388,7 @@
                             <constraint firstItem="hUQ-Wl-f7e" firstAttribute="leading" secondItem="iyf-Mu-SeB" secondAttribute="trailing" constant="8" symbolic="YES" id="pCA-TB-nUH"/>
                             <constraint firstItem="RPp-AE-yUQ" firstAttribute="bottom" secondItem="pfz-Ti-4K1" secondAttribute="bottom" id="qkj-PB-F7p"/>
                             <constraint firstItem="vmP-9e-Dtl" firstAttribute="top" secondItem="iyf-Mu-SeB" secondAttribute="bottom" constant="8" symbolic="YES" id="tIP-FE-9kQ"/>
+                            <constraint firstItem="gLS-1S-zZD" firstAttribute="leading" secondItem="RPp-AE-yUQ" secondAttribute="leading" id="tmB-Gm-Ky1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" largeTitleDisplayMode="always" id="C41-yo-LYU">
@@ -464,9 +463,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uv2-D8-6QQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="ColorDefault"/>
+                        <color key="barTintColor" red="0.043137254899999998" green="0.1215686275" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                            <color key="textColor" red="0.95686274510000002" green="0.73725490199999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="ColorDefault"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -491,6 +492,9 @@
         <image name="seguir" width="30" height="33"/>
         <image name="share" width="41" height="41"/>
         <image name="utilizador" width="45" height="45"/>
+        <namedColor name="ColorDefault">
+            <color red="0.9570000171661377" green="0.7369999885559082" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

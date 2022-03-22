@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         UITabBar.appearance().tintColor = UIColor.ColorDefault
+        UINavigationBar.appearance().barTintColor = UIColor.ColorDefault
         GMSServices.provideAPIKey("AIzaSyBkMktW0sYUqwpDXhyXFfoPRLFYh5JeFlk")
         GMSPlacesClient.provideAPIKey("AIzaSyBkMktW0sYUqwpDXhyXFfoPRLFYh5JeFlk")
         // Override point for customization after application launch.

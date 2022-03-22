@@ -214,5 +214,6 @@ extension profileEditViewController:UITextFieldDelegate{
     func Style(){
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
+    
     }
 }
