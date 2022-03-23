@@ -7,14 +7,17 @@
 
 import UIKit
 import Foundation
+import Firebase
+import GoogleSignIn
+import FacebookCore
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
     
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btLogin: UIButton!
     @IBOutlet weak var btRegister: UIButton!
-    
+    @IBOutlet weak var btLoginGoogle: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +25,9 @@ class ViewController: UIViewController {
        
     }
     
+    
+    
     @IBAction func showResetPassword(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "RecuperarSenha", bundle: nil)
-//        let vC = storyboard.instantiateViewController(withIdentifier: "RecuperarSenha")
-//        navigationController?.pushViewController(vC, animated: true)
-        
         self.performSegue(withIdentifier: "RecuperarSenha", sender: nil)
     }
     
@@ -38,6 +39,20 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "screenRegister", sender: nil)
     }
     
+    
+    @IBAction func btGoogle(_ sender: Any) {
+        let signInConfig = GIDConfiguration.init(clientID: "152072972170-kofmt4judceejf77qocrujucbs98s2m4.apps.googleusercontent.com")
+        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in guard error == nil else { return }
+            self.performSegue(withIdentifier: "telaPrincipalsegue", sender: nil)
+        }
+        
+    }
+    
+    
+    @IBAction func btFaceLogin(_ sender: Any) {
+        
+       
+    }
     
     
     
@@ -88,6 +103,7 @@ class ViewController: UIViewController {
         btRegister.layer.masksToBounds = true
         btRegister.layer.borderColor = UIColor.white.cgColor
         btRegister.layer.borderWidth = 2
+        
         
     }
 }
