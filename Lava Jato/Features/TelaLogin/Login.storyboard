@@ -93,22 +93,6 @@
                                     <action selector="tappedRegisterButton:" destination="S5w-gv-iWR" eventType="touchUpInside" id="4Up-UU-SQe"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face 1" translatesAutoresizingMaskIntoConstraints="NO" id="EIM-yt-Xeh">
-                                <rect key="frame" x="137" y="529" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="CZ6-R3-lxS"/>
-                                    <constraint firstAttribute="height" constant="60" id="Ijz-PL-F2Y"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login 1" translatesAutoresizingMaskIntoConstraints="NO" id="P3n-39-nMu">
-                                <rect key="frame" x="217" y="529" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="TRa-qg-wiN"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="cRj-Kg-h9Z"/>
-                                    <constraint firstAttribute="width" constant="60" id="f1Q-KR-Tsa"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="nrx-N5-qsH"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohe-lm-ecW">
                                 <rect key="frame" x="40" y="326" width="334" height="37"/>
                                 <state key="normal" title="Button"/>
@@ -120,20 +104,37 @@
                                     <action selector="showResetPassword:" destination="S5w-gv-iWR" eventType="touchUpInside" id="GX8-AK-MQc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPY-8k-k3h">
+                                <rect key="frame" x="205" y="529" width="84" height="74"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="loginGoogle">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btGoogle:" destination="S5w-gv-iWR" eventType="touchUpInside" id="Jj2-ft-uvi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TB0-M5-Qg7">
+                                <rect key="frame" x="125" y="529" width="84" height="74"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="loginFace"/>
+                                <connections>
+                                    <action selector="btFaceLogin:" destination="S5w-gv-iWR" eventType="touchUpInside" id="4Ps-D8-3cm"/>
+                                    <action selector="btGoogle:" destination="S5w-gv-iWR" eventType="touchUpInside" id="Hmu-CU-AdJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LT6-K7-MEb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="P3n-39-nMu" firstAttribute="top" secondItem="KNt-Lj-FFi" secondAttribute="bottom" constant="20" id="31z-Kg-E6Q"/>
                             <constraint firstItem="P1U-qE-vra" firstAttribute="leading" secondItem="LT6-K7-MEb" secondAttribute="leading" constant="40" id="39s-ZZ-Dtn"/>
                             <constraint firstItem="LT6-K7-MEb" firstAttribute="trailing" secondItem="ohe-lm-ecW" secondAttribute="trailing" constant="40" id="5hE-Js-LP7"/>
                             <constraint firstItem="LT6-K7-MEb" firstAttribute="trailing" secondItem="0ad-ji-L26" secondAttribute="trailing" constant="40" id="C7y-nw-i36"/>
-                            <constraint firstItem="EIM-yt-Xeh" firstAttribute="centerX" secondItem="e76-do-izW" secondAttribute="centerX" constant="-40" id="CBf-eF-t2x"/>
+                            <constraint firstItem="fPY-8k-k3h" firstAttribute="centerY" secondItem="TB0-M5-Qg7" secondAttribute="centerY" id="CmU-zf-60r"/>
                             <constraint firstItem="KNt-Lj-FFi" firstAttribute="leading" secondItem="LT6-K7-MEb" secondAttribute="leading" constant="40" id="D7O-gd-Lif"/>
                             <constraint firstItem="LT6-K7-MEb" firstAttribute="trailing" secondItem="P1U-qE-vra" secondAttribute="trailing" constant="40" id="Ekd-2G-un5"/>
                             <constraint firstItem="KNt-Lj-FFi" firstAttribute="top" secondItem="qf8-qH-4ez" secondAttribute="bottom" constant="40" id="H1H-Vv-dLd"/>
                             <constraint firstItem="LT6-K7-MEb" firstAttribute="bottom" secondItem="0ad-ji-L26" secondAttribute="bottom" constant="40" id="MiW-JX-Ls0"/>
-                            <constraint firstItem="P3n-39-nMu" firstAttribute="centerX" secondItem="e76-do-izW" secondAttribute="centerX" constant="40" id="P1D-Uj-lbY"/>
                             <constraint firstItem="ohe-lm-ecW" firstAttribute="top" secondItem="P1U-qE-vra" secondAttribute="bottom" constant="5" id="RJ2-KI-aSY"/>
                             <constraint firstItem="ohe-lm-ecW" firstAttribute="leading" secondItem="LT6-K7-MEb" secondAttribute="leading" constant="40" id="Un6-6w-ZCd"/>
                             <constraint firstItem="UQ5-zM-Lo6" firstAttribute="top" secondItem="cHC-hS-hhb" secondAttribute="bottom" constant="40" id="W93-hB-9mt"/>
@@ -146,18 +147,21 @@
                             <constraint firstItem="qf8-qH-4ez" firstAttribute="leading" secondItem="LT6-K7-MEb" secondAttribute="leading" constant="40" id="hNA-JT-D4u"/>
                             <constraint firstItem="LT6-K7-MEb" firstAttribute="trailing" secondItem="qf8-qH-4ez" secondAttribute="trailing" constant="40" id="i3F-jE-jer"/>
                             <constraint firstItem="9eb-xb-DRX" firstAttribute="top" secondItem="LT6-K7-MEb" secondAttribute="top" constant="-100" id="jZi-VW-JU4"/>
+                            <constraint firstItem="TB0-M5-Qg7" firstAttribute="centerX" secondItem="e76-do-izW" secondAttribute="centerX" constant="-40" id="jfH-g8-5Be"/>
                             <constraint firstItem="LT6-K7-MEb" firstAttribute="trailing" secondItem="9eb-xb-DRX" secondAttribute="trailing" id="l26-LN-wDW"/>
                             <constraint firstItem="cHC-hS-hhb" firstAttribute="top" secondItem="LT6-K7-MEb" secondAttribute="top" constant="60" id="lVc-M4-AkY"/>
-                            <constraint firstItem="EIM-yt-Xeh" firstAttribute="top" secondItem="KNt-Lj-FFi" secondAttribute="bottom" constant="20" id="m1h-zi-BXe"/>
+                            <constraint firstItem="fPY-8k-k3h" firstAttribute="centerX" secondItem="e76-do-izW" secondAttribute="centerX" constant="40" id="pFy-8P-sUA"/>
                             <constraint firstItem="cHC-hS-hhb" firstAttribute="leading" secondItem="LT6-K7-MEb" secondAttribute="leading" constant="20" id="quj-qi-ALR"/>
                             <constraint firstItem="P1U-qE-vra" firstAttribute="top" secondItem="UQ5-zM-Lo6" secondAttribute="bottom" constant="20" id="rMn-aX-l8n"/>
                             <constraint firstItem="UQ5-zM-Lo6" firstAttribute="leading" secondItem="LT6-K7-MEb" secondAttribute="leading" constant="40" id="y36-UN-h1W"/>
                             <constraint firstItem="qf8-qH-4ez" firstAttribute="top" secondItem="ohe-lm-ecW" secondAttribute="bottom" constant="40" id="ziE-Av-Mll"/>
+                            <constraint firstItem="TB0-M5-Qg7" firstAttribute="top" secondItem="KNt-Lj-FFi" secondAttribute="bottom" constant="20" id="zmR-RY-RpR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="e3W-zL-eg1"/>
                     <connections>
                         <outlet property="btLogin" destination="qf8-qH-4ez" id="5hy-I5-2Pj"/>
+                        <outlet property="btLoginGoogle" destination="fPY-8k-k3h" id="QRo-Ui-WSu"/>
                         <outlet property="btRegister" destination="0ad-ji-L26" id="nTn-nV-hoO"/>
                         <outlet property="tfEmail" destination="UQ5-zM-Lo6" id="6cl-Xu-xlr"/>
                         <outlet property="tfPassword" destination="P1U-qE-vra" id="oL6-uc-GLA"/>
@@ -168,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9R-q9-3UQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="257" y="78"/>
+            <point key="canvasLocation" x="256.52173913043481" y="77.678571428571431"/>
         </scene>
         <!--RecuperarSenha-->
         <scene sceneID="RBF-2s-3wq">
@@ -203,9 +207,9 @@
     </scenes>
     <resources>
         <image name="background" width="440" height="926"/>
-        <image name="face 1" width="80" height="80"/>
         <image name="key" width="30" height="30"/>
-        <image name="login 1" width="80" height="80"/>
+        <image name="loginFace" width="60" height="60"/>
+        <image name="loginGoogle" width="60" height="60"/>
         <image name="logo" width="389" height="89"/>
         <image name="mail" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">

@@ -72,6 +72,7 @@
 		E18703DA27E9210A005B3AA9 /* TelaPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18703D927E9210A005B3AA9 /* TelaPrincipal.swift */; };
 		E18703DD27E94E39005B3AA9 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18703DC27E94E39005B3AA9 /* ChangePasswordViewController.swift */; };
 		E18703DF27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18703DE27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard */; };
+		E194592227EAB6C800CC0078 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E194592127EAB6C800CC0078 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +145,7 @@
 		E18703D927E9210A005B3AA9 /* TelaPrincipal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaPrincipal.swift; sourceTree = "<group>"; };
 		E18703DC27E94E39005B3AA9 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		E18703DE27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
+		E194592127EAB6C800CC0078 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -491,6 +493,7 @@
 				E162E07827ADF53E00C6AD32 /* SceneDelegate.swift */,
 				E162E07F27ADF54000C6AD32 /* Assets.xcassets */,
 				E162E08127ADF54000C6AD32 /* LaunchScreen.storyboard */,
+				E194592127EAB6C800CC0078 /* GoogleService-Info.plist */,
 				E162E08427ADF54000C6AD32 /* Info.plist */,
 			);
 			path = "Lava Jato";
@@ -517,6 +520,7 @@
 				E162E07027ADF53E00C6AD32 /* Frameworks */,
 				E162E07127ADF53E00C6AD32 /* Resources */,
 				41C8AB6278695DDA2AF7C704 /* [CP] Copy Pods Resources */,
+				C1C241463CB38973BD167F62 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -551,6 +555,9 @@
 				Base,
 			);
 			mainGroup = E162E06A27ADF53E00C6AD32;
+			packageReferences = (
+				E1F72C5527EBFCCE00540CB4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = E162E07427ADF53E00C6AD32 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -582,6 +589,7 @@
 				E13E5B3827D7005E000CB644 /* SF-Pro-Text-Semibold.otf in Resources */,
 				A212221927D13E9700B24208 /* listaDeServicos.storyboard in Resources */,
 				A20B841927DF051B00F29991 /* cellTableViewCell.xib in Resources */,
+				E194592227EAB6C800CC0078 /* GoogleService-Info.plist in Resources */,
 				A212221527D13E6C00B24208 /* meusServicos.storyboard in Resources */,
 				A2F799CF27DC6A49005A53A3 /* CustomRowTableViewCell.xib in Resources */,
 				E162E08027ADF54000C6AD32 /* Assets.xcassets in Resources */,
@@ -637,6 +645,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1C241463CB38973BD167F62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -829,6 +854,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Login;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -860,6 +886,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Login;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -898,6 +925,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E1F72C5527EBFCCE00540CB4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = E162E06B27ADF53E00C6AD32 /* Project object */;
 }
