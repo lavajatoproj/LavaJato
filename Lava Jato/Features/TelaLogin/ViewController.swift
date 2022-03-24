@@ -9,7 +9,6 @@ import UIKit
 import Foundation
 import Firebase
 import GoogleSignIn
-import FacebookCore
 
 class ViewController: UIViewController{
     

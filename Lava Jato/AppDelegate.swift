@@ -24,9 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
                )
         
         UITabBar.appearance().tintColor = UIColor.ColorDefault
-<<<<<<< HEAD
         UINavigationBar.appearance().barTintColor = UIColor.ColorDefault
-=======
         
         FirebaseApp.configure()
 
@@ -38,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
           }
         }
         
->>>>>>> 8f79e7f (create Google login and update WhatSapp)
         GMSServices.provideAPIKey("AIzaSyBkMktW0sYUqwpDXhyXFfoPRLFYh5JeFlk")
         GMSPlacesClient.provideAPIKey("AIzaSyBkMktW0sYUqwpDXhyXFfoPRLFYh5JeFlk")
 
