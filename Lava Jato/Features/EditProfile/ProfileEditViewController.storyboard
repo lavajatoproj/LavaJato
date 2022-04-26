@@ -12,7 +12,7 @@
         <!--Editar Perfil-->
         <scene sceneID="s2g-S8-ehW">
             <objects>
-                <viewController storyboardIdentifier="ProfileEdit" id="kqS-JS-xWW" customClass="profileEditViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileEditViewController" id="kqS-JS-xWW" customClass="ProfileEditViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3l6-yM-uW3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,7 @@
                                             <color key="baseBackgroundColor" red="0.11157868059999999" green="0.2824388444" blue="0.61462736129999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="tappedChangeService:" destination="kqS-JS-xWW" eventType="touchUpInside" id="cf7-Pu-bSo"/>
+                                            <action selector="tappedChangeService:" destination="kqS-JS-xWW" eventType="touchUpInside" id="XwF-S8-KZz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90K-Yo-nex">
@@ -134,7 +134,7 @@
                                             <color key="baseBackgroundColor" red="0.11157868059999999" green="0.2824388444" blue="0.61462736129999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="tappedChangePassword:" destination="kqS-JS-xWW" eventType="touchUpInside" id="afR-fA-Rt7"/>
+                                            <action selector="tappedChangePassword:" destination="kqS-JS-xWW" eventType="touchUpInside" id="AAg-0P-Qtd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz7-UV-nXV">
@@ -263,8 +263,6 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="Q4D-gM-PMw"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="changePasswordButton" destination="90K-Yo-nex" id="puk-qD-joq"/>
-                        <outlet property="changeServicesButton" destination="PRp-uu-ycp" id="MAF-i2-gdm"/>
                         <outlet property="dateTextField" destination="VhG-PR-Znm" id="Bhx-7X-Vs3"/>
                         <outlet property="emailTextField" destination="50M-AS-wCM" id="44R-sA-iHX"/>
                         <outlet property="nameLabel" destination="9IN-ES-rVe" id="ZRj-mO-Z6a"/>

@@ -38,8 +38,8 @@ class PerfilUsuarioViewController: UIViewController {
     }
     
     @IBAction func tappedHelpButton(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "ScreenHelp", bundle: nil)
-        let vC = storyboard.instantiateViewController(withIdentifier: "ScreenHelp")
+        let storyboard = UIStoryboard(name: "HelpScreenViewController", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "HelpScreenViewController")
         navigationController?.pushViewController(vC, animated: true)
     }
     
@@ -53,14 +53,14 @@ class PerfilUsuarioViewController: UIViewController {
     }
     
     @IBAction func tappedEditProfile(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "ProfileEdit", bundle: nil)
-        let vC = storyboard.instantiateViewController(withIdentifier: "ProfileEdit")
+        let storyboard = UIStoryboard(name: "ProfileEditViewController", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "ProfileEditViewController")
         navigationController?.pushViewController(vC, animated: true)
     }
     
     @IBAction func tappedNotification(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vC = storyboard.instantiateViewController(withIdentifier: "Main")
+        let storyboard = UIStoryboard(name: "NotificationViewController", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "NotificationViewController")
         navigationController?.pushViewController(vC, animated: true)
     }
     

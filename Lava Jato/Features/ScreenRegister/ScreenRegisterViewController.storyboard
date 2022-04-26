@@ -12,7 +12,7 @@
         <!--Cadastro-->
         <scene sceneID="eaI-ix-Dm2">
             <objects>
-                <viewController storyboardIdentifier="screenRegister" id="pME-Od-2HJ" customClass="cadastroViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScreenRegisterViewController" id="pME-Od-2HJ" customClass="ScreenRegisterViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yc7-b6-1lZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,10 +400,10 @@
                         <outlet property="dateRegisterTextField" destination="17o-3d-p7H" id="MSF-YY-u63"/>
                         <outlet property="documentRegisterTextField" destination="KoH-mD-RXR" id="GNA-gn-b9n"/>
                         <outlet property="emailRegisterTextField" destination="fUd-hx-BiM" id="Zrx-TS-Y2x"/>
-                        <outlet property="estadoCivilRegisterTextField" destination="XsK-tb-jon" id="K68-yc-CPl"/>
                         <outlet property="nameRegisterTextField" destination="1Mj-NK-kJ9" id="q1v-yr-Vpq"/>
                         <outlet property="numberRegisterTextField" destination="J5G-TU-VUE" id="VUm-OV-RlV"/>
                         <outlet property="registerButton" destination="8yW-vf-0ck" id="VoD-40-wlg"/>
+                        <outlet property="statusMaritalTextField" destination="XsK-tb-jon" id="rln-iH-57V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JkA-Oi-k1n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

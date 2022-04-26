@@ -35,7 +35,7 @@ class ViewController: UIViewController{
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "screenRegister", sender: nil)
+        self.performSegue(withIdentifier: "screenRegisterSegue", sender: nil)
     }
     
     

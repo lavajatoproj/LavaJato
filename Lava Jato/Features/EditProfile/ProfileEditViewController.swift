@@ -1,5 +1,5 @@
 //
-//  profileEditViewController.swift
+//  ProfileEditViewController.swift
 //  Lava Jato
 //
 //  Created by Brendon Sambatti on 03/03/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class profileEditViewController: UIViewController {
+class ProfileEditViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var numberTextField: UITextField!
@@ -17,35 +17,7 @@ class profileEditViewController: UIViewController {
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
-    
-    //popup de alteração de senha
-    class PopUpWindow: UIViewController {
         
-        private let popUpWindowView = PopUpWindowView()
-        
-        init(title: String, text: String, buttontext: String) {
-            super.init(nibName: nil, bundle: nil)
-            modalTransitionStyle = .crossDissolve
-            modalPresentationStyle = .overFullScreen
-            
-            popUpWindowView.popupTitle.text = title
-            popUpWindowView.popupText.text = text
-            popUpWindowView.popupButton.setTitle(buttontext, for: .normal)
-            popUpWindowView.popupButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
-            view = popUpWindowView
-            
-        }
-        
-        required init(coder aDecoder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
-        @objc func dismissView(){
-            self.dismiss(animated: true, completion: nil)
-        }
-        
-    }
-    
-    //Para capturar data no textField
     let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
@@ -77,9 +49,7 @@ class profileEditViewController: UIViewController {
         self.createDatePicker()
     }
     
-    //criando barra com botão done no datePicker
     func createToolbar () -> UIToolbar {
-        //toolbar
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         
@@ -88,7 +58,6 @@ class profileEditViewController: UIViewController {
         return toolbar
     }
     
-    //definindo funcoes e validacao para o datePicker
     public func createDatePicker(){
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
@@ -96,9 +65,7 @@ class profileEditViewController: UIViewController {
         dateTextField.inputView = datePicker
         dateTextField.inputAccessoryView = createToolbar()
     }
-    
-    //definindo acao apos apertar o botao done
-    @objc func donePressed(){
+        @objc func donePressed(){
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
@@ -106,27 +73,25 @@ class profileEditViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    //ação ao clicar no botão "Salvar"
     @IBAction func tappedSaveButton(_ sender: UIButton) {
-        var popUpWindow: PopUpWindow!
-        popUpWindow = PopUpWindow(title: "Concluído", text: "Suas alterações foram salvas", buttontext: "Confirmar")
-        self.present(popUpWindow, animated: true, completion: nil)
+        let alert: UIAlertController = UIAlertController(title: "Concluido", message: "Suas alteracoes foram salvas", preferredStyle: .alert)
+        let confirmButton: UIAlertAction = UIAlertAction(title: "Confirmar", style: .cancel){
+            (action) in
+        }
+        alert.addAction(confirmButton)
+        self.present(alert, animated: true, completion: nil)
     }
-    
     @IBAction func tappedChangePassword(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "ChangePasswordViewController", bundle: nil)
         let vC = storyboard.instantiateViewController(withIdentifier: "ChangePasswordViewController")
         navigationController?.pushViewController(vC, animated: true)
     }
-    
     @IBAction func tappedChangeService(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "meusServicos", bundle: nil)
         let vC = storyboard.instantiateViewController(withIdentifier: "meusServicos")
         navigationController?.pushViewController(vC, animated: true)
     }
-    
-    
-    //Validação do nome completo
+
     @IBAction func nameAct(_ sender: Any) {
         let text = self.nameTextField.text ?? ""
         if text.isValidName() {
@@ -136,7 +101,6 @@ class profileEditViewController: UIViewController {
         }
     }
     
-    //Validação do telefone
     @IBAction func phoneAct(_ sender: Any) {
         let text = self.numberTextField.text ?? ""
         if text.filterPhoneNumber().isValidPhone() {
@@ -147,7 +111,6 @@ class profileEditViewController: UIViewController {
     }
     
     
-    //Validação do e-mail
     @IBAction func emailAct(_ sender: Any) {
         let text = self.emailTextField.text ?? ""
         if text.isValidEmail() {
@@ -159,17 +122,11 @@ class profileEditViewController: UIViewController {
     
     
 }
-//extension do textfield delegate
-extension profileEditViewController:UITextFieldDelegate{
-    
-    //textFieldDidBeginEditing = Não faz validação, apenas da foco ao teclado, ou seja, todas as funções presentes serão executadas assim que houver o clique no textfield.
+extension ProfileEditViewController:UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.blue.cgColor
         textField.layer.borderWidth = 2.0
     }
-    
-    
-    //textFieldDidEndEditing = Após a perda do foco é esperada alguma entrada, então se inicia o processo de validação.
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == self.nameTextField{
@@ -205,7 +162,6 @@ extension profileEditViewController:UITextFieldDelegate{
             self.saveButton.isHidden = false
         }
     }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
