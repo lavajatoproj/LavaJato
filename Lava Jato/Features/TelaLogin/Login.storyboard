@@ -166,7 +166,7 @@
                         <outlet property="tfEmail" destination="UQ5-zM-Lo6" id="6cl-Xu-xlr"/>
                         <outlet property="tfPassword" destination="P1U-qE-vra" id="oL6-uc-GLA"/>
                         <segue destination="lr5-3J-2vj" kind="show" identifier="RecuperarSenha" id="Cnq-9R-66F"/>
-                        <segue destination="9qQ-ad-ATC" kind="show" identifier="screenRegister" id="FjF-KU-NeZ"/>
+                        <segue destination="9qQ-ad-ATC" kind="show" identifier="screenRegisterSegue" id="FjF-KU-NeZ"/>
                         <segue destination="AXu-fg-QEO" kind="presentation" identifier="telaPrincipalsegue" modalPresentationStyle="fullScreen" id="0k3-hu-VMG"/>
                     </connections>
                 </viewController>
@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="1032" y="106"/>
         </scene>
-        <!--ScreenRegister-->
+        <!--ScreenRegisterViewController-->
         <scene sceneID="dy6-C6-49T">
             <objects>
-                <viewControllerPlaceholder storyboardName="ScreenRegister" id="9qQ-ad-ATC" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ScreenRegisterViewController" id="9qQ-ad-ATC" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="v05-rE-yub"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1Q-WQ-RQD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

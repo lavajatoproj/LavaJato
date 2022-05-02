@@ -9,7 +9,6 @@ import UIKit
 
 class NotificationTableViewCell: UITableViewCell {
     
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var adressLabel: UILabel!
@@ -21,17 +20,14 @@ class NotificationTableViewCell: UITableViewCell {
     @IBOutlet weak var backgroundXib: UIView!
     
     static let identifier:String = "NotificationTableViewCell"
-    
-    static func nib()-> UINib{
+        static func nib()-> UINib{
         return UINib(nibName: self.identifier, bundle: nil)
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         self.backgroundXib.layer.cornerRadius = 15.0
     }
-    
     public func dados(profile:Profile){
         self.nameLabel.text = profile.name
         self.userImage.image = profile.photo

@@ -11,7 +11,7 @@
         <!--Ajuda-->
         <scene sceneID="uRy-nh-5eQ">
             <objects>
-                <viewController storyboardIdentifier="ScreenHelp" id="eE9-TG-Yrr" customClass="HelpViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HelpScreenViewController" id="eE9-TG-Yrr" customClass="HelpScreenViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gXh-ZU-83t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,7 +56,7 @@
                                     <color key="baseBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonWhats:" destination="eE9-TG-Yrr" eventType="touchUpInside" id="bwY-S5-3QB"/>
+                                    <action selector="buttonWhats:" destination="eE9-TG-Yrr" eventType="touchUpInside" id="C08-Yc-YGu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IS-W7-wth">
@@ -80,7 +80,7 @@
                                     <color key="baseBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="btEmail:" destination="eE9-TG-Yrr" eventType="touchUpInside" id="9M5-9F-fBl"/>
+                                    <action selector="btEmail:" destination="eE9-TG-Yrr" eventType="touchUpInside" id="CpX-5H-qD3"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp_image" translatesAutoresizingMaskIntoConstraints="NO" id="lA1-Xn-xFt">
@@ -129,7 +129,7 @@
                     <navigationItem key="navigationItem" title="Ajuda" id="IYt-IA-znM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="backgroundImageView" destination="UiO-Gd-rk1" id="tPe-Tp-SUu"/>
+                        <outlet property="backgroundImageView" destination="UiO-Gd-rk1" id="r4e-Vc-yUa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0h-lU-fIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

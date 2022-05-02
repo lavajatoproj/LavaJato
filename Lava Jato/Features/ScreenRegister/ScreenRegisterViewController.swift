@@ -11,7 +11,7 @@ class CellClass: UITableViewCell {
     
 }
 
-class cadastroViewController: UIViewController {
+class ScreenRegisterViewController: UIViewController {
     
     
     @IBOutlet weak var nameRegisterTextField: UITextField!
@@ -19,77 +19,61 @@ class cadastroViewController: UIViewController {
     @IBOutlet weak var numberRegisterTextField: UITextField!
     @IBOutlet weak var dateRegisterTextField: UITextField!
     @IBOutlet weak var documentRegisterTextField: UITextField!
-    @IBOutlet weak var estadoCivilRegisterTextField: UITextField!
+    @IBOutlet weak var statusMaritalTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var checkBox: UIButton!
-    //botao para selecionar o sexo
-    @IBOutlet weak var btnSelectGender: UIButton!    
-    //configuracoes dropdown
+    @IBOutlet weak var btnSelectGender: UIButton!
     let transparentView = UIView()
     let tableView = UITableView()
-    
     var selectedButton = UIButton()
-    
     var dataSource = [String]()
-    /////////////////////////////
     let datePicker = UIDatePicker()
-    
     var checkboxFlag = false
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Style()
         self.hideKeyboardWhenTappedAround()
-        
-        // Assinaturas relacionadas ao dropdown
+        self.configSelectGender()
+        self.configTextField()
+        self.createDatePicker()
+    }
+    func configSelectGender(){
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CellClass.self, forCellReuseIdentifier: "Cell")
-        
         self.btnSelectGender.titleLabel?.textAlignment = .left
-   self.btnSelectGender.layer.cornerRadius = 5.0
-        
-        //////////////////////////
-        //assinatura dos textfields
+        self.btnSelectGender.layer.cornerRadius = 5.0
+    }
+    
+    func configTextField(){
         self.nameRegisterTextField.delegate = self
         self.emailRegisterTextField.delegate = self
         self.numberRegisterTextField.delegate = self
         self.dateRegisterTextField.delegate = self
         self.documentRegisterTextField.delegate = self
-        self.estadoCivilRegisterTextField.delegate = self
-        
-        //desativando botão "Cadastrar"
+        self.statusMaritalTextField.delegate = self
         self.registerButton.isEnabled = false
-        
-        //tamanho das bordas dos textfields
         self.nameRegisterTextField.layer.borderWidth = 2.0
         self.emailRegisterTextField.layer.borderWidth = 2.0
         self.numberRegisterTextField.layer.borderWidth = 2.0
         self.dateRegisterTextField.layer.borderWidth = 2.0
         self.documentRegisterTextField.layer.borderWidth = 2.0
-        self.estadoCivilRegisterTextField.layer.borderWidth = 2.0
-        // cor das bordas dos textfields
+        self.statusMaritalTextField.layer.borderWidth = 2.0
         self.nameRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.emailRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.numberRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.dateRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.documentRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
-        self.estadoCivilRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
-        
-        //bordas arredondadas
+        self.statusMaritalTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.nameRegisterTextField.layer.cornerRadius = 5.0
         self.emailRegisterTextField.layer.cornerRadius = 5.0
         self.numberRegisterTextField.layer.cornerRadius = 5.0
         self.dateRegisterTextField.layer.cornerRadius = 5.0
         self.documentRegisterTextField.layer.cornerRadius = 5.0
-        self.estadoCivilRegisterTextField.layer.cornerRadius = 5.0
-        
-        //criacao do seletor de data
-        self.createDatePicker()
+        self.statusMaritalTextField.layer.cornerRadius = 5.0
     }
     
-    //Criação da View do dropdown dos sexos
     func addTransparentView(frames: CGRect) {
         let window = UIApplication.shared.keyWindow
         transparentView.frame = window?.frame ?? self.view.frame
@@ -117,11 +101,9 @@ class cadastroViewController: UIViewController {
             self.tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height, width: frames.width, height: 0)
         }, completion: nil)
     }
-
     
-    //barra com botao done para o datepicker
+    
     func createToolbar () -> UIToolbar {
-        //toolbar
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         
@@ -129,7 +111,6 @@ class cadastroViewController: UIViewController {
         toolbar.setItems([doneButton], animated: true)
         return toolbar
     }
-    //criacao da função após apertar o botao done do datepicker
     @objc func donePressed(){
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -138,7 +119,6 @@ class cadastroViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    //definindo funcoes para o datepicker
     public func createDatePicker(){
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
@@ -147,15 +127,13 @@ class cadastroViewController: UIViewController {
         dateRegisterTextField.inputAccessoryView = createToolbar()
     }
     
-    // Criacao da ação do botao seletor do sexo
     @IBAction func onClickSelectGender(_ sender: UIButton) {
         dataSource = ["Masculino", "Feminino"]
         selectedButton = btnSelectGender
         addTransparentView(frames: btnSelectGender.frame)
     }
-
-
-    //configurações do checkbox dos termos de uso
+    
+    
     @IBAction func tappedCheckBox(_ sender: UIButton) {
         
         if (checkboxFlag == false){
@@ -167,7 +145,7 @@ class cadastroViewController: UIViewController {
             checkboxFlag = false
         }
         if self.checkboxFlag == true {
-            if self.nameRegisterTextField.textColor != UIColor.red && self.numberRegisterTextField.textColor != UIColor.red && self.dateRegisterTextField.textColor != UIColor.red && self.documentRegisterTextField.textColor != UIColor.red && self.estadoCivilRegisterTextField.textColor != UIColor.red && self.estadoCivilRegisterTextField.layer.borderColor != UIColor.red.cgColor && self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.estadoCivilRegisterTextField.text != "" && self.btnSelectGender.titleLabel?.text != "" && self.emailRegisterTextField.text != ""{
+            if self.nameRegisterTextField.textColor != UIColor.red && self.numberRegisterTextField.textColor != UIColor.red && self.dateRegisterTextField.textColor != UIColor.red && self.documentRegisterTextField.textColor != UIColor.red && self.statusMaritalTextField.textColor != UIColor.red && self.statusMaritalTextField.layer.borderColor != UIColor.red.cgColor && self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.statusMaritalTextField.text != "" && self.btnSelectGender.titleLabel?.text != "" && self.emailRegisterTextField.text != ""{
                 self.registerButton.isEnabled = true
             }else{
                 self.registerButton.isEnabled = false
@@ -176,7 +154,6 @@ class cadastroViewController: UIViewController {
             self.registerButton.isEnabled = false
         }
     }
-    //definindo ações para os botões
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         performSegue(withIdentifier: "tappedRegisterSegue", sender: nil)
     }
@@ -190,7 +167,6 @@ class cadastroViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAtributes
     }
     
-    //validação do nome completo
     @IBAction func nameAct(_ sender: Any) {
         let text = self.nameRegisterTextField.text ?? ""
         if text.isValidName() {
@@ -199,7 +175,6 @@ class cadastroViewController: UIViewController {
             self.nameRegisterTextField.textColor = UIColor.red
         }
     }
-    //validação do e-mail
     @IBAction func emailAct(_ sender: Any) {
         let text = self.emailRegisterTextField.text ?? ""
         if text.isValidEmail() {
@@ -211,9 +186,8 @@ class cadastroViewController: UIViewController {
     
     
     @IBAction func tappedTermsOfUse(_ sender: UIButton) {
-        }
+    }
     
-    //validação do telefone
     @IBAction func phoneAct(_ sender: Any) {
         let text = self.numberRegisterTextField.text ?? ""
         if text.filterPhoneNumber().isValidPhone() {
@@ -223,10 +197,8 @@ class cadastroViewController: UIViewController {
         }
     }
 }
-    
-    //adicionando extensões para textfieldDelegade (validações)
-    
-extension cadastroViewController:UITextFieldDelegate{
+
+extension ScreenRegisterViewController:UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.blue.cgColor
         textField.layer.borderWidth = 2.0
@@ -261,11 +233,11 @@ extension cadastroViewController:UITextFieldDelegate{
                 self.documentRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
-        if textField == self.estadoCivilRegisterTextField{
-            if self.estadoCivilRegisterTextField.text == ""{
-                self.estadoCivilRegisterTextField.layer.borderColor = UIColor.red.cgColor
+        if textField == self.statusMaritalTextField{
+            if self.statusMaritalTextField.text == ""{
+                self.statusMaritalTextField.layer.borderColor = UIColor.red.cgColor
             }else{
-                self.estadoCivilRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
+                self.statusMaritalTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
         if textField == self.emailRegisterTextField{
@@ -275,7 +247,7 @@ extension cadastroViewController:UITextFieldDelegate{
                 self.emailRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
-        if self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.estadoCivilRegisterTextField.text != "" && self.btnSelectGender.titleLabel?.text != "" && self.emailRegisterTextField.text != "" && self.checkboxFlag == true && self.nameRegisterTextField.textColor == UIColor.black && self.emailRegisterTextField.textColor == UIColor.black && self.numberRegisterTextField.textColor == UIColor.black{
+        if self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.statusMaritalTextField.text != "" && self.btnSelectGender.titleLabel?.text != "" && self.emailRegisterTextField.text != "" && self.checkboxFlag == true && self.nameRegisterTextField.textColor == UIColor.black && self.emailRegisterTextField.textColor == UIColor.black && self.numberRegisterTextField.textColor == UIColor.black{
             self.registerButton.isEnabled = true
         }else{
             self.registerButton.isEnabled = false
@@ -288,10 +260,8 @@ extension cadastroViewController:UITextFieldDelegate{
         return true
     }
     
-    
 }
-// extensão tableviewdelegade para o seletor de sexo
-extension cadastroViewController: UITableViewDelegate {
+extension ScreenRegisterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataSource.count
     }
@@ -299,12 +269,8 @@ extension cadastroViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-    
-
 }
-
-// extensão tableviewdatasource para o seletor de sexo
-extension cadastroViewController: UITableViewDataSource{
+extension ScreenRegisterViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = dataSource[indexPath.row]

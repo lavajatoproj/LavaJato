@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HelpViewController: UIViewController {
+class HelpScreenViewController: UIViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     
@@ -15,7 +15,6 @@ class HelpViewController: UIViewController {
         super.viewDidLoad()
         self.backgroundImageView.layer.cornerRadius = 15.0
         Style()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func buttonWhats(_ sender: Any) {
@@ -31,8 +30,6 @@ class HelpViewController: UIViewController {
 //            showAlert(message: "O Whatsapp não está instalado neste dispositivo. Instale o Whatsapp e tente novamente.")
         }
     }
-    
-    
     @IBAction func btEmail(_ sender: Any) {
         
         let email = "junynho2011@gmail.com"
