@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Filtros-->
+        <!--FilterViewController-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="FiltroViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FilterViewController" id="Y6W-OH-hqX" customClass="FilterViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="callMaps:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Dyb-E5-Yxs"/>
+                                            <action selector="tappedCallMaps:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6ca-3F-uDi"/>
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zhv-k1-Mw7">
@@ -100,9 +100,9 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="2an-tz-4mJ"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="callMapsButton" destination="zwB-J5-qb6" id="eZa-E5-yZ4"/>
-                        <outlet property="cityTextField" destination="dpU-Es-Vz4" id="7tX-2o-kLy"/>
-                        <outlet property="tViewTableView" destination="zhv-k1-Mw7" id="d6j-Se-Lkp"/>
+                        <outlet property="callMapsButton" destination="zwB-J5-qb6" id="hNM-Li-MVf"/>
+                        <outlet property="cityTextField" destination="dpU-Es-Vz4" id="Vep-gv-vh4"/>
+                        <outlet property="tViewTableView" destination="zhv-k1-Mw7" id="gJQ-KL-XLf"/>
                         <segue destination="obu-ie-ub5" kind="show" identifier="maps" id="DWh-Om-Jj5"/>
                     </connections>
                 </viewController>

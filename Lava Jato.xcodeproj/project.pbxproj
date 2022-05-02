@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		2EA0FBA7AF94233EBB6451CF /* libPods-Lava Jato.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0EA5818F1E5F9862B73A09 /* libPods-Lava Jato.a */; };
 		442DD11E27D05D0900C4F033 /* PerfilUsuario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442DD11D27D05D0900C4F033 /* PerfilUsuario.storyboard */; };
-		443BAE9827BF4DE400751C16 /* TelaPrincipal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443BAE9727BF4DE400751C16 /* TelaPrincipal.storyboard */; };
-		445C7C0F27DD113F000E9CD2 /* ServicoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445C7C0E27DD113F000E9CD2 /* ServicoCollectionViewCell.swift */; };
-		445C7C1227DD140D000E9CD2 /* Servico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445C7C1127DD140C000E9CD2 /* Servico.swift */; };
+		443BAE9827BF4DE400751C16 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443BAE9727BF4DE400751C16 /* MainScreen.storyboard */; };
+		445C7C1227DD140D000E9CD2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445C7C1127DD140C000E9CD2 /* Service.swift */; };
 		449EFAA727DE3AF4002111DE /* PerfilUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449EFAA627DE3AF3002111DE /* PerfilUsuarioViewController.swift */; };
 		44CB761E27E941B600A029FA /* PlaceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CB761C27E941B600A029FA /* PlaceCollectionViewCell.xib */; };
 		44CB761F27E941B600A029FA /* PlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB761D27E941B600A029FA /* PlaceCollectionViewCell.swift */; };
@@ -24,6 +23,8 @@
 		44CB763027E941D000A029FA /* ProfileGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB762D27E941CF00A029FA /* ProfileGenre.swift */; };
 		44CB763227E941F700A029FA /* FiltroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB763127E941F700A029FA /* FiltroViewController.swift */; };
 		44CB763427E941FD00A029FA /* FiltroStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CB763327E941FD00A029FA /* FiltroStoryboard.storyboard */; };
+		44FA259E28177CB7006C1CFB /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA259C28177CB7006C1CFB /* ServicesCollectionViewCell.swift */; };
+		44FA259F28177CB7006C1CFB /* ServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44FA259D28177CB7006C1CFB /* ServicesCollectionViewCell.xib */; };
 		A20B841827DF051B00F29991 /* cellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B841627DF051B00F29991 /* cellTableViewCell.swift */; };
 		A20B841927DF051B00F29991 /* cellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A20B841727DF051B00F29991 /* cellTableViewCell.xib */; };
 		A212221127D13E3500B24208 /* solicitacaoDeServico.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A212221027D13E3500B24208 /* solicitacaoDeServico.storyboard */; };
@@ -69,7 +70,7 @@
 		E162E07B27ADF53E00C6AD32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162E07A27ADF53E00C6AD32 /* ViewController.swift */; };
 		E162E08027ADF54000C6AD32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E162E07F27ADF54000C6AD32 /* Assets.xcassets */; };
 		E162E08327ADF54000C6AD32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E162E08127ADF54000C6AD32 /* LaunchScreen.storyboard */; };
-		E18703DA27E9210A005B3AA9 /* TelaPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18703D927E9210A005B3AA9 /* TelaPrincipal.swift */; };
+		E18703DA27E9210A005B3AA9 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18703D927E9210A005B3AA9 /* MainScreen.swift */; };
 		E18703DD27E94E39005B3AA9 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18703DC27E94E39005B3AA9 /* ChangePasswordViewController.swift */; };
 		E18703DF27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18703DE27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard */; };
 		E194592227EAB6C800CC0078 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E194592127EAB6C800CC0078 /* GoogleService-Info.plist */; };
@@ -78,9 +79,8 @@
 /* Begin PBXFileReference section */
 		1F0EA5818F1E5F9862B73A09 /* libPods-Lava Jato.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lava Jato.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		442DD11D27D05D0900C4F033 /* PerfilUsuario.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PerfilUsuario.storyboard; sourceTree = "<group>"; };
-		443BAE9727BF4DE400751C16 /* TelaPrincipal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaPrincipal.storyboard; sourceTree = "<group>"; };
-		445C7C0E27DD113F000E9CD2 /* ServicoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicoCollectionViewCell.swift; sourceTree = "<group>"; };
-		445C7C1127DD140C000E9CD2 /* Servico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servico.swift; sourceTree = "<group>"; };
+		443BAE9727BF4DE400751C16 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
+		445C7C1127DD140C000E9CD2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		449EFAA627DE3AF3002111DE /* PerfilUsuarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerfilUsuarioViewController.swift; sourceTree = "<group>"; };
 		44CB761C27E941B600A029FA /* PlaceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceCollectionViewCell.xib; sourceTree = "<group>"; };
 		44CB761D27E941B600A029FA /* PlaceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -93,6 +93,8 @@
 		44CB762D27E941CF00A029FA /* ProfileGenre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileGenre.swift; sourceTree = "<group>"; };
 		44CB763127E941F700A029FA /* FiltroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltroViewController.swift; sourceTree = "<group>"; };
 		44CB763327E941FD00A029FA /* FiltroStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FiltroStoryboard.storyboard; sourceTree = "<group>"; };
+		44FA259C28177CB7006C1CFB /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
+		44FA259D28177CB7006C1CFB /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
 		A20B841627DF051B00F29991 /* cellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellTableViewCell.swift; sourceTree = "<group>"; };
 		A20B841727DF051B00F29991 /* cellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellTableViewCell.xib; sourceTree = "<group>"; };
 		A212221027D13E3500B24208 /* solicitacaoDeServico.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = solicitacaoDeServico.storyboard; sourceTree = "<group>"; };
@@ -142,7 +144,7 @@
 		E162E07F27ADF54000C6AD32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E162E08227ADF54000C6AD32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E162E08427ADF54000C6AD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E18703D927E9210A005B3AA9 /* TelaPrincipal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaPrincipal.swift; sourceTree = "<group>"; };
+		E18703D927E9210A005B3AA9 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		E18703DC27E94E39005B3AA9 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		E18703DE27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
 		E194592127EAB6C800CC0078 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -168,17 +170,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		442DD11327D05AD300C4F033 /* Filtros */ = {
+		442DD11327D05AD300C4F033 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
-				44CB763327E941FD00A029FA /* FiltroStoryboard.storyboard */,
 				44CB763127E941F700A029FA /* FiltroViewController.swift */,
+				44CB763327E941FD00A029FA /* FiltroStoryboard.storyboard */,
 				44CB762A27E941CF00A029FA /* Model */,
 				44CB762527E941C800A029FA /* Cell Element */,
 				44CB762027E941C200A029FA /* Cell Valor */,
 				44CB761B27E941B600A029FA /* Cell Place */,
 			);
-			path = Filtros;
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		442DD11427D05ADF00C4F033 /* PerfilUsuario */ = {
@@ -206,27 +208,27 @@
 				A212220E27D13DB400B24208 /* MeusServicos */,
 				A212220D27D13DA200B24208 /* ListaDeProfissionais */,
 				442DD11427D05ADF00C4F033 /* PerfilUsuario */,
-				442DD11327D05AD300C4F033 /* Filtros */,
-				443BAE9527BF4C6800751C16 /* TelaPrincipal */,
+				442DD11327D05AD300C4F033 /* Filter */,
+				443BAE9527BF4C6800751C16 /* MainScreen */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		443BAE9527BF4C6800751C16 /* TelaPrincipal */ = {
+		443BAE9527BF4C6800751C16 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				44FA259B28177C5C006C1CFB /* Cell */,
 				445C7C1027DD13E5000E9CD2 /* Model */,
-				443BAE9727BF4DE400751C16 /* TelaPrincipal.storyboard */,
-				E18703D927E9210A005B3AA9 /* TelaPrincipal.swift */,
-				445C7C0E27DD113F000E9CD2 /* ServicoCollectionViewCell.swift */,
+				E18703D927E9210A005B3AA9 /* MainScreen.swift */,
+				443BAE9727BF4DE400751C16 /* MainScreen.storyboard */,
 			);
-			path = TelaPrincipal;
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 		445C7C1027DD13E5000E9CD2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				445C7C1127DD140C000E9CD2 /* Servico.swift */,
+				445C7C1127DD140C000E9CD2 /* Service.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,6 +268,15 @@
 				44CB762D27E941CF00A029FA /* ProfileGenre.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		44FA259B28177C5C006C1CFB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				44FA259C28177CB7006C1CFB /* ServicesCollectionViewCell.swift */,
+				44FA259D28177CB7006C1CFB /* ServicesCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		68ABB571C485D0786C8C9893 /* Pods */ = {
@@ -556,7 +567,6 @@
 			);
 			mainGroup = E162E06A27ADF53E00C6AD32;
 			packageReferences = (
-				E1F72C5527EBFCCE00540CB4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = E162E07427ADF53E00C6AD32 /* Products */;
 			projectDirPath = "";
@@ -594,6 +604,7 @@
 				A2F799CF27DC6A49005A53A3 /* CustomRowTableViewCell.xib in Resources */,
 				E162E08027ADF54000C6AD32 /* Assets.xcassets in Resources */,
 				44CB762427E941C200A029FA /* PriceTableViewCell.xib in Resources */,
+				44FA259F28177CB7006C1CFB /* ServicesCollectionViewCell.xib in Resources */,
 				A212221127D13E3500B24208 /* solicitacaoDeServico.storyboard in Resources */,
 				E15CA71627D52E5B002355B9 /* Login.storyboard in Resources */,
 				E13E5B3A27D70086000CB644 /* SF-Pro-Text-Light.otf in Resources */,
@@ -601,7 +612,7 @@
 				44CB761E27E941B600A029FA /* PlaceCollectionViewCell.xib in Resources */,
 				A212222027D13EE500B24208 /* MyCustomCell.xib in Resources */,
 				E13E5B3C27D700A1000CB644 /* SF-Pro-Text-Medium.otf in Resources */,
-				443BAE9827BF4DE400751C16 /* TelaPrincipal.storyboard in Resources */,
+				443BAE9827BF4DE400751C16 /* MainScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,9 +685,10 @@
 				E15CA72027D56A2E002355B9 /* MapsViewController.swift in Sources */,
 				E162E07B27ADF53E00C6AD32 /* ViewController.swift in Sources */,
 				DA9954C927DF899600C89D76 /* NotificationTableViewCell.swift in Sources */,
+				44FA259E28177CB7006C1CFB /* ServicesCollectionViewCell.swift in Sources */,
 				44CB761F27E941B600A029FA /* PlaceCollectionViewCell.swift in Sources */,
 				E162E07727ADF53E00C6AD32 /* AppDelegate.swift in Sources */,
-				445C7C1227DD140D000E9CD2 /* Servico.swift in Sources */,
+				445C7C1227DD140D000E9CD2 /* Service.swift in Sources */,
 				A20B841827DF051B00F29991 /* cellTableViewCell.swift in Sources */,
 				44CB762827E941C800A029FA /* ElementTableViewCell.swift in Sources */,
 				E13E5B3227D6F7FA000CB644 /* UIViewController.swift in Sources */,
@@ -687,7 +699,6 @@
 				E18703DD27E94E39005B3AA9 /* ChangePasswordViewController.swift in Sources */,
 				DA99553B27E2CE8000C89D76 /* PopUpWindow.swift in Sources */,
 				44CB763227E941F700A029FA /* FiltroViewController.swift in Sources */,
-				445C7C0F27DD113F000E9CD2 /* ServicoCollectionViewCell.swift in Sources */,
 				E13E5B1E27D59644000CB644 /* ErrorConectionViewController.swift in Sources */,
 				E13E5B3027D6F781000CB644 /* UITextField.swift in Sources */,
 				449EFAA727DE3AF4002111DE /* PerfilUsuarioViewController.swift in Sources */,
@@ -700,7 +711,7 @@
 				44CB762327E941C200A029FA /* PriceTableViewCell.swift in Sources */,
 				44CB763027E941D000A029FA /* ProfileGenre.swift in Sources */,
 				A212221F27D13EE500B24208 /* MyCustomCell.swift in Sources */,
-				E18703DA27E9210A005B3AA9 /* TelaPrincipal.swift in Sources */,
+				E18703DA27E9210A005B3AA9 /* MainScreen.swift in Sources */,
 				A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */,
 				DA9954D027DF8A8100C89D76 /* NotificationViewController.swift in Sources */,
 				A2F799D827DC6CC8005A53A3 /* Model.swift in Sources */,
@@ -848,7 +859,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = RT4528VRD6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Lava Jato/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -880,7 +891,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = RT4528VRD6;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Lava Jato/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -925,17 +936,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		E1F72C5527EBFCCE00540CB4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = E162E06B27ADF53E00C6AD32 /* Project object */;
 }

@@ -9,14 +9,9 @@ import Foundation
 import UIKit
 
 struct ProfileBanner {
-    
     let imgA:UIImage
-   
 }
       
-
-
-// Populando cellPlace
 let dataPlace: [ProfileBanner] = [
     ProfileBanner(imgA: #imageLiteral(resourceName: "emCasa")),
     ProfileBanner(imgA: #imageLiteral(resourceName: "busque")),
