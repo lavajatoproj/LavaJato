@@ -2,7 +2,7 @@
 //  PerfilUsuarioViewController.swift
 //  Lava Jato
 //
-//  Created by Olimpio Junior on 07/03/22.
+//  Created by Thiago Valentim on 07/03/22.
 //
 
 import UIKit
@@ -19,8 +19,7 @@ class PerfilUsuarioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Style()
-//        configGesture()
+        self.Style()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,21 +69,4 @@ class PerfilUsuarioViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAtributes
         
     }
-
-    // método para configurar o Gesture
-//    func configGesture(view: UIView){
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(PerfilUsuarioViewController.handlePan(sender:)))
-////        self.myServiceView.addGestureRecognizer(tap)
-//    }
-//
-//    @objc func handlePan(sender:UITapGestureRecognizer){
-//
-//    }
-    
-    
-//    @objc func tapGesture( sender:UITapGestureRecognizer){
-//        print ("View foi selecionada.")
-//    }
-    
-    
 }
