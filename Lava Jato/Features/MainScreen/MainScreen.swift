@@ -1,5 +1,5 @@
 //
-//  TelaPrincipal.swift
+//  MainScreen.swift
 //  Lava Jato
 //
 //  Created by Thiago Valentim on 18/02/22.
@@ -8,20 +8,24 @@
 
 import UIKit
 
-class TelaPrincipal: UIViewController, UICollectionViewDelegate{
-
-    // ligando a CollectionView a ViewController
-    @IBOutlet weak var cvCollectionView: UICollectionView!
+class MainScreen: UIViewController {
     
+    @IBOutlet weak var cvCollectionView: UICollectionView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-        Style()
-        // Assinaturas
+        self.settingCV()
+        
+    }
+    
+    // MARK: Signatures
+    
+    func settingCV(){
+        self.Style()
         cvCollectionView.dataSource = self
         cvCollectionView.delegate = self
+        self.cvCollectionView.register(ServicesCollectionViewCell.nib(), forCellWithReuseIdentifier: ServicesCollectionViewCell.identifier)
     }
     
     func Style(){
@@ -29,21 +33,24 @@ class TelaPrincipal: UIViewController, UICollectionViewDelegate{
     }
 }
 
+// MARK: Extension
+extension MainScreen:UICollectionViewDelegate{
+}
 
-extension TelaPrincipal:UICollectionViewDataSource{
+extension MainScreen:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return servico.count
+        return service.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ServicoCollectionViewCell", for:indexPath) as! ServicoCollectionViewCell
-        // chamando a funcao de configuracao das bordas
-        cell.setup(with: servico[indexPath.row])
-        cell.desingMyCell()
-        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ServicesCollectionViewCell.identifier, for:indexPath) as? ServicesCollectionViewCell
+        cell?.setup(with: service[indexPath.row])
+        //        cell?.desingMyCell()
+        return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         if indexPath.item == 0 {
             let storyboard = UIStoryboard(name: "listaDeServicos", bundle: nil)
             let viewController = storyboard.instantiateViewController(withIdentifier: "listaDeServicos")
@@ -91,38 +98,31 @@ extension TelaPrincipal:UICollectionViewDataSource{
             let viewController = storyboard.instantiateViewController(withIdentifier: "listaDeServicos")
             navigationController?.pushViewController(viewController, animated: true)
         }
+        if indexPath.item == 8 {
+            let storyboard = UIStoryboard(name: "listaDeServicos", bundle: nil)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "listaDeServicos")
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }
 
-
-// Configurando o whidt e o hidth de cada celula
-extension ViewController: UICollectionViewDelegateFlowLayout{
+extension MainScreen: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        // a funcao espera um retorno do tipo CGSize
-        // de acordo com o width e o height que ira apresentar quantas linhas tera a colletion.
-//        let size = (collectionView.frame.size.width - 8) / 2
-        return CGSize (width: 152, height:141)
+        return CGSize(width: self.view.frame.size.width / 2.3, height: 160)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 15, left: 10, bottom: 15, right: 10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 15
+    }
+    
+    
 }
 
 
-
-extension UIView {
-    func desingMyCell(){
-        self.layer.cornerRadius = 10
-        self.layer.borderWidth = 1.0
-//        self.layer.borderColor = UIColor.white.cgColor
-        self.layer.masksToBounds = true
-    }
-}
-
-// funcao para mostrar o nome quando se clica na imagem
-//extension ViewController: UICollectionViewDelegate {
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//  // ira imprimir o nome
-//        print(servico[indexPath.row])
-//    }
-//}
 
 
 
