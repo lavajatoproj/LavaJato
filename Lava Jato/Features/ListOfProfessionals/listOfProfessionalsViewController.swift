@@ -7,27 +7,7 @@
 
 import UIKit
 
-class listaDeServicosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return self.arrayNomes.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MyCustomCell? = tableView.dequeueReusableCell(withIdentifier: "MyCustomCell", for: indexPath) as? MyCustomCell
-        
-        cell?.fotoImageView.image = UIImage(named: self.arrayNomes[indexPath.row])
-        cell?.nomeLabel.text = self.arrayNomes[indexPath.row]
-        cell?.notaLabel.text = self.arrayNotas[indexPath.row]
-        return cell ?? UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedRow = self.arrayNomes[indexPath.row]
-        performSegue(withIdentifier: "solicitacaoDeServico", sender: selectedRow)
-        tableView.deselectRow(at: indexPath, animated: false)
-    }
-    
+class listOfProfessionalsViewController: UIViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var background2View: UIView!
@@ -74,6 +54,30 @@ class listaDeServicosViewController: UIViewController, UITableViewDelegate, UITa
             target: self,
             action: #selector(tapFilter)
         )
+    }
+    
+}
+
+extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.arrayNomes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: MyCustomCell? = tableView.dequeueReusableCell(withIdentifier: "MyCustomCell", for: indexPath) as? MyCustomCell
+        
+        cell?.fotoImageView.image = UIImage(named: self.arrayNomes[indexPath.row])
+        cell?.nomeLabel.text = self.arrayNomes[indexPath.row]
+        cell?.notaLabel.text = self.arrayNotas[indexPath.row]
+        return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedRow = self.arrayNomes[indexPath.row]
+        performSegue(withIdentifier: "requestService", sender: selectedRow)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
 }

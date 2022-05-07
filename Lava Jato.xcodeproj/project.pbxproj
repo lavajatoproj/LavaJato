@@ -27,12 +27,12 @@
 		44FA259F28177CB7006C1CFB /* ServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44FA259D28177CB7006C1CFB /* ServicesCollectionViewCell.xib */; };
 		A20B841827DF051B00F29991 /* cellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B841627DF051B00F29991 /* cellTableViewCell.swift */; };
 		A20B841927DF051B00F29991 /* cellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A20B841727DF051B00F29991 /* cellTableViewCell.xib */; };
-		A212221127D13E3500B24208 /* solicitacaoDeServico.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A212221027D13E3500B24208 /* solicitacaoDeServico.storyboard */; };
-		A212221327D13E5300B24208 /* solicitacaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212221227D13E5300B24208 /* solicitacaoViewController.swift */; };
-		A212221527D13E6C00B24208 /* meusServicos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A212221427D13E6C00B24208 /* meusServicos.storyboard */; };
-		A212221727D13E7F00B24208 /* meusServicosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212221627D13E7F00B24208 /* meusServicosViewController.swift */; };
-		A212221927D13E9700B24208 /* listaDeServicos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A212221827D13E9700B24208 /* listaDeServicos.storyboard */; };
-		A212221B27D13EB000B24208 /* listaDeServicosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212221A27D13EB000B24208 /* listaDeServicosViewController.swift */; };
+		A212221127D13E3500B24208 /* requestService.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A212221027D13E3500B24208 /* requestService.storyboard */; };
+		A212221327D13E5300B24208 /* requestServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212221227D13E5300B24208 /* requestServiceViewController.swift */; };
+		A212221527D13E6C00B24208 /* myServices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A212221427D13E6C00B24208 /* myServices.storyboard */; };
+		A212221727D13E7F00B24208 /* myServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212221627D13E7F00B24208 /* myServicesViewController.swift */; };
+		A212221927D13E9700B24208 /* listOfProfessionals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A212221827D13E9700B24208 /* listOfProfessionals.storyboard */; };
+		A212221B27D13EB000B24208 /* listOfProfessionalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212221A27D13EB000B24208 /* listOfProfessionalsViewController.swift */; };
 		A212221F27D13EE500B24208 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212221D27D13EE500B24208 /* MyCustomCell.swift */; };
 		A212222027D13EE500B24208 /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A212221E27D13EE500B24208 /* MyCustomCell.xib */; };
 		A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F799CC27DC6A49005A53A3 /* CustomRowTableViewCell.swift */; };
@@ -97,12 +97,12 @@
 		44FA259D28177CB7006C1CFB /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
 		A20B841627DF051B00F29991 /* cellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellTableViewCell.swift; sourceTree = "<group>"; };
 		A20B841727DF051B00F29991 /* cellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellTableViewCell.xib; sourceTree = "<group>"; };
-		A212221027D13E3500B24208 /* solicitacaoDeServico.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = solicitacaoDeServico.storyboard; sourceTree = "<group>"; };
-		A212221227D13E5300B24208 /* solicitacaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = solicitacaoViewController.swift; sourceTree = "<group>"; };
-		A212221427D13E6C00B24208 /* meusServicos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = meusServicos.storyboard; sourceTree = "<group>"; };
-		A212221627D13E7F00B24208 /* meusServicosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meusServicosViewController.swift; sourceTree = "<group>"; };
-		A212221827D13E9700B24208 /* listaDeServicos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = listaDeServicos.storyboard; sourceTree = "<group>"; };
-		A212221A27D13EB000B24208 /* listaDeServicosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listaDeServicosViewController.swift; sourceTree = "<group>"; };
+		A212221027D13E3500B24208 /* requestService.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = requestService.storyboard; sourceTree = "<group>"; };
+		A212221227D13E5300B24208 /* requestServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestServiceViewController.swift; sourceTree = "<group>"; };
+		A212221427D13E6C00B24208 /* myServices.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = myServices.storyboard; sourceTree = "<group>"; };
+		A212221627D13E7F00B24208 /* myServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myServicesViewController.swift; sourceTree = "<group>"; };
+		A212221827D13E9700B24208 /* listOfProfessionals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = listOfProfessionals.storyboard; sourceTree = "<group>"; };
+		A212221A27D13EB000B24208 /* listOfProfessionalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listOfProfessionalsViewController.swift; sourceTree = "<group>"; };
 		A212221D27D13EE500B24208 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
 		A212221E27D13EE500B24208 /* MyCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
 		A2F799CC27DC6A49005A53A3 /* CustomRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRowTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,9 +204,9 @@
 				E15CA71A27D53348002355B9 /* Maps */,
 				E13E5B1C27D595FF000CB644 /* TelaDeError */,
 				E15CA71727D52F02002355B9 /* RecuperarSenha */,
-				A212220F27D13E0100B24208 /* SolicitacaoDeServico */,
-				A212220E27D13DB400B24208 /* MeusServicos */,
-				A212220D27D13DA200B24208 /* ListaDeProfissionais */,
+				A212220F27D13E0100B24208 /* RequestService */,
+				A212220E27D13DB400B24208 /* MyServices */,
+				A212220D27D13DA200B24208 /* ListOfProfessionals */,
 				442DD11427D05ADF00C4F033 /* PerfilUsuario */,
 				442DD11327D05AD300C4F033 /* Filter */,
 				443BAE9527BF4C6800751C16 /* MainScreen */,
@@ -297,44 +297,44 @@
 			path = cell1;
 			sourceTree = "<group>";
 		};
-		A212220D27D13DA200B24208 /* ListaDeProfissionais */ = {
+		A212220D27D13DA200B24208 /* ListOfProfessionals */ = {
 			isa = PBXGroup;
 			children = (
-				A212221827D13E9700B24208 /* listaDeServicos.storyboard */,
-				A212221A27D13EB000B24208 /* listaDeServicosViewController.swift */,
-				A212221C27D13EB500B24208 /* cellLista */,
+				A212221827D13E9700B24208 /* listOfProfessionals.storyboard */,
+				A212221A27D13EB000B24208 /* listOfProfessionalsViewController.swift */,
+				A212221C27D13EB500B24208 /* cellList */,
 			);
-			path = ListaDeProfissionais;
+			path = ListOfProfessionals;
 			sourceTree = "<group>";
 		};
-		A212220E27D13DB400B24208 /* MeusServicos */ = {
+		A212220E27D13DB400B24208 /* MyServices */ = {
 			isa = PBXGroup;
 			children = (
-				A212221427D13E6C00B24208 /* meusServicos.storyboard */,
-				A212221627D13E7F00B24208 /* meusServicosViewController.swift */,
+				A212221427D13E6C00B24208 /* myServices.storyboard */,
+				A212221627D13E7F00B24208 /* myServicesViewController.swift */,
 				A2F799D627DC6CAB005A53A3 /* Model */,
 				A2F799CB27DC6A1D005A53A3 /* Cell */,
 			);
-			path = MeusServicos;
+			path = MyServices;
 			sourceTree = "<group>";
 		};
-		A212220F27D13E0100B24208 /* SolicitacaoDeServico */ = {
+		A212220F27D13E0100B24208 /* RequestService */ = {
 			isa = PBXGroup;
 			children = (
-				A212221027D13E3500B24208 /* solicitacaoDeServico.storyboard */,
-				A212221227D13E5300B24208 /* solicitacaoViewController.swift */,
+				A212221027D13E3500B24208 /* requestService.storyboard */,
+				A212221227D13E5300B24208 /* requestServiceViewController.swift */,
 				A20B840C27DED68700F29991 /* cell1 */,
 			);
-			path = SolicitacaoDeServico;
+			path = RequestService;
 			sourceTree = "<group>";
 		};
-		A212221C27D13EB500B24208 /* cellLista */ = {
+		A212221C27D13EB500B24208 /* cellList */ = {
 			isa = PBXGroup;
 			children = (
 				A212221D27D13EE500B24208 /* MyCustomCell.swift */,
 				A212221E27D13EE500B24208 /* MyCustomCell.xib */,
 			);
-			path = cellLista;
+			path = cellList;
 			sourceTree = "<group>";
 		};
 		A2F799CB27DC6A1D005A53A3 /* Cell */ = {
@@ -597,15 +597,15 @@
 				DA9954CA27DF899600C89D76 /* NotificationTableViewCell.xib in Resources */,
 				E13E5B2527D6EBA6000CB644 /* ProfileEditViewController.storyboard in Resources */,
 				E13E5B3827D7005E000CB644 /* SF-Pro-Text-Semibold.otf in Resources */,
-				A212221927D13E9700B24208 /* listaDeServicos.storyboard in Resources */,
+				A212221927D13E9700B24208 /* listOfProfessionals.storyboard in Resources */,
 				A20B841927DF051B00F29991 /* cellTableViewCell.xib in Resources */,
 				E194592227EAB6C800CC0078 /* GoogleService-Info.plist in Resources */,
-				A212221527D13E6C00B24208 /* meusServicos.storyboard in Resources */,
+				A212221527D13E6C00B24208 /* myServices.storyboard in Resources */,
 				A2F799CF27DC6A49005A53A3 /* CustomRowTableViewCell.xib in Resources */,
 				E162E08027ADF54000C6AD32 /* Assets.xcassets in Resources */,
 				44CB762427E941C200A029FA /* PriceTableViewCell.xib in Resources */,
 				44FA259F28177CB7006C1CFB /* ServicesCollectionViewCell.xib in Resources */,
-				A212221127D13E3500B24208 /* solicitacaoDeServico.storyboard in Resources */,
+				A212221127D13E3500B24208 /* requestService.storyboard in Resources */,
 				E15CA71627D52E5B002355B9 /* Login.storyboard in Resources */,
 				E13E5B3A27D70086000CB644 /* SF-Pro-Text-Light.otf in Resources */,
 				E15CA71927D52F1D002355B9 /* RecuperarSenha.storyboard in Resources */,
@@ -693,7 +693,7 @@
 				44CB762827E941C800A029FA /* ElementTableViewCell.swift in Sources */,
 				E13E5B3227D6F7FA000CB644 /* UIViewController.swift in Sources */,
 				DAB173D027D1508A00104761 /* ScreenRegisterViewController.swift in Sources */,
-				A212221B27D13EB000B24208 /* listaDeServicosViewController.swift in Sources */,
+				A212221B27D13EB000B24208 /* listOfProfessionalsViewController.swift in Sources */,
 				E13E5B2C27D6F5F1000CB644 /* UIcolor.swift in Sources */,
 				DA12C77A27D105BA00B6F080 /* ProfileEditViewController.swift in Sources */,
 				E18703DD27E94E39005B3AA9 /* ChangePasswordViewController.swift in Sources */,
@@ -706,7 +706,7 @@
 				44CB762E27E941D000A029FA /* ProfileBanner.swift in Sources */,
 				E162E07927ADF53E00C6AD32 /* SceneDelegate.swift in Sources */,
 				DAF0152C27C45B38009E55F6 /* HelpScreenViewController.swift in Sources */,
-				A212221727D13E7F00B24208 /* meusServicosViewController.swift in Sources */,
+				A212221727D13E7F00B24208 /* myServicesViewController.swift in Sources */,
 				44CB762F27E941D000A029FA /* ProfilePrice.swift in Sources */,
 				44CB762327E941C200A029FA /* PriceTableViewCell.swift in Sources */,
 				44CB763027E941D000A029FA /* ProfileGenre.swift in Sources */,
@@ -715,7 +715,7 @@
 				A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */,
 				DA9954D027DF8A8100C89D76 /* NotificationViewController.swift in Sources */,
 				A2F799D827DC6CC8005A53A3 /* Model.swift in Sources */,
-				A212221327D13E5300B24208 /* solicitacaoViewController.swift in Sources */,
+				A212221327D13E5300B24208 /* requestServiceViewController.swift in Sources */,
 				E10CB59427B7218100D49C01 /* resetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

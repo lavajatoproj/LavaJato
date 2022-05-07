@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="6700.0000000000009" y="-110.49107142857143"/>
         </scene>
-        <!--listaDeServicos-->
+        <!--listOfProfessionals-->
         <scene sceneID="Dyg-7e-1Pp">
             <objects>
-                <viewControllerPlaceholder storyboardName="listaDeServicos" id="FN2-4S-NbJ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="listOfProfessionals" id="FN2-4S-NbJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="hFp-z5-kSN"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lT-C7-VwV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -77,20 +77,20 @@
             </objects>
             <point key="canvasLocation" x="4139" y="-100"/>
         </scene>
-        <!--listaDeServicos-->
+        <!--listOfProfessionals-->
         <scene sceneID="cyC-Sx-dHM">
             <objects>
-                <viewControllerPlaceholder storyboardName="listaDeServicos" id="P9Y-ZF-Gc8" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="listOfProfessionals" id="P9Y-ZF-Gc8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="j3e-xl-nAB"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GwA-8R-wlj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3911" y="-101"/>
         </scene>
-        <!--meusServicos-->
+        <!--myServices-->
         <scene sceneID="5Hj-bo-2Tv">
             <objects>
-                <viewControllerPlaceholder storyboardName="meusServicos" id="DvY-ld-0RA" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="myServices" id="DvY-ld-0RA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="amR-P8-oga"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nug-DY-RWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

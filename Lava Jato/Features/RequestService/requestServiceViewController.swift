@@ -7,7 +7,62 @@
 
 import UIKit
 
-class solicitacaoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class requestServiceViewController: UIViewController {
+    
+    @IBOutlet weak var background1ImageView: UIImageView!
+    @IBOutlet weak var background2View: UIView!
+    @IBOutlet weak var professionalImageView: UIImageView!
+    @IBOutlet weak var nameProfessionalLabel: UILabel!
+    @IBOutlet weak var locationImageView: UIImageView!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var servico1Label: UILabel!
+    @IBOutlet weak var precoLabel: UILabel!
+    @IBOutlet weak var servicoLabel: UILabel!
+    @IBOutlet weak var valorLabel: UILabel!
+    @IBOutlet weak var tappedContratar: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var listMarca:[Marca] =  []
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tappedContratar.layer.cornerRadius = 10
+        self.valorLabel.text = "-"
+        self.servicoLabel.text = "-"
+        self.configTableView()
+        self.addMarca()
+        
+        Style()
+    }
+    
+    @IBAction func tappedContratar(_ sender: UIButton) {
+        self.servicoLabel.text = "-"
+        self.valorLabel.text = "-"
+    }
+    
+    
+    private func configTableView(){
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.register(cellTableViewCell.nib(), forCellReuseIdentifier: cellTableViewCell.identifier)
+    }
+    
+    private func addMarca(){
+        self.listMarca.append(Marca(opened: false,marca: "Selecione o serviço", produto: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"]))
+        self.listMarca.append(Marca(opened: false, marca: "Modo de retirada", produto: ["","Levarei ao local", "Buscar aqui"]))
+    }
+    
+    func Style(){
+        let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
+        navigationController?.navigationBar.titleTextAttributes = textAtributes
+    }
+    
+
+}
+
+extension requestServiceViewController: UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -114,59 +169,5 @@ class solicitacaoViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     
-    @IBOutlet weak var background1ImageView: UIImageView!
-    @IBOutlet weak var background2View: UIView!
-    @IBOutlet weak var professionalImageView: UIImageView!
-    @IBOutlet weak var nameProfessionalLabel: UILabel!
-    @IBOutlet weak var locationImageView: UIImageView!
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var servico1Label: UILabel!
-    @IBOutlet weak var precoLabel: UILabel!
-    @IBOutlet weak var servicoLabel: UILabel!
-    @IBOutlet weak var valorLabel: UILabel!
-    @IBOutlet weak var tappedContratar: UIButton!
-    @IBOutlet weak var tableView: UITableView!
     
-    var listMarca:[Marca] =  []
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.tappedContratar.layer.cornerRadius = 10
-        self.valorLabel.text = "-"
-        self.servicoLabel.text = "-"
-        self.configTableView()
-        self.addMarca()
-        
-        Style()
-    }
-    
-    @IBAction func tappedContratar(_ sender: UIButton) {
-        self.servicoLabel.text = "-"
-        self.valorLabel.text = "-"
-    }
-    
-    
-    private func configTableView(){
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.register(cellTableViewCell.nib(), forCellReuseIdentifier: cellTableViewCell.identifier)
-    }
-    
-    private func addMarca(){
-        self.listMarca.append(Marca(opened: false,marca: "Selecione o serviço", produto: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"]))
-        self.listMarca.append(Marca(opened: false, marca: "Modo de retirada", produto: ["","Levarei ao local", "Buscar aqui"]))
-    }
-    
-    func Style(){
-        let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
-        navigationController?.navigationBar.titleTextAttributes = textAtributes
-    }
-    
-    
-    
-    
-    
-
 }

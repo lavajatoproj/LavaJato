@@ -7,7 +7,7 @@
 
 import UIKit
 
-class meusServicosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class myServicesViewController: UIViewController{
     
     @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var background2: UIView!
@@ -19,13 +19,8 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var precoLabel: UILabel!
     @IBOutlet weak var valorLabel: UILabel!
     
-    
-    
-    
     var listMarca:[Marca] =  []
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.priceTF.isHidden = true
@@ -41,7 +36,7 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
         self.servicoLabel.text = "-"
         self.valorLabel.text = "-"
     }
-        
+    
     private func configTableView(){
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -53,11 +48,15 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
         self.listMarca.append(Marca(opened: false, marca: "Formas de serviço", produto: ["","Busco em casa", "Atendo no local"]))
         self.listMarca.append(Marca(opened: false, marca: "Preço", produto: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"]))
     }
+    
+}
 
 
+extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
-        let cell = tableView.dequeueReusableCell(withIdentifier: CustomRowTableViewCell.identifier, for: indexPath) as? CustomRowTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: CustomRowTableViewCell.identifier, for: indexPath) as? CustomRowTableViewCell
             cell?.setupCell(product: self.listMarca[indexPath.section].marca)
             cell?.productLabel.textAlignment = .center
             cell?.back2View.layer.borderWidth = 0.0
@@ -75,7 +74,7 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
             
             if indexPath.section == 2{
                 cell?.switch.isHidden = true
-            }
+                    }
             
             return cell ?? UITableViewCell()
         }
@@ -88,12 +87,12 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if listMarca[section].opened == true{
-        return self.listMarca[section].produto.count
+            return self.listMarca[section].produto.count
         }else{
             return 1
         }
-    
-}
+        
+    }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -107,7 +106,7 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
             tableView.reloadSections(sections, with: .none)
         }
         
-
+        
         if indexPath.section == 0{
             if indexPath.row == 1{
                 self.servicoLabel.text = "Lavagem Simples"
@@ -149,7 +148,7 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
                 }
             }
         }
-
+        
         if indexPath.section == 2{
             if indexPath.row == 1{
                 self.servicoLabel.text = "Lavagem Simples"
@@ -193,8 +192,9 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
         }else{
             self.priceTF.isHidden = true
         }
-}
-}
-
+    }
     
-
+    
+    
+    
+}
