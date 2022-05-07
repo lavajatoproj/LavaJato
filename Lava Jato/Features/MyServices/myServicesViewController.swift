@@ -14,17 +14,17 @@ class myServicesViewController: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tappedButton: UIButton!
     @IBOutlet weak var priceTF: UITextField!
-    @IBOutlet weak var servico1Label: UILabel!
-    @IBOutlet weak var servicoLabel: UILabel!
-    @IBOutlet weak var precoLabel: UILabel!
-    @IBOutlet weak var valorLabel: UILabel!
+    @IBOutlet weak var service1Label: UILabel!
+    @IBOutlet weak var serviceLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
     
     var listMarca:[Marca] =  []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.priceTF.isHidden = true
-        self.valorLabel.text = "-"
+        self.valueLabel.text = "-"
         self.addMarca()
         self.configTableView()
         self.tappedButton.layer.cornerRadius = 10
@@ -33,8 +33,8 @@ class myServicesViewController: UIViewController{
     
     @IBAction func tappedButton(_ sender: UIButton) {
         self.priceTF.isHidden=true
-        self.servicoLabel.text = "-"
-        self.valorLabel.text = "-"
+        self.serviceLabel.text = "-"
+        self.valueLabel.text = "-"
     }
     
     private func configTableView(){
@@ -109,36 +109,36 @@ extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
         
         if indexPath.section == 0{
             if indexPath.row == 1{
-                self.servicoLabel.text = "Lavagem Simples"
-                self.valorLabel.text = "R$ 80,00"
+                self.serviceLabel.text = "Lavagem Simples"
+                self.valueLabel.text = "R$ 80,00"
             }else{
                 if indexPath.row == 2{
-                    self.servicoLabel.text = "Lavagem Completa"
-                    self.valorLabel.text = "R$ 120,00"
+                    self.serviceLabel.text = "Lavagem Completa"
+                    self.valueLabel.text = "R$ 120,00"
                 }else{
                     if indexPath.row == 3{
-                        self.servicoLabel.text = "Lavagem + Polimento"
-                        self.valorLabel.text = "R$ 250,00"
+                        self.serviceLabel.text = "Lavagem + Polimento"
+                        self.valueLabel.text = "R$ 250,00"
                     }else{
                         if indexPath.row == 4{
-                            self.servicoLabel.text = "Lavagem a seco"
-                            self.valorLabel.text = "R$ 130,00"
+                            self.serviceLabel.text = "Lavagem a seco"
+                            self.valueLabel.text = "R$ 130,00"
                         }else{
                             if indexPath.row == 5{
-                                self.servicoLabel.text = "Lavagem a vapor"
-                                self.valorLabel.text = "R$ 180,00"
+                                self.serviceLabel.text = "Lavagem a vapor"
+                                self.valueLabel.text = "R$ 180,00"
                             }else{
                                 if indexPath.row == 6{
-                                    self.servicoLabel.text = "Variação: Ecolavagem"
-                                    self.valorLabel.text = "R$ 170,00"
+                                    self.serviceLabel.text = "Variação: Ecolavagem"
+                                    self.valueLabel.text = "R$ 170,00"
                                 }else{
                                     if indexPath.row == 7{
-                                        self.servicoLabel.text = "Purificação de ar"
-                                        self.valorLabel.text = "R$ 140,00"
+                                        self.serviceLabel.text = "Purificação de ar"
+                                        self.valueLabel.text = "R$ 140,00"
                                     }else{
                                         if indexPath.row == 8{
-                                            self.servicoLabel.text = "Higienização"
-                                            self.valorLabel.text = "R$ 90,00"
+                                            self.serviceLabel.text = "Higienização"
+                                            self.valueLabel.text = "R$ 90,00"
                                         }
                                     }
                                 }
@@ -151,35 +151,35 @@ extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
         
         if indexPath.section == 2{
             if indexPath.row == 1{
-                self.servicoLabel.text = "Lavagem Simples"
+                self.serviceLabel.text = "Lavagem Simples"
                 self.priceTF.isHidden = false
             }else{
                 if indexPath.row == 2{
-                    self.servicoLabel.text = "Lavagem Completa"
+                    self.serviceLabel.text = "Lavagem Completa"
                     self.priceTF.isHidden = false
                 }else{
                     if indexPath.row == 3{
-                        self.servicoLabel.text = "Lavagem + Polimento"
+                        self.serviceLabel.text = "Lavagem + Polimento"
                         self.priceTF.isHidden = false
                     }else{
                         if indexPath.row == 4{
-                            self.servicoLabel.text = "Lavagem a seco"
+                            self.serviceLabel.text = "Lavagem a seco"
                             self.priceTF.isHidden = false
                         }else{
                             if indexPath.row == 5{
-                                self.servicoLabel.text = "Lavagem a vapor"
+                                self.serviceLabel.text = "Lavagem a vapor"
                                 self.priceTF.isHidden = false
                             }else{
                                 if indexPath.row == 6{
-                                    self.servicoLabel.text = "Variação: Ecolavagem"
+                                    self.serviceLabel.text = "Variação: Ecolavagem"
                                     self.priceTF.isHidden = false
                                 }else{
                                     if indexPath.row == 7{
-                                        self.servicoLabel.text = "Purificação de ar"
+                                        self.serviceLabel.text = "Purificação de ar"
                                         self.priceTF.isHidden = false
                                     }else{
                                         if indexPath.row == 8{
-                                            self.servicoLabel.text = "Higienização"
+                                            self.serviceLabel.text = "Higienização"
                                             self.priceTF.isHidden = false
                                         }
                                     }

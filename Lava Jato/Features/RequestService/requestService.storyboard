@@ -172,13 +172,13 @@
                         <outlet property="locationImageView" destination="ecJ-1t-wY1" id="aeC-MP-xqI"/>
                         <outlet property="locationLabel" destination="2pe-YW-fcT" id="KH2-zy-w5X"/>
                         <outlet property="nameProfessionalLabel" destination="Sqc-l6-son" id="LRA-Ar-fa4"/>
-                        <outlet property="precoLabel" destination="UTi-Xq-OfU" id="PUD-4O-bbz"/>
+                        <outlet property="priceLabel" destination="UTi-Xq-OfU" id="cK4-ZE-qDn"/>
                         <outlet property="professionalImageView" destination="ktZ-H1-c7z" id="TdF-Um-Ow0"/>
-                        <outlet property="servico1Label" destination="m5B-HN-tsw" id="lbY-rw-jcV"/>
-                        <outlet property="servicoLabel" destination="H4g-sl-i7v" id="zqR-qt-EkS"/>
+                        <outlet property="service1Label" destination="m5B-HN-tsw" id="4cq-LQ-8C0"/>
+                        <outlet property="serviceLabel" destination="H4g-sl-i7v" id="LxK-Hs-FKi"/>
                         <outlet property="tableView" destination="RaP-GL-hSf" id="1Qt-yC-0Ph"/>
                         <outlet property="tappedContratar" destination="PHB-12-Upb" id="CUr-if-frG"/>
-                        <outlet property="valorLabel" destination="unT-SO-5A2" id="uge-d6-qme"/>
+                        <outlet property="valueLabel" destination="unT-SO-5A2" id="b9f-BV-ju1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

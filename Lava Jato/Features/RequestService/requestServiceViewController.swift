@@ -15,10 +15,10 @@ class requestServiceViewController: UIViewController {
     @IBOutlet weak var nameProfessionalLabel: UILabel!
     @IBOutlet weak var locationImageView: UIImageView!
     @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var servico1Label: UILabel!
-    @IBOutlet weak var precoLabel: UILabel!
-    @IBOutlet weak var servicoLabel: UILabel!
-    @IBOutlet weak var valorLabel: UILabel!
+    @IBOutlet weak var service1Label: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var serviceLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var tappedContratar: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,8 +29,8 @@ class requestServiceViewController: UIViewController {
         super.viewDidLoad()
         
         self.tappedContratar.layer.cornerRadius = 10
-        self.valorLabel.text = "-"
-        self.servicoLabel.text = "-"
+        self.valueLabel.text = "-"
+        self.serviceLabel.text = "-"
         self.configTableView()
         self.addMarca()
         
@@ -38,8 +38,8 @@ class requestServiceViewController: UIViewController {
     }
     
     @IBAction func tappedContratar(_ sender: UIButton) {
-        self.servicoLabel.text = "-"
-        self.valorLabel.text = "-"
+        self.serviceLabel.text = "-"
+        self.valueLabel.text = "-"
     }
     
     
@@ -123,36 +123,36 @@ extension requestServiceViewController: UITableViewDelegate, UITableViewDataSour
         
         if indexPath.section == 0{
             if indexPath.row == 1{
-                self.servicoLabel.text = "Lavagem Simples"
-                self.valorLabel.text = "R$ 80,00"
+                self.serviceLabel.text = "Lavagem Simples"
+                self.valueLabel.text = "R$ 80,00"
             }else{
                 if indexPath.row == 2{
-                    self.servicoLabel.text = "Lavagem Completa"
-                    self.valorLabel.text = "R$ 120,00"
+                    self.serviceLabel.text = "Lavagem Completa"
+                    self.valueLabel.text = "R$ 120,00"
                 }else{
                     if indexPath.row == 3{
-                        self.servicoLabel.text = "Lavagem + Polimento"
-                        self.valorLabel.text = "R$ 250,00"
+                        self.serviceLabel.text = "Lavagem + Polimento"
+                        self.valueLabel.text = "R$ 250,00"
                     }else{
                         if indexPath.row == 4{
-                            self.servicoLabel.text = "Lavagem a seco"
-                            self.valorLabel.text = "R$ 130,00"
+                            self.serviceLabel.text = "Lavagem a seco"
+                            self.valueLabel.text = "R$ 130,00"
                         }else{
                             if indexPath.row == 5{
-                                self.servicoLabel.text = "Lavagem a vapor"
-                                self.valorLabel.text = "R$ 180,00"
+                                self.serviceLabel.text = "Lavagem a vapor"
+                                self.valueLabel.text = "R$ 180,00"
                             }else{
                                 if indexPath.row == 6{
-                                    self.servicoLabel.text = "Variação: Ecolavagem"
-                                    self.valorLabel.text = "R$ 170,00"
+                                    self.serviceLabel.text = "Variação: Ecolavagem"
+                                    self.valueLabel.text = "R$ 170,00"
                                 }else{
                                     if indexPath.row == 7{
-                                        self.servicoLabel.text = "Purificação de ar"
-                                        self.valorLabel.text = "R$ 140,00"
+                                        self.serviceLabel.text = "Purificação de ar"
+                                        self.valueLabel.text = "R$ 140,00"
                                     }else{
                                         if indexPath.row == 8{
-                                            self.servicoLabel.text = "Higienização"
-                                            self.valorLabel.text = "R$ 90,00"
+                                            self.serviceLabel.text = "Higienização"
+                                            self.valueLabel.text = "R$ 90,00"
                                         }
                                     }
                                 }

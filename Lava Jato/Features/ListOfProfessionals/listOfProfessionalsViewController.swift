@@ -13,7 +13,7 @@ class listOfProfessionalsViewController: UIViewController {
     @IBOutlet weak var background2View: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var titulo2Label: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
         
     private var arrayNomes:[String] = ["Claudio Mattos", "Brendon Oliveira", "Thiago Valentim", "Olímpio Junior", "Caio Fabrini", "Lucas Munho"]
     private var arrayNotas:[String] = ["5.0", "4.8", "4.7", "4.7", "4.4", "4.3"]
@@ -27,7 +27,6 @@ class listOfProfessionalsViewController: UIViewController {
         searchView.addSubview(search)
         searchTextField.leftView = searchView
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
