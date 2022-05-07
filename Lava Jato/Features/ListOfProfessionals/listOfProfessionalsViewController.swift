@@ -15,8 +15,8 @@ class listOfProfessionalsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
         
-    private var arrayNomes:[String] = ["Claudio Mattos", "Brendon Oliveira", "Thiago Valentim", "Olímpio Junior", "Caio Fabrini", "Lucas Munho"]
-    private var arrayNotas:[String] = ["5.0", "4.8", "4.7", "4.7", "4.4", "4.3"]
+    private var arrayNames:[String] = ["Claudio Mattos", "Brendon Oliveira", "Thiago Valentim", "Olímpio Junior", "Caio Fabrini", "Lucas Munho"]
+    private var arrayNotes:[String] = ["5.0", "4.8", "4.7", "4.7", "4.4", "4.3"]
     
     func setup(){
         searchTextField.leftViewMode = UITextField.ViewMode.always
@@ -31,7 +31,7 @@ class listOfProfessionalsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        configureItems()
+        configItems()
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -45,7 +45,7 @@ class listOfProfessionalsViewController: UIViewController {
     }
     
     
-    func configureItems(){
+    func configItems(){
         self.navigationController?.navigationBar.tintColor = UIColor.ColorDefault
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(named: "filter"),
@@ -61,20 +61,20 @@ extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return self.arrayNomes.count
+        return self.arrayNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MyCustomCell? = tableView.dequeueReusableCell(withIdentifier: "MyCustomCell", for: indexPath) as? MyCustomCell
         
-        cell?.fotoImageView.image = UIImage(named: self.arrayNomes[indexPath.row])
-        cell?.nomeLabel.text = self.arrayNomes[indexPath.row]
-        cell?.notaLabel.text = self.arrayNotas[indexPath.row]
+        cell?.fotoImageView.image = UIImage(named: self.arrayNames[indexPath.row])
+        cell?.nomeLabel.text = self.arrayNames[indexPath.row]
+        cell?.notaLabel.text = self.arrayNotes[indexPath.row]
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedRow = self.arrayNomes[indexPath.row]
+        let selectedRow = self.arrayNames[indexPath.row]
         performSegue(withIdentifier: "requestService", sender: selectedRow)
         tableView.deselectRow(at: indexPath, animated: false)
     }

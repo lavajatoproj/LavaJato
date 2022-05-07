@@ -12,26 +12,26 @@ class myServicesViewController: UIViewController{
     @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var background2: UIView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tappedButton: UIButton!
+    @IBOutlet weak var upDateButton: UIButton!
     @IBOutlet weak var priceTF: UITextField!
     @IBOutlet weak var service1Label: UILabel!
     @IBOutlet weak var serviceLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
     
-    var listMarca:[Marca] =  []
+    var listServices:[Services] =  []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.priceTF.isHidden = true
         self.valueLabel.text = "-"
-        self.addMarca()
+        self.addServices()
         self.configTableView()
-        self.tappedButton.layer.cornerRadius = 10
+        self.upDateButton.layer.cornerRadius = 10
         
     }
     
-    @IBAction func tappedButton(_ sender: UIButton) {
+    @IBAction func tappedUpDateButton(_ sender: UIButton) {
         self.priceTF.isHidden=true
         self.serviceLabel.text = "-"
         self.valueLabel.text = "-"
@@ -43,10 +43,10 @@ class myServicesViewController: UIViewController{
         self.tableView.register(CustomRowTableViewCell.nib(), forCellReuseIdentifier: CustomRowTableViewCell.identifier)
     }
     
-    private func addMarca(){
-        self.listMarca.append(Marca(opened: false,marca: "Meus serviços", produto: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"]))
-        self.listMarca.append(Marca(opened: false, marca: "Formas de serviço", produto: ["","Busco em casa", "Atendo no local"]))
-        self.listMarca.append(Marca(opened: false, marca: "Preço", produto: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"]))
+    private func addServices(){
+        self.listServices.append(Services(opened: false, title: "Meus serviços", service: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"]))
+        self.listServices.append(Services(opened: false, title: "Formas de serviço", service: ["","Busco em casa", "Atendo no local"]))
+        self.listServices.append(Services(opened: false, title: "Preço", service: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"]))
     }
     
 }
@@ -57,7 +57,7 @@ extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: CustomRowTableViewCell.identifier, for: indexPath) as? CustomRowTableViewCell
-            cell?.setupCell(product: self.listMarca[indexPath.section].marca)
+            cell?.setupCell(product: self.listServices[indexPath.section].title)
             cell?.productLabel.textAlignment = .center
             cell?.back2View.layer.borderWidth = 0.0
             cell?.arrowImageView.isHidden = false
@@ -65,7 +65,7 @@ extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
             return cell ?? UITableViewCell()
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: CustomRowTableViewCell.identifier, for: indexPath) as? CustomRowTableViewCell
-            cell?.setupCell(product: self.listMarca[indexPath.section].produto[indexPath.row])
+            cell?.setupCell(product: self.listServices[indexPath.section].service[indexPath.row])
             cell?.switch.isHidden=false
             cell?.productLabel.textAlignment = .left
             cell?.back2View.layer.borderWidth = 2.0
@@ -82,12 +82,12 @@ extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.listMarca.count
+        return self.listServices.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if listMarca[section].opened == true{
-            return self.listMarca[section].produto.count
+        if listServices[section].opened == true{
+            return self.listServices[section].service.count
         }else{
             return 1
         }
@@ -96,12 +96,12 @@ extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if listMarca[indexPath.section].opened == true{
-            listMarca[indexPath.section].opened = false
+        if listServices[indexPath.section].opened == true{
+            listServices[indexPath.section].opened = false
             let sections = IndexSet.init(integer: indexPath.section)
             tableView.reloadSections(sections, with: .none)
         }else{
-            listMarca[indexPath.section].opened = true
+            listServices[indexPath.section].opened = true
             let sections = IndexSet.init(integer: indexPath.section)
             tableView.reloadSections(sections, with: .none)
         }

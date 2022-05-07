@@ -312,7 +312,6 @@
 			children = (
 				A212221427D13E6C00B24208 /* myServices.storyboard */,
 				A212221627D13E7F00B24208 /* myServicesViewController.swift */,
-				A2F799D627DC6CAB005A53A3 /* Model */,
 				A2F799CB27DC6A1D005A53A3 /* Cell */,
 			);
 			path = MyServices;
@@ -500,6 +499,7 @@
 			children = (
 				E13E5B2A27D6F59C000CB644 /* Extensions */,
 				443BAE8D27BF454800751C16 /* Features */,
+				A2F799D627DC6CAB005A53A3 /* Model */,
 				E162E07627ADF53E00C6AD32 /* AppDelegate.swift */,
 				E162E07827ADF53E00C6AD32 /* SceneDelegate.swift */,
 				E162E07F27ADF54000C6AD32 /* Assets.xcassets */,

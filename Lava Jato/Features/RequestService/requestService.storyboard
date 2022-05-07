@@ -33,7 +33,7 @@
                                             <color key="titleColor" name="ColorDefault"/>
                                         </state>
                                         <connections>
-                                            <action selector="tappedContratar:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KdZ-pM-M8V"/>
+                                            <action selector="tappedEndButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eSv-DK-mjD"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Observações" adjustsFontSizeToFit="NO" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="zNH-oZ-Vz8">
@@ -167,6 +167,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="dv7-Hn-dc0"/>
                     <navigationItem key="navigationItem" title="Solicitação de serviços" id="Kt9-Sf-WpB"/>
                     <connections>
+                        <outlet property="EndButton" destination="PHB-12-Upb" id="CUr-if-frG"/>
                         <outlet property="background1ImageView" destination="7si-K5-nYr" id="nCa-OS-FQH"/>
                         <outlet property="background2View" destination="mHS-gx-uQR" id="40k-A2-vkB"/>
                         <outlet property="locationImageView" destination="ecJ-1t-wY1" id="aeC-MP-xqI"/>
@@ -177,7 +178,6 @@
                         <outlet property="service1Label" destination="m5B-HN-tsw" id="4cq-LQ-8C0"/>
                         <outlet property="serviceLabel" destination="H4g-sl-i7v" id="LxK-Hs-FKi"/>
                         <outlet property="tableView" destination="RaP-GL-hSf" id="1Qt-yC-0Ph"/>
-                        <outlet property="tappedContratar" destination="PHB-12-Upb" id="CUr-if-frG"/>
                         <outlet property="valueLabel" destination="unT-SO-5A2" id="b9f-BV-ju1"/>
                     </connections>
                 </viewController>

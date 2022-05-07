@@ -166,7 +166,7 @@
                         <outlet property="service1Label" destination="I7z-bP-T12" id="0bP-pB-NPr"/>
                         <outlet property="serviceLabel" destination="ZpA-XH-VAV" id="Wcg-1x-3IY"/>
                         <outlet property="tableView" destination="Vuo-ss-rjR" id="hyB-I4-vx6"/>
-                        <outlet property="tappedButton" destination="ut0-rb-LSQ" id="a1I-Mh-mfm"/>
+                        <outlet property="upDateButton" destination="ut0-rb-LSQ" id="a1I-Mh-mfm"/>
                         <outlet property="valueLabel" destination="ueY-Cs-nFI" id="M03-49-fXL"/>
                     </connections>
                 </viewController>
