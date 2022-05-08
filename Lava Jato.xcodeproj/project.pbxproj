@@ -170,15 +170,85 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		442DD11327D05AD300C4F033 /* Filter */ = {
+		44177A3D2828863900496587 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44177A3E2828872F00496587 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				44CB763127E941F700A029FA /* FiltroViewController.swift */,
-				44CB763327E941FD00A029FA /* FiltroStoryboard.storyboard */,
-				44CB762A27E941CF00A029FA /* Model */,
-				44CB762527E941C800A029FA /* Cell Element */,
-				44CB762027E941C200A029FA /* Cell Valor */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		44177A3F2828885900496587 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				44CB761B27E941B600A029FA /* Cell Place */,
+				44CB762027E941C200A029FA /* Cell Valor */,
+				44CB762527E941C800A029FA /* Cell Element */,
+				44CB763327E941FD00A029FA /* FiltroStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44177A40282888DF00496587 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				443BAE9727BF4DE400751C16 /* MainScreen.storyboard */,
+				44FA259B28177C5C006C1CFB /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44177A412828895700496587 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E18703D927E9210A005B3AA9 /* MainScreen.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		44177A422828896100496587 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		44177A4328288B2000496587 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		44177A4428288B2900496587 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				442DD11D27D05D0900C4F033 /* PerfilUsuario.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44177A4528288B3900496587 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				449EFAA627DE3AF3002111DE /* PerfilUsuarioViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		442DD11327D05AD300C4F033 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				44CB762A27E941CF00A029FA /* Model */,
+				44177A3F2828885900496587 /* View */,
+				44177A3E2828872F00496587 /* Controller */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -186,8 +256,9 @@
 		442DD11427D05ADF00C4F033 /* PerfilUsuario */ = {
 			isa = PBXGroup;
 			children = (
-				449EFAA627DE3AF3002111DE /* PerfilUsuarioViewController.swift */,
-				442DD11D27D05D0900C4F033 /* PerfilUsuario.storyboard */,
+				44177A4528288B3900496587 /* Controller */,
+				44177A4428288B2900496587 /* View */,
+				44177A4328288B2000496587 /* ViewModel */,
 			);
 			path = PerfilUsuario;
 			sourceTree = "<group>";
@@ -217,10 +288,10 @@
 		443BAE9527BF4C6800751C16 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				44FA259B28177C5C006C1CFB /* Cell */,
 				445C7C1027DD13E5000E9CD2 /* Model */,
-				E18703D927E9210A005B3AA9 /* MainScreen.swift */,
-				443BAE9727BF4DE400751C16 /* MainScreen.storyboard */,
+				44177A422828896100496587 /* ViewModel */,
+				44177A40282888DF00496587 /* View */,
+				44177A412828895700496587 /* Controller */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -498,6 +569,7 @@
 		E162E07527ADF53E00C6AD32 /* Lava Jato */ = {
 			isa = PBXGroup;
 			children = (
+				44177A3D2828863900496587 /* Model */,
 				E13E5B2A27D6F59C000CB644 /* Extensions */,
 				443BAE8D27BF454800751C16 /* Features */,
 				E162E07627ADF53E00C6AD32 /* AppDelegate.swift */,
