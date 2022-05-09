@@ -20,6 +20,7 @@ class ScreenRegisterViewController: UIViewController {
     @IBOutlet weak var label:UILabel!
     @IBOutlet weak var selectStatusButton: UIButton!
     @IBOutlet weak var selectGenderButton:UIButton!
+    
     let statusDropDown = DropDown()
     let genderDropDown = DropDown()
     var selectedButton = UIButton()
@@ -168,8 +169,10 @@ class ScreenRegisterViewController: UIViewController {
         }
     }
     
-    
     @IBAction func tappedTermsOfUse(_ sender: UIButton) {
+        if let url = URL(string: "https://modeloinicial.com.br/conteudo/termos-de-uso-e-privacidade") {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
     
     @IBAction func tappedSelectStatus(){
