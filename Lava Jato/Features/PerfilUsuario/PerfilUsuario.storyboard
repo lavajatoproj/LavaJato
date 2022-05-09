@@ -403,7 +403,7 @@
                         <outlet property="tappedMyServiceButton" destination="U2j-KJ-Z2T" id="1vx-Cm-Av2"/>
                         <outlet property="tappedRecomendButton" destination="p1o-0R-MAO" id="bHF-QE-Rah"/>
                         <segue destination="BOT-9x-kaN" kind="show" identifier="notificationSegue" id="Wnc-5k-UgM"/>
-                        <segue destination="9Dx-YO-fqB" kind="show" identifier="meusServicos" id="GuJ-sl-Wce"/>
+                        <segue destination="9Dx-YO-fqB" kind="show" identifier="myServices" id="GuJ-sl-Wce"/>
                         <segue destination="A9D-wy-DN1" kind="show" id="rEc-3z-YS6"/>
                         <segue destination="59H-Fn-VK9" kind="show" id="Xdz-s3-xvG"/>
                         <segue destination="LKo-W8-IxJ" kind="show" id="iy2-5i-sOz"/>
@@ -423,10 +423,10 @@
             </objects>
             <point key="canvasLocation" x="4443" y="68"/>
         </scene>
-        <!--meusServicos-->
+        <!--myServices-->
         <scene sceneID="znc-0s-S20">
             <objects>
-                <viewControllerPlaceholder storyboardName="meusServicos" id="9Dx-YO-fqB" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="myServices" id="9Dx-YO-fqB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="MOE-CQ-ghO"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8X-bY-Dae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -31,8 +31,8 @@ class PerfilUsuarioViewController: UIViewController {
     
     
     @IBAction func tappedMyServiceButton(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "meusServicos", bundle: nil)
-        let vC = storyboard.instantiateViewController(withIdentifier: "meusServicos")
+        let storyboard = UIStoryboard(name: "myServices", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "myServices")
         navigationController?.pushViewController(vC, animated: true)
     }
     

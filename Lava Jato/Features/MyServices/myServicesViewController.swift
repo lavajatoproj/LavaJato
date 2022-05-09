@@ -7,58 +7,57 @@
 
 import UIKit
 
-class meusServicosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class myServicesViewController: UIViewController{
     
     @IBOutlet weak var background: UIImageView!
     @IBOutlet weak var background2: UIView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tappedButton: UIButton!
+    @IBOutlet weak var upDateButton: UIButton!
     @IBOutlet weak var priceTF: UITextField!
-    @IBOutlet weak var servico1Label: UILabel!
-    @IBOutlet weak var servicoLabel: UILabel!
-    @IBOutlet weak var precoLabel: UILabel!
-    @IBOutlet weak var valorLabel: UILabel!
+    @IBOutlet weak var service1Label: UILabel!
+    @IBOutlet weak var serviceLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
     
+    var listServices:[Services] =  []
     
-    
-    
-    var listMarca:[Marca] =  []
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.priceTF.isHidden = true
-        self.valorLabel.text = "-"
-        self.addMarca()
+        self.valueLabel.text = "-"
+        self.addServices()
         self.configTableView()
-        self.tappedButton.layer.cornerRadius = 10
+        self.upDateButton.layer.cornerRadius = 10
         
     }
     
-    @IBAction func tappedButton(_ sender: UIButton) {
+    @IBAction func tappedUpDateButton(_ sender: UIButton) {
         self.priceTF.isHidden=true
-        self.servicoLabel.text = "-"
-        self.valorLabel.text = "-"
+        self.serviceLabel.text = "-"
+        self.valueLabel.text = "-"
     }
-        
+    
     private func configTableView(){
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(CustomRowTableViewCell.nib(), forCellReuseIdentifier: CustomRowTableViewCell.identifier)
     }
     
-    private func addMarca(){
-        self.listMarca.append(Marca(opened: false,marca: "Meus serviços", produto: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"]))
-        self.listMarca.append(Marca(opened: false, marca: "Formas de serviço", produto: ["","Busco em casa", "Atendo no local"]))
-        self.listMarca.append(Marca(opened: false, marca: "Preço", produto: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"]))
+    private func addServices(){
+        self.listServices.append(Services(opened: false, title: "Meus serviços", service: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"]))
+        self.listServices.append(Services(opened: false, title: "Formas de serviço", service: ["","Busco em casa", "Atendo no local"]))
+        self.listServices.append(Services(opened: false, title: "Preço", service: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"]))
     }
+    
+}
 
 
+extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
-        let cell = tableView.dequeueReusableCell(withIdentifier: CustomRowTableViewCell.identifier, for: indexPath) as? CustomRowTableViewCell
-            cell?.setupCell(product: self.listMarca[indexPath.section].marca)
+            let cell = tableView.dequeueReusableCell(withIdentifier: CustomRowTableViewCell.identifier, for: indexPath) as? CustomRowTableViewCell
+            cell?.setupCell(product: self.listServices[indexPath.section].title)
             cell?.productLabel.textAlignment = .center
             cell?.back2View.layer.borderWidth = 0.0
             cell?.arrowImageView.isHidden = false
@@ -66,7 +65,7 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
             return cell ?? UITableViewCell()
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: CustomRowTableViewCell.identifier, for: indexPath) as? CustomRowTableViewCell
-            cell?.setupCell(product: self.listMarca[indexPath.section].produto[indexPath.row])
+            cell?.setupCell(product: self.listServices[indexPath.section].service[indexPath.row])
             cell?.switch.isHidden=false
             cell?.productLabel.textAlignment = .left
             cell?.back2View.layer.borderWidth = 2.0
@@ -75,7 +74,7 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
             
             if indexPath.section == 2{
                 cell?.switch.isHidden = true
-            }
+                    }
             
             return cell ?? UITableViewCell()
         }
@@ -83,63 +82,63 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.listMarca.count
+        return self.listServices.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if listMarca[section].opened == true{
-        return self.listMarca[section].produto.count
+        if listServices[section].opened == true{
+            return self.listServices[section].service.count
         }else{
             return 1
         }
-    
-}
+        
+    }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if listMarca[indexPath.section].opened == true{
-            listMarca[indexPath.section].opened = false
+        if listServices[indexPath.section].opened == true{
+            listServices[indexPath.section].opened = false
             let sections = IndexSet.init(integer: indexPath.section)
             tableView.reloadSections(sections, with: .none)
         }else{
-            listMarca[indexPath.section].opened = true
+            listServices[indexPath.section].opened = true
             let sections = IndexSet.init(integer: indexPath.section)
             tableView.reloadSections(sections, with: .none)
         }
         
-
+        
         if indexPath.section == 0{
             if indexPath.row == 1{
-                self.servicoLabel.text = "Lavagem Simples"
-                self.valorLabel.text = "R$ 80,00"
+                self.serviceLabel.text = "Lavagem Simples"
+                self.valueLabel.text = "R$ 80,00"
             }else{
                 if indexPath.row == 2{
-                    self.servicoLabel.text = "Lavagem Completa"
-                    self.valorLabel.text = "R$ 120,00"
+                    self.serviceLabel.text = "Lavagem Completa"
+                    self.valueLabel.text = "R$ 120,00"
                 }else{
                     if indexPath.row == 3{
-                        self.servicoLabel.text = "Lavagem + Polimento"
-                        self.valorLabel.text = "R$ 250,00"
+                        self.serviceLabel.text = "Lavagem + Polimento"
+                        self.valueLabel.text = "R$ 250,00"
                     }else{
                         if indexPath.row == 4{
-                            self.servicoLabel.text = "Lavagem a seco"
-                            self.valorLabel.text = "R$ 130,00"
+                            self.serviceLabel.text = "Lavagem a seco"
+                            self.valueLabel.text = "R$ 130,00"
                         }else{
                             if indexPath.row == 5{
-                                self.servicoLabel.text = "Lavagem a vapor"
-                                self.valorLabel.text = "R$ 180,00"
+                                self.serviceLabel.text = "Lavagem a vapor"
+                                self.valueLabel.text = "R$ 180,00"
                             }else{
                                 if indexPath.row == 6{
-                                    self.servicoLabel.text = "Variação: Ecolavagem"
-                                    self.valorLabel.text = "R$ 170,00"
+                                    self.serviceLabel.text = "Variação: Ecolavagem"
+                                    self.valueLabel.text = "R$ 170,00"
                                 }else{
                                     if indexPath.row == 7{
-                                        self.servicoLabel.text = "Purificação de ar"
-                                        self.valorLabel.text = "R$ 140,00"
+                                        self.serviceLabel.text = "Purificação de ar"
+                                        self.valueLabel.text = "R$ 140,00"
                                     }else{
                                         if indexPath.row == 8{
-                                            self.servicoLabel.text = "Higienização"
-                                            self.valorLabel.text = "R$ 90,00"
+                                            self.serviceLabel.text = "Higienização"
+                                            self.valueLabel.text = "R$ 90,00"
                                         }
                                     }
                                 }
@@ -149,38 +148,38 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
                 }
             }
         }
-
+        
         if indexPath.section == 2{
             if indexPath.row == 1{
-                self.servicoLabel.text = "Lavagem Simples"
+                self.serviceLabel.text = "Lavagem Simples"
                 self.priceTF.isHidden = false
             }else{
                 if indexPath.row == 2{
-                    self.servicoLabel.text = "Lavagem Completa"
+                    self.serviceLabel.text = "Lavagem Completa"
                     self.priceTF.isHidden = false
                 }else{
                     if indexPath.row == 3{
-                        self.servicoLabel.text = "Lavagem + Polimento"
+                        self.serviceLabel.text = "Lavagem + Polimento"
                         self.priceTF.isHidden = false
                     }else{
                         if indexPath.row == 4{
-                            self.servicoLabel.text = "Lavagem a seco"
+                            self.serviceLabel.text = "Lavagem a seco"
                             self.priceTF.isHidden = false
                         }else{
                             if indexPath.row == 5{
-                                self.servicoLabel.text = "Lavagem a vapor"
+                                self.serviceLabel.text = "Lavagem a vapor"
                                 self.priceTF.isHidden = false
                             }else{
                                 if indexPath.row == 6{
-                                    self.servicoLabel.text = "Variação: Ecolavagem"
+                                    self.serviceLabel.text = "Variação: Ecolavagem"
                                     self.priceTF.isHidden = false
                                 }else{
                                     if indexPath.row == 7{
-                                        self.servicoLabel.text = "Purificação de ar"
+                                        self.serviceLabel.text = "Purificação de ar"
                                         self.priceTF.isHidden = false
                                     }else{
                                         if indexPath.row == 8{
-                                            self.servicoLabel.text = "Higienização"
+                                            self.serviceLabel.text = "Higienização"
                                             self.priceTF.isHidden = false
                                         }
                                     }
@@ -193,8 +192,9 @@ class meusServicosViewController: UIViewController, UITableViewDelegate, UITable
         }else{
             self.priceTF.isHidden = true
         }
-}
-}
-
+    }
     
-
+    
+    
+    
+}

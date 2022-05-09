@@ -12,7 +12,7 @@
         <!--Lista de Profissionais-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="listaDeServicos" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="listaDeServicosViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="listOfProfessionals" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="listOfProfessionalsViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,8 +76,8 @@
                         <outlet property="backgroundImageView" destination="ynY-2N-jIB" id="NhJ-Ig-CPj"/>
                         <outlet property="searchTextField" destination="6Yw-tP-Qfe" id="vtl-eJ-5uQ"/>
                         <outlet property="tableView" destination="D1E-jc-AOR" id="UX6-PO-hfM"/>
-                        <outlet property="titulo2Label" destination="7NX-x6-uB4" id="dMF-Gw-rdI"/>
-                        <segue destination="uZj-Ei-I2i" kind="show" identifier="solicitacaoDeServico" id="gD9-to-acs"/>
+                        <outlet property="titleLabel" destination="7NX-x6-uB4" id="ma4-nI-BoF"/>
+                        <segue destination="uZj-Ei-I2i" kind="show" identifier="requestService" id="gD9-to-acs"/>
                         <segue destination="T6R-Bu-Cdl" kind="show" identifier="filter" id="AM5-av-58Z"/>
                     </connections>
                 </viewController>
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="3528" y="-39"/>
         </scene>
-        <!--solicitacaoDeServico-->
+        <!--requestService-->
         <scene sceneID="gz7-r0-0M3">
             <objects>
-                <viewControllerPlaceholder storyboardName="solicitacaoDeServico" id="uZj-Ei-I2i" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="requestService" id="uZj-Ei-I2i" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="tQd-Os-GtV"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oKF-SS-V5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

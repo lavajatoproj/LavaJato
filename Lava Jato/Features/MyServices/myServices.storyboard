@@ -13,7 +13,7 @@
         <!--Meus Serviços-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="meusServicos" id="Y6W-OH-hqX" customClass="meusServicosViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myServices" id="Y6W-OH-hqX" customClass="myServicesViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,13 +161,13 @@
                     <connections>
                         <outlet property="background" destination="Is9-Sc-fkL" id="V6U-D0-X7R"/>
                         <outlet property="background2" destination="RYd-vd-LMw" id="9lS-m5-xOd"/>
-                        <outlet property="precoLabel" destination="c0X-V2-VgF" id="Ly5-c6-rie"/>
+                        <outlet property="priceLabel" destination="c0X-V2-VgF" id="ThE-JF-BBA"/>
                         <outlet property="priceTF" destination="rWL-BV-vyg" id="tl5-bA-HI6"/>
-                        <outlet property="servico1Label" destination="I7z-bP-T12" id="BU9-Xn-uSA"/>
-                        <outlet property="servicoLabel" destination="ZpA-XH-VAV" id="Yla-wA-R97"/>
+                        <outlet property="service1Label" destination="I7z-bP-T12" id="0bP-pB-NPr"/>
+                        <outlet property="serviceLabel" destination="ZpA-XH-VAV" id="Wcg-1x-3IY"/>
                         <outlet property="tableView" destination="Vuo-ss-rjR" id="hyB-I4-vx6"/>
-                        <outlet property="tappedButton" destination="ut0-rb-LSQ" id="a1I-Mh-mfm"/>
-                        <outlet property="valorLabel" destination="ueY-Cs-nFI" id="83L-BL-rpw"/>
+                        <outlet property="upDateButton" destination="ut0-rb-LSQ" id="a1I-Mh-mfm"/>
+                        <outlet property="valueLabel" destination="ueY-Cs-nFI" id="M03-49-fXL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

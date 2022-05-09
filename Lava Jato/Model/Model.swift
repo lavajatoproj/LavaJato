@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Marca{
+struct Services{
     
     var opened: Bool
-    var marca:String
-    var produto: [String]
+    var title:String
+    var service: [String]
     
 }
