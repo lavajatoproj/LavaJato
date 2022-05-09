@@ -7,10 +7,7 @@
 
 import UIKit
 import CPF_CNPJ_Validator
-
-class CellClass: UITableViewCell {
-    
-}
+import DropDown
 
 class ScreenRegisterViewController: UIViewController {
     @IBOutlet weak var nameRegisterTextField: UITextField!
@@ -18,15 +15,14 @@ class ScreenRegisterViewController: UIViewController {
     @IBOutlet weak var numberRegisterTextField: UITextField!
     @IBOutlet weak var dateRegisterTextField: UITextField!
     @IBOutlet weak var documentRegisterTextField: UITextField!
-    @IBOutlet weak var statusMaritalTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var checkBox: UIButton!
-    @IBOutlet weak var btnSelectGender: UIButton!
     @IBOutlet weak var label:UILabel!
-    let transparentView = UIView()
-    let tableView = UITableView()
+    @IBOutlet weak var selectStatusButton: UIButton!
+    @IBOutlet weak var selectGenderButton:UIButton!
+    let statusDropDown = DropDown()
+    let genderDropDown = DropDown()
     var selectedButton = UIButton()
-    var dataSource = [String]()
     let datePicker = UIDatePicker()
     var checkboxFlag = false
     private var viewModelScreenRegister:ViewModelScreenRegister = ViewModelScreenRegister()
@@ -42,20 +38,14 @@ class ScreenRegisterViewController: UIViewController {
             label?.text = success2 ? "CNPJ Válido" : "CNPJ Inválido"
         }
     }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Style()
         self.hideKeyboardWhenTappedAround()
-        self.configSelectGender()
         self.configTextField()
         self.createDatePicker()
-    }
-    func configSelectGender(){
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(CellClass.self, forCellReuseIdentifier: "Cell")
-        self.btnSelectGender.titleLabel?.textAlignment = .left
-        self.btnSelectGender.layer.cornerRadius = 5.0
     }
     
     func configTextField(){
@@ -64,57 +54,23 @@ class ScreenRegisterViewController: UIViewController {
         self.numberRegisterTextField.delegate = self
         self.dateRegisterTextField.delegate = self
         self.documentRegisterTextField.delegate = self
-        self.statusMaritalTextField.delegate = self
         self.registerButton.isEnabled = false
         self.nameRegisterTextField.layer.borderWidth = 2.0
         self.emailRegisterTextField.layer.borderWidth = 2.0
         self.numberRegisterTextField.layer.borderWidth = 2.0
         self.dateRegisterTextField.layer.borderWidth = 2.0
         self.documentRegisterTextField.layer.borderWidth = 2.0
-        self.statusMaritalTextField.layer.borderWidth = 2.0
         self.nameRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.emailRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.numberRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.dateRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.documentRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
-        self.statusMaritalTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.nameRegisterTextField.layer.cornerRadius = 5.0
         self.emailRegisterTextField.layer.cornerRadius = 5.0
         self.numberRegisterTextField.layer.cornerRadius = 5.0
         self.dateRegisterTextField.layer.cornerRadius = 5.0
         self.documentRegisterTextField.layer.cornerRadius = 5.0
-        self.statusMaritalTextField.layer.cornerRadius = 5.0
     }
-    
-    func addTransparentView(frames: CGRect) {
-        let window = UIApplication.shared.keyWindow
-        transparentView.frame = window?.frame ?? self.view.frame
-        self.view.addSubview(transparentView)
-        
-        tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height, width: frames.width, height: 0)
-        self.view.addSubview(tableView)
-        tableView.layer.cornerRadius = 5
-        
-        transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.9)
-        tableView.reloadData()
-        let tapgesture = UITapGestureRecognizer(target: self, action: #selector(removeTransparentView))
-        transparentView.addGestureRecognizer(tapgesture)
-        transparentView.alpha = 0
-        UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
-            self.transparentView.alpha = 0.5
-            self.tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height + 5, width: frames.width, height: CGFloat(self.dataSource.count * 50))
-        }, completion: nil)
-    }
-    
-    @objc func removeTransparentView() {
-        let frames = selectedButton.frame
-        UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
-            self.transparentView.alpha = 0
-            self.tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height, width: frames.width, height: 0)
-        }, completion: nil)
-    }
-    
-    
     func createToolbar () -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -138,14 +94,7 @@ class ScreenRegisterViewController: UIViewController {
         dateRegisterTextField.inputView = datePicker
         dateRegisterTextField.inputAccessoryView = createToolbar()
     }
-    
-    @IBAction func onClickSelectGender(_ sender: UIButton) {
-        dataSource = ["Masculino", "Feminino"]
-        selectedButton = btnSelectGender
-        addTransparentView(frames: btnSelectGender.frame)
-    }
-    
-    
+
     @IBAction func tappedCheckBox(_ sender: UIButton) {
         
         if (checkboxFlag == false){
@@ -157,7 +106,7 @@ class ScreenRegisterViewController: UIViewController {
             checkboxFlag = false
         }
         if self.checkboxFlag == true {
-            if self.nameRegisterTextField.textColor != UIColor.red && self.numberRegisterTextField.textColor != UIColor.red && self.dateRegisterTextField.textColor != UIColor.red && self.documentRegisterTextField.textColor != UIColor.red && self.statusMaritalTextField.textColor != UIColor.red && self.statusMaritalTextField.layer.borderColor != UIColor.red.cgColor && self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.statusMaritalTextField.text != "" && self.btnSelectGender.titleLabel?.text != "" && self.emailRegisterTextField.text != ""{
+            if self.nameRegisterTextField.textColor != UIColor.red && self.numberRegisterTextField.textColor != UIColor.red && self.dateRegisterTextField.textColor != UIColor.red && self.documentRegisterTextField.textColor != UIColor.red && self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.selectGenderButton.titleLabel?.text != "" && self.emailRegisterTextField.text != ""{
                 self.registerButton.isEnabled = true
             }else{
                 self.registerButton.isEnabled = false
@@ -177,6 +126,29 @@ class ScreenRegisterViewController: UIViewController {
     func Style(){
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
+    }
+    func setupSelectStatus(){
+        statusDropDown.anchorView = selectStatusButton
+        statusDropDown.bottomOffset = CGPoint(x: 0, y: selectStatusButton.bounds.height)
+        selectStatusButton.setTitle("Selecione", for: .normal)
+        statusDropDown.dataSource = ["Solteiro(a)", "Casado(a)", "Viuvo(a)"]
+        statusDropDown.selectionAction = { [weak self] (index, item) in
+            self?.selectStatusButton.setTitle(item, for: .normal)
+        }
+        if self.selectStatusButton.titleLabel?.text == "Selecione"{
+            self.selectStatusButton.titleLabel?.textColor = UIColor.red
+        }else{
+            self.selectStatusButton.titleLabel?.textColor = UIColor.black
+        }
+    }
+    func setupSelectGender(){
+        genderDropDown.anchorView = selectGenderButton
+        genderDropDown.bottomOffset = CGPoint(x: 0, y: selectGenderButton.bounds.height)
+        selectGenderButton.setTitle("Selecione", for: .normal)
+        genderDropDown.dataSource = ["Masculino", "Feminino"]
+        genderDropDown.selectionAction = { [weak self] (index, item) in
+            self?.selectGenderButton.setTitle(item, for: .normal)
+        }
     }
     
     @IBAction func nameAct(_ sender: Any) {
@@ -198,6 +170,16 @@ class ScreenRegisterViewController: UIViewController {
     
     
     @IBAction func tappedTermsOfUse(_ sender: UIButton) {
+    }
+    
+    @IBAction func tappedSelectStatus(){
+        self.setupSelectStatus()
+        statusDropDown.show()
+    }
+    
+    @IBAction func tappedSelectGender(){
+        self.setupSelectGender()
+        genderDropDown.show()
     }
     
     @IBAction func phoneAct(_ sender: Any) {
@@ -268,13 +250,6 @@ extension ScreenRegisterViewController:UITextFieldDelegate{
                 self.documentRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
-        if textField == self.statusMaritalTextField{
-            if self.statusMaritalTextField.text == ""{
-                self.statusMaritalTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.statusMaritalTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
         if textField == self.emailRegisterTextField{
             if self.emailRegisterTextField.text == ""{
                 self.emailRegisterTextField.layer.borderColor = UIColor.red.cgColor
@@ -282,7 +257,7 @@ extension ScreenRegisterViewController:UITextFieldDelegate{
                 self.emailRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
-        if self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.statusMaritalTextField.text != "" && self.btnSelectGender.titleLabel?.text != "" && self.emailRegisterTextField.text != "" && self.checkboxFlag == true && self.nameRegisterTextField.textColor == UIColor.black && self.emailRegisterTextField.textColor == UIColor.black && self.numberRegisterTextField.textColor == UIColor.black && self.documentRegisterTextField.textColor == UIColor.black {
+        if self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" &&  self.selectGenderButton.titleLabel?.text != "Selecione" && self.selectStatusButton.titleLabel?.text != "Selecione o sexo" && self.emailRegisterTextField.text != "" && self.checkboxFlag == true && self.nameRegisterTextField.textColor == UIColor.black && self.emailRegisterTextField.textColor == UIColor.black && self.numberRegisterTextField.textColor == UIColor.black && self.documentRegisterTextField.textColor == UIColor.black {
             self.registerButton.isEnabled = true
         }else{
             self.registerButton.isEnabled = false
@@ -293,27 +268,5 @@ extension ScreenRegisterViewController:UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-}
-
-extension ScreenRegisterViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.dataSource.count
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-}
-extension ScreenRegisterViewController: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = dataSource[indexPath.row]
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedButton.setTitle(dataSource[indexPath.row], for: .normal)
-        removeTransparentView()
     }
 }

@@ -124,15 +124,21 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XsK-tb-jon">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9a-kL-nCV">
                                         <rect key="frame" x="48.5" y="518" width="317" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="317" id="84C-TD-dWn"/>
-                                            <constraint firstAttribute="height" constant="34" id="gFp-Hr-b0P"/>
+                                            <constraint firstAttribute="width" constant="317" id="H5z-eh-886"/>
+                                            <constraint firstAttribute="height" constant="34" id="fWk-N6-dsI"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="additional-name"/>
-                                    </textField>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Selecione">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tappedSelectStatus" destination="pME-Od-2HJ" eventType="touchUpInside" id="sXX-59-vDb"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado Civil:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4a6-MG-Ljv">
                                         <rect key="frame" x="48.5" y="497" width="317" height="21"/>
                                         <constraints>
@@ -275,12 +281,12 @@
                                             <constraint firstAttribute="height" constant="34" id="t38-xr-dpC"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Selecione o sexo">
-                                            <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Selecione">
+                                            <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="onClickSelectGender:" destination="pME-Od-2HJ" eventType="touchUpInside" id="I8i-Ki-EJt"/>
+                                            <action selector="tappedSelectGender" destination="pME-Od-2HJ" eventType="touchUpInside" id="WjQ-Ax-qub"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ed-U7-YHr">
@@ -303,11 +309,12 @@
                                     <constraint firstItem="Utb-1A-HRu" firstAttribute="top" secondItem="8Wm-WC-fRS" secondAttribute="top" constant="75" id="40u-KF-eNA"/>
                                     <constraint firstItem="4fZ-du-byv" firstAttribute="top" secondItem="fUd-hx-BiM" secondAttribute="bottom" constant="14" id="4ny-M7-5fZ"/>
                                     <constraint firstItem="fKe-at-6IC" firstAttribute="width" secondItem="8Wm-WC-fRS" secondAttribute="width" id="6RH-Tb-T0Y"/>
-                                    <constraint firstItem="XsK-tb-jon" firstAttribute="top" secondItem="4a6-MG-Ljv" secondAttribute="bottom" id="75Y-nB-Fxs"/>
                                     <constraint firstAttribute="bottom" secondItem="fKe-at-6IC" secondAttribute="bottom" constant="-125" id="8Jb-ku-eB9"/>
+                                    <constraint firstItem="4a6-MG-Ljv" firstAttribute="centerX" secondItem="8Wm-WC-fRS" secondAttribute="centerX" id="8io-jq-ZcT"/>
                                     <constraint firstItem="KoH-mD-RXR" firstAttribute="centerX" secondItem="8Wm-WC-fRS" secondAttribute="centerX" id="9Ma-yP-Rsq"/>
                                     <constraint firstItem="Cwb-qp-AMh" firstAttribute="leading" secondItem="8Wm-WC-fRS" secondAttribute="leading" constant="60" id="FTh-OX-WrI"/>
                                     <constraint firstItem="8yW-vf-0ck" firstAttribute="centerX" secondItem="fKe-at-6IC" secondAttribute="centerX" id="HuV-Jv-q29"/>
+                                    <constraint firstItem="h9a-kL-nCV" firstAttribute="top" secondItem="4a6-MG-Ljv" secondAttribute="bottom" id="ICY-8N-Cyn"/>
                                     <constraint firstItem="17o-3d-p7H" firstAttribute="top" secondItem="UJz-ue-J62" secondAttribute="bottom" id="J9L-85-2n9"/>
                                     <constraint firstItem="UJz-ue-J62" firstAttribute="leading" secondItem="17o-3d-p7H" secondAttribute="leading" id="JSO-OA-naV"/>
                                     <constraint firstItem="Cwb-qp-AMh" firstAttribute="top" secondItem="KoH-mD-RXR" secondAttribute="bottom" id="KhY-n7-PZl"/>
@@ -317,20 +324,20 @@
                                     <constraint firstItem="0vO-Kg-Z3j" firstAttribute="top" secondItem="CIM-fM-AjK" secondAttribute="bottom" id="OHu-0r-Gy5"/>
                                     <constraint firstItem="1Mj-NK-kJ9" firstAttribute="centerX" secondItem="Utb-1A-HRu" secondAttribute="centerX" id="PRM-sn-9yk"/>
                                     <constraint firstItem="7ed-U7-YHr" firstAttribute="top" secondItem="8Wm-WC-fRS" secondAttribute="top" constant="5" id="Pdf-Fd-JSt"/>
-                                    <constraint firstItem="fKe-at-6IC" firstAttribute="centerX" secondItem="XsK-tb-jon" secondAttribute="centerX" id="R2v-cK-zb2"/>
+                                    <constraint firstItem="OPN-0J-seL" firstAttribute="centerX" secondItem="8Wm-WC-fRS" secondAttribute="centerX" id="R21-hJ-yT1"/>
                                     <constraint firstItem="4fZ-du-byv" firstAttribute="leading" secondItem="J5G-TU-VUE" secondAttribute="leading" id="RbV-bZ-OJk"/>
                                     <constraint firstItem="4A6-8y-swd" firstAttribute="leading" secondItem="V2r-aW-qrV" secondAttribute="leading" constant="4" id="VCX-Pu-MQz"/>
                                     <constraint firstItem="9Dp-ZK-DiQ" firstAttribute="top" secondItem="8Wm-WC-fRS" secondAttribute="top" constant="577" id="WCB-kw-0UW"/>
                                     <constraint firstItem="Utb-1A-HRu" firstAttribute="centerX" secondItem="8Wm-WC-fRS" secondAttribute="centerX" id="aKT-6N-N5E"/>
                                     <constraint firstItem="vtj-wm-gZX" firstAttribute="centerY" secondItem="OPN-0J-seL" secondAttribute="centerY" id="aUW-zD-dZI"/>
                                     <constraint firstItem="UJz-ue-J62" firstAttribute="top" secondItem="0vO-Kg-Z3j" secondAttribute="bottom" constant="14" id="b6e-NT-Mmt"/>
+                                    <constraint firstItem="h9a-kL-nCV" firstAttribute="centerX" secondItem="8Wm-WC-fRS" secondAttribute="centerX" id="bXu-0D-v4z"/>
                                     <constraint firstItem="fUd-hx-BiM" firstAttribute="leading" secondItem="4fZ-du-byv" secondAttribute="leading" id="cXy-ww-p9B"/>
+                                    <constraint firstItem="OPN-0J-seL" firstAttribute="top" secondItem="h9a-kL-nCV" secondAttribute="bottom" constant="10" id="cts-bv-1cp"/>
                                     <constraint firstItem="vtj-wm-gZX" firstAttribute="leading" secondItem="OPN-0J-seL" secondAttribute="leading" id="eBM-SP-0yF"/>
                                     <constraint firstItem="J5G-TU-VUE" firstAttribute="leading" secondItem="CIM-fM-AjK" secondAttribute="leading" id="hY3-Of-Tug"/>
                                     <constraint firstItem="1Mj-NK-kJ9" firstAttribute="top" secondItem="Utb-1A-HRu" secondAttribute="bottom" id="jJB-Vc-9oj"/>
                                     <constraint firstItem="7ed-U7-YHr" firstAttribute="centerX" secondItem="8Wm-WC-fRS" secondAttribute="centerX" id="kQc-e3-iYJ"/>
-                                    <constraint firstItem="OPN-0J-seL" firstAttribute="top" secondItem="XsK-tb-jon" secondAttribute="bottom" constant="10" id="lni-Bu-AQp"/>
-                                    <constraint firstItem="4a6-MG-Ljv" firstAttribute="leading" secondItem="XsK-tb-jon" secondAttribute="leading" id="oCj-ra-szs"/>
                                     <constraint firstAttribute="trailing" secondItem="fKe-at-6IC" secondAttribute="trailing" id="owT-9Q-lEY"/>
                                     <constraint firstItem="8yW-vf-0ck" firstAttribute="top" secondItem="V2r-aW-qrV" secondAttribute="bottom" constant="10" id="pFD-5t-Twe"/>
                                     <constraint firstItem="kSC-hl-CsH" firstAttribute="top" secondItem="1Mj-NK-kJ9" secondAttribute="bottom" constant="14" id="rZ7-UY-wdF"/>
@@ -340,7 +347,6 @@
                                     <constraint firstItem="kSC-hl-CsH" firstAttribute="leading" secondItem="fUd-hx-BiM" secondAttribute="leading" id="tro-r6-ic7"/>
                                     <constraint firstItem="4a6-MG-Ljv" firstAttribute="top" secondItem="KoH-mD-RXR" secondAttribute="bottom" constant="14" id="u5j-ko-7bF"/>
                                     <constraint firstItem="kSC-hl-CsH" firstAttribute="centerX" secondItem="1Mj-NK-kJ9" secondAttribute="centerX" id="wzP-Yf-fKw"/>
-                                    <constraint firstItem="OPN-0J-seL" firstAttribute="centerX" secondItem="XsK-tb-jon" secondAttribute="centerX" id="x7q-wh-BTn"/>
                                     <constraint firstItem="9Dp-ZK-DiQ" firstAttribute="centerX" secondItem="Utb-1A-HRu" secondAttribute="centerX" id="xBL-0M-pbY"/>
                                     <constraint firstItem="CIM-fM-AjK" firstAttribute="top" secondItem="J5G-TU-VUE" secondAttribute="bottom" constant="14" id="yK6-Bl-r6e"/>
                                     <constraint firstItem="fKe-at-6IC" firstAttribute="leading" secondItem="8Wm-WC-fRS" secondAttribute="leading" id="zFL-HB-iHD"/>
@@ -406,7 +412,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro" id="FNJ-k9-rTm"/>
                     <connections>
-                        <outlet property="btnSelectGender" destination="0vO-Kg-Z3j" id="2Td-Ry-yCS"/>
                         <outlet property="checkBox" destination="4A6-8y-swd" id="mtZ-sS-7Ma"/>
                         <outlet property="dateRegisterTextField" destination="17o-3d-p7H" id="MSF-YY-u63"/>
                         <outlet property="documentRegisterTextField" destination="KoH-mD-RXR" id="GNA-gn-b9n"/>
@@ -415,7 +420,8 @@
                         <outlet property="nameRegisterTextField" destination="1Mj-NK-kJ9" id="q1v-yr-Vpq"/>
                         <outlet property="numberRegisterTextField" destination="J5G-TU-VUE" id="VUm-OV-RlV"/>
                         <outlet property="registerButton" destination="8yW-vf-0ck" id="VoD-40-wlg"/>
-                        <outlet property="statusMaritalTextField" destination="XsK-tb-jon" id="rln-iH-57V"/>
+                        <outlet property="selectGenderButton" destination="0vO-Kg-Z3j" id="2br-s9-Qfb"/>
+                        <outlet property="selectStatusButton" destination="h9a-kL-nCV" id="gb9-Dv-Hnb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JkA-Oi-k1n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
