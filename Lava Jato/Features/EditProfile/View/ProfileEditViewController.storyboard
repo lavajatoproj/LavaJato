@@ -137,22 +137,11 @@
                                             <action selector="tappedChangePassword:" destination="kqS-JS-xWW" eventType="touchUpInside" id="AAg-0P-Qtd"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yz7-UV-nXV">
-                                        <rect key="frame" x="114.5" y="34" width="185" height="176"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="185" id="7qt-8h-X7k"/>
-                                            <constraint firstAttribute="height" constant="176" id="uJ6-5F-IAc"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="">
-                                            <backgroundConfiguration key="background" cornerRadius="15" image="Image-3"/>
-                                        </buttonConfiguration>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Henrique da Silva" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9IN-ES-rVe">
-                                        <rect key="frame" x="48.5" y="214" width="317" height="30"/>
+                                        <rect key="frame" x="48.5" y="242" width="317" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="317" id="ZFM-Ph-bcX"/>
-                                            <constraint firstAttribute="height" constant="30" id="p8w-Nn-huN"/>
+                                            <constraint firstAttribute="width" constant="317" id="AAL-XS-mx4"/>
+                                            <constraint firstAttribute="height" constant="30" id="J6z-XA-NzG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <color key="textColor" red="0.86264389750000003" green="0.68600946659999995" blue="0.24640053510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -203,29 +192,48 @@
                                             <action selector="tappedSaveButton:" destination="kqS-JS-xWW" eventType="touchUpInside" id="q7t-Mf-dyd"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pD9-F4-b7P">
+                                        <rect key="frame" x="114.5" y="20.5" width="185" height="175"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="176" id="Yvt-RI-huv"/>
+                                            <constraint firstAttribute="width" constant="185" id="fDe-1L-e5o"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWN-3B-B3h">
+                                        <rect key="frame" x="159.5" y="196" width="95" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Editar Foto"/>
+                                        <connections>
+                                            <action selector="tappedEditPhoto:" destination="kqS-JS-xWW" eventType="touchUpInside" id="0gR-GT-2vh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="yzj-xN-yfc" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="0KY-cr-Y71"/>
                                     <constraint firstItem="yzj-xN-yfc" firstAttribute="top" secondItem="Zf4-eB-7vG" secondAttribute="bottom" constant="14" id="6le-aK-reh"/>
                                     <constraint firstAttribute="trailing" secondItem="bcC-BQ-LTf" secondAttribute="trailing" id="7IF-5Y-vhe"/>
-                                    <constraint firstItem="9IN-ES-rVe" firstAttribute="top" secondItem="Yz7-UV-nXV" secondAttribute="bottom" constant="4" id="95a-Vs-5lP"/>
                                     <constraint firstAttribute="trailing" secondItem="U0R-wB-3nJ" secondAttribute="trailing" id="Ag0-3u-Np4"/>
+                                    <constraint firstItem="9IN-ES-rVe" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="Ey3-Ni-M9f"/>
                                     <constraint firstItem="U0R-wB-3nJ" firstAttribute="top" secondItem="oek-BX-J4y" secondAttribute="top" id="IfN-02-hi5"/>
+                                    <constraint firstItem="Ius-If-pjX" firstAttribute="top" secondItem="9IN-ES-rVe" secondAttribute="bottom" constant="37" id="K8x-hg-jCg"/>
+                                    <constraint firstItem="pD9-F4-b7P" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="KK8-eY-rPy"/>
+                                    <constraint firstItem="bWN-3B-B3h" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="KgP-Xa-yrc"/>
                                     <constraint firstItem="wpg-XO-tLY" firstAttribute="top" secondItem="yzj-xN-yfc" secondAttribute="bottom" id="KlI-P8-Cjh"/>
                                     <constraint firstItem="PRp-uu-ycp" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="Mlr-mv-ET7"/>
-                                    <constraint firstItem="Yz7-UV-nXV" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="ODv-Dt-cgE"/>
+                                    <constraint firstItem="bWN-3B-B3h" firstAttribute="top" secondItem="pD9-F4-b7P" secondAttribute="bottom" id="Mve-Lg-xbl"/>
                                     <constraint firstItem="PRp-uu-ycp" firstAttribute="top" secondItem="VhG-PR-Znm" secondAttribute="bottom" constant="40" id="PiJ-Aq-P7O"/>
                                     <constraint firstItem="4ch-21-qLH" firstAttribute="centerY" secondItem="PRp-uu-ycp" secondAttribute="centerY" id="RXY-Zm-Yvu"/>
+                                    <constraint firstItem="pD9-F4-b7P" firstAttribute="top" secondItem="oek-BX-J4y" secondAttribute="top" constant="20" id="Tjt-8z-p0T"/>
                                     <constraint firstItem="wpg-XO-tLY" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="Um8-Pz-PVL"/>
                                     <constraint firstItem="90K-Yo-nex" firstAttribute="leading" secondItem="VMY-ts-YXS" secondAttribute="trailing" constant="-44.5" id="Vao-fb-yM9"/>
-                                    <constraint firstItem="9IN-ES-rVe" firstAttribute="centerX" secondItem="Yz7-UV-nXV" secondAttribute="centerX" id="WeM-QR-MbJ"/>
                                     <constraint firstItem="50M-AS-wCM" firstAttribute="top" secondItem="ICv-KT-P2U" secondAttribute="bottom" id="WeY-c2-zk0"/>
                                     <constraint firstItem="FCn-Tv-gaA" firstAttribute="top" secondItem="50M-AS-wCM" secondAttribute="bottom" constant="14" id="XY3-GM-X5a"/>
                                     <constraint firstItem="bcC-BQ-LTf" firstAttribute="top" secondItem="oek-BX-J4y" secondAttribute="top" constant="280" id="Zpd-fZ-lLT"/>
                                     <constraint firstItem="0YP-zH-ucB" firstAttribute="top" secondItem="VhG-PR-Znm" secondAttribute="bottom" constant="5" id="a3I-dA-BfJ"/>
                                     <constraint firstItem="90K-Yo-nex" firstAttribute="top" secondItem="PRp-uu-ycp" secondAttribute="bottom" constant="20" id="aWg-1B-kUc"/>
                                     <constraint firstAttribute="bottom" secondItem="bcC-BQ-LTf" secondAttribute="bottom" constant="-125" id="bJY-oq-FNV"/>
-                                    <constraint firstItem="Yz7-UV-nXV" firstAttribute="top" secondItem="oek-BX-J4y" secondAttribute="top" constant="34" id="bco-wB-cVL"/>
+                                    <constraint firstItem="9IN-ES-rVe" firstAttribute="top" secondItem="bWN-3B-B3h" secondAttribute="bottom" constant="15" id="cgd-M8-yIV"/>
                                     <constraint firstItem="VMY-ts-YXS" firstAttribute="centerY" secondItem="90K-Yo-nex" secondAttribute="centerY" id="ddV-Up-qaB"/>
                                     <constraint firstItem="ICv-KT-P2U" firstAttribute="top" secondItem="wpg-XO-tLY" secondAttribute="bottom" constant="14" id="fu6-dn-CNm"/>
                                     <constraint firstItem="90K-Yo-nex" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="kRN-xu-vdt"/>
@@ -235,7 +243,6 @@
                                     <constraint firstItem="ICv-KT-P2U" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="njM-g5-G9G"/>
                                     <constraint firstItem="bcC-BQ-LTf" firstAttribute="height" secondItem="oek-BX-J4y" secondAttribute="height" priority="550" constant="92" id="oVv-Ua-HBV"/>
                                     <constraint firstItem="Ius-If-pjX" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="pEf-Ok-EyX"/>
-                                    <constraint firstItem="Ius-If-pjX" firstAttribute="top" secondItem="9IN-ES-rVe" secondAttribute="bottom" constant="65" id="pLj-rV-GRk"/>
                                     <constraint firstItem="VhG-PR-Znm" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="rC5-gs-NY3"/>
                                     <constraint firstItem="50M-AS-wCM" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="rnq-F5-jiL"/>
                                     <constraint firstItem="PRp-uu-ycp" firstAttribute="leading" secondItem="4ch-21-qLH" secondAttribute="trailing" constant="-44.5" id="rxG-AL-KAN"/>
@@ -263,24 +270,28 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="Q4D-gM-PMw"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="dateTextField" destination="VhG-PR-Znm" id="Bhx-7X-Vs3"/>
-                        <outlet property="emailTextField" destination="50M-AS-wCM" id="44R-sA-iHX"/>
+                        <outlet property="changePasswordButton" destination="90K-Yo-nex" id="z7V-ae-DJC"/>
+                        <outlet property="changeServicesButton" destination="PRp-uu-ycp" id="Afy-vY-knD"/>
+                        <outlet property="dateTextField" destination="VhG-PR-Znm" id="QZ9-AF-6SW"/>
+                        <outlet property="editPhotoButton" destination="bWN-3B-B3h" id="vSp-GA-8ug"/>
+                        <outlet property="emailTextField" destination="50M-AS-wCM" id="XFk-6a-1LE"/>
                         <outlet property="nameLabel" destination="9IN-ES-rVe" id="ZRj-mO-Z6a"/>
-                        <outlet property="nameTextField" destination="Zf4-eB-7vG" id="OXK-Ak-txY"/>
-                        <outlet property="numberTextField" destination="wpg-XO-tLY" id="slb-V8-b1K"/>
+                        <outlet property="nameTextField" destination="Zf4-eB-7vG" id="PbM-8V-YN3"/>
+                        <outlet property="numberTextField" destination="wpg-XO-tLY" id="EGr-w9-vzH"/>
+                        <outlet property="profileImageView" destination="pD9-F4-b7P" id="y0R-5w-1qC"/>
                         <outlet property="saveButton" destination="U0R-wB-3nJ" id="0Bf-Ju-cmX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6W-CE-YPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1300" y="39.508928571428569"/>
+            <point key="canvasLocation" x="1298.5507246376812" y="39.508928571428569"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Image-3" width="185" height="176"/>
         <image name="Password_logo" width="30" height="30"/>
         <image name="Service_logo" width="30" height="30"/>
         <image name="background" width="440" height="926"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="ColorDefault">
             <color red="0.9570000171661377" green="0.7369999885559082" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

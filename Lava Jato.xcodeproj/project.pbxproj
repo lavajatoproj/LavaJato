@@ -38,6 +38,10 @@
 		A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F799CC27DC6A49005A53A3 /* CustomRowTableViewCell.swift */; };
 		A2F799CF27DC6A49005A53A3 /* CustomRowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F799CD27DC6A49005A53A3 /* CustomRowTableViewCell.xib */; };
 		A2F799D827DC6CC8005A53A3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F799D727DC6CC8005A53A3 /* Model.swift */; };
+		DA107B3D2828ACD100F40F22 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA107B3C2828ACD100F40F22 /* AlertController.swift */; };
+		DA107B432828AD5C00F40F22 /* ViewModelNotificationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA107B422828AD5C00F40F22 /* ViewModelNotificationScreen.swift */; };
+		DA107B492828AFDA00F40F22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA107B482828AFDA00F40F22 /* User.swift */; };
+		DA107B4B2828AFED00F40F22 /* ViewModelEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA107B4A2828AFED00F40F22 /* ViewModelEditProfile.swift */; };
 		DA12C77A27D105BA00B6F080 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA12C77927D105BA00B6F080 /* ProfileEditViewController.swift */; };
 		DA9954C627DF895700C89D76 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954C527DF895700C89D76 /* Profile.swift */; };
 		DA9954C927DF899600C89D76 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954C727DF899600C89D76 /* NotificationTableViewCell.swift */; };
@@ -110,6 +114,10 @@
 		A2F799D727DC6CC8005A53A3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A69B63EF0DBCFF8F37269F8F /* Pods-Lava Jato.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lava Jato.release.xcconfig"; path = "Target Support Files/Pods-Lava Jato/Pods-Lava Jato.release.xcconfig"; sourceTree = "<group>"; };
 		CD86B3CBB72DA359F42D4FC0 /* Pods-Lava Jato.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lava Jato.debug.xcconfig"; path = "Target Support Files/Pods-Lava Jato/Pods-Lava Jato.debug.xcconfig"; sourceTree = "<group>"; };
+		DA107B3C2828ACD100F40F22 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		DA107B422828AD5C00F40F22 /* ViewModelNotificationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNotificationScreen.swift; sourceTree = "<group>"; };
+		DA107B482828AFDA00F40F22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DA107B4A2828AFED00F40F22 /* ViewModelEditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelEditProfile.swift; sourceTree = "<group>"; };
 		DA12C77927D105BA00B6F080 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		DA9954C527DF895700C89D76 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		DA9954C727DF899600C89D76 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
@@ -354,13 +362,70 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		DA9954C227DF891E00C89D76 /* NotificationScreen */ = {
+		DA107B3E2828AD0C00F40F22 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA107B422828AD5C00F40F22 /* ViewModelNotificationScreen.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA107B3F2828AD1400F40F22 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				DA9954CF27DF8A8100C89D76 /* NotificationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA107B402828AD1A00F40F22 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				DA9954CD27DF8A2D00C89D76 /* NotificationViewController.storyboard */,
-				DA9954C427DF892C00C89D76 /* Model */,
 				DA9954C327DF892800C89D76 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA107B442828AFA400F40F22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA107B482828AFDA00F40F22 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA107B452828AFAA00F40F22 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA107B4A2828AFED00F40F22 /* ViewModelEditProfile.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA107B462828AFB000F40F22 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA12C77927D105BA00B6F080 /* ProfileEditViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA107B472828AFB500F40F22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E13E5B2427D6EBA6000CB644 /* ProfileEditViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA9954C227DF891E00C89D76 /* NotificationScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DA107B402828AD1A00F40F22 /* View */,
+				DA107B3F2828AD1400F40F22 /* Controller */,
+				DA107B3E2828AD0C00F40F22 /* ViewModel */,
+				DA9954C427DF892C00C89D76 /* Model */,
 			);
 			path = NotificationScreen;
 			sourceTree = "<group>";
@@ -412,8 +477,10 @@
 		E13E5B2327D5ACF7000CB644 /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
-				E13E5B2427D6EBA6000CB644 /* ProfileEditViewController.storyboard */,
-				DA12C77927D105BA00B6F080 /* ProfileEditViewController.swift */,
+				DA107B472828AFB500F40F22 /* View */,
+				DA107B462828AFB000F40F22 /* Controller */,
+				DA107B452828AFAA00F40F22 /* ViewModel */,
+				DA107B442828AFA400F40F22 /* Model */,
 			);
 			path = EditProfile;
 			sourceTree = "<group>";
@@ -425,6 +492,7 @@
 				E13E5B2F27D6F781000CB644 /* UITextField.swift */,
 				E13E5B3127D6F7FA000CB644 /* UIViewController.swift */,
 				DA99553A27E2CE7F00C89D76 /* PopUpWindow.swift */,
+				DA107B3C2828ACD100F40F22 /* AlertController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -700,9 +768,12 @@
 				DA99553B27E2CE8000C89D76 /* PopUpWindow.swift in Sources */,
 				44CB763227E941F700A029FA /* FiltroViewController.swift in Sources */,
 				E13E5B1E27D59644000CB644 /* ErrorConectionViewController.swift in Sources */,
+				DA107B492828AFDA00F40F22 /* User.swift in Sources */,
+				DA107B4B2828AFED00F40F22 /* ViewModelEditProfile.swift in Sources */,
 				E13E5B3027D6F781000CB644 /* UITextField.swift in Sources */,
 				449EFAA727DE3AF4002111DE /* PerfilUsuarioViewController.swift in Sources */,
 				DA9954C627DF895700C89D76 /* Profile.swift in Sources */,
+				DA107B432828AD5C00F40F22 /* ViewModelNotificationScreen.swift in Sources */,
 				44CB762E27E941D000A029FA /* ProfileBanner.swift in Sources */,
 				E162E07927ADF53E00C6AD32 /* SceneDelegate.swift in Sources */,
 				DAF0152C27C45B38009E55F6 /* HelpScreenViewController.swift in Sources */,
@@ -710,6 +781,7 @@
 				44CB762F27E941D000A029FA /* ProfilePrice.swift in Sources */,
 				44CB762327E941C200A029FA /* PriceTableViewCell.swift in Sources */,
 				44CB763027E941D000A029FA /* ProfileGenre.swift in Sources */,
+				DA107B3D2828ACD100F40F22 /* AlertController.swift in Sources */,
 				A212221F27D13EE500B24208 /* MyCustomCell.swift in Sources */,
 				E18703DA27E9210A005B3AA9 /* MainScreen.swift in Sources */,
 				A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */,

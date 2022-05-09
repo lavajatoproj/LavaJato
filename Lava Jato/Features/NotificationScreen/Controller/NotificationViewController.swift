@@ -8,16 +8,10 @@
 import UIKit
 
 class NotificationViewController: UIViewController {
-        @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroudView: UIImageView!
     
-    var data:[Profile] = [
-        Profile(name: "Nome: Junyor", photo: UIImage(imageLiteralResourceName: "profile1"), adress: "Endereço: Rua numero, 2315 ", number: "Telefone: (11)99999-9999 ", request: "Data do Pedido: 29/12/2022", service: "Tipo do Serviço: Lavagem Completa ", payment: "Tipo do Pagamento: Dinheiro"),
-        Profile(name: "Nome: Brendon", photo: UIImage(imageLiteralResourceName: "profile2"), adress: "Endereço: Rua numero, 121 ", number: "Telefone: (11)99999-9999 ", request: "Data do Pedido: 29/12/2022", service: "Tipo do Serviço: Lavagem Simples ", payment: "Tipo do Pagamento: Cartão de Débito"),
-        Profile(name: "Nome: Thiago", photo: UIImage(imageLiteralResourceName: "profile3"), adress: "Endereço: Rua numero, 1123 ", number: "Telefone: (11)99999-9999 ", request: "Data do Pedido: 29/12/2022", service: "Tipo do Serviço: Polimento e Cristalização ", payment: "Tipo do Pagamento: PIX"),
-        Profile(name: "Nome: Claudio", photo: UIImage(imageLiteralResourceName: "profile1"), adress: "Endereço: Rua numero, 2221 ", number: "Telefone: (11)99999-9999 ", request: "Data do Pedido: 29/12/2022", service: "Tipo do Serviço: Lavagem Simples ", payment: "Tipo do Pagamento: Cartão de Crédito")
-        
-    ]
+    private var viewModelNotificationScreen:ViewModelNotificationScreen = ViewModelNotificationScreen()
     
     
     override func viewDidLoad() {
@@ -34,14 +28,14 @@ class NotificationViewController: UIViewController {
         self.tableView.backgroundColor = UIColor.clear
     }
 }
-extension NotificationViewController:UITableViewDataSource{
+extension NotificationViewController:UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.data.count
+        return self.viewModelNotificationScreen.countElementsArray
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NotificationTableViewCell.identifier, for: indexPath) as? NotificationTableViewCell
-        cell?.dados(profile: data[indexPath.row])
+        cell?.dados(profile: self.viewModelNotificationScreen.loadCellUser(indexPath: indexPath))
         cell?.xibView.layer.borderWidth = 0.0
         return cell ?? UITableViewCell()
     }
@@ -57,7 +51,7 @@ extension NotificationViewController:UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deletAction = UIContextualAction(style: .destructive, title: nil){action, view, boolAction in
-            self.data.remove(at: indexPath.row)
+            self.viewModelNotificationScreen.removeIndex(indexPath: indexPath)
             tableView.performBatchUpdates{
                 tableView.deleteRows(at: [indexPath], with: .fade)
             } completion: { completed in
@@ -66,7 +60,4 @@ extension NotificationViewController:UITableViewDataSource{
         deletAction.image = UIImage(systemName: "trash")
         return UISwipeActionsConfiguration(actions: [deletAction])
     }
-}
-extension NotificationViewController:UITableViewDelegate{
-    
 }

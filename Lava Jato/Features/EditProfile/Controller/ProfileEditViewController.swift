@@ -17,45 +17,62 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
-        
+    @IBOutlet weak var profileImageView:UIImageView!
+    @IBOutlet weak var editPhotoButton:UIButton!
+    
+    private var viewModelEditProfile:ViewModelEditProfile = ViewModelEditProfile()
+    
+    private var alert:AlertController?
+    var imagePicker = UIImagePickerController()
     let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Style()
         self.hideKeyboardWhenTappedAround()
-        
+        self.createDatePicker()
+        self.configTextField()
+        self.configPhotoPicker()
+        self.alert = AlertController(controller: self)
+    }
+    
+    func configTextField(){
         self.nameTextField.delegate = self
         self.numberTextField.delegate = self
         self.emailTextField.delegate = self
         self.dateTextField.delegate = self
-        
-        
         self.nameTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.numberTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.emailTextField.layer.borderColor = UIColor.lightGray.cgColor
         self.dateTextField.layer.borderColor = UIColor.lightGray.cgColor
-        
         self.nameTextField.layer.borderWidth = 2.0
         self.numberTextField.layer.borderWidth = 2.0
         self.emailTextField.layer.borderWidth = 2.0
         self.dateTextField.layer.borderWidth = 2.0
-        
         self.nameTextField.layer.cornerRadius = 5.0
         self.numberTextField.layer.cornerRadius = 5.0
         self.emailTextField.layer.cornerRadius = 5.0
         self.dateTextField.layer.cornerRadius = 5.0
-                
-        self.createDatePicker()
     }
     
-    func createToolbar () -> UIToolbar {
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
-        toolbar.setItems([doneButton], animated: true)
-        return toolbar
+    func resetTextField(){
+        self.nameTextField.text = ""
+        self.numberTextField.text = ""
+        self.emailTextField.text = ""
+        self.dateTextField.text = ""
+    }
+    
+    func setValueTextField(){
+        self.nameTextField.placeholder = nameTextField.text
+        self.numberTextField.placeholder = numberTextField.text
+        self.emailTextField.placeholder = emailTextField.text
+        self.dateTextField.placeholder = dateTextField.text
+        self.nameLabel.text = nameTextField.text
+        self.saveButton.isEnabled = false
+    }
+    
+    func configPhotoPicker(){
+        self.imagePicker.delegate = self
     }
     
     public func createDatePicker(){
@@ -65,7 +82,14 @@ class ProfileEditViewController: UIViewController {
         dateTextField.inputView = datePicker
         dateTextField.inputAccessoryView = createToolbar()
     }
-        @objc func donePressed(){
+    func createToolbar () -> UIToolbar {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneButton], animated: true)
+        return toolbar
+    }
+    @objc func donePressed(){
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
@@ -74,24 +98,25 @@ class ProfileEditViewController: UIViewController {
     }
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
-        let alert: UIAlertController = UIAlertController(title: "Concluido", message: "Suas alteracoes foram salvas", preferredStyle: .alert)
-        let confirmButton: UIAlertAction = UIAlertAction(title: "Confirmar", style: .cancel){
-            (action) in
-        }
-        alert.addAction(confirmButton)
-        self.present(alert, animated: true, completion: nil)
+        self.alert?.showAlert(title: "Concluido", message: "Suas alterações foram salvas", titleButton: "Confirmar", completion: { value in
+            self.resetTextField()
+        })
+        self.setValueTextField()
     }
+    
     @IBAction func tappedChangePassword(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "ChangePasswordViewController", bundle: nil)
         let vC = storyboard.instantiateViewController(withIdentifier: "ChangePasswordViewController")
         navigationController?.pushViewController(vC, animated: true)
     }
+    
+    
     @IBAction func tappedChangeService(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "meusServicos", bundle: nil)
         let vC = storyboard.instantiateViewController(withIdentifier: "meusServicos")
         navigationController?.pushViewController(vC, animated: true)
     }
-
+    
     @IBAction func nameAct(_ sender: Any) {
         let text = self.nameTextField.text ?? ""
         if text.isValidName() {
@@ -110,7 +135,6 @@ class ProfileEditViewController: UIViewController {
         }
     }
     
-    
     @IBAction func emailAct(_ sender: Any) {
         let text = self.emailTextField.text ?? ""
         if text.isValidEmail() {
@@ -120,14 +144,18 @@ class ProfileEditViewController: UIViewController {
         }
     }
     
-    
+    @IBAction func tappedEditPhoto(_ sender: UIButton) {
+        self.imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
 }
+
 extension ProfileEditViewController:UITextFieldDelegate{
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.blue.cgColor
         textField.layer.borderWidth = 2.0
     }
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == self.nameTextField{
             if self.nameTextField.text == ""{
@@ -157,7 +185,6 @@ extension ProfileEditViewController:UITextFieldDelegate{
                 self.dateTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
-        
         if self.nameTextField.text != "" && self.emailTextField.text != "" && self.numberTextField.text != "" && self.dateTextField.text != "" && self.nameTextField.textColor == UIColor.black && self.emailTextField.textColor == UIColor.black && self.numberTextField.textColor == UIColor.black{
             self.saveButton.isHidden = false
         }
@@ -166,10 +193,25 @@ extension ProfileEditViewController:UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
-    
     func Style(){
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
-    
+        
+    }
+}
+
+extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            self.profileImageView.contentMode = .scaleToFill
+            self.profileImageView.image = pickedImage
+            self.profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+            self.profileImageView.clipsToBounds = true
+            
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 }
