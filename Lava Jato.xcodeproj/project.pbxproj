@@ -504,8 +504,8 @@
 				E162E07827ADF53E00C6AD32 /* SceneDelegate.swift */,
 				E162E07F27ADF54000C6AD32 /* Assets.xcassets */,
 				E162E08127ADF54000C6AD32 /* LaunchScreen.storyboard */,
-				E194592127EAB6C800CC0078 /* GoogleService-Info.plist */,
 				E162E08427ADF54000C6AD32 /* Info.plist */,
+				E194592127EAB6C800CC0078 /* GoogleService-Info.plist */,
 			);
 			path = "Lava Jato";
 			sourceTree = "<group>";

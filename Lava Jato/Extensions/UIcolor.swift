@@ -8,5 +8,5 @@
 import UIKit
 
 extension UIColor {
-    static let ColorDefault: UIColor = UIColor(named: "ColorDefault")!
+    static let ColorDefault: UIColor = UIColor.ColorDefault
 }
