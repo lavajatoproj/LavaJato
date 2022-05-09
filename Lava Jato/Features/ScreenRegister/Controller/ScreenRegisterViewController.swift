@@ -13,8 +13,6 @@ class CellClass: UITableViewCell {
 }
 
 class ScreenRegisterViewController: UIViewController {
-    
-    
     @IBOutlet weak var nameRegisterTextField: UITextField!
     @IBOutlet weak var emailRegisterTextField: UITextField!
     @IBOutlet weak var numberRegisterTextField: UITextField!
@@ -32,11 +30,16 @@ class ScreenRegisterViewController: UIViewController {
     let datePicker = UIDatePicker()
     var checkboxFlag = false
     private var viewModelScreenRegister:ViewModelScreenRegister = ViewModelScreenRegister()
-    
     var text = "" {
         didSet {
             let success = BooleanValidator().validate(cpf: text)
             label?.text = success ? "CPF Válido" : "CPF Inválido"
+        }
+    }
+    var text2 = "" {
+        didSet {
+            let success2 = BooleanValidator().validate(cnpj: text2)
+            label?.text = success2 ? "CNPJ Válido" : "CNPJ Inválido"
         }
     }
     override func viewDidLoad() {
@@ -207,16 +210,27 @@ class ScreenRegisterViewController: UIViewController {
     }
     
     @IBAction func cpfValidate(_ sender: UITextField) {
-        text = self.documentRegisterTextField?.text ?? ""
-        if self.label.text == "CPF Inválido"{
-            self.label.textColor = UIColor.red
-            self.documentRegisterTextField.textColor = UIColor.red
-        }else if self.label.text == "CPF Válido"{
-            self.label.textColor = .clear
-            self.documentRegisterTextField.textColor = UIColor.black
+        let textCount = documentRegisterTextField.text?.count ?? 0
+        if textCount <= 11{
+            text = self.documentRegisterTextField?.text ?? ""
+            if self.label.text == "CPF Inválido"{
+                self.label.textColor = UIColor.red
+                self.documentRegisterTextField.textColor = UIColor.red
+            }else if self.label.text == "CPF Válido"{
+                self.label.textColor = .clear
+                self.documentRegisterTextField.textColor = UIColor.black
+            }
+        }else if textCount >= 12{
+            text2 = self.documentRegisterTextField?.text ?? ""
+            if self.label.text == "CNPJ Inválido"{
+                self.label.textColor = UIColor.red
+                self.documentRegisterTextField.textColor = UIColor.red
+            }else if self.label.text == "CNPJ Válido"{
+                self.label.textColor = .clear
+                self.documentRegisterTextField.textColor = UIColor.black
+            }
         }
     }
-
 }
 
 extension ScreenRegisterViewController:UITextFieldDelegate{
@@ -280,8 +294,8 @@ extension ScreenRegisterViewController:UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
-    
 }
+
 extension ScreenRegisterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataSource.count
