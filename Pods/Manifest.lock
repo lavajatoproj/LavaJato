@@ -5,6 +5,7 @@ PODS:
   - AppAuth/Core (1.5.0)
   - AppAuth/ExternalUserAgent (1.5.0):
     - AppAuth/Core
+  - CPF-CNPJ-Validator (1.0.2)
   - FBAEMKit (13.1.0):
     - FBSDKCoreKit_Basics (= 13.1.0)
   - FBSDKCoreKit (13.1.0):
@@ -125,6 +126,7 @@ PODS:
   - PromisesObjC (2.0.0)
 
 DEPENDENCIES:
+  - CPF-CNPJ-Validator
   - FBSDKLoginKit
   - Firebase
   - Firebase/Auth
@@ -136,6 +138,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AppAuth
+    - CPF-CNPJ-Validator
     - FBAEMKit
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
@@ -159,6 +162,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AppAuth: 80317d99ac7ff2801a2f18ff86b48cd315ed465d
+  CPF-CNPJ-Validator: 0b08069595da2c4b20e964b743bfc0a7334d5347
   FBAEMKit: 3be32ffb79fe7c0603fed00d81742b23241e89a5
   FBSDKCoreKit: eff97dea778dbe6cc4498959cffb619c75675102
   FBSDKCoreKit_Basics: c151609a1cf6976a5958febcf0043266a8fd5151
@@ -180,6 +184,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
 
-PODFILE CHECKSUM: 1e81603ba7abaa28fd29e4662a4b4988bac8d9a9
+PODFILE CHECKSUM: d2852316e4642880c31cd952ce92af1a40011d38
 
 COCOAPODS: 1.11.2

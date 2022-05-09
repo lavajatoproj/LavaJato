@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2EA0FBA7AF94233EBB6451CF /* libPods-Lava Jato.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0EA5818F1E5F9862B73A09 /* libPods-Lava Jato.a */; };
+		35AD4EF13A4A92C98E0084E9 /* Pods_Lava_Jato.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAD20EE500B465208334734 /* Pods_Lava_Jato.framework */; };
 		442DD11E27D05D0900C4F033 /* PerfilUsuario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442DD11D27D05D0900C4F033 /* PerfilUsuario.storyboard */; };
 		443BAE9827BF4DE400751C16 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443BAE9727BF4DE400751C16 /* MainScreen.storyboard */; };
 		445C7C1227DD140D000E9CD2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445C7C1127DD140C000E9CD2 /* Service.swift */; };
@@ -43,6 +43,7 @@
 		DA107B492828AFDA00F40F22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA107B482828AFDA00F40F22 /* User.swift */; };
 		DA107B4B2828AFED00F40F22 /* ViewModelEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA107B4A2828AFED00F40F22 /* ViewModelEditProfile.swift */; };
 		DA12C77A27D105BA00B6F080 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA12C77927D105BA00B6F080 /* ProfileEditViewController.swift */; };
+		DA23ECCB2828BA5500C9E4FD /* ViewModelScreenRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA23ECCA2828BA5500C9E4FD /* ViewModelScreenRegister.swift */; };
 		DA9954C627DF895700C89D76 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954C527DF895700C89D76 /* Profile.swift */; };
 		DA9954C927DF899600C89D76 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954C727DF899600C89D76 /* NotificationTableViewCell.swift */; };
 		DA9954CA27DF899600C89D76 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9954C827DF899600C89D76 /* NotificationTableViewCell.xib */; };
@@ -81,7 +82,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F0EA5818F1E5F9862B73A09 /* libPods-Lava Jato.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lava Jato.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AAD20EE500B465208334734 /* Pods_Lava_Jato.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lava_Jato.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		442DD11D27D05D0900C4F033 /* PerfilUsuario.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PerfilUsuario.storyboard; sourceTree = "<group>"; };
 		443BAE9727BF4DE400751C16 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 		445C7C1127DD140C000E9CD2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 		DA107B482828AFDA00F40F22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DA107B4A2828AFED00F40F22 /* ViewModelEditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelEditProfile.swift; sourceTree = "<group>"; };
 		DA12C77927D105BA00B6F080 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
+		DA23ECCA2828BA5500C9E4FD /* ViewModelScreenRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelScreenRegister.swift; sourceTree = "<group>"; };
 		DA9954C527DF895700C89D76 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		DA9954C727DF899600C89D76 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		DA9954C827DF899600C89D76 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
@@ -163,7 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EA0FBA7AF94233EBB6451CF /* libPods-Lava Jato.a in Frameworks */,
+				35AD4EF13A4A92C98E0084E9 /* Pods_Lava_Jato.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +175,7 @@
 		3E1468BE42CD7941DC8DD7EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1F0EA5818F1E5F9862B73A09 /* libPods-Lava Jato.a */,
+				2AAD20EE500B465208334734 /* Pods_Lava_Jato.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -419,6 +421,37 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DA107B4C2828B7E800F40F22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA107B4D2828B7EE00F40F22 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA23ECCA2828BA5500C9E4FD /* ViewModelScreenRegister.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA107B4E2828B7F500F40F22 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E13E5B2827D6EBF6000CB644 /* ScreenRegisterViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA107B4F2828B7FA00F40F22 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DAB173CF27D1508A00104761 /* ScreenRegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		DA9954C227DF891E00C89D76 /* NotificationScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,8 +492,10 @@
 		E13E5B2127D5ACC7000CB644 /* ScreenRegister */ = {
 			isa = PBXGroup;
 			children = (
-				E13E5B2827D6EBF6000CB644 /* ScreenRegisterViewController.storyboard */,
-				DAB173CF27D1508A00104761 /* ScreenRegisterViewController.swift */,
+				DA107B4F2828B7FA00F40F22 /* Controller */,
+				DA107B4E2828B7F500F40F22 /* View */,
+				DA107B4D2828B7EE00F40F22 /* ViewModel */,
+				DA107B4C2828B7E800F40F22 /* Model */,
 			);
 			path = ScreenRegister;
 			sourceTree = "<group>";
@@ -634,8 +669,6 @@
 				Base,
 			);
 			mainGroup = E162E06A27ADF53E00C6AD32;
-			packageReferences = (
-			);
 			productRefGroup = E162E07427ADF53E00C6AD32 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -751,6 +784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E15CA72027D56A2E002355B9 /* MapsViewController.swift in Sources */,
+				DA23ECCB2828BA5500C9E4FD /* ViewModelScreenRegister.swift in Sources */,
 				E162E07B27ADF53E00C6AD32 /* ViewController.swift in Sources */,
 				DA9954C927DF899600C89D76 /* NotificationTableViewCell.swift in Sources */,
 				44FA259E28177CB7006C1CFB /* ServicesCollectionViewCell.swift in Sources */,
