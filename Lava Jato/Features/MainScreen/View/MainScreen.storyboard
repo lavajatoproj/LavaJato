@@ -67,15 +67,15 @@
             </objects>
             <point key="canvasLocation" x="7515" y="-167"/>
         </scene>
-        <!--PerfilUsuario-->
+        <!--UserProfileViewController-->
         <scene sceneID="cKN-3n-z2t">
             <objects>
-                <viewControllerPlaceholder storyboardName="PerfilUsuario" id="zFe-2c-e0G" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="UserProfileViewController" id="zFe-2c-e0G" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="XB0-AV-bVl"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4LH-YS-YcW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4139" y="-100"/>
+            <point key="canvasLocation" x="4345" y="-101"/>
         </scene>
         <!--listOfProfessionals-->
         <scene sceneID="cyC-Sx-dHM">
@@ -85,7 +85,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GwA-8R-wlj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3911" y="-101"/>
+            <point key="canvasLocation" x="4047" y="-101"/>
         </scene>
         <!--myServices-->
         <scene sceneID="5Hj-bo-2Tv">
