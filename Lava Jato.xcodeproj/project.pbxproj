@@ -197,11 +197,11 @@
 				DA9954C227DF891E00C89D76 /* NotificationScreen */,
 				E13E5B2327D5ACF7000CB644 /* TelaEditarPerfil */,
 				E13E5B2227D5ACDE000CB644 /* TelaDeAjuda */,
-				E13E5B2127D5ACC7000CB644 /* TelaDeCadastro */,
-				E15CA71427D52C3B002355B9 /* TelaLogin */,
+				E13E5B2127D5ACC7000CB644 /* Register */,
+				E15CA71427D52C3B002355B9 /* Login */,
 				E15CA71A27D53348002355B9 /* Maps */,
 				E13E5B1C27D595FF000CB644 /* TelaDeError */,
-				E15CA71727D52F02002355B9 /* RecuperarSenha */,
+				E15CA71727D52F02002355B9 /* RecoverPassword */,
 				A212220F27D13E0100B24208 /* SolicitacaoDeServico */,
 				A212220E27D13DB400B24208 /* MeusServicos */,
 				A212220D27D13DA200B24208 /* ListaDeProfissionais */,
@@ -380,13 +380,13 @@
 			path = TelaDeError;
 			sourceTree = "<group>";
 		};
-		E13E5B2127D5ACC7000CB644 /* TelaDeCadastro */ = {
+		E13E5B2127D5ACC7000CB644 /* Register */ = {
 			isa = PBXGroup;
 			children = (
 				E13E5B2827D6EBF6000CB644 /* ScreenRegister.storyboard */,
 				DAB173CF27D1508A00104761 /* cadastroViewController.swift */,
 			);
-			path = TelaDeCadastro;
+			path = Register;
 			sourceTree = "<group>";
 		};
 		E13E5B2227D5ACDE000CB644 /* TelaDeAjuda */ = {
@@ -438,22 +438,22 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
-		E15CA71427D52C3B002355B9 /* TelaLogin */ = {
+		E15CA71427D52C3B002355B9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				E15CA71527D52E5B002355B9 /* Login.storyboard */,
 				E162E07A27ADF53E00C6AD32 /* ViewController.swift */,
 			);
-			path = TelaLogin;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		E15CA71727D52F02002355B9 /* RecuperarSenha */ = {
+		E15CA71727D52F02002355B9 /* RecoverPassword */ = {
 			isa = PBXGroup;
 			children = (
 				E15CA71827D52F1D002355B9 /* RecuperarSenha.storyboard */,
 				E10CB59327B7218100D49C01 /* resetPasswordViewController.swift */,
 			);
-			path = RecuperarSenha;
+			path = RecoverPassword;
 			sourceTree = "<group>";
 		};
 		E15CA71A27D53348002355B9 /* Maps */ = {
@@ -556,7 +556,6 @@
 			);
 			mainGroup = E162E06A27ADF53E00C6AD32;
 			packageReferences = (
-				E1F72C5527EBFCCE00540CB4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = E162E07427ADF53E00C6AD32 /* Products */;
 			projectDirPath = "";
@@ -925,17 +924,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		E1F72C5527EBFCCE00540CB4 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = E162E06B27ADF53E00C6AD32 /* Project object */;
 }

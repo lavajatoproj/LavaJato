@@ -15,19 +15,18 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
     
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        ApplicationDelegate.shared.application(
-                   application,
-                   didFinishLaunchingWithOptions: launchOptions
-               )
+        //habilita o SDK do facebook
+        ApplicationDelegate.shared.application(application,
+                                               didFinishLaunchingWithOptions: launchOptions)
         
         UITabBar.appearance().tintColor = UIColor.ColorDefault
         UINavigationBar.appearance().barTintColor = UIColor.ColorDefault
         
         FirebaseApp.configure()
 
+        //Verifica se o usuário do Google continua logado
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
           if error != nil || user == nil {
             // Show the app's signed-out state.
@@ -49,20 +48,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
       open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]
     ) -> Bool {
         
-        ApplicationDelegate.shared.application(
+        return ApplicationDelegate.shared.application(
             app,
             open: url,
-            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-            annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+            options: options
         )
-      var handled: Bool
-
-      handled = GIDSignIn.sharedInstance.handle(url)
-      if handled {
-        return true
-      }
-      return false
+        
+//      var handled: Bool
+//
+//      handled = GIDSignIn.sharedInstance.handle(url)
+//      if handled {
+//        return true
+//      }
+//      return false
     }
+    
+    
     //Tratamento da URL final recebida no processo de authenticacão do Google
 //    @available(iOS 9.0, *)
 //    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any])

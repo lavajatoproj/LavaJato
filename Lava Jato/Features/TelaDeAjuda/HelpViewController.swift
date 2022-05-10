@@ -24,6 +24,7 @@ class HelpViewController: UIViewController {
         str = str.addingPercentEncoding(withAllowedCharacters: (NSCharacterSet.urlQueryAllowed))!
         let whatsappURL = NSURL(string: "https://api.whatsapp.com/send?phone=989381485&text=\(str)")
 
+        
         if UIApplication.shared.canOpenURL(whatsappURL! as URL) {
             UIApplication.shared.openURL(whatsappURL! as URL)
         } else {

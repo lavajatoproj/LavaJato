@@ -9,6 +9,7 @@ import UIKit
 import Foundation
 import Firebase
 import GoogleSignIn
+import FBSDKLoginKit
 
 class ViewController: UIViewController{
     
@@ -24,6 +25,7 @@ class ViewController: UIViewController{
        
     }
     
+    let buttonlogin = FBLoginButton()
     
     
     @IBAction func showResetPassword(_ sender: Any) {

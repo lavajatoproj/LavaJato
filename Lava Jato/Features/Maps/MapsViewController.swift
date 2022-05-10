@@ -27,6 +27,7 @@ class MapsViewController: UIViewController{
         
         //Configuração adicional após carregar a visualização.
         //Google Maps SDK: COMPASS
+        //seta um botao na parte inferior que centraliza o mapa na localizacão atual
         mapView.settings.compassButton = true
         
         //Google Maps SDK: User's Location
@@ -35,6 +36,7 @@ class MapsViewController: UIViewController{
     }
 
     func gotoPlaces() {
+        //solicita que o txtSearch não fique em 1 plano
         txtSearch.resignFirstResponder()
         let acController = GMSAutocompleteViewController()
         acController.delegate = self
@@ -48,6 +50,7 @@ class MapsViewController: UIViewController{
         // Autorização para uso do Google Maps em primeiro plano
         self.locationManager.requestWhenInUseAuthorization()
         
+        //gerenciando a localização
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -71,7 +74,6 @@ extension MapsViewController: CLLocationManagerDelegate {
 
 extension MapsViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        print("Place name: \(String(describing: place.name))")
         dismiss(animated: true, completion: nil)
         
         self.mapView.clear()
@@ -79,6 +81,7 @@ extension MapsViewController: GMSAutocompleteViewControllerDelegate {
         
         let cord2D = CLLocationCoordinate2D(latitude: (place.coordinate.latitude), longitude: (place.coordinate.longitude))
         
+        //adicionando o snippet na tela
         let marker = GMSMarker()
         marker.position =  cord2D
         marker.title = "Location"
@@ -92,10 +95,12 @@ extension MapsViewController: GMSAutocompleteViewControllerDelegate {
         self.mapView.camera = GMSCameraPosition.camera(withTarget: cord2D, zoom: 15)
     }
     
+    //funcao de tratamento de erros caso o mapa nao responda
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
         print(error.localizedDescription)
     }
     
+    //funcao para dismiss da tela de pesquisa do mapa
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
         dismiss(animated: true, completion: nil)
     }
