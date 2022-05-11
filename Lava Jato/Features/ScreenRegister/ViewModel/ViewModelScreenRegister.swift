@@ -10,8 +10,8 @@ import UIKit
 import CPF_CNPJ_Validator
 import DropDown
 
-//let statusDropDown = DropDown()
-//let genderDropDown = DropDown()
+let statusDropDown = DropDown()
+let genderDropDown = DropDown()
 
 
 class ViewModelScreenRegister{
@@ -64,24 +64,24 @@ class ViewModelScreenRegister{
         textField.layer.cornerRadius = 5.0
     }
     
-//    func createDropDownGender(button:UIButton){
-//        genderDropDown.anchorView = button
-//        genderDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)
-//        genderDropDown.dataSource = ["Masculino", "Feminino"]
-//        genderDropDown.selectionAction = { [weak self] (index, item) in
-//            button.setTitle(item, for: .normal)
-//        }
-//        genderDropDown.show()
-//    }
-//    func createDropDownStatus(button:UIButton){
-//        statusDropDown.anchorView = button
-//        statusDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)
-//        statusDropDown.dataSource = ["Solteiro(a)", "Casado(a)", "Viuvo(a)"]
-//        statusDropDown.selectionAction = { [weak self] (index, item) in
-//            button.setTitle(item, for: .normal)
-//        }
-//        statusDropDown.show()
-//    }
+    func createDropDownGender(button:UIButton){
+        genderDropDown.anchorView = button
+        genderDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)
+        genderDropDown.dataSource = ["Masculino", "Feminino"]
+        genderDropDown.selectionAction = { [weak self] (index, item) in
+            button.setTitle(item, for: .normal)
+        }
+        genderDropDown.show()
+    }
+    func createDropDownStatus(button:UIButton){
+        statusDropDown.anchorView = button
+        statusDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)
+        statusDropDown.dataSource = ["Solteiro(a)", "Casado(a)", "Viuvo(a)"]
+        statusDropDown.selectionAction = { [weak self] (index, item) in
+            button.setTitle(item, for: .normal)
+        }
+        statusDropDown.show()
+    }
     
     func boolTrue(value:Bool)-> Bool{
         return true

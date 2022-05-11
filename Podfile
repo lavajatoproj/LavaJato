@@ -12,4 +12,5 @@ target 'Lava Jato' do
 	pod 'Firebase/Auth'
 	pod 'GoogleSignIn'
 	pod 'CPF-CNPJ-Validator'
+	pod 'DropDown'
 end
