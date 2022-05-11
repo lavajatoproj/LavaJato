@@ -9,6 +9,10 @@ import UIKit
 import CPF_CNPJ_Validator
 import DropDown
 
+//protocol ScreenRegisterControllerDelegate:AnyObject{
+//    func refreshData()
+//}
+
 class ScreenRegisterViewController: UIViewController {
     @IBOutlet weak var nameRegisterTextField: UITextField!
     @IBOutlet weak var emailRegisterTextField: UITextField!
@@ -20,6 +24,7 @@ class ScreenRegisterViewController: UIViewController {
     @IBOutlet weak var label:UILabel!
     @IBOutlet weak var selectStatusButton: UIButton!
     @IBOutlet weak var selectGenderButton:UIButton!
+    @IBOutlet weak var switchButton: UISwitch!
     let datePicker = UIDatePicker()
     var checkboxFlag = false
     private var viewModelScreenRegister:ViewModelScreenRegister = ViewModelScreenRegister()
@@ -31,6 +36,7 @@ class ScreenRegisterViewController: UIViewController {
         self.configTextField()
         self.createDatePicker()
         self.registerButton.isEnabled = false
+        self.tappedSwitch(switchButton, button: checkBox)
     }
     
     func configTextField(){
@@ -144,6 +150,17 @@ class ScreenRegisterViewController: UIViewController {
     @IBAction func cpfValidate(_ sender: UITextField) {
         self.viewModelScreenRegister.validateCPF(textField: self.documentRegisterTextField, label: self.label)
     }
+    
+    @IBAction func tappedSwitch(_ sender: UISwitch, button:UIButton) {
+        func activateButton(){
+        if switchButton.isEnabled{
+            button.isHidden = true
+        }else{
+            button.isHidden = false
+            }
+        }
+    }
+    
 }
 extension ScreenRegisterViewController:UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {

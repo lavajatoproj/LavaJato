@@ -36,23 +36,19 @@ class ProfileEditViewController: UIViewController {
         self.alert = AlertController(controller: self)
     }
     
+    func saveUserDefaults(value: Any, key: String){
+        UserDefaults.standard.set(value, forKey: key)
+    }
+    
     func configTextField(){
         self.nameTextField.delegate = self
         self.numberTextField.delegate = self
         self.emailTextField.delegate = self
         self.dateTextField.delegate = self
-        self.nameTextField.layer.borderColor = UIColor.lightGray.cgColor
-        self.numberTextField.layer.borderColor = UIColor.lightGray.cgColor
-        self.emailTextField.layer.borderColor = UIColor.lightGray.cgColor
-        self.dateTextField.layer.borderColor = UIColor.lightGray.cgColor
-        self.nameTextField.layer.borderWidth = 2.0
-        self.numberTextField.layer.borderWidth = 2.0
-        self.emailTextField.layer.borderWidth = 2.0
-        self.dateTextField.layer.borderWidth = 2.0
-        self.nameTextField.layer.cornerRadius = 5.0
-        self.numberTextField.layer.cornerRadius = 5.0
-        self.emailTextField.layer.cornerRadius = 5.0
-        self.dateTextField.layer.cornerRadius = 5.0
+        self.viewModelEditProfile.textFieldStyle(textField: nameTextField)
+        self.viewModelEditProfile.textFieldStyle(textField: numberTextField)
+        self.viewModelEditProfile.textFieldStyle(textField: emailTextField)
+        self.viewModelEditProfile.textFieldStyle(textField: dateTextField)
     }
     
     func resetTextField(){
@@ -63,16 +59,25 @@ class ProfileEditViewController: UIViewController {
     }
     
     func setValueTextField(){
-        self.nameTextField.placeholder = nameTextField.text
-        self.numberTextField.placeholder = numberTextField.text
-        self.emailTextField.placeholder = emailTextField.text
-        self.dateTextField.placeholder = dateTextField.text
-        self.nameLabel.text = nameTextField.text
+        //        self.nameTextField.placeholder = nameTextField.text
+        //        self.numberTextField.placeholder = numberTextField.text
+        //        self.emailTextField.placeholder = emailTextField.text
+        //        self.dateTextField.placeholder = dateTextField.text
+        //        self.nameLabel.text = nameTextField.text
         self.saveButton.isEnabled = false
+        self.nameTextField.placeholder = self.getUserDefaults(key: "userName")as? String
+        self.numberTextField.placeholder = self.getUserDefaults(key: "userPhone")as? String
+        self.emailTextField.placeholder = self.getUserDefaults(key: "userEmail")as? String
+        self.dateTextField.placeholder = self.getUserDefaults(key: "userBirthday")as? String
+        self.nameLabel.text = self.getUserDefaults(key: "userName")as? String
     }
     
     func configPhotoPicker(){
         self.imagePicker.delegate = self
+    }
+    
+    func getUserDefaults(key: String)-> Any?{
+        return UserDefaults.standard.object(forKey: key)
     }
     
     public func createDatePicker(){
@@ -101,6 +106,10 @@ class ProfileEditViewController: UIViewController {
         self.alert?.showAlert(title: "Concluido", message: "Suas alterações foram salvas", titleButton: "Confirmar", completion: { value in
             self.resetTextField()
         })
+        self.saveUserDefaults(value: self.nameTextField.text ?? "", key: "userName")
+        self.saveUserDefaults(value: self.numberTextField.text ?? "", key: "userPhone")
+        self.saveUserDefaults(value: self.emailTextField.text ?? "", key: "userEmail")
+        self.saveUserDefaults(value: self.dateTextField.text ?? "", key: "userBirthday")
         self.setValueTextField()
     }
     
@@ -215,3 +224,10 @@ extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigatio
         dismiss(animated: true, completion: nil)
     }
 }
+//extension ProfileEditViewController:ScreenRegisterControllerDelegate{
+//    func refreshData() {
+//        
+//    }
+//    
+//    
+//}
