@@ -34,8 +34,6 @@
 		A212221F27D13EE500B24208 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212221D27D13EE500B24208 /* MyCustomCell.swift */; };
 		A212222027D13EE500B24208 /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A212221E27D13EE500B24208 /* MyCustomCell.xib */; };
 		A21A38D0282C53FD0013D3B6 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A38CF282C53FD0013D3B6 /* Users.swift */; };
-		A284A53B282C832000D4241C /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284A53A282C832000D4241C /* ListViewModel.swift */; };
-		A284A53E282C881600D4241C /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284A53D282C881600D4241C /* HistoryService.swift */; };
 		A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F799CC27DC6A49005A53A3 /* CustomRowTableViewCell.swift */; };
 		A2F799CF27DC6A49005A53A3 /* CustomRowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F799CD27DC6A49005A53A3 /* CustomRowTableViewCell.xib */; };
 		A2F799D827DC6CC8005A53A3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F799D727DC6CC8005A53A3 /* Model.swift */; };
@@ -110,8 +108,6 @@
 		A212221D27D13EE500B24208 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
 		A212221E27D13EE500B24208 /* MyCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
 		A21A38CF282C53FD0013D3B6 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
-		A284A53A282C832000D4241C /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
-		A284A53D282C881600D4241C /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
 		A2F799CC27DC6A49005A53A3 /* CustomRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRowTableViewCell.swift; sourceTree = "<group>"; };
 		A2F799CD27DC6A49005A53A3 /* CustomRowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomRowTableViewCell.xib; sourceTree = "<group>"; };
 		A2F799D727DC6CC8005A53A3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -364,9 +360,8 @@
 		A212220D27D13DA200B24208 /* ListOfProfessionals */ = {
 			isa = PBXGroup;
 			children = (
-				A284A53F282C8D9A00D4241C /* ViewModel */,
-				A212221A27D13EB000B24208 /* listOfProfessionalsViewController.swift */,
 				A212221827D13E9700B24208 /* listOfProfessionals.storyboard */,
+				A212221A27D13EB000B24208 /* listOfProfessionalsViewController.swift */,
 				A212221C27D13EB500B24208 /* cellList */,
 			);
 			path = ListOfProfessionals;
@@ -399,22 +394,6 @@
 				A212221E27D13EE500B24208 /* MyCustomCell.xib */,
 			);
 			path = cellList;
-			sourceTree = "<group>";
-		};
-		A284A53C282C87A200D4241C /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				A284A53D282C881600D4241C /* HistoryService.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		A284A53F282C8D9A00D4241C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				A284A53A282C832000D4241C /* ListViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A2F799CB27DC6A1D005A53A3 /* Cell */ = {
@@ -697,7 +676,6 @@
 		E162E07527ADF53E00C6AD32 /* Lava Jato */ = {
 			isa = PBXGroup;
 			children = (
-				A284A53C282C87A200D4241C /* Network */,
 				44177A3D2828863900496587 /* Model */,
 				E13E5B2A27D6F59C000CB644 /* Extensions */,
 				443BAE8D27BF454800751C16 /* Features */,
@@ -885,7 +863,6 @@
 			files = (
 				E15CA72027D56A2E002355B9 /* MapsViewController.swift in Sources */,
 				DA23ECCB2828BA5500C9E4FD /* ViewModelScreenRegister.swift in Sources */,
-				A284A53E282C881600D4241C /* HistoryService.swift in Sources */,
 				E162E07B27ADF53E00C6AD32 /* ViewController.swift in Sources */,
 				DA9954C927DF899600C89D76 /* NotificationTableViewCell.swift in Sources */,
 				44FA259E28177CB7006C1CFB /* ServicesCollectionViewCell.swift in Sources */,
@@ -919,7 +896,6 @@
 				E18703DA27E9210A005B3AA9 /* MainScreen.swift in Sources */,
 				A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */,
 				DA9954D027DF8A8100C89D76 /* NotificationViewController.swift in Sources */,
-				A284A53B282C832000D4241C /* ListViewModel.swift in Sources */,
 				A2F799D827DC6CC8005A53A3 /* Model.swift in Sources */,
 				A212221327D13E5300B24208 /* requestServiceViewController.swift in Sources */,
 				E10CB59427B7218100D49C01 /* resetPasswordViewController.swift in Sources */,

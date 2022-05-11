@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Person
-struct Users: Codable {
+struct Person: Codable {
     var totalValue: Double?
     var registerUsers: [RegisterUser]?
 }
