@@ -39,6 +39,7 @@ class HelpScreenViewController: UIViewController {
             }
         }
     }
+    
     @IBAction func btEmail(_ sender: Any) {
         let email = "breendonpsn@gmail.com"
         if let url = URL(string: "mailto:\(email)") {
@@ -54,5 +55,4 @@ class HelpScreenViewController: UIViewController {
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
     }
-
 }

@@ -13,14 +13,11 @@ class cellTableViewCell: UITableViewCell {
     @IBOutlet weak var back2View: UIView!
     @IBOutlet weak var arrowImageView: UIImageView!
     
-    
-    
     static let identifier:String = "cellTableViewCell"
     
     static func nib() -> UINib{
         return UINib(nibName: self.identifier, bundle: nil)
     }
-
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,5 +28,4 @@ class cellTableViewCell: UITableViewCell {
         self.productLabel.text = product
         
     }
-    
 }

@@ -51,7 +51,5 @@ class ChangePasswordViewController: UIViewController {
         
         btChangePassword.layer.cornerRadius = btChangePassword.bounds.size.height / 2
         btChangePassword.layer.masksToBounds = true
-        
     }
-    
 }

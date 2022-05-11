@@ -21,10 +21,7 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
-       
     }
-    
-    
     
     @IBAction func showResetPassword(_ sender: Any) {
         self.performSegue(withIdentifier: "RecuperarSenha", sender: nil)
@@ -38,22 +35,17 @@ class ViewController: UIViewController{
         self.performSegue(withIdentifier: "screenRegisterSegue", sender: nil)
     }
     
-    
     @IBAction func btGoogle(_ sender: Any) {
         let signInConfig = GIDConfiguration.init(clientID: "152072972170-kofmt4judceejf77qocrujucbs98s2m4.apps.googleusercontent.com")
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in guard error == nil else { return }
             self.performSegue(withIdentifier: "telaPrincipalsegue", sender: nil)
         }
-        
     }
-    
     
     @IBAction func btFaceLogin(_ sender: Any) {
         
        
     }
-    
-    
     
     func setupLayout(){
         
@@ -102,7 +94,5 @@ class ViewController: UIViewController{
         btRegister.layer.masksToBounds = true
         btRegister.layer.borderColor = UIColor.white.cgColor
         btRegister.layer.borderWidth = 2
-        
-        
     }
 }

@@ -281,10 +281,10 @@
 				E13E5B2327D5ACF7000CB644 /* EditProfile */,
 				E13E5B2227D5ACDE000CB644 /* HelpScreen */,
 				E13E5B2127D5ACC7000CB644 /* ScreenRegister */,
-				E15CA71427D52C3B002355B9 /* TelaLogin */,
+				E15CA71427D52C3B002355B9 /* Login */,
 				E15CA71A27D53348002355B9 /* Maps */,
-				E13E5B1C27D595FF000CB644 /* TelaDeError */,
-				E15CA71727D52F02002355B9 /* RecuperarSenha */,
+				E13E5B1C27D595FF000CB644 /* ErrorConection */,
+				E15CA71727D52F02002355B9 /* resetPassword */,
 				A212220F27D13E0100B24208 /* RequestService */,
 				A212220E27D13DB400B24208 /* MyServices */,
 				A212220D27D13DA200B24208 /* ListOfProfessionals */,
@@ -619,13 +619,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		E13E5B1C27D595FF000CB644 /* TelaDeError */ = {
+		E13E5B1C27D595FF000CB644 /* ErrorConection */ = {
 			isa = PBXGroup;
 			children = (
-				E13E5B1F27D5965B000CB644 /* ErrorConection.storyboard */,
-				E13E5B1D27D59644000CB644 /* ErrorConectionViewController.swift */,
+				E1A5ACA5282C596E002B07CA /* View */,
+				E1A5ACA4282C5964002B07CA /* ViewModel */,
+				E1A5ACA3282C5959002B07CA /* Controller */,
 			);
-			path = TelaDeError;
+			path = ErrorConection;
 			sourceTree = "<group>";
 		};
 		E13E5B2127D5ACC7000CB644 /* ScreenRegister */ = {
@@ -691,29 +692,32 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
-		E15CA71427D52C3B002355B9 /* TelaLogin */ = {
+		E15CA71427D52C3B002355B9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				E15CA71527D52E5B002355B9 /* Login.storyboard */,
-				E162E07A27ADF53E00C6AD32 /* ViewController.swift */,
+				E1A5AC9F282C58E5002B07CA /* ViewModel */,
+				E1A5AC9E282C58D3002B07CA /* Controller */,
+				E1A5AC9D282C58C6002B07CA /* View */,
 			);
-			path = TelaLogin;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		E15CA71727D52F02002355B9 /* RecuperarSenha */ = {
+		E15CA71727D52F02002355B9 /* resetPassword */ = {
 			isa = PBXGroup;
 			children = (
-				E15CA71827D52F1D002355B9 /* RecuperarSenha.storyboard */,
-				E10CB59327B7218100D49C01 /* resetPasswordViewController.swift */,
+				E1A5ACA8282C59A3002B07CA /* View */,
+				E1A5ACA7282C5999002B07CA /* ViewModel */,
+				E1A5ACA6282C5990002B07CA /* Controller */,
 			);
-			path = RecuperarSenha;
+			path = resetPassword;
 			sourceTree = "<group>";
 		};
 		E15CA71A27D53348002355B9 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				E15CA71B27D53366002355B9 /* Maps.storyboard */,
-				E15CA71F27D56A2E002355B9 /* MapsViewController.swift */,
+				E1A5ACA2282C593C002B07CA /* View */,
+				E1A5ACA1282C5930002B07CA /* ViewModel */,
+				E1A5ACA0282C5926002B07CA /* Controller */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -758,10 +762,126 @@
 		E18703DB27E94DE7005B3AA9 /* ChangePassword */ = {
 			isa = PBXGroup;
 			children = (
-				E18703DC27E94E39005B3AA9 /* ChangePasswordViewController.swift */,
-				E18703DE27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard */,
+				E1A5ACAB282C59E1002B07CA /* View */,
+				E1A5ACAA282C59D6002B07CA /* ViewModel */,
+				E1A5ACA9282C59CC002B07CA /* Controller */,
 			);
 			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		E1A5AC9D282C58C6002B07CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E15CA71527D52E5B002355B9 /* Login.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1A5AC9E282C58D3002B07CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E162E07A27ADF53E00C6AD32 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1A5AC9F282C58E5002B07CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1A5ACA0282C5926002B07CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E15CA71F27D56A2E002355B9 /* MapsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1A5ACA1282C5930002B07CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1A5ACA2282C593C002B07CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E15CA71B27D53366002355B9 /* Maps.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1A5ACA3282C5959002B07CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E13E5B1D27D59644000CB644 /* ErrorConectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1A5ACA4282C5964002B07CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1A5ACA5282C596E002B07CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E13E5B1F27D5965B000CB644 /* ErrorConection.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1A5ACA6282C5990002B07CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E10CB59327B7218100D49C01 /* resetPasswordViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1A5ACA7282C5999002B07CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1A5ACA8282C59A3002B07CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E15CA71827D52F1D002355B9 /* RecuperarSenha.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1A5ACA9282C59CC002B07CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E18703DC27E94E39005B3AA9 /* ChangePasswordViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1A5ACAA282C59D6002B07CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E1A5ACAB282C59E1002B07CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E18703DE27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

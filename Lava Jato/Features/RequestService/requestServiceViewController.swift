@@ -24,9 +24,15 @@ class requestServiceViewController: UIViewController {
     
     var viewModel:RequestViewModel = RequestViewModel()
     
+<<<<<<< HEAD
     private var alert:AlertController?
     
     func configInitials(){
+=======
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+>>>>>>> 11c9f68 (code organization)
         self.EndButton.layer.cornerRadius = 10
         self.valueLabel.text = "-"
         self.serviceLabel.text = "-"
@@ -55,7 +61,6 @@ class requestServiceViewController: UIViewController {
             }
         })
     }
-    
     
     private func configTableView(){
         self.tableView.delegate = self
@@ -106,7 +111,6 @@ extension requestServiceViewController: UITableViewDelegate, UITableViewDataSour
             
             return cell ?? UITableViewCell()
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -128,10 +132,13 @@ extension requestServiceViewController: UITableViewDelegate, UITableViewDataSour
         if indexPath.section == 0{
             self.serviceLabel.text = self.viewModel.listServices[indexPath.section].service[indexPath.row]
         }
+<<<<<<< HEAD
         
         if indexPath.section == 0 && indexPath.row != 0{
             self.valueLabel.text = self.viewModel.listServices[indexPath.section].price[indexPath.row]
         }
+=======
+>>>>>>> 11c9f68 (code organization)
     }
 }
 

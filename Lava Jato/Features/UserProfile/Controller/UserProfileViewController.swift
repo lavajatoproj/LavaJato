@@ -9,7 +9,6 @@ import UIKit
 
 class UserProfileViewController: UIViewController {
     
-
     @IBOutlet weak var tappedMuteSwitch: UISwitch!
     @IBOutlet weak var muteImageView: UIImageView!
     @IBOutlet weak var tappedMyServiceButton: UIButton!
@@ -17,7 +16,6 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var tappedRecomendButton: UIButton!
     @IBOutlet weak var tappedLogoutButton: UIButton!
     @IBOutlet weak var notificationButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +69,4 @@ class UserProfileViewController: UIViewController {
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
     }
-    
-   
 }
