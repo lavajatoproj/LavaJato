@@ -178,7 +178,6 @@
         <scene sceneID="Zf5-r1-LEP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1H9-Z1-aIq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="buttom_car" id="dm9-nd-NZp"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="atY-kE-Y5y">
@@ -201,7 +200,6 @@
     </scenes>
     <resources>
         <image name="background" width="440" height="926"/>
-        <image name="buttom_car" width="35" height="35"/>
         <image name="foto_de_perfil" width="185" height="176"/>
         <image name="location" catalog="system" width="128" height="118"/>
         <namedColor name="ColorDefault">
