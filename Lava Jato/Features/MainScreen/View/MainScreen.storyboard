@@ -80,10 +80,10 @@
         <!--listOfProfessionals-->
         <scene sceneID="cyC-Sx-dHM">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GwA-8R-wlj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="listOfProfessionals" id="P9Y-ZF-Gc8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="j3e-xl-nAB"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GwA-8R-wlj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4047" y="-101"/>
         </scene>
