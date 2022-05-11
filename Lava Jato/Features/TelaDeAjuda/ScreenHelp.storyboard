@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eE9-TG-Yrr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ajuda-->
+        <scene sceneID="uRy-nh-5eQ">
+            <objects>
+                <viewController storyboardIdentifier="ScreenHelp" id="eE9-TG-Yrr" customClass="HelpViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gXh-ZU-83t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="MEe-cX-oWV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UiO-Gd-rk1">
+                                <rect key="frame" x="10" y="64" width="394" height="749"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como podemos ajudar?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nrb-KI-oUf">
+                                <rect key="frame" x="0.0" y="94" width="414" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entre em contato conosco!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xv-B3-Wsp">
+                                <rect key="frame" x="0.0" y="135" width="414" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZE2-2d-dpx">
+                                <rect key="frame" x="20" y="210" width="250" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="fo5-jo-Qjo"/>
+                                    <constraint firstAttribute="height" constant="67" id="sHf-X9-kcF"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" titleAlignment="center">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="WhatsApp">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Arial-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonWhats:" destination="eE9-TG-Yrr" eventType="touchUpInside" id="bwY-S5-3QB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IS-W7-wth">
+                                <rect key="frame" x="20" y="287" width="194" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="2Ef-Cq-Uhg"/>
+                                    <constraint firstAttribute="width" constant="194" id="hUy-QX-Cef"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" titleAlignment="center">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Email">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Arial-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btEmail:" destination="eE9-TG-Yrr" eventType="touchUpInside" id="9M5-9F-fBl"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp_image" translatesAutoresizingMaskIntoConstraints="NO" id="lA1-Xn-xFt">
+                                <rect key="frame" x="30" y="218.5" width="50" height="50"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8vQ-2U-cdy"/>
+                                    <constraint firstAttribute="width" constant="50" id="bv8-qM-ws1"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="Ooj-Oe-rtf">
+                                <rect key="frame" x="30" y="295.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ivb-Sg-k3o"/>
+                                    <constraint firstAttribute="width" constant="50" id="pxs-XW-aY8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="v90-SG-0n6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6xv-B3-Wsp" firstAttribute="top" secondItem="Nrb-KI-oUf" secondAttribute="bottom" constant="5" id="0D0-bN-0La"/>
+                            <constraint firstItem="ZE2-2d-dpx" firstAttribute="top" secondItem="6xv-B3-Wsp" secondAttribute="bottom" constant="48.5" id="B0i-6K-rr6"/>
+                            <constraint firstItem="UiO-Gd-rk1" firstAttribute="top" secondItem="v90-SG-0n6" secondAttribute="top" constant="20" id="BEm-E6-Vnb"/>
+                            <constraint firstItem="v90-SG-0n6" firstAttribute="bottom" secondItem="UiO-Gd-rk1" secondAttribute="bottom" id="CN5-QQ-cme"/>
+                            <constraint firstItem="ZE2-2d-dpx" firstAttribute="leading" secondItem="v90-SG-0n6" secondAttribute="leading" constant="20" id="HQg-4Z-UWV"/>
+                            <constraint firstItem="lA1-Xn-xFt" firstAttribute="centerY" secondItem="ZE2-2d-dpx" secondAttribute="centerY" id="I0d-52-hHV"/>
+                            <constraint firstItem="6xv-B3-Wsp" firstAttribute="trailing" secondItem="v90-SG-0n6" secondAttribute="trailing" id="IaZ-ru-gjn"/>
+                            <constraint firstItem="6xv-B3-Wsp" firstAttribute="leading" secondItem="v90-SG-0n6" secondAttribute="leading" id="LTm-sQ-XoY"/>
+                            <constraint firstAttribute="bottom" secondItem="MEe-cX-oWV" secondAttribute="bottom" id="Lfy-ip-DSH"/>
+                            <constraint firstItem="v90-SG-0n6" firstAttribute="trailing" secondItem="UiO-Gd-rk1" secondAttribute="trailing" constant="10" id="Mgl-Pj-tOw"/>
+                            <constraint firstItem="Ooj-Oe-rtf" firstAttribute="leading" secondItem="v90-SG-0n6" secondAttribute="leading" constant="30" id="O9N-De-mNs"/>
+                            <constraint firstItem="Nrb-KI-oUf" firstAttribute="trailing" secondItem="v90-SG-0n6" secondAttribute="trailing" id="RrA-tA-EhQ"/>
+                            <constraint firstItem="MEe-cX-oWV" firstAttribute="top" secondItem="gXh-ZU-83t" secondAttribute="top" id="Zpe-XX-r6p"/>
+                            <constraint firstItem="7IS-W7-wth" firstAttribute="top" secondItem="ZE2-2d-dpx" secondAttribute="bottom" constant="10" id="bFq-MX-Tht"/>
+                            <constraint firstItem="MEe-cX-oWV" firstAttribute="trailing" secondItem="v90-SG-0n6" secondAttribute="trailing" id="ftV-L4-W8d"/>
+                            <constraint firstItem="Ooj-Oe-rtf" firstAttribute="centerY" secondItem="7IS-W7-wth" secondAttribute="centerY" id="jGJ-hE-ING"/>
+                            <constraint firstItem="Nrb-KI-oUf" firstAttribute="top" secondItem="v90-SG-0n6" secondAttribute="top" constant="50" id="oQz-pN-Bab"/>
+                            <constraint firstItem="MEe-cX-oWV" firstAttribute="leading" secondItem="v90-SG-0n6" secondAttribute="leading" id="qvP-0g-nbx"/>
+                            <constraint firstItem="lA1-Xn-xFt" firstAttribute="leading" secondItem="v90-SG-0n6" secondAttribute="leading" constant="30" id="spV-sI-74t"/>
+                            <constraint firstItem="Nrb-KI-oUf" firstAttribute="leading" secondItem="v90-SG-0n6" secondAttribute="leading" id="t5f-aS-Q44"/>
+                            <constraint firstItem="7IS-W7-wth" firstAttribute="leading" secondItem="v90-SG-0n6" secondAttribute="leading" constant="20" id="t5q-V0-sz0"/>
+                            <constraint firstItem="UiO-Gd-rk1" firstAttribute="leading" secondItem="v90-SG-0n6" secondAttribute="leading" constant="10" id="zz9-Dv-dZt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ajuda" id="IYt-IA-znM"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="UiO-Gd-rk1" id="tPe-Tp-SUu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0h-lU-fIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="931.88405797101461" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image-2" width="50" height="50"/>
+        <image name="background" width="440" height="926"/>
+        <image name="whatsapp_image" width="50" height="50"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

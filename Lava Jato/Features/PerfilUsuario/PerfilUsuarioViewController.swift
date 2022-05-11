@@ -2,7 +2,7 @@
 //  PerfilUsuarioViewController.swift
 //  Lava Jato
 //
-//  Created by Thiago Valentim on 07/03/22.
+//  Created by Olimpio Junior on 07/03/22.
 //
 
 import UIKit
@@ -19,7 +19,8 @@ class PerfilUsuarioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.Style()
+        Style()
+//        configGesture()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,8 +38,8 @@ class PerfilUsuarioViewController: UIViewController {
     }
     
     @IBAction func tappedHelpButton(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "HelpScreenViewController", bundle: nil)
-        let vC = storyboard.instantiateViewController(withIdentifier: "HelpScreenViewController")
+        let storyboard = UIStoryboard(name: "ScreenHelp", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "ScreenHelp")
         navigationController?.pushViewController(vC, animated: true)
     }
     
@@ -52,14 +53,14 @@ class PerfilUsuarioViewController: UIViewController {
     }
     
     @IBAction func tappedEditProfile(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "ProfileEditViewController", bundle: nil)
-        let vC = storyboard.instantiateViewController(withIdentifier: "ProfileEditViewController")
+        let storyboard = UIStoryboard(name: "ProfileEdit", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "ProfileEdit")
         navigationController?.pushViewController(vC, animated: true)
     }
     
     @IBAction func tappedNotification(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "NotificationViewController", bundle: nil)
-        let vC = storyboard.instantiateViewController(withIdentifier: "NotificationViewController")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "Main")
         navigationController?.pushViewController(vC, animated: true)
     }
     
@@ -69,4 +70,21 @@ class PerfilUsuarioViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAtributes
         
     }
+
+    // método para configurar o Gesture
+//    func configGesture(view: UIView){
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(PerfilUsuarioViewController.handlePan(sender:)))
+////        self.myServiceView.addGestureRecognizer(tap)
+//    }
+//
+//    @objc func handlePan(sender:UITapGestureRecognizer){
+//
+//    }
+    
+    
+//    @objc func tapGesture( sender:UITapGestureRecognizer){
+//        print ("View foi selecionada.")
+//    }
+    
+    
 }

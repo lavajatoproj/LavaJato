@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--NotificationViewController-->
+        <!--Main-->
         <scene sceneID="svM-c8-WAZ">
             <objects>
-                <viewControllerPlaceholder storyboardName="NotificationViewController" id="BOT-9x-kaN" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Main" id="BOT-9x-kaN" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="JGz-yg-QBU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmS-bZ-5AY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -413,10 +413,10 @@
             </objects>
             <point key="canvasLocation" x="3772.4637681159425" y="116.51785714285714"/>
         </scene>
-        <!--ProfileEditViewController-->
+        <!--ProfileEdit-->
         <scene sceneID="iRf-dT-TqG">
             <objects>
-                <viewControllerPlaceholder storyboardName="ProfileEditViewController" id="A9D-wy-DN1" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ProfileEdit" id="A9D-wy-DN1" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="vGf-Uy-Ue8"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iim-db-AXd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -433,10 +433,10 @@
             </objects>
             <point key="canvasLocation" x="4458" y="173"/>
         </scene>
-        <!--HelpScreenViewController-->
+        <!--ScreenHelp-->
         <scene sceneID="lIV-ut-cB9">
             <objects>
-                <viewControllerPlaceholder storyboardName="HelpScreenViewController" id="59H-Fn-VK9" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ScreenHelp" id="59H-Fn-VK9" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="MaV-zE-2y4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRz-2a-U4w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
