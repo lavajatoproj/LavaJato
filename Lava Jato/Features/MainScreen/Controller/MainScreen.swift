@@ -12,7 +12,6 @@ class MainScreen: UIViewController {
     
     @IBOutlet weak var cvCollectionView: UICollectionView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.settingCV()
@@ -34,9 +33,7 @@ class MainScreen: UIViewController {
 }
 
 // MARK: Extension
-extension MainScreen:UICollectionViewDelegate{
-}
-
+extension MainScreen:UICollectionViewDelegate{}
 extension MainScreen:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return service.count
@@ -45,7 +42,6 @@ extension MainScreen:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ServicesCollectionViewCell.identifier, for:indexPath) as? ServicesCollectionViewCell
         cell?.setup(with: service[indexPath.row])
-        //        cell?.desingMyCell()
         return cell ?? UICollectionViewCell()
     }
     

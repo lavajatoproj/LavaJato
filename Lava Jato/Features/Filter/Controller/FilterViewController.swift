@@ -25,6 +25,7 @@ class FilterViewController: UIViewController{
         super.viewDidLoad()
         self.settingsTView()
         self.viewModel.callFunc()
+        self.navigationController?.navigationBar.tintColor = UIColor.ColorDefault
     }
     
     @IBAction func tappedCallMaps(_ sender: UIButton) {
@@ -37,6 +38,7 @@ class FilterViewController: UIViewController{
         self.tViewTableView.dataSource = self
         self.tViewTableView.register(GenderTableViewCell.nib(), forCellReuseIdentifier: GenderTableViewCell.identifier)
         self.tViewTableView.register(PriceTableViewCell.nib(), forCellReuseIdentifier: PriceTableViewCell.identifier)
+      
     }
     
 }

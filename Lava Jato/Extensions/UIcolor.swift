@@ -8,5 +8,7 @@
 import UIKit
 
 extension UIColor {
-    static let ColorDefault: UIColor = UIColor.ColorDefault
+    static var ColorDefault: UIColor {
+        return UIColor(red:0.957, green:0.737 ,blue:0.200 , alpha:1.00)
+    }
 }
