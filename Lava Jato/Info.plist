@@ -32,10 +32,10 @@
 			</array>
 		</dict>
 	</dict>
-    <key>LSApplicationQueriesSchemes</key>
-     <array>
-        <string>whatsapp</string>
-        <string>email</string>
-     </array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>whatsapp</string>
+		<string>email</string>
+	</array>
 </dict>
 </plist>
