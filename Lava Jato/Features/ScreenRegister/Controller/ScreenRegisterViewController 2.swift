@@ -152,13 +152,13 @@ class ScreenRegisterViewController: UIViewController {
     }
     
     @IBAction func tappedSwitch(_ sender: UISwitch, button:UIButton) {
-//        func activateButton(){
-//        if switchButton.isEnabled{
-//            button.isHidden = true
-//        }else{
-//            button.isHidden = false
-//            }
-//        }
+        func activateButton(){
+        if switchButton.isEnabled{
+            button.isHidden = true
+        }else{
+            button.isHidden = false
+            }
+        }
     }
     
 }
