@@ -1,141 +1,138 @@
 {
-    "totalValue": 3566.10,
+    "totalValue": 1239.10,
     "registerUsers": [
         {
             "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
             "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com"
+            "mail": "gustavo@dominio.com",
             "date": "2020-11-24T00:00:00.000",
             "telephoneNumber": "31999203045",
             "gender": "men",
-            "birthDate: "1978-11-24T00:00:00.000",
-            "cpf": "02378623477"
-            "maritalStatus": "married"
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
             "iconImage": "url-image-mooca"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6322",
             "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com"
+            "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
             "telephoneNumber": "31999203045",
             "gender": "men",
-            "birthDate: "1978-11-24T00:00:00.000",
-            "cpf": "02378623477"
-            "maritalStatus": "married"
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
             "iconImage": "url-image-mooca"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6323",
             "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com"
+            "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
             "telephoneNumber": "31999203045",
             "gender": "men",
-            "birthDate: "1978-11-24T00:00:00.000",
-            "cpf": "02378623477"
-            "maritalStatus": "married"
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
             "iconImage": "url-image-mooca"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6324",
             "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com"
+            "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
             "telephoneNumber": "31999203045",
             "gender": "men",
-            "birthDate: "1978-11-24T00:00:00.000",
-            "cpf": "02378623477"
-            "maritalStatus": "married"
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
             "iconImage": "url-image-mooca"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6325",
             "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com"
+            "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
             "telephoneNumber": "31999203045",
             "gender": "men",
-            "birthDate: "1978-11-24T00:00:00.000",
-            "cpf": "02378623477"
-            "maritalStatus": "married"
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
             "iconImage": "url-image-mooca"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6326",
             "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com"
+            "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
             "telephoneNumber": "31999203045",
             "gender": "men",
-            "birthDate: "1978-11-24T00:00:00.000",
-            "cpf": "02378623477"
-            "maritalStatus": "married"
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
             "iconImage": "url-image-mooca"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6327",
             "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com"
+            "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
             "telephoneNumber": "31999203045",
             "gender": "men",
-            "birthDate: "1978-11-24T00:00:00.000",
-            "cpf": "02378623477"
-            "maritalStatus": "married"
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
             "iconImage": "url-image-mooca"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6328",
             "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com"
+            "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
             "telephoneNumber": "31999203045",
             "gender": "men",
-            "birthDate: "1978-11-24T00:00:00.000",
-            "cpf": "02378623477"
-            "maritalStatus": "married"
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
             "iconImage": "url-image-mooca"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6329",
             "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com"
+            "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
             "telephoneNumber": "31999203045",
             "gender": "men",
-            "birthDate: "1978-11-24T00:00:00.000",
-            "cpf": "02378623477"
-            "maritalStatus": "married"
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
             "iconImage": "url-image-mooca"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6330",
             "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com"
+            "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
             "telephoneNumber": "31999203045",
             "gender": "men",
-            "birthDate: "1978-11-24T00:00:00.000",
-            "cpf": "02378623477"
-            "maritalStatus": "married"
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
             "iconImage": "url-image-mooca"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6331",
             "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com"
+            "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
             "telephoneNumber": "31999203045",
             "gender": "men",
-            "birthDate: "1978-11-24T00:00:00.000",
-            "cpf": "02378623477"
-            "maritalStatus": "married"
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
             "iconImage": "url-image-mooca"
-        },
-        "serviceProvider": [
-        {   ""
+        }
         
-        
-        ]
+    ]
 }

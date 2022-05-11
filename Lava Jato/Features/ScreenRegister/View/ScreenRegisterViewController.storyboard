@@ -220,9 +220,6 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vtj-wm-gZX">
                                         <rect key="frame" x="32" y="562" width="51" height="31"/>
                                         <color key="onTintColor" systemColor="tintColor"/>
-                                        <connections>
-                                            <action selector="tappedSwitch:" destination="pME-Od-2HJ" eventType="valueChanged" id="mKq-xz-8Oy"/>
-                                        </connections>
                                     </switch>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4A6-8y-swd">
                                         <rect key="frame" x="36" y="603.5" width="20" height="20"/>
