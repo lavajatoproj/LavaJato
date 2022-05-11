@@ -56,7 +56,7 @@
                                     <color key="baseBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonWhats:" destination="eE9-TG-Yrr" eventType="touchUpInside" id="C08-Yc-YGu"/>
+                                    <action selector="buttonWhats:" destination="eE9-TG-Yrr" eventType="touchUpInside" id="Fdr-JD-Ola"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IS-W7-wth">
@@ -79,11 +79,8 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="btEmail:" destination="eE9-TG-Yrr" eventType="touchUpInside" id="CpX-5H-qD3"/>
-                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsapp_image" translatesAutoresizingMaskIntoConstraints="NO" id="lA1-Xn-xFt">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhatsApp Image 2022-05-10 at 5.55.05 PM" translatesAutoresizingMaskIntoConstraints="NO" id="lA1-Xn-xFt">
                                 <rect key="frame" x="30" y="218.5" width="50" height="50"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -91,7 +88,7 @@
                                     <constraint firstAttribute="width" constant="50" id="bv8-qM-ws1"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-2" translatesAutoresizingMaskIntoConstraints="NO" id="Ooj-Oe-rtf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhatsApp Image 2022-05-10 at 5.55.25 PM" translatesAutoresizingMaskIntoConstraints="NO" id="Ooj-Oe-rtf">
                                 <rect key="frame" x="30" y="295.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Ivb-Sg-k3o"/>
@@ -138,9 +135,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image-2" width="50" height="50"/>
+        <image name="WhatsApp Image 2022-05-10 at 5.55.05 PM" width="332" height="328"/>
+        <image name="WhatsApp Image 2022-05-10 at 5.55.25 PM" width="463" height="462"/>
         <image name="background" width="440" height="926"/>
-        <image name="whatsapp_image" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

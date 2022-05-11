@@ -104,24 +104,8 @@
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRp-uu-ycp">
-                                        <rect key="frame" x="24.5" y="611" width="365" height="42"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="365" id="Gnb-KO-hOo"/>
-                                            <constraint firstAttribute="height" constant="42" id="mGc-7n-qGW"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Alterar Serviços">
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
-                                            <color key="baseForegroundColor" name="ColorDefault"/>
-                                            <color key="baseBackgroundColor" red="0.11157868059999999" green="0.2824388444" blue="0.61462736129999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="tappedChangeService:" destination="kqS-JS-xWW" eventType="touchUpInside" id="XwF-S8-KZz"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90K-Yo-nex">
-                                        <rect key="frame" x="24.5" y="673" width="365" height="42"/>
+                                        <rect key="frame" x="24.5" y="611" width="365" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="OJe-TT-ywP"/>
                                             <constraint firstAttribute="width" constant="365" id="tWz-tj-ycH"/>
@@ -163,15 +147,8 @@
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Service_logo" translatesAutoresizingMaskIntoConstraints="NO" id="4ch-21-qLH">
-                                        <rect key="frame" x="39" y="617" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="8lP-9Z-yFP"/>
-                                            <constraint firstAttribute="height" constant="30" id="XIa-9w-CHD"/>
-                                        </constraints>
-                                    </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Password_logo" translatesAutoresizingMaskIntoConstraints="NO" id="VMY-ts-YXS">
-                                        <rect key="frame" x="39" y="679" width="30" height="30"/>
+                                        <rect key="frame" x="39" y="617" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="Cql-uD-mjb"/>
                                             <constraint firstAttribute="height" constant="30" id="vZl-ky-0ge"/>
@@ -208,6 +185,29 @@
                                             <action selector="tappedEditPhoto:" destination="kqS-JS-xWW" eventType="touchUpInside" id="0gR-GT-2vh"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRp-uu-ycp">
+                                        <rect key="frame" x="24.5" y="673" width="365" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="365" id="Gnb-KO-hOo"/>
+                                            <constraint firstAttribute="height" constant="42" id="mGc-7n-qGW"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Alterar Serviços">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                                            <color key="baseForegroundColor" name="ColorDefault"/>
+                                            <color key="baseBackgroundColor" red="0.11157868059999999" green="0.2824388444" blue="0.61462736129999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tappedChangeService:" destination="kqS-JS-xWW" eventType="touchUpInside" id="XwF-S8-KZz"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Service_logo" translatesAutoresizingMaskIntoConstraints="NO" id="4ch-21-qLH">
+                                        <rect key="frame" x="39" y="679" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="8lP-9Z-yFP"/>
+                                            <constraint firstAttribute="height" constant="30" id="XIa-9w-CHD"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="yzj-xN-yfc" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="0KY-cr-Y71"/>
@@ -220,28 +220,27 @@
                                     <constraint firstItem="pD9-F4-b7P" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="KK8-eY-rPy"/>
                                     <constraint firstItem="bWN-3B-B3h" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="KgP-Xa-yrc"/>
                                     <constraint firstItem="wpg-XO-tLY" firstAttribute="top" secondItem="yzj-xN-yfc" secondAttribute="bottom" id="KlI-P8-Cjh"/>
-                                    <constraint firstItem="PRp-uu-ycp" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="Mlr-mv-ET7"/>
                                     <constraint firstItem="bWN-3B-B3h" firstAttribute="top" secondItem="pD9-F4-b7P" secondAttribute="bottom" id="Mve-Lg-xbl"/>
-                                    <constraint firstItem="PRp-uu-ycp" firstAttribute="top" secondItem="VhG-PR-Znm" secondAttribute="bottom" constant="40" id="PiJ-Aq-P7O"/>
                                     <constraint firstItem="4ch-21-qLH" firstAttribute="centerY" secondItem="PRp-uu-ycp" secondAttribute="centerY" id="RXY-Zm-Yvu"/>
                                     <constraint firstItem="pD9-F4-b7P" firstAttribute="top" secondItem="oek-BX-J4y" secondAttribute="top" constant="20" id="Tjt-8z-p0T"/>
                                     <constraint firstItem="wpg-XO-tLY" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="Um8-Pz-PVL"/>
                                     <constraint firstItem="90K-Yo-nex" firstAttribute="leading" secondItem="VMY-ts-YXS" secondAttribute="trailing" constant="-44.5" id="Vao-fb-yM9"/>
                                     <constraint firstItem="50M-AS-wCM" firstAttribute="top" secondItem="ICv-KT-P2U" secondAttribute="bottom" id="WeY-c2-zk0"/>
                                     <constraint firstItem="FCn-Tv-gaA" firstAttribute="top" secondItem="50M-AS-wCM" secondAttribute="bottom" constant="14" id="XY3-GM-X5a"/>
+                                    <constraint firstItem="PRp-uu-ycp" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="YQQ-5T-82f"/>
                                     <constraint firstItem="bcC-BQ-LTf" firstAttribute="top" secondItem="oek-BX-J4y" secondAttribute="top" constant="280" id="Zpd-fZ-lLT"/>
                                     <constraint firstItem="0YP-zH-ucB" firstAttribute="top" secondItem="VhG-PR-Znm" secondAttribute="bottom" constant="5" id="a3I-dA-BfJ"/>
-                                    <constraint firstItem="90K-Yo-nex" firstAttribute="top" secondItem="PRp-uu-ycp" secondAttribute="bottom" constant="20" id="aWg-1B-kUc"/>
                                     <constraint firstAttribute="bottom" secondItem="bcC-BQ-LTf" secondAttribute="bottom" constant="-125" id="bJY-oq-FNV"/>
+                                    <constraint firstItem="90K-Yo-nex" firstAttribute="top" secondItem="VhG-PR-Znm" secondAttribute="bottom" constant="40" id="cLB-Et-Ljr"/>
                                     <constraint firstItem="9IN-ES-rVe" firstAttribute="top" secondItem="bWN-3B-B3h" secondAttribute="bottom" constant="15" id="cgd-M8-yIV"/>
                                     <constraint firstItem="VMY-ts-YXS" firstAttribute="centerY" secondItem="90K-Yo-nex" secondAttribute="centerY" id="ddV-Up-qaB"/>
                                     <constraint firstItem="ICv-KT-P2U" firstAttribute="top" secondItem="wpg-XO-tLY" secondAttribute="bottom" constant="14" id="fu6-dn-CNm"/>
-                                    <constraint firstItem="90K-Yo-nex" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="kRN-xu-vdt"/>
                                     <constraint firstItem="Zf4-eB-7vG" firstAttribute="top" secondItem="Ius-If-pjX" secondAttribute="bottom" id="kYC-C7-eQ8"/>
                                     <constraint firstItem="Zf4-eB-7vG" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="leU-3q-yXl"/>
                                     <constraint firstItem="0YP-zH-ucB" firstAttribute="centerX" secondItem="VhG-PR-Znm" secondAttribute="centerX" id="lqw-1o-7A2"/>
                                     <constraint firstItem="ICv-KT-P2U" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="njM-g5-G9G"/>
                                     <constraint firstItem="bcC-BQ-LTf" firstAttribute="height" secondItem="oek-BX-J4y" secondAttribute="height" priority="550" constant="92" id="oVv-Ua-HBV"/>
+                                    <constraint firstItem="90K-Yo-nex" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="oVy-w3-7le"/>
                                     <constraint firstItem="Ius-If-pjX" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="pEf-Ok-EyX"/>
                                     <constraint firstItem="VhG-PR-Znm" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="rC5-gs-NY3"/>
                                     <constraint firstItem="50M-AS-wCM" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="rnq-F5-jiL"/>
@@ -250,6 +249,7 @@
                                     <constraint firstItem="FCn-Tv-gaA" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="tCW-LT-04v"/>
                                     <constraint firstItem="bcC-BQ-LTf" firstAttribute="leading" secondItem="oek-BX-J4y" secondAttribute="leading" id="uyK-25-Hbl"/>
                                     <constraint firstItem="VhG-PR-Znm" firstAttribute="top" secondItem="FCn-Tv-gaA" secondAttribute="bottom" id="x8M-fd-n2v"/>
+                                    <constraint firstItem="PRp-uu-ycp" firstAttribute="top" secondItem="90K-Yo-nex" secondAttribute="bottom" constant="20" id="ztn-kZ-6g7"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
