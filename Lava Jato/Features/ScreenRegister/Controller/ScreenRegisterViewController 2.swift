@@ -7,7 +7,7 @@
 
 import UIKit
 import CPF_CNPJ_Validator
-//import DropDown
+import DropDown
 
 //protocol ScreenRegisterControllerDelegate:AnyObject{
 //    func refreshData()
@@ -131,11 +131,11 @@ class ScreenRegisterViewController: UIViewController {
     }
     
     @IBAction func tappedSelectStatus(){
-//        self.viewModelScreenRegister.createDropDownStatus(button: selectStatusButton)
+        self.viewModelScreenRegister.createDropDownStatus(button: selectStatusButton)
     }
     
     @IBAction func tappedSelectGender(){
-//        self.viewModelScreenRegister.createDropDownGender(button: selectGenderButton)
+        self.viewModelScreenRegister.createDropDownGender(button: selectGenderButton)
     }
     
     @IBAction func phoneAct(_ sender: Any) {

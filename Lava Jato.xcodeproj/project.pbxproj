@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		2EA0FBA7AF94233EBB6451CF /* libPods-Lava Jato.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0EA5818F1E5F9862B73A09 /* libPods-Lava Jato.a */; };
+		2617F46CD0709E1E69A4BFED /* Pods_Lava_Jato.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777A9A27489E0DD46D49BC4C /* Pods_Lava_Jato.framework */; };
 		442DD11E27D05D0900C4F033 /* UserProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442DD11D27D05D0900C4F033 /* UserProfileViewController.storyboard */; };
 		443BAE9827BF4DE400751C16 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443BAE9727BF4DE400751C16 /* MainScreen.storyboard */; };
 		449EFAA727DE3AF4002111DE /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449EFAA627DE3AF3002111DE /* UserProfileViewController.swift */; };
@@ -81,7 +80,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F0EA5818F1E5F9862B73A09 /* libPods-Lava Jato.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lava Jato.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		442DD11D27D05D0900C4F033 /* UserProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfileViewController.storyboard; sourceTree = "<group>"; };
 		443BAE9727BF4DE400751C16 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 		449EFAA627DE3AF3002111DE /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +95,7 @@
 		44CB763327E941FD00A029FA /* FilterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FilterStoryboard.storyboard; sourceTree = "<group>"; };
 		44FA259C28177CB7006C1CFB /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		44FA259D28177CB7006C1CFB /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
+		777A9A27489E0DD46D49BC4C /* Pods_Lava_Jato.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lava_Jato.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20B841627DF051B00F29991 /* cellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellTableViewCell.swift; sourceTree = "<group>"; };
 		A20B841727DF051B00F29991 /* cellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellTableViewCell.xib; sourceTree = "<group>"; };
 		A212221027D13E3500B24208 /* requestService.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = requestService.storyboard; sourceTree = "<group>"; };
@@ -162,7 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35AD4EF13A4A92C98E0084E9 /* Pods_Lava_Jato.framework in Frameworks */,
+				2617F46CD0709E1E69A4BFED /* Pods_Lava_Jato.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +171,7 @@
 		3E1468BE42CD7941DC8DD7EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2AAD20EE500B465208334734 /* Pods_Lava_Jato.framework */,
+				777A9A27489E0DD46D49BC4C /* Pods_Lava_Jato.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -875,7 +874,6 @@
 				E13E5B2C27D6F5F1000CB644 /* UIcolor.swift in Sources */,
 				DA12C77A27D105BA00B6F080 /* ProfileEditViewController.swift in Sources */,
 				E18703DD27E94E39005B3AA9 /* ChangePasswordViewController.swift in Sources */,
-				DA99553B27E2CE8000C89D76 /* PopUpWindow.swift in Sources */,
 				44CB763227E941F700A029FA /* FilterViewController.swift in Sources */,
 				E13E5B1E27D59644000CB644 /* ErrorConectionViewController.swift in Sources */,
 				DA107B492828AFDA00F40F22 /* User.swift in Sources */,
@@ -884,13 +882,11 @@
 				449EFAA727DE3AF4002111DE /* UserProfileViewController.swift in Sources */,
 				DA9954C627DF895700C89D76 /* Profile.swift in Sources */,
 				DA107B432828AD5C00F40F22 /* ViewModelNotificationScreen.swift in Sources */,
-				44CB762E27E941D000A029FA /* ProfileBanner.swift in Sources */,
 				DAA80E64282AD575009A7D73 /* HelpScreenViewModel.swift in Sources */,
 				E162E07927ADF53E00C6AD32 /* SceneDelegate.swift in Sources */,
 				DAF0152C27C45B38009E55F6 /* HelpScreenViewController.swift in Sources */,
 				A212221727D13E7F00B24208 /* myServicesViewController.swift in Sources */,
 				44CB762327E941C200A029FA /* PriceTableViewCell.swift in Sources */,
-				44CB763027E941D000A029FA /* ProfileGenre.swift in Sources */,
 				DA107B3D2828ACD100F40F22 /* AlertController.swift in Sources */,
 				A212221F27D13EE500B24208 /* MyCustomCell.swift in Sources */,
 				E18703DA27E9210A005B3AA9 /* MainScreen.swift in Sources */,
