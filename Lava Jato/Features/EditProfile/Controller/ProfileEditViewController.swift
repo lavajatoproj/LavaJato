@@ -19,9 +19,7 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var profileImageView:UIImageView!
     @IBOutlet weak var editPhotoButton:UIButton!
-    
     private var viewModelEditProfile:ViewModelEditProfile = ViewModelEditProfile()
-    
     private var alert:AlertController?
     var imagePicker = UIImagePickerController()
     let datePicker = UIDatePicker()
@@ -38,6 +36,9 @@ class ProfileEditViewController: UIViewController {
     
     func saveUserDefaults(value: Any, key: String){
         UserDefaults.standard.set(value, forKey: key)
+    }
+    func getUserDefaults(key: String)-> Any?{
+    return UserDefaults.standard.object(forKey: key)
     }
     
     func configTextField(){
@@ -59,11 +60,6 @@ class ProfileEditViewController: UIViewController {
     }
     
     func setValueTextField(){
-        //        self.nameTextField.placeholder = nameTextField.text
-        //        self.numberTextField.placeholder = numberTextField.text
-        //        self.emailTextField.placeholder = emailTextField.text
-        //        self.dateTextField.placeholder = dateTextField.text
-        //        self.nameLabel.text = nameTextField.text
         self.saveButton.isEnabled = false
         self.nameTextField.placeholder = self.getUserDefaults(key: "userName")as? String
         self.numberTextField.placeholder = self.getUserDefaults(key: "userPhone")as? String
@@ -74,10 +70,6 @@ class ProfileEditViewController: UIViewController {
     
     func configPhotoPicker(){
         self.imagePicker.delegate = self
-    }
-    
-    func getUserDefaults(key: String)-> Any?{
-        return UserDefaults.standard.object(forKey: key)
     }
     
     public func createDatePicker(){
@@ -224,10 +216,3 @@ extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigatio
         dismiss(animated: true, completion: nil)
     }
 }
-//extension ProfileEditViewController:ScreenRegisterControllerDelegate{
-//    func refreshData() {
-//        
-//    }
-//    
-//    
-//}
