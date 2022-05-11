@@ -1,20 +1,86 @@
 {
-    "totalValue": 1239.10,
+    "totalValue": 3566.10,
     "registerUsers": [
         {
             "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
-            "name": "Gustavo Vitor",
-            "mail": "gustavo@dominio.com",
+            "name": "Claudio Mattos",
+            "email": "claudiom@gmail.com",
             "date": "2020-11-24T00:00:00.000",
             "telephoneNumber": "31999203045",
             "gender": "men",
             "birthDate": "1978-11-24T00:00:00.000",
             "cpf": "02378623477",
             "maritalStatus": "married",
-            "iconImage": "url-image-mooca"
+            "iconImage": "Claudio Mattos",
+            "note": "4.9"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6322",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "name": "Brendon Oliveira",
+            "email": "brendon@gmail.com",
+            "date": "2020-11-24T00:00:00.000",
+            "telephoneNumber": "31999203045",
+            "gender": "men",
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
+            "iconImage": "Brendon Oliveira",
+            "note": "4.9"
+        },
+        {
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "name": "Thiago Valentim",
+            "email": "thiago@gmail.com",
+            "date": "2020-11-24T00:00:00.000",
+            "telephoneNumber": "31999203045",
+            "gender": "men",
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
+            "iconImage": "Thiago Valentim",
+            "note": "4.9"
+        },
+        {
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "name": "Olímpio Junior",
+            "email": "olimpio@gmail.com",
+            "date": "2020-11-24T00:00:00.000",
+            "telephoneNumber": "31999203045",
+            "gender": "men",
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
+            "iconImage": "Olímpio Junior",
+            "note": "4.9"
+        },
+        {
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "name": "Caio Fabrini",
+            "email": "caio@gmail.com",
+            "date": "2020-11-24T00:00:00.000",
+            "telephoneNumber": "31999203045",
+            "gender": "men",
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
+            "iconImage": "Caio Fabrini",
+            "note": "4.9"
+        },
+        {
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
+            "name": "Lucas Munho",
+            "email": "lucas@gmail.com",
+            "date": "2020-11-24T00:00:00.000",
+            "telephoneNumber": "31999203045",
+            "gender": "men",
+            "birthDate": "1978-11-24T00:00:00.000",
+            "cpf": "02378623477",
+            "maritalStatus": "married",
+            "iconImage": "Lucas Munho",
+            "note": "4.9"
+        },
+        {
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
             "name": "Gustavo Vitor",
             "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
@@ -23,10 +89,11 @@
             "birthDate": "1978-11-24T00:00:00.000",
             "cpf": "02378623477",
             "maritalStatus": "married",
-            "iconImage": "url-image-mooca"
+            "iconImage": "url-image-mooca",
+            "note": "4.9"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6323",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
             "name": "Gustavo Vitor",
             "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
@@ -35,10 +102,11 @@
             "birthDate": "1978-11-24T00:00:00.000",
             "cpf": "02378623477",
             "maritalStatus": "married",
-            "iconImage": "url-image-mooca"
+            "iconImage": "url-image-mooca",
+            "note": "4.9"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6324",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
             "name": "Gustavo Vitor",
             "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
@@ -47,10 +115,11 @@
             "birthDate": "1978-11-24T00:00:00.000",
             "cpf": "02378623477",
             "maritalStatus": "married",
-            "iconImage": "url-image-mooca"
+            "iconImage": "url-image-mooca",
+            "note": "4.9"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6325",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
             "name": "Gustavo Vitor",
             "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
@@ -59,10 +128,11 @@
             "birthDate": "1978-11-24T00:00:00.000",
             "cpf": "02378623477",
             "maritalStatus": "married",
-            "iconImage": "url-image-mooca"
+            "iconImage": "url-image-mooca",
+            "note": "4.9"
         },
         {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6326",
+            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6321",
             "name": "Gustavo Vitor",
             "email": "gustavovit@gmail.com",
             "date": "2020-11-24T00:00:00.000",
@@ -71,68 +141,17 @@
             "birthDate": "1978-11-24T00:00:00.000",
             "cpf": "02378623477",
             "maritalStatus": "married",
-            "iconImage": "url-image-mooca"
-        },
-        {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6327",
-            "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com",
-            "date": "2020-11-24T00:00:00.000",
-            "telephoneNumber": "31999203045",
-            "gender": "men",
-            "birthDate": "1978-11-24T00:00:00.000",
-            "cpf": "02378623477",
-            "maritalStatus": "married",
-            "iconImage": "url-image-mooca"
-        },
-        {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6328",
-            "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com",
-            "date": "2020-11-24T00:00:00.000",
-            "telephoneNumber": "31999203045",
-            "gender": "men",
-            "birthDate": "1978-11-24T00:00:00.000",
-            "cpf": "02378623477",
-            "maritalStatus": "married",
-            "iconImage": "url-image-mooca"
-        },
-        {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6329",
-            "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com",
-            "date": "2020-11-24T00:00:00.000",
-            "telephoneNumber": "31999203045",
-            "gender": "men",
-            "birthDate": "1978-11-24T00:00:00.000",
-            "cpf": "02378623477",
-            "maritalStatus": "married",
-            "iconImage": "url-image-mooca"
-        },
-        {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6330",
-            "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com",
-            "date": "2020-11-24T00:00:00.000",
-            "telephoneNumber": "31999203045",
-            "gender": "men",
-            "birthDate": "1978-11-24T00:00:00.000",
-            "cpf": "02378623477",
-            "maritalStatus": "married",
-            "iconImage": "url-image-mooca"
-        },
-        {
-            "historyID": "9a157e36-7279-41d0-9d30-5310e9afd6331",
-            "name": "Gustavo Vitor",
-            "email": "gustavovit@gmail.com",
-            "date": "2020-11-24T00:00:00.000",
-            "telephoneNumber": "31999203045",
-            "gender": "men",
-            "birthDate": "1978-11-24T00:00:00.000",
-            "cpf": "02378623477",
-            "maritalStatus": "married",
-            "iconImage": "url-image-mooca"
+            "iconImage": "url-image-mooca",
+            "note": "4.9"
         }
         
     ]
+    
+    }
+        "serviceProvider": [
+        {   ""
+        
+        
+        ]
 }
+
