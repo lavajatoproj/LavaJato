@@ -42,20 +42,20 @@ class myServicesViewController: UIViewController{
         self.alert = AlertController(controller: self)
     }
     
-    @IBAction func tappedUpDateButton(_ sender: UIButton) {
+    func tapped(){
         self.priceTF.isHidden=true
         self.serviceLabel.text = "-"
         self.valueLabel.text = "-"
+    }
+    
+    @IBAction func tappedUpDateButton(_ sender: UIButton) {
+        self.tapped()
         self.alert?.showAlert(title: "Tem certeza que deseja atualizar?", message: "", titleButton: "Confirmar", completion: { value in
             switch value {
             case .aceitar:
-                let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
-                let vC = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
-                self.navigationController?.pushViewController(vC, animated: true)
+                print("atualizado")
             case .cancel:
-                let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
-                let vC = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
-                self.navigationController?.pushViewController(vC, animated: true)
+                print("cancelado")
             }
         })
     }
@@ -80,15 +80,10 @@ extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: CustomRowTableViewCell.identifier, for: indexPath) as? CustomRowTableViewCell
             cell?.setupCell(product: self.viewModel.listServices[indexPath.section].service[indexPath.row])
-            cell?.switch.isHidden=false
             cell?.productLabel.textAlignment = .left
             cell?.back2View.layer.borderWidth = 2.0
             cell?.back2View.layer.borderColor = UIColor.ColorDefault.cgColor
             cell?.arrowImageView.isHidden = true
-            
-            if indexPath.section == 2{
-                cell?.switch.isHidden = true
-                    }
             
             return cell ?? UITableViewCell()
         }
@@ -129,5 +124,17 @@ extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
         }else{
             self.priceTF.isHidden = true
         }
+        
+        if indexPath.section != 2 && indexPath.row != 0{
+            self.alert?.showAlert(title: "Adicionar em atualizações", message: "", titleButton: "Confirmar", completion: { value in
+                switch value {
+                case .aceitar:
+                    print("adicionado")
+                case .cancel:
+                    print("cancelado")
+                }
+            })
+        }
+        
     }
 }

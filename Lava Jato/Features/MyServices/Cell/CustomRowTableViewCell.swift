@@ -11,7 +11,6 @@ class CustomRowTableViewCell: UITableViewCell {
     
     @IBOutlet weak var productLabel: UILabel!
     @IBOutlet weak var back2View: UIView!
-    @IBOutlet weak var `switch`: UISwitch!
     @IBOutlet weak var arrowImageView: UIImageView!
     
     
@@ -29,7 +28,6 @@ class CustomRowTableViewCell: UITableViewCell {
     
     public func setupCell(product:String){
         self.productLabel.text = product
-        self.switch.isHidden = true
     }
     
     

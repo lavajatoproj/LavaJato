@@ -47,7 +47,7 @@ class requestServiceViewController: UIViewController {
         self.alert?.showAlert(title: "Você será redirecionado para o MercadoPago", message: "Após concluir o pagamento, você receberá um email de confirmação", titleButton: "Confirmar", completion: { value in
             switch value {
             case .aceitar:
-                self.dismiss(animated: true)
+                print("redirecionado")
             case .cancel:
                 let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
                 let vC = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
