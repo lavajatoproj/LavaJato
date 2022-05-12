@@ -10,19 +10,15 @@ import UIKit
 class MyCustomCell: UITableViewCell {
     
     
-    @IBOutlet weak var fundoView: UIView!
-    @IBOutlet weak var fotoImageView: UIImageView!
-    @IBOutlet weak var nomeLabel: UILabel!
-    @IBOutlet weak var notaLabel: UILabel!
-    @IBOutlet weak var estrelaImageView: UIImageView!
-    
-    
+    @IBOutlet weak var backgrounddView: UIView!
+    @IBOutlet weak var pictureImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var noteLabel: UILabel!
+    @IBOutlet weak var starImageView: UIImageView!
     
     func confIniciais(){
-        self.fundoView.layer.cornerRadius = 15
+        self.backgrounddView.layer.cornerRadius = 15
     }
-
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,10 +27,10 @@ class MyCustomCell: UITableViewCell {
         
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    public func setupCell(data:RegisterUser){
+        self.nameLabel.text = data.name
+        self.noteLabel.text = data.note
+        self.pictureImageView.image = UIImage(named: data.iconImage ?? "person")
     }
     
 }
