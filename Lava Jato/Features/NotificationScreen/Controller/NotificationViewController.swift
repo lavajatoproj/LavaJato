@@ -13,7 +13,6 @@ class NotificationViewController: UIViewController {
     
     private var viewModelNotificationScreen:ViewModelNotificationScreen = ViewModelNotificationScreen()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configTableView()
@@ -29,6 +28,7 @@ class NotificationViewController: UIViewController {
         self.tableView.backgroundColor = UIColor.clear
     }
 }
+
 extension NotificationViewController:UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.viewModelNotificationScreen.countElementsArray
@@ -44,12 +44,15 @@ extension NotificationViewController:UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.viewModelNotificationScreen.heightForRow
     }
+    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deletAction = UIContextualAction(style: .destructive, title: nil){action, view, boolAction in
             self.viewModelNotificationScreen.removeIndex(indexPath: indexPath)

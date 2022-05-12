@@ -50,6 +50,7 @@ class ScreenRegisterViewController: UIViewController {
         self.viewModelScreenRegister.textFieldStyle(textField: self.dateRegisterTextField)
         self.viewModelScreenRegister.textFieldStyle(textField: self.documentRegisterTextField)
     }
+    
     func createToolbar () -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -71,7 +72,6 @@ class ScreenRegisterViewController: UIViewController {
         }
         
     }
-    
     @objc func donePressed(){
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -139,6 +139,7 @@ class ScreenRegisterViewController: UIViewController {
             self.nameRegisterTextField.textColor = UIColor.red
         }
     }
+    
     @IBAction func emailAct(_ sender: Any) {
         let text = self.emailRegisterTextField.text ?? ""
         if text.isValidEmail() {
@@ -181,6 +182,7 @@ class ScreenRegisterViewController: UIViewController {
     }
     
 }
+
 extension ScreenRegisterViewController:UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.blue.cgColor
@@ -223,6 +225,7 @@ extension ScreenRegisterViewController:UITextFieldDelegate{
                 self.emailRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
+      
         self.viewModelScreenRegister.validation(nameTextField: self.nameRegisterTextField, emailTextField: self.emailRegisterTextField, numberTextField: self.numberRegisterTextField, documentTextField: self.documentRegisterTextField, dateTextField: self.dateRegisterTextField , checkBox: self.checkboxFlag, registerButton: registerButton, genderButton: self.selectGenderButton, statusButton: self.selectGenderButton, stateButton: self.statesButton)
         }
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -232,5 +235,3 @@ extension ScreenRegisterViewController:UITextFieldDelegate{
             self.setButtonColor()
             return true
         }
-    }
-

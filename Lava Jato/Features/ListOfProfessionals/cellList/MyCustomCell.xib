@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,8 +19,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfq-Qd-QdI">
                         <rect key="frame" x="10" y="10" width="360" height="113"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="89r-In-X5X">
-                                <rect key="frame" x="10" y="16.5" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="89r-In-X5X">
+                                <rect key="frame" x="10" y="17" width="80" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="7Ih-3z-UAZ"/>
                                     <constraint firstAttribute="height" constant="80" id="lcy-iz-RMW"/>
@@ -73,16 +73,17 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="estrelaImageView" destination="weI-EC-MZE" id="PuH-UX-wxF"/>
-                <outlet property="fotoImageView" destination="89r-In-X5X" id="zxo-ni-W5B"/>
-                <outlet property="fundoView" destination="tfq-Qd-QdI" id="EtA-fS-4YH"/>
-                <outlet property="nomeLabel" destination="KQi-e3-FUr" id="xjj-mq-8ZJ"/>
-                <outlet property="notaLabel" destination="eEy-dI-PnB" id="34l-Py-WVg"/>
+                <outlet property="backgrounddView" destination="tfq-Qd-QdI" id="h7s-hF-HfG"/>
+                <outlet property="nameLabel" destination="KQi-e3-FUr" id="Med-dL-wz9"/>
+                <outlet property="noteLabel" destination="eEy-dI-PnB" id="VGB-eN-QYn"/>
+                <outlet property="pictureImageView" destination="89r-In-X5X" id="81V-ht-BjH"/>
+                <outlet property="starImageView" destination="weI-EC-MZE" id="PoA-fy-ENH"/>
             </connections>
-            <point key="canvasLocation" x="64" y="80"/>
+            <point key="canvasLocation" x="-478" y="86"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="estrela" width="512" height="512"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

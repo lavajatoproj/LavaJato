@@ -20,7 +20,6 @@ class FilterViewController: UIViewController{
         ProfileGender(nameM: "Profissionais homem", nameF: "Profissionais mulher")
     ]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.settingsTView()
@@ -38,9 +37,7 @@ class FilterViewController: UIViewController{
         self.tViewTableView.dataSource = self
         self.tViewTableView.register(GenderTableViewCell.nib(), forCellReuseIdentifier: GenderTableViewCell.identifier)
         self.tViewTableView.register(PriceTableViewCell.nib(), forCellReuseIdentifier: PriceTableViewCell.identifier)
-      
     }
-    
 }
 
 // MARK: - Extension
@@ -58,14 +55,10 @@ extension FilterViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: GenderTableViewCell.identifier, for: indexPath) as? GenderTableViewCell
-//            self.viewModel.callFunc()
             cell?.setupCell(profile: self.viewModel.loadGender(indexPath: indexPath))
-            
-//            cell?.setupCell(profile: self.viewModel.loadGender(indexPath:indexPath))
        return cell ?? UITableViewCell()
         } else {
             let cellV = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.identifier, for: indexPath) as? PriceTableViewCell
-//            self.viewModel.callFunc()
             cellV?.setupCell(setup: self.viewModel.loadPrice(indexPath:indexPath))
             return cellV ?? UITableViewCell()
         }
@@ -74,9 +67,8 @@ extension FilterViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0{
             return 166.0
-        } else {
+        } else{
             return 466.0
         }
     }
 }
-

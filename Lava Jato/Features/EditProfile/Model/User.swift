@@ -18,5 +18,4 @@ struct User{
         self.phone = phone
         self.email = email
     }
-
 }

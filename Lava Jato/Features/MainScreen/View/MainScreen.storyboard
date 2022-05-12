@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UQ5-09-E9z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UQ5-09-E9z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -50,22 +50,22 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cvCollectionView" destination="2wB-1a-sel" id="O0o-1P-5bb"/>
-                        <segue destination="FN2-4S-NbJ" kind="show" identifier="listaDeServicosViewController" id="Zwf-Y7-27c"/>
+                        <segue destination="GzK-Je-Jkq" kind="show" identifier="NewServiceStoryBoard" id="4sO-sr-CbM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6700.0000000000009" y="-110.49107142857143"/>
         </scene>
-        <!--listOfProfessionals-->
-        <scene sceneID="Dyg-7e-1Pp">
+        <!--NewServiceStoryBoard-->
+        <scene sceneID="yjN-CY-O9N">
             <objects>
-                <viewControllerPlaceholder storyboardName="listOfProfessionals" id="FN2-4S-NbJ" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="hFp-z5-kSN"/>
+                <viewControllerPlaceholder storyboardName="NewServiceStoryBoard" id="GzK-Je-Jkq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OAS-e6-Gko"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0lT-C7-VwV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XNC-Lv-6qx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7515" y="-167"/>
+            <point key="canvasLocation" x="7310" y="-143"/>
         </scene>
         <!--UserProfileViewController-->
         <scene sceneID="cKN-3n-z2t">
@@ -80,10 +80,10 @@
         <!--listOfProfessionals-->
         <scene sceneID="cyC-Sx-dHM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GwA-8R-wlj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="listOfProfessionals" id="P9Y-ZF-Gc8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="j3e-xl-nAB"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GwA-8R-wlj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4047" y="-101"/>
         </scene>

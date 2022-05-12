@@ -93,6 +93,7 @@ class ProfileEditViewController: UIViewController {
         dateTextField.inputView = datePicker
         dateTextField.inputAccessoryView = createToolbar()
     }
+    
     func createToolbar () -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -100,6 +101,7 @@ class ProfileEditViewController: UIViewController {
         toolbar.setItems([doneButton], animated: true)
         return toolbar
     }
+    
     @objc func donePressed(){
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -119,7 +121,6 @@ class ProfileEditViewController: UIViewController {
     @IBAction func tappedChangePassword(_ sender: UIButton) {
         self.viewModelEditProfile.instantiateVC(nameVC: "ChangePasswordViewController", navigation: navigationController ?? UINavigationController())
     }
-    
     
     @IBAction func tappedChangeService(_ sender: UIButton) {
         self.viewModelEditProfile.instantiateVC(nameVC: "myServices", navigation: navigationController ?? UINavigationController())
@@ -204,14 +205,15 @@ extension ProfileEditViewController:UITextFieldDelegate{
             self.saveButton.isHidden = false
         }
     }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
+    
     func Style(){
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
-        
     }
 }
 
@@ -222,7 +224,6 @@ extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigatio
             self.profileImageView.image = pickedImage
             self.viewModelEditProfile.cornerRadius(image: profileImageView)
             self.profileImageView.clipsToBounds = true
-            
         }
         dismiss(animated: true, completion: nil)
     }
@@ -230,3 +231,14 @@ extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigatio
         dismiss(animated: true, completion: nil)
     }
 }
+<<<<<<< HEAD
+=======
+
+//extension ProfileEditViewController:ScreenRegisterControllerDelegate{
+//    func refreshData() {
+//        
+//    }
+//    
+//    
+//}
+>>>>>>> 11c9f68 (code organization)
