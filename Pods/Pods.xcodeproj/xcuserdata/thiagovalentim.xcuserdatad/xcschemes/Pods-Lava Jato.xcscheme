@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0D4EFFC94C78B40EB587C6D7AA68334"
-               BuildableName = "libPods-Lava Jato.a"
+               BuildableName = "Pods_Lava_Jato.framework"
                BlueprintName = "Pods-Lava Jato"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
