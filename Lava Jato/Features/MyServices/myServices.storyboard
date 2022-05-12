@@ -37,7 +37,7 @@
                                             <color key="titleColor" name="ColorDefault"/>
                                         </state>
                                         <connections>
-                                            <action selector="tappedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0me-HW-tKa"/>
+                                            <action selector="tappedUpDateButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="non-DK-HpP"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -168,11 +168,22 @@
                         <outlet property="tableView" destination="Vuo-ss-rjR" id="hyB-I4-vx6"/>
                         <outlet property="upDateButton" destination="ut0-rb-LSQ" id="a1I-Mh-mfm"/>
                         <outlet property="valueLabel" destination="ueY-Cs-nFI" id="M03-49-fXL"/>
+                        <segue destination="oPQ-Fj-9Aa" kind="show" identifier="Main" id="S9y-Kf-v9d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2781" y="82"/>
+        </scene>
+        <!--MainScreen-->
+        <scene sceneID="UFY-th-3yl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MainScreen" id="oPQ-Fj-9Aa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ivn-T9-CJj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pHL-tz-O9H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3446" y="82"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Zf5-r1-LEP">
