@@ -28,4 +28,8 @@ class ViewModelNotificationScreen {
     func removeIndex(indexPath:IndexPath)->Profile{
         self.data.remove(at: indexPath.row)
     }
+    
+    public var heightForRow:CGFloat{
+        return 200
+    }
 }

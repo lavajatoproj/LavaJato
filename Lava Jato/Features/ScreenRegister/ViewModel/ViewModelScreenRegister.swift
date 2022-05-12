@@ -90,7 +90,7 @@ class ViewModelScreenRegister{
         return false
     }
     
-    func validation(nameTextField:UITextField, emailTextField:UITextField, numberTextField:UITextField, documentTextField:UITextField, dateTextField:UITextField, checkBox:Bool, registerButton:UIButton, genderButton:UIButton, statusButton:UIButton){
+    func validation(nameTextField:UITextField, emailTextField:UITextField, numberTextField:UITextField, documentTextField:UITextField, dateTextField:UITextField, checkBox:Bool, registerButton:UIButton, genderButton:UIButton, statusButton:UIButton, cityTextField:UITextField){
         if nameTextField.text != "" && numberTextField.text != "" && dateTextField.text != "" && documentTextField.text != "" &&  genderButton.titleLabel?.text != "Selecione" && statusButton.titleLabel?.text != "Selecione o sexo" && emailTextField.text != "" && checkBox == true && nameTextField.textColor == UIColor.black && emailTextField.textColor == UIColor.black && numberTextField.textColor == UIColor.black && documentTextField.textColor == UIColor.black {
             registerButton.isEnabled = true
         }else{
