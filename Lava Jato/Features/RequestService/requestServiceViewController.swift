@@ -23,7 +23,6 @@ class requestServiceViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel:RequestViewModel = RequestViewModel()
-    
     private var alert:AlertController?
     
     func configInitials(){
@@ -55,8 +54,7 @@ class requestServiceViewController: UIViewController {
             }
         })
     }
-    
-    
+
     private func configTableView(){
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -76,7 +74,7 @@ class requestServiceViewController: UIViewController {
 extension requestServiceViewController: UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return self.viewModel.countElement
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

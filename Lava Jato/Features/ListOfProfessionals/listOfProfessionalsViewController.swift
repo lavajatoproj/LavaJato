@@ -48,11 +48,6 @@ class listOfProfessionalsViewController: UIViewController {
         )
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let vcRequest = segue.destination as? requestServiceViewController
-//        vcRequest?.nameProfessional = titleLabel.text ?? "salve"
-//    }
-    
 }
 
 extension listOfProfessionalsViewController: ListViewModelDelegate{

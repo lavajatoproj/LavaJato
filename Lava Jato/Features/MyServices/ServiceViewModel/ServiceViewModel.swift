@@ -17,4 +17,9 @@ class ServiceViewModel{
     self.listServices.append(Services(opened: false, title: "Formas de serviço", service: ["","Busco em casa", "Atendo no local"], price: [""]))
     self.listServices.append(Services(opened: false, title: "Preço", service: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"], price: [""]))
     }
+    
+    var countElements:Int{
+        return self.listServices.count
+    }
+    
 }

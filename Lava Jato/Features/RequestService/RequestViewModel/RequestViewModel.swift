@@ -17,4 +17,8 @@ class RequestViewModel{
     self.listServices.append(Services(opened: false, title: "Modo de retirada", service: ["","Levarei ao local", "Buscar aqui"], price: [""]))
     }
     
+    var countElement:Int{
+        return self.listServices.count
+    }
+    
 }

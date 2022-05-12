@@ -89,9 +89,8 @@ extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.viewModel.listServices.count
+        return self.viewModel.countElements
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -100,9 +99,7 @@ extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
         }else{
             return 1
         }
-        
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if viewModel.listServices[indexPath.section].opened == true{

@@ -186,13 +186,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		44177A3D2828863900496587 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		44177A3E2828872F00496587 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,13 +508,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		DA107B4C2828B7E800F40F22 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		DA107B4D2828B7EE00F40F22 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,7 +599,6 @@
 				DA107B4F2828B7FA00F40F22 /* Controller */,
 				DA107B4E2828B7F500F40F22 /* View */,
 				DA107B4D2828B7EE00F40F22 /* ViewModel */,
-				DA107B4C2828B7E800F40F22 /* Model */,
 			);
 			path = ScreenRegister;
 			sourceTree = "<group>";
@@ -720,7 +705,6 @@
 			isa = PBXGroup;
 			children = (
 				A284A53C282C87A200D4241C /* Network */,
-				44177A3D2828863900496587 /* Model */,
 				E13E5B2A27D6F59C000CB644 /* Extensions */,
 				443BAE8D27BF454800751C16 /* Features */,
 				A2F799D627DC6CAB005A53A3 /* Model */,
