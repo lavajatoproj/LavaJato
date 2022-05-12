@@ -11,25 +11,33 @@ class listOfProfessionalsViewController: UIViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var background2View: UIView!
+    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var searchBar: UISearchBar!
-    
-    private var listViewModel:ListViewModel = ListViewModel()
-    private var infos: Users?
+        
+    private var arrayNames:[String] = ["Claudio Mattos", "Brendon Oliveira", "Thiago Valentim", "Olímpio Junior", "Caio Fabrini", "Lucas Munho"]
+    private var arrayNotes:[String] = ["5.0", "4.8", "4.7", "4.7", "4.4", "4.3"]
     
     func setup(){
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
-        self.tableView.register(MyCustomCell.nib(), forCellReuseIdentifier: MyCustomCell.identifier)
+        searchTextField.leftViewMode = UITextField.ViewMode.always
+        let search = UIImageView(frame: CGRect(x: 10, y: 0, width: 20, height: 20))
+        let image = UIImage.init(systemName: "magnifyingglass")
+        search.image = image
+        let searchView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 20))
+        searchView.addSubview(search)
+        searchTextField.leftView = searchView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.listViewModel.fetchHistory()
-        self.listViewModel.delegate(delegate: self)
-        self.setup()
-        self.configItems()
+        setup()
+        configItems()
+        
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        
+        self.tableView.register(UINib(nibName: "MyCustomCell", bundle: nil), forCellReuseIdentifier: "MyCustomCell")
+        
     }
     
     @objc private func tapFilter(){
@@ -49,35 +57,24 @@ class listOfProfessionalsViewController: UIViewController {
     
 }
 
-extension listOfProfessionalsViewController: ListViewModelDelegate{
-
-    func success() {
-        self.setup()
-        tableView.reloadData()
-    }
-    
-    func error() {
-        print(#function)
-    }
-    
-}
-
 extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return listViewModel.countElements
+        return self.arrayNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MyCustomCell? = tableView.dequeueReusableCell(withIdentifier: MyCustomCell.identifier, for: indexPath) as? MyCustomCell
-        cell?.setupCell(data: self.listViewModel.loadUsers(indexPath: indexPath))
+        let cell: MyCustomCell? = tableView.dequeueReusableCell(withIdentifier: "MyCustomCell", for: indexPath) as? MyCustomCell
         
+        cell?.fotoImageView.image = UIImage(named: self.arrayNames[indexPath.row])
+        cell?.nomeLabel.text = self.arrayNames[indexPath.row]
+        cell?.notaLabel.text = self.arrayNotes[indexPath.row]
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedRow = self.listViewModel.loadUsers(indexPath: indexPath)
+        let selectedRow = self.arrayNames[indexPath.row]
         performSegue(withIdentifier: "requestService", sender: selectedRow)
         tableView.deselectRow(at: indexPath, animated: false)
     }

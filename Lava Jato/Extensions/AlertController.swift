@@ -10,7 +10,6 @@ import UIKit
 
 enum ActionType{
     case aceitar
-    case cancel
 }
 
 class AlertController {
@@ -26,12 +25,7 @@ class AlertController {
             print("aceitar pressionado")
             completion(.aceitar)
         }
-        let cancel = UIAlertAction(title: "Cancelar", style: .default) { _ in
-            completion(.cancel)
-        }
-        
         alert.addAction(aceitar)
-        alert.addAction(cancel)
         self.controller.present(alert, animated: true)
     }
     

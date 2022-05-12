@@ -10,20 +10,19 @@ import UIKit
 class MyCustomCell: UITableViewCell {
     
     
-    @IBOutlet weak var backgrounddView: UIView!
-    @IBOutlet weak var pictureImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var noteLabel: UILabel!
-    @IBOutlet weak var starImageView: UIImageView!
+    @IBOutlet weak var fundoView: UIView!
+    @IBOutlet weak var fotoImageView: UIImageView!
+    @IBOutlet weak var nomeLabel: UILabel!
+    @IBOutlet weak var notaLabel: UILabel!
+    @IBOutlet weak var estrelaImageView: UIImageView!
     
-    static let identifier:String = "MyCustomCell"
-    static func nib()-> UINib{
-        return UINib(nibName: self.identifier, bundle: nil)
-    }
+    
     
     func confIniciais(){
-        self.backgrounddView.layer.cornerRadius = 15
+        self.fundoView.layer.cornerRadius = 15
     }
+
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,10 +31,10 @@ class MyCustomCell: UITableViewCell {
         
     }
 
-    public func setupCell(data:RegisterUser){
-        self.nameLabel.text = data.name
-        self.noteLabel.text = data.note
-        self.pictureImageView.image = UIImage(named: data.iconImage ?? "person")
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
     
 }

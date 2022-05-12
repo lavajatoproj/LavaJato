@@ -13,6 +13,4 @@ target 'Lava Jato' do
 	pod 'GoogleSignIn'
 	pod 'CPF-CNPJ-Validator'
 	pod 'DropDown'
-  pod 'Alamofire'
-  
 end

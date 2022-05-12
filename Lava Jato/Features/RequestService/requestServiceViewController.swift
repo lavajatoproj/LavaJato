@@ -23,7 +23,7 @@ class requestServiceViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var listServices:[Services] =  []
-    private var alert:AlertController?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,23 +33,13 @@ class requestServiceViewController: UIViewController {
         self.serviceLabel.text = "-"
         self.configTableView()
         self.addService()
-        self.alert = AlertController(controller: self)
-        self.Style()
+        
+        Style()
     }
     
     @IBAction func tappedEndButton(_ sender: UIButton) {
         self.serviceLabel.text = "-"
         self.valueLabel.text = "-"
-        self.alert?.showAlert(title: "Você será redirecionado para o MercadoPago", message: "Após concluir o pagamento, você receberá um email de confirmação", titleButton: "Confirmar", completion: { value in
-            switch value {
-            case .aceitar:
-                self.dismiss(animated: true)
-            case .cancel:
-                let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
-                let vC = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
-                self.navigationController?.pushViewController(vC, animated: true)
-            }
-        })
     }
     
     

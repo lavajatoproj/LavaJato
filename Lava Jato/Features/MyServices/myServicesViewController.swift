@@ -20,7 +20,6 @@ class myServicesViewController: UIViewController{
     @IBOutlet weak var valueLabel: UILabel!
     
     var listServices:[Services] =  []
-    private var alert:AlertController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,25 +28,13 @@ class myServicesViewController: UIViewController{
         self.addServices()
         self.configTableView()
         self.upDateButton.layer.cornerRadius = 10
-        self.alert = AlertController(controller: self)
+        
     }
     
     @IBAction func tappedUpDateButton(_ sender: UIButton) {
         self.priceTF.isHidden=true
         self.serviceLabel.text = "-"
         self.valueLabel.text = "-"
-        self.alert?.showAlert(title: "Tem certeza que deseja atualizar?", message: "", titleButton: "Confirmar", completion: { value in
-            switch value {
-            case .aceitar:
-                let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
-                let vC = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
-                self.navigationController?.pushViewController(vC, animated: true)
-            case .cancel:
-                let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
-                let vC = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
-                self.navigationController?.pushViewController(vC, animated: true)
-            }
-        })
     }
     
     private func configTableView(){

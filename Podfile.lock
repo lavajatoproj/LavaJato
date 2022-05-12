@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (5.6.1)
   - AppAuth (1.5.0):
     - AppAuth/Core (= 1.5.0)
     - AppAuth/ExternalUserAgent (= 1.5.0)
@@ -128,7 +127,6 @@ PODS:
   - PromisesObjC (2.0.0)
 
 DEPENDENCIES:
-  - Alamofire
   - CPF-CNPJ-Validator
   - DropDown
   - FBSDKLoginKit
@@ -141,7 +139,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - Alamofire
     - AppAuth
     - CPF-CNPJ-Validator
     - DropDown
@@ -167,7 +164,6 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
-  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   AppAuth: 80317d99ac7ff2801a2f18ff86b48cd315ed465d
   CPF-CNPJ-Validator: 0b08069595da2c4b20e964b743bfc0a7334d5347
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
@@ -192,6 +188,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
 
-PODFILE CHECKSUM: 2b1f3dfcaec95d70636befd827bf66e21b880a59
+PODFILE CHECKSUM: 9fa4a74ba320fc586973741ae645fe6ba3671489
 
 COCOAPODS: 1.11.2
