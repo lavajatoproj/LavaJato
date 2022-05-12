@@ -58,25 +58,21 @@ extension FilterViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: GenderTableViewCell.identifier, for: indexPath) as? GenderTableViewCell
-//            self.viewModel.callFunc()
             cell?.setupCell(profile: self.viewModel.loadGender(indexPath: indexPath))
-            
-//            cell?.setupCell(profile: self.viewModel.loadGender(indexPath:indexPath))
        return cell ?? UITableViewCell()
         } else {
             let cellV = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.identifier, for: indexPath) as? PriceTableViewCell
-//            self.viewModel.callFunc()
             cellV?.setupCell(setup: self.viewModel.loadPrice(indexPath:indexPath))
             return cellV ?? UITableViewCell()
         }
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.row == 0{
-//            return 166.0
-//        } else 
-//            return 466.0
-//        }
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0{
+            return 166.0
+        } else{
+            return 466.0
+        }
+    }
 }
 

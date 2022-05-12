@@ -135,8 +135,8 @@ extension MainScreen:UICollectionViewDataSource{
             }
         }
         
-        let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals") as? listOfProfessionalsViewController
+        let storyboard = UIStoryboard(name: "NewServiceStoryBoard", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "NewServiceStoryBoard") as? NewServiceViewController
         viewController?.filterArray = filterArray
         navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
     }

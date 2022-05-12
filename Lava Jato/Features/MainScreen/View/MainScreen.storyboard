@@ -50,22 +50,22 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cvCollectionView" destination="2wB-1a-sel" id="O0o-1P-5bb"/>
-                        <segue destination="FN2-4S-NbJ" kind="show" identifier="listaDeServicosViewController" id="Zwf-Y7-27c"/>
+                        <segue destination="GzK-Je-Jkq" kind="show" identifier="NewServiceStoryBoard" id="4sO-sr-CbM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6700.0000000000009" y="-110.49107142857143"/>
         </scene>
-        <!--listOfProfessionals-->
-        <scene sceneID="Dyg-7e-1Pp">
+        <!--NewServiceStoryBoard-->
+        <scene sceneID="yjN-CY-O9N">
             <objects>
-                <viewControllerPlaceholder storyboardName="listOfProfessionals" id="FN2-4S-NbJ" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="hFp-z5-kSN"/>
+                <viewControllerPlaceholder storyboardName="NewServiceStoryBoard" id="GzK-Je-Jkq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OAS-e6-Gko"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0lT-C7-VwV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XNC-Lv-6qx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7515" y="-167"/>
+            <point key="canvasLocation" x="7310" y="-143"/>
         </scene>
         <!--UserProfileViewController-->
         <scene sceneID="cKN-3n-z2t">

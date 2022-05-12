@@ -57,13 +57,7 @@ class FilterViewModel{
     
     
     // Linha 74 FilterViewController
-    var heightForRow:CGFloat{
-        if self.configPrice() == indexPath{
-            return 166.0
-        } else{
-            return 466.0
-      }
-  }
+//
  
 }
     
