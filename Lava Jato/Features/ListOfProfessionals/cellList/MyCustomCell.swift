@@ -10,11 +10,13 @@ import UIKit
 class MyCustomCell: UITableViewCell {
     
     
+
     @IBOutlet weak var backgrounddView: UIView!
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var starImageView: UIImageView!
+
     
     static let identifier:String = "MyCustomCell"
     static func nib()-> UINib{
@@ -24,6 +26,7 @@ class MyCustomCell: UITableViewCell {
     func confIniciais(){
         self.backgrounddView.layer.cornerRadius = 15
     }
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,4 +41,6 @@ class MyCustomCell: UITableViewCell {
         self.pictureImageView.image = UIImage(named: data.iconImage ?? "")
     }
     
+
 }
+

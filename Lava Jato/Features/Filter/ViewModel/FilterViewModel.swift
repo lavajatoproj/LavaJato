@@ -7,8 +7,18 @@
 
 import UIKit
 
+protocol FilterViewModelDelegate:AnyObject{
+    func success()
+    func error()
+}
 
 class FilterViewModel{
+    
+    private weak var delegate:FilterViewModelDelegate?
+    public func delegate(delegate:FilterViewModelDelegate?){
+        self.delegate = delegate
+    }
+    
     
     private var listerPrice:[ProfilePrice] = []
     private var listGender:[ProfileGender] = []
@@ -39,12 +49,19 @@ class FilterViewModel{
     var coutArray:Int {
         return self.listGender.count
     }
-    
-    var isFirstCell:Bool{
+        var isFirstCell:Bool{
         return self.listGender.isEmpty
     }
+
+    var indexPath = IndexPath()
     
- }
+    
+    // Linha 74 FilterViewController
+//
+ 
+}
+    
+ 
 
 
 
