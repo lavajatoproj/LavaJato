@@ -32,12 +32,8 @@ class ListViewModel{
         return infos?.registerUsers?[indexPath.row] ?? RegisterUser()
     }
     
-    public var heightForRow:CGFloat{
-        return 50
-    }
-    
     public func fetchHistory(){
-        self.service.getPersonFromJson { success, error in
+        self.service.getPersonAlamofire { success, error in
             if let _success = success{
                 self.infos = _success
                 self.delegate?.success()

@@ -21,7 +21,7 @@ class listOfProfessionalsViewController: UIViewController {
     func setup(){
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.register(UINib(nibName: "MyCustomCell", bundle: nil), forCellReuseIdentifier: "MyCustomCell")
+        self.tableView.register(MyCustomCell.nib(), forCellReuseIdentifier: MyCustomCell.identifier)
     }
     
     override func viewDidLoad() {
@@ -70,7 +70,7 @@ extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: MyCustomCell? = tableView.dequeueReusableCell(withIdentifier: "MyCustomCell", for: indexPath) as? MyCustomCell
+        let cell: MyCustomCell? = tableView.dequeueReusableCell(withIdentifier: MyCustomCell.identifier, for: indexPath) as? MyCustomCell
         cell?.setupCell(data: self.listViewModel.loadUsers(indexPath: indexPath))
         
         return cell ?? UITableViewCell()

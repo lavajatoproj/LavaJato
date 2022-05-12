@@ -39,6 +39,7 @@
 //}
 
 import Foundation
+import Alamofire
 
 protocol GenericService:AnyObject{
     typealias completion <T> = (_ result: T, _ failure:Error?) -> Void
@@ -47,14 +48,35 @@ protocol GenericService:AnyObject{
 enum _Error:Swift.Error{
     case fileNotFound(name:String)
     case fileDecodingFailed(name:String,Swift.Error)
+    case errorRequest(AFError)
 }
 
 protocol PersonServiceDelegate:GenericService{
     func getPersonFromJson(completion: @escaping completion<Users?>)
+    func getPersonAlamofire(completion: @escaping completion<Users?>)
 }
 
 
 class PersonService:PersonServiceDelegate{
+    
+    // fazendo uma requisacao para bater em uma API
+    func getPersonAlamofire(completion: @escaping completion<Users?>) {
+        let url:String = "https://run.mocky.io/v3/193d0b88-4231-486e-9e32-2615ff071198"
+        
+        // AF do Alamonfire
+        AF.request(url,method: .get).responseDecodable(of: Users.self){ response in
+            debugPrint(response)                      // um print mais avançado
+            switch response.result{
+            case .success(let success):
+                print("Sucesso")
+                completion(success,nil)
+            case .failure(let error):
+                print("ERROR")
+                completion(nil, _Error.errorRequest(error))
+            }
+        }
+    }
+    
     
     // leitura de um MOC, informacoes que estao dentro do aplicativo
     func getPersonFromJson(completion: @escaping completion<Users?>) {

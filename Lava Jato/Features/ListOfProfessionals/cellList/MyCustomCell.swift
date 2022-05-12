@@ -16,6 +16,11 @@ class MyCustomCell: UITableViewCell {
     @IBOutlet weak var noteLabel: UILabel!
     @IBOutlet weak var starImageView: UIImageView!
     
+    static let identifier:String = "MyCustomCell"
+    static func nib()-> UINib{
+        return UINib(nibName: self.identifier, bundle: nil)
+    }
+    
     func confIniciais(){
         self.backgrounddView.layer.cornerRadius = 15
     }
