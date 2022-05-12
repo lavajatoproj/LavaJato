@@ -15,17 +15,7 @@ let genderDropDown = DropDown()
 
 
 class ViewModelScreenRegister{
-    private var states:[States] = []
     
-    func appendStates(){
-        self.states.append(States.init(nameState: "Acre"))
-        self.states.append(States.init(nameState: "Alagoas"))
-        self.states.append(States.init(nameState: "Amapá"))
-        self.states.append(States.init(nameState: "Amazonas"))
-        self.states.append(States.init(nameState: "Bahia"))
-        self.states.append(States.init(nameState: "Ceara"))
-
-    }
     private var value:String = ""
     
     var text = "" {
@@ -103,10 +93,6 @@ class ViewModelScreenRegister{
         statusDropDown.show()
     }
     
-    func setupStates(data:States){
-        self.states = []
-    }
-    
     func boolTrue(value:Bool)-> Bool{
         return true
     }
@@ -114,8 +100,8 @@ class ViewModelScreenRegister{
         return false
     }
     
-    func validation(nameTextField:UITextField, emailTextField:UITextField, numberTextField:UITextField, documentTextField:UITextField, dateTextField:UITextField, checkBox:Bool, registerButton:UIButton, genderButton:UIButton, statusButton:UIButton, cityTextField:UITextField){
-        if nameTextField.text != "" && numberTextField.text != "" && dateTextField.text != "" && documentTextField.text != "" &&  genderButton.titleLabel?.text != "Selecione" && statusButton.titleLabel?.text != "Selecione o sexo" && emailTextField.text != "" && checkBox == true && nameTextField.textColor == UIColor.black && emailTextField.textColor == UIColor.black && numberTextField.textColor == UIColor.black && documentTextField.textColor == UIColor.black {
+    func validation(nameTextField:UITextField, emailTextField:UITextField, numberTextField:UITextField, documentTextField:UITextField, dateTextField:UITextField, checkBox:Bool, registerButton:UIButton, genderButton:UIButton, statusButton:UIButton, stateButton:UIButton){
+        if nameTextField.text != "" && numberTextField.text != "" && dateTextField.text != "" && documentTextField.text != "" &&  genderButton.titleLabel?.text != "Selecione" && statusButton.titleLabel?.text != "Selecione" && emailTextField.text != "" && checkBox == true && nameTextField.textColor == UIColor.black && emailTextField.textColor == UIColor.black && numberTextField.textColor == UIColor.black && documentTextField.textColor == UIColor.black && stateButton.titleLabel?.text != "Selecione"{
             registerButton.isEnabled = true
         }else{
             registerButton.isEnabled = false

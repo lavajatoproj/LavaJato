@@ -15,9 +15,9 @@ class ScreenRegisterViewController: UIViewController {
     @IBOutlet weak var numberRegisterTextField: UITextField!
     @IBOutlet weak var dateRegisterTextField: UITextField!
     @IBOutlet weak var documentRegisterTextField: UITextField!
-    @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var checkBox: UIButton!
+    @IBOutlet weak var statesButton: UIButton!
     @IBOutlet weak var label:UILabel!
     @IBOutlet weak var selectStatusButton: UIButton!
     @IBOutlet weak var selectGenderButton:UIButton!
@@ -43,15 +43,12 @@ class ScreenRegisterViewController: UIViewController {
         self.emailRegisterTextField.delegate = self
         self.numberRegisterTextField.delegate = self
         self.dateRegisterTextField.delegate = self
-        self.cityTextField.delegate = self
         self.documentRegisterTextField.delegate = self
         self.viewModelScreenRegister.textFieldStyle(textField: self.nameRegisterTextField)
         self.viewModelScreenRegister.textFieldStyle(textField: self.emailRegisterTextField)
         self.viewModelScreenRegister.textFieldStyle(textField: self.numberRegisterTextField)
         self.viewModelScreenRegister.textFieldStyle(textField: self.dateRegisterTextField)
         self.viewModelScreenRegister.textFieldStyle(textField: self.documentRegisterTextField)
-        self.viewModelScreenRegister.textFieldStyle(textField: self.cityTextField)
-        
     }
     func createToolbar () -> UIToolbar {
         let toolbar = UIToolbar()
@@ -61,6 +58,20 @@ class ScreenRegisterViewController: UIViewController {
         toolbar.setItems([doneButton], animated: true)
         return toolbar
     }
+    
+    func setButtonColor(){
+        if self.selectGenderButton.titleLabel?.text == "Selecione"{
+            self.selectGenderButton.titleLabel?.textColor = UIColor.red
+        }
+        if self.selectStatusButton.titleLabel?.text == "Selecione"{
+            self.selectStatusButton.titleLabel?.textColor = UIColor.red
+        }
+        if self.selectStatusButton.titleLabel?.text == "Selecione"{
+            self.statesButton.titleLabel?.textColor = UIColor.red
+        }
+        
+    }
+    
     @objc func donePressed(){
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -86,18 +97,20 @@ class ScreenRegisterViewController: UIViewController {
             checkboxFlag = false
         }
         if self.checkboxFlag == true {
-            if self.nameRegisterTextField.textColor != UIColor.red && self.numberRegisterTextField.textColor != UIColor.red && self.dateRegisterTextField.textColor != UIColor.red && self.documentRegisterTextField.textColor != UIColor.red && self.cityTextField.textColor != UIColor.red && self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.cityTextField.text != "" && self.selectGenderButton.titleLabel?.text != "" && self.emailRegisterTextField.text != ""{
+            if self.nameRegisterTextField.textColor != UIColor.red && self.numberRegisterTextField.textColor != UIColor.red && self.dateRegisterTextField.textColor != UIColor.red && self.documentRegisterTextField.textColor != UIColor.red && self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.selectGenderButton.titleLabel?.text != "Selecione" && self.emailRegisterTextField.text != "" && self.selectStatusButton.titleLabel?.text != "Selecione" && self.statesButton.titleLabel?.text != "Selecione"{
                 self.registerButton.isEnabled = true
             }else{
                 self.registerButton.isEnabled = false
+                self.setButtonColor()
             }
         }else{
             self.registerButton.isEnabled = false
+            self.setButtonColor()
         }
     }
     
     func validations(){
-        if self.nameRegisterTextField.textColor != UIColor.red && self.numberRegisterTextField.textColor != UIColor.red && self.dateRegisterTextField.textColor != UIColor.red && self.documentRegisterTextField.textColor != UIColor.red && self.cityTextField.textColor != UIColor.red && self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.cityTextField.text != "" && self.selectGenderButton.titleLabel?.text != "" && self.emailRegisterTextField.text != ""{
+        if self.nameRegisterTextField.textColor != UIColor.red && self.numberRegisterTextField.textColor != UIColor.red && self.dateRegisterTextField.textColor != UIColor.red && self.documentRegisterTextField.textColor != UIColor.red && self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.selectGenderButton.titleLabel?.text != "Selecione" && self.emailRegisterTextField.text != "" && self.selectStatusButton.titleLabel?.text != "Selecione" && self.statesButton.titleLabel?.text != "Selecione"{
             self.registerButton.isEnabled = true
         }else{
             self.registerButton.isEnabled = false
@@ -148,6 +161,11 @@ class ScreenRegisterViewController: UIViewController {
     @IBAction func tappedSelectGender(){
         self.viewModelScreenRegister.createDropDownGender(button: selectGenderButton)
     }
+    
+    @IBAction func tappedSelectState(_ sender: UIButton) {
+        self.viewModelScreenRegister.createDropDownState(button: statesButton)
+    }
+    
     
     @IBAction func phoneAct(_ sender: Any) {
         let text = self.numberRegisterTextField.text ?? ""
@@ -205,19 +223,13 @@ extension ScreenRegisterViewController:UITextFieldDelegate{
                 self.emailRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
-            if textField == self.cityTextField{
-                if self.cityTextField.text == ""{
-                    self.cityTextField.layer.borderColor = UIColor.red.cgColor
-                }else{
-                    self.cityTextField.layer.borderColor = UIColor.lightGray.cgColor
-                }
-            }
-            self.viewModelScreenRegister.validation(nameTextField: self.nameRegisterTextField, emailTextField: self.emailRegisterTextField, numberTextField: self.numberRegisterTextField, documentTextField: self.documentRegisterTextField, dateTextField: self.dateRegisterTextField , checkBox: self.checkboxFlag, registerButton: registerButton, genderButton: self.selectGenderButton, statusButton: self.selectGenderButton, cityTextField: self.cityTextField)
+        self.viewModelScreenRegister.validation(nameTextField: self.nameRegisterTextField, emailTextField: self.emailRegisterTextField, numberTextField: self.numberRegisterTextField, documentTextField: self.documentRegisterTextField, dateTextField: self.dateRegisterTextField , checkBox: self.checkboxFlag, registerButton: registerButton, genderButton: self.selectGenderButton, statusButton: self.selectGenderButton, stateButton: self.statesButton)
         }
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             cpfValidate(documentRegisterTextField)
             textField.resignFirstResponder()
             self.validations()
+            self.setButtonColor()
             return true
         }
     }
