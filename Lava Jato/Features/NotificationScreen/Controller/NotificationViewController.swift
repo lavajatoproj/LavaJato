@@ -18,6 +18,7 @@ class NotificationViewController: UIViewController {
         super.viewDidLoad()
         self.configTableView()
         self.backgroudView.layer.cornerRadius = 15.0
+        self.viewModelNotificationScreen.appendData()
     }
     
     func configTableView(){

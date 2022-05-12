@@ -50,6 +50,7 @@
 		DA9954D027DF8A8100C89D76 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954CF27DF8A8100C89D76 /* NotificationViewController.swift */; };
 		DAA80E64282AD575009A7D73 /* HelpScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA80E63282AD575009A7D73 /* HelpScreenViewModel.swift */; };
 		DAB173D027D1508A00104761 /* ScreenRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB173CF27D1508A00104761 /* ScreenRegisterViewController.swift */; };
+		DAD05959282D70E100EFF554 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD05958282D70E100EFF554 /* States.swift */; };
 		DAF0152C27C45B38009E55F6 /* HelpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0152B27C45B37009E55F6 /* HelpScreenViewController.swift */; };
 		E10CB59427B7218100D49C01 /* resetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10CB59327B7218100D49C01 /* resetPasswordViewController.swift */; };
 		E13E5B1E27D59644000CB644 /* ErrorConectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13E5B1D27D59644000CB644 /* ErrorConectionViewController.swift */; };
@@ -126,6 +127,7 @@
 		DA9954CF27DF8A8100C89D76 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		DAA80E63282AD575009A7D73 /* HelpScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreenViewModel.swift; sourceTree = "<group>"; };
 		DAB173CF27D1508A00104761 /* ScreenRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRegisterViewController.swift; sourceTree = "<group>"; };
+		DAD05958282D70E100EFF554 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		DAF0152B27C45B37009E55F6 /* HelpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreenViewController.swift; sourceTree = "<group>"; };
 		E10CB59327B7218100D49C01 /* resetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resetPasswordViewController.swift; sourceTree = "<group>"; };
 		E13E5B1D27D59644000CB644 /* ErrorConectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorConectionViewController.swift; sourceTree = "<group>"; };
@@ -475,6 +477,7 @@
 		DA107B4C2828B7E800F40F22 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DAD05958282D70E100EFF554 /* States.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -885,6 +888,7 @@
 				449EFAA727DE3AF4002111DE /* UserProfileViewController.swift in Sources */,
 				DA9954C627DF895700C89D76 /* Profile.swift in Sources */,
 				DA107B432828AD5C00F40F22 /* ViewModelNotificationScreen.swift in Sources */,
+				DAD05959282D70E100EFF554 /* States.swift in Sources */,
 				A21A38D0282C53FD0013D3B6 /* Users.swift in Sources */,
 				DAA80E64282AD575009A7D73 /* HelpScreenViewModel.swift in Sources */,
 				E162E07927ADF53E00C6AD32 /* SceneDelegate.swift in Sources */,

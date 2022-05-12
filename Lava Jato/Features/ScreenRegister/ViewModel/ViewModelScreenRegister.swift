@@ -15,6 +15,17 @@ let genderDropDown = DropDown()
 
 
 class ViewModelScreenRegister{
+    private var states:[States] = []
+    
+    func appendStates(){
+        self.states.append(States.init(nameState: "Acre"))
+        self.states.append(States.init(nameState: "Alagoas"))
+        self.states.append(States.init(nameState: "Amapá"))
+        self.states.append(States.init(nameState: "Amazonas"))
+        self.states.append(States.init(nameState: "Bahia"))
+        self.states.append(States.init(nameState: "Ceara"))
+
+    }
     private var value:String = ""
     
     var text = "" {
@@ -81,6 +92,19 @@ class ViewModelScreenRegister{
             button.setTitle(item, for: .normal)
         }
         statusDropDown.show()
+    }
+    func createDropDownState(button:UIButton){
+        statusDropDown.anchorView = button
+        statusDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)
+        statusDropDown.dataSource = ["Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceara", "Distrito Federal    ", "Espírito Santo", "Goiás","Maranhão","Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro","Rio Grande do Norte","Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"]
+        statusDropDown.selectionAction = { [weak self] (index, item) in
+            button.setTitle(item, for: .normal)
+        }
+        statusDropDown.show()
+    }
+    
+    func setupStates(data:States){
+        self.states = []
     }
     
     func boolTrue(value:Bool)-> Bool{
