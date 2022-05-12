@@ -18,6 +18,7 @@ class listOfProfessionalsViewController: UIViewController {
     private var listViewModel:ListViewModel = ListViewModel()
     private var infos: Users?
     
+    
     func setup(){
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -46,6 +47,11 @@ class listOfProfessionalsViewController: UIViewController {
             action: #selector(tapFilter)
         )
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let vcRequest = segue.destination as? requestServiceViewController
+//        vcRequest?.nameProfessional = titleLabel.text ?? "salve"
+//    }
     
 }
 

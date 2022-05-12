@@ -35,7 +35,7 @@ class MyCustomCell: UITableViewCell {
     public func setupCell(data:RegisterUser){
         self.nameLabel.text = data.name
         self.noteLabel.text = data.note
-        self.pictureImageView.image = UIImage(named: data.iconImage ?? "person")
+        self.pictureImageView.image = UIImage(named: data.iconImage ?? "")
     }
     
 }

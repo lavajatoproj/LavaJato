@@ -34,6 +34,8 @@
 		A212221F27D13EE500B24208 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A212221D27D13EE500B24208 /* MyCustomCell.swift */; };
 		A212222027D13EE500B24208 /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A212221E27D13EE500B24208 /* MyCustomCell.xib */; };
 		A21A38D0282C53FD0013D3B6 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A38CF282C53FD0013D3B6 /* Users.swift */; };
+		A27E7BAF282D80F10039C3F7 /* RequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27E7BAE282D80F10039C3F7 /* RequestViewModel.swift */; };
+		A27E7BB2282D8B6B0039C3F7 /* ServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27E7BB1282D8B6B0039C3F7 /* ServiceViewModel.swift */; };
 		A284A53B282C832000D4241C /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284A53A282C832000D4241C /* ListViewModel.swift */; };
 		A284A53E282C881600D4241C /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284A53D282C881600D4241C /* HistoryService.swift */; };
 		A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F799CC27DC6A49005A53A3 /* CustomRowTableViewCell.swift */; };
@@ -110,6 +112,8 @@
 		A212221D27D13EE500B24208 /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
 		A212221E27D13EE500B24208 /* MyCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
 		A21A38CF282C53FD0013D3B6 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		A27E7BAE282D80F10039C3F7 /* RequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewModel.swift; sourceTree = "<group>"; };
+		A27E7BB1282D8B6B0039C3F7 /* ServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewModel.swift; sourceTree = "<group>"; };
 		A284A53A282C832000D4241C /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		A284A53D282C881600D4241C /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
 		A2F799CC27DC6A49005A53A3 /* CustomRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRowTableViewCell.swift; sourceTree = "<group>"; };
@@ -375,6 +379,7 @@
 		A212220E27D13DB400B24208 /* MyServices */ = {
 			isa = PBXGroup;
 			children = (
+				A27E7BB0282D8B4B0039C3F7 /* ServiceViewModel */,
 				A212221427D13E6C00B24208 /* myServices.storyboard */,
 				A212221627D13E7F00B24208 /* myServicesViewController.swift */,
 				A2F799CB27DC6A1D005A53A3 /* Cell */,
@@ -385,6 +390,7 @@
 		A212220F27D13E0100B24208 /* RequestService */ = {
 			isa = PBXGroup;
 			children = (
+				A27E7BAD282D80D90039C3F7 /* RequestViewModel */,
 				A212221027D13E3500B24208 /* requestService.storyboard */,
 				A212221227D13E5300B24208 /* requestServiceViewController.swift */,
 				A20B840C27DED68700F29991 /* cell1 */,
@@ -399,6 +405,22 @@
 				A212221E27D13EE500B24208 /* MyCustomCell.xib */,
 			);
 			path = cellList;
+			sourceTree = "<group>";
+		};
+		A27E7BAD282D80D90039C3F7 /* RequestViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A27E7BAE282D80F10039C3F7 /* RequestViewModel.swift */,
+			);
+			path = RequestViewModel;
+			sourceTree = "<group>";
+		};
+		A27E7BB0282D8B4B0039C3F7 /* ServiceViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A27E7BB1282D8B6B0039C3F7 /* ServiceViewModel.swift */,
+			);
+			path = ServiceViewModel;
 			sourceTree = "<group>";
 		};
 		A284A53C282C87A200D4241C /* Network */ = {
@@ -887,6 +909,7 @@
 				DA23ECCB2828BA5500C9E4FD /* ViewModelScreenRegister.swift in Sources */,
 				A284A53E282C881600D4241C /* HistoryService.swift in Sources */,
 				E162E07B27ADF53E00C6AD32 /* ViewController.swift in Sources */,
+				A27E7BB2282D8B6B0039C3F7 /* ServiceViewModel.swift in Sources */,
 				DA9954C927DF899600C89D76 /* NotificationTableViewCell.swift in Sources */,
 				44FA259E28177CB7006C1CFB /* ServicesCollectionViewCell.swift in Sources */,
 				44CB761F27E941B600A029FA /* PlaceCollectionViewCell.swift in Sources */,
@@ -894,6 +917,7 @@
 				A20B841827DF051B00F29991 /* cellTableViewCell.swift in Sources */,
 				44CB762827E941C800A029FA /* GenderTableViewCell.swift in Sources */,
 				E13E5B3227D6F7FA000CB644 /* UIViewController.swift in Sources */,
+				A27E7BAF282D80F10039C3F7 /* RequestViewModel.swift in Sources */,
 				44CB2778282998CB00A7FD62 /* FilterViewModel.swift in Sources */,
 				DAB173D027D1508A00104761 /* ScreenRegisterViewController.swift in Sources */,
 				A212221B27D13EB000B24208 /* listOfProfessionalsViewController.swift in Sources */,
