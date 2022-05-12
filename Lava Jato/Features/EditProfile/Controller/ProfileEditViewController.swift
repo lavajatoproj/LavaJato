@@ -13,6 +13,7 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var numberTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var changeServicesButton: UIButton!
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
@@ -46,10 +47,12 @@ class ProfileEditViewController: UIViewController {
         self.numberTextField.delegate = self
         self.emailTextField.delegate = self
         self.dateTextField.delegate = self
-        self.viewModelEditProfile.textFieldStyle(textField: nameTextField)
-        self.viewModelEditProfile.textFieldStyle(textField: numberTextField)
-        self.viewModelEditProfile.textFieldStyle(textField: emailTextField)
-        self.viewModelEditProfile.textFieldStyle(textField: dateTextField)
+        self.cityTextField.delegate = self
+        self.viewModelEditProfile.textFieldStyle(textField: self.nameTextField)
+        self.viewModelEditProfile.textFieldStyle(textField: self.numberTextField)
+        self.viewModelEditProfile.textFieldStyle(textField: self.emailTextField)
+        self.viewModelEditProfile.textFieldStyle(textField: self.dateTextField)
+        self.viewModelEditProfile.textFieldStyle(textField: self.cityTextField)
     }
     
     func resetTextField(){
@@ -57,19 +60,30 @@ class ProfileEditViewController: UIViewController {
         self.numberTextField.text = ""
         self.emailTextField.text = ""
         self.dateTextField.text = ""
+        self.cityTextField.text = ""
     }
     
     func setValueTextField(){
         self.saveButton.isEnabled = false
-        self.nameTextField.placeholder = self.getUserDefaults(key: "userName")as? String
-        self.numberTextField.placeholder = self.getUserDefaults(key: "userPhone")as? String
-        self.emailTextField.placeholder = self.getUserDefaults(key: "userEmail")as? String
-        self.dateTextField.placeholder = self.getUserDefaults(key: "userBirthday")as? String
+        self.nameTextField.placeholder = self.getUserDefaults(key: "userName") as? String
+        self.numberTextField.placeholder = self.getUserDefaults(key: "userPhone") as? String
+        self.emailTextField.placeholder = self.getUserDefaults(key: "userEmail") as? String
+        self.dateTextField.placeholder = self.getUserDefaults(key: "userBirthday") as? String
+        self.cityTextField.placeholder = self.getUserDefaults(key: "city") as? String
         self.nameLabel.text = self.getUserDefaults(key: "userName")as? String
+        
     }
     
     func configPhotoPicker(){
         self.imagePicker.delegate = self
+    }
+    
+    func userDefault(){
+        self.saveUserDefaults(value: self.nameTextField.text ?? "", key: "userName")
+        self.saveUserDefaults(value: self.numberTextField.text ?? "", key: "userPhone")
+        self.saveUserDefaults(value: self.emailTextField.text ?? "", key: "userEmail")
+        self.saveUserDefaults(value: self.dateTextField.text ?? "", key: "userBirthday")
+        self.saveUserDefaults(value: self.cityTextField.text ?? "", key: "city")
     }
     
     public func createDatePicker(){
@@ -98,24 +112,17 @@ class ProfileEditViewController: UIViewController {
         self.alert?.showAlert(title: "Concluido", message: "Suas alterações foram salvas", titleButton: "Confirmar", completion: { value in
             self.resetTextField()
         })
-        self.saveUserDefaults(value: self.nameTextField.text ?? "", key: "userName")
-        self.saveUserDefaults(value: self.numberTextField.text ?? "", key: "userPhone")
-        self.saveUserDefaults(value: self.emailTextField.text ?? "", key: "userEmail")
-        self.saveUserDefaults(value: self.dateTextField.text ?? "", key: "userBirthday")
+        self.userDefault()
         self.setValueTextField()
     }
     
     @IBAction func tappedChangePassword(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "ChangePasswordViewController", bundle: nil)
-        let vC = storyboard.instantiateViewController(withIdentifier: "ChangePasswordViewController")
-        navigationController?.pushViewController(vC, animated: true)
+        self.viewModelEditProfile.instantiateVC(nameVC: "ChangePasswordViewController", navigation: navigationController ?? UINavigationController())
     }
     
     
     @IBAction func tappedChangeService(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "myServices", bundle: nil)
-        let vC = storyboard.instantiateViewController(withIdentifier: "myServices")
-        navigationController?.pushViewController(vC, animated: true)
+        self.viewModelEditProfile.instantiateVC(nameVC: "myServices", navigation: navigationController ?? UINavigationController())
     }
     
     @IBAction func nameAct(_ sender: Any) {
@@ -155,7 +162,7 @@ extension ProfileEditViewController:UITextFieldDelegate{
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.blue.cgColor
-        textField.layer.borderWidth = 2.0
+        self.viewModelEditProfile.widthTextField(textField: textField, value: 2.0)
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == self.nameTextField{
@@ -163,6 +170,13 @@ extension ProfileEditViewController:UITextFieldDelegate{
                 self.nameTextField.layer.borderColor = UIColor.red.cgColor
             }else{
                 self.nameTextField.layer.borderColor = UIColor.lightGray.cgColor
+            }
+        }
+        if textField == self.cityTextField{
+            if self.cityTextField.text == ""{
+                self.cityTextField.layer.borderColor = UIColor.red.cgColor
+            }else{
+                self.cityTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
         if textField == self.numberTextField{
@@ -186,7 +200,7 @@ extension ProfileEditViewController:UITextFieldDelegate{
                 self.dateTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
-        if self.nameTextField.text != "" && self.emailTextField.text != "" && self.numberTextField.text != "" && self.dateTextField.text != "" && self.nameTextField.textColor == UIColor.black && self.emailTextField.textColor == UIColor.black && self.numberTextField.textColor == UIColor.black{
+        if self.nameTextField.text != "" && self.emailTextField.text != "" && self.numberTextField.text != "" && self.dateTextField.text != "" && self.cityTextField.text != "" && self.nameTextField.textColor == UIColor.black && self.emailTextField.textColor == UIColor.black && self.numberTextField.textColor == UIColor.black && self.cityTextField.textColor == UIColor.black{
             self.saveButton.isHidden = false
         }
     }
@@ -206,7 +220,7 @@ extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigatio
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             self.profileImageView.contentMode = .scaleToFill
             self.profileImageView.image = pickedImage
-            self.profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+            self.viewModelEditProfile.cornerRadius(image: profileImageView)
             self.profileImageView.clipsToBounds = true
             
         }
