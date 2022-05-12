@@ -10,27 +10,37 @@ import UIKit
 class MyCustomCell: UITableViewCell {
     
     
-    @IBOutlet weak var fundoView: UIView!
-    @IBOutlet weak var fotoImageView: UIImageView!
-    @IBOutlet weak var nomeLabel: UILabel!
-    @IBOutlet weak var notaLabel: UILabel!
-    @IBOutlet weak var estrelaImageView: UIImageView!
+
+    @IBOutlet weak var backgrounddView: UIView!
+    @IBOutlet weak var pictureImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var noteLabel: UILabel!
+    @IBOutlet weak var starImageView: UIImageView!
+
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        confIniciais()
+    static let identifier:String = "MyCustomCell"
+    static func nib()-> UINib{
+        return UINib(nibName: self.identifier, bundle: nil)
     }
-    
     
     func confIniciais(){
-        self.fundoView.layer.cornerRadius = 15
+        self.backgrounddView.layer.cornerRadius = 15
     }
- 
+
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        confIniciais()
+        
+    }
+
+    public func setupCell(data:RegisterUser){
+        self.nameLabel.text = data.name
+        self.noteLabel.text = data.note
+        self.pictureImageView.image = UIImage(named: data.iconImage ?? "")
+    }
     
-    func setUpCell(professionals:Professionals){
-        fotoImageView.image = professionals.userImage
-        nomeLabel.text = professionals.userName
-        notaLabel.text = String(professionals.userRate)
-    }
+
 }
 

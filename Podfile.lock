@@ -1,10 +1,13 @@
 PODS:
+  - Alamofire (5.6.1)
   - AppAuth (1.5.0):
     - AppAuth/Core (= 1.5.0)
     - AppAuth/ExternalUserAgent (= 1.5.0)
   - AppAuth/Core (1.5.0)
   - AppAuth/ExternalUserAgent (1.5.0):
     - AppAuth/Core
+  - CPF-CNPJ-Validator (1.0.2)
+  - DropDown (2.3.13)
   - FBAEMKit (13.1.0):
     - FBSDKCoreKit_Basics (= 13.1.0)
   - FBSDKCoreKit (13.1.0):
@@ -125,6 +128,9 @@ PODS:
   - PromisesObjC (2.0.0)
 
 DEPENDENCIES:
+  - Alamofire
+  - CPF-CNPJ-Validator
+  - DropDown
   - FBSDKLoginKit
   - Firebase
   - Firebase/Auth
@@ -135,7 +141,10 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - AppAuth
+    - CPF-CNPJ-Validator
+    - DropDown
     - FBAEMKit
     - FBSDKCoreKit
     - FBSDKCoreKit_Basics
@@ -158,8 +167,11 @@ SPEC REPOS:
     - PromisesObjC
 
 SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   AppAuth: 80317d99ac7ff2801a2f18ff86b48cd315ed465d
-  FBAEMKit: 9ce89760a23f03ffecd907c8e1f3201160f2dcc7
+  CPF-CNPJ-Validator: 0b08069595da2c4b20e964b743bfc0a7334d5347
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  FBAEMKit: 3be32ffb79fe7c0603fed00d81742b23241e89a5
   FBSDKCoreKit: eff97dea778dbe6cc4498959cffb619c75675102
   FBSDKCoreKit_Basics: c151609a1cf6976a5958febcf0043266a8fd5151
   FBSDKLoginKit: 42932c7ad6f6b91854fc0a6bcc79b7e807bcde4b
@@ -180,6 +192,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
 
-PODFILE CHECKSUM: 1e81603ba7abaa28fd29e4662a4b4988bac8d9a9
+PODFILE CHECKSUM: 2b1f3dfcaec95d70636befd827bf66e21b880a59
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3
