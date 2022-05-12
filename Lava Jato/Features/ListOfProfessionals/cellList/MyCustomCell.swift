@@ -16,25 +16,21 @@ class MyCustomCell: UITableViewCell {
     @IBOutlet weak var notaLabel: UILabel!
     @IBOutlet weak var estrelaImageView: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        confIniciais()
+    }
     
     
     func confIniciais(){
         self.fundoView.layer.cornerRadius = 15
     }
-
+ 
     
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        confIniciais()
-        
+    func setUpCell(professionals:Professionals){
+        fotoImageView.image = professionals.userImage
+        nomeLabel.text = professionals.userName
+        notaLabel.text = String(professionals.userRate)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
+

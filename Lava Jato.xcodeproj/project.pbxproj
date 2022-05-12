@@ -12,6 +12,11 @@
 		443BAE9827BF4DE400751C16 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443BAE9727BF4DE400751C16 /* MainScreen.storyboard */; };
 		449EFAA727DE3AF4002111DE /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449EFAA627DE3AF3002111DE /* UserProfileViewController.swift */; };
 		44A1D92A282A056E0058A4F8 /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = 44A1D929282A056E0058A4F8 /* Users.json */; };
+		44B986D2282C0D0D00F4D4D1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B986D1282C0D0D00F4D4D1 /* MainViewModel.swift */; };
+		44B986D4282C13EC00F4D4D1 /* ModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B986D3282C13EB00F4D4D1 /* ModelService.swift */; };
+		44C17859282C6875000AF2B9 /* NewServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C17858282C6875000AF2B9 /* NewServiceViewController.swift */; };
+		44C1785D282C6921000AF2B9 /* NewServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C1785B282C6921000AF2B9 /* NewServiceTableViewCell.swift */; };
+		44C1785E282C6921000AF2B9 /* NewServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44C1785C282C6921000AF2B9 /* NewServiceTableViewCell.xib */; };
 		44CB2778282998CB00A7FD62 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB2777282998CB00A7FD62 /* FilterViewModel.swift */; };
 		44CB761E27E941B600A029FA /* PlaceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CB761C27E941B600A029FA /* PlaceCollectionViewCell.xib */; };
 		44CB761F27E941B600A029FA /* PlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB761D27E941B600A029FA /* PlaceCollectionViewCell.swift */; };
@@ -80,6 +85,11 @@
 		443BAE9727BF4DE400751C16 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 		449EFAA627DE3AF3002111DE /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		44A1D929282A056E0058A4F8 /* Users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
+		44B986D1282C0D0D00F4D4D1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		44B986D3282C13EB00F4D4D1 /* ModelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelService.swift; sourceTree = "<group>"; };
+		44C17858282C6875000AF2B9 /* NewServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewServiceViewController.swift; sourceTree = "<group>"; };
+		44C1785B282C6921000AF2B9 /* NewServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewServiceTableViewCell.swift; sourceTree = "<group>"; };
+		44C1785C282C6921000AF2B9 /* NewServiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewServiceTableViewCell.xib; sourceTree = "<group>"; };
 		44CB2777282998CB00A7FD62 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		44CB761C27E941B600A029FA /* PlaceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceCollectionViewCell.xib; sourceTree = "<group>"; };
 		44CB761D27E941B600A029FA /* PlaceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -247,6 +257,7 @@
 		443BAE8D27BF454800751C16 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				44C17857282C683C000AF2B9 /* NewService */,
 				E18703DB27E94DE7005B3AA9 /* ChangePassword */,
 				DA9954C227DF891E00C89D76 /* NotificationScreen */,
 				E13E5B2327D5ACF7000CB644 /* EditProfile */,
@@ -269,18 +280,37 @@
 		443BAE9527BF4C6800751C16 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				44A1D92B282A14290058A4F8 /* ViewModel */,
+				44B986D0282C0CF400F4D4D1 /* ViewModel */,
 				44177A40282888DF00496587 /* View */,
 				44177A412828895700496587 /* Controller */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
-		44A1D92B282A14290058A4F8 /* ViewModel */ = {
+		44B986D0282C0CF400F4D4D1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				44B986D1282C0D0D00F4D4D1 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		44C17857282C683C000AF2B9 /* NewService */ = {
+			isa = PBXGroup;
+			children = (
+				44C1785A282C6886000AF2B9 /* Cell */,
+				44C17858282C6875000AF2B9 /* NewServiceViewController.swift */,
+			);
+			path = NewService;
+			sourceTree = "<group>";
+		};
+		44C1785A282C6886000AF2B9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				44C1785B282C6921000AF2B9 /* NewServiceTableViewCell.swift */,
+				44C1785C282C6921000AF2B9 /* NewServiceTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		44CB2776282998AB00A7FD62 /* ViewModel */ = {
@@ -398,6 +428,7 @@
 			children = (
 				A2F799D727DC6CC8005A53A3 /* Model.swift */,
 				44A1D929282A056E0058A4F8 /* Users.json */,
+				44B986D3282C13EB00F4D4D1 /* ModelService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -633,6 +664,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E162E08327ADF54000C6AD32 /* LaunchScreen.storyboard in Resources */,
+				44C1785E282C6921000AF2B9 /* NewServiceTableViewCell.xib in Resources */,
 				DA9954CE27DF8A2D00C89D76 /* NotificationViewController.storyboard in Resources */,
 				44CB762927E941C800A029FA /* GenderTableViewCell.xib in Resources */,
 				44CB763427E941FD00A029FA /* FilterStoryboard.storyboard in Resources */,
@@ -759,12 +791,16 @@
 				A212221727D13E7F00B24208 /* myServicesViewController.swift in Sources */,
 				44CB762327E941C200A029FA /* PriceTableViewCell.swift in Sources */,
 				A212221F27D13EE500B24208 /* MyCustomCell.swift in Sources */,
+				44C1785D282C6921000AF2B9 /* NewServiceTableViewCell.swift in Sources */,
 				E18703DA27E9210A005B3AA9 /* MainScreen.swift in Sources */,
 				A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */,
 				DA9954D027DF8A8100C89D76 /* NotificationViewController.swift in Sources */,
 				A2F799D827DC6CC8005A53A3 /* Model.swift in Sources */,
 				A212221327D13E5300B24208 /* requestServiceViewController.swift in Sources */,
+				44B986D4282C13EC00F4D4D1 /* ModelService.swift in Sources */,
+				44C17859282C6875000AF2B9 /* NewServiceViewController.swift in Sources */,
 				E10CB59427B7218100D49C01 /* resetPasswordViewController.swift in Sources */,
+				44B986D2282C0D0D00F4D4D1 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

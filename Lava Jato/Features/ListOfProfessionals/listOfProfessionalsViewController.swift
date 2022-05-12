@@ -14,7 +14,9 @@ class listOfProfessionalsViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
-        
+    
+    var filterArray:[Professionals] = []
+    
     private var arrayNames:[String] = ["Claudio Mattos", "Brendon Oliveira", "Thiago Valentim", "Olímpio Junior", "Caio Fabrini", "Lucas Munho"]
     private var arrayNotes:[String] = ["5.0", "4.8", "4.7", "4.7", "4.4", "4.3"]
     
@@ -30,20 +32,20 @@ class listOfProfessionalsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-        configItems()
-        
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
-        
-        self.tableView.register(UINib(nibName: "MyCustomCell", bundle: nil), forCellReuseIdentifier: "MyCustomCell")
-        
+        self.setup()
+        self.configItems()
+        self.configtableView()
     }
     
     @objc private func tapFilter(){
         performSegue(withIdentifier: "filter", sender: nil)
     }
     
+    private func configtableView(){
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.register(UINib(nibName: "MyCustomCell", bundle: nil), forCellReuseIdentifier: "MyCustomCell")
+    }
     
     func configItems(){
         self.navigationController?.navigationBar.tintColor = UIColor.ColorDefault
@@ -54,29 +56,22 @@ class listOfProfessionalsViewController: UIViewController {
             action: #selector(tapFilter)
         )
     }
-    
 }
 
 extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return self.arrayNames.count
+        return self.filterArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MyCustomCell? = tableView.dequeueReusableCell(withIdentifier: "MyCustomCell", for: indexPath) as? MyCustomCell
-        
-        cell?.fotoImageView.image = UIImage(named: self.arrayNames[indexPath.row])
-        cell?.nomeLabel.text = self.arrayNames[indexPath.row]
-        cell?.notaLabel.text = self.arrayNotes[indexPath.row]
+        cell?.setUpCell(professionals:filterArray[indexPath.row])
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedRow = self.arrayNames[indexPath.row]
+        let selectedRow = self.filterArray[indexPath.row]
         performSegue(withIdentifier: "requestService", sender: selectedRow)
         tableView.deselectRow(at: indexPath, animated: false)
     }
-    
 }

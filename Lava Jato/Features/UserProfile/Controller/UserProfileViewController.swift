@@ -50,7 +50,9 @@ class UserProfileViewController: UIViewController {
     @IBAction func tappedLogoutButton(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Login", bundle: nil)
         let vC = storyboard.instantiateViewController(withIdentifier: "Login")
-        UIApplication.shared.keyWindow?.rootViewController = vC
+        navigationController?.pushViewController(vC, animated: true)
+       
+        
     }
     
     @IBAction func tappedEditProfile(_ sender: UIButton) {
