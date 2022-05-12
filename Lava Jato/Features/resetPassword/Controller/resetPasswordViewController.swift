@@ -9,7 +9,6 @@ import UIKit
 
 class resetPasswordViewController: UIViewController {
 
-    
     @IBOutlet weak var tfEmailReset: UITextField!
     @IBOutlet weak var sendEmail: UIButton!
     @IBOutlet weak var changerEmail: UIButton!
@@ -19,7 +18,6 @@ class resetPasswordViewController: UIViewController {
         setupStyle()
      
     }
-    
     
     @IBAction func backLogin(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -52,8 +50,5 @@ class resetPasswordViewController: UIViewController {
         changerEmail.layer.masksToBounds = true
         changerEmail.layer.borderColor = UIColor.white.cgColor
         changerEmail.layer.borderWidth = 2
-        
     }
-
-
 }

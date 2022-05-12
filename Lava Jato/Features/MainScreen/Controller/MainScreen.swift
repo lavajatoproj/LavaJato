@@ -155,9 +155,3 @@ extension MainScreen: UICollectionViewDelegateFlowLayout{
         return 15
     }
 }
-
-
-
-
-
-

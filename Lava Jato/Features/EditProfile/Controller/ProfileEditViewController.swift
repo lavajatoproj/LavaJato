@@ -79,6 +79,7 @@ class ProfileEditViewController: UIViewController {
         dateTextField.inputView = datePicker
         dateTextField.inputAccessoryView = createToolbar()
     }
+    
     func createToolbar () -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -86,6 +87,7 @@ class ProfileEditViewController: UIViewController {
         toolbar.setItems([doneButton], animated: true)
         return toolbar
     }
+    
     @objc func donePressed(){
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -110,7 +112,6 @@ class ProfileEditViewController: UIViewController {
         let vC = storyboard.instantiateViewController(withIdentifier: "ChangePasswordViewController")
         navigationController?.pushViewController(vC, animated: true)
     }
-    
     
     @IBAction func tappedChangeService(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "myServices", bundle: nil)
@@ -190,14 +191,15 @@ extension ProfileEditViewController:UITextFieldDelegate{
             self.saveButton.isHidden = false
         }
     }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
+    
     func Style(){
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
-        
     }
 }
 
@@ -208,7 +210,6 @@ extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigatio
             self.profileImageView.image = pickedImage
             self.profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
             self.profileImageView.clipsToBounds = true
-            
         }
         dismiss(animated: true, completion: nil)
     }
@@ -216,3 +217,14 @@ extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigatio
         dismiss(animated: true, completion: nil)
     }
 }
+<<<<<<< HEAD
+=======
+
+//extension ProfileEditViewController:ScreenRegisterControllerDelegate{
+//    func refreshData() {
+//        
+//    }
+//    
+//    
+//}
+>>>>>>> 11c9f68 (code organization)

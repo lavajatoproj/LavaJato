@@ -20,7 +20,6 @@ class FilterViewController: UIViewController{
         ProfileGender(nameM: "Profissionais homem", nameF: "Profissionais mulher")
     ]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.settingsTView()
@@ -38,9 +37,7 @@ class FilterViewController: UIViewController{
         self.tViewTableView.dataSource = self
         self.tViewTableView.register(GenderTableViewCell.nib(), forCellReuseIdentifier: GenderTableViewCell.identifier)
         self.tViewTableView.register(PriceTableViewCell.nib(), forCellReuseIdentifier: PriceTableViewCell.identifier)
-      
     }
-    
 }
 
 // MARK: - Extension
@@ -75,4 +72,3 @@ extension FilterViewController:UITableViewDataSource{
         }
     }
 }
-
