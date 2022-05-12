@@ -12,6 +12,7 @@ struct Services{
     var opened: Bool
     var title:String
     var service: [String]
+    var price: [String]
 }
 
 
