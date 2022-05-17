@@ -28,7 +28,7 @@ class NotificationTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.backgroundXib.layer.cornerRadius = 15.0
     }
-    public func dados(profile:Profile){
+    public func data(profile:Profile){
         self.nameLabel.text = profile.name
         self.userImage.image = profile.photo
         self.numberLabel.text = profile.number
