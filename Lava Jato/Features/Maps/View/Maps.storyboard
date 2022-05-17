@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Localização-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="maps" id="Y6W-OH-hqX" customClass="MapsViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="jUW-qA-u4h">
+                                <rect key="frame" x="0.0" y="-56" width="414" height="958"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" restorationIdentifier="maps" translatesAutoresizingMaskIntoConstraints="NO" id="j1x-qP-jdq" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Localização" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uZd-bf-puc">
+                                <rect key="frame" x="10" y="54" width="394" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="M0m-c0-a1w"/>
+                                    <constraint firstAttribute="height" constant="40" id="xzS-NI-Ha2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Oh-1K-phN">
+                                <rect key="frame" x="10" y="54" width="394" height="40"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="locationTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DYb-fz-T2N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Oh-1K-phN" firstAttribute="top" secondItem="uZd-bf-puc" secondAttribute="top" id="0Gq-AD-hJ3"/>
+                            <constraint firstItem="6Oh-1K-phN" firstAttribute="bottom" secondItem="uZd-bf-puc" secondAttribute="bottom" id="2Yc-Kc-Rcq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uZd-bf-puc" secondAttribute="trailing" constant="10" id="828-tX-eFs"/>
+                            <constraint firstItem="6Oh-1K-phN" firstAttribute="trailing" secondItem="uZd-bf-puc" secondAttribute="trailing" id="91w-6R-JJ5"/>
+                            <constraint firstItem="uZd-bf-puc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="HqW-Gr-fWz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="j1x-qP-jdq" secondAttribute="trailing" id="Jav-Su-cPQ"/>
+                            <constraint firstItem="j1x-qP-jdq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="VvY-zm-a30"/>
+                            <constraint firstItem="jUW-qA-u4h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WVh-BN-wXA"/>
+                            <constraint firstItem="j1x-qP-jdq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="b11-cw-GQG"/>
+                            <constraint firstItem="6Oh-1K-phN" firstAttribute="leading" secondItem="uZd-bf-puc" secondAttribute="leading" id="ger-OE-Me8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jUW-qA-u4h" secondAttribute="trailing" id="l39-XP-eLt"/>
+                            <constraint firstItem="uZd-bf-puc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="n6u-C2-Kjm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jUW-qA-u4h" secondAttribute="bottom" constant="-40" id="qtV-Z7-OFL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="j1x-qP-jdq" secondAttribute="bottom" id="tdA-MM-O4u"/>
+                            <constraint firstItem="jUW-qA-u4h" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-100" id="vB7-Dt-d85"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Localização" id="ZlI-Rx-bnw"/>
+                    <connections>
+                        <outlet property="mapView" destination="j1x-qP-jdq" id="M0p-hE-W0G"/>
+                        <outlet property="txtSearch" destination="uZd-bf-puc" id="Qz7-zG-d7r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="440" height="926"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
