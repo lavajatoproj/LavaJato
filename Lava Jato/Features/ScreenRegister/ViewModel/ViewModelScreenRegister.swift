@@ -12,6 +12,7 @@ import DropDown
 
 private let statusDropDown = DropDown()
 private let genderDropDown = DropDown()
+private let stateDropDown = DropDown()
 
 
 class ViewModelScreenRegister{
@@ -84,13 +85,13 @@ class ViewModelScreenRegister{
         statusDropDown.show()
     }
     public func createDropDownState(button:UIButton){
-        statusDropDown.anchorView = button
-        statusDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)
-        statusDropDown.dataSource = ["Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceara", "Distrito Federal    ", "Espírito Santo", "Goiás","Maranhão","Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro","Rio Grande do Norte","Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"]
-        statusDropDown.selectionAction = { (index, item) in
+        stateDropDown.anchorView = button
+        stateDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)
+        stateDropDown.dataSource = ["Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceara", "Distrito Federal    ", "Espírito Santo", "Goiás","Maranhão","Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro","Rio Grande do Norte","Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"]
+        stateDropDown.selectionAction = { (index, item) in
             button.setTitle(item, for: .normal)
         }
-        statusDropDown.show()
+        stateDropDown.show()
     }
     
     public func boolTrue(value:Bool)-> Bool{

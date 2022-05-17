@@ -8,7 +8,7 @@
 import UIKit
 import MessageUI
 
-class HelpScreenViewController: UIViewController {
+class HelpScreenViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     private let viewModel:helpScreenViewModel = helpScreenViewModel()
@@ -41,15 +41,29 @@ class HelpScreenViewController: UIViewController {
     }
     
     @IBAction func btEmail(_ sender: Any) {
-        let email = "breendonpsn@gmail.com"
-        if let url = URL(string: "mailto:\(email)") {
-          if #available(iOS 10.0, *) {
-            UIApplication.shared.open(url)
-          } else {
-            UIApplication.shared.openURL(url)
-          }
+        self.sendEmail()
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["ved.ios@yopmail.com"])
+            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+            
+            present(mail, animated: true)
+        } else {
+            self.alert?.showAlert(title: "Erro", message: "Você não possui o Mail instalado em seu dispositivo", titleButton: "Aceitar", completion: { value in
+                print(#function)
+            })
+            
         }
     }
+    
     
     func Style(){
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]

@@ -51,6 +51,10 @@ class ScreenRegisterViewController: UIViewController {
         self.viewModelScreenRegister.textFieldStyle(textField: self.documentRegisterTextField)
     }
     
+    func saveUserDefaults(value: Any, key: String){
+        UserDefaults.standard.set(value, forKey: key)
+    }
+    
     func createToolbar () -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -120,6 +124,7 @@ class ScreenRegisterViewController: UIViewController {
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         performSegue(withIdentifier: "tappedRegisterSegue", sender: nil)
+        self.saveUserDefaults(value: self.statesButton.titleLabel?.text ?? "Selecione", key: "userState")
     }
     
     @IBAction func tappedBackLogin(_ sender: UIButton) {

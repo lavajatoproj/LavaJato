@@ -13,17 +13,18 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var numberTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
-    @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var changeServicesButton: UIButton!
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var profileImageView:UIImageView!
     @IBOutlet weak var editPhotoButton:UIButton!
+    @IBOutlet weak var stateButton: UIButton!
     private var viewModelEditProfile:ViewModelEditProfile = ViewModelEditProfile()
     private var alert:AlertController?
     var imagePicker = UIImagePickerController()
     let datePicker = UIDatePicker()
+    var valueStateButton:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,60 +33,79 @@ class ProfileEditViewController: UIViewController {
         self.createDatePicker()
         self.configTextField()
         self.configPhotoPicker()
+        self.setPlaceHolders()
         self.alert = AlertController(controller: self)
+        self.disableSaveButton()
+        self.stateButtonConfig()
+        self.activeSaveButton()
     }
     
     func saveUserDefaults(value: Any, key: String){
         UserDefaults.standard.set(value, forKey: key)
     }
     func getUserDefaults(key: String)-> Any?{
-    return UserDefaults.standard.object(forKey: key)
+        return UserDefaults.standard.object(forKey: key)
     }
-    
+    func enableSaveButton(){
+        self.saveButton.isEnabled = true
+        self.saveButton.alpha = 1.0
+    }
+    func disableSaveButton(){
+        self.saveButton.isEnabled = false
+        self.saveButton.alpha = 0.0
+    }
+    func stateButtonConfig(){
+        self.stateButton.layer.cornerRadius = 5.0
+        self.stateButton.layer.borderWidth = 2.0
+        self.stateButton.layer.borderColor = UIColor.lightGray.cgColor
+        if self.stateButton.titleLabel?.text == "Selecione"{
+            self.stateButton.layer.borderColor = UIColor.red.cgColor
+        }
+    }
     func configTextField(){
         self.nameTextField.delegate = self
         self.numberTextField.delegate = self
         self.emailTextField.delegate = self
         self.dateTextField.delegate = self
-        self.cityTextField.delegate = self
         self.viewModelEditProfile.textFieldStyle(textField: self.nameTextField)
         self.viewModelEditProfile.textFieldStyle(textField: self.numberTextField)
         self.viewModelEditProfile.textFieldStyle(textField: self.emailTextField)
         self.viewModelEditProfile.textFieldStyle(textField: self.dateTextField)
-        self.viewModelEditProfile.textFieldStyle(textField: self.cityTextField)
     }
-    
     func resetTextField(){
         self.nameTextField.text = ""
         self.numberTextField.text = ""
         self.emailTextField.text = ""
         self.dateTextField.text = ""
-        self.cityTextField.text = ""
     }
-    
-    func setValueTextField(){
-        self.saveButton.isEnabled = false
+    func setPlaceHolders(){
+        self.disableSaveButton()
         self.nameTextField.placeholder = self.getUserDefaults(key: "userName") as? String
         self.numberTextField.placeholder = self.getUserDefaults(key: "userPhone") as? String
         self.emailTextField.placeholder = self.getUserDefaults(key: "userEmail") as? String
         self.dateTextField.placeholder = self.getUserDefaults(key: "userBirthday") as? String
-        self.cityTextField.placeholder = self.getUserDefaults(key: "city") as? String
         self.nameLabel.text = self.getUserDefaults(key: "userName")as? String
-        
+        self.valueStateButton = self.getUserDefaults(key: "userState") as? String
+        self.stateButton.setTitle(valueStateButton, for: .normal)
     }
-    
     func configPhotoPicker(){
         self.imagePicker.delegate = self
     }
-    
     func userDefault(){
-        self.saveUserDefaults(value: self.nameTextField.text ?? "", key: "userName")
-        self.saveUserDefaults(value: self.numberTextField.text ?? "", key: "userPhone")
-        self.saveUserDefaults(value: self.emailTextField.text ?? "", key: "userEmail")
-        self.saveUserDefaults(value: self.dateTextField.text ?? "", key: "userBirthday")
-        self.saveUserDefaults(value: self.cityTextField.text ?? "", key: "city")
+        if self.nameTextField.text != ""{
+            self.saveUserDefaults(value: self.nameTextField.text ?? "", key: "userName")
+        }
+        if self.numberTextField.text != ""{
+            self.saveUserDefaults(value: self.numberTextField.text ?? "", key: "userPhone")
+        }
+        if self.emailTextField.text != ""{
+            self.saveUserDefaults(value: self.emailTextField.text ?? "", key: "userEmail")
+        }
+        if self.dateTextField.text != ""{
+            self.saveUserDefaults(value: self.dateTextField.text ?? "", key: "userBirthday")
+        }
+        self.saveUserDefaults(value: self.stateButton.titleLabel?.text ?? "Selecione", key: "userState")
     }
-    
     public func createDatePicker(){
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
@@ -93,7 +113,6 @@ class ProfileEditViewController: UIViewController {
         dateTextField.inputView = datePicker
         dateTextField.inputAccessoryView = createToolbar()
     }
-    
     func createToolbar () -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -101,21 +120,27 @@ class ProfileEditViewController: UIViewController {
         toolbar.setItems([doneButton], animated: true)
         return toolbar
     }
-    
     @objc func donePressed(){
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         self.dateTextField.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
+        self.activeSaveButton()
     }
+    
+    @IBAction func tappedStateButton(_ sender: UIButton) {
+        self.viewModelEditProfile.createDropDownState(button: stateButton)
+    }
+    
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
         self.alert?.showAlert(title: "Concluido", message: "Suas alterações foram salvas", titleButton: "Confirmar", completion: { value in
-            self.resetTextField()
+            self.activeSaveButton()
         })
         self.userDefault()
-        self.setValueTextField()
+        self.setPlaceHolders()
+        self.resetTextField()
     }
     
     @IBAction func tappedChangePassword(_ sender: UIButton) {
@@ -167,47 +192,45 @@ extension ProfileEditViewController:UITextFieldDelegate{
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == self.nameTextField{
-            if self.nameTextField.text == ""{
+            if self.nameTextField.placeholder == ""{
                 self.nameTextField.layer.borderColor = UIColor.red.cgColor
             }else{
                 self.nameTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
-        if textField == self.cityTextField{
-            if self.cityTextField.text == ""{
-                self.cityTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.cityTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
         if textField == self.numberTextField{
-            if self.numberTextField.text == ""{
+            if self.numberTextField.placeholder == ""{
                 self.numberTextField.layer.borderColor = UIColor.red.cgColor
             }else{
                 self.numberTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
         if textField == self.emailTextField{
-            if self.emailTextField.text == ""{
+            if self.emailTextField.placeholder == ""{
                 self.emailTextField.layer.borderColor = UIColor.red.cgColor
             }else{
                 self.emailTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
         if textField == self.dateTextField{
-            if self.dateTextField.text == ""{
+            if self.dateTextField.placeholder == ""{
                 self.dateTextField.layer.borderColor = UIColor.red.cgColor
             }else{
                 self.dateTextField.layer.borderColor = UIColor.lightGray.cgColor
             }
         }
-        if self.nameTextField.text != "" && self.emailTextField.text != "" && self.numberTextField.text != "" && self.dateTextField.text != "" && self.cityTextField.text != "" && self.nameTextField.textColor == UIColor.black && self.emailTextField.textColor == UIColor.black && self.numberTextField.textColor == UIColor.black && self.cityTextField.textColor == UIColor.black{
-            self.saveButton.isHidden = false
+    }
+    
+    func activeSaveButton(){
+        if self.nameTextField.placeholder != "" && self.emailTextField.placeholder != "" && self.numberTextField.placeholder != "" && self.dateTextField.placeholder != "" && self.stateButton.titleLabel?.text != "Selecione" && self.nameTextField.textColor != UIColor.red && self.emailTextField.textColor != UIColor.red && self.numberTextField.textColor != UIColor.red && self.stateButton.titleLabel?.textColor != UIColor.red{
+            self.enableSaveButton()
         }
     }
     
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        self.activeSaveButton()
         return true
     }
     
@@ -224,6 +247,7 @@ extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigatio
             self.profileImageView.image = pickedImage
             self.viewModelEditProfile.cornerRadius(image: profileImageView)
             self.profileImageView.clipsToBounds = true
+            
         }
         dismiss(animated: true, completion: nil)
     }
