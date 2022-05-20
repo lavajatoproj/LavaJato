@@ -14,7 +14,7 @@ enum ActionType{
 }
 
 class AlertController {
-
+    
     var controller:UIViewController
     
     init(controller:UIViewController){
@@ -24,12 +24,14 @@ class AlertController {
         let alert:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let aceitar = UIAlertAction(title: titleButton, style: .default) { alert in
             print("aceitar pressionado")
+            completion(.aceitar)
         }
         let cancel = UIAlertAction(title: "Cancelar", style: .default) { _ in
             completion(.cancel)
         }
         
         alert.addAction(aceitar)
+        alert.addAction(cancel)
         self.controller.present(alert, animated: true)
     }
     
