@@ -7,16 +7,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2548E4E8-DF06-4A1F-BAB2-929C315AA988"
+            uuid = "BB3D1031-3998-4C1C-921B-95788E806B0E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Lava Jato/Features/ScreenRegister/ViewModel/ViewModelScreenRegister.swift"
+            filePath = "Lava Jato/Features/HelpScreen/Controller/HelpScreenViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "validation(nameTextField:emailTextField:numberTextField:documentTextField:dateTextField:checkBox:registerButton:genderButton:statusButton:stateButton:)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "btEmail(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3317259-75F6-41AD-86D8-343695182F33"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lava Jato/Features/HelpScreen/Controller/HelpScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "mailComposeController(_:didFinishWith:error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B2F0699-6235-4E82-AAA4-AD08C50B4142"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Lava Jato/Features/HelpScreen/Controller/HelpScreenViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "sendEmail()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -18,15 +18,15 @@ class ViewModelNotificationScreen {
         self.data.append(Profile.init(name: "Nome: Claudio", photo: UIImage(imageLiteralResourceName: "profile1"), adress: "Endereço: Rua numero, 2221 ", number: "Telefone: (11)99999-9999 ", request: "Data do Pedido: 29/12/2022", service: "Tipo do Serviço: Lavagem Simples ", payment: "Tipo do Pagamento: Cartão de Crédito"))
     }
     
-    func loadCellUser(indexPath:IndexPath)->Profile{
+    public func loadCellUser(indexPath:IndexPath)->Profile{
         return self.data[indexPath.row]
     }
     
-    var countElementsArray:Int{
+    public var countElementsArray:Int{
         return self.data.count
     }
     
-    func removeIndex(indexPath:IndexPath)->Profile{
+    public func removeIndex(indexPath:IndexPath)->Profile{
         self.data.remove(at: indexPath.row)
     }
     

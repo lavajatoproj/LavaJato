@@ -14,7 +14,7 @@ enum ActionType{
 }
 
 class AlertController {
-
+    
     var controller:UIViewController
     
     init(controller:UIViewController){

@@ -114,7 +114,7 @@ extension String {
     }
     
     func isValidPassword() -> Bool {
-        let inputRegEx = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*()-_+={}?>.<,:;~`']{8,}$"
+        let inputRegEx = "^[0-9a-zA-Z!@#$%^&*()-_+={}?>.<,:;~`']{6,200}$"
         let inputpred = NSPredicate(format: "SELF MATCHES %@", inputRegEx)
         return inputpred.evaluate(with:self)
     }

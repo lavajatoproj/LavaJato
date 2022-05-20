@@ -36,7 +36,7 @@ extension NotificationViewController:UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NotificationTableViewCell.identifier, for: indexPath) as? NotificationTableViewCell
-        cell?.dados(profile: self.viewModelNotificationScreen.loadCellUser(indexPath: indexPath))
+        cell?.data(profile: self.viewModelNotificationScreen.loadCellUser(indexPath: indexPath))
         cell?.xibView.layer.borderWidth = 0.0
         return cell ?? UITableViewCell()
     }
