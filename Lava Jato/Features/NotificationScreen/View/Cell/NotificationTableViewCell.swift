@@ -37,6 +37,16 @@ class NotificationTableViewCell: UITableViewCell {
         self.serviceLabel.text = profile.service
         self.paymentLabel.text = profile.payment
     }
+    public func dataService(profileService:ProfileService){
+        self.nameLabel.text = profileService.name
+        self.userImage.image = profileService.photo
+        self.numberLabel.text = profileService.number
+        self.adressLabel.text = profileService.adress
+        self.requestLabel.text = profileService.request
+        self.serviceLabel.text = profileService.service
+        self.paymentLabel.text = profileService.payment
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

@@ -11,6 +11,8 @@ class NotificationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroudView: UIImageView!
     
+    @IBOutlet weak var segmentedControlSwitch: UISegmentedControl!
+    
     private var viewModelNotificationScreen:ViewModelNotificationScreen = ViewModelNotificationScreen()
     
     override func viewDidLoad() {
@@ -18,6 +20,8 @@ class NotificationViewController: UIViewController {
         self.configTableView()
         self.backgroudView.layer.cornerRadius = 15.0
         self.viewModelNotificationScreen.appendData()
+        self.configSegmentControl()
+
     }
     
     func configTableView(){
@@ -27,17 +31,40 @@ class NotificationViewController: UIViewController {
         self.tableView.layer.cornerRadius = 15.0
         self.tableView.backgroundColor = UIColor.clear
     }
+    
+    func configSegmentControl(){
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.ColorDefault]
+        segmentedControlSwitch.setTitleTextAttributes(titleTextAttributes, for: .normal)
+        segmentedControlSwitch.setTitleTextAttributes(titleTextAttributes, for: .highlighted)
+        
+    }
+    
+    @IBAction func tappedSegmentControl(_ sender: UISegmentedControl) {
+        self.tableView.reloadData()
+
+    }
+    
 }
 
 extension NotificationViewController:UITableViewDataSource, UITableViewDelegate{
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModelNotificationScreen.countElementsArray
+        self.viewModelNotificationScreen.countCells(segment: self.segmentedControlSwitch)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NotificationTableViewCell.identifier, for: indexPath) as? NotificationTableViewCell
-        cell?.data(profile: self.viewModelNotificationScreen.loadCellUser(indexPath: indexPath))
-        cell?.xibView.layer.borderWidth = 0.0
+        switch segmentedControlSwitch.selectedSegmentIndex {
+        case 0:
+            cell?.data(profile: self.viewModelNotificationScreen.loadCellUser(indexPath: indexPath))
+            cell?.xibView.layer.borderWidth = 0.0
+        case 1:
+            cell?.dataService(profileService: self.viewModelNotificationScreen.loadCellService(indexPath: indexPath))
+            cell?.xibView.layer.borderWidth = 0.0
+        default:
+            break
+        }
         return cell ?? UITableViewCell()
     }
     
@@ -63,5 +90,25 @@ extension NotificationViewController:UITableViewDataSource, UITableViewDelegate{
         }
         deletAction.image = UIImage(systemName: "trash")
         return UISwipeActionsConfiguration(actions: [deletAction])
+    }
+}
+extension UISegmentedControl
+{
+    func defaultConfiguration(font: UIFont = UIFont.systemFont(ofSize: 12), color: UIColor = UIColor.white)
+    {
+        let defaultAttributes = [
+            NSAttributedString.Key.font: font,
+            NSAttributedString.Key.foregroundColor: color
+        ]
+        setTitleTextAttributes(defaultAttributes, for: .normal)
+    }
+
+    func selectedConfiguration(font: UIFont = UIFont.boldSystemFont(ofSize: 12), color: UIColor = UIColor.red)
+    {
+        let selectedAttributes = [
+            NSAttributedString.Key.font: font,
+            NSAttributedString.Key.foregroundColor: color
+        ]
+        setTitleTextAttributes(selectedAttributes, for: .selected)
     }
 }

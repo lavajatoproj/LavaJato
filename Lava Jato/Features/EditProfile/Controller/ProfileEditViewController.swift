@@ -55,11 +55,14 @@ class ProfileEditViewController: UIViewController {
         self.saveButton.alpha = 0.0
     }
     func stateButtonConfig(){
-        self.stateButton.layer.cornerRadius = 5.0
-        self.stateButton.layer.borderWidth = 2.0
-        self.stateButton.layer.borderColor = UIColor.lightGray.cgColor
+//        self.stateButton.layer.cornerRadius = 5.0
+//        self.stateButton.layer.borderWidth = 2.0
+//        self.stateButton.layer.borderColor = UIColor.lightGray.cgColor
+//        if self.stateButton.titleLabel?.text == "Selecione"{
+//            self.stateButton.layer.borderColor = UIColor.red.cgColor
+//        }
         if self.stateButton.titleLabel?.text == "Selecione"{
-            self.stateButton.layer.borderColor = UIColor.red.cgColor
+            self.stateButton.titleLabel?.textColor = UIColor.red
         }
     }
     func configTextField(){
@@ -71,6 +74,7 @@ class ProfileEditViewController: UIViewController {
         self.viewModelEditProfile.textFieldStyle(textField: self.numberTextField)
         self.viewModelEditProfile.textFieldStyle(textField: self.emailTextField)
         self.viewModelEditProfile.textFieldStyle(textField: self.dateTextField)
+        self.viewModelEditProfile.selectButtonStyle(button: self.stateButton)
     }
     func resetTextField(){
         self.nameTextField.text = ""
@@ -187,8 +191,8 @@ class ProfileEditViewController: UIViewController {
 extension ProfileEditViewController:UITextFieldDelegate{
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderColor = UIColor.blue.cgColor
-        self.viewModelEditProfile.widthTextField(textField: textField, value: 2.0)
+//        textField.layer.borderColor = UIColor.blue.cgColor
+//        self.viewModelEditProfile.widthTextField(textField: textField, value: 2.0)
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == self.nameTextField{
