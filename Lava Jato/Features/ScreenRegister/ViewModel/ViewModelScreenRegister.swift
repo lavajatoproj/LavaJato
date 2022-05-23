@@ -59,11 +59,21 @@ class ViewModelScreenRegister{
             textField.textColor = UIColor.black
         }
     }
+    public func textfieldStyle(textField:UITextField, color:UIColor){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: textField.frame.height - 2, width: textField.frame.width, height: 2)
+        bottomLine.backgroundColor = color.cgColor
+        textField.backgroundColor = .clear
+        textField.borderStyle = .none
+        textField.layer.addSublayer(bottomLine)
+    }
     
-    public func textFieldStyle(textField:UITextField){
-        textField.layer.borderWidth = 2.0
-        textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.layer.cornerRadius = 5.0
+    public func buttonStyle(button:UIButton){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: button.frame.height - 2, width: button.frame.width, height: 2)
+        bottomLine.backgroundColor = UIColor.ColorDefault.cgColor
+        button.backgroundColor = .clear
+        button.layer.addSublayer(bottomLine)
     }
     
     public func createDropDownGender(button:UIButton){
@@ -84,6 +94,7 @@ class ViewModelScreenRegister{
         }
         statusDropDown.show()
     }
+
     public func createDropDownState(button:UIButton){
         stateDropDown.anchorView = button
         stateDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)

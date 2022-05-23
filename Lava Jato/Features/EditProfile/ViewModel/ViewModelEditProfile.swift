@@ -11,10 +11,21 @@ import DropDown
 class ViewModelEditProfile {
     private let stateDropDown = DropDown()
     
-    public func textFieldStyle(textField:UITextField){
-        textField.layer.borderWidth = 2.0
-        textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.layer.cornerRadius = 5.0
+    public func selectButtonStyle(button:UIButton){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: button.frame.height - 2, width: button.frame.width, height: 2)
+        bottomLine.backgroundColor = UIColor.ColorDefault.cgColor
+        button.backgroundColor = .clear
+        button.layer.addSublayer(bottomLine)
+    }
+    
+    public func textfieldStyle(textField:UITextField, color:UIColor){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: textField.frame.height - 2, width: textField.frame.width, height: 2)
+        bottomLine.backgroundColor = color.cgColor
+        textField.backgroundColor = .clear
+        textField.borderStyle = .none
+        textField.layer.addSublayer(bottomLine)
     }
     
     public func cornerRadius(image:UIImageView){
@@ -23,7 +34,6 @@ class ViewModelEditProfile {
     
     public func widthTextField(textField:UITextField, value:Double){
         textField.layer.borderWidth = value
-
     }
     
     public func instantiateVC(nameVC:String, navigation:UINavigationController){
