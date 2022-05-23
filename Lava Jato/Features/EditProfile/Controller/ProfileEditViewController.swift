@@ -35,9 +35,9 @@ class ProfileEditViewController: UIViewController {
         self.configPhotoPicker()
         self.setPlaceHolders()
         self.alert = AlertController(controller: self)
-        self.disableSaveButton()
         self.stateButtonConfig()
         self.activeSaveButton()
+        self.configButton()
     }
     
     func saveUserDefaults(value: Any, key: String){
@@ -55,12 +55,6 @@ class ProfileEditViewController: UIViewController {
         self.saveButton.alpha = 0.0
     }
     func stateButtonConfig(){
-//        self.stateButton.layer.cornerRadius = 5.0
-//        self.stateButton.layer.borderWidth = 2.0
-//        self.stateButton.layer.borderColor = UIColor.lightGray.cgColor
-//        if self.stateButton.titleLabel?.text == "Selecione"{
-//            self.stateButton.layer.borderColor = UIColor.red.cgColor
-//        }
         if self.stateButton.titleLabel?.text == "Selecione"{
             self.stateButton.titleLabel?.textColor = UIColor.red
         }
@@ -70,12 +64,16 @@ class ProfileEditViewController: UIViewController {
         self.numberTextField.delegate = self
         self.emailTextField.delegate = self
         self.dateTextField.delegate = self
-        self.viewModelEditProfile.textFieldStyle(textField: self.nameTextField)
-        self.viewModelEditProfile.textFieldStyle(textField: self.numberTextField)
-        self.viewModelEditProfile.textFieldStyle(textField: self.emailTextField)
-        self.viewModelEditProfile.textFieldStyle(textField: self.dateTextField)
+        self.viewModelEditProfile.textfieldStyle(textField: self.nameTextField, color: UIColor.ColorDefault)
+        self.viewModelEditProfile.textfieldStyle(textField: self.numberTextField, color: UIColor.ColorDefault)
+        self.viewModelEditProfile.textfieldStyle(textField: self.emailTextField, color: UIColor.ColorDefault)
+        self.viewModelEditProfile.textfieldStyle(textField: self.dateTextField, color: UIColor.ColorDefault)
+    }
+    
+    func configButton(){
         self.viewModelEditProfile.selectButtonStyle(button: self.stateButton)
     }
+    
     func resetTextField(){
         self.nameTextField.text = ""
         self.numberTextField.text = ""
@@ -110,6 +108,14 @@ class ProfileEditViewController: UIViewController {
         }
         self.saveUserDefaults(value: self.stateButton.titleLabel?.text ?? "Selecione", key: "userState")
     }
+    
+    func activeSaveButton(){
+        if self.nameTextField.placeholder != "" && self.emailTextField.placeholder != "" && self.numberTextField.placeholder != "" && self.dateTextField.placeholder != "" && self.stateButton.titleLabel?.text != "Selecione" && self.nameTextField.textColor != UIColor.red && self.emailTextField.textColor != UIColor.red && self.numberTextField.textColor != UIColor.red && self.stateButton.titleLabel?.textColor != UIColor.red && self.nameTextField.text != "" || self.emailTextField.text != "" || self.dateTextField.text != ""{
+            self.enableSaveButton()
+        }else{
+            self.disableSaveButton()
+        }
+    }
     public func createDatePicker(){
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
@@ -139,7 +145,7 @@ class ProfileEditViewController: UIViewController {
     
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
-        self.alert?.showAlert(title: "Concluido", message: "Suas alterações foram salvas", titleButton: "Confirmar", completion: { value in
+        self.alert?.showAlert(title: "Atenção!", message: "Salvar as alterações realizadas?", titleButton: "Salvar", completion: { value in
             self.activeSaveButton()
         })
         self.userDefault()
@@ -191,59 +197,25 @@ class ProfileEditViewController: UIViewController {
 extension ProfileEditViewController:UITextFieldDelegate{
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-//        textField.layer.borderColor = UIColor.blue.cgColor
-//        self.viewModelEditProfile.widthTextField(textField: textField, value: 2.0)
+        self.viewModelEditProfile.textfieldStyle(textField: textField, color: UIColor.blue)
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == self.nameTextField{
-            if self.nameTextField.placeholder == ""{
-                self.nameTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.nameTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
-        if textField == self.numberTextField{
-            if self.numberTextField.placeholder == ""{
-                self.numberTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.numberTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
-        if textField == self.emailTextField{
-            if self.emailTextField.placeholder == ""{
-                self.emailTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.emailTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
-        if textField == self.dateTextField{
-            if self.dateTextField.placeholder == ""{
-                self.dateTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.dateTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
+        if textField.text == ""{
+            self.viewModelEditProfile.textfieldStyle(textField: textField, color: UIColor.red)
+        }else{
+            self.viewModelEditProfile.textfieldStyle(textField: textField, color: UIColor.ColorDefault)
         }
     }
-    
-    func activeSaveButton(){
-        if self.nameTextField.placeholder != "" && self.emailTextField.placeholder != "" && self.numberTextField.placeholder != "" && self.dateTextField.placeholder != "" && self.stateButton.titleLabel?.text != "Selecione" && self.nameTextField.textColor != UIColor.red && self.emailTextField.textColor != UIColor.red && self.numberTextField.textColor != UIColor.red && self.stateButton.titleLabel?.textColor != UIColor.red{
-            self.enableSaveButton()
-        }
-    }
-    
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         self.activeSaveButton()
         return true
     }
-    
     func Style(){
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
     }
 }
-
 extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
@@ -251,7 +223,6 @@ extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigatio
             self.profileImageView.image = pickedImage
             self.viewModelEditProfile.cornerRadius(image: profileImageView)
             self.profileImageView.clipsToBounds = true
-            
         }
         dismiss(animated: true, completion: nil)
     }
@@ -259,4 +230,3 @@ extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigatio
         dismiss(animated: true, completion: nil)
     }
 }
-

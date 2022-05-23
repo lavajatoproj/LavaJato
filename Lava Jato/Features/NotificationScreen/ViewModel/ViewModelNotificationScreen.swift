@@ -49,8 +49,11 @@ class ViewModelNotificationScreen {
         return 0
     }
     
-    public func removeIndex(indexPath:IndexPath)->Profile{
+    public func removeIndexData(indexPath:IndexPath){
         self.data.remove(at: indexPath.row)
+    }
+    public func removeIndexService(indexPath:IndexPath){
+        self.dataService.remove(at: indexPath.row)
     }
     
     public var heightForRow:CGFloat{

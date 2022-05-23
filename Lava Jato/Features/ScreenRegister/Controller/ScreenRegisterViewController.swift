@@ -1,5 +1,5 @@
 //
-//  registerViewController.swift
+//  ScreenRegisterViewController.swift
 //  Lava Jato
 //
 //  Created by Brendon Sambatti on 03/03/22.
@@ -38,8 +38,8 @@ class ScreenRegisterViewController: UIViewController {
         self.configTextField()
         self.createDatePicker()
         self.registerButton.isEnabled = false
-        seePasswordButton.setBackgroundImage(UIImage(named: "eyes_off"), for: UIControl.State.normal)
-        
+        self.configButton()
+        self.configPassword()
     }
     
     func configTextField(){
@@ -50,20 +50,27 @@ class ScreenRegisterViewController: UIViewController {
         self.documentRegisterTextField.delegate = self
         self.passwordTextField.delegate = self
         self.confirmPasswordTextField.delegate = self
+        self.viewModelScreenRegister.textfieldStyle(textField: self.nameRegisterTextField, color: UIColor.ColorDefault)
+        self.viewModelScreenRegister.textfieldStyle(textField: self.emailRegisterTextField, color: UIColor.ColorDefault)
+        self.viewModelScreenRegister.textfieldStyle(textField: self.numberRegisterTextField, color: UIColor.ColorDefault)
+        self.viewModelScreenRegister.textfieldStyle(textField: self.dateRegisterTextField, color: UIColor.ColorDefault)
+        self.viewModelScreenRegister.textfieldStyle(textField: self.documentRegisterTextField, color: UIColor.ColorDefault)
+        self.viewModelScreenRegister.textfieldStyle(textField: self.passwordTextField, color: UIColor.ColorDefault)
+        self.viewModelScreenRegister.textfieldStyle(textField: self.confirmPasswordTextField, color: UIColor.ColorDefault)
+    }
+
+    func configButton(){
+        self.viewModelScreenRegister.buttonStyle(button: self.selectStatusButton)
+        self.viewModelScreenRegister.buttonStyle(button: self.selectGenderButton)
+        self.viewModelScreenRegister.buttonStyle(button: self.statesButton)
+    }
+    
+    func configPassword(){
         self.passwordTextField.isSecureTextEntry = true
         self.confirmPasswordTextField.isSecureTextEntry = true
-        self.viewModelScreenRegister.textFieldStyle(textField: self.nameRegisterTextField)
-        self.viewModelScreenRegister.textFieldStyle(textField: self.emailRegisterTextField)
-        self.viewModelScreenRegister.textFieldStyle(textField: self.numberRegisterTextField)
-        self.viewModelScreenRegister.textFieldStyle(textField: self.dateRegisterTextField)
-        self.viewModelScreenRegister.textFieldStyle(textField: self.documentRegisterTextField)
-        self.viewModelScreenRegister.textFieldStyle(textField: self.passwordTextField)
-        self.viewModelScreenRegister.textFieldStyle(textField: self.confirmPasswordTextField)
-        self.viewModelScreenRegister.selectButtonStyle(button: self.selectGenderButton)
-        self.viewModelScreenRegister.selectButtonStyle(button: self.selectStatusButton)
-        self.viewModelScreenRegister.selectButtonStyle(button: self.statesButton)
-        
+        self.seePasswordButton.setBackgroundImage(UIImage(named: "eyes_off"), for: UIControl.State.normal)
     }
+    
     func setButtonColor(){
         if self.selectGenderButton.titleLabel?.text == "Sexo"{
             self.selectGenderButton.titleLabel?.textColor = UIColor.red
@@ -117,8 +124,6 @@ class ScreenRegisterViewController: UIViewController {
         }
         self.validationCheckBox()
     }
-    
-    
     @IBAction func showPassword(_ sender: UIButton) {
         if (seePassword == false){
             self.passwordTextField.isSecureTextEntry = true
@@ -131,7 +136,6 @@ class ScreenRegisterViewController: UIViewController {
             sender.setBackgroundImage(UIImage(named: "eyes_on"), for: UIControl.State.normal)
             seePassword = false
         }
-        
     }
     
     func validationCheckBox(){
@@ -146,7 +150,6 @@ class ScreenRegisterViewController: UIViewController {
             self.registerButton.isEnabled = false
             self.setButtonColor()
         }
-        
     }
     
     func equalPassword(){
@@ -218,7 +221,6 @@ class ScreenRegisterViewController: UIViewController {
         }
     }
     @IBAction func passwordValidate(_ sender: Any) {
-        
         let password1 = self.confirmPasswordTextField.text ?? ""
         if password1.isValidPassword(){
             self.confirmPasswordTextField.textColor = UIColor.black
@@ -231,8 +233,6 @@ class ScreenRegisterViewController: UIViewController {
             self.passwordValidationLabel.textColor = UIColor.red
         }
     }
-    
-    
     
     @IBAction func tappedTermsOfUse(_ sender: UIButton) {
         if let url = URL(string: "https://modeloinicial.com.br/conteudo/termos-de-uso-e-privacidade") {
@@ -265,64 +265,17 @@ class ScreenRegisterViewController: UIViewController {
     @IBAction func cpfValidate(_ sender: UITextField) {
         self.viewModelScreenRegister.validateCPF(textField: self.documentRegisterTextField, label: self.label)
     }
-    
 }
 
 extension ScreenRegisterViewController:UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        //        textField.layer.borderColor = UIColor.blue.cgColor
-        //        textField.layer.borderWidth = 2.0
-        
+        self.viewModelScreenRegister.textfieldStyle(textField: textField, color: UIColor.blue)
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == self.nameRegisterTextField{
-            if self.nameRegisterTextField.text == ""{
-                self.nameRegisterTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.nameRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
-        if textField == self.numberRegisterTextField{
-            if self.numberRegisterTextField.text == ""{
-                self.numberRegisterTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.numberRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
-        if textField == self.dateRegisterTextField{
-            if self.dateRegisterTextField.text == ""{
-                self.dateRegisterTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.dateRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
-        if textField == self.documentRegisterTextField{
-            if self.documentRegisterTextField.text == ""{
-                self.documentRegisterTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.documentRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
-        if textField == self.emailRegisterTextField{
-            if self.emailRegisterTextField.text == ""{
-                self.emailRegisterTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.emailRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
-        if textField == self.passwordTextField{
-            if self.passwordTextField.text == ""{
-                self.passwordTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.passwordTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
-        if textField == self.confirmPasswordTextField{
-            if self.confirmPasswordTextField.text == ""{
-                self.confirmPasswordTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.confirmPasswordTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
+        if textField.text == ""{
+            self.viewModelScreenRegister.textfieldStyle(textField: textField, color: UIColor.red)
+        }else{
+            self.viewModelScreenRegister.textfieldStyle(textField: textField, color: UIColor.ColorDefault)
         }
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -351,10 +304,8 @@ extension ScreenRegisterViewController {
         DispatchQueue.main.async {
             for textField in self.view.subviews where textField is UITextField {
                 textField.resignFirstResponder()
-                
             }
         }
     }
-    
 }
 
