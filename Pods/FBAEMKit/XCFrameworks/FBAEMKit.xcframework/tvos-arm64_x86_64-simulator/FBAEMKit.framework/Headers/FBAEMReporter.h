@@ -21,6 +21,7 @@ NS_SWIFT_NAME(AEMReporter)
 @interface FBAEMReporter : NSObject
 
 /**
+
  Configure networker used for calling Facebook AEM Graph API endpoint
  and Facebook App ID
 
@@ -34,6 +35,7 @@ NS_SWIFT_NAME(AEMReporter)
                          appID:(nullable NSString *)appID __attribute__((deprecated("use configureWithNetworker:appID:reporter: instead.")));
 
 /**
+
  Configure networker used for calling Facebook AEM Graph API endpoint
  and Facebook App ID
 
@@ -50,6 +52,7 @@ NS_SWIFT_NAME(AEMReporter)
                       reporter:(nullable id<FBSKAdNetworkReporting>)reporter;
 
 /**
+
  Enable AEM reporting
 
  This function should be called in application(_:open:options:) from ApplicationDelegate
@@ -71,6 +74,7 @@ NS_SWIFT_NAME(AEMReporter)
 + (void)setCatalogMatchingEnabled:(BOOL)enabled;
 
 /**
+
  Handle deeplink
 
  This function should be called in application(_:open:options:) from ApplicationDelegate
@@ -78,6 +82,7 @@ NS_SWIFT_NAME(AEMReporter)
 + (void)handleURL:(NSURL *)url;
 
 /**
+
  Calculate the conversion value for the app event based on the AEM configuration
 
  This function should be called when you log any in-app events

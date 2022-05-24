@@ -12,22 +12,26 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
- Represents the results of the a device login flow.
- This is used by `FBSDKDeviceLoginManager`.
+/*!
+ @abstract Represents the results of the a device login flow.
+ @discussion This is used by `FBSDKDeviceLoginManager`.
  */
 NS_SWIFT_NAME(DeviceLoginManagerResult)
 @interface FBSDKDeviceLoginManagerResult : NSObject
 
-// There is no public initializer.
+/*!
+ @abstract There is no public initializer.
+ */
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 
-/// The token.
+/*!
+ @abstract The token.
+ */
 @property (nullable, nonatomic, readonly, strong) FBSDKAccessToken *accessToken;
 
-/**
- Indicates if the login was cancelled by the user, or if the device
+/*!
+ @abstract Indicates if the login was cancelled by the user, or if the device
   login code has expired.
  */
 @property (nonatomic, readonly, getter = isCancelled, assign) BOOL cancelled;

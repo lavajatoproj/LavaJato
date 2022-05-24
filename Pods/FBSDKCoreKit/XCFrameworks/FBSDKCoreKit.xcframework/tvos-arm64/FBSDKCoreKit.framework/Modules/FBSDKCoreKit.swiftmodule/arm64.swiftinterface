@@ -1,4 +1,5 @@
 // swift-interface-format-version: 1.0
+<<<<<<< HEAD
 // swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
 // swift-module-flags: -target arm64-apple-tvos11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FBSDKCoreKit
 @_exported import FBSDKCoreKit
@@ -8,6 +9,14 @@ import Swift
 import UIKit
 import _Concurrency
 extension FBSDKCoreKit.AccessToken {
+=======
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target arm64-apple-tvos10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FBSDKCoreKit
+@_exported import FBSDKCoreKit
+import Foundation
+import Swift
+extension AccessToken {
+>>>>>>> 35a2a1d (adicionando firebase)
   public var permissions: Swift.Set<FBSDKCoreKit.Permission> {
     get
   }
@@ -19,6 +28,7 @@ extension FBSDKCoreKit.AccessToken {
   }
   public func hasGranted(_ permission: FBSDKCoreKit.Permission) -> Swift.Bool
 }
+<<<<<<< HEAD
 @objc(FBSDKCAPIReporter) public protocol CAPIReporter {
   @objc func enable()
   @objc func configure(factory: FBSDKCoreKit.GraphRequestFactoryProtocol, settings: FBSDKCoreKit.SettingsProtocol)
@@ -47,6 +57,8 @@ extension FBSDKCoreKit.AccessToken {
   @objc public func callCapiGatewayAPI(with parameters: [Swift.String : Any])
   @objc deinit
 }
+=======
+>>>>>>> 35a2a1d (adicionando firebase)
 public enum Permission : Swift.Hashable, Swift.ExpressibleByStringLiteral {
   case publicProfile
   case userFriends

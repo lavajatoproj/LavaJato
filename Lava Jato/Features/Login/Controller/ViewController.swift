@@ -8,6 +8,7 @@
 import UIKit
 import Foundation
 import Firebase
+import FirebaseAuth
 import GoogleSignIn
 
 class ViewController: UIViewController{
@@ -18,9 +19,30 @@ class ViewController: UIViewController{
     @IBOutlet weak var btRegister: UIButton!
     @IBOutlet weak var btLoginGoogle: UIButton!
     
+    var auth: Auth?
+    
+    func loginControl(){
+        auth?.addStateDidChangeListener({ autentication, user in
+            if user != nil {
+                self.performSegue(withIdentifier: "telaPrincipalsegue", sender: nil)
+            }else{
+                print("O usuário não está logado")
+            }
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLayout()
+        self.auth = Auth.auth()
+        self.setupLayout()
+    }
+    
+    @IBAction func unwindToLogin(_ unwindSegue: UIStoryboardSegue) {
+        do {
+            try auth?.signOut()
+        } catch {
+            print("Erro ao deslogar usuário!")
+        }
     }
     
     @IBAction func showResetPassword(_ sender: Any) {
@@ -28,7 +50,25 @@ class ViewController: UIViewController{
     }
     
     @IBAction func Login(_ sender: Any) {
-        self.performSegue(withIdentifier: "telaPrincipalsegue", sender: nil)
+        
+        if let email = tfEmail.text{
+            if let password = tfPassword.text{
+                
+                auth?.signIn(withEmail: email, password: password) { (user,error) in
+                    if error == nil{
+                        print("Sucesso ao logar usuário")
+                        self.performSegue(withIdentifier: "telaPrincipalsegue", sender: nil)
+                    }else{
+                        print("Erro ao logar usuário")
+                    }
+                }
+            }else{
+                print("error")
+            }
+        }else{
+            print("O email e a senha não correspondem")
+        }
+  
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {

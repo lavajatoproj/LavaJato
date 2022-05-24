@@ -2,6 +2,7 @@
 [![License](https://img.shields.io/cocoapods/l/Firebase.svg?style=flat)](https://cocoapods.org/pods/Firebase)
 [![Platform](https://img.shields.io/cocoapods/p/Firebase.svg?style=flat)](https://cocoapods.org/pods/Firebase)
 
+<<<<<<< HEAD
 [![Actions Status][gh-abtesting-badge]][gh-actions]
 [![Actions Status][gh-appcheck-badge]][gh-actions]
 [![Actions Status][gh-appdistribution-badge]][gh-actions]
@@ -28,6 +29,8 @@
 [![Actions Status][gh-symbolcollision-badge]][gh-actions]
 [![Actions Status][gh-zip-badge]][gh-actions]
 
+=======
+>>>>>>> 35a2a1d (adicionando firebase)
 # Firebase Apple Open Source Development
 
 This repository contains all Apple platform Firebase SDK source except FirebaseAnalytics.
@@ -99,7 +102,11 @@ Instructions for the experimental Carthage distribution are at
 To develop Firebase software in this repository, ensure that you have at least
 the following software:
 
+<<<<<<< HEAD
   * Xcode 12.2 (or later)
+=======
+  * Xcode 13.3.1 (or later)
+>>>>>>> 35a2a1d (adicionando firebase)
 
 CocoaPods is still the canonical way to develop, but much of the repo now supports
 development with Swift Package Manager.
@@ -291,6 +298,7 @@ The contents of this repository are licensed under the
 
 Your use of Firebase is governed by the
 [Terms of Service for Firebase Services](https://firebase.google.com/terms/).
+<<<<<<< HEAD
 
 [gh-actions]: https://github.com/firebase/firebase-ios-sdk/actions
 [gh-abtesting-badge]: https://github.com/firebase/firebase-ios-sdk/workflows/abtesting/badge.svg
@@ -318,3 +326,5 @@ Your use of Firebase is governed by the
 [gh-storage-badge]: https://github.com/firebase/firebase-ios-sdk/workflows/storage/badge.svg
 [gh-symbolcollision-badge]: https://github.com/firebase/firebase-ios-sdk/workflows/symbolcollision/badge.svg
 [gh-zip-badge]: https://github.com/firebase/firebase-ios-sdk/workflows/zip/badge.svg
+=======
+>>>>>>> 35a2a1d (adicionando firebase)

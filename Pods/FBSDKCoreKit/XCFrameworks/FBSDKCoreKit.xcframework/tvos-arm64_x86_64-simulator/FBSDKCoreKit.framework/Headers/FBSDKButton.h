@@ -8,15 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-#import <FBSDKCoreKit/FBSDKAppEventName.h>
-#import <FBSDKCoreKit/FBSDKAppEventParameterName.h>
 #import <FBSDKCoreKit/FBSDKImpressionLoggingButton.h>
-
 @class FBSDKIcon;
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// A base class for common SDK buttons.
+/**
+  A base class for common SDK buttons.
+ */
 NS_SWIFT_NAME(FBButton)
 @interface FBSDKButton : FBSDKImpressionLoggingButton
 
@@ -73,8 +72,8 @@ NS_SWIFT_NAME(FBButton)
 
  @warning INTERNAL - DO NOT USE
  */
-- (void)logTapEventWithEventName:(FBSDKAppEventName)eventName
-                      parameters:(nullable NSDictionary<FBSDKAppEventParameterName, id> *)parameters;
+- (void)logTapEventWithEventName:(NSString *)eventName
+                      parameters:(nullable NSDictionary<NSString *, id> *)parameters;
 @end
 
 NS_ASSUME_NONNULL_END

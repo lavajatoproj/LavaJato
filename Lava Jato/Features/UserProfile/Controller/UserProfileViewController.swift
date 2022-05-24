@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import FirebaseStorageUI
 
 class UserProfileViewController: UIViewController {
     
@@ -20,14 +23,39 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var tappedLogoutButton: UIButton!
     @IBOutlet weak var notificationButton: UIButton!
     
+    var firestore: Firestore?
+    var auth: Auth?
+//    var users: [Dictionary<String, Any>] = []
+    var idUserLog: String?
+    
+    func getProfileData(){
+        let user = self.firestore?.collection("users").document(self.idUserLog ?? "")
+        user?.getDocument(completion: { documentSnapshot, error in
+            if error == nil{
+                let data = documentSnapshot?.data()
+                let dataName = data?["name"]
+                self.nameLabel.text = dataName as? String
+//                if let url = data1?["url"] as? String{
+//                    self.userImageView.sd_setImage(with: URL(string: url), completed: nil)
+//                }
+                }
+            }
+        )
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.Style()
+        self.firestore = Firestore.firestore()
+        self.auth = Auth.auth()
+        if let idUser = auth?.currentUser?.uid{
+            self.idUserLog = idUser
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
-        self.nameLabel.text = self.getUserDefaults(key:"userName")as? String
+        self.getProfileData()
     }
     
     

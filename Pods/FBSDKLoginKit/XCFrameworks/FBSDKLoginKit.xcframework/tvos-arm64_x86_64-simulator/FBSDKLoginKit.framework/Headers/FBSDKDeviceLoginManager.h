@@ -15,9 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol FBSDKDeviceLoginManagerDelegate;
 
-/**
- Use this class to perform a device login flow.
- The device login flow starts by requesting a code from the device login API.
+/*!
+ @abstract Use this class to perform a device login flow.
+ @discussion The device login flow starts by requesting a code from the device login API.
    This class informs the delegate when this code is received. You should then present the
    code to the user to enter. In the meantime, this class polls the device login API
    periodically and informs the delegate of the results.
@@ -27,8 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_NAME(DeviceLoginManager)
 @interface FBSDKDeviceLoginManager : NSObject <NSNetServiceDelegate>
 
-/**
- Initializes a new instance.
+/*!
+ @abstract Initializes a new instance.
  @param permissions permissions to request.
  */
 - (instancetype)initWithPermissions:(NSArray<NSString *> *)permissions
@@ -37,25 +37,31 @@ NS_SWIFT_NAME(DeviceLoginManager)
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 
-/// The delegate.
+/*!
+ @abstract the delegate.
+ */
 @property (nonatomic, weak) id<FBSDKDeviceLoginManagerDelegate> delegate;
 
-/// The requested permissions.
+/*!
+ @abstract the requested permissions.
+ */
 @property (nonatomic, readonly, copy) NSArray<NSString *> *permissions;
 
-/**
- The optional URL to redirect the user to after they complete the login.
- The URL must be configured in your App Settings -> Advanced -> OAuth Redirect URIs
+/*!
+ @abstract the optional URL to redirect the user to after they complete the login.
+ @discussion the URL must be configured in your App Settings -> Advanced -> OAuth Redirect URIs
  */
 @property (nullable, nonatomic, copy) NSURL *redirectURL;
 
-/**
- Starts the device login flow
- This instance will retain self until the flow is finished or cancelled.
+/*!
+ @abstract Starts the device login flow
+ @discussion This instance will retain self until the flow is finished or cancelled.
  */
 - (void)start;
 
-/// Attempts to cancel the device login flow.
+/*!
+ @abstract Attempts to cancel the device login flow.
+ */
 - (void)cancel;
 
 @end

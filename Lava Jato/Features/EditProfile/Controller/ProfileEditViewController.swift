@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import FirebaseStorage
+import FirebaseStorageUI
 
 class ProfileEditViewController: UIViewController {
     
@@ -20,18 +24,51 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var profileImageView:UIImageView!
     @IBOutlet weak var editPhotoButton:UIButton!
     @IBOutlet weak var stateButton: UIButton!
+    
     private var viewModelEditProfile:ViewModelEditProfile = ViewModelEditProfile()
     private var alert:AlertController?
     var imagePicker = UIImagePickerController()
     let datePicker = UIDatePicker()
     var valueStateButton:String?
+    var storage: Storage?
+    var firestore: Firestore?
+    var auth: Auth?
+    var users: [Dictionary<String, Any>] = []
+    var posts: [Dictionary<String, Any>] = []
+    var idUserLog: String?
+    
+//    oi
+    func getProfileData(){
+        let user = self.firestore?.collection("users").document(self.idUserLog ?? "")
+        user?.getDocument(completion: { documentSnapshot, error in
+            if error == nil{
+                let data = documentSnapshot?.data()
+                let dataName = data?["name"]
+                self.nameLabel.text = dataName as? String
+                self.nameTextField.text = dataName as? String
+                let dataNumber = data?["cellNumber"]
+                self.numberTextField.text = dataNumber as? String
+                let dataEmail = data?["email"]
+                self.emailTextField.text = dataEmail as? String
+                let dataCity = data?["city"]
+                self.stateButton.titleLabel?.text = dataCity as? String
+                let dataBorn = data?["born"]
+                self.dateTextField.text = dataBorn as? String
+//                if let url = data?["url"] as? String{
+//                    self.profileImageView.sd_setImage(with: URL(string: url), completed: nil)
+//                }else{
+//                    self.profileImageView.image = UIImage(systemName: "person.circle.fill")
+//                }
+                }
+            }
+        )
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupLayout()
-    }
-    
-    func setupLayout(){
+        self.firestore = Firestore.firestore()
+        self.auth = Auth.auth()
+        self.storage = Storage.storage()
         Style()
         self.hideKeyboardWhenTappedAround()
         self.createDatePicker()
@@ -42,6 +79,13 @@ class ProfileEditViewController: UIViewController {
         self.stateButtonConfig()
         self.activeSaveButton()
         self.configButton()
+        if let idUser = auth?.currentUser?.uid{
+            self.idUserLog = idUser
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.getProfileData()
     }
     
     func saveUserDefaults(value: Any, key: String){
@@ -94,9 +138,11 @@ class ProfileEditViewController: UIViewController {
         self.valueStateButton = self.getUserDefaults(key: "userState") as? String
         self.stateButton.setTitle(valueStateButton, for: .normal)
     }
+    
     func configPhotoPicker(){
         self.imagePicker.delegate = self
     }
+    
     func userDefault(){
         if self.nameTextField.text != ""{
             self.saveUserDefaults(value: self.nameTextField.text ?? "", key: "userName")
@@ -120,6 +166,7 @@ class ProfileEditViewController: UIViewController {
             self.disableSaveButton()
         }
     }
+    
     public func createDatePicker(){
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
@@ -127,6 +174,7 @@ class ProfileEditViewController: UIViewController {
         dateTextField.inputView = datePicker
         dateTextField.inputAccessoryView = createToolbar()
     }
+    
     func createToolbar () -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -134,6 +182,7 @@ class ProfileEditViewController: UIViewController {
         toolbar.setItems([doneButton], animated: true)
         return toolbar
     }
+    
     @objc func donePressed(){
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -149,9 +198,25 @@ class ProfileEditViewController: UIViewController {
     
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
-        self.alert?.showAlert(title: "Atenção!", message: "Salvar as alterações realizadas?", titleButton: "Salvar", completion: { value in
-            self.activeSaveButton()
-        })
+//        self.alert?.showAlert(title: "Atenção!", message: "Salvar as alterações realizadas?", titleButton: "Salvar", completion: { value in
+//            self.activeSaveButton()
+//        })
+        
+        if let name = self.nameTextField.text, let email = self.emailTextField.text, let cellNumber = self.numberTextField.text, let born = self.dateTextField.text, let city = self.stateButton.titleLabel?.text{
+            self.firestore?.collection("users").document( self.idUserLog ?? "" )
+                                    .setData([
+                                        "name": name,
+                                        "email": email,
+                                        "cellNumber": cellNumber,
+                                        "born": born,
+                                        "city": city,
+//                                        "profileImage": url,
+                                        "id": self.idUserLog as Any,
+                                    ])
+        }else{
+            print("Error")
+        }
+        
         self.userDefault()
         self.setPlaceHolders()
         self.resetTextField()
@@ -194,6 +259,7 @@ class ProfileEditViewController: UIViewController {
     
     @IBAction func tappedEditPhoto(_ sender: UIButton) {
         self.imagePicker.sourceType = .photoLibrary
+        self.imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
     }
 }
@@ -220,10 +286,11 @@ extension ProfileEditViewController:UITextFieldDelegate{
         navigationController?.navigationBar.titleTextAttributes = textAtributes
     }
 }
+
 extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-            self.profileImageView.contentMode = .scaleToFill
+            self.profileImageView.contentMode = .scaleAspectFill
             self.profileImageView.image = pickedImage
             self.viewModelEditProfile.cornerRadius(image: profileImageView)
             self.profileImageView.clipsToBounds = true
