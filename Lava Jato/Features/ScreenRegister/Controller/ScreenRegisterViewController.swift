@@ -1,5 +1,5 @@
 //
-//  registerViewController.swift
+//  ScreenRegisterViewController.swift
 //  Lava Jato
 //
 //  Created by Brendon Sambatti on 03/03/22.
@@ -15,27 +15,31 @@ class ScreenRegisterViewController: UIViewController {
     @IBOutlet weak var numberRegisterTextField: UITextField!
     @IBOutlet weak var dateRegisterTextField: UITextField!
     @IBOutlet weak var documentRegisterTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var checkBox: UIButton!
     @IBOutlet weak var statesButton: UIButton!
+    @IBOutlet weak var passwordValidationLabel: UILabel!
     @IBOutlet weak var label:UILabel!
     @IBOutlet weak var selectStatusButton: UIButton!
     @IBOutlet weak var selectGenderButton:UIButton!
+    @IBOutlet weak var seePasswordButton: UIButton!
     @IBOutlet weak var switchButton: UISwitch!
     let datePicker = UIDatePicker()
     var checkboxFlag = false
+    var seePassword = false
     private var viewModelScreenRegister:ViewModelScreenRegister = ViewModelScreenRegister()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Style()
-        self.hideKeyboardWhenTappedAround()
+        self.hideKeyboard()
         self.configTextField()
         self.createDatePicker()
         self.registerButton.isEnabled = false
-    }
-    func getUserDefaults(key: String)-> Any?{
-        return UserDefaults.standard.object(forKey: key)
+        self.configButton()
+        self.configPassword()
     }
     
     func configTextField(){
@@ -44,13 +48,55 @@ class ScreenRegisterViewController: UIViewController {
         self.numberRegisterTextField.delegate = self
         self.dateRegisterTextField.delegate = self
         self.documentRegisterTextField.delegate = self
-        self.viewModelScreenRegister.textFieldStyle(textField: self.nameRegisterTextField)
-        self.viewModelScreenRegister.textFieldStyle(textField: self.emailRegisterTextField)
-        self.viewModelScreenRegister.textFieldStyle(textField: self.numberRegisterTextField)
-        self.viewModelScreenRegister.textFieldStyle(textField: self.dateRegisterTextField)
-        self.viewModelScreenRegister.textFieldStyle(textField: self.documentRegisterTextField)
+        self.passwordTextField.delegate = self
+        self.confirmPasswordTextField.delegate = self
+        self.viewModelScreenRegister.textfieldStyle(textField: self.nameRegisterTextField, color: UIColor.ColorDefault)
+        self.viewModelScreenRegister.textfieldStyle(textField: self.emailRegisterTextField, color: UIColor.ColorDefault)
+        self.viewModelScreenRegister.textfieldStyle(textField: self.numberRegisterTextField, color: UIColor.ColorDefault)
+        self.viewModelScreenRegister.textfieldStyle(textField: self.dateRegisterTextField, color: UIColor.ColorDefault)
+        self.viewModelScreenRegister.textfieldStyle(textField: self.documentRegisterTextField, color: UIColor.ColorDefault)
+        self.viewModelScreenRegister.textfieldStyle(textField: self.passwordTextField, color: UIColor.ColorDefault)
+        self.viewModelScreenRegister.textfieldStyle(textField: self.confirmPasswordTextField, color: UIColor.ColorDefault)
+    }
+
+    func configButton(){
+        self.viewModelScreenRegister.buttonStyle(button: self.selectStatusButton)
+        self.viewModelScreenRegister.buttonStyle(button: self.selectGenderButton)
+        self.viewModelScreenRegister.buttonStyle(button: self.statesButton)
     }
     
+    func configPassword(){
+        self.passwordTextField.isSecureTextEntry = true
+        self.confirmPasswordTextField.isSecureTextEntry = true
+        self.seePasswordButton.setBackgroundImage(UIImage(named: "eyes_off"), for: UIControl.State.normal)
+    }
+    
+    func setButtonColor(){
+        if self.selectGenderButton.titleLabel?.text == "Sexo"{
+            self.selectGenderButton.titleLabel?.textColor = UIColor.red
+        }
+        if self.selectStatusButton.titleLabel?.text == "Estado Civil"{
+            self.selectStatusButton.titleLabel?.textColor = UIColor.red
+        }
+        if self.statesButton.titleLabel?.text == "Cidade"{
+            self.statesButton.titleLabel?.textColor = UIColor.red
+        }
+        
+    }
+    func getUserDefaults(key: String)-> Any?{
+        return UserDefaults.standard.object(forKey: key)
+    }
+    
+    func saveUserDefaults(value: Any, key: String){
+        UserDefaults.standard.set(value, forKey: key)
+    }
+    public func createDatePicker(){
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.datePickerMode = .date
+        datePicker.set18YearValidation()
+        dateRegisterTextField.inputView = datePicker
+        dateRegisterTextField.inputAccessoryView = createToolbar()
+    }
     func createToolbar () -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -60,32 +106,12 @@ class ScreenRegisterViewController: UIViewController {
         return toolbar
     }
     
-    func setButtonColor(){
-        if self.selectGenderButton.titleLabel?.text == "Selecione"{
-            self.selectGenderButton.titleLabel?.textColor = UIColor.red
-        }
-        if self.selectStatusButton.titleLabel?.text == "Selecione"{
-            self.selectStatusButton.titleLabel?.textColor = UIColor.red
-        }
-        if self.selectStatusButton.titleLabel?.text == "Selecione"{
-            self.statesButton.titleLabel?.textColor = UIColor.red
-        }
-        
-    }
     @objc func donePressed(){
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
         self.dateRegisterTextField.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
-    }
-    
-    public func createDatePicker(){
-        datePicker.preferredDatePickerStyle = .wheels
-        datePicker.datePickerMode = .date
-        datePicker.set18YearValidation()
-        dateRegisterTextField.inputView = datePicker
-        dateRegisterTextField.inputAccessoryView = createToolbar()
     }
     
     @IBAction func tappedCheckBox(_ sender: UIButton) {
@@ -96,8 +122,25 @@ class ScreenRegisterViewController: UIViewController {
             sender.setBackgroundImage(UIImage(named: "checkbox1"), for: UIControl.State.normal)
             checkboxFlag = false
         }
+        self.validationCheckBox()
+    }
+    @IBAction func showPassword(_ sender: UIButton) {
+        if (seePassword == false){
+            self.passwordTextField.isSecureTextEntry = true
+            self.confirmPasswordTextField.isSecureTextEntry = true
+            sender.setBackgroundImage(UIImage(named: "eyes_off"), for: UIControl.State.normal)
+            self.seePassword = true
+        }else{
+            self.passwordTextField.isSecureTextEntry = false
+            self.confirmPasswordTextField.isSecureTextEntry = false
+            sender.setBackgroundImage(UIImage(named: "eyes_on"), for: UIControl.State.normal)
+            seePassword = false
+        }
+    }
+    
+    func validationCheckBox(){
         if self.checkboxFlag == true {
-            if self.nameRegisterTextField.textColor != UIColor.red && self.numberRegisterTextField.textColor != UIColor.red && self.dateRegisterTextField.textColor != UIColor.red && self.documentRegisterTextField.textColor != UIColor.red && self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.selectGenderButton.titleLabel?.text != "Selecione" && self.emailRegisterTextField.text != "" && self.selectStatusButton.titleLabel?.text != "Selecione" && self.statesButton.titleLabel?.text != "Selecione"{
+            if self.nameRegisterTextField.textColor != UIColor.red && self.numberRegisterTextField.textColor != UIColor.red && self.dateRegisterTextField.textColor != UIColor.red && self.documentRegisterTextField.textColor != UIColor.red && self.passwordTextField.textColor != UIColor.red && self.confirmPasswordTextField.textColor != UIColor.red && self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.passwordTextField.text != "" && self.confirmPasswordTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.selectGenderButton.titleLabel?.text != "Sexo" && self.emailRegisterTextField.text != "" && self.selectStatusButton.titleLabel?.text != "Estado Civil" && self.statesButton.titleLabel?.text != "Cidade" && self.passwordValidationLabel.text != "Senhas não conferem" && self.passwordValidationLabel.text != "Minimo 6 caracteres"{
                 self.registerButton.isEnabled = true
             }else{
                 self.registerButton.isEnabled = false
@@ -109,17 +152,32 @@ class ScreenRegisterViewController: UIViewController {
         }
     }
     
-    func validations(){
-        if self.nameRegisterTextField.textColor != UIColor.red && self.numberRegisterTextField.textColor != UIColor.red && self.dateRegisterTextField.textColor != UIColor.red && self.documentRegisterTextField.textColor != UIColor.red && self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.selectGenderButton.titleLabel?.text != "Selecione" && self.emailRegisterTextField.text != "" && self.selectStatusButton.titleLabel?.text != "Selecione" && self.statesButton.titleLabel?.text != "Selecione"{
-            self.registerButton.isEnabled = true
+    func equalPassword(){
+        if self.passwordTextField.text != self.confirmPasswordTextField.text{
+            self.passwordTextField.textColor = UIColor.red
+            self.confirmPasswordTextField.textColor = UIColor.red
+            self.passwordValidationLabel.textColor = UIColor.red
+            self.passwordValidationLabel.text = "Senhas não conferem"
         }else{
+            self.passwordTextField.textColor = UIColor.black
+            self.confirmPasswordTextField.textColor = UIColor.black
+            self.passwordValidationLabel.text = "Senhas conferem"
+            self.passwordValidationLabel.textColor = .clear
+        }
+    }
+    
+    func validations(){
+        if self.nameRegisterTextField.textColor == UIColor.red || self.numberRegisterTextField.textColor == UIColor.red || self.dateRegisterTextField.textColor == UIColor.red || self.documentRegisterTextField.textColor == UIColor.red || self.passwordTextField.textColor == UIColor.red || self.nameRegisterTextField.text == "" || self.confirmPasswordTextField.textColor == UIColor.red || self.numberRegisterTextField.text == "" || self.passwordTextField.text == "" || self.confirmPasswordTextField.text == "" || self.dateRegisterTextField.text == "" || self.documentRegisterTextField.text == "" || self.selectGenderButton.titleLabel?.text == "Sexo" || self.emailRegisterTextField.text == "" || self.selectStatusButton.titleLabel?.text == "Estado Civil" || self.statesButton.titleLabel?.text == "Cidade" && self.checkboxFlag == true && self.passwordValidationLabel.text == "Senhas não conferem" && self.passwordValidationLabel.text != "Minimo 6 caracteres"{
             self.registerButton.isEnabled = false
+        }else{
+            self.registerButton.isEnabled = true
         }
     }
     
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         performSegue(withIdentifier: "tappedRegisterSegue", sender: nil)
+        self.saveUserDefaults(value: self.statesButton.titleLabel?.text ?? "Selecione", key: "userState")
     }
     
     @IBAction func tappedBackLogin(_ sender: UIButton) {
@@ -146,6 +204,33 @@ class ScreenRegisterViewController: UIViewController {
             self.emailRegisterTextField.textColor = UIColor.black
         } else {
             self.emailRegisterTextField.textColor = UIColor.red
+        }
+    }
+    
+    @IBAction func passwordValidate2(_ sender: Any) {
+        let password1 = self.passwordTextField.text ?? ""
+        if password1.isValidPassword(){
+            self.passwordTextField.textColor = UIColor.black
+            self.passwordValidationLabel.text = "Senha válida"
+            self.passwordValidationLabel.textColor = .clear
+            self.equalPassword()
+        }else{
+            self.passwordTextField.textColor = UIColor.red
+            self.passwordValidationLabel.text = "Minimo 6 caracteres"
+            self.passwordValidationLabel.textColor = UIColor.red
+        }
+    }
+    @IBAction func passwordValidate(_ sender: Any) {
+        let password1 = self.confirmPasswordTextField.text ?? ""
+        if password1.isValidPassword(){
+            self.confirmPasswordTextField.textColor = UIColor.black
+            self.passwordValidationLabel.text = "Senha válida"
+            self.passwordValidationLabel.textColor = .clear
+            self.equalPassword()
+        }else{
+            self.confirmPasswordTextField.textColor = UIColor.red
+            self.passwordValidationLabel.text = "Minimo 6 caracteres"
+            self.passwordValidationLabel.textColor = UIColor.red
         }
     }
     
@@ -180,59 +265,47 @@ class ScreenRegisterViewController: UIViewController {
     @IBAction func cpfValidate(_ sender: UITextField) {
         self.viewModelScreenRegister.validateCPF(textField: self.documentRegisterTextField, label: self.label)
     }
-    
 }
 
 extension ScreenRegisterViewController:UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.layer.borderColor = UIColor.blue.cgColor
-        textField.layer.borderWidth = 2.0
-        
+        self.viewModelScreenRegister.textfieldStyle(textField: textField, color: UIColor.blue)
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == self.nameRegisterTextField{
-            if self.nameRegisterTextField.text == ""{
-                self.nameRegisterTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.nameRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
+        if textField.text == ""{
+            self.viewModelScreenRegister.textfieldStyle(textField: textField, color: UIColor.red)
+        }else{
+            self.viewModelScreenRegister.textfieldStyle(textField: textField, color: UIColor.ColorDefault)
         }
-        if textField == self.numberRegisterTextField{
-            if self.numberRegisterTextField.text == ""{
-                self.numberRegisterTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.numberRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
-        if textField == self.dateRegisterTextField{
-            if self.dateRegisterTextField.text == ""{
-                self.dateRegisterTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.dateRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
-        if textField == self.documentRegisterTextField{
-            if self.documentRegisterTextField.text == ""{
-                self.documentRegisterTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.documentRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
-        if textField == self.emailRegisterTextField{
-            if self.emailRegisterTextField.text == ""{
-                self.emailRegisterTextField.layer.borderColor = UIColor.red.cgColor
-            }else{
-                self.emailRegisterTextField.layer.borderColor = UIColor.lightGray.cgColor
-            }
-        }
-        
-        self.viewModelScreenRegister.validation(nameTextField: self.nameRegisterTextField, emailTextField: self.emailRegisterTextField, numberTextField: self.numberRegisterTextField, documentTextField: self.documentRegisterTextField, dateTextField: self.dateRegisterTextField , checkBox: self.checkboxFlag, registerButton: registerButton, genderButton: self.selectGenderButton, statusButton: self.selectGenderButton, stateButton: self.statesButton)
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         cpfValidate(documentRegisterTextField)
-        textField.resignFirstResponder()
         self.validations()
         self.setButtonColor()
+        self.validationCheckBox()
+        textField.resignFirstResponder()
         return true
     }
 }
+extension ScreenRegisterViewController {
+    public func hideKeyboard() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismiKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc private func dismiKeyboard() {
+        self.validations()
+        self.validationCheckBox()
+        view.endEditing(true)
+    }
+    
+    public func dismissAll() {
+        DispatchQueue.main.async {
+            for textField in self.view.subviews where textField is UITextField {
+                textField.resignFirstResponder()
+            }
+        }
+    }
+}
+

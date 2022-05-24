@@ -10,28 +10,29 @@ import UIKit
 import CPF_CNPJ_Validator
 import DropDown
 
-let statusDropDown = DropDown()
-let genderDropDown = DropDown()
+private let statusDropDown = DropDown()
+private let genderDropDown = DropDown()
+private let stateDropDown = DropDown()
 
 
 class ViewModelScreenRegister{
     
     private var value:String = ""
     
-    var text = "" {
+    public var text = "" {
         didSet {
             let success = BooleanValidator().validate(cpf: text)
             value = success ? "CPF Válido" : "CPF Inválido"
         }
     }
-    var text2 = "" {
+    public var text2 = "" {
         didSet {
             let success2 = BooleanValidator().validate(cnpj: text2)
             value = success2 ? "CNPJ Válido" : "CNPJ Inválido"
         }
     }
     
-    func validateCPF(textField:UITextField, label:UILabel){
+    public func validateCPF(textField:UITextField, label:UILabel){
         label.text = value
         let textCount = textField.text?.count ?? 0
         if textCount <= 11{
@@ -58,54 +59,66 @@ class ViewModelScreenRegister{
             textField.textColor = UIColor.black
         }
     }
-    
-    func textFieldStyle(textField:UITextField){
-        textField.layer.borderWidth = 2.0
-        textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.layer.cornerRadius = 5.0
+    public func textfieldStyle(textField:UITextField, color:UIColor){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: textField.frame.height - 2, width: textField.frame.width, height: 2)
+        bottomLine.backgroundColor = color.cgColor
+        textField.backgroundColor = .clear
+        textField.borderStyle = .none
+        textField.layer.addSublayer(bottomLine)
     }
     
-    func createDropDownGender(button:UIButton){
+    public func buttonStyle(button:UIButton){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: button.frame.height - 2, width: button.frame.width, height: 2)
+        bottomLine.backgroundColor = UIColor.ColorDefault.cgColor
+        button.backgroundColor = .clear
+        button.layer.addSublayer(bottomLine)
+    }
+    
+    public func createDropDownGender(button:UIButton){
         genderDropDown.anchorView = button
         genderDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)
         genderDropDown.dataSource = ["Masculino", "Feminino"]
-        genderDropDown.selectionAction = { [weak self] (index, item) in
+        genderDropDown.selectionAction = { (index, item) in
             button.setTitle(item, for: .normal)
         }
         genderDropDown.show()
     }
-    func createDropDownStatus(button:UIButton){
+    public func createDropDownStatus(button:UIButton){
         statusDropDown.anchorView = button
         statusDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)
         statusDropDown.dataSource = ["Solteiro(a)", "Casado(a)", "Viuvo(a)"]
-        statusDropDown.selectionAction = { [weak self] (index, item) in
+        statusDropDown.selectionAction = { (index, item) in
             button.setTitle(item, for: .normal)
         }
         statusDropDown.show()
     }
-    func createDropDownState(button:UIButton){
-        statusDropDown.anchorView = button
-        statusDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)
-        statusDropDown.dataSource = ["Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceara", "Distrito Federal    ", "Espírito Santo", "Goiás","Maranhão","Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro","Rio Grande do Norte","Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"]
-        statusDropDown.selectionAction = { [weak self] (index, item) in
+
+    public func createDropDownState(button:UIButton){
+        stateDropDown.anchorView = button
+        stateDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)
+        stateDropDown.dataSource = ["Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceara", "Distrito Federal    ", "Espírito Santo", "Goiás","Maranhão","Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro","Rio Grande do Norte","Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"]
+        stateDropDown.selectionAction = { (index, item) in
             button.setTitle(item, for: .normal)
         }
-        statusDropDown.show()
+        stateDropDown.show()
     }
     
-    func boolTrue(value:Bool)-> Bool{
+    public func boolTrue(value:Bool)-> Bool{
         return true
     }
-    func boolFalse(value:Bool)-> Bool{
+    public func boolFalse(value:Bool)-> Bool{
         return false
     }
     
-    func validation(nameTextField:UITextField, emailTextField:UITextField, numberTextField:UITextField, documentTextField:UITextField, dateTextField:UITextField, checkBox:Bool, registerButton:UIButton, genderButton:UIButton, statusButton:UIButton, stateButton:UIButton){
-        if nameTextField.text != "" && numberTextField.text != "" && dateTextField.text != "" && documentTextField.text != "" &&  genderButton.titleLabel?.text != "Selecione" && statusButton.titleLabel?.text != "Selecione" && emailTextField.text != "" && checkBox == true && nameTextField.textColor == UIColor.black && emailTextField.textColor == UIColor.black && numberTextField.textColor == UIColor.black && documentTextField.textColor == UIColor.black && stateButton.titleLabel?.text != "Selecione"{
+    public func validation(nameTextField:UITextField, emailTextField:UITextField, numberTextField:UITextField, documentTextField:UITextField, dateTextField:UITextField, password:UITextField, confirmPassword:UITextField, checkBox:Bool, registerButton:UIButton, genderButton:UIButton, statusButton:UIButton, stateButton:UIButton){
+        if nameTextField.text != "" && numberTextField.text != "" && dateTextField.text != "" && documentTextField.text != "" &&  genderButton.titleLabel?.text != "Selecione" && statusButton.titleLabel?.text != "Selecione" && emailTextField.text != "" && checkBox == true && nameTextField.textColor == UIColor.black && emailTextField.textColor == UIColor.black && numberTextField.textColor == UIColor.black && documentTextField.textColor == UIColor.black && password.textColor == UIColor.black && confirmPassword.textColor == UIColor.black && stateButton.titleLabel?.text != "Selecione"{
             registerButton.isEnabled = true
         }else{
             registerButton.isEnabled = false
         }
+
     }
 }
 

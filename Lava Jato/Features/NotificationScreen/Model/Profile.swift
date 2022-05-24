@@ -17,4 +17,14 @@ struct Profile{
     let service:String
     let payment:String
 }
+struct ProfileService{
+    let name:String
+    let photo:UIImage
+    let adress:String
+    let number:String
+    let request:String
+    let service:String
+    let payment:String
+}
+
     

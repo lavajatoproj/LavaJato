@@ -8,7 +8,7 @@
 import UIKit
 import MessageUI
 
-class HelpScreenViewController: UIViewController {
+class HelpScreenViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     private let viewModel:helpScreenViewModel = helpScreenViewModel()
@@ -20,7 +20,26 @@ class HelpScreenViewController: UIViewController {
         Style()
         self.alert = AlertController(controller: self)
     }
-    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["lavajato@dominio.com"])
+            mail.setMessageBody("<p>Escreva sua mensagem para nós!</p>", isHTML: true)
+            present(mail, animated: true)
+        } else {
+            self.alert?.showAlert(title: "Erro", message: "Você não possui o Mail instalado em seu dispositivo", titleButton: "Aceitar", completion: { value in
+                print(#function)
+            })
+        }
+    }
+    func Style(){
+        let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
+        navigationController?.navigationBar.titleTextAttributes = textAtributes
+    }
     @IBAction func buttonWhats(_ sender: Any) {
         let urlWhats = "https://wa.me/5511987625312?text=Bem vindo(a) ao Chat da Lava Jato"
         if let urlString = urlWhats.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed){
@@ -41,18 +60,6 @@ class HelpScreenViewController: UIViewController {
     }
     
     @IBAction func btEmail(_ sender: Any) {
-        let email = "breendonpsn@gmail.com"
-        if let url = URL(string: "mailto:\(email)") {
-          if #available(iOS 10.0, *) {
-            UIApplication.shared.open(url)
-          } else {
-            UIApplication.shared.openURL(url)
-          }
-        }
-    }
-    
-    func Style(){
-        let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
-        navigationController?.navigationBar.titleTextAttributes = textAtributes
+        self.sendEmail()
     }
 }
