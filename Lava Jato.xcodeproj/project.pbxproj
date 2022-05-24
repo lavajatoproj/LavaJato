@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2617F46CD0709E1E69A4BFED /* Pods_Lava_Jato.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777A9A27489E0DD46D49BC4C /* Pods_Lava_Jato.framework */; };
 		442DD11E27D05D0900C4F033 /* UserProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442DD11D27D05D0900C4F033 /* UserProfileViewController.storyboard */; };
 		443BAE9827BF4DE400751C16 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443BAE9727BF4DE400751C16 /* MainScreen.storyboard */; };
 		444B7E0E28317C46007D996E /* ModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444B7E0D28317C46007D996E /* ModelService.swift */; };
@@ -48,6 +47,7 @@
 		A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F799CC27DC6A49005A53A3 /* CustomRowTableViewCell.swift */; };
 		A2F799CF27DC6A49005A53A3 /* CustomRowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F799CD27DC6A49005A53A3 /* CustomRowTableViewCell.xib */; };
 		A2F799D827DC6CC8005A53A3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F799D727DC6CC8005A53A3 /* Model.swift */; };
+		A6D55D0E42F21FA5E4A4FA61 /* Pods_Lava_Jato.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B4A6857ED5AE9D44080361 /* Pods_Lava_Jato.framework */; };
 		DA107B3D2828ACD100F40F22 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA107B3C2828ACD100F40F22 /* AlertController.swift */; };
 		DA107B432828AD5C00F40F22 /* ViewModelNotificationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA107B422828AD5C00F40F22 /* ViewModelNotificationScreen.swift */; };
 		DA107B492828AFDA00F40F22 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA107B482828AFDA00F40F22 /* User.swift */; };
@@ -92,6 +92,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11B4A6857ED5AE9D44080361 /* Pods_Lava_Jato.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lava_Jato.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		442DD11D27D05D0900C4F033 /* UserProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfileViewController.storyboard; sourceTree = "<group>"; };
 		443BAE9727BF4DE400751C16 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 		444B7E0D28317C46007D996E /* ModelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelService.swift; sourceTree = "<group>"; };
@@ -115,7 +116,7 @@
 		44CB763327E941FD00A029FA /* FilterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FilterStoryboard.storyboard; sourceTree = "<group>"; };
 		44FA259C28177CB7006C1CFB /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		44FA259D28177CB7006C1CFB /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
-		777A9A27489E0DD46D49BC4C /* Pods_Lava_Jato.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lava_Jato.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C014FEF4092A7C27CDC82BC /* Pods-Lava Jato.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lava Jato.release.xcconfig"; path = "Target Support Files/Pods-Lava Jato/Pods-Lava Jato.release.xcconfig"; sourceTree = "<group>"; };
 		A20B841627DF051B00F29991 /* cellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellTableViewCell.swift; sourceTree = "<group>"; };
 		A20B841727DF051B00F29991 /* cellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cellTableViewCell.xib; sourceTree = "<group>"; };
 		A212221027D13E3500B24208 /* requestService.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = requestService.storyboard; sourceTree = "<group>"; };
@@ -134,8 +135,6 @@
 		A2F799CC27DC6A49005A53A3 /* CustomRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRowTableViewCell.swift; sourceTree = "<group>"; };
 		A2F799CD27DC6A49005A53A3 /* CustomRowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomRowTableViewCell.xib; sourceTree = "<group>"; };
 		A2F799D727DC6CC8005A53A3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		A69B63EF0DBCFF8F37269F8F /* Pods-Lava Jato.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lava Jato.release.xcconfig"; path = "Target Support Files/Pods-Lava Jato/Pods-Lava Jato.release.xcconfig"; sourceTree = "<group>"; };
-		CD86B3CBB72DA359F42D4FC0 /* Pods-Lava Jato.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lava Jato.debug.xcconfig"; path = "Target Support Files/Pods-Lava Jato/Pods-Lava Jato.debug.xcconfig"; sourceTree = "<group>"; };
 		DA107B3C2828ACD100F40F22 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		DA107B422828AD5C00F40F22 /* ViewModelNotificationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNotificationScreen.swift; sourceTree = "<group>"; };
 		DA107B482828AFDA00F40F22 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -179,6 +178,7 @@
 		E18703DC27E94E39005B3AA9 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		E18703DE27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
 		E194592127EAB6C800CC0078 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EA2F949768E482E00155272D /* Pods-Lava Jato.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lava Jato.debug.xcconfig"; path = "Target Support Files/Pods-Lava Jato/Pods-Lava Jato.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,21 +186,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2617F46CD0709E1E69A4BFED /* Pods_Lava_Jato.framework in Frameworks */,
+				A6D55D0E42F21FA5E4A4FA61 /* Pods_Lava_Jato.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E1468BE42CD7941DC8DD7EB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				777A9A27489E0DD46D49BC4C /* Pods_Lava_Jato.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		44177A3D2828863900496587 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,8 +411,8 @@
 		68ABB571C485D0786C8C9893 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CD86B3CBB72DA359F42D4FC0 /* Pods-Lava Jato.debug.xcconfig */,
-				A69B63EF0DBCFF8F37269F8F /* Pods-Lava Jato.release.xcconfig */,
+				EA2F949768E482E00155272D /* Pods-Lava Jato.debug.xcconfig */,
+				7C014FEF4092A7C27CDC82BC /* Pods-Lava Jato.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -778,8 +770,8 @@
 				E162E07427ADF53E00C6AD32 /* Products */,
 				68ABB571C485D0786C8C9893 /* Pods */,
 				E13E5B3527D6FEA0000CB644 /* CustomFont */,
-				3E1468BE42CD7941DC8DD7EB /* Frameworks */,
 				444B7E0C28317C2D007D996E /* Recovered References */,
+				FCDA8998F59FFE6B1526126B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -934,6 +926,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FCDA8998F59FFE6B1526126B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11B4A6857ED5AE9D44080361 /* Pods_Lava_Jato.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -941,12 +941,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E162E08727ADF54000C6AD32 /* Build configuration list for PBXNativeTarget "Lava Jato" */;
 			buildPhases = (
-				1726EBD3552604F50E9FAE98 /* [CP] Check Pods Manifest.lock */,
+				FD42F309105C839CFE3EE1D1 /* [CP] Check Pods Manifest.lock */,
 				E162E06F27ADF53E00C6AD32 /* Sources */,
 				E162E07027ADF53E00C6AD32 /* Frameworks */,
 				E162E07127ADF53E00C6AD32 /* Resources */,
-				41C8AB6278695DDA2AF7C704 /* [CP] Copy Pods Resources */,
-				C1C241463CB38973BD167F62 /* [CP] Embed Pods Frameworks */,
+				F89EF0E32F03D2762FDB188F /* [CP] Embed Pods Frameworks */,
+				8E1B60DB3A60A86415F46F51 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1035,7 +1035,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1726EBD3552604F50E9FAE98 /* [CP] Check Pods Manifest.lock */ = {
+		8E1B60DB3A60A86415F46F51 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F89EF0E32F03D2762FDB188F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD42F309105C839CFE3EE1D1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1055,40 +1089,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		41C8AB6278695DDA2AF7C704 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C1C241463CB38973BD167F62 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lava Jato/Pods-Lava Jato-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1280,7 +1280,7 @@
 		};
 		E162E08827ADF54000C6AD32 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD86B3CBB72DA359F42D4FC0 /* Pods-Lava Jato.debug.xcconfig */;
+			baseConfigurationReference = EA2F949768E482E00155272D /* Pods-Lava Jato.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1312,7 +1312,7 @@
 		};
 		E162E08927ADF54000C6AD32 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A69B63EF0DBCFF8F37269F8F /* Pods-Lava Jato.release.xcconfig */;
+			baseConfigurationReference = 7C014FEF4092A7C27CDC82BC /* Pods-Lava Jato.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
