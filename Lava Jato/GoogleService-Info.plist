@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>152072972170-kofmt4judceejf77qocrujucbs98s2m4.apps.googleusercontent.com</string>
+	<string>456295585489-uf4bjrguns0u77n4vk8sm4s7uph736l0.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.152072972170-kofmt4judceejf77qocrujucbs98s2m4</string>
+	<string>com.googleusercontent.apps.456295585489-uf4bjrguns0u77n4vk8sm4s7uph736l0</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDMcQ72jUZJymxhf1Un1mZgIVNd2qa4Xl4</string>
+	<string>AIzaSyB831pew0jb8KS3ETdn0HYxXULs6VTbg3E</string>
 	<key>GCM_SENDER_ID</key>
-	<string>152072972170</string>
+	<string>456295585489</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>junior.Lava-Jato</string>
 	<key>PROJECT_ID</key>
-	<string>projeto-lava-jato-90f9b</string>
+	<string>lavajato-b1d24</string>
 	<key>STORAGE_BUCKET</key>
-	<string>projeto-lava-jato-90f9b.appspot.com</string>
+	<string>lavajato-b1d24.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:152072972170:ios:f9c79839c26f8557ac4a73</string>
+	<string>1:456295585489:ios:6f85b7f551fd502fb617f0</string>
 </dict>
 </plist>
