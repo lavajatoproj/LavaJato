@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCustomCell" id="KGk-i7-Jjw" customClass="MyCustomCell" customModule="Lava_Jato" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="138"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="138"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfq-Qd-QdI">
+                        <rect key="frame" x="10" y="10" width="360" height="113"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="89r-In-X5X">
+                                <rect key="frame" x="10" y="16.5" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="7Ih-3z-UAZ"/>
+                                    <constraint firstAttribute="height" constant="80" id="lcy-iz-RMW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQi-e3-FUr">
+                                <rect key="frame" x="100" y="16.5" width="250" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEy-dI-PnB">
+                                <rect key="frame" x="100" y="60.5" width="66" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="estrela" translatesAutoresizingMaskIntoConstraints="NO" id="weI-EC-MZE">
+                                <rect key="frame" x="166" y="58.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="C09-0r-Icf"/>
+                                    <constraint firstAttribute="height" constant="40" id="KwZ-L9-Jag"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.07926870137" green="0.21559977529999999" blue="0.4980687499" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="eEy-dI-PnB" firstAttribute="leading" secondItem="KQi-e3-FUr" secondAttribute="leading" id="4R5-hT-FoU"/>
+                            <constraint firstItem="KQi-e3-FUr" firstAttribute="top" secondItem="89r-In-X5X" secondAttribute="top" id="9Mq-sX-SRN"/>
+                            <constraint firstItem="89r-In-X5X" firstAttribute="centerY" secondItem="tfq-Qd-QdI" secondAttribute="centerY" id="Az4-e9-5jh"/>
+                            <constraint firstItem="weI-EC-MZE" firstAttribute="centerY" secondItem="eEy-dI-PnB" secondAttribute="centerY" id="Jbd-lT-V22"/>
+                            <constraint firstItem="eEy-dI-PnB" firstAttribute="bottom" secondItem="89r-In-X5X" secondAttribute="bottom" id="bhP-0q-BSN"/>
+                            <constraint firstAttribute="trailing" secondItem="KQi-e3-FUr" secondAttribute="trailing" constant="10" id="eLm-Qo-3Wq"/>
+                            <constraint firstAttribute="width" constant="360" id="h5V-2N-07k"/>
+                            <constraint firstItem="KQi-e3-FUr" firstAttribute="leading" secondItem="89r-In-X5X" secondAttribute="trailing" constant="10" id="qU0-Yo-O7D"/>
+                            <constraint firstItem="89r-In-X5X" firstAttribute="leading" secondItem="tfq-Qd-QdI" secondAttribute="leading" constant="10" id="sG0-wo-q0N"/>
+                            <constraint firstItem="weI-EC-MZE" firstAttribute="leading" secondItem="eEy-dI-PnB" secondAttribute="trailing" id="so3-c8-u2J"/>
+                            <constraint firstAttribute="height" constant="113" id="wk0-0a-dep"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="tfq-Qd-QdI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="5Z8-K5-3tn"/>
+                    <constraint firstAttribute="bottom" secondItem="tfq-Qd-QdI" secondAttribute="bottom" constant="10" id="7QR-Fp-8Ko"/>
+                    <constraint firstAttribute="trailing" secondItem="tfq-Qd-QdI" secondAttribute="trailing" constant="10" id="Dkt-tZ-WL7"/>
+                    <constraint firstItem="tfq-Qd-QdI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="UcO-n7-pjZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="estrelaImageView" destination="weI-EC-MZE" id="PuH-UX-wxF"/>
+                <outlet property="fotoImageView" destination="89r-In-X5X" id="zxo-ni-W5B"/>
+                <outlet property="fundoView" destination="tfq-Qd-QdI" id="EtA-fS-4YH"/>
+                <outlet property="nomeLabel" destination="KQi-e3-FUr" id="xjj-mq-8ZJ"/>
+                <outlet property="notaLabel" destination="eEy-dI-PnB" id="34l-Py-WVg"/>
+            </connections>
+            <point key="canvasLocation" x="64" y="80"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="estrela" width="512" height="512"/>
+    </resources>
+</document>

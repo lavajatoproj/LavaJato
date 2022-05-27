@@ -90,6 +90,7 @@ class ScreenRegisterViewController: UIViewController {
     func saveUserDefaults(value: Any, key: String){
         UserDefaults.standard.set(value, forKey: key)
     }
+    
     public func createDatePicker(){
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
