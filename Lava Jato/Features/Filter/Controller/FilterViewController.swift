@@ -9,7 +9,6 @@ import UIKit
 
 class FilterViewController: UIViewController{
     
-    @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var callMapsButton: UIButton!
     @IBOutlet weak var tViewTableView: UITableView!
     
@@ -65,10 +64,8 @@ extension FilterViewController:UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0{
-            return 166.0
-        } else{
-            return 466.0
-        }
+        return viewModel.loadHeighForRow(indexPath: indexPath)
     }
+    
+
 }

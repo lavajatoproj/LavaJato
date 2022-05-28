@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pME-Od-2HJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pME-Od-2HJ">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -119,7 +119,7 @@
                                             <action selector="passwordValidate2:" destination="pME-Od-2HJ" eventType="editingDidEnd" id="1pF-jY-53a"/>
                                         </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Dp-ZK-DiQ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Dp-ZK-DiQ">
                                         <rect key="frame" x="207" y="577" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
@@ -349,6 +349,7 @@
                                     <constraint firstItem="HIb-v2-v1f" firstAttribute="centerY" secondItem="seT-hL-d48" secondAttribute="centerY" id="5OJ-zm-YDP"/>
                                     <constraint firstItem="fKe-at-6IC" firstAttribute="width" secondItem="8Wm-WC-fRS" secondAttribute="width" id="6RH-Tb-T0Y"/>
                                     <constraint firstItem="df3-RZ-tor" firstAttribute="top" secondItem="seT-hL-d48" secondAttribute="bottom" id="7f6-Fn-Ci8"/>
+                                    <constraint firstItem="9Dp-ZK-DiQ" firstAttribute="centerX" secondItem="KoH-mD-RXR" secondAttribute="centerX" id="85T-bf-6ZW"/>
                                     <constraint firstAttribute="bottom" secondItem="fKe-at-6IC" secondAttribute="bottom" constant="-125" id="8Jb-ku-eB9"/>
                                     <constraint firstItem="KoH-mD-RXR" firstAttribute="centerX" secondItem="8Wm-WC-fRS" secondAttribute="centerX" id="9Ma-yP-Rsq"/>
                                     <constraint firstItem="J5G-TU-VUE" firstAttribute="top" secondItem="YTI-XS-LYM" secondAttribute="bottom" constant="20" id="D3t-u4-6HY"/>
@@ -483,7 +484,7 @@
     </scenes>
     <resources>
         <image name="background" width="440" height="926"/>
-        <image name="checkbox" width="20" height="20"/>
+        <image name="checkbox" width="10" height="10"/>
         <image name="checkbox1" width="20" height="20"/>
         <namedColor name="ColorDefault">
             <color red="0.9570000171661377" green="0.7369999885559082" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

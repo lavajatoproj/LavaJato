@@ -17,7 +17,7 @@ extension UIViewController {
     @objc private func dismissKeyboard() {
         view.endEditing(true)
     }
-    
+
     public func dismissAllKeyboard() {
         DispatchQueue.main.async {
             for textField in self.view.subviews where textField is UITextField {

@@ -55,6 +55,16 @@ class MapsViewController: UIViewController{
         }
     }
     
+//    func saveUserDefaults(value: Any, key: String){
+//        UserDefaults.standard.set(value, forKey: key)
+//    }
+//
+//    func saveCity(){
+//     self.saveUserDefaults(value: txtSearch?.text ?? "", key: "saveCity")
+//
+//    }
+    
+    
     func Style(){
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes

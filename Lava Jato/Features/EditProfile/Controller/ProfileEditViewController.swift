@@ -28,6 +28,10 @@ class ProfileEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupLayout()
+    }
+    
+    func setupLayout(){
         Style()
         self.hideKeyboardWhenTappedAround()
         self.createDatePicker()
