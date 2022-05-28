@@ -60,7 +60,6 @@ class ViewController: UIViewController{
                         self.performSegue(withIdentifier: "telaPrincipalsegue", sender: nil)
                     }else{
                         print("Erro ao logar usuário")
-                        
                     }
                 }
             }else{
