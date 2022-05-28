@@ -12,18 +12,13 @@ class MainScreen: UIViewController {
     
     @IBOutlet weak var cvCollectionView: UICollectionView!
     
-    private var newServiceViewModel:NewServiceViewModel = NewServiceViewModel()
+//    private var newServiceViewModel:NewServiceViewModel = NewServiceViewModel()
+    private var viewModel:MainViewModel = MainViewModel()
     private var infos: Users?
 
-    private var arrayNames2:[Professionals] = [
-        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Thiago", userRate: 4.5, userServices: [.init(simpleWash: true, completWash: true, washPolishing: true, dryWash: true, steamWash: false, ecoWash: false, airPurification: false, sanitation: true)]),
-        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Bruno", userRate: 4.5, userServices: [.init(simpleWash: false, completWash: false, washPolishing: false, dryWash: false, steamWash: false, ecoWash: true, airPurification: false, sanitation: true)]),
-        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Olivia", userRate: 4.5, userServices: [.init(simpleWash: false, completWash: true, washPolishing: true, dryWash: true, steamWash: false, ecoWash: true, airPurification: false, sanitation: true)]),
-        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Fred", userRate: 4.5, userServices: [.init(simpleWash: true, completWash: true, washPolishing: true, dryWash: true, steamWash: true, ecoWash: false, airPurification: false, sanitation: true)])
-
-    ]
-
-  var filterArray:[Professionals] = []
+   
+    var arrayNames2:[Professionals] = []
+    var filterArray:[Professionals] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +59,7 @@ extension MainScreen:UICollectionViewDataSource{
         switch indexPath.item{
         case 0:
             var count:Int = 0
-            for user in arrayNames2 {
+            for user in arrayNames2{
                 let type = arrayNames2[count].userServices[0].simpleWash
                 count = count + 1
                 if type == true {
@@ -139,7 +134,6 @@ extension MainScreen:UICollectionViewDataSource{
         let storyboard = UIStoryboard(name: "NewServiceStoryBoard", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "NewServiceStoryBoard") as? NewServiceViewController
         viewController?.filterArray = filterArray
-//        viewController.self?.newServiceViewModel =
         navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
     }
 }
