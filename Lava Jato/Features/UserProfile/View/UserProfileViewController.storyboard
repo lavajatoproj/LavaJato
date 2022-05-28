@@ -396,11 +396,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="muteImageView" destination="o7o-yu-wD5" id="fUm-Vs-mMR"/>
+                        <outlet property="nameLabel" destination="hUQ-Wl-f7e" id="IF3-hI-rQP"/>
                         <outlet property="notificationButton" destination="4GR-cz-o33" id="ZGL-l2-z4l"/>
                         <outlet property="tappedHelpButton" destination="MTB-Nq-eDc" id="NcL-2p-cjY"/>
                         <outlet property="tappedMuteSwitch" destination="NXR-bw-rkC" id="PQ6-WV-uQ4"/>
                         <outlet property="tappedMyServiceButton" destination="U2j-KJ-Z2T" id="1vx-Cm-Av2"/>
                         <outlet property="tappedRecomendButton" destination="p1o-0R-MAO" id="bHF-QE-Rah"/>
+                        <outlet property="userImageView" destination="iyf-Mu-SeB" id="9J8-KD-Ell"/>
                         <segue destination="BOT-9x-kaN" kind="show" identifier="notificationSegue" id="Wnc-5k-UgM"/>
                         <segue destination="9Dx-YO-fqB" kind="show" identifier="myServices" id="GuJ-sl-Wce"/>
                         <segue destination="A9D-wy-DN1" kind="show" id="rEc-3z-YS6"/>
