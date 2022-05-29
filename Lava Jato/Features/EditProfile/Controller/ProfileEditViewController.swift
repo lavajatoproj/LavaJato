@@ -197,9 +197,25 @@ class ProfileEditViewController: UIViewController {
     
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
-        self.alert?.showAlert(title: "Atenção!", message: "Salvar as alterações realizadas?", titleButton: "Salvar", completion: { value in
-            self.activeSaveButton()
-        })
+//        self.alert?.showAlert(title: "Atenção!", message: "Salvar as alterações realizadas?", titleButton: "Salvar", completion: { value in
+//            self.activeSaveButton()
+//        })
+        
+        if let name = self.nameTextField.text, let email = self.emailTextField.text, let cellNumber = self.numberTextField.text, let born = self.dateTextField.text, let city = self.stateButton.titleLabel?.text{
+            self.firestore?.collection("users").document( self.idUserLog ?? "" )
+                                    .setData([
+                                        "name": name,
+                                        "email": email,
+                                        "cellNumber": cellNumber,
+                                        "born": born,
+                                        "city": city,
+//                                        "profileImage": url,
+                                        "id": self.idUserLog as Any,
+                                    ])
+        }else{
+            print("Error")
+        }
+        
         self.userDefault()
         self.setPlaceHolders()
         self.resetTextField()
@@ -242,6 +258,7 @@ class ProfileEditViewController: UIViewController {
     
     @IBAction func tappedEditPhoto(_ sender: UIButton) {
         self.imagePicker.sourceType = .photoLibrary
+        self.imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
     }
 }
@@ -268,10 +285,11 @@ extension ProfileEditViewController:UITextFieldDelegate{
         navigationController?.navigationBar.titleTextAttributes = textAtributes
     }
 }
+
 extension ProfileEditViewController:UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-            self.profileImageView.contentMode = .scaleToFill
+            self.profileImageView.contentMode = .scaleAspectFill
             self.profileImageView.image = pickedImage
             self.viewModelEditProfile.cornerRadius(image: profileImageView)
             self.profileImageView.clipsToBounds = true
