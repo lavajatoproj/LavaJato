@@ -37,6 +37,7 @@ class ProfileEditViewController: UIViewController {
     var posts: [Dictionary<String, Any>] = []
     var idUserLog: String?
     
+//    oi
     func getProfileData(){
         let user = self.firestore?.collection("users").document(self.idUserLog ?? "")
         user?.getDocument(completion: { documentSnapshot, error in
