@@ -1,0 +1,2379 @@
+BCSymbolMap Version: 2.0
+Apple clang version 13.0.0 (clang-1300.0.29.3)
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk
+MacOSX11.3.sdk
+/Users/josuebrizuelaxp/Library/Developer/Xcode/DerivedData/FacebookSDK-gjawjhgqkiubdofympkwhdhkmvdi/Build/Intermediates.noindex/ArchiveIntermediates/FBSDKLoginKit-Dynamic/IntermediateBuildFilesPath/FBSDKLoginKit.build/Release-maccatalyst/FBSDKLoginKit-Dynamic.build/DerivedSources/FBSDKLoginKit_vers.c
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit
+-[FBSDKAuthenticationTokenFactory init]
+-[FBSDKAuthenticationTokenFactory initWithSessionProvider:]
+-[FBSDKAuthenticationTokenFactory createTokenFromTokenString:nonce:completion:]
+-[FBSDKAuthenticationTokenFactory createTokenFromTokenString:nonce:graphDomain:completion:]
+___91-[FBSDKAuthenticationTokenFactory createTokenFromTokenString:nonce:graphDomain:completion:]_block_invoke
+___copy_helper_block_e8_32s40s48s56b
+___destroy_helper_block_e8_32s40s48s56s
+-[FBSDKAuthenticationTokenFactory verifySignature:header:claims:certificateKey:completion:]
+___91-[FBSDKAuthenticationTokenFactory verifySignature:header:claims:certificateKey:completion:]_block_invoke
+___91-[FBSDKAuthenticationTokenFactory verifySignature:header:claims:certificateKey:completion:]_block_invoke_2
+___copy_helper_block_e8_32b
+___destroy_helper_block_e8_32s
+___91-[FBSDKAuthenticationTokenFactory verifySignature:header:claims:certificateKey:completion:]_block_invoke.56
+___copy_helper_block_e8_32s40s48b
+___destroy_helper_block_e8_32s40s48s
+-[FBSDKAuthenticationTokenFactory getPublicKeyWithCertificateKey:completion:]
+___77-[FBSDKAuthenticationTokenFactory getPublicKeyWithCertificateKey:completion:]_block_invoke
+-[FBSDKAuthenticationTokenFactory getCertificateWithKey:completion:]
+___68-[FBSDKAuthenticationTokenFactory getCertificateWithKey:completion:]_block_invoke
+___copy_helper_block_e8_32b40s
+___destroy_helper_block_e8_32s40s
+-[FBSDKAuthenticationTokenFactory _certificateEndpoint]
+-[FBSDKAuthenticationTokenFactory cert]
+-[FBSDKAuthenticationTokenFactory setCert:]
+-[FBSDKAuthenticationTokenFactory sessionProvider]
+-[FBSDKAuthenticationTokenFactory setSessionProvider:]
+-[FBSDKAuthenticationTokenFactory .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_
+_OBJC_CLASSLIST_REFERENCES_$_.3
+_OBJC_SELECTOR_REFERENCES_
+_OBJC_SELECTOR_REFERENCES_.5
+_OBJC_SELECTOR_REFERENCES_.7
+_OBJC_SELECTOR_REFERENCES_.9
+_OBJC_SELECTOR_REFERENCES_.13
+_OBJC_SELECTOR_REFERENCES_.15
+_OBJC_SELECTOR_REFERENCES_.19
+_OBJC_SELECTOR_REFERENCES_.21
+_OBJC_SELECTOR_REFERENCES_.23
+_OBJC_CLASSLIST_REFERENCES_$_.24
+_OBJC_SELECTOR_REFERENCES_.26
+_OBJC_CLASSLIST_REFERENCES_$_.27
+_OBJC_SELECTOR_REFERENCES_.29
+_OBJC_CLASSLIST_REFERENCES_$_.30
+_OBJC_SELECTOR_REFERENCES_.32
+_OBJC_SELECTOR_REFERENCES_.34
+_OBJC_CLASSLIST_REFERENCES_$_.35
+_OBJC_SELECTOR_REFERENCES_.37
+___block_descriptor_64_e8_32s40s48s56bs_e8_v12?0B8l
+_OBJC_SELECTOR_REFERENCES_.40
+_OBJC_CLASSLIST_REFERENCES_$_.41
+_OBJC_SELECTOR_REFERENCES_.43
+_OBJC_SELECTOR_REFERENCES_.45
+_OBJC_CLASSLIST_REFERENCES_$_.46
+_OBJC_SELECTOR_REFERENCES_.50
+_OBJC_SELECTOR_REFERENCES_.52
+_OBJC_SELECTOR_REFERENCES_.54
+___block_descriptor_44_e8_32bs_e5_v8?0l
+___block_descriptor_40_e8_32bs_e5_v8?0l
+___block_descriptor_56_e8_32s40s48bs_e19_v16?0^{__SecKey=}8l
+_OBJC_SELECTOR_REFERENCES_.59
+___block_descriptor_40_e8_32bs_e27_v16?0^{__SecCertificate=}8l
+_OBJC_SELECTOR_REFERENCES_.62
+_OBJC_CLASSLIST_REFERENCES_$_.63
+_OBJC_SELECTOR_REFERENCES_.65
+_OBJC_SELECTOR_REFERENCES_.67
+_OBJC_CLASSLIST_REFERENCES_$_.68
+_OBJC_SELECTOR_REFERENCES_.70
+_OBJC_SELECTOR_REFERENCES_.72
+_OBJC_SELECTOR_REFERENCES_.74
+_OBJC_SELECTOR_REFERENCES_.78
+_OBJC_CLASSLIST_REFERENCES_$_.81
+_OBJC_SELECTOR_REFERENCES_.83
+___block_descriptor_48_e8_32bs40s_e46_v32?0"NSData"8"NSURLResponse"16"NSError"24l
+_OBJC_SELECTOR_REFERENCES_.86
+_OBJC_SELECTOR_REFERENCES_.88
+_OBJC_CLASSLIST_REFERENCES_$_.89
+_OBJC_SELECTOR_REFERENCES_.95
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+__OBJC_$_PROP_LIST_NSObject
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+__OBJC_PROTOCOL_$_NSObject
+__OBJC_LABEL_PROTOCOL_$_NSObject
+__OBJC_$_PROTOCOL_REFS_NSURLSessionDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSURLSessionDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSURLSessionDelegate
+__OBJC_PROTOCOL_$_NSURLSessionDelegate
+__OBJC_LABEL_PROTOCOL_$_NSURLSessionDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_FBSDKAuthenticationTokenCreating
+__OBJC_$_PROTOCOL_METHOD_TYPES_FBSDKAuthenticationTokenCreating
+__OBJC_PROTOCOL_$_FBSDKAuthenticationTokenCreating
+__OBJC_LABEL_PROTOCOL_$_FBSDKAuthenticationTokenCreating
+__OBJC_CLASS_PROTOCOLS_$_FBSDKAuthenticationTokenFactory
+__OBJC_METACLASS_RO_$_FBSDKAuthenticationTokenFactory
+__OBJC_$_INSTANCE_METHODS_FBSDKAuthenticationTokenFactory
+_OBJC_IVAR_$_FBSDKAuthenticationTokenFactory._cert
+_OBJC_IVAR_$_FBSDKAuthenticationTokenFactory._sessionProvider
+__OBJC_$_INSTANCE_VARIABLES_FBSDKAuthenticationTokenFactory
+__OBJC_$_PROP_LIST_FBSDKAuthenticationTokenFactory
+__OBJC_CLASS_RO_$_FBSDKAuthenticationTokenFactory
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKAuthenticationTokenFactory.m
+FBSDKLoginKit/Internal/FBSDKAuthenticationTokenFactory.m
+__destroy_helper_block_e8_32s40s
+__copy_helper_block_e8_32b40s
+__68-[FBSDKAuthenticationTokenFactory getCertificateWithKey:completion:]_block_invoke
+__77-[FBSDKAuthenticationTokenFactory getPublicKeyWithCertificateKey:completion:]_block_invoke
+__destroy_helper_block_e8_32s40s48s
+__copy_helper_block_e8_32s40s48b
+__91-[FBSDKAuthenticationTokenFactory verifySignature:header:claims:certificateKey:completion:]_block_invoke.56
+__destroy_helper_block_e8_32s
+__copy_helper_block_e8_32b
+__91-[FBSDKAuthenticationTokenFactory verifySignature:header:claims:certificateKey:completion:]_block_invoke_2
+__91-[FBSDKAuthenticationTokenFactory verifySignature:header:claims:certificateKey:completion:]_block_invoke
+__destroy_helper_block_e8_32s40s48s56s
+__copy_helper_block_e8_32s40s48s56b
+__91-[FBSDKAuthenticationTokenFactory createTokenFromTokenString:nonce:graphDomain:completion:]_block_invoke
+-[FBSDKAuthenticationTokenHeader initWithAlg:typ:kid:]
++[FBSDKAuthenticationTokenHeader headerFromEncodedString:]
+-[FBSDKAuthenticationTokenHeader isEqualToHeader:]
+-[FBSDKAuthenticationTokenHeader isEqual:]
+-[FBSDKAuthenticationTokenHeader alg]
+-[FBSDKAuthenticationTokenHeader typ]
+-[FBSDKAuthenticationTokenHeader kid]
+-[FBSDKAuthenticationTokenHeader .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.2
+_OBJC_SELECTOR_REFERENCES_.4
+_OBJC_CLASSLIST_REFERENCES_$_.5
+_OBJC_CLASSLIST_REFERENCES_$_.8
+_OBJC_SELECTOR_REFERENCES_.10
+_OBJC_SELECTOR_REFERENCES_.18
+_OBJC_SELECTOR_REFERENCES_.22
+_OBJC_CLASSLIST_REFERENCES_$_.23
+_OBJC_SELECTOR_REFERENCES_.25
+_OBJC_SELECTOR_REFERENCES_.27
+_OBJC_SELECTOR_REFERENCES_.31
+_OBJC_SELECTOR_REFERENCES_.33
+__OBJC_$_CLASS_METHODS_FBSDKAuthenticationTokenHeader
+__OBJC_METACLASS_RO_$_FBSDKAuthenticationTokenHeader
+__OBJC_$_INSTANCE_METHODS_FBSDKAuthenticationTokenHeader
+_OBJC_IVAR_$_FBSDKAuthenticationTokenHeader._alg
+_OBJC_IVAR_$_FBSDKAuthenticationTokenHeader._typ
+_OBJC_IVAR_$_FBSDKAuthenticationTokenHeader._kid
+__OBJC_$_INSTANCE_VARIABLES_FBSDKAuthenticationTokenHeader
+__OBJC_$_PROP_LIST_FBSDKAuthenticationTokenHeader
+__OBJC_CLASS_RO_$_FBSDKAuthenticationTokenHeader
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKAuthenticationTokenHeader.m
+FBSDKLoginKit/Internal/FBSDKAuthenticationTokenHeader.m
+FBSDKLoginKit/Internal/FBSDKAuthenticationTokenHeader.h
+-[FBSDKCodeVerifier init]
+-[FBSDKCodeVerifier initWithString:]
+-[FBSDKCodeVerifier challenge]
++[FBSDKCodeVerifier allowedCharacterSet]
++[FBSDKCodeVerifier base64URLEncodeDataWithNoPadding:]
+-[FBSDKCodeVerifier value]
+-[FBSDKCodeVerifier .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.6
+_OBJC_SELECTOR_REFERENCES_.8
+_OBJC_CLASSLIST_REFERENCES_$_.9
+_OBJC_SELECTOR_REFERENCES_.11
+_OBJC_SELECTOR_REFERENCES_.17
+_OBJC_CLASSLIST_REFERENCES_$_.26
+_OBJC_SELECTOR_REFERENCES_.28
+_OBJC_SELECTOR_REFERENCES_.30
+_OBJC_SELECTOR_REFERENCES_.36
+_OBJC_SELECTOR_REFERENCES_.42
+__OBJC_$_CLASS_METHODS_FBSDKCodeVerifier
+__OBJC_METACLASS_RO_$_FBSDKCodeVerifier
+__OBJC_$_INSTANCE_METHODS_FBSDKCodeVerifier
+_OBJC_IVAR_$_FBSDKCodeVerifier._value
+__OBJC_$_INSTANCE_VARIABLES_FBSDKCodeVerifier
+__OBJC_$_PROP_LIST_FBSDKCodeVerifier
+__OBJC_CLASS_RO_$_FBSDKCodeVerifier
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/FBSDKCodeVerifier.m
+FBSDKLoginKit/FBSDKCodeVerifier.m
+FBSDKLoginKit/FBSDKCodeVerifier.h
+-[FBSDKDeviceLoginCodeInfo initWithIdentifier:loginCode:verificationURL:expirationDate:pollingInterval:]
+-[FBSDKDeviceLoginCodeInfo identifier]
+-[FBSDKDeviceLoginCodeInfo loginCode]
+-[FBSDKDeviceLoginCodeInfo verificationURL]
+-[FBSDKDeviceLoginCodeInfo expirationDate]
+-[FBSDKDeviceLoginCodeInfo pollingInterval]
+-[FBSDKDeviceLoginCodeInfo .cxx_destruct]
+__OBJC_METACLASS_RO_$_FBSDKDeviceLoginCodeInfo
+__OBJC_$_INSTANCE_METHODS_FBSDKDeviceLoginCodeInfo
+_OBJC_IVAR_$_FBSDKDeviceLoginCodeInfo._identifier
+_OBJC_IVAR_$_FBSDKDeviceLoginCodeInfo._loginCode
+_OBJC_IVAR_$_FBSDKDeviceLoginCodeInfo._verificationURL
+_OBJC_IVAR_$_FBSDKDeviceLoginCodeInfo._expirationDate
+_OBJC_IVAR_$_FBSDKDeviceLoginCodeInfo._pollingInterval
+__OBJC_$_INSTANCE_VARIABLES_FBSDKDeviceLoginCodeInfo
+__OBJC_$_PROP_LIST_FBSDKDeviceLoginCodeInfo
+__OBJC_CLASS_RO_$_FBSDKDeviceLoginCodeInfo
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/FBSDKDeviceLoginCodeInfo.m
+FBSDKLoginKit/FBSDKDeviceLoginCodeInfo.m
+FBSDKLoginKit/FBSDKDeviceLoginCodeInfo.h
++[FBSDKDeviceLoginManager initialize]
+-[FBSDKDeviceLoginManager initWithPermissions:enableSmartLogin:graphRequestFactory:devicePoller:settings:internalUtility:]
+-[FBSDKDeviceLoginManager initWithPermissions:enableSmartLogin:]
+-[FBSDKDeviceLoginManager start]
+___32-[FBSDKDeviceLoginManager start]_block_invoke
+___copy_helper_block_e8_32s
+-[FBSDKDeviceLoginManager cancel]
+-[FBSDKDeviceLoginManager _notifyError:]
+-[FBSDKDeviceLoginManager _notifyToken:withExpirationDate:withDataAccessExpirationDate:]
+___88-[FBSDKDeviceLoginManager _notifyToken:withExpirationDate:withDataAccessExpirationDate:]_block_invoke
+___88-[FBSDKDeviceLoginManager _notifyToken:withExpirationDate:withDataAccessExpirationDate:]_block_invoke.133
+___copy_helper_block_e8_32s40s48s56s64b
+___destroy_helper_block_e8_32s40s48s56s64s
+-[FBSDKDeviceLoginManager _processError:]
+-[FBSDKDeviceLoginManager _schedulePoll:]
+___41-[FBSDKDeviceLoginManager _schedulePoll:]_block_invoke
+___41-[FBSDKDeviceLoginManager _schedulePoll:]_block_invoke_2
+-[FBSDKDeviceLoginManager netService:didNotPublish:]
+-[FBSDKDeviceLoginManager setCodeInfo:]
+-[FBSDKDeviceLoginManager delegate]
+-[FBSDKDeviceLoginManager setDelegate:]
+-[FBSDKDeviceLoginManager permissions]
+-[FBSDKDeviceLoginManager redirectURL]
+-[FBSDKDeviceLoginManager setRedirectURL:]
+-[FBSDKDeviceLoginManager codeInfo]
+-[FBSDKDeviceLoginManager isCancelled]
+-[FBSDKDeviceLoginManager setIsCancelled:]
+-[FBSDKDeviceLoginManager loginAdvertisementService]
+-[FBSDKDeviceLoginManager setLoginAdvertisementService:]
+-[FBSDKDeviceLoginManager isSmartLoginEnabled]
+-[FBSDKDeviceLoginManager setIsSmartLoginEnabled:]
+-[FBSDKDeviceLoginManager graphRequestFactory]
+-[FBSDKDeviceLoginManager setGraphRequestFactory:]
+-[FBSDKDeviceLoginManager devicePoller]
+-[FBSDKDeviceLoginManager setDevicePoller:]
+-[FBSDKDeviceLoginManager settings]
+-[FBSDKDeviceLoginManager setSettings:]
+-[FBSDKDeviceLoginManager internalUtility]
+-[FBSDKDeviceLoginManager setInternalUtility:]
+-[FBSDKDeviceLoginManager .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.1
+_g_loginManagerInstances
+_OBJC_SELECTOR_REFERENCES_.3
+_OBJC_CLASSLIST_REFERENCES_$_.6
+_OBJC_CLASSLIST_REFERENCES_$_.7
+_OBJC_CLASSLIST_REFERENCES_$_.11
+_OBJC_CLASSLIST_REFERENCES_$_.20
+_OBJC_SELECTOR_REFERENCES_.24
+_OBJC_CLASSLIST_REFERENCES_$_.39
+_OBJC_SELECTOR_REFERENCES_.41
+_OBJC_CLASSLIST_REFERENCES_$_.42
+_OBJC_SELECTOR_REFERENCES_.44
+_OBJC_SELECTOR_REFERENCES_.46
+_OBJC_SELECTOR_REFERENCES_.56
+_OBJC_SELECTOR_REFERENCES_.58
+_OBJC_CLASSLIST_REFERENCES_$_.61
+_OBJC_SELECTOR_REFERENCES_.63
+_OBJC_CLASSLIST_REFERENCES_$_.64
+_OBJC_SELECTOR_REFERENCES_.66
+_OBJC_CLASSLIST_REFERENCES_$_.77
+_OBJC_SELECTOR_REFERENCES_.79
+_OBJC_CLASSLIST_REFERENCES_$_.80
+_OBJC_SELECTOR_REFERENCES_.85
+_OBJC_SELECTOR_REFERENCES_.87
+_OBJC_SELECTOR_REFERENCES_.89
+_OBJC_SELECTOR_REFERENCES_.91
+_OBJC_SELECTOR_REFERENCES_.93
+_OBJC_SELECTOR_REFERENCES_.97
+_OBJC_SELECTOR_REFERENCES_.99
+_OBJC_SELECTOR_REFERENCES_.101
+_OBJC_SELECTOR_REFERENCES_.103
+_OBJC_SELECTOR_REFERENCES_.105
+_OBJC_CLASSLIST_REFERENCES_$_.106
+_OBJC_SELECTOR_REFERENCES_.110
+_OBJC_SELECTOR_REFERENCES_.112
+___block_descriptor_40_e8_32s_e54_v32?0"<FBSDKGraphRequestConnecting>"816"NSError"24l
+_OBJC_SELECTOR_REFERENCES_.115
+_OBJC_SELECTOR_REFERENCES_.117
+_OBJC_SELECTOR_REFERENCES_.119
+_OBJC_SELECTOR_REFERENCES_.121
+_OBJC_SELECTOR_REFERENCES_.123
+___block_descriptor_40_e8_32s_e39_v16?0"FBSDKDeviceLoginManagerResult"8l
+_OBJC_SELECTOR_REFERENCES_.135
+_OBJC_CLASSLIST_REFERENCES_$_.140
+_OBJC_SELECTOR_REFERENCES_.142
+_OBJC_SELECTOR_REFERENCES_.144
+_OBJC_CLASSLIST_REFERENCES_$_.145
+_OBJC_SELECTOR_REFERENCES_.147
+_OBJC_SELECTOR_REFERENCES_.149
+_OBJC_SELECTOR_REFERENCES_.151
+_OBJC_SELECTOR_REFERENCES_.153
+_OBJC_CLASSLIST_REFERENCES_$_.154
+_OBJC_SELECTOR_REFERENCES_.156
+_OBJC_SELECTOR_REFERENCES_.158
+_OBJC_SELECTOR_REFERENCES_.162
+___block_descriptor_72_e8_32s40s48s56s64bs_e54_v32?0"<FBSDKGraphRequestConnecting>"816"NSError"24l
+_OBJC_SELECTOR_REFERENCES_.164
+_OBJC_SELECTOR_REFERENCES_.166
+_OBJC_SELECTOR_REFERENCES_.168
+_OBJC_SELECTOR_REFERENCES_.170
+_OBJC_SELECTOR_REFERENCES_.172
+_OBJC_SELECTOR_REFERENCES_.174
+_OBJC_SELECTOR_REFERENCES_.176
+_OBJC_SELECTOR_REFERENCES_.182
+_OBJC_SELECTOR_REFERENCES_.184
+_OBJC_SELECTOR_REFERENCES_.186
+_OBJC_SELECTOR_REFERENCES_.190
+___block_descriptor_40_e8_32s_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.195
+_OBJC_SELECTOR_REFERENCES_.197
+__OBJC_$_CLASS_METHODS_FBSDKDeviceLoginManager
+__OBJC_$_PROTOCOL_REFS_NSNetServiceDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSNetServiceDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSNetServiceDelegate
+__OBJC_PROTOCOL_$_NSNetServiceDelegate
+__OBJC_LABEL_PROTOCOL_$_NSNetServiceDelegate
+__OBJC_CLASS_PROTOCOLS_$_FBSDKDeviceLoginManager
+__OBJC_METACLASS_RO_$_FBSDKDeviceLoginManager
+__OBJC_$_INSTANCE_METHODS_FBSDKDeviceLoginManager
+_OBJC_IVAR_$_FBSDKDeviceLoginManager._isCancelled
+_OBJC_IVAR_$_FBSDKDeviceLoginManager._isSmartLoginEnabled
+_OBJC_IVAR_$_FBSDKDeviceLoginManager._delegate
+_OBJC_IVAR_$_FBSDKDeviceLoginManager._permissions
+_OBJC_IVAR_$_FBSDKDeviceLoginManager._redirectURL
+_OBJC_IVAR_$_FBSDKDeviceLoginManager._codeInfo
+_OBJC_IVAR_$_FBSDKDeviceLoginManager._loginAdvertisementService
+_OBJC_IVAR_$_FBSDKDeviceLoginManager._graphRequestFactory
+_OBJC_IVAR_$_FBSDKDeviceLoginManager._devicePoller
+_OBJC_IVAR_$_FBSDKDeviceLoginManager._settings
+_OBJC_IVAR_$_FBSDKDeviceLoginManager._internalUtility
+__OBJC_$_INSTANCE_VARIABLES_FBSDKDeviceLoginManager
+__OBJC_$_PROP_LIST_FBSDKDeviceLoginManager
+__OBJC_CLASS_RO_$_FBSDKDeviceLoginManager
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/FBSDKDeviceLoginManager.m
+FBSDKLoginKit/FBSDKDeviceLoginManager.m
+FBSDKLoginKit/FBSDKDeviceLoginManager.h
+__41-[FBSDKDeviceLoginManager _schedulePoll:]_block_invoke_2
+__41-[FBSDKDeviceLoginManager _schedulePoll:]_block_invoke
+__destroy_helper_block_e8_32s40s48s56s64s
+__copy_helper_block_e8_32s40s48s56s64b
+__88-[FBSDKDeviceLoginManager _notifyToken:withExpirationDate:withDataAccessExpirationDate:]_block_invoke.133
+__88-[FBSDKDeviceLoginManager _notifyToken:withExpirationDate:withDataAccessExpirationDate:]_block_invoke
+__copy_helper_block_e8_32s
+__32-[FBSDKDeviceLoginManager start]_block_invoke
+-[FBSDKDeviceLoginManagerResult initWithToken:isCancelled:]
+-[FBSDKDeviceLoginManagerResult accessToken]
+-[FBSDKDeviceLoginManagerResult isCancelled]
+-[FBSDKDeviceLoginManagerResult .cxx_destruct]
+__OBJC_METACLASS_RO_$_FBSDKDeviceLoginManagerResult
+__OBJC_$_INSTANCE_METHODS_FBSDKDeviceLoginManagerResult
+_OBJC_IVAR_$_FBSDKDeviceLoginManagerResult._cancelled
+_OBJC_IVAR_$_FBSDKDeviceLoginManagerResult._accessToken
+__OBJC_$_INSTANCE_VARIABLES_FBSDKDeviceLoginManagerResult
+__OBJC_$_PROP_LIST_FBSDKDeviceLoginManagerResult
+__OBJC_CLASS_RO_$_FBSDKDeviceLoginManagerResult
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/FBSDKDeviceLoginManagerResult.m
+FBSDKLoginKit/FBSDKDeviceLoginManagerResult.m
+FBSDKLoginKit/FBSDKDeviceLoginManagerResult.h
+-[FBSDKDevicePoller scheduleBlock:interval:]
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_FBSDKDevicePolling
+__OBJC_$_PROTOCOL_METHOD_TYPES_FBSDKDevicePolling
+__OBJC_PROTOCOL_$_FBSDKDevicePolling
+__OBJC_LABEL_PROTOCOL_$_FBSDKDevicePolling
+__OBJC_CLASS_PROTOCOLS_$_FBSDKDevicePoller
+__OBJC_METACLASS_RO_$_FBSDKDevicePoller
+__OBJC_$_INSTANCE_METHODS_FBSDKDevicePoller
+__OBJC_CLASS_RO_$_FBSDKDevicePoller
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKDevicePoller.m
+FBSDKLoginKit/Internal/FBSDKDevicePoller.m
++[FBSDKDeviceRequestsHelper initialize]
++[FBSDKDeviceRequestsHelper getDeviceInfo]
++[FBSDKDeviceRequestsHelper startAdvertisementService:withDelegate:]
+___68+[FBSDKDeviceRequestsHelper startAdvertisementService:withDelegate:]_block_invoke
++[FBSDKDeviceRequestsHelper isDelegate:forAdvertisementService:]
++[FBSDKDeviceRequestsHelper cleanUpAdvertisementService:]
+_g_mdnsAdvertisementServices
+_OBJC_CLASSLIST_REFERENCES_$_.14
+_OBJC_SELECTOR_REFERENCES_.16
+_startAdvertisementService:withDelegate:.sdkVersion
+_startAdvertisementService:withDelegate:.onceToken
+___block_descriptor_32_e5_v8?0l
+___block_literal_global
+_OBJC_CLASSLIST_REFERENCES_$_.33
+_OBJC_SELECTOR_REFERENCES_.35
+_OBJC_SELECTOR_REFERENCES_.39
+_OBJC_SELECTOR_REFERENCES_.51
+_OBJC_CLASSLIST_REFERENCES_$_.52
+_OBJC_SELECTOR_REFERENCES_.60
+_OBJC_SELECTOR_REFERENCES_.69
+_OBJC_SELECTOR_REFERENCES_.71
+_OBJC_SELECTOR_REFERENCES_.73
+_OBJC_SELECTOR_REFERENCES_.75
+__OBJC_$_CLASS_METHODS_FBSDKDeviceRequestsHelper
+__OBJC_METACLASS_RO_$_FBSDKDeviceRequestsHelper
+__OBJC_CLASS_RO_$_FBSDKDeviceRequestsHelper
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKDeviceRequestsHelper.m
+FBSDKLoginKit/Internal/FBSDKDeviceRequestsHelper.m
+__68+[FBSDKDeviceRequestsHelper startAdvertisementService:withDelegate:]_block_invoke
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/dispatch/once.h
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKLoginAppEventName.m
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginAuthType.m
+-[FBSDKLoginCompleterFactory createLoginCompleterWithURLParameters:appID:authenticationTokenCreator:graphRequestFactory:internalUtility:]
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_FBSDKLoginCompleterFactory
+__OBJC_$_PROTOCOL_METHOD_TYPES_FBSDKLoginCompleterFactory
+__OBJC_PROTOCOL_$_FBSDKLoginCompleterFactory
+__OBJC_LABEL_PROTOCOL_$_FBSDKLoginCompleterFactory
+__OBJC_CLASS_PROTOCOLS_$_FBSDKLoginCompleterFactory
+__OBJC_METACLASS_RO_$_FBSDKLoginCompleterFactory
+__OBJC_$_INSTANCE_METHODS_FBSDKLoginCompleterFactory
+__OBJC_CLASS_RO_$_FBSDKLoginCompleterFactory
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKLoginCompleterFactory.m
+FBSDKLoginKit/Internal/FBSDKLoginCompleterFactory.m
+-[FBSDKLoginCompletionParameters init]
+-[FBSDKLoginCompletionParameters initWithError:]
+-[FBSDKLoginCompletionParameters authenticationToken]
+-[FBSDKLoginCompletionParameters setAuthenticationToken:]
+-[FBSDKLoginCompletionParameters profile]
+-[FBSDKLoginCompletionParameters setProfile:]
+-[FBSDKLoginCompletionParameters accessTokenString]
+-[FBSDKLoginCompletionParameters setAccessTokenString:]
+-[FBSDKLoginCompletionParameters nonceString]
+-[FBSDKLoginCompletionParameters setNonceString:]
+-[FBSDKLoginCompletionParameters authenticationTokenString]
+-[FBSDKLoginCompletionParameters setAuthenticationTokenString:]
+-[FBSDKLoginCompletionParameters code]
+-[FBSDKLoginCompletionParameters setCode:]
+-[FBSDKLoginCompletionParameters permissions]
+-[FBSDKLoginCompletionParameters setPermissions:]
+-[FBSDKLoginCompletionParameters declinedPermissions]
+-[FBSDKLoginCompletionParameters setDeclinedPermissions:]
+-[FBSDKLoginCompletionParameters expiredPermissions]
+-[FBSDKLoginCompletionParameters setExpiredPermissions:]
+-[FBSDKLoginCompletionParameters appID]
+-[FBSDKLoginCompletionParameters setAppID:]
+-[FBSDKLoginCompletionParameters userID]
+-[FBSDKLoginCompletionParameters setUserID:]
+-[FBSDKLoginCompletionParameters error]
+-[FBSDKLoginCompletionParameters setError:]
+-[FBSDKLoginCompletionParameters expirationDate]
+-[FBSDKLoginCompletionParameters setExpirationDate:]
+-[FBSDKLoginCompletionParameters dataAccessExpirationDate]
+-[FBSDKLoginCompletionParameters setDataAccessExpirationDate:]
+-[FBSDKLoginCompletionParameters challenge]
+-[FBSDKLoginCompletionParameters setChallenge:]
+-[FBSDKLoginCompletionParameters graphDomain]
+-[FBSDKLoginCompletionParameters setGraphDomain:]
+-[FBSDKLoginCompletionParameters .cxx_destruct]
+__OBJC_METACLASS_RO_$_FBSDKLoginCompletionParameters
+__OBJC_$_INSTANCE_METHODS_FBSDKLoginCompletionParameters
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._authenticationToken
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._profile
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._accessTokenString
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._nonceString
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._authenticationTokenString
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._code
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._permissions
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._declinedPermissions
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._expiredPermissions
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._appID
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._userID
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._error
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._expirationDate
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._dataAccessExpirationDate
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._challenge
+_OBJC_IVAR_$_FBSDKLoginCompletionParameters._graphDomain
+__OBJC_$_INSTANCE_VARIABLES_FBSDKLoginCompletionParameters
+__OBJC_$_PROP_LIST_FBSDKLoginCompletionParameters
+__OBJC_CLASS_RO_$_FBSDKLoginCompletionParameters
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKLoginCompletionParameters.m
+FBSDKLoginKit/Internal/FBSDKLoginCompletionParameters.m
+FBSDKLoginKit/Internal/FBSDKLoginCompletionParameters+Internal.h
+FBSDKLoginKit/Internal/FBSDKLoginCompletionParameters.h
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginConstants.m
++[FBSDKLoginErrorFactory fbErrorForFailedLoginWithCode:]
++[FBSDKLoginErrorFactory fbErrorForFailedLoginWithCode:innerError:]
++[FBSDKLoginErrorFactory fbErrorFromReturnURLParameters:]
+_OBJC_CLASSLIST_REFERENCES_$_.38
+_OBJC_SELECTOR_REFERENCES_.48
+_OBJC_CLASSLIST_REFERENCES_$_.51
+_OBJC_SELECTOR_REFERENCES_.53
+__OBJC_$_CLASS_METHODS_FBSDKLoginErrorFactory
+__OBJC_METACLASS_RO_$_FBSDKLoginErrorFactory
+__OBJC_CLASS_RO_$_FBSDKLoginErrorFactory
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKLoginErrorFactory.m
+FBSDKLoginKit/Internal/FBSDKLoginErrorFactory.m
++[FBSDKLoginManager initialize]
+-[FBSDKLoginManager init]
+-[FBSDKLoginManager initWithInternalUtility:keychainStoreFactory:accessTokenWallet:authenticationToken:profile:urlOpener:settings:loginCompleterFactory:graphRequestFactory:]
+-[FBSDKLoginManager logInFromViewController:configuration:completion:]
+-[FBSDKLoginManager logInFromViewControllerImpl:configuration:completion:]
+-[FBSDKLoginManager logInWithPermissions:fromViewController:handler:]
+-[FBSDKLoginManager reauthorizeDataAccess:handler:]
+-[FBSDKLoginManager logOut]
+-[FBSDKLoginManager logInWithURL:handler:]
+___42-[FBSDKLoginManager logInWithURL:handler:]_block_invoke
+-[FBSDKLoginManager handleImplicitCancelOfLogIn]
+-[FBSDKLoginManager validateLoginStartState]
+-[FBSDKLoginManager isPerformingLogin]
+-[FBSDKLoginManager completeAuthentication:expectChallenge:]
+-[FBSDKLoginManager _setGlobalPropertiesWithParameters:result:]
+-[FBSDKLoginManager _setSharedAuthenticationToken:accessToken:profile:]
+-[FBSDKLoginManager _verifyChallengeWithCompletionParameters:]
+-[FBSDKLoginManager invokeHandler:error:]
+-[FBSDKLoginManager logInParametersWithConfiguration:loggingToken:logger:authMethod:]
+-[FBSDKLoginManager logInWithPermissions:handler:]
+-[FBSDKLoginManager logInParametersFromURL:]
+-[FBSDKLoginManager logIn]
+___26-[FBSDKLoginManager logIn]_block_invoke
+___26-[FBSDKLoginManager logIn]_block_invoke.348
++[FBSDKLoginManager stringForChallenge]
+-[FBSDKLoginManager validateReauthentication:withResult:]
+___57-[FBSDKLoginManager validateReauthentication:withResult:]_block_invoke
+___copy_helper_block_e8_32s40s48s
+-[FBSDKLoginManager performBrowserLogInWithHandler:]
+___52-[FBSDKLoginManager performBrowserLogInWithHandler:]_block_invoke
+-[FBSDKLoginManager cancelledResultFromParameters:]
+-[FBSDKLoginManager successResultFromParameters:]
+-[FBSDKLoginManager recentlyGrantedPermissionsFromGrantedPermissions:]
+-[FBSDKLoginManager recentlyDeclinedPermissionsFromDeclinedPermissions:]
+-[FBSDKLoginManager storeExpectedChallenge:]
+-[FBSDKLoginManager loadExpectedChallenge]
+-[FBSDKLoginManager storeExpectedNonce:]
+-[FBSDKLoginManager loadExpectedNonce]
+-[FBSDKLoginManager storeExpectedCodeVerifier:]
+-[FBSDKLoginManager loadExpectedCodeVerifier]
+-[FBSDKLoginManager setHandler:]
+-[FBSDKLoginManager setRequestedPermissions:]
+-[FBSDKLoginManager configuration]
+-[FBSDKLoginManager application:openURL:sourceApplication:annotation:]
+___70-[FBSDKLoginManager application:openURL:sourceApplication:annotation:]_block_invoke
+___copy_helper_block_e8_32s40s
+-[FBSDKLoginManager canOpenURL:forApplication:sourceApplication:annotation:]
+-[FBSDKLoginManager applicationDidBecomeActive:]
+-[FBSDKLoginManager isAuthenticationURL:]
+-[FBSDKLoginManager shouldStopPropagationOfURL:]
+-[FBSDKLoginManager defaultAudience]
+-[FBSDKLoginManager setDefaultAudience:]
+-[FBSDKLoginManager handler]
+-[FBSDKLoginManager setConfiguration:]
+-[FBSDKLoginManager keychainStore]
+-[FBSDKLoginManager setKeychainStore:]
+-[FBSDKLoginManager accessTokenWallet]
+-[FBSDKLoginManager setAccessTokenWallet:]
+-[FBSDKLoginManager authenticationToken]
+-[FBSDKLoginManager setAuthenticationToken:]
+-[FBSDKLoginManager profile]
+-[FBSDKLoginManager setProfile:]
+-[FBSDKLoginManager internalUtility]
+-[FBSDKLoginManager setInternalUtility:]
+-[FBSDKLoginManager urlOpener]
+-[FBSDKLoginManager setUrlOpener:]
+-[FBSDKLoginManager settings]
+-[FBSDKLoginManager setSettings:]
+-[FBSDKLoginManager loginCompleterFactory]
+-[FBSDKLoginManager setLoginCompleterFactory:]
+-[FBSDKLoginManager graphRequestFactory]
+-[FBSDKLoginManager setGraphRequestFactory:]
+-[FBSDKLoginManager fromViewController]
+-[FBSDKLoginManager setFromViewController:]
+-[FBSDKLoginManager requestedPermissions]
+-[FBSDKLoginManager logger]
+-[FBSDKLoginManager setLogger:]
+-[FBSDKLoginManager config]
+-[FBSDKLoginManager setConfig:]
+-[FBSDKLoginManager state]
+-[FBSDKLoginManager setState:]
+-[FBSDKLoginManager usedSFAuthSession]
+-[FBSDKLoginManager setUsedSFAuthSession:]
+-[FBSDKLoginManager .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.12
+_OBJC_SELECTOR_REFERENCES_.14
+_OBJC_CLASSLIST_REFERENCES_$_.15
+_OBJC_CLASSLIST_REFERENCES_$_.16
+_OBJC_CLASSLIST_REFERENCES_$_.17
+_OBJC_CLASSLIST_REFERENCES_$_.18
+_OBJC_CLASSLIST_REFERENCES_$_.19
+_OBJC_CLASSLIST_REFERENCES_$_.22
+_OBJC_CLASSLIST_REFERENCES_$_.25
+_OBJC_CLASSLIST_REFERENCES_$_.31
+_OBJC_CLASSLIST_REFERENCES_$_.34
+_OBJC_SELECTOR_REFERENCES_.38
+_OBJC_CLASSLIST_REFERENCES_$_.49
+_OBJC_SELECTOR_REFERENCES_.64
+_OBJC_CLASSLIST_REFERENCES_$_.65
+_OBJC_SELECTOR_REFERENCES_.77
+_OBJC_SELECTOR_REFERENCES_.81
+_OBJC_CLASSLIST_REFERENCES_$_.90
+_OBJC_SELECTOR_REFERENCES_.92
+_OBJC_SELECTOR_REFERENCES_.94
+_OBJC_SELECTOR_REFERENCES_.96
+_OBJC_SELECTOR_REFERENCES_.98
+_OBJC_SELECTOR_REFERENCES_.100
+_OBJC_SELECTOR_REFERENCES_.102
+_OBJC_SELECTOR_REFERENCES_.104
+_OBJC_SELECTOR_REFERENCES_.106
+_OBJC_CLASSLIST_REFERENCES_$_.107
+_OBJC_SELECTOR_REFERENCES_.109
+_OBJC_SELECTOR_REFERENCES_.111
+_OBJC_SELECTOR_REFERENCES_.113
+___block_descriptor_40_e8_32s_e40_v16?0"FBSDKLoginCompletionParameters"8l
+_OBJC_SELECTOR_REFERENCES_.118
+_OBJC_CLASSLIST_REFERENCES_$_.119
+_OBJC_CLASSLIST_REFERENCES_$_.120
+_OBJC_SELECTOR_REFERENCES_.122
+_OBJC_SELECTOR_REFERENCES_.124
+_OBJC_CLASSLIST_REFERENCES_$_.125
+_OBJC_SELECTOR_REFERENCES_.127
+_OBJC_SELECTOR_REFERENCES_.131
+_OBJC_SELECTOR_REFERENCES_.137
+_OBJC_SELECTOR_REFERENCES_.139
+_OBJC_SELECTOR_REFERENCES_.141
+_OBJC_SELECTOR_REFERENCES_.143
+_OBJC_SELECTOR_REFERENCES_.145
+_OBJC_SELECTOR_REFERENCES_.155
+_OBJC_SELECTOR_REFERENCES_.157
+_OBJC_SELECTOR_REFERENCES_.159
+_OBJC_SELECTOR_REFERENCES_.165
+_OBJC_SELECTOR_REFERENCES_.167
+_OBJC_CLASSLIST_REFERENCES_$_.168
+_OBJC_CLASSLIST_REFERENCES_$_.183
+_OBJC_SELECTOR_REFERENCES_.185
+_OBJC_CLASSLIST_REFERENCES_$_.186
+_OBJC_SELECTOR_REFERENCES_.208
+_OBJC_SELECTOR_REFERENCES_.210
+_OBJC_SELECTOR_REFERENCES_.212
+_OBJC_SELECTOR_REFERENCES_.216
+_OBJC_CLASSLIST_REFERENCES_$_.221
+_OBJC_SELECTOR_REFERENCES_.223
+_OBJC_SELECTOR_REFERENCES_.225
+_OBJC_SELECTOR_REFERENCES_.227
+_OBJC_SELECTOR_REFERENCES_.231
+_OBJC_SELECTOR_REFERENCES_.235
+_OBJC_CLASSLIST_REFERENCES_$_.238
+_OBJC_SELECTOR_REFERENCES_.240
+_OBJC_SELECTOR_REFERENCES_.242
+_OBJC_CLASSLIST_REFERENCES_$_.245
+_OBJC_SELECTOR_REFERENCES_.249
+_OBJC_SELECTOR_REFERENCES_.251
+_OBJC_SELECTOR_REFERENCES_.253
+_OBJC_SELECTOR_REFERENCES_.257
+_OBJC_SELECTOR_REFERENCES_.261
+_OBJC_SELECTOR_REFERENCES_.269
+_OBJC_SELECTOR_REFERENCES_.271
+_OBJC_SELECTOR_REFERENCES_.275
+_OBJC_CLASSLIST_REFERENCES_$_.278
+_OBJC_SELECTOR_REFERENCES_.280
+_OBJC_CLASSLIST_REFERENCES_$_.281
+_OBJC_SELECTOR_REFERENCES_.283
+_OBJC_SELECTOR_REFERENCES_.285
+_OBJC_SELECTOR_REFERENCES_.289
+_OBJC_SELECTOR_REFERENCES_.297
+_OBJC_SELECTOR_REFERENCES_.305
+_OBJC_SELECTOR_REFERENCES_.311
+_OBJC_SELECTOR_REFERENCES_.315
+_OBJC_CLASSLIST_REFERENCES_$_.316
+_OBJC_SELECTOR_REFERENCES_.320
+_OBJC_SELECTOR_REFERENCES_.322
+_OBJC_SELECTOR_REFERENCES_.326
+_OBJC_CLASSLIST_REFERENCES_$_.327
+_OBJC_SELECTOR_REFERENCES_.329
+_OBJC_SELECTOR_REFERENCES_.331
+_OBJC_SELECTOR_REFERENCES_.335
+_OBJC_SELECTOR_REFERENCES_.337
+_OBJC_SELECTOR_REFERENCES_.339
+_OBJC_SELECTOR_REFERENCES_.343
+_OBJC_CLASSLIST_REFERENCES_$_.344
+_OBJC_SELECTOR_REFERENCES_.346
+___block_descriptor_40_e8_32s_e20_v20?0B8"NSError"12l
+___block_descriptor_40_e8_32bs_e20_v20?0B8"NSError"12l
+_OBJC_SELECTOR_REFERENCES_.350
+_OBJC_SELECTOR_REFERENCES_.358
+_OBJC_SELECTOR_REFERENCES_.360
+_OBJC_SELECTOR_REFERENCES_.364
+___block_descriptor_56_e8_32s40s48s_e54_v32?0"<FBSDKGraphRequestConnecting>"816"NSError"24l
+_OBJC_SELECTOR_REFERENCES_.367
+_OBJC_SELECTOR_REFERENCES_.371
+_OBJC_SELECTOR_REFERENCES_.375
+_OBJC_SELECTOR_REFERENCES_.377
+_OBJC_SELECTOR_REFERENCES_.381
+_OBJC_SELECTOR_REFERENCES_.383
+_OBJC_SELECTOR_REFERENCES_.385
+_OBJC_SELECTOR_REFERENCES_.387
+_OBJC_SELECTOR_REFERENCES_.389
+_OBJC_SELECTOR_REFERENCES_.393
+_OBJC_SELECTOR_REFERENCES_.395
+_OBJC_SELECTOR_REFERENCES_.397
+_OBJC_SELECTOR_REFERENCES_.399
+_OBJC_SELECTOR_REFERENCES_.401
+_OBJC_SELECTOR_REFERENCES_.403
+_OBJC_SELECTOR_REFERENCES_.405
+_OBJC_SELECTOR_REFERENCES_.407
+_OBJC_SELECTOR_REFERENCES_.409
+_OBJC_SELECTOR_REFERENCES_.411
+_OBJC_SELECTOR_REFERENCES_.413
+_OBJC_SELECTOR_REFERENCES_.415
+_OBJC_CLASSLIST_REFERENCES_$_.416
+_OBJC_SELECTOR_REFERENCES_.418
+_OBJC_SELECTOR_REFERENCES_.420
+_OBJC_SELECTOR_REFERENCES_.422
+_OBJC_SELECTOR_REFERENCES_.424
+_OBJC_SELECTOR_REFERENCES_.426
+_OBJC_SELECTOR_REFERENCES_.428
+_OBJC_SELECTOR_REFERENCES_.430
+_OBJC_SELECTOR_REFERENCES_.432
+_OBJC_SELECTOR_REFERENCES_.434
+___block_descriptor_48_e8_32s40s_e40_v16?0"FBSDKLoginCompletionParameters"8l
+_OBJC_SELECTOR_REFERENCES_.436
+_OBJC_SELECTOR_REFERENCES_.438
+_OBJC_SELECTOR_REFERENCES_.440
+_OBJC_SELECTOR_REFERENCES_.442
+_OBJC_SELECTOR_REFERENCES_.446
+_OBJC_SELECTOR_REFERENCES_.448
+_OBJC_SELECTOR_REFERENCES_.450
+_OBJC_SELECTOR_REFERENCES_.452
+__OBJC_$_CLASS_METHODS_FBSDKLoginManager
+__OBJC_$_PROTOCOL_REFS_FBSDKURLOpening
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_FBSDKURLOpening
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_FBSDKURLOpening
+__OBJC_$_PROTOCOL_METHOD_TYPES_FBSDKURLOpening
+__OBJC_PROTOCOL_$_FBSDKURLOpening
+__OBJC_LABEL_PROTOCOL_$_FBSDKURLOpening
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_FBSDKLoginProviding
+__OBJC_$_PROP_LIST_FBSDKLoginProviding
+__OBJC_$_PROTOCOL_METHOD_TYPES_FBSDKLoginProviding
+__OBJC_PROTOCOL_$_FBSDKLoginProviding
+__OBJC_LABEL_PROTOCOL_$_FBSDKLoginProviding
+__OBJC_CLASS_PROTOCOLS_$_FBSDKLoginManager
+__OBJC_METACLASS_RO_$_FBSDKLoginManager
+__OBJC_$_INSTANCE_METHODS_FBSDKLoginManager
+_OBJC_IVAR_$_FBSDKLoginManager._usedSFAuthSession
+_OBJC_IVAR_$_FBSDKLoginManager._defaultAudience
+_OBJC_IVAR_$_FBSDKLoginManager._handler
+_OBJC_IVAR_$_FBSDKLoginManager._configuration
+_OBJC_IVAR_$_FBSDKLoginManager._keychainStore
+_OBJC_IVAR_$_FBSDKLoginManager._accessTokenWallet
+_OBJC_IVAR_$_FBSDKLoginManager._authenticationToken
+_OBJC_IVAR_$_FBSDKLoginManager._profile
+_OBJC_IVAR_$_FBSDKLoginManager._internalUtility
+_OBJC_IVAR_$_FBSDKLoginManager._urlOpener
+_OBJC_IVAR_$_FBSDKLoginManager._settings
+_OBJC_IVAR_$_FBSDKLoginManager._loginCompleterFactory
+_OBJC_IVAR_$_FBSDKLoginManager._graphRequestFactory
+_OBJC_IVAR_$_FBSDKLoginManager._fromViewController
+_OBJC_IVAR_$_FBSDKLoginManager._requestedPermissions
+_OBJC_IVAR_$_FBSDKLoginManager._logger
+_OBJC_IVAR_$_FBSDKLoginManager._config
+_OBJC_IVAR_$_FBSDKLoginManager._state
+__OBJC_$_INSTANCE_VARIABLES_FBSDKLoginManager
+__OBJC_$_PROP_LIST_FBSDKLoginManager
+__OBJC_CLASS_RO_$_FBSDKLoginManager
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginManager.m
+FBSDKLoginKit/FBSDKLoginManager.m
+FBSDKLoginKit/Internal/FBSDKLoginManager+Internal.h
+FBSDKLoginKit/FBSDKLoginManager.h
+__copy_helper_block_e8_32s40s
+__70-[FBSDKLoginManager application:openURL:sourceApplication:annotation:]_block_invoke
+__52-[FBSDKLoginManager performBrowserLogInWithHandler:]_block_invoke
+__copy_helper_block_e8_32s40s48s
+__57-[FBSDKLoginManager validateReauthentication:withResult:]_block_invoke
+__26-[FBSDKLoginManager logIn]_block_invoke.348
+__26-[FBSDKLoginManager logIn]_block_invoke
+__42-[FBSDKLoginManager logInWithURL:handler:]_block_invoke
++[FBSDKLoginManagerLogger hasBeenConfigured]
++[FBSDKLoginManagerLogger setHasBeenConfigured:]
++[FBSDKLoginManagerLogger eventLogger]
++[FBSDKLoginManagerLogger setEventLogger:]
++[FBSDKLoginManagerLogger configureWithEventLogger:]
++[FBSDKLoginManagerLogger configureDefaultTypeDependencies]
++[FBSDKLoginManagerLogger loggerFromParameters:tracking:]
+-[FBSDKLoginManagerLogger initWithLoggingToken:tracking:]
+-[FBSDKLoginManagerLogger startSessionForLoginManager:]
+-[FBSDKLoginManagerLogger endSession]
+-[FBSDKLoginManagerLogger startAuthMethod:]
+-[FBSDKLoginManagerLogger endLoginWithResult:error:]
+-[FBSDKLoginManagerLogger postLoginHeartbeat]
+-[FBSDKLoginManagerLogger heartbestTimerDidFire]
++[FBSDKLoginManagerLogger parametersWithTimeStampAndClientState:forAuthMethod:logger:]
+-[FBSDKLoginManagerLogger willAttemptAppSwitchingBehaviorWithUrlScheme:]
+-[FBSDKLoginManagerLogger logNativeAppDialogResult:dialogDuration:]
+-[FBSDKLoginManagerLogger identifier]
++[FBSDKLoginManagerLogger clientStateForAuthMethod:andExistingState:logger:]
+-[FBSDKLoginManagerLogger _parametersForNewEvent]
+-[FBSDKLoginManagerLogger logEvent:params:]
+-[FBSDKLoginManagerLogger logEvent:result:error:]
+-[FBSDKLoginManagerLogger setIdentifier:]
+-[FBSDKLoginManagerLogger extras]
+-[FBSDKLoginManagerLogger setExtras:]
+-[FBSDKLoginManagerLogger lastResult]
+-[FBSDKLoginManagerLogger setLastResult:]
+-[FBSDKLoginManagerLogger lastError]
+-[FBSDKLoginManagerLogger setLastError:]
+-[FBSDKLoginManagerLogger authMethod]
+-[FBSDKLoginManagerLogger setAuthMethod:]
+-[FBSDKLoginManagerLogger loggingToken]
+-[FBSDKLoginManagerLogger setLoggingToken:]
+-[FBSDKLoginManagerLogger .cxx_destruct]
+__hasBeenConfigured
+__eventLogger
+_OBJC_CLASSLIST_REFERENCES_$_.54
+_OBJC_CLASSLIST_REFERENCES_$_.73
+_OBJC_CLASSLIST_REFERENCES_$_.86
+_OBJC_SELECTOR_REFERENCES_.90
+_OBJC_CLASSLIST_REFERENCES_$_.101
+_OBJC_SELECTOR_REFERENCES_.107
+_OBJC_SELECTOR_REFERENCES_.125
+_OBJC_CLASSLIST_REFERENCES_$_.128
+_OBJC_SELECTOR_REFERENCES_.132
+_OBJC_SELECTOR_REFERENCES_.134
+_OBJC_CLASSLIST_REFERENCES_$_.135
+_OBJC_CLASSLIST_REFERENCES_$_.150
+_OBJC_SELECTOR_REFERENCES_.152
+_OBJC_CLASSLIST_REFERENCES_$_.153
+_OBJC_CLASSLIST_REFERENCES_$_.166
+_OBJC_CLASSLIST_REFERENCES_$_.177
+_OBJC_SELECTOR_REFERENCES_.179
+_OBJC_SELECTOR_REFERENCES_.181
+_OBJC_SELECTOR_REFERENCES_.183
+_OBJC_SELECTOR_REFERENCES_.187
+_OBJC_SELECTOR_REFERENCES_.189
+_OBJC_SELECTOR_REFERENCES_.191
+_OBJC_CLASSLIST_REFERENCES_$_.194
+_OBJC_SELECTOR_REFERENCES_.198
+_OBJC_SELECTOR_REFERENCES_.200
+_OBJC_SELECTOR_REFERENCES_.206
+__OBJC_$_CLASS_METHODS_FBSDKLoginManagerLogger
+__OBJC_$_CLASS_PROP_LIST_FBSDKLoginManagerLogger
+__OBJC_METACLASS_RO_$_FBSDKLoginManagerLogger
+__OBJC_$_INSTANCE_METHODS_FBSDKLoginManagerLogger
+_OBJC_IVAR_$_FBSDKLoginManagerLogger._identifier
+_OBJC_IVAR_$_FBSDKLoginManagerLogger._extras
+_OBJC_IVAR_$_FBSDKLoginManagerLogger._lastResult
+_OBJC_IVAR_$_FBSDKLoginManagerLogger._lastError
+_OBJC_IVAR_$_FBSDKLoginManagerLogger._authMethod
+_OBJC_IVAR_$_FBSDKLoginManagerLogger._loggingToken
+__OBJC_$_INSTANCE_VARIABLES_FBSDKLoginManagerLogger
+__OBJC_$_PROP_LIST_FBSDKLoginManagerLogger
+__OBJC_CLASS_RO_$_FBSDKLoginManagerLogger
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKLoginManagerLogger.m
+FBSDKLoginKit/Internal/FBSDKLoginManagerLogger.m
+-[FBSDKLoginManagerLoginResult initWithToken:authenticationToken:isCancelled:grantedPermissions:declinedPermissions:]
+-[FBSDKLoginManagerLoginResult addLoggingExtra:forKey:]
+-[FBSDKLoginManagerLoginResult loggingExtras]
+-[FBSDKLoginManagerLoginResult token]
+-[FBSDKLoginManagerLoginResult setToken:]
+-[FBSDKLoginManagerLoginResult authenticationToken]
+-[FBSDKLoginManagerLoginResult setAuthenticationToken:]
+-[FBSDKLoginManagerLoginResult isCancelled]
+-[FBSDKLoginManagerLoginResult grantedPermissions]
+-[FBSDKLoginManagerLoginResult setGrantedPermissions:]
+-[FBSDKLoginManagerLoginResult declinedPermissions]
+-[FBSDKLoginManagerLoginResult setDeclinedPermissions:]
+-[FBSDKLoginManagerLoginResult mutableLoggingExtras]
+-[FBSDKLoginManagerLoginResult setMutableLoggingExtras:]
+-[FBSDKLoginManagerLoginResult isSkipped]
+-[FBSDKLoginManagerLoginResult setIsSkipped:]
+-[FBSDKLoginManagerLoginResult .cxx_destruct]
+__OBJC_METACLASS_RO_$_FBSDKLoginManagerLoginResult
+__OBJC_$_INSTANCE_METHODS_FBSDKLoginManagerLoginResult
+_OBJC_IVAR_$_FBSDKLoginManagerLoginResult._isCancelled
+_OBJC_IVAR_$_FBSDKLoginManagerLoginResult._isSkipped
+_OBJC_IVAR_$_FBSDKLoginManagerLoginResult._token
+_OBJC_IVAR_$_FBSDKLoginManagerLoginResult._authenticationToken
+_OBJC_IVAR_$_FBSDKLoginManagerLoginResult._grantedPermissions
+_OBJC_IVAR_$_FBSDKLoginManagerLoginResult._declinedPermissions
+_OBJC_IVAR_$_FBSDKLoginManagerLoginResult._mutableLoggingExtras
+__OBJC_$_INSTANCE_VARIABLES_FBSDKLoginManagerLoginResult
+__OBJC_$_PROP_LIST_FBSDKLoginManagerLoginResult
+__OBJC_CLASS_RO_$_FBSDKLoginManagerLoginResult
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginManagerLoginResult.m
+FBSDKLoginKit/FBSDKLoginManagerLoginResult.m
+FBSDKLoginKit/Internal/FBSDKLoginManagerLoginResult+Internal.h
+FBSDKLoginKit/FBSDKLoginManagerLoginResult.h
+-[FBSDKLoginRecoveryAttempter init]
+-[FBSDKLoginRecoveryAttempter initWithLoginManager:accessTokenProvider:]
+-[FBSDKLoginRecoveryAttempter attemptRecoveryFromError:completionHandler:]
+___74-[FBSDKLoginRecoveryAttempter attemptRecoveryFromError:completionHandler:]_block_invoke
+-[FBSDKLoginRecoveryAttempter loginManager]
+-[FBSDKLoginRecoveryAttempter setLoginManager:]
+-[FBSDKLoginRecoveryAttempter accessTokenProvider]
+-[FBSDKLoginRecoveryAttempter setAccessTokenProvider:]
+-[FBSDKLoginRecoveryAttempter .cxx_destruct]
+___block_descriptor_40_e8_32bs_e50_v24?0"FBSDKLoginManagerLoginResult"8"NSError"16l
+__OBJC_$_PROTOCOL_REFS_FBSDKErrorRecoveryAttempting
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_FBSDKErrorRecoveryAttempting
+__OBJC_$_PROTOCOL_METHOD_TYPES_FBSDKErrorRecoveryAttempting
+__OBJC_PROTOCOL_$_FBSDKErrorRecoveryAttempting
+__OBJC_LABEL_PROTOCOL_$_FBSDKErrorRecoveryAttempting
+__OBJC_CLASS_PROTOCOLS_$_FBSDKLoginRecoveryAttempter
+__OBJC_METACLASS_RO_$_FBSDKLoginRecoveryAttempter
+__OBJC_$_INSTANCE_METHODS_FBSDKLoginRecoveryAttempter
+_OBJC_IVAR_$_FBSDKLoginRecoveryAttempter._loginManager
+_OBJC_IVAR_$_FBSDKLoginRecoveryAttempter._accessTokenProvider
+__OBJC_$_INSTANCE_VARIABLES_FBSDKLoginRecoveryAttempter
+__OBJC_$_PROP_LIST_FBSDKLoginRecoveryAttempter
+__OBJC_CLASS_RO_$_FBSDKLoginRecoveryAttempter
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKLoginRecoveryAttempter.m
+FBSDKLoginKit/Internal/FBSDKLoginRecoveryAttempter.m
+FBSDKLoginKit/Internal/FBSDKLoginRecoveryAttempter.h
+__74-[FBSDKLoginRecoveryAttempter attemptRecoveryFromError:completionHandler:]_block_invoke
+-[FBSDKLoginTooltipView init]
+-[FBSDKLoginTooltipView initWithServerConfigurationProvider:stringProvider:]
+-[FBSDKLoginTooltipView presentInView:withArrowPosition:direction:]
+-[FBSDKLoginTooltipView fetchTooltipConfigurationWithView:arrowPosition:direction:]
+___83-[FBSDKLoginTooltipView fetchTooltipConfigurationWithView:arrowPosition:direction:]_block_invoke
+-[FBSDKLoginTooltipView delegate]
+-[FBSDKLoginTooltipView setDelegate:]
+-[FBSDKLoginTooltipView shouldForceDisplay]
+-[FBSDKLoginTooltipView setForceDisplay:]
+-[FBSDKLoginTooltipView serverConfigurationProvider]
+-[FBSDKLoginTooltipView setServerConfigurationProvider:]
+-[FBSDKLoginTooltipView stringProvider]
+-[FBSDKLoginTooltipView setStringProvider:]
+-[FBSDKLoginTooltipView .cxx_destruct]
+_OBJC_IVAR_$_FBSDKLoginTooltipView._serverConfigurationProvider
+_OBJC_IVAR_$_FBSDKLoginTooltipView._stringProvider
+___block_descriptor_72_e8_32s40s_e39_v24?0"FBSDKLoginTooltip"8"NSError"16l
+_OBJC_IVAR_$_FBSDKLoginTooltipView._delegate
+_OBJC_IVAR_$_FBSDKLoginTooltipView._forceDisplay
+__OBJC_METACLASS_RO_$_FBSDKLoginTooltipView
+__OBJC_$_INSTANCE_METHODS_FBSDKLoginTooltipView
+__OBJC_$_INSTANCE_VARIABLES_FBSDKLoginTooltipView
+__OBJC_$_PROP_LIST_FBSDKLoginTooltipView
+__OBJC_CLASS_RO_$_FBSDKLoginTooltipView
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/FBSDKLoginTooltipView.m
+FBSDKLoginKit/FBSDKLoginTooltipView.m
+FBSDKLoginKit/FBSDKLoginTooltipView.h
+__83-[FBSDKLoginTooltipView fetchTooltipConfigurationWithView:arrowPosition:direction:]_block_invoke
++[FBSDKLoginURLCompleter initialize]
+-[FBSDKLoginURLCompleter initWithURLParameters:appID:authenticationTokenCreator:graphRequestFactory:internalUtility:]
+-[FBSDKLoginURLCompleter completeLoginWithHandler:]
+-[FBSDKLoginURLCompleter completeLoginWithHandler:nonce:codeVerifier:]
+-[FBSDKLoginURLCompleter fetchAndSetPropertiesForParameters:nonce:handler:]
+___75-[FBSDKLoginURLCompleter fetchAndSetPropertiesForParameters:nonce:handler:]_block_invoke
+___copy_helper_block_e8_32s40b
+-[FBSDKLoginURLCompleter setParametersWithDictionary:appID:]
+-[FBSDKLoginURLCompleter setErrorWithDictionary:]
+-[FBSDKLoginURLCompleter exchangeNonceForTokenWithHandler:authenticationNonce:]
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___79-[FBSDKLoginURLCompleter exchangeNonceForTokenWithHandler:authenticationNonce:]_block_invoke
+___copy_helper_block_e8_32s40s48b56r
+___destroy_helper_block_e8_32s40s48s56r
+-[FBSDKLoginURLCompleter exchangeCodeForTokensWithNonce:codeVerifier:handler:]
+___78-[FBSDKLoginURLCompleter exchangeCodeForTokensWithNonce:codeVerifier:handler:]_block_invoke
+___copy_helper_block_e8_32s40b48s56r
++[FBSDKLoginURLCompleter profileWithClaims:]
++[FBSDKLoginURLCompleter expirationDateFromParameters:]
++[FBSDKLoginURLCompleter dataAccessExpirationDateFromParameters:]
++[FBSDKLoginURLCompleter challengeFromParameters:]
++[FBSDKLoginURLCompleter dateFormatter]
+-[FBSDKLoginURLCompleter observer]
+-[FBSDKLoginURLCompleter setObserver:]
+-[FBSDKLoginURLCompleter performExplicitFallback]
+-[FBSDKLoginURLCompleter setPerformExplicitFallback:]
+-[FBSDKLoginURLCompleter authenticationTokenCreator]
+-[FBSDKLoginURLCompleter setAuthenticationTokenCreator:]
+-[FBSDKLoginURLCompleter parameters]
+-[FBSDKLoginURLCompleter setParameters:]
+-[FBSDKLoginURLCompleter graphRequestFactory]
+-[FBSDKLoginURLCompleter setGraphRequestFactory:]
+-[FBSDKLoginURLCompleter internalUtility]
+-[FBSDKLoginURLCompleter setInternalUtility:]
+-[FBSDKLoginURLCompleter .cxx_destruct]
+__profileFactory
+_OBJC_CLASSLIST_REFERENCES_$_.2
+_OBJC_CLASSLIST_REFERENCES_$_.4
+_OBJC_SELECTOR_REFERENCES_.47
+_OBJC_SELECTOR_REFERENCES_.49
+___block_descriptor_48_e8_32s40bs_e34_v16?0"FBSDKAuthenticationToken"8l
+_OBJC_SELECTOR_REFERENCES_.76
+_OBJC_CLASSLIST_REFERENCES_$_.79
+_OBJC_SELECTOR_REFERENCES_.84
+_OBJC_CLASSLIST_REFERENCES_$_.99
+_OBJC_CLASSLIST_REFERENCES_$_.124
+_OBJC_SELECTOR_REFERENCES_.126
+_OBJC_SELECTOR_REFERENCES_.130
+_OBJC_CLASSLIST_REFERENCES_$_.143
+___block_descriptor_64_e8_32s40s48bs56r_e54_v32?0"<FBSDKGraphRequestConnecting>"816"NSError"24l
+_OBJC_SELECTOR_REFERENCES_.150
+_OBJC_SELECTOR_REFERENCES_.154
+___block_descriptor_64_e8_32s40bs48s56r_e54_v32?0"<FBSDKGraphRequestConnecting>"816"NSError"24l
+_OBJC_CLASSLIST_REFERENCES_$_.171
+_OBJC_SELECTOR_REFERENCES_.173
+_OBJC_SELECTOR_REFERENCES_.175
+_OBJC_SELECTOR_REFERENCES_.177
+_OBJC_SELECTOR_REFERENCES_.193
+_OBJC_CLASSLIST_REFERENCES_$_.198
+_OBJC_SELECTOR_REFERENCES_.202
+_OBJC_CLASSLIST_REFERENCES_$_.203
+_OBJC_SELECTOR_REFERENCES_.205
+_OBJC_SELECTOR_REFERENCES_.207
+_OBJC_SELECTOR_REFERENCES_.209
+_OBJC_SELECTOR_REFERENCES_.211
+_OBJC_SELECTOR_REFERENCES_.213
+_OBJC_CLASSLIST_REFERENCES_$_.216
+_OBJC_SELECTOR_REFERENCES_.218
+_OBJC_CLASSLIST_REFERENCES_$_.223
+_OBJC_SELECTOR_REFERENCES_.229
+_OBJC_CLASSLIST_REFERENCES_$_.234
+_OBJC_SELECTOR_REFERENCES_.236
+_OBJC_CLASSLIST_REFERENCES_$_.239
+_OBJC_SELECTOR_REFERENCES_.241
+__dateFormatter
+_OBJC_CLASSLIST_REFERENCES_$_.242
+__OBJC_$_CLASS_METHODS_FBSDKLoginURLCompleter
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_FBSDKLoginCompleting
+__OBJC_$_PROTOCOL_METHOD_TYPES_FBSDKLoginCompleting
+__OBJC_PROTOCOL_$_FBSDKLoginCompleting
+__OBJC_LABEL_PROTOCOL_$_FBSDKLoginCompleting
+__OBJC_CLASS_PROTOCOLS_$_FBSDKLoginURLCompleter
+__OBJC_METACLASS_RO_$_FBSDKLoginURLCompleter
+__OBJC_$_INSTANCE_METHODS_FBSDKLoginURLCompleter
+_OBJC_IVAR_$_FBSDKLoginURLCompleter._performExplicitFallback
+_OBJC_IVAR_$_FBSDKLoginURLCompleter._observer
+_OBJC_IVAR_$_FBSDKLoginURLCompleter._authenticationTokenCreator
+_OBJC_IVAR_$_FBSDKLoginURLCompleter._parameters
+_OBJC_IVAR_$_FBSDKLoginURLCompleter._graphRequestFactory
+_OBJC_IVAR_$_FBSDKLoginURLCompleter._internalUtility
+__OBJC_$_INSTANCE_VARIABLES_FBSDKLoginURLCompleter
+__OBJC_$_PROP_LIST_FBSDKLoginURLCompleter
+__OBJC_CLASS_RO_$_FBSDKLoginURLCompleter
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKLoginURLCompleter.m
+FBSDKLoginKit/Internal/FBSDKLoginURLCompleter.m
+FBSDKLoginKit/Internal/FBSDKLoginURLCompleter.h
+__copy_helper_block_e8_32s40b48s56r
+__78-[FBSDKLoginURLCompleter exchangeCodeForTokensWithNonce:codeVerifier:handler:]_block_invoke
+__destroy_helper_block_e8_32s40s48s56r
+__copy_helper_block_e8_32s40s48b56r
+__79-[FBSDKLoginURLCompleter exchangeNonceForTokenWithHandler:authenticationNonce:]_block_invoke
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
+__copy_helper_block_e8_32s40b
+__75-[FBSDKLoginURLCompleter fetchAndSetPropertiesForParameters:nonce:handler:]_block_invoke
+____get_time_nanoseconds_block_invoke
+____get_time_nanoseconds_block_invoke.cold.1
+__get_time_nanoseconds.tb_info
+__get_time_nanoseconds.onceToken
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKMonotonicTime.m
+___get_time_nanoseconds_block_invoke.cold.1
+FBSDKLoginKit/Internal/FBSDKMonotonicTime.m
+___get_time_nanoseconds_block_invoke
+FBSDKMonotonicTimeGetCurrentSeconds
+_get_time_nanoseconds
+-[FBSDKProfileFactory createProfileWithUserID:firstName:middleName:lastName:name:linkURL:refreshDate:imageURL:email:friendIDs:birthday:ageRange:hometown:location:gender:isLimited:]
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_FBSDKProfileCreating
+__OBJC_$_PROTOCOL_METHOD_TYPES_FBSDKProfileCreating
+__OBJC_PROTOCOL_$_FBSDKProfileCreating
+__OBJC_LABEL_PROTOCOL_$_FBSDKProfileCreating
+__OBJC_CLASS_PROTOCOLS_$_FBSDKProfileFactory
+__OBJC_METACLASS_RO_$_FBSDKProfileFactory
+__OBJC_$_INSTANCE_METHODS_FBSDKProfileFactory
+__OBJC_CLASS_RO_$_FBSDKProfileFactory
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBSDKProfileFactory.m
+FBSDKLoginKit/Internal/FBSDKProfileFactory.m
+-[FBSDKTooltipView initWithTagline:message:colorStyle:]
+-[FBSDKTooltipView dealloc]
+-[FBSDKTooltipView setMessage:]
+-[FBSDKTooltipView setTagline:]
+-[FBSDKTooltipView presentFromView:]
+-[FBSDKTooltipView presentInView:withArrowPosition:direction:]
+-[FBSDKTooltipView dismiss]
+___27-[FBSDKTooltipView dismiss]_block_invoke
+-[FBSDKTooltipView setColorStyle:]
+-[FBSDKTooltipView animateFadeIn]
+___33-[FBSDKTooltipView animateFadeIn]_block_invoke
+___33-[FBSDKTooltipView animateFadeIn]_block_invoke.116
+___33-[FBSDKTooltipView animateFadeIn]_block_invoke.117
+___33-[FBSDKTooltipView animateFadeIn]_block_invoke_2
+___33-[FBSDKTooltipView animateFadeIn]_block_invoke_3
+___copy_helper_block_e8_32b40b
+-[FBSDKTooltipView animateFadeOutWithCompletion:]
+___49-[FBSDKTooltipView animateFadeOutWithCompletion:]_block_invoke
+___49-[FBSDKTooltipView animateFadeOutWithCompletion:]_block_invoke_2
+-[FBSDKTooltipView onTapInTooltip:]
+-[FBSDKTooltipView drawRect:]
+__fbsdkCreateUpPointingBubbleWithRect
+__fbsdkCreateDownPointingBubbleWithRect
+-[FBSDKTooltipView layoutSubviews]
+-[FBSDKTooltipView layoutSubviewsAndDetermineFrame]
+-[FBSDKTooltipView setMessage:tagline:]
+-[FBSDKTooltipView scheduleAutomaticFadeout]
+-[FBSDKTooltipView scheduleFadeoutRespectingMinimumDisplayDuration]
+-[FBSDKTooltipView cancelAllScheduledFadeOutMethods]
+-[FBSDKTooltipView displayDuration]
+-[FBSDKTooltipView setDisplayDuration:]
+-[FBSDKTooltipView colorStyle]
+-[FBSDKTooltipView message]
+-[FBSDKTooltipView tagline]
+-[FBSDKTooltipView positionInView]
+-[FBSDKTooltipView setPositionInView:]
+-[FBSDKTooltipView displayTime]
+-[FBSDKTooltipView setDisplayTime:]
+-[FBSDKTooltipView minimumDisplayDuration]
+-[FBSDKTooltipView setMinimumDisplayDuration:]
+-[FBSDKTooltipView textLabel]
+-[FBSDKTooltipView setTextLabel:]
+-[FBSDKTooltipView insideTapGestureRecognizer]
+-[FBSDKTooltipView setInsideTapGestureRecognizer:]
+-[FBSDKTooltipView leftWidth]
+-[FBSDKTooltipView setLeftWidth:]
+-[FBSDKTooltipView rightWidth]
+-[FBSDKTooltipView setRightWidth:]
+-[FBSDKTooltipView arrowMidpoint]
+-[FBSDKTooltipView setArrowMidpoint:]
+-[FBSDKTooltipView pointingUp]
+-[FBSDKTooltipView setPointingUp:]
+-[FBSDKTooltipView isFadingOut]
+-[FBSDKTooltipView setIsFadingOut:]
+-[FBSDKTooltipView innerStrokeColor]
+-[FBSDKTooltipView setInnerStrokeColor:]
+-[FBSDKTooltipView arrowHeight]
+-[FBSDKTooltipView setArrowHeight:]
+-[FBSDKTooltipView textPadding]
+-[FBSDKTooltipView setTextPadding:]
+-[FBSDKTooltipView maximumTextWidth]
+-[FBSDKTooltipView setMaximumTextWidth:]
+-[FBSDKTooltipView verticalTextOffset]
+-[FBSDKTooltipView setVerticalTextOffset:]
+-[FBSDKTooltipView verticalCrossOffset]
+-[FBSDKTooltipView setVerticalCrossOffset:]
+-[FBSDKTooltipView gradientColors]
+-[FBSDKTooltipView setGradientColors:]
+-[FBSDKTooltipView crossCloseGlyphColor]
+-[FBSDKTooltipView setCrossCloseGlyphColor:]
+-[FBSDKTooltipView .cxx_destruct]
+_OBJC_IVAR_$_FBSDKTooltipView._textLabel
+_OBJC_CLASSLIST_REFERENCES_$_.10
+_OBJC_SELECTOR_REFERENCES_.12
+_OBJC_IVAR_$_FBSDKTooltipView._arrowHeight
+_OBJC_IVAR_$_FBSDKTooltipView._textPadding
+_OBJC_IVAR_$_FBSDKTooltipView._maximumTextWidth
+_OBJC_IVAR_$_FBSDKTooltipView._verticalCrossOffset
+_OBJC_IVAR_$_FBSDKTooltipView._verticalTextOffset
+_OBJC_IVAR_$_FBSDKTooltipView._displayDuration
+_OBJC_SELECTOR_REFERENCES_.20
+_OBJC_IVAR_$_FBSDKTooltipView._message
+_OBJC_IVAR_$_FBSDKTooltipView._tagline
+_OBJC_IVAR_$_FBSDKTooltipView._insideTapGestureRecognizer
+_OBJC_SELECTOR_REFERENCES_.55
+_OBJC_SELECTOR_REFERENCES_.57
+_OBJC_SELECTOR_REFERENCES_.61
+_OBJC_IVAR_$_FBSDKTooltipView._pointingUp
+_OBJC_IVAR_$_FBSDKTooltipView._positionInView
+_OBJC_IVAR_$_FBSDKTooltipView._displayTime
+_OBJC_IVAR_$_FBSDKTooltipView._isFadingOut
+_OBJC_IVAR_$_FBSDKTooltipView._colorStyle
+_OBJC_CLASSLIST_REFERENCES_$_.96
+_OBJC_IVAR_$_FBSDKTooltipView._gradientColors
+_OBJC_IVAR_$_FBSDKTooltipView._innerStrokeColor
+_OBJC_IVAR_$_FBSDKTooltipView._crossCloseGlyphColor
+_OBJC_IVAR_$_FBSDKTooltipView._arrowMidpoint
+_OBJC_CLASSLIST_REFERENCES_$_.105
+___block_descriptor_56_e8_32s40s_e5_v8?0l
+___block_descriptor_48_e8_32s40s_e5_v8?0l
+_OBJC_CLASSLIST_REFERENCES_$_.118
+_OBJC_SELECTOR_REFERENCES_.120
+___block_descriptor_40_e8_32bs_e8_v12?0B8l
+___block_descriptor_48_e8_32bs40bs_e8_v12?0B8l
+_OBJC_SELECTOR_REFERENCES_.129
+_OBJC_CLASSLIST_REFERENCES_$_.132
+_OBJC_IVAR_$_FBSDKTooltipView._leftWidth
+_OBJC_IVAR_$_FBSDKTooltipView._rightWidth
+_OBJC_SELECTOR_REFERENCES_.146
+_OBJC_SELECTOR_REFERENCES_.148
+_OBJC_CLASSLIST_REFERENCES_$_.149
+_OBJC_SELECTOR_REFERENCES_.161
+_OBJC_SELECTOR_REFERENCES_.163
+_OBJC_IVAR_$_FBSDKTooltipView._minimumDisplayDuration
+__OBJC_METACLASS_RO_$_FBSDKTooltipView
+__OBJC_$_INSTANCE_METHODS_FBSDKTooltipView
+__OBJC_$_INSTANCE_VARIABLES_FBSDKTooltipView
+__OBJC_$_PROP_LIST_FBSDKTooltipView
+__OBJC_CLASS_RO_$_FBSDKTooltipView
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/FBSDKTooltipView.m
+FBSDKLoginKit/FBSDKTooltipView.m
+FBSDKLoginKit/FBSDKTooltipView.h
+NSMakeRange
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+UIInterfaceOrientationIsPortrait
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/System/iOSSupport/System/Library/Frameworks/UIKit.framework/Headers/UIApplication.h
+_fbsdkCreateDownPointingBubbleWithRect
+_fbsdkCreateUpPointingBubbleWithRect
+_createCloseCrossGlyphWithRect
+__49-[FBSDKTooltipView animateFadeOutWithCompletion:]_block_invoke_2
+__49-[FBSDKTooltipView animateFadeOutWithCompletion:]_block_invoke
+__copy_helper_block_e8_32b40b
+__33-[FBSDKTooltipView animateFadeIn]_block_invoke_3
+__33-[FBSDKTooltipView animateFadeIn]_block_invoke_2
+__33-[FBSDKTooltipView animateFadeIn]_block_invoke.117
+__33-[FBSDKTooltipView animateFadeIn]_block_invoke.116
+__33-[FBSDKTooltipView animateFadeIn]_block_invoke
+__27-[FBSDKTooltipView dismiss]_block_invoke
+___swift_instantiateConcreteTypeFromMangledName
+_$sSo22FBSDKTooltipColorStyleVMa
+_$sSo18FBSDKLoginAuthTypeaMa
+_$sSo18FBSDKLoginAuthTypeas21_ObjectiveCBridgeableSCsACP09_bridgeToD1C01_D5CTypeQzyFTW
+_$sSo18FBSDKLoginAuthTypeas21_ObjectiveCBridgeableSCsACP016_forceBridgeFromD1C_6resulty01_D5CTypeQz_xSgztFZTW
+_$sSo18FBSDKLoginAuthTypeas21_ObjectiveCBridgeableSCsACP024_conditionallyBridgeFromD1C_6resultSb01_D5CTypeQz_xSgztFZTW
+_$sSo18FBSDKLoginAuthTypeas21_ObjectiveCBridgeableSCsACP026_unconditionallyBridgeFromD1Cyx01_D5CTypeQzSgFZTW
+_$sSo18FBSDKLoginAuthTypeaSQSCSQ2eeoiySbx_xtFZTW
+_$sSC15FBSDKLoginErrorLeVs0B0SCsACP7_domainSSvgTW
+_$sSC15FBSDKLoginErrorLeVs0B0SCsACP5_codeSivgTW
+_$sSC15FBSDKLoginErrorLeVs0B0SCsACP9_userInfoyXlSgvgTW
+_$sSC15FBSDKLoginErrorLeVs0B0SCsACP19_getEmbeddedNSErroryXlSgyFTW
+_$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCAcDP03_nsB0So0F0CvgTW
+_$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCAcDP03_nsB0xSo0F0C_tcfCTW
+_$sSo18FBSDKLoginAuthTypeaSYSCSY8rawValuexSg03RawE0Qz_tcfCTW
+_$sSo18FBSDKLoginAuthTypeaSYSCSY8rawValue03RawE0QzvgTW
+_$sSC15FBSDKLoginErrorLeV10Foundation13CustomNSErrorSCAcDP11errorDomainSSvgZTW
+_$sSC15FBSDKLoginErrorLeV10Foundation13CustomNSErrorSCAcDP9errorCodeSivgTW
+_$sSC15FBSDKLoginErrorLeV10Foundation13CustomNSErrorSCAcDP13errorUserInfoSDySSypGvgTW
+_$sSC15FBSDKLoginErrorLeV10Foundation021_ObjectiveCBridgeableB0SCAcDP15_bridgedNSErrorxSgSo0G0Ch_tcfCTW
+_$sSC15FBSDKLoginErrorLeVSHSCSH9hashValueSivgTW
+_$sSC15FBSDKLoginErrorLeVSHSCSH4hash4intoys6HasherVz_tFTW
+_$sSC15FBSDKLoginErrorLeVSHSCSH13_rawHashValue4seedS2i_tFTW
+_$sSo15FBSDKLoginErrorVSYSCSY8rawValuexSg03RawD0Qz_tcfCTW
+_$sSo15FBSDKLoginErrorVSYSCSY8rawValue03RawD0QzvgTW
+_$sSo18FBSDKLoginAuthTypeas35_HasCustomAnyHashableRepresentationSCsACP03_toefG0s0fG0VSgyFTW
+_$sSo18FBSDKLoginAuthTypeas20_SwiftNewtypeWrapperSCSYWb
+_$sSo18FBSDKLoginAuthTypeaABSYSCWl
+_$sSo18FBSDKLoginAuthTypeas20_SwiftNewtypeWrapperSCs35_HasCustomAnyHashableRepresentationPWb
+_$sSo18FBSDKLoginAuthTypeaABs35_HasCustomAnyHashableRepresentationSCWl
+_$sSo18FBSDKLoginAuthTypeaABSYSCWlTm
+_$sSo18FBSDKLoginAuthTypeaSHSCSQWb
+_$sSo18FBSDKLoginAuthTypeaABSQSCWl
+_$sSC15FBSDKLoginErrorLeVSQSCSQ2eeoiySbx_xtFZTW
+_$sSo15FBSDKLoginErrorVSQSCSQ2eeoiySbx_xtFZTW
+_$sSo18FBSDKLoginAuthTypeaSHSCSH9hashValueSivgTW
+_$sSo18FBSDKLoginAuthTypeas21_ObjectiveCBridgeableSCsACP09_bridgeToD1C01_D5CTypeQzyFTWTm
+_$sSo18FBSDKLoginAuthTypeaSHSCSH4hash4intoys6HasherVz_tFTW
+_$sSo18FBSDKLoginAuthTypeaSHSCSH13_rawHashValue4seedS2i_tFTW
+_$ss20_SwiftNewtypeWrapperPss21_ObjectiveCBridgeable8RawValueRpzrlE016_forceBridgeFromD1C_6resultyAD_01_D5CTypeQZ_xSgztFZSo18FBSDKLoginAuthTypea_Tgq5Tf4nnd_n
+_$ss20_SwiftNewtypeWrapperPss21_ObjectiveCBridgeable8RawValueRpzrlE024_conditionallyBridgeFromD1C_6resultSbAD_01_D5CTypeQZ_xSgztFZSo18FBSDKLoginAuthTypea_Tgq5Tf4nnd_n
+_$sSo18FBSDKLoginAuthTypeaABSHSCWl
+_$sSo18FBSDKLoginAuthTypeaABs20_SwiftNewtypeWrapperSCWl
+_$sSC15FBSDKLoginErrorLeVMa
+_$sSC15FBSDKLoginErrorLeVSHSCSQWb
+_$sSC15FBSDKLoginErrorLeVABSQSCWl
+_$sSC15FBSDKLoginErrorLeV10Foundation021_ObjectiveCBridgeableB0SCs0B0PWb
+_$sSC15FBSDKLoginErrorLeVABs0B0SCWl
+_$sSC15FBSDKLoginErrorLeV10Foundation13CustomNSErrorSCs0B0PWb
+_$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCAC06CustomF0PWb
+_$sSC15FBSDKLoginErrorLeVAB10Foundation13CustomNSErrorSCWl
+_$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCAC021_ObjectiveCBridgeableB0PWb
+_$sSC15FBSDKLoginErrorLeVAB10Foundation021_ObjectiveCBridgeableB0SCWl
+_$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCSHWb
+_$sSC15FBSDKLoginErrorLeVABSHSCWl
+_$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSC4CodeAcDP_AC01_bG8ProtocolPWT
+_$sSo15FBSDKLoginErrorVAB10Foundation01_B12CodeProtocolSCWl
+_$sSo15FBSDKLoginErrorVMa
+_$sSo22FBSDKTooltipColorStyleVMaTm
+_$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSC4CodeAcDP_SYWT
+_$sSo15FBSDKLoginErrorVABSYSCWl
+_$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSC4CodeAcDP_8RawValueSYs17FixedWidthIntegerPWT
+_$sS2is17FixedWidthIntegersWl
+_$sSo15FBSDKLoginErrorV10Foundation01_B12CodeProtocolSCSQWb
+_$sSo15FBSDKLoginErrorVABSQSCWl
+_$sSo15FBSDKLoginErrorV10Foundation01_B12CodeProtocolSC01_B4TypeAcDP_AC21_BridgedStoredNSErrorPWT
+_$sSC15FBSDKLoginErrorLeVAB10Foundation21_BridgedStoredNSErrorSCWl
+_$sSo17FBSDKAppEventNamea13FBSDKLoginKitE17loginButtonDidTap_Wz
+_symbolic _____y_____G s23_ContiguousArrayStorageC 12FBSDKCoreKit10PermissionO
+_$ss23_ContiguousArrayStorageCy12FBSDKCoreKit10PermissionOGMD
+__PROTOCOL__FBSDKLoginEventLogging
+l_OBJC_LABEL_PROTOCOL_$__FBSDKLoginEventLogging
+l_OBJC_PROTOCOL_REFERENCE_$__FBSDKLoginEventLogging
+__CATEGORY_PROTOCOLS_FBSDKAppEvents_$_FBSDKLoginKit
+__CATEGORY_FBSDKAppEvents_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftFoundation_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftObjectiveC_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftDarwin_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftCoreFoundation_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftDispatch_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftCoreGraphics_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftIOKit_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftXPC_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftUIKit_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftCoreImage_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftMetal_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftQuartzCore_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftFileProvider_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftAppKit_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftCoreData_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftCloudKit_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftCoreLocation_$_FBSDKLoginKit
+__swift_FORCE_LOAD_$_swiftWebKit_$_FBSDKLoginKit
+__PROTOCOL_FBSDKLoginButtonDelegate
+l_OBJC_LABEL_PROTOCOL_$_FBSDKLoginButtonDelegate
+l_OBJC_PROTOCOL_REFERENCE_$_FBSDKLoginButtonDelegate
+__PROTOCOL__FBSDKUserInterfaceElementProviding
+l_OBJC_LABEL_PROTOCOL_$__FBSDKUserInterfaceElementProviding
+l_OBJC_PROTOCOL_REFERENCE_$__FBSDKUserInterfaceElementProviding
+__PROTOCOL__FBSDKUserInterfaceStringProviding
+l_OBJC_LABEL_PROTOCOL_$__FBSDKUserInterfaceStringProviding
+l_OBJC_PROTOCOL_REFERENCE_$__FBSDKUserInterfaceStringProviding
+__PROTOCOL_FBSDKLoginProviding
+l_OBJC_LABEL_PROTOCOL_$_FBSDKLoginProviding
+l_OBJC_PROTOCOL_REFERENCE_$_FBSDKLoginProviding
+__PROTOCOL_FBSDKGraphRequestFactory
+l_OBJC_LABEL_PROTOCOL_$_FBSDKGraphRequestFactory
+l_OBJC_PROTOCOL_REFERENCE_$_FBSDKGraphRequestFactory
+_$sSoMXM
+_$sSo22FBSDKTooltipColorStyleVMn
+_$sSo22FBSDKTooltipColorStyleVMf
+_$sSo22FBSDKTooltipColorStyleVML
+_$sSo18FBSDKLoginAuthTypeaMn
+_$sSo18FBSDKLoginAuthTypeaMf
+_$sSo18FBSDKLoginAuthTypeaML
+_symbolic _____ So18FBSDKLoginAuthTypea
+_$sSo18FBSDKLoginAuthTypeaMB
+_symbolic So8NSStringC
+_$sSo18FBSDKLoginAuthTypeaMF
+_symbolic _____ So22FBSDKTooltipColorStyleV
+_$sSo22FBSDKTooltipColorStyleVMB
+_$s13FBSDKLoginKitMXM
+_$sSo18FBSDKLoginAuthTypeas35_HasCustomAnyHashableRepresentationSCMcMK
+_$sSo18FBSDKLoginAuthTypeas35_HasCustomAnyHashableRepresentationSCMc
+_symbolic SS
+_symbolic $sSY
+_$sSo18FBSDKLoginAuthTypeaSYSCMA
+_$sSo18FBSDKLoginAuthTypeaSYSCMcMK
+_$sSo18FBSDKLoginAuthTypeaSYSCMc
+_$sSo18FBSDKLoginAuthTypeaABSYSCWL
+_associated conformance So18FBSDKLoginAuthTypeas20_SwiftNewtypeWrapperSCSY
+_$sSo18FBSDKLoginAuthTypeaABs35_HasCustomAnyHashableRepresentationSCWL
+_associated conformance So18FBSDKLoginAuthTypeas20_SwiftNewtypeWrapperSCs35_HasCustomAnyHashableRepresentation
+_$sSo18FBSDKLoginAuthTypeas20_SwiftNewtypeWrapperSCMcMK
+_$sSo18FBSDKLoginAuthTypeas20_SwiftNewtypeWrapperSCMc
+_$sSo18FBSDKLoginAuthTypeaSQSCMcMK
+_$sSo18FBSDKLoginAuthTypeaSQSCMc
+_$sSo18FBSDKLoginAuthTypeaABSQSCWL
+_associated conformance So18FBSDKLoginAuthTypeaSHSCSQ
+_$sSo18FBSDKLoginAuthTypeaSHSCMcMK
+_$sSo18FBSDKLoginAuthTypeaSHSCMc
+_symbolic $ss21_ObjectiveCBridgeableP
+_$sSo18FBSDKLoginAuthTypeas21_ObjectiveCBridgeableSCMA
+_$sSo18FBSDKLoginAuthTypeas21_ObjectiveCBridgeableSCMcMK
+_$sSo18FBSDKLoginAuthTypeas21_ObjectiveCBridgeableSCMc
+_$sSo18FBSDKLoginAuthTypeaABSHSCWL
+_$sSo18FBSDKLoginAuthTypeaABs20_SwiftNewtypeWrapperSCWL
+_$sSCMXM
+_$sSC15FBSDKLoginErrorLeVMn
+_$sSC15FBSDKLoginErrorLeVMf
+_$sSC15FBSDKLoginErrorLeVML
+_symbolic _____ SC15FBSDKLoginErrorLeV
+_symbolic So7NSErrorC
+_$sSC15FBSDKLoginErrorLeVMF
+_$sSC15FBSDKLoginErrorLeVSQSCMcMK
+_$sSC15FBSDKLoginErrorLeVSQSCMc
+_$sSC15FBSDKLoginErrorLeVs0B0SCMcMK
+_$sSC15FBSDKLoginErrorLeVs0B0SCMc
+_$sSC15FBSDKLoginErrorLeVABSQSCWL
+_associated conformance SC15FBSDKLoginErrorLeVSHSCSQ
+_$sSC15FBSDKLoginErrorLeVSHSCMcMK
+_$sSC15FBSDKLoginErrorLeVSHSCMc
+_$sSC15FBSDKLoginErrorLeVABs0B0SCWL
+_associated conformance SC15FBSDKLoginErrorLeV10Foundation021_ObjectiveCBridgeableB0SCs0B0
+_$sSC15FBSDKLoginErrorLeV10Foundation021_ObjectiveCBridgeableB0SCMcMK
+_$sSC15FBSDKLoginErrorLeV10Foundation021_ObjectiveCBridgeableB0SCMc
+_associated conformance SC15FBSDKLoginErrorLeV10Foundation13CustomNSErrorSCs0B0
+_$sSC15FBSDKLoginErrorLeV10Foundation13CustomNSErrorSCMcMK
+_$sSC15FBSDKLoginErrorLeV10Foundation13CustomNSErrorSCMc
+_$sSC15FBSDKLoginErrorLeVAB10Foundation13CustomNSErrorSCWL
+_associated conformance SC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCAC06CustomF0
+_$sSC15FBSDKLoginErrorLeVAB10Foundation021_ObjectiveCBridgeableB0SCWL
+_associated conformance SC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCAC021_ObjectiveCBridgeableB0
+_$sSC15FBSDKLoginErrorLeVABSHSCWL
+_associated conformance SC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCSH
+_$sSo15FBSDKLoginErrorVAB10Foundation01_B12CodeProtocolSCWL
+_associated conformance SC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSC4CodeAcDP_AC01_bG8Protocol
+_$sSo15FBSDKLoginErrorVABSYSCWL
+_associated conformance SC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSC4CodeAcDP_SY
+_$sS2is17FixedWidthIntegersWL
+_associated conformance SC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSC4CodeAcDP_8RawValueSYs17FixedWidthInteger
+_symbolic _____ So15FBSDKLoginErrorV
+_symbolic $s10Foundation21_BridgedStoredNSErrorP
+_$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCMA
+_$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCMcMK
+_$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCMc
+_symbolic Si
+_$sSo15FBSDKLoginErrorVSYSCMA
+_$sSo15FBSDKLoginErrorVSYSCMcMK
+_$sSo15FBSDKLoginErrorVSYSCMc
+_$sSo15FBSDKLoginErrorVABSQSCWL
+_associated conformance So15FBSDKLoginErrorV10Foundation01_B12CodeProtocolSCSQ
+_$sSC15FBSDKLoginErrorLeVAB10Foundation21_BridgedStoredNSErrorSCWL
+_associated conformance So15FBSDKLoginErrorV10Foundation01_B12CodeProtocolSC01_B4TypeAcDP_AC21_BridgedStoredNSError
+_symbolic $s10Foundation18_ErrorCodeProtocolP
+_$sSo15FBSDKLoginErrorV10Foundation01_B12CodeProtocolSCMA
+_$sSo15FBSDKLoginErrorV10Foundation01_B12CodeProtocolSCMcMK
+_$sSo15FBSDKLoginErrorV10Foundation01_B12CodeProtocolSCMc
+_$sSo15FBSDKLoginErrorVSQSCMcMK
+_$sSo15FBSDKLoginErrorVSQSCMc
+_$sSo15FBSDKLoginErrorVMn
+_$sSo15FBSDKLoginErrorVMf
+_$sSo15FBSDKLoginErrorVML
+_$sSo15FBSDKLoginErrorVMB
+___swift_reflection_version
+__PROTOCOL_INSTANCE_METHODS__FBSDKLoginEventLogging
+__PROTOCOL_PROPERTIES__FBSDKLoginEventLogging
+__PROTOCOL_METHOD_TYPES__FBSDKLoginEventLogging
+__PROTOCOL_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_REFERENCE_$_NSObject
+__PROTOCOL_PROTOCOLS_FBSDKLoginButtonDelegate
+__PROTOCOL_INSTANCE_METHODS_FBSDKLoginButtonDelegate
+__PROTOCOL_INSTANCE_METHODS_OPT_FBSDKLoginButtonDelegate
+__PROTOCOL_METHOD_TYPES_FBSDKLoginButtonDelegate
+__PROTOCOL_INSTANCE_METHODS__FBSDKUserInterfaceElementProviding
+__PROTOCOL_METHOD_TYPES__FBSDKUserInterfaceElementProviding
+__PROTOCOL_INSTANCE_METHODS__FBSDKUserInterfaceStringProviding
+__PROTOCOL_PROPERTIES__FBSDKUserInterfaceStringProviding
+__PROTOCOL_METHOD_TYPES__FBSDKUserInterfaceStringProviding
+__PROTOCOL_INSTANCE_METHODS_FBSDKLoginProviding
+__PROTOCOL_PROPERTIES_FBSDKLoginProviding
+__PROTOCOL_METHOD_TYPES_FBSDKLoginProviding
+__PROTOCOL_INSTANCE_METHODS_FBSDKGraphRequestFactory
+__PROTOCOL_METHOD_TYPES_FBSDKGraphRequestFactory
+__PROTOCOL_INSTANCE_METHODS_NSObject
+__PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+__PROTOCOL_PROPERTIES_NSObject
+__PROTOCOL_METHOD_TYPES_NSObject
+_objc_categories
+Apple clang version 13.0.0 (clang-1300.0.29.1)
+<swift-imported-modules>
+Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/AppEvents+Internal.swift
+$sSo15FBSDKLoginErrorV10Foundation01_B12CodeProtocolSC01_B4TypeAcDP_AC21_BridgedStoredNSErrorPWT
+<compiler-generated>
+$sSo15FBSDKLoginErrorV10Foundation01_B12CodeProtocolSCSQWb
+$sS2is17FixedWidthIntegersWl
+$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSC4CodeAcDP_8RawValueSYs17FixedWidthIntegerPWT
+$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSC4CodeAcDP_SYWT
+$sSo22FBSDKTooltipColorStyleVMa
+$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSC4CodeAcDP_AC01_bG8ProtocolPWT
+$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCSHWb
+$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCAC021_ObjectiveCBridgeableB0PWb
+$sSC15FBSDKLoginErrorLeV10Foundation21_BridgedStoredNSErrorSCAC06CustomF0PWb
+$sSC15FBSDKLoginErrorLeV10Foundation13CustomNSErrorSCs0B0PWb
+$sSC15FBSDKLoginErrorLeV10Foundation021_ObjectiveCBridgeableB0SCs0B0PWb
+$sSC15FBSDKLoginErrorLeVSHSCSQWb
+_conditionallyBridgeFromObjectiveC
+$sSq7flatMapyqd__SgABxKXEKlFSS_So18FBSDKLoginAuthTypeaTgq5
+$ss20_SwiftNewtypeWrapperPss21_ObjectiveCBridgeable8RawValueRpzrlE024_conditionallyBridgeFromD1C_6resultSbAD_01_D5CTypeQZ_xSgztFZAjEXEfU_So18FBSDKLoginAuthTypea_TGq5
+$ss20_SwiftNewtypeWrapperPss21_ObjectiveCBridgeable8RawValueRpzrlE024_conditionallyBridgeFromD1C_6resultSbAD_01_D5CTypeQZ_xSgztFZAjEXEfU_So18FBSDKLoginAuthTypea_Tgq5
+init
+$sSSs21_ObjectiveCBridgeable10FoundationsAAP024_conditionallyBridgeFromA1C_6resultSb01_A5CTypeQz_xSgztFZTW
+_forceBridgeFromObjectiveC
+$ss20_SwiftNewtypeWrapperPss21_ObjectiveCBridgeable8RawValueRpzrlE016_forceBridgeFromD1C_6resultyAD_01_D5CTypeQZ_xSgztFZAjEXEfU_So18FBSDKLoginAuthTypea_TGq5
+$ss20_SwiftNewtypeWrapperPss21_ObjectiveCBridgeable8RawValueRpzrlE016_forceBridgeFromD1C_6resultyAD_01_D5CTypeQZ_xSgztFZAjEXEfU_So18FBSDKLoginAuthTypea_Tgq5
+$sSSs21_ObjectiveCBridgeable10FoundationsAAP016_forceBridgeFromA1C_6resulty01_A5CTypeQz_xSgztFZTW
+_rawHashValue
+$sSSSHsSH13_rawHashValue4seedS2i_tFTW
+$sSHsE13_rawHashValue4seedS2i_tFSS_Tgq5
+rawValue.get
+hash
+$sSSSHsSH4hash4intoys6HasherVz_tFTW
+_bridgeToObjectiveC
+$sSSs21_ObjectiveCBridgeable10FoundationsAAP09_bridgeToA1C01_A5CTypeQzyFTW
+==
+$sSiSQsSQ2eeoiySbx_xtFZTW
+$sSo18FBSDKLoginAuthTypeaSHSCSQWb
+$sSo18FBSDKLoginAuthTypeaABSYSCWl
+$sSo18FBSDKLoginAuthTypeas20_SwiftNewtypeWrapperSCs35_HasCustomAnyHashableRepresentationPWb
+$sSo18FBSDKLoginAuthTypeas20_SwiftNewtypeWrapperSCSYWb
+_toCustomAnyHashable
+hashValue.get
+errorUserInfo.get
+errorCode.get
+errorDomain.get
+_nsError.get
+_getEmbeddedNSError
+_userInfo.get
+_code.get
+_domain.get
+$sSSSQsSQ2eeoiySbx_xtFZTW
+$ss14_stringCompare__9expectingSbs11_StringGutsV_ADs01_D16ComparisonResultOtF
+_unconditionallyBridgeFromObjectiveC
+$sSSs21_ObjectiveCBridgeable10FoundationsAAP026_unconditionallyBridgeFromA1Cyx01_A5CTypeQzSgFZTW
+__swift_instantiateConcreteTypeFromMangledName
+$s13FBSDKLoginKit13FBLoginButtonC5frame11permissionsACSo6CGRectV_Say09FBSDKCoreB010PermissionOGtcfcfA0_
+FBSDKLoginKit/FBLoginButton.swift
+_allocateUninitializedArray
+$sSa13_adoptStorage_5countSayxG_SpyxGts016_ContiguousArrayB0CyxGn_SitFZ12FBSDKCoreKit10PermissionO_Tg5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvg12FBSDKCoreKit10PermissionO_Tg5
+$ss22_ContiguousArrayBufferV5count7storageAByxGSi_s01_aB7StorageCyxGtcfC12FBSDKCoreKit10PermissionO_Tg5
+$ss22_ContiguousArrayBufferV18_initStorageHeader5count8capacityySi_SitF12FBSDKCoreKit10PermissionO_Tg5
+$s13FBSDKLoginKit13FBLoginButtonC5frame11permissionsACSo6CGRectV_Say09FBSDKCoreB010PermissionOGtcfcfA_
+$s13FBSDKLoginKit13FBLoginButtonC5frame15elementProvider06stringG005loginG019graphRequestFactoryACSo6CGRectV_AA30_UserInterfaceElementProviding_pAA01_no6StringQ0_pSo0aQ0_pSo010FBSDKGraphkL0_ptcfcfA_
+_$s13FBSDKLoginKit13FBLoginButtonC15defaultAudienceSo012FBSDKDefaultF0VvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC15defaultAudienceSo012FBSDKDefaultF0VvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC15defaultAudienceSo012FBSDKDefaultF0VvpACTK
+_$s13FBSDKLoginKit13FBLoginButtonC15defaultAudienceSo012FBSDKDefaultF0VvpACTk
+_$s13FBSDKLoginKit13FBLoginButtonC15defaultAudienceSo012FBSDKDefaultF0VvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonCSo20FBSDKDefaultAudienceVIetMAgYl_TC
+_$s13FBSDKLoginKit13FBLoginButtonC8delegateAA05LoginD8Delegate_pSgvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC8delegateAA05LoginD8Delegate_pSgvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC8delegateAA05LoginD8Delegate_pSgvpACTK
+_$s13FBSDKLoginKit13FBLoginButtonC8delegateAA05LoginD8Delegate_pSgvpACTk
+_$s13FBSDKLoginKit13FBLoginButtonC8delegateAA05LoginD8Delegate_pSgvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonCAA05LoginD8Delegate_pSgIetMAgYl_TC
+_$s13FBSDKLoginKit13FBLoginButtonC11permissionsSaySSGvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC11permissionsSaySSGvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC11permissionsSaySSGvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonCSaySSGIetMAgYl_TC
+_$s13FBSDKLoginKit13FBLoginButtonC15tooltipBehaviorAC07TooltipF0OvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC15tooltipBehaviorAC07TooltipF0OvsTo
+_$s13FBSDKLoginKit13FBLoginButtonCAC15TooltipBehaviorOIetMAgYl_TC
+_$s13FBSDKLoginKit13FBLoginButtonC17tooltipColorStyleSo012FBSDKTooltipfG0VvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC17tooltipColorStyleSo012FBSDKTooltipfG0VvsTo
+_$s13FBSDKLoginKit13FBLoginButtonCSo22FBSDKTooltipColorStyleVIetMAgYl_TC
+_$s13FBSDKLoginKit13FBLoginButtonC13loginTrackingAA05LoginF0OvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC15tooltipBehaviorAC07TooltipF0OvgToTm
+_$s13FBSDKLoginKit13FBLoginButtonC15tooltipBehaviorAC07TooltipF0OvgTm
+_$s13FBSDKLoginKit13FBLoginButtonC13loginTrackingAA05LoginF0OvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC15tooltipBehaviorAC07TooltipF0OvsToTm
+_$s13FBSDKLoginKit13FBLoginButtonC15tooltipBehaviorAC07TooltipF0OvsTm
+_$s13FBSDKLoginKit13FBLoginButtonCAA13LoginTrackingOIetMAgYl_TC
+_$s13FBSDKLoginKit13FBLoginButtonC5nonceSSSgvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC5nonceSSSgvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC5nonceSSSgvpACTK
+_$s13FBSDKLoginKit13FBLoginButtonC5nonceSSSgvpACTk
+_$s13FBSDKLoginKit13FBLoginButtonC5nonceSSSgvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonC15messengerPageIdSSSgvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC15messengerPageIdSSSgvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC8authTypeSo0a4AuthF0aSgvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC8authTypeSo0a4AuthF0aSgvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC12codeVerifierSo09FBSDKCodeF0CvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC12codeVerifierSo09FBSDKCodeF0CvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC6userIDSSSgvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC6userIDSSSgvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC8userNameSSSgvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC15messengerPageIdSSSgvgToTm
+_$s13FBSDKLoginKit13FBLoginButtonC15messengerPageIdSSSgvgTm
+_$s13FBSDKLoginKit13FBLoginButtonC8userNameSSSgvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC15messengerPageIdSSSgvsToTm
+_$s13FBSDKLoginKit13FBLoginButtonC15messengerPageIdSSSgvsTm
+_$s13FBSDKLoginKit13FBLoginButtonC15elementProviderAA30_UserInterfaceElementProviding_pvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC15elementProviderAA30_UserInterfaceElementProviding_pvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC14stringProviderAA29_UserInterfaceStringProviding_pvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC14stringProviderAA29_UserInterfaceStringProviding_pvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC13loginProviderSo0A9Providing_pvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC13loginProviderSo0A9Providing_pvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC19graphRequestFactorySo010FBSDKGraphfG0_pvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC15elementProviderAA30_UserInterfaceElementProviding_pvgToTm
+_$s13FBSDKLoginKit13FBLoginButtonC11permissionsSaySSGvgTm
+_$s13FBSDKLoginKit13FBLoginButtonC19graphRequestFactorySo010FBSDKGraphfG0_pvsTo
+_$s13FBSDKLoginKit13FBLoginButtonC15elementProviderAA30_UserInterfaceElementProviding_pvsToTm
+_$s13FBSDKLoginKit13FBLoginButtonC11permissionsSaySSGvsTm
+_$s13FBSDKLoginKit13FBLoginButtonC15isAuthenticatedSbvgTo
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOSQAASQ2eeoiySbx_xtFZTW
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOSHAASH9hashValueSivgTW
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOSHAASH4hash4intoys6HasherVz_tFTW
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOSHAASH13_rawHashValue4seedS2i_tFTW
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOSYAASY8rawValuexSg03RawH0Qz_tcfCTW
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOSYAASY8rawValue03RawH0QzvgTW
+_$s13FBSDKLoginKit13FBLoginButtonC09configureD033_2D5546723C2E9E390359F57C16888789LLyyF
+_$s13FBSDKLoginKit13FBLoginButtonC5frameACSo6CGRectV_tcfcTo
+_$s13FBSDKLoginKit13FBLoginButtonC5coderACSgSo7NSCoderC_tcfcTo
+_$s13FBSDKLoginKit13FBLoginButtonC5frame15elementProvider06stringG005loginG019graphRequestFactoryACSo6CGRectV_AA30_UserInterfaceElementProviding_pAA01_no6StringQ0_pSo0aQ0_pSo010FBSDKGraphkL0_ptcfcTo
+_$s13FBSDKLoginKit13FBLoginButtonC19showTooltipIfNeeded33_2D5546723C2E9E390359F57C16888789LLyyF
+_$s13FBSDKLoginKit13FBLoginButtonC15didMoveToWindowyyFTo
+_$s13FBSDKLoginKit13FBLoginButtonC9imageRect010forContentF0So6CGRectVAG_tFTo
+_$s13FBSDKLoginKit13FBLoginButtonC9titleRect010forContentF0So6CGRectVAG_tFTo
+_$s13FBSDKLoginKit13FBLoginButtonC14layoutSubviewsyyFTo
+_$s13FBSDKLoginKit13FBLoginButtonC12sizeThatFitsySo6CGSizeVAFFTo
+_$s13FBSDKLoginKit13FBLoginButtonC20accessTokenDidChangeyy10Foundation12NotificationVFTo
+_$s13FBSDKLoginKit13FBLoginButtonC16profileDidChangeyy10Foundation12NotificationVFTo
+_$s13FBSDKLoginKit13FBLoginButtonC26presentAlertViewController33_2D5546723C2E9E390359F57C16888789LLyyF
+_$s13FBSDKLoginKit13FBLoginButtonC9logInUser33_2D5546723C2E9E390359F57C16888789LLyyF
+_$s13FBSDKLoginKit13FBLoginButtonC13buttonPressedyyypFTo
+_$s13FBSDKLoginKit13FBLoginButtonC18loginConfigurationAA05LoginF0CSgyFTo
+_$s13FBSDKLoginKit13FBLoginButtonC9logInUser33_2D5546723C2E9E390359F57C16888789LLyyFySo0A18ManagerLoginResultCSg_s5Error_pSgtcfU_
+_$sSo28FBSDKLoginManagerLoginResultCSgs5Error_pSgIeggg_ACSo7NSErrorCSgIeyByy_TR
+_$sSo13UIAlertActionCIegg_ABIeyBy_TR
+_$s13FBSDKLoginKit13FBLoginButtonC26presentAlertViewController33_2D5546723C2E9E390359F57C16888789LLyyFySo13UIAlertActionCcfU_
+_$s13FBSDKLoginKit13FBLoginButtonC17initializeContentyyFTo
+_$s13FBSDKLoginKit13FBLoginButtonC27updateContentForAccessTokenyyFTo
+_$s13FBSDKLoginKit13FBLoginButtonC18fetchAndSetContentyyFySo27FBSDKGraphRequestConnecting_pSg_ypSgs5Error_pSgtcfU_
+_$sSo27FBSDKGraphRequestConnecting_pSgypSgs5Error_pSgIeggng_AByXlSgSo7NSErrorCSgIeyByyy_TR
+_$s13FBSDKLoginKit13FBLoginButtonC18fetchAndSetContentyyFTo
+_$s13FBSDKLoginKit13FBLoginButtonC27userInformationDoesNotMatch33_2D5546723C2E9E390359F57C16888789LLySbSo12FBSDKProfileCF
+_$s13FBSDKLoginKit13FBLoginButtonC20updateContentForUseryySo12FBSDKProfileCSgFTo
+_$s13FBSDKLoginKit13FBLoginButtonC6logoutyyFTo
+_$s13FBSDKLoginKit13FBLoginButtonCfETo
+_$sSo17FBSDKAppEventNamea13FBSDKLoginKitE17loginButtonDidTap_WZ
+_$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSS_Tg5
+_$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtF12FBSDKCoreKit10PermissionO_Tg5
+_$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSS_Tg5Tm
+_$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSS_Tg5
+_$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF12FBSDKCoreKit10PermissionO_Tg5
+_$ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFSS_Tg5
+_$ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFs11AnyHashableV_Tg5
+_$ss22__RawDictionaryStorageC4find_9hashValues10_HashTableV6BucketV6bucket_Sb5foundtx_SitSHRzlFSS_Tg5
+_$ss22__RawDictionaryStorageC4find_9hashValues10_HashTableV6BucketV6bucket_Sb5foundtx_SitSHRzlFs11AnyHashableV_Tg5
+_$sSh8_VariantV6insertySb8inserted_x17memberAfterInserttxnF13FBSDKLoginKit12FBPermissionC_Tg5
+_$sSh8_VariantV6insertySb8inserted_x17memberAfterInserttxnFSS_Tg5
+_$sSh8_VariantV6insertySb8inserted_x17memberAfterInserttxnF12FBSDKCoreKit10PermissionO_Tg5
+_$ss10_NativeSetV9insertNew_2at8isUniqueyxn_s10_HashTableV6BucketVSbtF13FBSDKLoginKit12FBPermissionC_Tg5
+_$ss10_NativeSetV9insertNew_2at8isUniqueyxn_s10_HashTableV6BucketVSbtFSS_Tg5
+_$ss10_NativeSetV9insertNew_2at8isUniqueyxn_s10_HashTableV6BucketVSbtF12FBSDKCoreKit10PermissionO_Tg5
+_$ss10_NativeSetV4copyyyF13FBSDKLoginKit12FBPermissionC_Tg5
+_$ss10_NativeSetV4copyyyFSS_Tg5
+_$ss10_NativeSetV4copyyyF12FBSDKCoreKit10PermissionO_Tg5
+_$ss10_NativeSetV13copyAndResize8capacityySi_tF13FBSDKLoginKit12FBPermissionC_Tg5
+_$ss10_NativeSetV13copyAndResize8capacityySi_tFSS_Tg5
+_$ss10_NativeSetV13copyAndResize8capacityySi_tF12FBSDKCoreKit10PermissionO_Tg5
+_$ss10_NativeSetV6resize8capacityySi_tF13FBSDKLoginKit12FBPermissionC_Tg5
+_$ss10_NativeSetV6resize8capacityySi_tFSS_Tg5
+_$ss10_NativeSetV6resize8capacityySi_tF12FBSDKCoreKit10PermissionO_Tg5
+_$s13FBSDKLoginKit13FBLoginButtonC5nonceSSSgvsTf4gn_n
+_$s13FBSDKLoginKit13FBLoginButtonCSSSgIetMAgYl_TC
+_$s13FBSDKLoginKit13FBLoginButtonCSo0A8AuthTypeaSgIetMAgYl_TC
+_$s13FBSDKLoginKit13FBLoginButtonCSo17FBSDKCodeVerifierCIetMAgYl_TC
+_$s13FBSDKLoginKit13FBLoginButtonCAA30_UserInterfaceElementProviding_pIetMAgYl_TC
+_$s13FBSDKLoginKit13FBLoginButtonCAA29_UserInterfaceStringProviding_pIetMAgYl_TC
+_$s13FBSDKLoginKit13FBLoginButtonCSo0A9Providing_pIetMAgYl_TC
+_$s13FBSDKLoginKit13FBLoginButtonCSo24FBSDKGraphRequestFactory_pIetMAgYl_TC
+_$sSD17dictionaryLiteralSDyxq_Gx_q_td_tcfCSS_ypTg5Tf4gd_n
+_$s13FBSDKLoginKit13FBLoginButtonC5coderACSgSo7NSCoderC_tcfcTf4gn_n
+_$s13FBSDKLoginKit13FBLoginButtonC5frame15elementProvider06stringG005loginG019graphRequestFactoryACSo6CGRectV_AA30_UserInterfaceElementProviding_pAA01_no6StringQ0_pSo0aQ0_pSo010FBSDKGraphkL0_ptcfcTf4nggggn_n
+_$ss11AnyHashableVWOh
+_$sypSgWOc
+_$sypSgWOh
+_$sypWOc
+___swift_destroy_boxed_opaque_existential_0
+_$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSS_Tg5Tf4nnd_n
+_$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfC12FBSDKCoreKit10PermissionO_Tg5Tf4nnd_n
+_$sShyShyxGqd__nc7ElementQyd__RszSTRd__lufC12FBSDKCoreKit10PermissionO_SayAFGTg5Tf4gn_n
+_$sShyShyxGqd__nc7ElementQyd__RszSTRd__lufCSS_SaySSGTg5Tf4gn_n
+_$ss10_NativeSetV_8capacityAByxGs07__CocoaB0Vn_SitcfC13FBSDKLoginKit12FBPermissionC_Tg5Tf4gnd_n
+_$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageId8authType12codeVerifierACSgShy09FBSDKCoreB010PermissionOG_AA0C8TrackingOS2SSgSo0a4AuthL0aSgSo09FBSDKCodeN0CtcfCTf4gnnnnnd_n
+_$s13FBSDKLoginKit13FBLoginButtonC18fetchAndSetContentyyFySo27FBSDKGraphRequestConnecting_pSg_ypSgs5Error_pSgtcfU_TA
+_block_copy_helper
+_block_destroy_helper
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOSHAASQWb
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOAESQAAWl
+_$s13FBSDKLoginKit19LoginButtonDelegate_pSgXwWOh
+_$sSD17dictionaryLiteralSDyxq_Gx_q_td_tcfCSS_So18FBSDKLoginAuthTypeaTg5Tf4gd_n
+_$sSD17dictionaryLiteralSDyxq_Gx_q_td_tcfCSS_SSTg5Tf4gd_n
+_$sypWOb
+_$sSS_yptWOc
+_$sypSgWOcTm
+_$s12FBSDKCoreKit10PermissionOACSHAAWl
+_$s12FBSDKCoreKit10PermissionOACSQAAWl
+_$s12FBSDKCoreKit10PermissionOACSHAAWlTm
+__swift_stdlib_malloc_size
+_$s13FBSDKLoginKit13FBLoginButtonC26presentAlertViewController33_2D5546723C2E9E390359F57C16888789LLyyFySo13UIAlertActionCcfU_TA
+_$sS2Ss7CVarArg10FoundationWl
+_$s13FBSDKLoginKit13FBLoginButtonC9logInUser33_2D5546723C2E9E390359F57C16888789LLyyFySo0A18ManagerLoginResultCSg_s5Error_pSgtcfU_TA
+_$ss11AnyHashableVWOc
+_$sS2SSysWl
+_block_copy_helper.4
+_block_copy_helper.10
+_block_destroy_helper.5
+_block_destroy_helper.11
+_$s13FBSDKLoginKit13FBLoginButtonC15tooltipBehaviorAC07TooltipF0OvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonC17tooltipColorStyleSo012FBSDKTooltipfG0VvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonC13loginTrackingAA05LoginF0OvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonC15messengerPageIdSSSgvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonC8authTypeSo0a4AuthF0aSgvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonC12codeVerifierSo09FBSDKCodeF0CvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonC6userIDSSSgvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonC8userNameSSSgvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonC15elementProviderAA30_UserInterfaceElementProviding_pvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonC14stringProviderAA29_UserInterfaceStringProviding_pvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonC13loginProviderSo0A9Providing_pvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonC19graphRequestFactorySo010FBSDKGraphfG0_pvM.resume.0
+_$s13FBSDKLoginKit13FBLoginButtonC13loginProviderSo0A9Providing_pvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC8delegateAA05LoginD8Delegate_pSgvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC11permissionsSaySSGvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC15tooltipBehaviorAC07TooltipF0OvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC17tooltipColorStyleSo012FBSDKTooltipfG0VvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC13loginTrackingAA05LoginF0OvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC10nonceValue33_2D5546723C2E9E390359F57C16888789LLSSSgvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC15messengerPageIdSSSgvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC8authTypeSo0a4AuthF0aSgvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC12codeVerifierSo09FBSDKCodeF0CvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC6userIDSSSgvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC8userNameSSSgvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC15elementProviderAA30_UserInterfaceElementProviding_pvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC14stringProviderAA29_UserInterfaceStringProviding_pvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC19graphRequestFactorySo010FBSDKGraphfG0_pvpWvd
+_$s13FBSDKLoginKit13FBLoginButtonC21hasShownTooltipBubble33_2D5546723C2E9E390359F57C16888789LLSbvpWvd
+_symbolic ypSg
+_$sypSgMD
+_symbolic _____ySS_yptG s23_ContiguousArrayStorageC
+_$ss23_ContiguousArrayStorageCySS_yptGMD
+_symbolic _____ 13FBSDKLoginKit13FBLoginButtonC
+_block_descriptor
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOSQAAMcMK
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOAESQAAWL
+_associated conformance 13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOSHAASQ
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOSHAAMcMK
+_symbolic Su
+_symbolic _____ 13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorO
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOSYAAMA
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOSYAAMcMK
+__METACLASS_DATA_FBSDKLoginButton
+__INSTANCE_METHODS_FBSDKLoginButton
+__IVARS_FBSDKLoginButton
+__PROPERTIES_FBSDKLoginButton
+__DATA_FBSDKLoginButton
+_symbolic So11FBSDKButtonC
+_$s13FBSDKLoginKit13FBLoginButtonCMf
+_symbolic So24FBSDKLoginButtonDelegate_pSgXw
+_symbolic SaySSG
+_symbolic _____ 13FBSDKLoginKit13LoginTrackingO
+_symbolic SSSg
+_symbolic _____Sg So18FBSDKLoginAuthTypea
+_symbolic So17FBSDKCodeVerifierC
+_symbolic Sb
+_symbolic So35_FBSDKUserInterfaceElementProviding_p
+_symbolic So34_FBSDKUserInterfaceStringProviding_p
+_symbolic So19FBSDKLoginProviding_p
+_symbolic So24FBSDKGraphRequestFactory_p
+_$s13FBSDKLoginKit13FBLoginButtonCMF
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOMf
+_$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOMB
+_symbolic _____yS2SG s18_DictionaryStorageC
+_$ss18_DictionaryStorageCyS2SGMD
+_symbolic _____ySS_____G s18_DictionaryStorageC So18FBSDKLoginAuthTypea
+_$ss18_DictionaryStorageCySSSo18FBSDKLoginAuthTypeaGMD
+_symbolic _____ySSG s11_SetStorageC
+_$ss11_SetStorageCySSGMD
+_symbolic _____y_____G s11_SetStorageC 13FBSDKLoginKit12FBPermissionC
+_$ss11_SetStorageCy13FBSDKLoginKit12FBPermissionCGMD
+_symbolic SDyS2SG
+_$sSDyS2SGMD
+_symbolic _____ySSypG s18_DictionaryStorageC
+_$ss18_DictionaryStorageCySSypGMD
+_symbolic SS_ypt
+_$sSS_yptMD
+_$s12FBSDKCoreKit10PermissionOACSHAAWL
+_$s12FBSDKCoreKit10PermissionOACSQAAWL
+_symbolic _____y_____G s11_SetStorageC 12FBSDKCoreKit10PermissionO
+_$ss11_SetStorageCy12FBSDKCoreKit10PermissionOGMD
+_block_descriptor.6
+_symbolic _____y______pG s23_ContiguousArrayStorageC s7CVarArgP
+_$ss23_ContiguousArrayStorageCys7CVarArg_pGMD
+_$sS2Ss7CVarArg10FoundationWL
+_block_descriptor.12
+_symbolic _____ySSG s23_ContiguousArrayStorageC
+_$ss23_ContiguousArrayStorageCySSGMD
+_$sSSSgMD
+_$sS2SSysWL
+_objc_classes
+-private-discriminator _2D5546723C2E9E390359F57C16888789
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/FBLoginButton.swift
+$sS2SSysWl
+$ss11AnyHashableVWOc
+$s13FBSDKLoginKit13FBLoginButtonC9logInUser33_2D5546723C2E9E390359F57C16888789LLyyFySo0A18ManagerLoginResultCSg_s5Error_pSgtcfU_TA
+$sS2Ss7CVarArg10FoundationWl
+$s13FBSDKLoginKit13FBLoginButtonC26presentAlertViewController33_2D5546723C2E9E390359F57C16888789LLyyFySo13UIAlertActionCcfU_TA
+_swift_stdlib_malloc_size
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/lib/swift/shims/LibcShims.h
+$s12FBSDKCoreKit10PermissionOACSHAAWl
+$sypSgWOc
+$sypWOb
+$ss17_NativeDictionaryV7_insert2at3key5valueys10_HashTableV6BucketV_xnq_ntFSS_SSTg5
+Swift runtime failure: arithmetic overflow
+Swift runtime failure: Dictionary literal contains duplicate keys
+$sSp10initialize2toyx_tFSS_Tg5
+$ss17_NativeDictionaryV7_valuesSpyq_GvgSS_SSTg5
+$ss17_NativeDictionaryV5_keysSpyxGvgSS_SSTg5
+$sSa9formIndex5afterySiz_tFSS_SSt_Tg5
+subscript.get
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSS_SSt_Tg5
+$sSD7_nativeSDyxq_Gs17_NativeDictionaryVyxq_Gn_tcfCSS_SSTg5
+$ss17_NativeDictionaryV8capacityAByxq_GSi_tcfCSS_SSTg5
+count.get
+$sSa9_getCountSiyFSS_SSt_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSS_SSt_Tg5
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSS_SSt_Tg5
+$ss17_NativeDictionaryV7_insert2at3key5valueys10_HashTableV6BucketV_xnq_ntFSS_So18FBSDKLoginAuthTypeaTg5
+$sSp10initialize2toyx_tFSo18FBSDKLoginAuthTypea_Tg5
+$ss17_NativeDictionaryV7_valuesSpyq_GvgSS_So18FBSDKLoginAuthTypeaTg5
+$ss17_NativeDictionaryV5_keysSpyxGvgSS_So18FBSDKLoginAuthTypeaTg5
+$sSa9formIndex5afterySiz_tFSS_So18FBSDKLoginAuthTypeat_Tg5
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSS_So014FBSDKLoginAuthE0at_Tg5
+$sSD7_nativeSDyxq_Gs17_NativeDictionaryVyxq_Gn_tcfCSS_So18FBSDKLoginAuthTypeaTg5
+$ss17_NativeDictionaryV8capacityAByxq_GSi_tcfCSS_So18FBSDKLoginAuthTypeaTg5
+$sSa9_getCountSiyFSS_So18FBSDKLoginAuthTypeat_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSS_So18FBSDKLoginAuthTypeat_Tg5
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSS_So18FBSDKLoginAuthTypeat_Tg5
+$s13FBSDKLoginKit19LoginButtonDelegate_pSgXwWOh
+$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOMa
+$s13FBSDKLoginKit13FBLoginButtonCMa
+$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOAESQAAWl
+$s13FBSDKLoginKit13FBLoginButtonC15TooltipBehaviorOSHAASQWb
+block_destroy_helper
+block_copy_helper
+$s13FBSDKLoginKit13FBLoginButtonC18fetchAndSetContentyyFySo27FBSDKGraphRequestConnecting_pSg_ypSgs5Error_pSgtcfU_TA
+objectdestroy
+$ss10_NativeSetV_8capacityAByxGs07__CocoaB0Vn_SitcfC13FBSDKLoginKit12FBPermissionC_Tg5Tf4gnd_n
+$ss10_NativeSetV9insertNew_8isUniqueyxn_SbtF13FBSDKLoginKit12FBPermissionC_Tg5
+$ss10_NativeSetV16_unsafeInsertNewyyxnF13FBSDKLoginKit12FBPermissionC_Tg5
+$ss10_HashTableV8nextHole9atOrAfterAB6BucketVAF_tF
+Swift runtime failure: Hash table has no holes
+$sSp10initialize2toyx_tF13FBSDKLoginKit12FBPermissionC_Tg5
+$ss10_NativeSetV9_elementsSpyxGvg13FBSDKLoginKit12FBPermissionC_Tg5
+$sSo8NSObjectCSH10ObjectiveCSH13_rawHashValue4seedS2i_tFTW
+$ss26_forceBridgeFromObjectiveCyxyXl_xmtlF13FBSDKLoginKit12FBPermissionC_Tg5
+$ss16IndexingIteratorVyxGStsSt4next7ElementQzSgyFTWSaySSG_Tg5
+$ss16IndexingIteratorV4next7ElementQzSgyFSaySSG_Tg5
+insert
+$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTWSS_Tg5
+$sSa9formIndex5afterySiz_tFSS_Tg5
+$sSayxGSlsSly7ElementQz5IndexQzcirTWSS_Tg5
+$sSayxSicirSS_Tg5
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSS_Tg5
+$sSayxGSTsST19underestimatedCountSivgTWSS_Tg5
+$sSlsE19underestimatedCountSivgSaySSG_Tg5
+$sSayxGSlsSl5countSivgTWSS_Tg5
+$sSa9_getCountSiyFSS_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSS_Tg5
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSS_Tg5
+$ss16IndexingIteratorVyxGStsSt4next7ElementQzSgyFTWSay12FBSDKCoreKit10PermissionOG_Tg5
+$ss16IndexingIteratorV4next7ElementQzSgyFSay12FBSDKCoreKit10PermissionOG_Tg5
+$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTW12FBSDKCoreKit10PermissionO_Tg5
+$sSa9formIndex5afterySiz_tF12FBSDKCoreKit10PermissionO_Tg5
+$sSayxGSlsSly7ElementQz5IndexQzcirTW12FBSDKCoreKit10PermissionO_Tg5
+$sSayxSicir12FBSDKCoreKit10PermissionO_Tg5
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtF12FBSDKCoreKit10PermissionO_Tg5
+$sSayxGSTsST19underestimatedCountSivgTW12FBSDKCoreKit10PermissionO_Tg5
+$sSlsE19underestimatedCountSivgSay12FBSDKCoreKit10PermissionOG_Tg5
+$sSayxGSlsSl5countSivgTW12FBSDKCoreKit10PermissionO_Tg5
+$sSa9_getCountSiyF12FBSDKCoreKit10PermissionO_Tg5
+$ss12_ArrayBufferV14immutableCountSivg12FBSDKCoreKit10PermissionO_Tg5
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvg12FBSDKCoreKit10PermissionO_Tg5
+$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfC12FBSDKCoreKit10PermissionO_Tg5Tf4nnd_n
+Swift runtime failure: Division results in an overflow
+Swift runtime failure: Division by zero
+$ss22_ContiguousArrayBufferVAByxGycfC12FBSDKCoreKit10PermissionO_Tg5
+$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSS_Tg5Tf4nnd_n
+$ss22_ContiguousArrayBufferV18_initStorageHeader5count8capacityySi_SitFSS_Tg5
+$ss22_ContiguousArrayBufferVAByxGycfCSS_Tg5
+__swift_destroy_boxed_opaque_existential_0
+$sypWOc
+$sypSgWOh
+$ss11AnyHashableVWOh
+$ss17_NativeDictionaryV7_insert2at3key5valueys10_HashTableV6BucketV_xnq_ntFSS_ypTg5
+$sSp10initialize2toyx_tFyp_Tg5
+$ss17_NativeDictionaryV7_valuesSpyq_GvgSS_ypTg5
+$ss17_NativeDictionaryV5_keysSpyxGvgSS_ypTg5
+$sSa9formIndex5afterySiz_tFSS_ypt_Tg5
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSS_ypt_Tg5
+$sSD7_nativeSDyxq_Gs17_NativeDictionaryVyxq_Gn_tcfCSS_ypTg5
+$ss17_NativeDictionaryV8capacityAByxq_GSi_tcfCSS_ypTg5
+$sSa9_getCountSiyFSS_ypt_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSS_ypt_Tg5
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSS_ypt_Tg5
+nonce.set
+appendLiteral
+appendInterpolation
+$sSSs20TextOutputStreamablessAAP5write2toyqd__z_ts0aB6StreamRd__lFTWs26DefaultStringInterpolationV_Tg5
+$sSS5write2toyxz_ts16TextOutputStreamRzlFs26DefaultStringInterpolationV_Tg5
+$ss26DefaultStringInterpolationVs16TextOutputStreamssACP5writeyySSFTW
+$ss26DefaultStringInterpolationV5writeyySSF
+nonce.get
+$sSS12_createEmpty19withInitialCapacitySSSi_tFZ
+$sSS12_createEmpty19withInitialCapacitySSSi_tFZTf4nd_n
+isValid
+FBSDKLoginKit/Internal/NonceValidator.swift
+isEmpty.get
+$ss10_NativeSetV6resize8capacityySi_tF12FBSDKCoreKit10PermissionO_Tg5
+$ss10_NativeSetV16_unsafeInsertNewyyxnF12FBSDKCoreKit10PermissionO_Tg5
+$sSp6assign9repeating5countyx_SitFs13_UnsafeBitsetV4WordV_Tgq5
+$sSp10initialize2toyx_tF12FBSDKCoreKit10PermissionO_Tg5
+$ss10_NativeSetV9_elementsSpyxGvg12FBSDKCoreKit10PermissionO_Tg5
+$sSp4movexyF12FBSDKCoreKit10PermissionO_Tg5
+$ss10_NativeSetV6resize8capacityySi_tFSS_Tg5
+$ss10_NativeSetV16_unsafeInsertNewyyxnFSS_Tg5
+$ss10_NativeSetV9_elementsSpyxGvgSS_Tg5
+$sSp4movexyFSS_Tg5
+$ss10_NativeSetV6resize8capacityySi_tF13FBSDKLoginKit12FBPermissionC_Tg5
+$sSp4movexyF13FBSDKLoginKit12FBPermissionC_Tg5
+$ss10_NativeSetV13copyAndResize8capacityySi_tF12FBSDKCoreKit10PermissionO_Tg5
+$ss10_NativeSetV13copyAndResize8capacityySi_tFSS_Tg5
+$ss10_NativeSetV13copyAndResize8capacityySi_tF13FBSDKLoginKit12FBPermissionC_Tg5
+$ss10_NativeSetV4copyyyF12FBSDKCoreKit10PermissionO_Tg5
+$ss10_HashTableV12copyContents2ofyAB_tF
+$ss10_NativeSetV4copyyyFSS_Tg5
+$ss10_NativeSetV4copyyyF13FBSDKLoginKit12FBPermissionC_Tg5
+$ss10_NativeSetV9insertNew_2at8isUniqueyxn_s10_HashTableV6BucketVSbtF12FBSDKCoreKit10PermissionO_Tg5
+$ss10_NativeSetV16_unsafeInsertNew_2atyxn_s10_HashTableV6BucketVtF12FBSDKCoreKit10PermissionO_Tg5
+$ss10_NativeSetV9insertNew_2at8isUniqueyxn_s10_HashTableV6BucketVSbtFSS_Tg5
+$ss10_NativeSetV16_unsafeInsertNew_2atyxn_s10_HashTableV6BucketVtFSS_Tg5
+$ss10_NativeSetV9insertNew_2at8isUniqueyxn_s10_HashTableV6BucketVSbtF13FBSDKLoginKit12FBPermissionC_Tg5
+$ss10_NativeSetV16_unsafeInsertNew_2atyxn_s10_HashTableV6BucketVtF13FBSDKLoginKit12FBPermissionC_Tg5
+$sSo8NSObjectCSQ10ObjectiveCSQ2eeoiySbx_xtFZTW
+$sSh8_VariantV6insertySb8inserted_x17memberAfterInserttxnF12FBSDKCoreKit10PermissionO_Tg5
+$sSh8_VariantV8asNatives01_C3SetVyxGvM6$deferL_yySHRzlF12FBSDKCoreKit10PermissionO_Tg5
+$sSh8_VariantV20isUniquelyReferencedSbyF12FBSDKCoreKit10PermissionO_Tg5
+$sSh8_VariantV6insertySb8inserted_x17memberAfterInserttxnFSS_Tg5
+$sSh8_VariantV8asNatives01_C3SetVyxGvM6$deferL_yySHRzlFSS_Tg5
+$sSh8_VariantV20isUniquelyReferencedSbyFSS_Tg5
+$sSh8_VariantV6insertySb8inserted_x17memberAfterInserttxnF13FBSDKLoginKit12FBPermissionC_Tg5
+$ss10_NativeSetV_8capacityAByxGs07__CocoaB0Vn_SitcfC13FBSDKLoginKit12FBPermissionC_Tg5
+$sSh8_VariantV7asCocoas02__C3SetVvg13FBSDKLoginKit12FBPermissionC_Tg5
+_bridgeAnythingToObjectiveC
+$sSh8_VariantV8asNatives01_C3SetVyxGvM6$deferL_yySHRzlF13FBSDKLoginKit12FBPermissionC_Tg5
+$sSh8_VariantV20isUniquelyReferencedSbyF13FBSDKLoginKit12FBPermissionC_Tg5
+$ss22__RawDictionaryStorageC4find_9hashValues10_HashTableV6BucketV6bucket_Sb5foundtx_SitSHRzlFs11AnyHashableV_Tg5
+$ss11AnyHashableVSQsSQ2eeoiySbx_xtFZTW
+$ss22__RawDictionaryStorageC4find_9hashValues10_HashTableV6BucketV6bucket_Sb5foundtx_SitSHRzlFSS_Tg5
+$ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFs11AnyHashableV_Tg5
+$ss11AnyHashableVSHsSH13_rawHashValue4seedS2i_tFTW
+$ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFSS_Tg5
+$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtF12FBSDKCoreKit10PermissionO_Tg5
+$ss22_ContiguousArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtF12FBSDKCoreKit10PermissionO_Tg5
+$sSp10initialize4from5countySPyxG_SitF12FBSDKCoreKit10PermissionO_Tg5
+$sSp14moveInitialize4from5countySpyxG_SitF12FBSDKCoreKit10PermissionO_Tg5
+$sSLsE2geoiySbx_xtFZSpy12FBSDKCoreKit10PermissionOG_Tg5
+$sSpyxGSLsSL1loiySbx_xtFZTW12FBSDKCoreKit10PermissionO_Tg5
+$ss22_ContiguousArrayBufferV26mutableFirstElementAddressSpyxGvg12FBSDKCoreKit10PermissionO_Tg5
+$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfC12FBSDKCoreKit10PermissionO_Tg5
+$ss22_ContiguousArrayBufferV5countSivg12FBSDKCoreKit10PermissionO_Tg5
+$ss22_ContiguousArrayBufferV8capacitySivg12FBSDKCoreKit10PermissionO_Tg5
+$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSS_Tg5
+$ss22_ContiguousArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSS_Tg5
+$sSp10initialize4from5countySPyxG_SitFSS_Tg5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSS_Tg5
+$sSp14moveInitialize4from5countySpyxG_SitFSS_Tg5
+$ss22_ContiguousArrayBufferV26mutableFirstElementAddressSpyxGvgSS_Tg5
+$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSS_Tg5
+$ss22_ContiguousArrayBufferV5countSivgSS_Tg5
+$ss22_ContiguousArrayBufferV8capacitySivgSS_Tg5
+$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSS_Tg5
+$s13FBSDKLoginKit13FBLoginButtonCfETo
+deinit
+logout
+updateContentForUser
+userInformationDoesNotMatch
+fetchAndSetContent
+$sSo27FBSDKGraphRequestConnecting_pSgypSgs5Error_pSgIeggng_AByXlSgSo7NSErrorCSgIeyByyy_TR
+$s13FBSDKLoginKit13FBLoginButtonC18fetchAndSetContentyyFySo27FBSDKGraphRequestConnecting_pSg_ypSgs5Error_pSgtcfU_
+updateContentForAccessToken
+$sSa13_adoptStorage_5countSayxG_SpyxGts016_ContiguousArrayB0CyxGn_SitFZSS_ypt_Tg5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSS_ypt_Tg5
+$ss22_ContiguousArrayBufferV5count7storageAByxGSi_s01_aB7StorageCyxGtcfCSS_ypt_Tg5
+$ss22_ContiguousArrayBufferV18_initStorageHeader5count8capacityySi_SitFSS_ypt_Tg5
+initializeContent
+$s13FBSDKLoginKit13FBLoginButtonC26presentAlertViewController33_2D5546723C2E9E390359F57C16888789LLyyFySo13UIAlertActionCcfU_
+$sSo13UIAlertActionCIegg_ABIeyBy_TR
+$s13FBSDKLoginKit13FBLoginButtonC9logInUser33_2D5546723C2E9E390359F57C16888789LLyyFySo0A18ManagerLoginResultCSg_s5Error_pSgtcfU_
+loginConfiguration
+map
+$sSaySayxGqd__c7ElementQyd__RszSTRd__lufC12FBSDKCoreKit10PermissionO_s15ContiguousArrayVyAFGTg5
+$ss12_ArrayBufferV7_buffer19shiftedToStartIndexAByxGs011_ContiguousaB0VyxG_SitcfC12FBSDKCoreKit10PermissionO_Tg5
+$ss15ContiguousArrayV6appendyyxnF12FBSDKCoreKit10PermissionO_Tg5
+$ss15ContiguousArrayV37_appendElementAssumeUniqueAndCapacity_03newD0ySi_xntF12FBSDKCoreKit10PermissionO_Tg5
+$ss15ContiguousArrayV36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tF12FBSDKCoreKit10PermissionO_Tg5
+$ss15ContiguousArrayV034_makeUniqueAndReserveCapacityIfNotD0yyF12FBSDKCoreKit10PermissionO_Tg5
+$ss22_ContiguousArrayBufferV16beginCOWMutationSbyF12FBSDKCoreKit10PermissionO_Tg5
+$sSS12FBSDKCoreKit10PermissionOs5Error_pIggrzo_SSACsAD_pIegnrzo_TR
+$s13FBSDKLoginKit13FBLoginButtonC18loginConfigurationAA05LoginF0CSgyF09FBSDKCoreB010PermissionOSScfu0_
+$ss15ContiguousArrayV15reserveCapacityyySiF12FBSDKCoreKit10PermissionO_Tg5
+$ss15ContiguousArrayV12_endMutationyyF12FBSDKCoreKit10PermissionO_Tg5
+$ss15ContiguousArrayV20_reserveCapacityImpl07minimumD013growForAppendySi_SbtF12FBSDKCoreKit10PermissionO_Tg5
+buttonPressed
+logInUser
+$sSo17FBSDKAppEventNamea13FBSDKLoginKitE17loginButtonDidTapABvau
+FBSDKLoginKit/LoginAppEventNames.swift
+$sSuSQsSQ2eeoiySbx_xtFZTW
+presentAlertViewController
+$sSa13_adoptStorage_5countSayxG_SpyxGts016_ContiguousArrayB0CyxGn_SitFZs7CVarArg_p_Tg5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgs7CVarArg_p_Tg5
+$ss22_ContiguousArrayBufferV5count7storageAByxGSi_s01_aB7StorageCyxGtcfCs7CVarArg_p_Tg5
+$ss22_ContiguousArrayBufferV18_initStorageHeader5count8capacityySi_SitFs7CVarArg_p_Tg5
+$s13FBSDKLoginKit13FBLoginButtonC10ObjectiveC8ObjCBoolVIegyd_ACSbIeggd_TR
+_convertObjCBoolToBool
+isAuthenticated.get
+profileDidChange
+accessTokenDidChange
+$ss17_NativeDictionaryV7_valuesSpyq_Gvgs11AnyHashableV_ypTg5
+_convertToAnyHashable
+sizeThatFits
+max
+$s12CoreGraphics7CGFloatVSLAASL2geoiySbx_xtFZTW
+shortLogInTitle
+longLogInTitle
+logOutTitle
+layoutSubviews
+titleRect
+imageRect
+didMoveToWindow
+showTooltipIfNeeded
+$ss15ContiguousArrayV6appendyyxnFSS_Tg5
+$ss15ContiguousArrayV12_endMutationyyFSS_Tg5
+$ss15ContiguousArrayV37_appendElementAssumeUniqueAndCapacity_03newD0ySi_xntFSS_Tg5
+$ss15ContiguousArrayV36_reserveCapacityAssumingUniqueBuffer8oldCountySi_tFSS_Tg5
+$ss15ContiguousArrayV034_makeUniqueAndReserveCapacityIfNotD0yyFSS_Tg5
+$ss15ContiguousArrayV5countSivgSS_Tg5
+$ss15ContiguousArrayV9_getCountSiyFSS_Tg5
+$ss22_ContiguousArrayBufferV16beginCOWMutationSbyFSS_Tg5
+$s12FBSDKCoreKit10PermissionOSSs5Error_pIgnozo_ACSSsAD_pIegnrzo_TR
+$s13FBSDKLoginKit13FBLoginButtonC5frame11permissionsACSo6CGRectV_Say09FBSDKCoreB010PermissionOGtcfcSSAJXEfU_
+$ss15ContiguousArrayV15reserveCapacityyySiFSS_Tg5
+$ss15ContiguousArrayV20_reserveCapacityImpl07minimumD013growForAppendySi_SbtFSS_Tg5
+configureButton
+addNotificationObservers
+$sSuSHsSH4hash4intoys6HasherVz_tFTW
+$sSu4hash4intoys6HasherVz_tF
+$sSuSHsSH9hashValueSivgTW
+_convertBoolToObjCBool
+graphRequestFactory.modify
+permissions.set
+elementProvider.set
+permissions.get
+elementProvider.get
+loginProvider.modify
+stringProvider.modify
+elementProvider.modify
+userName.modify
+messengerPageId.set
+messengerPageId.get
+userID.modify
+codeVerifier.modify
+codeVerifier.set
+codeVerifier.get
+authType.modify
+authType.set
+authType.get
+messengerPageId.modify
+nonce.modify
+$s13FBSDKLoginKit13FBLoginButtonC5nonceSSSgvpACTk
+$s13FBSDKLoginKit13FBLoginButtonC5nonceSSSgvpACTK
+loginTracking.modify
+tooltipBehavior.set
+tooltipBehavior.get
+tooltipColorStyle.modify
+tooltipBehavior.modify
+permissions.modify
+delegate.modify
+$s13FBSDKLoginKit13FBLoginButtonC8delegateAA05LoginD8Delegate_pSgvpACTk
+$s13FBSDKLoginKit13FBLoginButtonC8delegateAA05LoginD8Delegate_pSgvpACTK
+delegate.set
+delegate.get
+defaultAudience.modify
+defaultAudience.set
+defaultAudience.get
+$s13FBSDKLoginKit13FBLoginButtonC15defaultAudienceSo012FBSDKDefaultF0VvpACTk
+$s13FBSDKLoginKit13FBLoginButtonC15defaultAudienceSo012FBSDKDefaultF0VvpACTK
+_$s13FBSDKLoginKit12FBPermissionC11descriptionSSvgTo
+_$s13FBSDKLoginKit12FBPermissionC4hashSivgTo
+_$s13FBSDKLoginKit12FBPermissionC6stringACSgSS_tcfcTo
+_$s13FBSDKLoginKit12FBPermissionC11permissions18fromRawPermissionsShyACGSgShySSG_tFZTo
+_$s13FBSDKLoginKit12FBPermissionC14rawPermissions4fromShySSGShyACG_tFZTo
+_$s13FBSDKLoginKit12FBPermissionC7isEqualySbypSgFTo
+_$s13FBSDKLoginKit12FBPermissionCACycfcTo
+_$s13FBSDKLoginKit12FBPermissionCfETo
+_$ss10_NativeSetV5index5afterSh5IndexVyx_GAG_tF13FBSDKLoginKit12FBPermissionC_Tg5
+_$sShyxSh5IndexVyx_Gcig13FBSDKLoginKit12FBPermissionC_Tg5
+_$ss10_NativeSetV10startIndexSh0D0Vyx_Gvg13FBSDKLoginKit12FBPermissionC_Tg5
+_$s13FBSDKLoginKit12FBPermissionC11permissions18fromRawPermissionsShyACGSgShySSG_tFZTf4nd_n
+_$s13FBSDKLoginKit12FBPermissionCSo8NSObjectCSH10ObjectiveCWl
+_$s13FBSDKLoginKit12FBPermissionC14rawPermissions4fromShySSGShyACG_tFZTf4nd_n
+_$sSh5IndexV8_VariantOyx__GSHRzlWOe
+_$s13FBSDKLoginKit12FBPermissionC5valueSSvgTo
+_$s13FBSDKLoginKit12FBPermissionC5valueSSvpWvd
+_$s13FBSDKLoginKit12FBPermissionCSo8NSObjectCSH10ObjectiveCWL
+__CLASS_METHODS_FBSDKPermission
+__METACLASS_DATA_FBSDKPermission
+__INSTANCE_METHODS_FBSDKPermission
+__IVARS_FBSDKPermission
+__PROPERTIES_FBSDKPermission
+__DATA_FBSDKPermission
+_symbolic So8NSObjectC
+_$s13FBSDKLoginKit12FBPermissionCMf
+_symbolic _____ 13FBSDKLoginKit12FBPermissionC
+_$s13FBSDKLoginKit12FBPermissionCMF
+_symbolic _____y______G Sh5IndexV 13FBSDKLoginKit12FBPermissionC
+_$sSh5IndexVy13FBSDKLoginKit12FBPermissionC_GMD
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/FBPermission.swift
+rawPermissions
+Swift runtime failure: Out of bounds: index >= endIndex
+Swift runtime failure: Range requires lowerBound <= upperBound
+$sShyxGSlsSl9formIndex5aftery0B0Qzz_tFTW13FBSDKLoginKit12FBPermissionC_Tg5
+$sSh9formIndex5afterySh0B0Vyx_Gz_tF13FBSDKLoginKit12FBPermissionC_Tg5
+$sSh8_VariantV9formIndex5afterySh0C0Vyx_Gz_tF13FBSDKLoginKit12FBPermissionC_Tg5
+$sSaySayxGqd__c7ElementQyd__RszSTRd__lufCSS_s15ContiguousArrayVySSGTg5
+$ss12_ArrayBufferV7_buffer19shiftedToStartIndexAByxGs011_ContiguousaB0VyxG_SitcfCSS_Tg5
+Swift runtime failure: Attempting to access Set elements using an invalid index
+$s13FBSDKLoginKit12FBPermissionCSSs5Error_pIggozo_ACSSsAD_pIegnrzo_TR
+$s13FBSDKLoginKit12FBPermissionC14rawPermissions4fromShySSGShyACG_tFZSSACcs7KeyPathCyACSSGcfu_SSACcfu0_
+$sShyxGSlsSly7ElementQz5IndexQzcirTW13FBSDKLoginKit12FBPermissionC_Tg5
+$sShyxSh5IndexVyx_Gcir13FBSDKLoginKit12FBPermissionC_Tg5
+$sShyxGSlsSl10startIndex0B0QzvgTW13FBSDKLoginKit12FBPermissionC_Tg5
+$sSh10startIndexSh0B0Vyx_Gvg13FBSDKLoginKit12FBPermissionC_Tg5
+$sSh8_VariantV10startIndexSh0C0Vyx_Gvg13FBSDKLoginKit12FBPermissionC_Tg5
+$sShyxGSlsSl5countSivgTW13FBSDKLoginKit12FBPermissionC_Tg5
+$sSh5countSivg13FBSDKLoginKit12FBPermissionC_Tg5
+$s13FBSDKLoginKit12FBPermissionCMa
+$s13FBSDKLoginKit12FBPermissionCSo8NSObjectCSH10ObjectiveCWl
+permissions
+$sSh8IteratorV4nextxSgyFSS_Tg5
+$ss10_NativeSetV16uncheckedElement2atxs10_HashTableV6BucketV_tF6$deferL_yySHRzlFSS_Tg5
+$ss13_UnsafeBitsetV4WordV4nextSiSgyF
+$sSh12makeIteratorSh0B0Vyx_GyFSS_Tg5
+$sShyxSh5IndexVyx_Gcig13FBSDKLoginKit12FBPermissionC_Tg5
+$s13FBSDKLoginKit12FBPermissionCfETo
+$ss25_unimplementedInitializer9className04initD04file4line6columns5NeverOs12StaticStringV_A2JS2utFySRys5UInt8VGXEfU0_
+$ss25_unimplementedInitializer9className04initD04file4line6columns5NeverOs12StaticStringV_A2JS2utFySRys5UInt8VGXEfU0_yAMXEfU_
+isEqual
+hash.get
+description.get
+__CATEGORY_PROTOCOLS_FBSDKInternalUtility_$_FBSDKLoginKit
+__CATEGORY_FBSDKInternalUtility_$_FBSDKLoginKit
+__CATEGORY_PROTOCOLS_FBSDKInternalUtility_$_FBSDKLoginKit1
+__CATEGORY_FBSDKInternalUtility_$_FBSDKLoginKit1
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/InternalUtility+Internal.swift
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/LoginAppEventNames.swift
+loginButtonDidTap.get
+$sSo17FBSDKAppEventNamea13FBSDKLoginKitE17loginButtonDidTap_WZ
+_symbolic $s13FBSDKLoginKit19LoginButtonDelegateP
+_$s13FBSDKLoginKit19LoginButtonDelegate_pMF
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/LoginButtonDelegate.swift
+_$s13FBSDKLoginKit18LoginConfigurationC5nonceSSvgTo
+_$s13FBSDKLoginKit18LoginConfigurationC8trackingAA0C8TrackingOvgTo
+_$s13FBSDKLoginKit18LoginConfigurationC20requestedPermissionsShyAA12FBPermissionCGvgTo
+_$s13FBSDKLoginKit18LoginConfigurationC15messengerPageIdSSSgvgTo
+_$s13FBSDKLoginKit18LoginConfigurationC8authTypeSo0a4AuthF0aSgvgTo
+_$s13FBSDKLoginKit18LoginConfigurationC12codeVerifierSo09FBSDKCodeF0CvgTo
+_$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageIdACSgSaySSG_AA0C8TrackingOS2SSgtcfcTo
+_$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageId8authTypeACSgSaySSG_AA0C8TrackingOS2SSgSo0a4AuthL0aSgtcfcTo
+_$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonceACSgSaySSG_AA0C8TrackingOSStcfcTo
+_$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking15messengerPageIdACSgSaySSG_AA0C8TrackingOSSSgtcfcTo
+_$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking15messengerPageId8authTypeACSgSaySSG_AA0C8TrackingOSSSgSo0a4AuthK0aSgtcfcTo
+_$sSTsSQ7ElementRpzrlE8containsySbABFSaySo18FBSDKLoginAuthTypeaG_Tg5
+_$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageId8authType12codeVerifierACSgSaySSG_AA0C8TrackingOS2SSgSo0a4AuthL0aSgSo09FBSDKCodeN0CtcfcTo
+_$s13FBSDKLoginKit18LoginConfigurationC11permissions8trackingACSgSaySSG_AA0C8TrackingOtcfcTo
+_$s13FBSDKLoginKit18LoginConfigurationC8trackingACSgAA0C8TrackingO_tcfcTo
+_$s13FBSDKLoginKit18LoginConfigurationC8authType3forSo0a4AuthF0aSgSS_tFZTo
+_$s13FBSDKLoginKit18LoginConfigurationCACycfcTo
+_$s13FBSDKLoginKit18LoginConfigurationCfETo
+_$ss10_NativeSetV5index5afterSh5IndexVyx_GAG_tF12FBSDKCoreKit10PermissionO_Tg5
+_$ss10_NativeSetV10startIndexSh0D0Vyx_Gvg12FBSDKCoreKit10PermissionO_Tg5
+_$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageId8authTypeACSgSaySSG_AA0C8TrackingOS2SSgSo0a4AuthL0aSgtcfcTf4gngggn_n
+_$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking15messengerPageIdACSgSaySSG_AA0C8TrackingOSSSgtcfcTf4gngn_n
+_$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking15messengerPageId8authTypeACSgSaySSG_AA0C8TrackingOSSSgSo0a4AuthK0aSgtcfcTf4gnggn_n
+_$s13FBSDKLoginKit18LoginConfigurationC8authType3forSo0a4AuthF0aSgSS_tFZTf4nd_n
+_$s13FBSDKLoginKit18LoginConfigurationC5nonceSSvpWvd
+_$s13FBSDKLoginKit18LoginConfigurationC8trackingAA0C8TrackingOvpWvd
+_$s13FBSDKLoginKit18LoginConfigurationC20requestedPermissionsShyAA12FBPermissionCGvpWvd
+_$s13FBSDKLoginKit18LoginConfigurationC15messengerPageIdSSSgvpWvd
+_$s13FBSDKLoginKit18LoginConfigurationC8authTypeSo0a4AuthF0aSgvpWvd
+_$s13FBSDKLoginKit18LoginConfigurationC12codeVerifierSo09FBSDKCodeF0CvpWvd
+_symbolic _____y_____G s23_ContiguousArrayStorageC So18FBSDKLoginAuthTypea
+_$ss23_ContiguousArrayStorageCySo18FBSDKLoginAuthTypeaGMD
+__CLASS_METHODS_FBSDKLoginConfiguration
+__METACLASS_DATA_FBSDKLoginConfiguration
+__INSTANCE_METHODS_FBSDKLoginConfiguration
+__IVARS_FBSDKLoginConfiguration
+__PROPERTIES_FBSDKLoginConfiguration
+__DATA_FBSDKLoginConfiguration
+_$s13FBSDKLoginKit18LoginConfigurationCMf
+_symbolic _____ 13FBSDKLoginKit18LoginConfigurationC
+_symbolic Shy_____G 13FBSDKLoginKit12FBPermissionC
+_$s13FBSDKLoginKit18LoginConfigurationCMF
+_symbolic _____ySS______tG s23_ContiguousArrayStorageC So18FBSDKLoginAuthTypea
+_$ss23_ContiguousArrayStorageCySS_So18FBSDKLoginAuthTypeatGMD
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/LoginConfiguration.swift
+$s13FBSDKLoginKit18LoginConfigurationCMa
+authType
+$sSa13_adoptStorage_5countSayxG_SpyxGts016_ContiguousArrayB0CyxGn_SitFZSS_So18FBSDKLoginAuthTypeat_Tg5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSS_So18FBSDKLoginAuthTypeat_Tg5
+$ss22_ContiguousArrayBufferV5count7storageAByxGSi_s01_aB7StorageCyxGtcfCSS_So18FBSDKLoginAuthTypeat_Tg5
+$ss22_ContiguousArrayBufferV18_initStorageHeader5count8capacityySi_SitFSS_So18FBSDKLoginAuthTypeat_Tg5
+$sShyxGSlsSly7ElementQz5IndexQzcirTW12FBSDKCoreKit10PermissionO_Tg5
+$sShyxSh5IndexVyx_Gcir12FBSDKCoreKit10PermissionO_Tg5
+$sShyxSh5IndexVyx_Gcig12FBSDKCoreKit10PermissionO_Tg5
+$sShyxGSlsSl9formIndex5aftery0B0Qzz_tFTW12FBSDKCoreKit10PermissionO_Tg5
+$sSh9formIndex5afterySh0B0Vyx_Gz_tF12FBSDKCoreKit10PermissionO_Tg5
+$sSh8_VariantV9formIndex5afterySh0C0Vyx_Gz_tF12FBSDKCoreKit10PermissionO_Tg5
+$s13FBSDKLoginKit18LoginConfigurationC11permissions8tracking5nonce15messengerPageId8authType12codeVerifierACSgShy09FBSDKCoreB010PermissionOG_AA0C8TrackingOS2SSgSo0a4AuthL0aSgSo09FBSDKCodeN0CtcfcSSAMXEfU_
+$sShyxGSlsSl10startIndex0B0QzvgTW12FBSDKCoreKit10PermissionO_Tg5
+$sSh10startIndexSh0B0Vyx_Gvg12FBSDKCoreKit10PermissionO_Tg5
+$sSh8_VariantV10startIndexSh0C0Vyx_Gvg12FBSDKCoreKit10PermissionO_Tg5
+$sShyxGSlsSl5countSivgTW12FBSDKCoreKit10PermissionO_Tg5
+$sSh5countSivg12FBSDKCoreKit10PermissionO_Tg5
+$s13FBSDKLoginKit18LoginConfigurationCfETo
+contains
+$sSTsE8contains5whereS2b7ElementQzKXE_tKFSaySo18FBSDKLoginAuthTypeaG_Tg5
+$ss16IndexingIteratorVyxGStsSt4next7ElementQzSgyFTWSaySo18FBSDKLoginAuthTypeaG_Tg5
+$ss16IndexingIteratorV4next7ElementQzSgyFSaySo18FBSDKLoginAuthTypeaG_Tg5
+$sSayxGSlsSl9formIndex5aftery0B0Qzz_tFTWSo18FBSDKLoginAuthTypea_Tg5
+$sSa9formIndex5afterySiz_tFSo18FBSDKLoginAuthTypea_Tg5
+$sSTsSQ7ElementRpzrlE8containsySbABFSbABXEfU_SaySo18FBSDKLoginAuthTypeaG_TG5
+$sSTsSQ7ElementRpzrlE8containsySbABFSbABXEfU_SaySo18FBSDKLoginAuthTypeaG_Tg5
+$sSayxGSlsSly7ElementQz5IndexQzcirTWSo18FBSDKLoginAuthTypea_Tg5
+$sSayxSicirSo18FBSDKLoginAuthTypea_Tg5
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSo014FBSDKLoginAuthE0a_Tg5
+$sSayxGSlsSl8endIndex0B0QzvgTWSo18FBSDKLoginAuthTypea_Tg5
+$sSa8endIndexSivgSo18FBSDKLoginAuthTypea_Tg5
+$sSa9_getCountSiyFSo18FBSDKLoginAuthTypea_Tg5
+$ss12_ArrayBufferV14immutableCountSivgSo18FBSDKLoginAuthTypea_Tg5
+$ss12_ArrayBufferV7_natives011_ContiguousaB0VyxGvgSo18FBSDKLoginAuthTypea_Tg5
+$sSa13_adoptStorage_5countSayxG_SpyxGts016_ContiguousArrayB0CyxGn_SitFZSo18FBSDKLoginAuthTypea_Tg5
+$ss22_ContiguousArrayBufferV19firstElementAddressSpyxGvgSo18FBSDKLoginAuthTypea_Tg5
+$ss22_ContiguousArrayBufferV5count7storageAByxGSi_s01_aB7StorageCyxGtcfCSo18FBSDKLoginAuthTypea_Tg5
+$ss22_ContiguousArrayBufferV18_initStorageHeader5count8capacityySi_SitFSo18FBSDKLoginAuthTypea_Tg5
+requestedPermissions.get
+tracking.get
+_$ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFSS_Tgq5
+_$ss22__RawDictionaryStorageC4find_9hashValues10_HashTableV6BucketV6bucket_Sb5foundtx_SitSHRzlFSS_Tgq5
+_$sSD17dictionaryLiteralSDyxq_Gx_q_td_tcfCSS_ypTgq5Tf4gd_n
+_$s13FBSDKLoginKit11LoginResultO6result5errorACSo0a7ManagercD0CSg_s5Error_pSgtcfCTf4ggd_n
+_$sSo17FBSDKLoginManagerC0A3KitE22convertedResultHandler33_C218275A97333B874EDDFE627110566CLLyySo0ab5LoginE0CSg_s5Error_pSgtcyAC0kE0OcFyAH_AJtcfU_TA
+_$s13FBSDKLoginKit11LoginResultOwCP
+_$s13FBSDKLoginKit11LoginResultOWOy
+_$s13FBSDKLoginKit11LoginResultOwxx
+_$s13FBSDKLoginKit11LoginResultOWOe
+_$s13FBSDKLoginKit11LoginResultOwcp
+_$s13FBSDKLoginKit11LoginResultOwca
+___swift_memcpy25_8
+_$s13FBSDKLoginKit11LoginResultOwta
+_$s13FBSDKLoginKit11LoginResultOwet
+_$s13FBSDKLoginKit11LoginResultOwst
+_$s13FBSDKLoginKit11LoginResultOwug
+_$s13FBSDKLoginKit11LoginResultOwup
+_$s13FBSDKLoginKit11LoginResultOwui
+_$sSo17FBSDKLoginManagerC0A3KitE5logIn14viewController13configuration10completionySo06UIViewG0CSg_AC18LoginConfigurationCyAC0K6ResultOctFySo0abkM0CSg_s5Error_pSgtcfU_TA
+_symbolic _____Iegg_ 13FBSDKLoginKit11LoginResultO
+_$s13FBSDKLoginKit11LoginResultOWV
+_$s13FBSDKLoginKit11LoginResultOMf
+_symbolic _____ 13FBSDKLoginKit11LoginResultO
+_$s13FBSDKLoginKit11LoginResultOMB
+_symbolic Shy_____G7granted_AB8declinedSo16FBSDKAccessTokenCSg5tokent 12FBSDKCoreKit10PermissionO
+_symbolic ______p s5ErrorP
+_$s13FBSDKLoginKit11LoginResultOMF
+-private-discriminator _C218275A97333B874EDDFE627110566C
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/LoginManager.swift
+$sSS_yptWOc
+$sSC15FBSDKLoginErrorLeVAB10Foundation21_BridgedStoredNSErrorSCWl
+$s13FBSDKLoginKit11LoginResultOMa
+$s13FBSDKLoginKit11LoginResultOwui
+$s13FBSDKLoginKit11LoginResultOwup
+$s13FBSDKLoginKit11LoginResultOwug
+$s13FBSDKLoginKit11LoginResultOwst
+$s13FBSDKLoginKit11LoginResultOwet
+$s13FBSDKLoginKit11LoginResultOwta
+__swift_memcpy25_8
+$s13FBSDKLoginKit11LoginResultOwca
+$s13FBSDKLoginKit11LoginResultOwcp
+$s13FBSDKLoginKit11LoginResultOwxx
+$s13FBSDKLoginKit11LoginResultOwCP
+$sSo17FBSDKLoginManagerC0A3KitE22convertedResultHandler33_C218275A97333B874EDDFE627110566CLLyySo0ab5LoginE0CSg_s5Error_pSgtcyAC0kE0OcFyAH_AJtcfU_TA
+$sSo17FBSDKLoginManagerC0A3KitE22convertedResultHandler33_C218275A97333B874EDDFE627110566CLLyySo0ab5LoginE0CSg_s5Error_pSgtcyAC0kE0OcFyAH_AJtcfU_
+$sShyxGSlsSly7ElementQz5IndexQzcirTWSS_Tg5
+$sShyxSh5IndexVyx_GcirSS_Tg5
+$sShyxSh5IndexVyx_GcigSS_Tg5
+$sSD17dictionaryLiteralSDyxq_Gx_q_td_tcfCSS_ypTgq5
+$sShyxGSlsSl9formIndex5aftery0B0Qzz_tFTWSS_Tg5
+$sSh9formIndex5afterySh0B0Vyx_Gz_tFSS_Tg5
+$sSh8_VariantV9formIndex5afterySh0C0Vyx_Gz_tFSS_Tg5
+$s13FBSDKLoginKit11LoginResultO6result5errorACSo0a7ManagercD0CSg_s5Error_pSgtcfc09FBSDKCoreB010PermissionOSSXEfU0_
+$sShyxGSlsSl10startIndex0B0QzvgTWSS_Tg5
+$sSh10startIndexSh0B0Vyx_GvgSS_Tg5
+$sSh8_VariantV10startIndexSh0C0Vyx_GvgSS_Tg5
+$ss10_NativeSetV10startIndexSh0D0Vyx_GvgSS_Tg5
+$sSa22_allocateUninitializedySayxG_SpyxGtSiFZ12FBSDKCoreKit10PermissionO_Tg5
+$sSa19_uninitializedCountSayxGSi_tcfC12FBSDKCoreKit10PermissionO_Tg5
+$s13FBSDKLoginKit11LoginResultO6result5errorACSo0a7ManagercD0CSg_s5Error_pSgtcfc09FBSDKCoreB010PermissionOSSXEfU_
+$sShyxGSlsSl5countSivgTWSS_Tg5
+$sSh5countSivgSS_Tg5
+$sSD17dictionaryLiteralSDyxq_Gx_q_td_tcfCSS_ypTgq5Tf4gd_n
+$sSa11_getElement_20wasNativeTypeChecked22matchingSubscriptCheckxSi_Sbs16_DependenceTokenVtFSS_ypt_Tgq5
+$sSa9_getCountSiyFSS_ypt_Tgq5
+$ss10_NativeSetV10startIndexSh0D0Vyx_Gvg12FBSDKCoreKit10PermissionO_Tg5
+$ss10_NativeSetV5index5afterSh5IndexVyx_GAG_tF12FBSDKCoreKit10PermissionO_Tg5
+$ss22__RawDictionaryStorageC4find_9hashValues10_HashTableV6BucketV6bucket_Sb5foundtx_SitSHRzlFSS_Tgq5
+$ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFSS_Tgq5
+logIn
+$sSo17FBSDKLoginManagerC0A3KitE5logIn11permissions14viewController10completionySay09FBSDKCoreC010PermissionOG_So06UIViewH0CSgyAC11LoginResultOcSgtFSSAJXEfU_
+sdkCompletion
+convertedResultHandler
+$sSo28FBSDKLoginManagerLoginResultCSgs5Error_pSgIeggg_ACSo7NSErrorCSgIeyByy_TR
+_$s13FBSDKLoginKit13LoginTrackingOSQAASQ2eeoiySbx_xtFZTW
+_$s13FBSDKLoginKit13LoginTrackingOSHAASQWb
+_$s13FBSDKLoginKit13LoginTrackingOACSQAAWl
+_$s13FBSDKLoginKit13LoginTrackingOSHAASH9hashValueSivgTW
+_$s13FBSDKLoginKit13LoginTrackingOSHAASH4hash4intoys6HasherVz_tFTW
+_$s13FBSDKLoginKit13LoginTrackingOSHAASH13_rawHashValue4seedS2i_tFTW
+_$s13FBSDKLoginKit13LoginTrackingOSYAASY8rawValuexSg03RawF0Qz_tcfCTW
+_$s13FBSDKLoginKit13LoginTrackingOSYAASY8rawValue03RawF0QzvgTW
+_$s13FBSDKLoginKit13LoginTrackingOSQAAMcMK
+_$s13FBSDKLoginKit13LoginTrackingOACSQAAWL
+_associated conformance 13FBSDKLoginKit13LoginTrackingOSHAASQ
+_$s13FBSDKLoginKit13LoginTrackingOSHAAMcMK
+_$s13FBSDKLoginKit13LoginTrackingOSYAAMA
+_$s13FBSDKLoginKit13LoginTrackingOSYAAMcMK
+_$s13FBSDKLoginKit13LoginTrackingOMf
+_$s13FBSDKLoginKit13LoginTrackingOMB
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/LoginTracking.swift
+$s13FBSDKLoginKit13LoginTrackingOMa
+$s13FBSDKLoginKit13LoginTrackingOACSQAAWl
+$s13FBSDKLoginKit13LoginTrackingOSHAASQWb
+_$s13FBSDKLoginKit14NonceValidatorOMf
+_symbolic _____ 13FBSDKLoginKit14NonceValidatorO
+_$s13FBSDKLoginKit14NonceValidatorOMF
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/NonceValidator.swift
+$s13FBSDKLoginKit14NonceValidatorOMa
+__PROTOCOL__FBSDKServerConfigurationProviding
+l_OBJC_LABEL_PROTOCOL_$__FBSDKServerConfigurationProviding
+l_OBJC_PROTOCOL_REFERENCE_$__FBSDKServerConfigurationProviding
+__CATEGORY_PROTOCOLS_FBSDKServerConfigurationProvider_$_FBSDKLoginKit
+__CATEGORY_FBSDKServerConfigurationProvider_$_FBSDKLoginKit
+__PROTOCOL_INSTANCE_METHODS__FBSDKServerConfigurationProviding
+__PROTOCOL_METHOD_TYPES__FBSDKServerConfigurationProviding
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/ServerConfigurationProvider+Internal.swift
+_symbolic $s13FBSDKLoginKit18_LoginEventLoggingP
+_$s13FBSDKLoginKit18_LoginEventLogging_pMF
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/_LoginEventLogging.swift
+_$s13FBSDKLoginKit13_LoginUtilityC6string11forAudienceSSSo012FBSDKDefaultG0V_tFZTo
+_$s13FBSDKLoginKit13_LoginUtilityC11queryParams04fromC3URLSDySSypGSg10Foundation0H0V_tFZTo
+_$s13FBSDKLoginKit13_LoginUtilityC6userID17fromSignedRequestSSSgAF_tFZTo
+_$s13FBSDKLoginKit13_LoginUtilityCACycfcTo
+_$ss17_NativeDictionaryV7_insert2at3key5valueys10_HashTableV6BucketV_xnq_ntFSS_ypTg5
+_$sSD11removeValue6forKeyq_Sgx_tFSS_ypTg5
+_$sSD8_VariantV8setValue_6forKeyyq_n_xtFSS_ypTg5
+_$ss17_NativeDictionaryV12mutatingFind_8isUniques10_HashTableV6BucketV6bucket_Sb5foundtx_SbtFSS_ypTg5
+_$ss17_NativeDictionaryV4copyyyFSS_ypTg5
+_$ss17_NativeDictionaryV20_copyOrMoveAndResize8capacity12moveElementsySi_SbtFSS_ypTg5
+_$ss17_NativeDictionaryV7_delete2atys10_HashTableV6BucketV_tFSS_ypTg5
+_$s13FBSDKLoginKit13_LoginUtilityC6userID17fromSignedRequestSSSgAF_tFZTf4nd_n
+_$sSDyq_SgxcisSS_ypTg5Tf4ngn_n
+_$s13FBSDKLoginKit13_LoginUtilityC11queryParams04fromC3URLSDySSypGSg10Foundation0H0V_tFZTf4nd_n
+_$s10Foundation4DataV15_RepresentationOWOe
+_$s10Foundation3URLVSgWOc
+_$s10Foundation3URLVSgWOh
+_$sypSgWOhTm
+_$sypSgWOb
+__CLASS_METHODS_FBSDKLoginUtility
+__METACLASS_DATA_FBSDKLoginUtility
+__INSTANCE_METHODS_FBSDKLoginUtility
+__DATA_FBSDKLoginUtility
+_$s13FBSDKLoginKit13_LoginUtilityCMf
+_symbolic _____ 13FBSDKLoginKit13_LoginUtilityC
+_$s13FBSDKLoginKit13_LoginUtilityCMF
+_symbolic SDySSypG
+_$sSDySSypGMD
+_symbolic _____Sg 10Foundation3URLV
+_$s10Foundation3URLVSgMD
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/_LoginUtility.swift
+$sypSgWOb
+$s10Foundation3URLVSgWOc
+$s13FBSDKLoginKit13_LoginUtilityCMa
+queryParams
+subscript.set
+userID
+$ss17_NativeDictionaryV7_delete2atys10_HashTableV6BucketV_tFSS_ypTg5
+$sSp14moveInitialize4from5countySpyxG_SitFyp_Tg5
+$sSLsE2geoiySbx_xtFZSpyypG_Tg5
+$sSpyxGSLsSL1loiySbx_xtFZTWyp_Tg5
+$ss17_NativeDictionaryV20_copyOrMoveAndResize8capacity12moveElementsySi_SbtFSS_ypTg5
+$ss17_NativeDictionaryV16_unsafeInsertNew3key5valueyxn_q_ntFSS_ypTg5
+$sSp4movexyFyp_Tg5
+$ss17_NativeDictionaryV4copyyyFSS_ypTg5
+$ss17_NativeDictionaryV12mutatingFind_8isUniques10_HashTableV6BucketV6bucket_Sb5foundtx_SbtFSS_ypTg5
+$ss17_NativeDictionaryV12ensureUnique02isD08capacityS2b_SitFSS_ypTg5
+$ss17_NativeDictionaryV6resize8capacityySi_tFSS_ypTg5
+$sSD8_VariantV8setValue_6forKeyyq_n_xtFSS_ypTg5
+$sSD8_VariantV8asNatives01_C10DictionaryVyxq_GvM6$deferL_yySHRzr0_lFSS_ypTg5
+$ss17_NativeDictionaryV8setValue_6forKey8isUniqueyq_n_xSbtFSS_ypTg5
+$sSD8_VariantV20isUniquelyReferencedSbyFSS_ypTg5
+$sSD11removeValue6forKeyq_Sgx_tFSS_ypTg5
+$sSD8_VariantV11removeValue6forKeyq_Sgx_tFSS_ypTg5
+$ss17_NativeDictionaryV15uncheckedRemove2at8isUniquex3key_q_5valuets10_HashTableV6BucketV_SbtFSS_ypTg5
+string
+_symbolic $s13FBSDKLoginKit29_ServerConfigurationProvidingP
+_$s13FBSDKLoginKit29_ServerConfigurationProviding_pMF
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/_ServerConfigurationProviding.swift
+_symbolic $s13FBSDKLoginKit30_UserInterfaceElementProvidingP
+_$s13FBSDKLoginKit30_UserInterfaceElementProviding_pMF
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/_UserInterfaceElementProviding.swift
+_symbolic $s13FBSDKLoginKit29_UserInterfaceStringProvidingP
+_$s13FBSDKLoginKit29_UserInterfaceStringProviding_pMF
+/Users/josuebrizuelaxp/fbsource/fbobjc/ios-sdk/FBSDKLoginKit/FBSDKLoginKit/Internal/_UserInterfaceStringProviding.swift

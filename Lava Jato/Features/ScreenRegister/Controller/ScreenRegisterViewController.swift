@@ -90,6 +90,7 @@ class ScreenRegisterViewController: UIViewController {
     func saveUserDefaults(value: Any, key: String){
         UserDefaults.standard.set(value, forKey: key)
     }
+    
     public func createDatePicker(){
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
@@ -289,12 +290,12 @@ extension ScreenRegisterViewController:UITextFieldDelegate{
 }
 extension ScreenRegisterViewController {
     public func hideKeyboard() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismiKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
     
-    @objc private func dismissKeyboard() {
+    @objc private func dismiKeyboard() {
         self.validations()
         self.validationCheckBox()
         view.endEditing(true)
