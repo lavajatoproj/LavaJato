@@ -38,8 +38,11 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     
     
     @IBAction func selectSlider(_ sender: UISlider) {
-        let choose = Int(sender.value)
+        let choose = Int(sender.value/10) * 10
         self.priceMax.text = "R$\(choose),00"
+        
+//        let newValue = Int(sender.value/15) * 15
+//            sender.setValue(Float(newValue), animated: false)
     }
     
     public func setupCell(setup:ProfilePrice){
