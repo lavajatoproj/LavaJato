@@ -15,11 +15,7 @@
   <key>CFBundlePackageType</key>
   <string>FMWK</string>
   <key>CFBundleShortVersionString</key>
-<<<<<<< HEAD
-  <string>9.0.0</string>
-=======
   <string>9.1.0</string>
->>>>>>> 35a2a1d (adicionando firebase)
   <key>CFBundleSignature</key>
   <string>????</string>
   <key>CFBundleVersion</key>
