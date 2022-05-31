@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 struct Services{
-    var opened: Bool
-    var title:String
+    var value: Bool
+    var house: Bool
     var service: [String]
     var price: [String]
 }
