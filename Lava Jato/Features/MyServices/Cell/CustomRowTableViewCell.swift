@@ -10,10 +10,9 @@ import UIKit
 class CustomRowTableViewCell: UITableViewCell {
     
     @IBOutlet weak var productLabel: UILabel!
-    @IBOutlet weak var back2View: UIView!
-    @IBOutlet weak var `switch`: UISwitch!
-    @IBOutlet weak var arrowImageView: UIImageView!
-    
+    @IBOutlet weak var serviceSwitch: UISwitch!
+    @IBOutlet weak var houseSwitch: UISwitch!
+    @IBOutlet weak var priceTextField: UITextField!
     
     static let identifier:String = "CustomRowTableViewCell"
     
@@ -24,12 +23,13 @@ class CustomRowTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-            self.back2View.layer.cornerRadius = 15
+            self.contentView.layer.cornerRadius = 15
     }
     
     public func setupCell(product:String){
         self.productLabel.text = product
-        self.switch.isHidden = true
+        self.serviceSwitch.isHidden = false
+        self.houseSwitch.isHidden = false
     }
     
     

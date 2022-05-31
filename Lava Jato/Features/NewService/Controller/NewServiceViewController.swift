@@ -91,7 +91,7 @@ extension NewServiceViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MyCustomCell? = tableView.dequeueReusableCell(withIdentifier: MyCustomCell.identifier, for: indexPath) as? MyCustomCell
 //        cell?.setUpCell(professionals:filterArray[indexPath.row])
-        cell?.setupCell(data: self.newServiceViewModel.loadUsers(indexPath: indexPath))
+//        cell?.setupCell(data: self.newServiceViewModel.loadUsers(indexPath: indexPath))
         return cell ?? UITableViewCell()
     }
 

@@ -75,17 +75,17 @@ class requestServiceViewController: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            if viewModel.listServices[section].opened == true{
-                return self.viewModel.listServices[section].service.count
-            }else{
+//            if viewModel.listServices[section].opened == true{
+//                return self.viewModel.listServices[section].service.count
+//            }else{
                 return 1
-            }
+//            }
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             if indexPath.row == 0{
                 let cell = tableView.dequeueReusableCell(withIdentifier: cellTableViewCell.identifier, for: indexPath) as? cellTableViewCell
-                cell?.setupCell(product: self.viewModel.listServices[indexPath.section].title)
+//                cell?.setupCell(product: self.viewModel.listServices[indexPath.section].title)
                 cell?.productLabel.textAlignment = .center
                 cell?.back2View.layer.borderWidth = 0.0
                 cell?.arrowImageView.isHidden = false
@@ -109,24 +109,24 @@ class requestServiceViewController: UIViewController {
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
-            if viewModel.listServices[indexPath.section].opened == true{
-                viewModel.listServices[indexPath.section].opened = false
-                let sections = IndexSet.init(integer: indexPath.section)
-                tableView.reloadSections(sections, with: .none)
-            }else{
-                viewModel.listServices[indexPath.section].opened = true
-                let sections = IndexSet.init(integer: indexPath.section)
-                tableView.reloadSections(sections, with: .none)
-            }
-            
-            if indexPath.section == 0{
-                self.serviceLabel.text = self.viewModel.listServices[indexPath.section].service[indexPath.row]
-            }
-            
-            
-            if indexPath.section == 0 && indexPath.row != 0{
-                self.valueLabel.text = self.viewModel.listServices[indexPath.section].price[indexPath.row]
-            }
+//            if viewModel.listServices[indexPath.section].opened == true{
+//                viewModel.listServices[indexPath.section].opened = false
+//                let sections = IndexSet.init(integer: indexPath.section)
+//                tableView.reloadSections(sections, with: .none)
+//            }else{
+//                viewModel.listServices[indexPath.section].opened = true
+//                let sections = IndexSet.init(integer: indexPath.section)
+//                tableView.reloadSections(sections, with: .none)
+//            }
+//            
+//            if indexPath.section == 0{
+//                self.serviceLabel.text = self.viewModel.listServices[indexPath.section].service[indexPath.row]
+//            }
+//            
+//            
+//            if indexPath.section == 0 && indexPath.row != 0{
+//                self.valueLabel.text = self.viewModel.listServices[indexPath.section].price[indexPath.row]
+//            }
         }
     }
 

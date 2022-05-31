@@ -13,9 +13,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- The FBSDKApplicationDelegate is designed to post process the results from Facebook Login
+
+  The FBSDKApplicationDelegate is designed to post process the results from Facebook Login
  or Facebook Dialogs (or any action that requires switching over to the native Facebook
  app or Safari).
+
+
 
  The methods in this class are designed to mirror those in UIApplicationDelegate, and you
  should call them in the respective methods in your AppDelegate implementation.
@@ -28,28 +31,14 @@ NS_SWIFT_NAME(ApplicationDelegate)
 + (instancetype)new NS_UNAVAILABLE;
 #endif
 
-#if DEBUG && FBTEST
-@property (nonnull, nonatomic, readonly) NSHashTable<id<FBSDKApplicationObserving>> *applicationObservers;
-#endif
-
-/// Gets the singleton instance.
+/**
+ Gets the singleton instance.
+ */
 @property (class, nonatomic, readonly, strong) FBSDKApplicationDelegate *sharedInstance
 NS_SWIFT_NAME(shared);
 
 /**
- Call this method from the [UIApplicationDelegate application:continue:restorationHandler:] method
- of the AppDelegate for your app. It should be invoked in order to properly process the web URL (universal link)
- once the end user is redirected to your app.
-
- @param application The application as passed to [UIApplicationDelegate application:continue:restorationHandler:].
- @param userActivity The user activity as passed to [UIApplicationDelegate application:continue:restorationHandler:].
-
- @return YES if the URL was intended for the Facebook SDK, NO if not.
-*/
-- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity;
-
-/**
- Call this method from the [UIApplicationDelegate application:openURL:sourceApplication:annotation:] method
+  Call this method from the [UIApplicationDelegate application:openURL:sourceApplication:annotation:] method
  of the AppDelegate for your app. It should be invoked for the proper processing of responses during interaction
  with the native Facebook app or Safari as part of SSO authorization flow or Facebook dialogs.
 
@@ -61,7 +50,7 @@ NS_SWIFT_NAME(shared);
 
  @param annotation The annotation as passed to [UIApplicationDelegate application:openURL:sourceApplication:annotation:].
 
- @return YES if the URL was intended for the Facebook SDK, NO if not.
+ @return YES if the url was intended for the Facebook SDK, NO if not.
  */
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
@@ -69,7 +58,7 @@ NS_SWIFT_NAME(shared);
          annotation:(nullable id)annotation;
 
 /**
- Call this method from the [UIApplicationDelegate application:openURL:options:] method
+  Call this method from the [UIApplicationDelegate application:openURL:options:] method
  of the AppDelegate for your app. It should be invoked for the proper processing of responses during interaction
  with the native Facebook app or Safari as part of SSO authorization flow or Facebook dialogs.
 
@@ -79,17 +68,17 @@ NS_SWIFT_NAME(shared);
 
  @param options The options dictionary as passed to [UIApplicationDelegate application:openURL:options:].
 
- @return YES if the URL was intended for the Facebook SDK, NO if not.
+ @return YES if the url was intended for the Facebook SDK, NO if not.
  */
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
             options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options;
 
 /**
- Call this method from the [UIApplicationDelegate application:didFinishLaunchingWithOptions:] method
+  Call this method from the [UIApplicationDelegate application:didFinishLaunchingWithOptions:] method
  of the AppDelegate for your app. It should be invoked for the proper use of the Facebook SDK.
  As part of SDK initialization basic auto logging of app events will occur, this can be
- controlled via 'FacebookAutoLogAppEventsEnabled' key in the project info plist file.
+controlled via 'FacebookAutoLogAppEventsEnabled' key in the project info plist file.
 
  @param application The application as passed to [UIApplicationDelegate application:didFinishLaunchingWithOptions:].
 
@@ -113,16 +102,16 @@ NS_SWIFT_NAME(shared);
 - (void)initializeSDK;
 
 /**
- Adds an observer that will be informed about application lifecycle events.
+  Adds an observer that will be informed about application lifecycle events.
 
- @note Observers are weakly held
+  @note Observers are weakly held
  */
 - (void)addObserver:(id<FBSDKApplicationObserving>)observer;
 
 /**
- Removes an observer so that it will no longer be informed about application lifecycle events.
+  Removes an observer so that it will no longer be informed about application lifecycle events.
 
- @note Observers are weakly held
+  @note Observers are weakly held
  */
 - (void)removeObserver:(id<FBSDKApplicationObserving>)observer;
 
