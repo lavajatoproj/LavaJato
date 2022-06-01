@@ -18,6 +18,8 @@ class ViewController: UIViewController{
     @IBOutlet weak var btLogin: UIButton!
     @IBOutlet weak var btRegister: UIButton!
     @IBOutlet weak var btLoginGoogle: UIButton!
+    @IBOutlet weak var btSeePassword: UIButton!
+    var seePassword = false
     
     var auth: Auth?
     
@@ -35,6 +37,20 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         self.auth = Auth.auth()
         self.setupLayout()
+        hideKeyboardWhenTappedAround()
+        self.configPassword()
+        self.configTextField()
+    }
+    
+    func configPassword(){
+        self.tfPassword.isSecureTextEntry = true
+        self.btSeePassword.setBackgroundImage(UIImage(systemName: "eye.slash"), for: UIControl.State.normal)
+        
+    }
+    
+    func configTextField(){
+        self.tfPassword.delegate = self
+        self.tfEmail.delegate = self
     }
     
     @IBAction func unwindToLogin(_ unwindSegue: UIStoryboardSegue) {
@@ -60,15 +76,18 @@ class ViewController: UIViewController{
                         self.performSegue(withIdentifier: "telaPrincipalsegue", sender: nil)
                     }else{
                         print("Erro ao logar usuário")
+                        self.alert(title: "Erro", message: "Dados inválidos")
                     }
                 }
             }else{
                 print("error")
+                self.alert(title: "Erro", message: "Erro ao logar")
             }
         }else{
-            print("O email e a senha não correspondem")
+            print("Email e a senha não correspondem")
+            self.alert(title: "Erro", message: "Email e senha não correspondem")
         }
-  
+        
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
@@ -84,7 +103,29 @@ class ViewController: UIViewController{
     
     @IBAction func btFaceLogin(_ sender: Any) {
         
-       
+        
+    }
+    
+    func alert(title:String, message:String){
+        let alertController:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok:UIAlertAction = UIAlertAction(title: "Aceitar", style: .cancel, handler: nil)
+        
+        alertController.addAction(ok)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func tappedShowPassword(_ sender: UIButton) {
+        if (seePassword == false){
+            self.tfPassword.isSecureTextEntry = true
+            sender.setBackgroundImage(UIImage(systemName: "eye.slash"), for: UIControl.State.normal)
+            self.seePassword = true
+        }else{
+            self.tfPassword.isSecureTextEntry = false
+            sender.setBackgroundImage(UIImage(systemName: "eye"), for: UIControl.State.normal)
+            
+            seePassword = false
+        }
     }
     
     func setupLayout(){
@@ -121,8 +162,6 @@ class ViewController: UIViewController{
         
         tfPassword.rightViewMode = UITextField.ViewMode.always
         let imageToHide = UIImageView(frame: CGRect(x: -10, y: 0, width: 20, height: 20))
-        let imageHide = UIImage(named: "eye-off.png")
-        imageToHide.image = imageHide
         let hideView = UIView(frame: CGRect(x: 0, y: 0, width: 25, height: 20))
         hideView.addSubview(imageToHide)
         tfPassword.rightView = hideView
@@ -134,5 +173,28 @@ class ViewController: UIViewController{
         btRegister.layer.masksToBounds = true
         btRegister.layer.borderColor = UIColor.white.cgColor
         btRegister.layer.borderWidth = 2
+    }
+}
+extension ViewController:UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.layer.borderColor = UIColor.ColorDefault.cgColor
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text == ""{
+            textField.layer.borderColor = UIColor.red.cgColor
+        }else{
+            textField.layer.borderColor = UIColor.white.cgColor
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.tfEmail {
+            textField.resignFirstResponder()
+            self.tfPassword.becomeFirstResponder()
+        } else if textField == self.tfPassword {
+            textField.resignFirstResponder()
+        }
+        return true
     }
 }

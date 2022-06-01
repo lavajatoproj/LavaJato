@@ -102,6 +102,12 @@ extension String {
         return inputpred.evaluate(with:self)
     }
     
+    func isValidPostalCode() -> Bool {
+        let inputRegEx = "[0-9-]{8,9}"
+        let inputpred = NSPredicate(format: "SELF MATCHES %@", inputRegEx)
+        return inputpred.evaluate(with:self)
+    }
+    
     public func filterPhoneNumber() -> String {
         return String(self.filter {!" ()+-\n\t\r".contains($0)})
     }
