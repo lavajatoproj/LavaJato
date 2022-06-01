@@ -34,6 +34,15 @@ class ScreenRegisterViewController: UIViewController {
     private var viewModelScreenRegister:ViewModelScreenRegister = ViewModelScreenRegister()
     var auth: Auth?
     var firestore: Firestore?
+    var serverSwitchState:Bool = true
+    
+    func serverSwitch(){
+            if self.switchButton.isOn == true{
+                self.serverSwitchState = true
+            }else{
+                self.serverSwitchState = false
+            }
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -182,6 +191,8 @@ class ScreenRegisterViewController: UIViewController {
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         
+        self.serverSwitch()
+        
         if let name = self.nameRegisterTextField.text, let email = self.emailRegisterTextField.text, let password = self.passwordTextField.text, let cellNumber = self.numberRegisterTextField.text, let born = self.dateRegisterTextField.text, let document = self.documentRegisterTextField.text, let city = self.statesButton.titleLabel?.text, let state = self.selectStatusButton.titleLabel?.text, let gender = self.selectGenderButton.titleLabel?.text{
     
                     self.auth?.createUser(withEmail: email, password: password) { (data, error) in
@@ -198,22 +209,13 @@ class ScreenRegisterViewController: UIViewController {
                                         "city": city,
                                         "state": state,
                                         "gender": gender,
+                                        "server": self.serverSwitchState,
                                         "id": idUser,
                                     ])
                             }
                         }
                     }
-            self.nameRegisterTextField.text = ""
-            self.emailRegisterTextField.text = ""
-            self.passwordTextField.text = ""
-            self.confirmPasswordTextField.text = ""
-            self.numberRegisterTextField.text = ""
-            self.documentRegisterTextField.text = ""
-            self.dateRegisterTextField.text = ""
-            self.statesButton.titleLabel?.text = "Cidade"
-            self.selectStatusButton.titleLabel?.text = "Estado Civíl"
-            self.selectGenderButton.titleLabel?.text = "Sexo"
-            performSegue(withIdentifier: "tappedRegisterSegue", sender: nil)
+            dismiss(animated: true, completion: nil)
         }else{
             print("Error")
         }
