@@ -332,12 +332,13 @@
                         <outlet property="numberTextField" destination="wpg-XO-tLY" id="EGr-w9-vzH"/>
                         <outlet property="profileImageView" destination="pD9-F4-b7P" id="y0R-5w-1qC"/>
                         <outlet property="saveButton" destination="GcP-vv-SHD" id="4yA-AH-RJA"/>
+                        <outlet property="serviceImageview" destination="4ch-21-qLH" id="a8A-Ww-EM7"/>
                         <outlet property="stateButton" destination="Hoa-9A-hXM" id="5TL-Kg-uBQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6W-CE-YPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298.5507246376812" y="39.508928571428569"/>
+            <point key="canvasLocation" x="1186" y="-63"/>
         </scene>
     </scenes>
     <resources>

@@ -36,7 +36,10 @@ class listOfProfessionalsViewController: UIViewController {
             if let snapshot = snapshotResult{
                 for document in snapshot.documents {
                     let data = document.data()
-                    self.users.append(data)
+                    let servers = data["server"]
+                    if servers as? Int == 1{
+                        self.users.append(data)
+                    }
                 }
                 self.tableView.reloadData()
             }

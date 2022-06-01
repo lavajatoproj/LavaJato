@@ -221,7 +221,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="tappedRegisterButton:" destination="pME-Od-2HJ" eventType="touchUpInside" id="Csk-Fd-a9w"/>
-                                            <segue destination="PFE-OS-oPu" kind="presentation" identifier="tappedRegisterSegue" modalPresentationStyle="fullScreen" id="Ol1-F7-oCK"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CPF/CNPJ" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KoH-mD-RXR">
@@ -469,16 +468,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JkA-Oi-k1n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1602.8985507246377" y="77.678571428571431"/>
-        </scene>
-        <!--MainScreen-->
-        <scene sceneID="70q-z0-5Cb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="MainScreen" id="PFE-OS-oPu" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="53M-KV-Dve"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zen-tO-b8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2097" y="284"/>
         </scene>
     </scenes>
     <resources>

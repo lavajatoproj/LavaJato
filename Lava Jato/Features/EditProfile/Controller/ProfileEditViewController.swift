@@ -23,6 +23,7 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var profileImageView:UIImageView!
     @IBOutlet weak var editPhotoButton:UIButton!
+    @IBOutlet weak var serviceImageview: UIImageView!
     @IBOutlet weak var stateButton: UIButton!
     
     private var viewModelEditProfile:ViewModelEditProfile = ViewModelEditProfile()
@@ -54,6 +55,11 @@ class ProfileEditViewController: UIViewController {
                 self.stateButton.titleLabel?.text = dataCity as? String
                 let dataBorn = data?["born"]
                 self.dateTextField.text = dataBorn as? String
+                let serverState = data?["server"]
+                if serverState as? Int == 0{
+                    self.changeServicesButton.isHidden = true
+                    self.serviceImageview.isHidden = true
+                }
 //                if let url = data?["url"] as? String{
 //                    self.profileImageView.sd_setImage(with: URL(string: url), completed: nil)
 //                }else{
