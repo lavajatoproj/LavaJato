@@ -9,7 +9,7 @@ import UIKit
 
 class FilterViewController: UIViewController{
     
-    @IBOutlet weak var cityTextField: UITextField!
+    
     @IBOutlet weak var callMapsButton: UIButton!
     @IBOutlet weak var tViewTableView: UITableView!
     

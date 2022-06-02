@@ -38,7 +38,8 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     
     
     @IBAction func selectSlider(_ sender: UISlider) {
-        let choose = Int(sender.value)
+        let choose = Int(sender.value/10) * 10
+            sender.setValue(Float(choose), animated: false)
         self.priceMax.text = "R$\(choose),00"
     }
     
@@ -56,9 +57,9 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cellC = collectionView.dequeueReusableCell(withReuseIdentifier: "PlaceCollectionViewCell", for: indexPath) as! PlaceCollectionViewCell
-        cellC.setupCell(with: dataPlace[indexPath.row])
-        return cellC
+        let cellC = collectionView.dequeueReusableCell(withReuseIdentifier: "PlaceCollectionViewCell", for: indexPath) as? PlaceCollectionViewCell
+        cellC?.setupCell(with: dataPlace[indexPath.row])
+        return cellC ?? UICollectionViewCell()
     }
 }
 
