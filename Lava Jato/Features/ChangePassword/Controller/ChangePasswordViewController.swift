@@ -6,50 +6,55 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseCore
 
 class ChangePasswordViewController: UIViewController {
-
     
-    @IBOutlet weak var tfOldPassword: UITextField!
-    @IBOutlet weak var tfNewPasssword: UITextField!
-    @IBOutlet weak var tfConfirmPassword: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var btChangePassword: UIButton!
     
+    var auth:Auth?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStyle()
-        // Do any additional setup after loading the view.
+        self.auth = Auth.auth()
+        
     }
     
-    @IBAction func btChangePassword(_ sender: Any) {
+    func alert(title:String, message:String){
+        let alertController:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok:UIAlertAction = UIAlertAction(title: "Aceitar", style: .cancel, handler: nil)
         
+        alertController.addAction(ok)
+        self.present(alertController, animated: true, completion: nil)
     }
-
+    
     func setupStyle(){
-        
-        tfOldPassword.layer.cornerRadius = tfOldPassword.bounds.size.height / 2
-        tfOldPassword.layer.masksToBounds = true
-        tfOldPassword.layer.borderColor = UIColor.white.cgColor
-        tfOldPassword.layer.borderWidth = 2
-        tfOldPassword.layer.borderColor = UIColor.white.cgColor
-        tfOldPassword.backgroundColor = UIColor.clear
-        
-        tfNewPasssword.layer.cornerRadius = tfNewPasssword.bounds.size.height / 2
-        tfNewPasssword.layer.masksToBounds = true
-        tfNewPasssword.layer.borderColor = UIColor.white.cgColor
-        tfNewPasssword.layer.borderWidth = 2
-        tfNewPasssword.layer.borderColor = UIColor.white.cgColor
-        tfNewPasssword.backgroundColor = UIColor.clear
-        
-        tfConfirmPassword.layer.cornerRadius = tfConfirmPassword.bounds.size.height / 2
-        tfConfirmPassword.layer.masksToBounds = true
-        tfConfirmPassword.layer.borderColor = UIColor.white.cgColor
-        tfConfirmPassword.layer.borderWidth = 2
-        tfConfirmPassword.layer.borderColor = UIColor.white.cgColor
-        tfConfirmPassword.backgroundColor = UIColor.clear
+        emailTextField.layer.cornerRadius = emailTextField.bounds.size.height / 2
+        emailTextField.layer.masksToBounds = true
+        emailTextField.layer.borderColor = UIColor.white.cgColor
+        emailTextField.layer.borderWidth = 2
+        emailTextField.layer.borderColor = UIColor.white.cgColor
+        emailTextField.backgroundColor = UIColor.clear
         
         btChangePassword.layer.cornerRadius = btChangePassword.bounds.size.height / 2
         btChangePassword.layer.masksToBounds = true
     }
+    func sendEmail(){
+        auth?.sendPasswordReset(withEmail: self.emailTextField.text ?? "", completion: { error in
+            if error != nil {
+                self.alert(title: "Erro", message: "Erro ao enviar e-mail")
+            }
+            self.alert(title: "Sucesso", message: "E-mail enviado!")
+            self.emailTextField.text = ""
+            self.navigationController?.popToRootViewController(animated: true)
+        })
+    }
+    
+    @IBAction func btChangePassword(_ sender: Any) {
+        self.sendEmail()
+    }
+
 }

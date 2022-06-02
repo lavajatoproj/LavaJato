@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>É permitido o acesso a galeria de fotos do celular?</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -14,6 +12,11 @@
 				<string>com.googleusercontent.apps.152072972170-kofmt4judceejf77qocrujucbs98s2m4</string>
 			</array>
 		</dict>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>whatsapp</string>
+		<string>email</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
@@ -29,15 +32,10 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Login</string>
+					<string>LoginViewController</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>whatsapp</string>
-		<string>email</string>
-	</array>
 </dict>
 </plist>

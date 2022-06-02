@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Gfu-v7-9af">
             <objects>
-                <viewController storyboardIdentifier="Login" modalPresentationStyle="fullScreen" id="S5w-gv-iWR" customClass="ViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" modalPresentationStyle="fullScreen" id="S5w-gv-iWR" customClass="LoginViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e76-do-izW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,19 +180,19 @@
                         <outlet property="btSeePassword" destination="gYS-BG-EUB" id="d8t-ro-1ck"/>
                         <outlet property="tfEmail" destination="UQ5-zM-Lo6" id="6cl-Xu-xlr"/>
                         <outlet property="tfPassword" destination="P1U-qE-vra" id="oL6-uc-GLA"/>
-                        <segue destination="lr5-3J-2vj" kind="show" identifier="RecuperarSenha" id="Cnq-9R-66F"/>
+                        <segue destination="lr5-3J-2vj" kind="show" identifier="ResetPasswordSegue" id="Cnq-9R-66F"/>
                         <segue destination="9qQ-ad-ATC" kind="show" identifier="screenRegisterSegue" id="FjF-KU-NeZ"/>
-                        <segue destination="AXu-fg-QEO" kind="presentation" identifier="telaPrincipalsegue" modalPresentationStyle="fullScreen" id="0k3-hu-VMG"/>
+                        <segue destination="AXu-fg-QEO" kind="presentation" identifier="MainScreenSegue" modalPresentationStyle="fullScreen" id="0k3-hu-VMG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9R-q9-3UQ" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="256.52173913043481" y="77.678571428571431"/>
         </scene>
-        <!--RecuperarSenha-->
+        <!--ResetPasswordViewController-->
         <scene sceneID="RBF-2s-3wq">
             <objects>
-                <viewControllerPlaceholder storyboardName="RecuperarSenha" id="lr5-3J-2vj" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ResetPasswordViewController" id="lr5-3J-2vj" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gwF-OR-kVk"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4S-SC-jow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

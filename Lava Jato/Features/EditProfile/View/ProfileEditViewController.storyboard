@@ -395,6 +395,7 @@
                         <outlet property="postalCodeTextField" destination="nAd-LI-eDK" id="MyU-vT-6vX"/>
                         <outlet property="profileImageView" destination="pD9-F4-b7P" id="y0R-5w-1qC"/>
                         <outlet property="saveButton" destination="GcP-vv-SHD" id="4yA-AH-RJA"/>
+                        <outlet property="serviceImageview" destination="4ch-21-qLH" id="CfX-F2-OSg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A6W-CE-YPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

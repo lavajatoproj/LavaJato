@@ -26,9 +26,7 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var profileImageView:UIImageView!
     @IBOutlet weak var editPhotoButton:UIButton!
-    @IBOutlet weak var serviceImageview: UIImageView!
-    @IBOutlet weak var stateButton: UIButton!
-    
+    @IBOutlet weak var serviceImageview: UIImageView!    
     private var viewModelEditProfile:ViewModelEditProfile = ViewModelEditProfile()
     private var alert:AlertController?
     var imagePicker = UIImagePickerController()
@@ -61,20 +59,18 @@ class ProfileEditViewController: UIViewController {
                     self.changeServicesButton.isHidden = true
                     self.serviceImageview.isHidden = true
                 }
-//                if let url = data?["url"] as? String{
-//                    self.profileImageView.sd_setImage(with: URL(string: url), completed: nil)
-//                }else{
-//                    self.profileImageView.image = UIImage(systemName: "person.circle.fill")
-//                }
-                }
                 //                if let url = data?["url"] as? String{
                 //                    self.profileImageView.sd_setImage(with: URL(string: url), completed: nil)
                 //                }else{
                 //                    self.profileImageView.image = UIImage(systemName: "person.circle.fill")
                 //                }
             }
-        }
-        )
+            //                if let url = data?["url"] as? String{
+            //                    self.profileImageView.sd_setImage(with: URL(string: url), completed: nil)
+            //                }else{
+            //                    self.profileImageView.image = UIImage(systemName: "person.circle.fill")
+            //                }
+        })
     }
     
     override func viewDidLoad() {
@@ -167,7 +163,7 @@ class ProfileEditViewController: UIViewController {
     @IBAction func tappedSaveButton(_ sender: UIButton) {
         if self.numberTextField.text == "" || self.numberTextField.textColor == UIColor.red || self.postalCodeTextField.text == "" || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.text == "" || self.adressTextField.textColor == UIColor.red || self.numberAdressTextField.text == "" || self.numberAdressTextField.textColor == UIColor.red {
             self.alert(title: "Atenção", message: "Verificar campos")
-                self.activeSaveButton()
+            self.activeSaveButton()
             
         }else{
             if let name = self.nameTextField.text, let email = self.emailTextField.text, let cellNumber = self.numberTextField.text, let born = self.dateTextField.text, let city = self.postalCodeTextField.text{
@@ -186,7 +182,7 @@ class ProfileEditViewController: UIViewController {
                 print("Error")
                 self.alert(title: "Erro", message: "Erro ao salvar")
             }
-//            self.alert(title: "Atenção", message: "Alterações salvas.")
+            //            self.alert(title: "Atenção", message: "Alterações salvas.")
             self.alert?.showAlert(title: "Atenção", message: "Alterações Salvas", titleButton: "Aceitar", completion: { value in
                 self.navigationController?.popToRootViewController(animated: true)
             })
@@ -200,7 +196,7 @@ class ProfileEditViewController: UIViewController {
     @IBAction func tappedChangeService(_ sender: UIButton) {
         self.viewModelEditProfile.instantiateVC(nameVC: "myServices", navigation: navigationController ?? UINavigationController())
     }
-
+    
     
     
     @IBAction func postalCodeAct(_ sender: UITextField) {
