@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KPl-GS-FeU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KPl-GS-FeU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -151,9 +151,6 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="141" id="YRk-7p-VDf"/>
-                                </constraints>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RPp-AE-yUQ">
                                 <rect key="frame" x="0.0" y="382" width="414" height="514"/>
@@ -184,7 +181,6 @@
                                                 <rect key="frame" x="20" y="120" width="374" height="60"/>
                                                 <color key="backgroundColor" red="0.076052226129999997" green="0.21554887289999999" blue="0.49840956930000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="4KS-0S-4fS"/>
                                                     <constraint firstAttribute="height" constant="60" id="8sg-Fp-8Hz"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.10980392160000001" green="0.28235294119999998" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -196,7 +192,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="tappedRecomendButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bgc-h2-TXO"/>
+                                                    <action selector="tappedRecomendButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JFt-aq-dkX"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Indique o App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFA-Wn-whM">
@@ -232,7 +228,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="tappedLogoutButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Lsf-IB-e1B"/>
+                                                    <action selector="tappedLogoutButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TP1-Mb-SO1"/>
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="74U-2Q-I6K">
@@ -305,7 +301,6 @@
                                             <constraint firstItem="hzk-Wn-FpL" firstAttribute="top" secondItem="hal-Pn-Kkw" secondAttribute="top" id="aPC-Fg-4xp"/>
                                             <constraint firstAttribute="trailing" secondItem="BzI-b9-NrQ" secondAttribute="trailing" constant="80" id="b5F-a2-mxL"/>
                                             <constraint firstAttribute="trailing" secondItem="hzk-Wn-FpL" secondAttribute="trailing" constant="38" id="bE0-FT-DkK"/>
-                                            <constraint firstItem="p1o-0R-MAO" firstAttribute="top" secondItem="hzk-Wn-FpL" secondAttribute="bottom" constant="40" id="eSi-7I-JO2"/>
                                             <constraint firstItem="sAw-ZL-zyR" firstAttribute="leading" secondItem="hzk-Wn-FpL" secondAttribute="leading" id="myN-36-Tcs"/>
                                             <constraint firstItem="MTB-Nq-eDc" firstAttribute="top" secondItem="bWT-qR-RXD" secondAttribute="top" constant="30" id="tM5-M3-kaH"/>
                                             <constraint firstAttribute="trailing" secondItem="p1o-0R-MAO" secondAttribute="trailing" constant="20" id="vOS-Ha-AMs"/>
@@ -324,16 +319,13 @@
                                 </constraints>
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Henrique Alves Tuiuhais ihais " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUQ-Wl-f7e">
-                                <rect key="frame" x="136" y="133" width="216" height="66"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="Igd-Kq-HS2"/>
-                                </constraints>
+                                <rect key="frame" x="136" y="133" width="216" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <color key="textColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgw-kX-ccJ">
-                                <rect key="frame" x="360" y="141" width="50" height="50"/>
+                                <rect key="frame" x="360" y="138" width="50" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="IGO-Jg-NcZ"/>
@@ -369,7 +361,7 @@
                             <constraint firstItem="iyf-Mu-SeB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="21" id="g4M-x5-iUU"/>
                             <constraint firstItem="RPp-AE-yUQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="i0V-B3-etQ"/>
                             <constraint firstAttribute="bottom" secondItem="pfz-Ti-4K1" secondAttribute="bottom" id="jw9-XQ-oB9"/>
-                            <constraint firstItem="vmP-9e-Dtl" firstAttribute="top" secondItem="hUQ-Wl-f7e" secondAttribute="bottom" constant="32" id="lXd-e0-3Cl"/>
+                            <constraint firstItem="hUQ-Wl-f7e" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="45" id="qBj-Pw-tfE"/>
                             <constraint firstItem="RPp-AE-yUQ" firstAttribute="bottom" secondItem="pfz-Ti-4K1" secondAttribute="bottom" id="qkj-PB-F7p"/>
                             <constraint firstItem="vmP-9e-Dtl" firstAttribute="top" secondItem="iyf-Mu-SeB" secondAttribute="bottom" constant="8" symbolic="YES" id="tIP-FE-9kQ"/>
                             <constraint firstItem="gLS-1S-zZD" firstAttribute="leading" secondItem="RPp-AE-yUQ" secondAttribute="leading" id="tmB-Gm-Ky1"/>
@@ -385,8 +377,8 @@
                         <outlet property="notificationButton" destination="4GR-cz-o33" id="ZGL-l2-z4l"/>
                         <outlet property="silenceButton" destination="Dgw-kX-ccJ" id="yWJ-1r-50q"/>
                         <outlet property="tappedHelpButton" destination="MTB-Nq-eDc" id="NcL-2p-cjY"/>
+                        <outlet property="tappedLogoutButton" destination="ex6-q0-jVb" id="wpg-Po-byo"/>
                         <outlet property="tappedMyServiceButton" destination="U2j-KJ-Z2T" id="1vx-Cm-Av2"/>
-                        <outlet property="tappedRecomendButton" destination="p1o-0R-MAO" id="bHF-QE-Rah"/>
                         <outlet property="userImageView" destination="iyf-Mu-SeB" id="9J8-KD-Ell"/>
                         <segue destination="BOT-9x-kaN" kind="show" identifier="ServicesSegue" id="Wnc-5k-UgM"/>
                         <segue destination="9Dx-YO-fqB" kind="show" identifier="myServices" id="GuJ-sl-Wce"/>

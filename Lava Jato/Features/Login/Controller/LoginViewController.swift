@@ -29,6 +29,11 @@ class LoginViewController: UIViewController{
         self.tfPassword.text = "cf1234"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     func callFuncs(){
         self.auth = Auth.auth()
         self.setupLayout()
