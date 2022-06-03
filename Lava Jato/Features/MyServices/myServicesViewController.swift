@@ -36,18 +36,19 @@ class myServicesViewController: UIViewController{
     }
     
     @IBAction func tappedUpDateButton(_ sender: UIButton) {
-        self.alert?.showAlert(title: "Tem certeza que deseja atualizar?", message: "", titleButton: "Confirmar", completion: { value in
-            switch value {
-            case .aceitar:
-                let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
-                let vC = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
-                self.navigationController?.pushViewController(vC, animated: true)
-            case .cancel:
-                let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
-                let vC = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
-                self.navigationController?.pushViewController(vC, animated: true)
-            }
-        })
+        print(self.viewModel.listServices)
+//        self.alert?.showAlert(title: "Tem certeza que deseja atualizar?", message: "", titleButton: "Confirmar", completion: { value in
+//            switch value {
+//            case .aceitar:
+//                let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
+//                let vC = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
+//                self.navigationController?.pushViewController(vC, animated: true)
+//            case .cancel:
+//                let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
+//                let vC = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
+//                self.navigationController?.pushViewController(vC, animated: true)
+//            }
+//        })
     }
     
     private func addServices(){
@@ -60,21 +61,16 @@ extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomRowTableViewCell.identifier, for: indexPath) as? CustomRowTableViewCell
-        cell?.serviceSwitch.isHidden = false
-        cell?.houseSwitch.isHidden = false
-        cell?.setupCell(product: self.viewModel.listServices[indexPath.section].service[indexPath.row])
-        
+//        cell?.serviceSwitch.isHidden = false
+//        cell?.houseSwitch.isHidden = false
+        cell?.setupCell(product: self.viewModel.listServices[indexPath.row])
+        cell?.delegate(delegate: self)
         return cell ?? UITableViewCell()
         
     }
     
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return self.viewModel.listServices.count
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return self.viewModel.listServices[section].service.count
+        return self.viewModel.listServices.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -84,5 +80,11 @@ extension myServicesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+}
+
+extension myServicesViewController:CustomRowTableViewCellDelegate{
+    func updateCustomRowCell(index: IndexPath, product: Services2) {
+        self.viewModel.changeService(index: index, product: product)
     }
 }
