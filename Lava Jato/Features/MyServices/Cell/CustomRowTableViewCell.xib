@@ -19,6 +19,9 @@
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s0G-Z3-5iv">
                         <rect key="frame" x="315" y="17" width="51" height="31"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <action selector="tappedValueSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="9u1-K6-xAg"/>
+                        </connections>
                     </switch>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzS-Vb-VQV">
                         <rect key="frame" x="27" y="17" width="278" height="31"/>
@@ -32,6 +35,9 @@
                             <constraint firstAttribute="width" constant="49" id="7Eq-5e-vyj"/>
                         </constraints>
                         <color key="onTintColor" red="0.0" green="0.21859122580000001" blue="0.51684874300000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <action selector="tappedHouseSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="9W1-xc-bVy"/>
+                        </connections>
                     </switch>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rhb-Us-0oH">
                         <rect key="frame" x="27" y="65" width="337" height="34"/>

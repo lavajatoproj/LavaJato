@@ -16,6 +16,15 @@ struct Services{
 }
 
 
+
+struct Services2{
+    var value: Bool
+    var house: Bool
+    var service: String
+    var price: String
+}
+
+
 // MARK: - Service
 
 struct Service{
