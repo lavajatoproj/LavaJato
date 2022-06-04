@@ -15,11 +15,6 @@ class FilterViewController: UIViewController{
     
     private var viewModel:FilterViewModel = FilterViewModel()
     
-    var data:[ProfileGender] = [
-        ProfileGender(nameM: "Profissionais homem", nameF: "Profissionais mulher"),
-        ProfileGender(nameM: "Profissionais homem", nameF: "Profissionais mulher")
-    ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.settingsTView()
@@ -46,9 +41,9 @@ extension FilterViewController:UITableViewDelegate{}
 extension FilterViewController:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.viewModel.isFirstCell{
-            return 1
-        }
+//        if self.viewModel.isFirstCell {
+//            return 1
+//        }
         return self.viewModel.coutArray
     }
     
@@ -56,7 +51,7 @@ extension FilterViewController:UITableViewDataSource{
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: GenderTableViewCell.identifier, for: indexPath) as? GenderTableViewCell
             cell?.setupCell(profile: self.viewModel.loadGender(indexPath: indexPath))
-       return cell ?? UITableViewCell()
+            return cell ?? UITableViewCell()
         } else {
             let cellV = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.identifier, for: indexPath) as? PriceTableViewCell
             cellV?.setupCell(setup: self.viewModel.loadPrice(indexPath:indexPath))
@@ -65,10 +60,6 @@ extension FilterViewController:UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0{
-            return 166.0
-        } else{
-            return 466.0
-        }
+        return viewModel.loadHeighForRow(indexPath: indexPath)
     }
 }

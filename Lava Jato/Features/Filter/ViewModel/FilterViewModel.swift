@@ -19,27 +19,27 @@ class FilterViewModel{
         self.delegate = delegate
     }
     
-    
     private var listerPrice:[ProfilePrice] = []
     private var listGender:[ProfileGender] = []
     
+    
+    func configGender(){
+        self.listGender.append(ProfileGender(nameM: "Profissionais homens", nameF: "Profissionais mulheres"))
+    }
+    
+    
     func configPrice(){
-        self.listerPrice.append(ProfilePrice(price: "Valor do serviço", priceMin: "R$20,00", priceMax: "R$800,00", place: "Onde você prefere fazer o serviço?"));
+        self.listerPrice.append(ProfilePrice(price: "Valor do serviço", priceMin: "R$20,00", priceMax: "R$800,00", place: "Onde você prefere fazer o serviço?"))
         self.listerPrice.append(ProfilePrice(price: "Valor do serviço", priceMin: "R$20,00", priceMax: "R$800,00", place: "Onde você prefere fazer o serviço?"))
     }
     
-    func configGender(){
-        self.listGender.append(ProfileGender(nameM: "Profissionais homem", nameF: "Profissionais mulher"));
-        self.listGender.append(ProfileGender(nameM: "Profissionais homem", nameF: "Profissionais mulher"))
-    }
-                               
-    func loadPrice(indexPath:IndexPath) -> ProfilePrice{
-            return self.listerPrice[indexPath.row]
-        }
-                               
     func loadGender(indexPath:IndexPath) -> ProfileGender{
-            return self.listGender[indexPath.row]
-      }
+        return self.listGender[indexPath.row]
+    }
+    
+    func loadPrice(indexPath:IndexPath) -> ProfilePrice{
+        return self.listerPrice[indexPath.row]
+    }
     
     func callFunc(){
         self.configPrice()
@@ -47,21 +47,27 @@ class FilterViewModel{
     }
     
     var coutArray:Int {
-        return self.listGender.count
+        return 2
     }
-        var isFirstCell:Bool{
-        return self.listGender.isEmpty
-    }
-
+    var isFirstCell:Bool{
+            return self.listGender.isEmpty
+        }
+    
+    
     var indexPath = IndexPath()
     
+    func loadHeighForRow(indexPath:IndexPath)-> CGFloat{
+        if indexPath.row == 0 {
+                    return 166.0
+                }else{
+                    return 466.0
+       }
+    }
     
-    // Linha 74 FilterViewController
-//
- 
+    
 }
-    
- 
+
+
 
 
 

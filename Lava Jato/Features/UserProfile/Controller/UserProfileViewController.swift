@@ -45,7 +45,7 @@ class UserProfileViewController: UIViewController {
         self.firestore = Firestore.firestore()
         self.auth = Auth.auth()
         if let idUser = auth?.currentUser?.uid{
-        self.idUserLog = idUser
+            self.idUserLog = idUser
         }
         self.alert = AlertController(controller: self)
     }
@@ -66,7 +66,7 @@ class UserProfileViewController: UIViewController {
         navigationController?.pushViewController(vC, animated: true)
     }
     
-
+    
     
     @IBAction func tappedLogoutButton(_ sender: UIButton) {
         do {

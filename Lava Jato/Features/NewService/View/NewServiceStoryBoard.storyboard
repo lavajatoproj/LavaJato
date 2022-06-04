@@ -12,7 +12,6 @@
         <!--Navigation Controller-->
         <scene sceneID="bHw-Od-Z0L">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tws-Nu-rcy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="NewServiceSB" automaticallyAdjustsScrollViewInsets="NO" id="cDJ-iz-m1c" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mBP-gU-y4s">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -22,6 +21,7 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="uqh-Dx-ojT"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tws-Nu-rcy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-681" y="117"/>
         </scene>
@@ -39,51 +39,52 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_2" translatesAutoresizingMaskIntoConstraints="NO" id="LB5-mj-Reh">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Buscar pelo nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xYC-9v-VdC">
-                                <rect key="frame" x="20" y="127" width="374" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="nf8-MS-kY6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha o profissional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFy-fm-vho">
-                                <rect key="frame" x="20" y="200" width="374" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha o profissional" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFy-fm-vho">
+                                <rect key="frame" x="20" y="152" width="374" height="36"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="26"/>
                                 <color key="textColor" name="ColorDefault"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PrW-EC-Db3">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="awJ-89-5bZ"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MKb-l9-udQ">
-                                <rect key="frame" x="0.0" y="244" width="414" height="618"/>
+                                <rect key="frame" x="0.0" y="196" width="414" height="666"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bFy-fm-vho" secondAttribute="trailing" constant="20" id="2zz-TD-ej9"/>
-                            <constraint firstItem="xYC-9v-VdC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="39" id="9qg-B6-6Hn"/>
+                            <constraint firstItem="PrW-EC-Db3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="DFt-Xj-nQt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="MKb-l9-udQ" secondAttribute="bottom" id="DME-XY-4qy"/>
+                            <constraint firstItem="PrW-EC-Db3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="F99-Of-5SG"/>
+                            <constraint firstItem="MKb-l9-udQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="JSR-pT-lcV"/>
                             <constraint firstItem="usL-11-y5L" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="N5E-Yt-aic"/>
+                            <constraint firstItem="MKb-l9-udQ" firstAttribute="top" secondItem="bFy-fm-vho" secondAttribute="bottom" constant="8" symbolic="YES" id="QGd-Xt-qET"/>
                             <constraint firstItem="usL-11-y5L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="SnG-qP-E6d"/>
-                            <constraint firstItem="bFy-fm-vho" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="VRZ-7Y-Jsb"/>
+                            <constraint firstItem="PrW-EC-Db3" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Sym-8Y-RMu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bFy-fm-vho" secondAttribute="trailing" constant="20" id="VpA-lw-Cgp"/>
                             <constraint firstItem="usL-11-y5L" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="X0R-DI-7nP"/>
                             <constraint firstItem="MKb-l9-udQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XKX-cU-sDH"/>
-                            <constraint firstItem="bFy-fm-vho" firstAttribute="top" secondItem="xYC-9v-VdC" secondAttribute="bottom" constant="39" id="XjX-Q1-YYU"/>
                             <constraint firstItem="LB5-mj-Reh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="YGB-MI-g1j"/>
                             <constraint firstAttribute="bottom" secondItem="usL-11-y5L" secondAttribute="bottom" id="ZDZ-ln-4me"/>
                             <constraint firstItem="LB5-mj-Reh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="b8x-7F-X5f"/>
-                            <constraint firstItem="MKb-l9-udQ" firstAttribute="top" secondItem="bFy-fm-vho" secondAttribute="bottom" constant="8" symbolic="YES" id="dbR-ql-iVM"/>
-                            <constraint firstItem="xYC-9v-VdC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="oWk-0P-akZ"/>
+                            <constraint firstItem="bFy-fm-vho" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="p7k-R0-0v5"/>
                             <constraint firstItem="LB5-mj-Reh" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="sK5-Qa-425"/>
+                            <constraint firstItem="bFy-fm-vho" firstAttribute="top" secondItem="PrW-EC-Db3" secondAttribute="bottom" constant="20" id="tT3-qF-Ixq"/>
                             <constraint firstItem="MKb-l9-udQ" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="tuE-1T-DUq"/>
                             <constraint firstItem="LB5-mj-Reh" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="u9d-G1-TUn"/>
+                            <constraint firstItem="MKb-l9-udQ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="uNZ-y4-gWs"/>
                             <constraint firstItem="MKb-l9-udQ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ufe-IR-WPp"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xYC-9v-VdC" secondAttribute="trailing" constant="20" id="ySx-Cd-ZkA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="03G-ha-ffd"/>
                     <connections>
-                        <outlet property="searchTextField" destination="xYC-9v-VdC" id="uTC-dH-YER"/>
                         <outlet property="tableView" destination="MKb-l9-udQ" id="2f8-WO-jW2"/>
                         <outlet property="titleLabel" destination="bFy-fm-vho" id="3Ea-u9-AoM"/>
                         <segue destination="oAq-bC-xv8" kind="show" identifier="requestService" id="fRh-FZ-yEA"/>

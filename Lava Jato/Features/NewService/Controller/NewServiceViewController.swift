@@ -10,8 +10,7 @@ import UIKit
 class NewServiceViewController: UIViewController {
 
     
-    
-    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchSearchBar: UISearchBar!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
 
@@ -31,13 +30,13 @@ class NewServiceViewController: UIViewController {
     public var filterArray:[Professionals] = []
     
     func setup(){
-        searchTextField.leftViewMode = UITextField.ViewMode.always
+//        searchTextField.leftViewMode = UITextField.ViewMode.always
         let search = UIImageView(frame: CGRect(x: 10, y: 0, width: 20, height: 20))
         let image = UIImage.init(systemName: "magnifyingglass")
         search.image = image
         let searchView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 20))
         searchView.addSubview(search)
-        searchTextField.leftView = searchView
+//        searchTextField.leftView = searchView
     }
     
     override func viewDidLoad() {
