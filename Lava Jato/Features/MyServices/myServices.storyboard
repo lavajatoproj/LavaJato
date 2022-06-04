@@ -128,8 +128,10 @@
                     <connections>
                         <outlet property="background" destination="Is9-Sc-fkL" id="V6U-D0-X7R"/>
                         <outlet property="background2" destination="RYd-vd-LMw" id="9lS-m5-xOd"/>
+                        <outlet property="nameLabel" destination="kE6-QL-sHm" id="dCV-HA-rdB"/>
                         <outlet property="tableView" destination="Vuo-ss-rjR" id="hyB-I4-vx6"/>
                         <outlet property="upDateButton" destination="ut0-rb-LSQ" id="a1I-Mh-mfm"/>
+                        <outlet property="userImageView" destination="dpW-d0-naB" id="zg8-AG-ex5"/>
                         <segue destination="oPQ-Fj-9Aa" kind="show" identifier="Main" id="S9y-Kf-v9d"/>
                     </connections>
                 </viewController>

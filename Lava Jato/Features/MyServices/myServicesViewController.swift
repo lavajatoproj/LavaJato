@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import FirebaseStorageUI
 
 class myServicesViewController: UIViewController{
     
@@ -15,11 +16,14 @@ class myServicesViewController: UIViewController{
     @IBOutlet weak var background2: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var upDateButton: UIButton!
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     private var viewModel:ServiceViewModel = ServiceViewModel()
     private var alert:AlertController?
     var auth: Auth?
     var firestore: Firestore?
+    var idUserLog:String?
     var serverInfo:String?
     
     var servicePrice:String = "80,00"
@@ -66,12 +70,37 @@ class myServicesViewController: UIViewController{
         self.firestore = Firestore.firestore()
     }
     
+    func getProfileData(){
+        let user = self.firestore?.collection("users").document(self.idUserLog ?? "")
+        user?.getDocument(completion: { documentSnapshot, error in
+            if error == nil{
+                let data = documentSnapshot?.data()
+                let dataName = data?["name"]
+                self.nameLabel.text = dataName as? String
+                if let url = data?["profileImage"] as? String{
+                    self.userImageView.sd_setImage(with: URL(string: url), completed: nil)
+                }
+                }
+            }
+        )
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configInitials()
         self.addServices()
         self.configTableView()
         self.alert = AlertController(controller: self)
+        if let idUser = auth?.currentUser?.uid{
+            self.idUserLog = idUser
+        }
+        self.userImageView.contentMode = .scaleAspectFill
+        self.userImageView.layer.cornerRadius = userImageView.frame.height / 2
+        self.userImageView.clipsToBounds = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.getProfileData()
     }
     
     @IBAction func tappedUpDateButton(_ sender: UIButton) {
@@ -80,10 +109,9 @@ class myServicesViewController: UIViewController{
 
                 let idUser = userLog.uid
                 
-                self.firestore?.collection("server")
+                self.firestore?.collection("lavagemSimples")
                     .document(idUser)
-                    .collection("lavagemSimples")
-                    .addDocument(data: [
+                    .setData([
                         "service": "Lavagem Simples",
                         "price": self.servicePrice,
                         "value": self.serviceValue,
@@ -94,98 +122,91 @@ class myServicesViewController: UIViewController{
                         }
                     }
                 
-                self.firestore?.collection("server")
+                self.firestore?.collection("lavagemCompleta")
                     .document(idUser)
-                    .collection("lavagemCompleta")
-                    .addDocument(data: [
-                        "service": "Lavagem Completa",
-                        "price": self.servicePrice1,
-                        "value": self.serviceValue1,
-                        "house": self.serviceHouse1
+                    .setData([
+                        "service1": "Lavagem Completa",
+                        "price1": self.servicePrice1,
+                        "value1": self.serviceValue1,
+                        "house1": self.serviceHouse1
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
                         }
                     }
                 
-                self.firestore?.collection("server")
+                self.firestore?.collection("lavagemPolimento")
                     .document(idUser)
-                    .collection("lavagemPolimento")
-                    .addDocument(data: [
-                        "service": "Lavagem + Polimento",
-                        "price": self.servicePrice2,
-                        "value": self.serviceValue2,
-                        "house": self.serviceHouse2
+                    .setData([
+                        "service2": "Lavagem + Polimento",
+                        "price2": self.servicePrice2,
+                        "value2": self.serviceValue2,
+                        "house2": self.serviceHouse2
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
                         }
                     }
                 
-                self.firestore?.collection("server")
+                self.firestore?.collection("lavagemSeco")
                     .document(idUser)
-                    .collection("lavagemSeco")
-                    .addDocument(data: [
-                        "service": "Lavagem a seco",
-                        "price": self.servicePrice3,
-                        "value": self.serviceValue3,
-                        "house": self.serviceHouse3
+                    .setData([
+                        "service3": "Lavagem a seco",
+                        "price3": self.servicePrice3,
+                        "value3": self.serviceValue3,
+                        "house3": self.serviceHouse3
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
                         }
                     }
                 
-                self.firestore?.collection("server")
+                self.firestore?.collection("lavagemVapor")
                     .document(idUser)
-                    .collection("lavagemVapor")
-                    .addDocument(data: [
-                        "service": "Lavagem a vapor",
-                        "price": self.servicePrice4,
-                        "value": self.serviceValue4,
-                        "house": self.serviceHouse4
+                    .setData([
+                        "service4": "Lavagem a vapor",
+                        "price4": self.servicePrice4,
+                        "value4": self.serviceValue4,
+                        "house4": self.serviceHouse4
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
                         }
                     }
                 
-                self.firestore?.collection("server")
+                self.firestore?.collection("ecolavagem")
                     .document(idUser)
-                    .collection("ecolavagem")
-                    .addDocument(data: [
-                        "service": "Variação: Ecolavagem",
-                        "price": self.servicePrice5,
-                        "value": self.serviceValue5,
-                        "house": self.serviceHouse5
+                    .setData([
+                        "service5": "Variação: Ecolavagem",
+                        "price5": self.servicePrice5,
+                        "value5": self.serviceValue5,
+                        "house5": self.serviceHouse5
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
                         }
                     }
                 
-                self.firestore?.collection("server")
+                self.firestore?.collection("purificacao")
                     .document(idUser)
-                    .collection("purificacao")
-                    .addDocument(data: [
-                        "service": "Purificação de ar",
-                        "price": self.servicePrice6,
-                        "value": self.serviceValue6,
-                        "house": self.serviceHouse6
+                    .setData([
+                        "service6": "Purificação de ar",
+                        "price6": self.servicePrice6,
+                        "value6": self.serviceValue6,
+                        "house6": self.serviceHouse6
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
                         }
                     }
                 
-                self.firestore?.collection("server")
+                self.firestore?.collection("higienizacao")
                     .document(idUser)
-                    .collection("higienizacao")
-                    .addDocument(data: [
-                        "service": "Higienização",
-                        "price": self.servicePrice7,
-                        "value": self.serviceValue7,
-                        "house": self.serviceHouse7
+                    .setData([
+                        "service7": "Higienização",
+                        "price7": self.servicePrice7,
+                        "value7": self.serviceValue7,
+                        "house7": self.serviceHouse7
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")

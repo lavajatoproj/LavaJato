@@ -202,7 +202,7 @@ class ScreenRegisterViewController: UIViewController {
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
             self.serverSwitch()
-        if let name = self.nameRegisterTextField.text, let email = self.emailRegisterTextField.text, let password = self.passwordTextField.text, let cellNumber = self.numberRegisterTextField.text, let born = self.dateRegisterTextField.text, let document = self.documentRegisterTextField.text, let city = self.postalCodeTextField.text, let state = self.selectStatusButton.titleLabel?.text, let gender = self.selectGenderButton.titleLabel?.text{
+        if let name = self.nameRegisterTextField.text, let email = self.emailRegisterTextField.text, let password = self.passwordTextField.text, let cellNumber = self.numberRegisterTextField.text, let born = self.dateRegisterTextField.text, let document = self.documentRegisterTextField.text, let cep = self.postalCodeTextField.text, let state = self.selectStatusButton.titleLabel?.text, let gender = self.selectGenderButton.titleLabel?.text, let adress = self.adressTextField.text, let numberAdress = self.adressNumberTextField.text{
     
                     self.auth?.createUser(withEmail: email, password: password) { (data, error) in
                         if error == nil{
@@ -215,10 +215,12 @@ class ScreenRegisterViewController: UIViewController {
                                         "cellNumber": cellNumber,
                                         "born": born,
                                         "document": document,
-                                        "city": city,
+                                        "cep": cep,
                                         "state": state,
                                         "gender": gender,
                                         "server": self.serverSwitchState,
+                                        "adress": adress,
+                                        "numberAdress": numberAdress,
                                         "id": idUser,
                                     ])
                             }

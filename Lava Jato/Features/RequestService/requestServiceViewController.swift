@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import FirebaseStorageUI
 
 class requestServiceViewController: UIViewController {
     
@@ -24,6 +27,9 @@ class requestServiceViewController: UIViewController {
     
     var viewModel:RequestViewModel = RequestViewModel()
     
+    var user: Dictionary<String, Any>?
+    var auth: Auth?
+    var firestore: Firestore?
     
     private var alert:AlertController?
     
@@ -31,9 +37,17 @@ class requestServiceViewController: UIViewController {
         
         func viewDidLoad() {
             super.viewDidLoad()
+            self.auth = Auth.auth()
+            self.firestore = Firestore.firestore()
             self.EndButton.layer.cornerRadius = 10
             self.valueLabel.text = "-"
             self.serviceLabel.text = "-"
+            if let name = user?["name"] as? String{
+                self.nameProfessionalLabel.text = name
+            }
+            if let url = user?["profileImage"] as? String{
+                self.professionalImageView.sd_setImage(with: URL(string: url), completed: nil)
+            }
         }
         
         

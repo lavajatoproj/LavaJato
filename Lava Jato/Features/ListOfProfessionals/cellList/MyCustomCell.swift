@@ -25,6 +25,9 @@ class MyCustomCell: UITableViewCell {
     
     func confIniciais(){
         self.backgrounddView.layer.cornerRadius = 15
+        self.pictureImageView.contentMode = .scaleAspectFill
+        self.pictureImageView.layer.cornerRadius = pictureImageView.frame.height / 2
+        self.pictureImageView.clipsToBounds = true
     }
 
 

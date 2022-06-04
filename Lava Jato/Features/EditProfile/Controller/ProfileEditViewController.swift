@@ -37,6 +37,10 @@ class ProfileEditViewController: UIViewController {
     var users: [Dictionary<String, Any>] = []
     var posts: [Dictionary<String, Any>] = []
     var idUserLog: String?
+    var document:String?
+    var state:String?
+    var gender:String?
+    var serverState:Bool?
     
     func getProfileData(){
         let user = self.firestore.collection("users").document(self.idUserLog ?? "")
@@ -50,12 +54,19 @@ class ProfileEditViewController: UIViewController {
                 self.numberTextField.text = dataNumber as? String
                 let dataEmail = data?["email"]
                 self.emailTextField.text = dataEmail as? String
-                let dataCity = data?["city"]
+                let dataCity = data?["cep"]
                 self.postalCodeTextField.text = dataCity as? String
+                let dataAdress = data?["adress"]
+                self.adressTextField.text = dataAdress as? String
+                let dataAdressNumber = data?["numberAdress"]
+                self.numberAdressTextField.text = dataAdressNumber as? String
                 let dataBorn = data?["born"]
                 self.dateTextField.text = dataBorn as? String
-                let serverState = data?["server"]
-                if serverState as? Int == 0{
+                self.document = data?["document"] as? String
+                self.state = data?["state"] as? String
+                self.gender = data?["gender"] as? String
+                self.serverState = data?["server"] as? Bool
+                if self.serverState == false{
                     self.changeServicesButton.isHidden = true
                     self.serviceImageview.isHidden = true
                 }
@@ -163,21 +174,28 @@ class ProfileEditViewController: UIViewController {
         if self.numberTextField.text == "" || self.numberTextField.textColor == UIColor.red || self.postalCodeTextField.text == "" || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.text == "" || self.adressTextField.textColor == UIColor.red || self.numberAdressTextField.text == "" || self.numberAdressTextField.textColor == UIColor.red {
             self.alert(title: "Atenção", message: "Verificar campos")
             self.activeSaveButton()
-
         }else{
             self.saveProfileImage()
         }
 
     }
 
-    func saveData(name:String, profileImage:String, email: String, cellNumber: String, born: String){
+    func saveData(name:String, profileImage:String, email: String, cellNumber: String, born: String, document:String, cep:String, state:String, gender:String, server:Bool, adress:String, numberAdress:String){
         self.firestore.collection("users").document( self.idUserLog ?? "" )
             .setData([
-            "name": name,
             "profileImage": profileImage,
+            "name": name,
             "email": email,
             "cellNumber": cellNumber,
             "born": born,
+            "document": document,
+            "cep": cep,
+            "state": state,
+            "gender": gender,
+            "server": server,
+            "adress": adress,
+            "numberAdress": numberAdress,
+            "id": idUserLog ?? "",
         ])
     }
 
@@ -209,7 +227,7 @@ class ProfileEditViewController: UIViewController {
     }
 
     func completionRegister(with url:String = ""){
-        self.saveData(name: self.nameTextField.text ?? "", profileImage: url, email: self.emailTextField.text ?? "", cellNumber: self.numberTextField.text ?? "", born: self.dateTextField.text ?? "")
+        self.saveData(name: self.nameTextField.text ?? "", profileImage: url, email: self.emailTextField.text ?? "", cellNumber: self.numberTextField.text ?? "", born: self.dateTextField.text ?? "", document: self.document ?? "", cep: self.postalCodeTextField.text ?? "", state: self.state ?? "", gender: self.gender ?? "", server: self.serverState ?? false, adress: self.adressTextField.text ?? "", numberAdress: self.numberAdressTextField.text ?? "")
     }
     
     @IBAction func tappedChangePassword(_ sender: UIButton) {
