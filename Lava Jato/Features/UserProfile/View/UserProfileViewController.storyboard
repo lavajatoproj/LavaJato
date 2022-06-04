@@ -110,7 +110,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="tappedMyServiceButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zrY-SX-LJY"/>
+                                                    <action selector="tappedEditProfile:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rMM-0R-62z"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar Perfil" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efS-mE-NnK">
@@ -177,7 +177,7 @@
                                                     <action selector="tappedHelpButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NpL-ed-2Lr"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1o-0R-MAO">
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1o-0R-MAO" userLabel="RecomendButton">
                                                 <rect key="frame" x="20" y="120" width="374" height="60"/>
                                                 <color key="backgroundColor" red="0.076052226129999997" green="0.21554887289999999" blue="0.49840956930000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
@@ -192,12 +192,11 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="tappedRecomendButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JFt-aq-dkX"/>
+                                                    <action selector="tappedRecomendButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="q1o-dg-Ptx"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Indique o App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFA-Wn-whM">
-                                                <rect key="frame" x="97" y="130" width="188" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indique o App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFA-Wn-whM">
+                                                <rect key="frame" x="97" y="130" width="249" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -260,16 +259,14 @@
                                                     <constraint firstAttribute="width" constant="40" id="Wcb-vX-o3W"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg4-7d-1PM">
-                                                <rect key="frame" x="97" y="220" width="54" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg4-7d-1PM">
+                                                <rect key="frame" x="97" y="220" width="217" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ajuda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEO-h2-80E">
-                                                <rect key="frame" x="97" y="40" width="79" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajuda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEO-h2-80E">
+                                                <rect key="frame" x="97" y="40" width="229" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -286,22 +283,34 @@
                                         <constraints>
                                             <constraint firstItem="BzI-b9-NrQ" firstAttribute="leading" secondItem="bWT-qR-RXD" secondAttribute="leading" constant="80" id="19k-WG-hEH"/>
                                             <constraint firstItem="p1o-0R-MAO" firstAttribute="top" secondItem="MTB-Nq-eDc" secondAttribute="bottom" constant="30" id="3xi-IA-MSX"/>
+                                            <constraint firstItem="hzk-Wn-FpL" firstAttribute="leading" secondItem="mEO-h2-80E" secondAttribute="trailing" constant="20" id="4GP-LV-Y1J"/>
                                             <constraint firstItem="ex6-q0-jVb" firstAttribute="leading" secondItem="bWT-qR-RXD" secondAttribute="leading" constant="20" id="500-RS-2iT"/>
+                                            <constraint firstItem="p1o-0R-MAO" firstAttribute="top" secondItem="mEO-h2-80E" secondAttribute="bottom" constant="44" id="CCH-lY-eZT"/>
                                             <constraint firstAttribute="trailing" secondItem="MTB-Nq-eDc" secondAttribute="trailing" constant="20" id="Cwj-iA-ar1"/>
+                                            <constraint firstItem="UFA-Wn-whM" firstAttribute="leading" secondItem="Fpg-yF-EjU" secondAttribute="trailing" constant="24" id="Cyz-h2-nyV"/>
                                             <constraint firstItem="74U-2Q-I6K" firstAttribute="trailing" secondItem="Fpg-yF-EjU" secondAttribute="trailing" id="H3h-sz-Asj"/>
                                             <constraint firstItem="BzI-b9-NrQ" firstAttribute="top" secondItem="ex6-q0-jVb" secondAttribute="bottom" constant="100" id="HCP-70-M22"/>
                                             <constraint firstItem="Fpg-yF-EjU" firstAttribute="top" secondItem="MTB-Nq-eDc" secondAttribute="bottom" constant="40" id="HwG-wF-P4g"/>
                                             <constraint firstItem="Fpg-yF-EjU" firstAttribute="leading" secondItem="bWT-qR-RXD" secondAttribute="leading" constant="33" id="Iih-o2-8en"/>
                                             <constraint firstAttribute="trailing" secondItem="ex6-q0-jVb" secondAttribute="trailing" constant="20" id="LFN-8h-TEZ"/>
+                                            <constraint firstItem="Zg4-7d-1PM" firstAttribute="top" secondItem="p1o-0R-MAO" secondAttribute="bottom" constant="40" id="LG4-6M-iNe"/>
                                             <constraint firstItem="MTB-Nq-eDc" firstAttribute="leading" secondItem="bWT-qR-RXD" secondAttribute="leading" constant="20" id="MDd-i9-Ndd"/>
                                             <constraint firstAttribute="height" constant="505" id="Ptt-l6-KvH"/>
+                                            <constraint firstItem="sAw-ZL-zyR" firstAttribute="leading" secondItem="UFA-Wn-whM" secondAttribute="trailing" id="Rh0-QW-Kld"/>
+                                            <constraint firstItem="mEO-h2-80E" firstAttribute="top" secondItem="bWT-qR-RXD" secondAttribute="top" constant="40" id="UEI-fE-Yhf"/>
                                             <constraint firstItem="hal-Pn-Kkw" firstAttribute="leading" secondItem="Fpg-yF-EjU" secondAttribute="leading" id="UnD-WF-shJ"/>
                                             <constraint firstItem="hzk-Wn-FpL" firstAttribute="top" secondItem="bWT-qR-RXD" secondAttribute="top" constant="40" id="VNc-OW-56k"/>
                                             <constraint firstItem="sAw-ZL-zyR" firstAttribute="top" secondItem="Fpg-yF-EjU" secondAttribute="top" id="W69-LF-8R7"/>
+                                            <constraint firstItem="mEO-h2-80E" firstAttribute="leading" secondItem="hal-Pn-Kkw" secondAttribute="trailing" constant="24" id="Yng-hz-Ncw"/>
+                                            <constraint firstItem="ex6-q0-jVb" firstAttribute="top" secondItem="UFA-Wn-whM" secondAttribute="bottom" constant="44" id="ZL3-pu-MlS"/>
                                             <constraint firstItem="hzk-Wn-FpL" firstAttribute="top" secondItem="hal-Pn-Kkw" secondAttribute="top" id="aPC-Fg-4xp"/>
                                             <constraint firstAttribute="trailing" secondItem="BzI-b9-NrQ" secondAttribute="trailing" constant="80" id="b5F-a2-mxL"/>
                                             <constraint firstAttribute="trailing" secondItem="hzk-Wn-FpL" secondAttribute="trailing" constant="38" id="bE0-FT-DkK"/>
+                                            <constraint firstItem="UFA-Wn-whM" firstAttribute="top" secondItem="MTB-Nq-eDc" secondAttribute="bottom" constant="40" id="c3X-im-cqz"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zg4-7d-1PM" secondAttribute="trailing" constant="100" id="gJV-sO-B9V"/>
+                                            <constraint firstItem="BzI-b9-NrQ" firstAttribute="top" secondItem="Zg4-7d-1PM" secondAttribute="bottom" constant="114" id="jU3-2d-A5t"/>
                                             <constraint firstItem="sAw-ZL-zyR" firstAttribute="leading" secondItem="hzk-Wn-FpL" secondAttribute="leading" id="myN-36-Tcs"/>
+                                            <constraint firstItem="Zg4-7d-1PM" firstAttribute="leading" secondItem="74U-2Q-I6K" secondAttribute="trailing" constant="24" id="oTh-Ky-51S"/>
                                             <constraint firstItem="MTB-Nq-eDc" firstAttribute="top" secondItem="bWT-qR-RXD" secondAttribute="top" constant="30" id="tM5-M3-kaH"/>
                                             <constraint firstAttribute="trailing" secondItem="p1o-0R-MAO" secondAttribute="trailing" constant="20" id="vOS-Ha-AMs"/>
                                             <constraint firstItem="74U-2Q-I6K" firstAttribute="leading" secondItem="Fpg-yF-EjU" secondAttribute="leading" id="wMf-6z-4lm"/>
@@ -375,10 +384,10 @@
                         <outlet property="muteImageView" destination="o7o-yu-wD5" id="fUm-Vs-mMR"/>
                         <outlet property="nameLabel" destination="hUQ-Wl-f7e" id="IF3-hI-rQP"/>
                         <outlet property="notificationButton" destination="4GR-cz-o33" id="ZGL-l2-z4l"/>
+                        <outlet property="recomendButton" destination="p1o-0R-MAO" id="8QN-qo-fDP"/>
                         <outlet property="silenceButton" destination="Dgw-kX-ccJ" id="yWJ-1r-50q"/>
                         <outlet property="tappedHelpButton" destination="MTB-Nq-eDc" id="NcL-2p-cjY"/>
                         <outlet property="tappedLogoutButton" destination="ex6-q0-jVb" id="wpg-Po-byo"/>
-                        <outlet property="tappedMyServiceButton" destination="U2j-KJ-Z2T" id="1vx-Cm-Av2"/>
                         <outlet property="userImageView" destination="iyf-Mu-SeB" id="9J8-KD-Ell"/>
                         <segue destination="BOT-9x-kaN" kind="show" identifier="ServicesSegue" id="Wnc-5k-UgM"/>
                         <segue destination="9Dx-YO-fqB" kind="show" identifier="myServices" id="GuJ-sl-Wce"/>

@@ -14,15 +14,14 @@ class UserProfileViewController: UIViewController {
     
     
     @IBOutlet weak var silenceButton: UIButton!
-    
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var muteImageView: UIImageView!
-    @IBOutlet weak var tappedMyServiceButton: UIButton!
     @IBOutlet weak var tappedHelpButton: UIButton!
-    @IBOutlet weak var tappedRecomendButton: UIButton!
     @IBOutlet weak var tappedLogoutButton: UIButton!
     @IBOutlet weak var notificationButton: UIButton!
+    @IBOutlet weak var recomendButton: UIButton!
+    
     
     var firestore: Firestore?
     var auth: Auth?
@@ -36,12 +35,8 @@ class UserProfileViewController: UIViewController {
                 let data = documentSnapshot?.data()
                 let dataName = data?["name"]
                 self.nameLabel.text = dataName as? String
-                //                if let url = data1?["url"] as? String{
-                //                    self.userImageView.sd_setImage(with: URL(string: url), completed: nil)
-                //                }
             }
-        }
-        )
+        } )
     }
     
     override func viewDidLoad() {
@@ -50,7 +45,7 @@ class UserProfileViewController: UIViewController {
         self.firestore = Firestore.firestore()
         self.auth = Auth.auth()
         if let idUser = auth?.currentUser?.uid{
-            self.idUserLog = idUser
+        self.idUserLog = idUser
         }
         self.alert = AlertController(controller: self)
     }
@@ -61,10 +56,8 @@ class UserProfileViewController: UIViewController {
         self.getProfileData()
     }
     
-    @IBAction func tappedMyServiceButton(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "ProfileEditViewController", bundle: nil)
-        let vC = storyboard.instantiateViewController(withIdentifier: "ProfileEditViewController")
-        navigationController?.pushViewController(vC, animated: true)
+    @IBAction func tappedRecomendButton(_ sender: UIButton) {
+        print("Indique o App")
     }
     
     @IBAction func tappedHelpButton(_ sender: UIButton) {
@@ -73,13 +66,7 @@ class UserProfileViewController: UIViewController {
         navigationController?.pushViewController(vC, animated: true)
     }
     
-    
-    
-    @IBAction func tappedRecomendButton(_ sender: UIButton) {
-        print("Test")
-        self.presentShareSheet()
-    }
-    
+
     
     @IBAction func tappedLogoutButton(_ sender: UIButton) {
         do {
@@ -133,10 +120,10 @@ class UserProfileViewController: UIViewController {
     
     
     func alert(title:String, message:String){
-         let alertController:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-         let ok:UIAlertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-         alertController.addAction(ok)
-         self.present(alertController, animated: true, completion: nil)
-     }
+        let alertController:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok:UIAlertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(ok)
+        self.present(alertController, animated: true, completion: nil)
+    }
     
 }
