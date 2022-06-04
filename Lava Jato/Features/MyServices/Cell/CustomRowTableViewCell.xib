@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="384" height="156"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s0G-Z3-5iv">
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="s0G-Z3-5iv">
                         <rect key="frame" x="315" y="17" width="51" height="31"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <connections>
@@ -24,12 +24,12 @@
                         </connections>
                     </switch>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzS-Vb-VQV">
-                        <rect key="frame" x="27" y="17" width="278" height="31"/>
+                        <rect key="frame" x="20" y="17" width="285" height="31"/>
                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
                         <color key="textColor" red="0.0" green="0.21859122580000001" blue="0.51684874300000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDD-GF-iHI">
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HDD-GF-iHI">
                         <rect key="frame" x="167.5" y="108" width="51" height="31"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="49" id="7Eq-5e-vyj"/>
@@ -40,12 +40,12 @@
                         </connections>
                     </switch>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rhb-Us-0oH">
-                        <rect key="frame" x="27" y="65" width="337" height="34"/>
+                        <rect key="frame" x="20" y="65" width="344" height="34"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Busca em casa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS4-Zz-GWF">
-                        <rect key="frame" x="27" y="113" width="132.5" height="21"/>
+                        <rect key="frame" x="20" y="113" width="139.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -53,17 +53,17 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="pS4-Zz-GWF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="27" id="Chz-fn-57N"/>
+                    <constraint firstItem="pS4-Zz-GWF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Chz-fn-57N"/>
                     <constraint firstItem="CzS-Vb-VQV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="ENw-Tq-iDZ"/>
                     <constraint firstAttribute="trailing" secondItem="Rhb-Us-0oH" secondAttribute="trailing" constant="20" id="EeL-nv-nxg"/>
                     <constraint firstItem="Rhb-Us-0oH" firstAttribute="top" secondItem="CzS-Vb-VQV" secondAttribute="bottom" constant="17" id="HxR-RN-q6O"/>
                     <constraint firstItem="HDD-GF-iHI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Sja-7e-u6r"/>
-                    <constraint firstItem="Rhb-Us-0oH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="27" id="Vog-LA-uum"/>
+                    <constraint firstItem="Rhb-Us-0oH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Vog-LA-uum"/>
                     <constraint firstItem="s0G-Z3-5iv" firstAttribute="leading" secondItem="CzS-Vb-VQV" secondAttribute="trailing" constant="10" id="ciC-99-GW9"/>
                     <constraint firstItem="pS4-Zz-GWF" firstAttribute="top" secondItem="Rhb-Us-0oH" secondAttribute="bottom" constant="14" id="fRs-vj-K5B"/>
                     <constraint firstItem="HDD-GF-iHI" firstAttribute="top" secondItem="Rhb-Us-0oH" secondAttribute="bottom" constant="9" id="lCn-7l-y7l"/>
                     <constraint firstItem="HDD-GF-iHI" firstAttribute="leading" secondItem="pS4-Zz-GWF" secondAttribute="trailing" constant="8" symbolic="YES" id="nPk-YW-JT4"/>
-                    <constraint firstItem="CzS-Vb-VQV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="27" id="nze-zJ-ka8"/>
+                    <constraint firstItem="CzS-Vb-VQV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nze-zJ-ka8"/>
                     <constraint firstAttribute="trailing" secondItem="s0G-Z3-5iv" secondAttribute="trailing" constant="20" id="oHe-6I-qtt"/>
                     <constraint firstItem="s0G-Z3-5iv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="pux-1V-dvR"/>
                 </constraints>

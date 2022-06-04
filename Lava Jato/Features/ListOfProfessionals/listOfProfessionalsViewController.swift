@@ -60,6 +60,14 @@ class listOfProfessionalsViewController: UIViewController {
         self.listOfUsers()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "requestService"{
+            let viewDestine = segue.destination as? requestServiceViewController
+            
+            viewDestine?.user = sender as? Dictionary
+        }
+    }
+    
     func searchUsers(text: String ){
         let listFilter: [Dictionary<String, Any>] = self.users
         self.users.removeAll()
@@ -120,9 +128,11 @@ extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDat
         
         let user = self.users[indexPath.row]
         let name  = user["name"] as? String
-//        if let url = user["url"] as? String{
-//            cell?.pictureImageView.sd_setImage(with: URL(string: url), completed: nil)
-//        }
+        if let url = user["profileImage"] as? String{
+            cell?.pictureImageView.sd_setImage(with: URL(string: url), completed: nil)
+        }else{
+            cell?.pictureImageView.image = UIImage(systemName: "person.circle.fill")
+        }
         
         cell?.nameLabel.text = name
         
@@ -133,9 +143,9 @@ extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let selectedRow = self.listViewModel.loadUsers(indexPath: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
         let user = self.users[indexPath.row]
         performSegue(withIdentifier: "requestService", sender: user)
-        tableView.deselectRow(at: indexPath, animated: false)
     }
     
 }

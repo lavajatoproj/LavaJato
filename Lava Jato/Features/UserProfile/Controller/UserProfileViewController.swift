@@ -36,9 +36,9 @@ class UserProfileViewController: UIViewController {
                 let data = documentSnapshot?.data()
                 let dataName = data?["name"]
                 self.nameLabel.text = dataName as? String
-//                if let url = data1?["url"] as? String{
-//                    self.userImageView.sd_setImage(with: URL(string: url), completed: nil)
-//                }
+                if let url = data?["profileImage"] as? String{
+                    self.userImageView.sd_setImage(with: URL(string: url), completed: nil)
+                }
                 }
             }
         )
@@ -52,6 +52,9 @@ class UserProfileViewController: UIViewController {
         if let idUser = auth?.currentUser?.uid{
             self.idUserLog = idUser
         }
+        self.userImageView.contentMode = .scaleAspectFill
+        self.userImageView.layer.cornerRadius = userImageView.frame.height / 2
+        self.userImageView.clipsToBounds = true
     }
     
     override func viewWillAppear(_ animated: Bool) {

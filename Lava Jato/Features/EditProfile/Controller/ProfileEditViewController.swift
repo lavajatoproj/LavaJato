@@ -9,7 +9,6 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseStorage
-import FirebaseStorageUI
 
 class ProfileEditViewController: UIViewController {
     
@@ -26,21 +25,26 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var profileImageView:UIImageView!
     @IBOutlet weak var editPhotoButton:UIButton!
-    @IBOutlet weak var serviceImageview: UIImageView!    
+    @IBOutlet weak var serviceImageview: UIImageView!
+    
     private var viewModelEditProfile:ViewModelEditProfile = ViewModelEditProfile()
     private var alert:AlertController?
     var imagePicker = UIImagePickerController()
     var valueStateButton:String?
-    var storage: Storage?
-    var firestore: Firestore?
+    var firestore = Firestore.firestore()
+    let storage = Storage.storage().reference()
     var auth: Auth?
     var users: [Dictionary<String, Any>] = []
     var posts: [Dictionary<String, Any>] = []
     var idUserLog: String?
+    var document:String?
+    var state:String?
+    var gender:String?
+    var serverState:Bool?
     
     func getProfileData(){
-        let user = self.firestore?.collection("users").document(self.idUserLog ?? "")
-        user?.getDocument(completion: { documentSnapshot, error in
+        let user = self.firestore.collection("users").document(self.idUserLog ?? "")
+        user.getDocument(completion: { documentSnapshot, error in
             if error == nil{
                 let data = documentSnapshot?.data()
                 let dataName = data?["name"]
@@ -50,26 +54,28 @@ class ProfileEditViewController: UIViewController {
                 self.numberTextField.text = dataNumber as? String
                 let dataEmail = data?["email"]
                 self.emailTextField.text = dataEmail as? String
-                let dataCity = data?["city"]
+                let dataCity = data?["cep"]
                 self.postalCodeTextField.text = dataCity as? String
+                let dataAdress = data?["adress"]
+                self.adressTextField.text = dataAdress as? String
+                let dataAdressNumber = data?["numberAdress"]
+                self.numberAdressTextField.text = dataAdressNumber as? String
                 let dataBorn = data?["born"]
                 self.dateTextField.text = dataBorn as? String
-                let serverState = data?["server"]
-                if serverState as? Int == 0{
+                self.document = data?["document"] as? String
+                self.state = data?["state"] as? String
+                self.gender = data?["gender"] as? String
+                self.serverState = data?["server"] as? Bool
+                if self.serverState == false{
                     self.changeServicesButton.isHidden = true
                     self.serviceImageview.isHidden = true
                 }
-                //                if let url = data?["url"] as? String{
-                //                    self.profileImageView.sd_setImage(with: URL(string: url), completed: nil)
-                //                }else{
-                //                    self.profileImageView.image = UIImage(systemName: "person.circle.fill")
-                //                }
+                if let url = data?["profileImage"] as? String{
+                    self.profileImageView.sd_setImage(with: URL(string: url), completed: nil)
+                }else{
+                    self.profileImageView.image = UIImage(systemName: "person.circle.fill")
+                }
             }
-            //                if let url = data?["url"] as? String{
-            //                    self.profileImageView.sd_setImage(with: URL(string: url), completed: nil)
-            //                }else{
-            //                    self.profileImageView.image = UIImage(systemName: "person.circle.fill")
-            //                }
         })
     }
     
@@ -86,13 +92,16 @@ class ProfileEditViewController: UIViewController {
     func getFunc(){
         self.firestore = Firestore.firestore()
         self.auth = Auth.auth()
-        self.storage = Storage.storage()
+//        self.storage = Storage.storage()
         Style()
         self.hideKeyboardWhenTappedAround()
         self.configTextField()
         self.configPhotoPicker()
         self.alert = AlertController(controller: self)
         self.enableSaveButton()
+        self.profileImageView.contentMode = .scaleAspectFill
+        self.viewModelEditProfile.cornerRadius(image: profileImageView)
+        self.profileImageView.clipsToBounds = true
         if let idUser = auth?.currentUser?.uid{
             self.idUserLog = idUser
         }
@@ -161,34 +170,66 @@ class ProfileEditViewController: UIViewController {
     
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
+        
         if self.numberTextField.text == "" || self.numberTextField.textColor == UIColor.red || self.postalCodeTextField.text == "" || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.text == "" || self.adressTextField.textColor == UIColor.red || self.numberAdressTextField.text == "" || self.numberAdressTextField.textColor == UIColor.red {
             self.alert(title: "Atenção", message: "Verificar campos")
             self.activeSaveButton()
-            
         }else{
-            if let name = self.nameTextField.text, let email = self.emailTextField.text, let cellNumber = self.numberTextField.text, let born = self.dateTextField.text, let city = self.postalCodeTextField.text{
-                self.firestore?.collection("users").document( self.idUserLog ?? "" )
-                    .setData([
-                        "name": name,
-                        "email": email,
-                        "cellNumber": cellNumber,
-                        "born": born,
-                        "city": city,
-                        //                                        "profileImage": url,
-                        "id": self.idUserLog as Any,
-                    ])
-                self.activeSaveButton()
+            self.saveProfileImage()
+        }
+
+    }
+
+    func saveData(name:String, profileImage:String, email: String, cellNumber: String, born: String, document:String, cep:String, state:String, gender:String, server:Bool, adress:String, numberAdress:String){
+        self.firestore.collection("users").document( self.idUserLog ?? "" )
+            .setData([
+            "profileImage": profileImage,
+            "name": name,
+            "email": email,
+            "cellNumber": cellNumber,
+            "born": born,
+            "document": document,
+            "cep": cep,
+            "state": state,
+            "gender": gender,
+            "server": server,
+            "adress": adress,
+            "numberAdress": numberAdress,
+            "id": idUserLog ?? "",
+        ])
+    }
+
+    func saveProfileImage(){
+        guard let image = self.profileImageView.image?.jpegData(compressionQuality: 0.8) else {return}
+
+        let imagePath = "userImages/\(UUID().uuidString).jpg"
+        let imageRef = storage.child(imagePath)
+
+        imageRef.putData(image, metadata: nil) { metadata, error in
+
+            if error == nil && metadata != nil {
+                imageRef.downloadURL { url, error in
+                    if error == nil{
+                        if let urlImagem = url?.absoluteString{
+                            self.firestore.collection("images").document().setData([
+                                "url": urlImagem
+                            ])
+                            self.completionRegister(with: urlImagem)
+                        }
+                    }else{
+                        self.completionRegister()
+                    }
+                }
             }else{
-                print("Error")
-                self.alert(title: "Erro", message: "Erro ao salvar")
+                self.completionRegister()
             }
-            //            self.alert(title: "Atenção", message: "Alterações salvas.")
-            self.alert?.showAlert(title: "Atenção", message: "Alterações Salvas", titleButton: "Aceitar", completion: { value in
-                self.navigationController?.popToRootViewController(animated: true)
-            })
-            self.activeSaveButton()
         }
     }
+
+    func completionRegister(with url:String = ""){
+        self.saveData(name: self.nameTextField.text ?? "", profileImage: url, email: self.emailTextField.text ?? "", cellNumber: self.numberTextField.text ?? "", born: self.dateTextField.text ?? "", document: self.document ?? "", cep: self.postalCodeTextField.text ?? "", state: self.state ?? "", gender: self.gender ?? "", server: self.serverState ?? false, adress: self.adressTextField.text ?? "", numberAdress: self.numberAdressTextField.text ?? "")
+    }
+    
     @IBAction func tappedChangePassword(_ sender: UIButton) {
         self.viewModelEditProfile.instantiateVC(nameVC: "ChangePasswordViewController", navigation: navigationController ?? UINavigationController())
     }
