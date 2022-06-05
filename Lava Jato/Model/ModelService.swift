@@ -11,8 +11,6 @@ import UIKit
 struct Professionals{
     var userImage:UIImage
     var userName:String
-    var userRate:Double
-    var userServices:[WashServices]
 }
 
 
@@ -25,4 +23,9 @@ struct WashServices{
     var ecoWash:Bool
     var airPurification:Bool
     var sanitation:Bool
+}
+
+
+struct ServiceList{
+    var typeService:String
 }

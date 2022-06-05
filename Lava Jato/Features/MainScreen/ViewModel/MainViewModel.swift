@@ -7,12 +7,14 @@
 
 import Foundation
 import UIKit
+import FirebaseFirestore
+
+protocol MainViewModelDelegate:AnyObject{
+    
+}
 
 
 class MainViewModel{
     
-    
-    
-    
-    
+
 }

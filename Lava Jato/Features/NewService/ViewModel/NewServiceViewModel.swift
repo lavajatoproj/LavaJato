@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import FirebaseFirestore
 
 protocol NewServiceViewModelDelegate:AnyObject{
     func success()
@@ -21,8 +22,29 @@ class NewServiceViewModel{
         self.delegate = delegate
     }
     
-    private let newService:PersonService = PersonService()
+    private let personService:PersonService = PersonService()
     private var infos: Users?
+    
+    let fireStore = Firestore.firestore()
+    var newService:NewServiceViewController = NewServiceViewController()
+    var professionals:[Professionals] = []
+    
+    func getFireBaseData(){
+        fireStore.collection("users").getDocuments { snapshot, error in
+            if error == nil{
+                if let snapshot = snapshot {
+                    DispatchQueue.main.async {
+                        self.professionals = snapshot.documents.map({ document in
+                            return Professionals(userImage: document["profileImage"] as? UIImage ?? UIImage(),
+                                                 userName: document["name"] as? String ?? "")
+                        })
+                    }
+                    self.newService.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
     
     public var countElements:Int{
         return self.infos?.registerUsers?.count ?? 0
@@ -33,7 +55,7 @@ class NewServiceViewModel{
     }
     
     public func fetchHistory(){
-        self.newService.getPersonAlamofire { success, error in
+        self.personService.getPersonAlamofire { success, error in
             if let _success = success{
                 self.infos = _success
                 self.delegate?.success()

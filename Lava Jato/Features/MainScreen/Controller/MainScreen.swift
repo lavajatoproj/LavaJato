@@ -5,37 +5,33 @@
 //  Created by Thiago Valentim on 18/02/22.
 //
 
-
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import FirebaseStorageUI
 
 class MainScreen: UIViewController {
     
     @IBOutlet weak var cvCollectionView: UICollectionView!
     
-    private var newServiceViewModel:NewServiceViewModel = NewServiceViewModel()
+    public var mainViewModel:MainViewModel = MainViewModel()
     private var infos: Users?
-
-    private var arrayNames2:[Professionals] = [
-        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Thiago", userRate: 4.5, userServices: [.init(simpleWash: true, completWash: true, washPolishing: true, dryWash: true, steamWash: false, ecoWash: false, airPurification: false, sanitation: true)]),
-        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Bruno", userRate: 4.5, userServices: [.init(simpleWash: false, completWash: false, washPolishing: false, dryWash: false, steamWash: false, ecoWash: true, airPurification: false, sanitation: true)]),
-        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Olivia", userRate: 4.5, userServices: [.init(simpleWash: false, completWash: true, washPolishing: true, dryWash: true, steamWash: false, ecoWash: true, airPurification: false, sanitation: true)]),
-        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Fred", userRate: 4.5, userServices: [.init(simpleWash: true, completWash: true, washPolishing: true, dryWash: true, steamWash: true, ecoWash: false, airPurification: false, sanitation: true)]),
-        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Joao", userRate: 4.5, userServices: [.init(simpleWash: false, completWash: true, washPolishing: true, dryWash: true, steamWash: true, ecoWash: true, airPurification: true, sanitation: true)])
-
-    ]
-
-  var filterArray:[Professionals] = []
+    
+    private var arrayService:[ServiceList] = []
+    
+    
+    var filterArray:[Professionals] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.settingCV()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.filterArray = []
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        self.filterArray = []
+//    }
     
-    // MARK: Signatures
+    // MARK: - Signatures
     func settingCV(){
         self.Style()
         cvCollectionView.dataSource = self
@@ -48,13 +44,13 @@ class MainScreen: UIViewController {
     }
 }
 
-// MARK: Extension
+// MARK:  - Extension
 extension MainScreen:UICollectionViewDelegate{}
 extension MainScreen:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return service.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ServicesCollectionViewCell.identifier, for:indexPath) as? ServicesCollectionViewCell
         cell?.setup(with: service[indexPath.row])
@@ -62,86 +58,16 @@ extension MainScreen:UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch indexPath.item{
-        case 0:
-            var count:Int = 0
-            for user in arrayNames2 {
-                let type = arrayNames2[count].userServices[0].simpleWash
-                count = count + 1
-                if type == true {
-                    filterArray.append(user)
-                }
-            }
-        case 1:
-            var count:Int = 0
-            for user in arrayNames2 {
-                let type = arrayNames2[count].userServices[0].completWash
-                count = count + 1
-                if type == true {
-                    filterArray.append(user)
-                }
-            }
-        case 2:
-            var count:Int = 0
-            for user in arrayNames2 {
-                let type = arrayNames2[count].userServices[0].washPolishing
-                count = count + 1
-                if type == true {
-                    filterArray.append(user)
-                }
-            }
-        case 3:
-            var count:Int = 0
-            for user in arrayNames2 {
-                let type = arrayNames2[count].userServices[0].dryWash
-                count = count + 1
-                if type == true {
-                    filterArray.append(user)
-                }
-            }
-        case 4:
-            var count:Int = 0
-            for user in arrayNames2 {
-                let type = arrayNames2[count].userServices[0].steamWash
-                count = count + 1
-                if type == true {
-                    filterArray.append(user)
-                }
-            }
-        case 5:
-            var count:Int = 0
-            for user in arrayNames2 {
-                let type = arrayNames2[count].userServices[0].ecoWash
-                count = count + 1
-                if type == true {
-                    filterArray.append(user)
-                }
-            }
-        case 6:
-            var count:Int = 0
-            for user in arrayNames2 {
-                let type = arrayNames2[count].userServices[0].airPurification
-                count = count + 1
-                if type == true {
-                    filterArray.append(user)
-                }
-            }
-        default:
-            var count:Int = 0
-            for user in arrayNames2 {
-                let type = arrayNames2[count].userServices[0].sanitation
-                count = count + 1
-                if type == true {
-                    filterArray.append(user)
-                }
-            }
-        }
         
-        let storyboard = UIStoryboard(name: "NewServiceStoryBoard", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "NewServiceStoryBoard") as? NewServiceViewController
-        viewController?.filterArray = filterArray
-//        viewController.self?.newServiceViewModel =
-        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
+        let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
+        navigationController?.pushViewController(viewController, animated: true)
+        
+        //        let storyboard = UIStoryboard(name: "NewServiceStoryBoard", bundle: nil)
+        //        let viewController = storyboard.instantiateViewController(withIdentifier: "NewServiceStoryBoard") as? NewServiceViewController
+        //        viewController?.filterArray = filterArray
+        //        viewController.self?.newServiceViewModel =
+        //        navigationController?.pushViewController(viewController ?? UIViewController(), animated: true)
     }
 }
 
@@ -158,3 +84,91 @@ extension MainScreen: UICollectionViewDelegateFlowLayout{
         return 15
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        switch indexPath.item{
+//        case 0:
+//            var count:Int = 0
+//            for user in arrayService {
+//                let type = arrayService[count].userServices
+//                count = count + 1
+//                if type == true {
+////                    filterArray.append(user)
+//                }
+//            }
+//        case 1:
+//            var count:Int = 0
+//            for user in arrayService {
+//                let type = arrayService[count].userServices[0].completWash
+//                count = count + 1
+//                if type == true {
+//                    filterArray.append(user)
+//                }
+//            }
+//        case 2:
+//            var count:Int = 0
+//            for user in arrayNames2 {
+//                let type = arrayNames2[count].userServices[0].washPolishing
+//                count = count + 1
+//                if type == true {
+//                    filterArray.append(user)
+//                }
+//            }
+//        case 3:
+//            var count:Int = 0
+//            for user in arrayNames2 {
+//                let type = arrayNames2[count].userServices[0].dryWash
+//                count = count + 1
+//                if type == true {
+//                    filterArray.append(user)
+//                }
+//            }
+//        case 4:
+//            var count:Int = 0
+//            for user in arrayNames2 {
+//                let type = arrayNames2[count].userServices[0].steamWash
+//                count = count + 1
+//                if type == true {
+//                    filterArray.append(user)
+//                }
+//            }
+//        case 5:
+//            var count:Int = 0
+//            for user in arrayNames2 {
+//                let type = arrayNames2[count].userServices[0].ecoWash
+//                count = count + 1
+//                if type == true {
+//                    filterArray.append(user)
+//                }
+//            }
+//        case 6:
+//            var count:Int = 0
+//            for user in arrayNames2 {
+//                let type = arrayNames2[count].userServices[0].airPurification
+//                count = count + 1
+//                if type == true {
+//                    filterArray.append(user)
+//                }
+//            }
+//        default:
+//            var count:Int = 0
+//            for user in arrayNames2 {
+//                let type = arrayNames2[count].userServices[0].sanitation
+//                count = count + 1
+//                if type == true {
+//                    filterArray.append(user)
+//                }
+//            }
+//        }

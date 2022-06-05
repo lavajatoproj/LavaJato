@@ -9,11 +9,16 @@ import UIKit
 
 class FilterViewController: UIViewController{
     
-    
     @IBOutlet weak var callMapsButton: UIButton!
     @IBOutlet weak var tViewTableView: UITableView!
     
     private var viewModel:FilterViewModel = FilterViewModel()
+    
+    var nameCity:String?
+    var profMan:Bool?
+    var profWon:Bool?
+    var priceLimit:String?
+//    var placeService
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +29,11 @@ class FilterViewController: UIViewController{
     
     @IBAction func tappedCallMaps(_ sender: UIButton) {
         performSegue(withIdentifier: "maps", sender: nil)
+//        print(self.priceLimit as Any)
     }
     
     // MARK: - Signatures
+    
     func settingsTView(){
         self.tViewTableView.delegate = self
         self.tViewTableView.dataSource = self
@@ -41,9 +48,6 @@ extension FilterViewController:UITableViewDelegate{}
 extension FilterViewController:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if self.viewModel.isFirstCell {
-//            return 1
-//        }
         return self.viewModel.coutArray
     }
     
@@ -55,6 +59,7 @@ extension FilterViewController:UITableViewDataSource{
         } else {
             let cellV = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.identifier, for: indexPath) as? PriceTableViewCell
             cellV?.setupCell(setup: self.viewModel.loadPrice(indexPath:indexPath))
+            self.priceLimit = cellV?.makePrice
             return cellV ?? UITableViewCell()
         }
     }

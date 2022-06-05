@@ -7,7 +7,18 @@
 
 import UIKit
 
-class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+protocol PriceTableViewCellDelegate:AnyObject{
+    func takePrice()
+}
+
+
+class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate{
+    
+    private weak var delegate:PriceTableViewCellDelegate?
+    public func delegate(delegate:PriceTableViewCellDelegate?){
+        self.delegate = delegate
+    }
+    
     
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var selectSlider: UISlider!
@@ -15,7 +26,9 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     @IBOutlet weak var priceMax: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var bannetCollectionView: UICollectionView!
+    @IBOutlet weak var viewResultButton: UIButton!
     
+    var makePrice:String?
     
     static let identifier:String = "PriceTableViewCell"
     static func nib()->UINib{
@@ -41,7 +54,17 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
         let choose = Int(sender.value/10) * 10
             sender.setValue(Float(choose), animated: false)
         self.priceMax.text = "R$\(choose),00"
+        
     }
+    
+    func takePrice(){
+        self.makePrice = priceMax.text
+    }
+    
+    @IBAction func tappedViewResultButton(_ sender: UIButton) {
+        
+    }
+    
     
     public func setupCell(setup:ProfilePrice){
         self.priceLabel.text = setup.price

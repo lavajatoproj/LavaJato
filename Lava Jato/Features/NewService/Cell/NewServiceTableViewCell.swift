@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+
 
 class NewServiceTableViewCell: UITableViewCell {
 
@@ -25,17 +27,20 @@ class NewServiceTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.configStart()
-       
     }
     
     func configStart(){
         self.backColorView.layer.cornerRadius = 15
+        self.pictureImageView.contentMode = .scaleAspectFill
+        self.pictureImageView.layer.cornerRadius = pictureImageView.frame.height / 2
+        self.pictureImageView.clipsToBounds = true
     }
     
-    public func setupCell(data:RegisterUser){
-        self.nameLabel.text = data.name
-        self.noteLabel.text = data.note
+    public func setupCell(data:Professionals){
+        self.nameLabel.text = data.userName
+        self.pictureImageView.image = data.userImage
     }
+
     
 }
 

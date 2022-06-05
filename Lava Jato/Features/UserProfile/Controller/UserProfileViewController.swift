@@ -35,6 +35,9 @@ class UserProfileViewController: UIViewController {
                 let data = documentSnapshot?.data()
                 let dataName = data?["name"]
                 self.nameLabel.text = dataName as? String
+                if let url = data?["profileImage"] as? String{
+                    self.userImageView.sd_setImage(with: URL(string: url), completed: nil)
+                }
             }
         } )
     }
@@ -47,8 +50,15 @@ class UserProfileViewController: UIViewController {
         if let idUser = auth?.currentUser?.uid{
             self.idUserLog = idUser
         }
+        
+        self.userImageView.contentMode = .scaleAspectFill
+        self.userImageView.layer.cornerRadius = userImageView.frame.height / 2
+        self.userImageView.clipsToBounds = true
+        
         self.alert = AlertController(controller: self)
     }
+    
+    
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,14 +77,13 @@ class UserProfileViewController: UIViewController {
     }
     
     
-    
     @IBAction func tappedLogoutButton(_ sender: UIButton) {
         do {
             try auth?.signOut()
             let storyboard = UIStoryboard(name: "LoginViewController", bundle: nil)
             let vC = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
             navigationController?.pushViewController(vC, animated: true)
-        } catch let signOutError {
+        } catch _ {
             self.alert(title:"Ops", message: "Error ao desconectar")
         }
     }

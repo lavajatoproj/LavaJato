@@ -125,9 +125,11 @@ extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MyCustomCell? = tableView.dequeueReusableCell(withIdentifier: MyCustomCell.identifier, for: indexPath) as? MyCustomCell
+     
+        
         
         let user = self.users[indexPath.row]
-        let name  = user["name"] as? String
+        let name = user["name"] as? String
         if let url = user["profileImage"] as? String{
             cell?.pictureImageView.sd_setImage(with: URL(string: url), completed: nil)
         }else{
@@ -140,6 +142,8 @@ extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDat
         
         return cell ?? UITableViewCell()
     }
+    
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let selectedRow = self.listViewModel.loadUsers(indexPath: indexPath)

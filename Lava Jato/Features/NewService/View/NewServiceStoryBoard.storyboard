@@ -85,6 +85,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="03G-ha-ffd"/>
                     <connections>
+                        <outlet property="searchBar" destination="PrW-EC-Db3" id="MR6-zc-OhX"/>
                         <outlet property="tableView" destination="MKb-l9-udQ" id="2f8-WO-jW2"/>
                         <outlet property="titleLabel" destination="bFy-fm-vho" id="3Ea-u9-AoM"/>
                         <segue destination="oAq-bC-xv8" kind="show" identifier="requestService" id="fRh-FZ-yEA"/>

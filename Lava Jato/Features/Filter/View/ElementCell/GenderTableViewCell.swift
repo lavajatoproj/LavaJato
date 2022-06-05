@@ -32,8 +32,10 @@ class GenderTableViewCell: UITableViewCell {
     }
 
     @IBAction func ativoMSwitch(_ sender: UISwitch) {
+        
     }
     @IBAction func ativoFSwitch(_ sender: UISwitch) {
+        
     }
     
     

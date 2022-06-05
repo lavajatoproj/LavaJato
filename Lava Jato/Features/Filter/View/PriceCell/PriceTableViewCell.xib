@@ -105,6 +105,9 @@
                                 <integer key="value" value="10"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="tappedViewResultButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TEE-2N-ojK"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -142,6 +145,7 @@
                 <outlet property="priceMax" destination="8md-bt-wQ6" id="qAD-4R-COY"/>
                 <outlet property="priceMin" destination="6q6-ci-eJB" id="SUw-Ld-w0p"/>
                 <outlet property="selectSlider" destination="e0p-Ze-UwL" id="atH-jm-OWQ"/>
+                <outlet property="viewResultButton" destination="6MC-9L-kb6" id="Wa1-JD-Xho"/>
             </connections>
             <point key="canvasLocation" x="516.66666666666674" y="28.125"/>
         </tableViewCell>
