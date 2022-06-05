@@ -12,6 +12,7 @@ class cellTableViewCell: UITableViewCell {
     @IBOutlet weak var productLabel: UILabel!
     @IBOutlet weak var back2View: UIView!
     @IBOutlet weak var arrowImageView: UIImageView!
+    @IBOutlet weak var observTextField: UITextField!
     
     static let identifier:String = "cellTableViewCell"
     
@@ -21,11 +22,11 @@ class cellTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-            self.back2View.layer.cornerRadius = 15
+        self.back2View.layer.cornerRadius = 15
+        self.observTextField.isHidden = false
     }
     
     public func setupCell(product:String){
         self.productLabel.text = product
-        
     }
 }

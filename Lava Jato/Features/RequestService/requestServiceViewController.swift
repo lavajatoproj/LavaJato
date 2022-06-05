@@ -25,7 +25,7 @@ class requestServiceViewController: UIViewController {
     @IBOutlet weak var EndButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
-//    var viewModel:RequestViewModel = RequestViewModel()
+    var viewModel:RequestViewModel = RequestViewModel()
     
     var user: Dictionary<String, Any>?
     var auth: Auth?
@@ -39,6 +39,8 @@ class requestServiceViewController: UIViewController {
         super.viewDidLoad()
         self.auth = Auth.auth()
         self.firestore = Firestore.firestore()
+        self.configTableView()
+        self.addService()
         self.EndButton.layer.cornerRadius = 10
         self.valueLabel.text = "-"
         self.serviceLabel.text = "-"
@@ -77,7 +79,7 @@ class requestServiceViewController: UIViewController {
         }
         
         func addService(){
-//            self.viewModel.listService()
+            self.viewModel.listService()
         }
         
         func Style(){
@@ -89,62 +91,73 @@ class requestServiceViewController: UIViewController {
     extension requestServiceViewController: UITableViewDelegate, UITableViewDataSource{
         
         func numberOfSections(in tableView: UITableView) -> Int {
-            return 2
+            return 3
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//            if viewModel.listServices[section].opened == true{
-//                return self.viewModel.listServices[section].service.count
-//            }else{
-                return 1
-//            }
-        }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            if indexPath.row == 0{
-                let cell = tableView.dequeueReusableCell(withIdentifier: cellTableViewCell.identifier, for: indexPath) as? cellTableViewCell
-//                cell?.setupCell(product: self.viewModel.listServices[indexPath.section].)
-                cell?.productLabel.textAlignment = .center
-                cell?.back2View.layer.borderWidth = 0.0
-                cell?.arrowImageView.isHidden = false
-                return cell ?? UITableViewCell()
+            if viewModel.listServices[section].opened == true{
+                return self.viewModel.listServices[section].service.count
             }else{
-                let cell = tableView.dequeueReusableCell(withIdentifier: cellTableViewCell.identifier, for: indexPath) as? cellTableViewCell
-//                cell?.setupCell(product: self.viewModel.listServices[indexPath.section].service[indexPath.row])
-                cell?.productLabel.textAlignment = .left
-                cell?.back2View.layer.borderWidth = 2.0
-                cell?.back2View.layer.borderColor = UIColor.ColorDefault.cgColor
-                cell?.arrowImageView.isHidden = true
-                
-                
-                return cell ?? UITableViewCell()
+                return 1
             }
         }
         
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellTableViewCell.identifier, for: indexPath) as? cellTableViewCell
+            
+            if indexPath.section == 2{
+                cell?.observTextField.isHidden = false
+                cell?.back2View.isHidden = true
+            }else{
+                cell?.observTextField.isHidden = true
+            }
+            
+                if indexPath.row == 0{
+                    cell?.setupCell(product: self.viewModel.listServices[indexPath.section].title)
+                    cell?.productLabel.textAlignment = .center
+                    cell?.back2View.layer.borderWidth = 0.0
+                    cell?.arrowImageView.isHidden = false
+                    return cell ?? UITableViewCell()
+                }else{
+                    cell?.setupCell(product: self.viewModel.listServices[indexPath.section].service[indexPath.row])
+                    cell?.productLabel.textAlignment = .left
+                    cell?.back2View.layer.borderWidth = 2.0
+                    cell?.back2View.layer.borderColor = UIColor.ColorDefault.cgColor
+                    cell?.arrowImageView.isHidden = true
+                    return cell ?? UITableViewCell()
+                }
+            
+        }
+        
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 80
+            if indexPath.section == 2{
+                return 200
+            }else{
+                return 80
+            }
         }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
-//            if viewModel.listServices[indexPath.section].opened == true{
-//                viewModel.listServices[indexPath.section].opened = false
-//                let sections = IndexSet.init(integer: indexPath.section)
-//                tableView.reloadSections(sections, with: .none)
-//            }else{
-//                viewModel.listServices[indexPath.section].opened = true
-//                let sections = IndexSet.init(integer: indexPath.section)
-//                tableView.reloadSections(sections, with: .none)
-//            }
-//            
-//            if indexPath.section == 0{
-//                self.serviceLabel.text = self.viewModel.listServices[indexPath.section].service[indexPath.row]
-//            }
-//            
-//            
-//            if indexPath.section == 0 && indexPath.row != 0{
+            if viewModel.listServices[indexPath.section].opened == true{
+                viewModel.listServices[indexPath.section].opened = false
+                let sections = IndexSet.init(integer: indexPath.section)
+                tableView.reloadSections(sections, with: .none)
+            }else{
+                viewModel.listServices[indexPath.section].opened = true
+                let sections = IndexSet.init(integer: indexPath.section)
+                tableView.reloadSections(sections, with: .none)
+            }
+            
+            if indexPath.section == 0{
+                self.serviceLabel.text = self.viewModel.listServices[indexPath.section].service[indexPath.row]
+            }
+            
+            
+            if indexPath.section == 0 && indexPath.row != 0{
 //                self.valueLabel.text = self.viewModel.listServices[indexPath.section].price[indexPath.row]
-//            }
+            }
         }
     }
 

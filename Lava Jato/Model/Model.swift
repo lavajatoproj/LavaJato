@@ -22,6 +22,12 @@ struct Services2{
     var price: String
 }
 
+struct Server{
+    var opened: Bool
+    var title: String
+    var service: [String]
+}
+
 
 // MARK: - Service
 
