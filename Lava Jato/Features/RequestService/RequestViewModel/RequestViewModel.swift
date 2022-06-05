@@ -9,12 +9,13 @@ import Foundation
 import UIKit
 
 class RequestViewModel{
-    
-    var listServices:[Services] =  []
-    
+
+    var listServices:[Server] =  []
+
     func listService(){
-//    self.listServices.append(Services(opened: false, title: "Selecione o serviço", service: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"], price: ["R$ 80,00", "R$ 80,00", "R$ 80,00", "R$ 80,00", "R$ 80,00", "R$ 80,00", "R$ 80,00","R$ 80,00","R$ 80,00"]));
-//    self.listServices.append(Services(opened: false, title: "Modo de retirada", service: ["","Levarei ao local", "Buscar aqui"], price: [""]))
+        self.listServices.append(Server(opened: false, title: "Serviços", service: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"]))
+        self.listServices.append(Server(opened: false, title: "Forma", service: [ "","Levarei ao local", "Buscar aqui", "Serviço em domicílio"]))
+        self.listServices.append(Server(opened: false, title: "", service: [""]))
     }
-    
+
 }

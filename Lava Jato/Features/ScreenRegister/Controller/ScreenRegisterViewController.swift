@@ -38,7 +38,7 @@ class ScreenRegisterViewController: UIViewController {
     private var viewModelScreenRegister:ViewModelScreenRegister = ViewModelScreenRegister()
     var auth: Auth?
     var firestore: Firestore?
-    var serverSwitchState:Bool = true
+    var serverSwitchState:Bool = false
     
     func serverSwitch(){
             if self.switchButton.isOn == true{

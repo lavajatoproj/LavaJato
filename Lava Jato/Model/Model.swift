@@ -15,13 +15,17 @@ struct Services{
     var price: [String]
 }
 
-
-
 struct Services2{
     var value: Bool
     var house: Bool
     var service: String
     var price: String
+}
+
+struct Server{
+    var opened: Bool
+    var title: String
+    var service: [String]
 }
 
 
