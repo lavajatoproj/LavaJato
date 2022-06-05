@@ -12,12 +12,16 @@ import GoogleSignIn
 import FBSDKCoreKit
 import UIKit
 import FirebaseCore
+import IQKeyboardManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
     
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        IQKeyboardManager.shared()
         
         ApplicationDelegate.shared.application(
                    application,
@@ -74,4 +78,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
 
     }
+    
 }

@@ -98,8 +98,8 @@ class UserProfileViewController: UIViewController {
         
     }
     @IBAction func tappedNotification(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "NotificationViewController", bundle: nil)
-        let vC = storyboard.instantiateViewController(withIdentifier: "NotificationViewController")
+        let storyboard = UIStoryboard(name: "ServicesViewController", bundle: nil)
+        let vC = storyboard.instantiateViewController(withIdentifier: "ServicesViewController")
         navigationController?.pushViewController(vC, animated: true)
     }
     

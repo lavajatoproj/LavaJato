@@ -11,6 +11,8 @@ import DropDown
 import FirebaseAuth
 import FirebaseFirestore
 import SafariServices
+import TLCustomMask
+
 
 class ScreenRegisterViewController: UIViewController {
     @IBOutlet weak var nameRegisterTextField: UITextField!
@@ -23,6 +25,7 @@ class ScreenRegisterViewController: UIViewController {
     @IBOutlet weak var postalCodeTextField: UITextField!
     @IBOutlet weak var adressTextField: UITextField!
     @IBOutlet weak var adressNumberTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var checkBox: UIButton!
     @IBOutlet weak var passwordValidationLabel: UILabel!
@@ -39,7 +42,9 @@ class ScreenRegisterViewController: UIViewController {
     var auth: Auth?
     var firestore: Firestore?
     var serverSwitchState:Bool = false
-    
+    var customMask = TLCustomMask()
+    var customMaskPostalCode = TLCustomMask()
+
     func serverSwitch(){
             if self.switchButton.isOn == true{
                 self.serverSwitchState = true
@@ -76,6 +81,7 @@ class ScreenRegisterViewController: UIViewController {
         self.postalCodeTextField.delegate = self
         self.adressTextField.delegate = self
         self.adressNumberTextField.delegate = self
+        self.cityTextField.delegate = self
         self.viewModelScreenRegister.textfieldStyle(textField: self.nameRegisterTextField, color: UIColor.ColorDefault)
         self.viewModelScreenRegister.textfieldStyle(textField: self.emailRegisterTextField, color: UIColor.ColorDefault)
         self.viewModelScreenRegister.textfieldStyle(textField: self.numberRegisterTextField, color: UIColor.ColorDefault)
@@ -86,7 +92,9 @@ class ScreenRegisterViewController: UIViewController {
         self.viewModelScreenRegister.textfieldStyle(textField: self.postalCodeTextField, color: UIColor.ColorDefault)
         self.viewModelScreenRegister.textfieldStyle(textField: self.adressTextField, color: UIColor.ColorDefault)
         self.viewModelScreenRegister.textfieldStyle(textField: self.adressNumberTextField, color: UIColor.ColorDefault)
-
+        self.viewModelScreenRegister.textfieldStyle(textField: self.cityTextField, color: UIColor.ColorDefault)
+        customMask.formattingPattern = "($$)$$$$$-$$$$"
+        customMaskPostalCode.formattingPattern = "$$$$$-$$$"
     }
 
     func configButton(){
@@ -193,7 +201,7 @@ class ScreenRegisterViewController: UIViewController {
     }
     
     func validations(){
-        if self.nameRegisterTextField.textColor == UIColor.red || self.numberRegisterTextField.textColor == UIColor.red || self.dateRegisterTextField.textColor == UIColor.red || self.documentRegisterTextField.textColor == UIColor.red || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.textColor == UIColor.red || self.adressNumberTextField.textColor == UIColor.red || self.passwordTextField.textColor == UIColor.red || self.nameRegisterTextField.text == "" || self.confirmPasswordTextField.textColor == UIColor.red || self.numberRegisterTextField.text == "" || self.passwordTextField.text == "" || self.postalCodeTextField.text == "" || self.adressTextField.text == "" || self.adressNumberTextField.text == "" || self.confirmPasswordTextField.text == "" || self.dateRegisterTextField.text == "" || self.documentRegisterTextField.text == "" || self.selectGenderButton.titleLabel?.text == "Sexo" || self.emailRegisterTextField.text == "" || self.selectStatusButton.titleLabel?.text == "Estado Civil" && self.checkboxFlag == true && self.passwordValidationLabel.text == "Senhas não conferem" && self.passwordValidationLabel.text != "Minimo 6 caracteres"{
+        if self.nameRegisterTextField.textColor == UIColor.red || self.numberRegisterTextField.textColor == UIColor.red || self.dateRegisterTextField.textColor == UIColor.red || self.documentRegisterTextField.textColor == UIColor.red || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.textColor == UIColor.red || self.adressNumberTextField.textColor == UIColor.red || self.passwordTextField.textColor == UIColor.red || self.cityTextField.textColor == UIColor.red || self.nameRegisterTextField.text == "" || self.confirmPasswordTextField.textColor == UIColor.red || self.numberRegisterTextField.text == "" || self.passwordTextField.text == "" || self.postalCodeTextField.text == "" || self.adressTextField.text == "" || self.adressNumberTextField.text == "" || self.confirmPasswordTextField.text == "" || self.dateRegisterTextField.text == "" || self.cityTextField.text == "" || self.documentRegisterTextField.text == "" || self.selectGenderButton.titleLabel?.text == "Sexo" || self.emailRegisterTextField.text == "" || self.selectStatusButton.titleLabel?.text == "Estado Civil" && self.checkboxFlag == true && self.passwordValidationLabel.text == "Senhas não conferem" && self.passwordValidationLabel.text != "Minimo 6 caracteres"{
             self.registerButton.isEnabled = false
         }else{
             self.registerButton.isEnabled = true
@@ -241,16 +249,6 @@ class ScreenRegisterViewController: UIViewController {
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
     }
-    
-    @IBAction func nameAct(_ sender: Any) {
-        let text = self.nameRegisterTextField.text ?? ""
-        if text.isValidName() {
-            self.nameRegisterTextField.textColor = UIColor.black
-        } else {
-            self.nameRegisterTextField.textColor = UIColor.red
-        }
-    }
-    
     
     @IBAction func postalCodeAct(_ sender: UITextField) {
         let text = self.postalCodeTextField.text ?? ""
@@ -362,8 +360,11 @@ extension ScreenRegisterViewController:UITextFieldDelegate{
               self.adressNumberTextField.becomeFirstResponder()
           }  else if textField == adressNumberTextField {
               textField.resignFirstResponder()
+              self.cityTextField.becomeFirstResponder()
+          }else if textField == cityTextField{
+              textField.resignFirstResponder()
               self.dateRegisterTextField.becomeFirstResponder()
-          }  else if textField == dateRegisterTextField {
+          }else if textField == dateRegisterTextField {
               textField.resignFirstResponder()
               self.documentRegisterTextField.becomeFirstResponder()
           }  else {
@@ -376,7 +377,19 @@ extension ScreenRegisterViewController:UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
-    
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        if textField == self.numberRegisterTextField{
+        self.numberRegisterTextField.text = customMask.formatStringWithRange(range: range, string: string)
+            return false
+        }
+        if textField == self.postalCodeTextField{
+        self.postalCodeTextField.text = customMaskPostalCode.formatStringWithRange(range: range, string: string)
+            return false
+        }
+        return true
+    }
 }
 extension ScreenRegisterViewController {
     public func hideKeyboard() {

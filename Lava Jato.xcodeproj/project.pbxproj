@@ -61,10 +61,10 @@
 		DA23ECCB2828BA5500C9E4FD /* ViewModelScreenRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA23ECCA2828BA5500C9E4FD /* ViewModelScreenRegister.swift */; };
 		DA72E19F2847D8DA00730217 /* OpenURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA72E19E2847D8DA00730217 /* OpenURL.swift */; };
 		DA9954C627DF895700C89D76 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954C527DF895700C89D76 /* Profile.swift */; };
-		DA9954C927DF899600C89D76 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954C727DF899600C89D76 /* NotificationTableViewCell.swift */; };
-		DA9954CA27DF899600C89D76 /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9954C827DF899600C89D76 /* NotificationTableViewCell.xib */; };
-		DA9954CE27DF8A2D00C89D76 /* NotificationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9954CD27DF8A2D00C89D76 /* NotificationViewController.storyboard */; };
-		DA9954D027DF8A8100C89D76 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954CF27DF8A8100C89D76 /* NotificationViewController.swift */; };
+		DA9954C927DF899600C89D76 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954C727DF899600C89D76 /* ServiceTableViewCell.swift */; };
+		DA9954CA27DF899600C89D76 /* ServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9954C827DF899600C89D76 /* ServiceTableViewCell.xib */; };
+		DA9954CE27DF8A2D00C89D76 /* ServicesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA9954CD27DF8A2D00C89D76 /* ServicesViewController.storyboard */; };
+		DA9954D027DF8A8100C89D76 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954CF27DF8A8100C89D76 /* ServicesViewController.swift */; };
 		DAA80E64282AD575009A7D73 /* HelpScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA80E63282AD575009A7D73 /* HelpScreenViewModel.swift */; };
 		DAB173D027D1508A00104761 /* ScreenRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB173CF27D1508A00104761 /* ScreenRegisterViewController.swift */; };
 		DAF0152C27C45B38009E55F6 /* HelpScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0152B27C45B37009E55F6 /* HelpScreenViewController.swift */; };
@@ -153,10 +153,10 @@
 		DA23ECCA2828BA5500C9E4FD /* ViewModelScreenRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelScreenRegister.swift; sourceTree = "<group>"; };
 		DA72E19E2847D8DA00730217 /* OpenURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURL.swift; sourceTree = "<group>"; };
 		DA9954C527DF895700C89D76 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		DA9954C727DF899600C89D76 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
-		DA9954C827DF899600C89D76 /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
-		DA9954CD27DF8A2D00C89D76 /* NotificationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificationViewController.storyboard; sourceTree = "<group>"; };
-		DA9954CF27DF8A8100C89D76 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		DA9954C727DF899600C89D76 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
+		DA9954C827DF899600C89D76 /* ServiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceTableViewCell.xib; sourceTree = "<group>"; };
+		DA9954CD27DF8A2D00C89D76 /* ServicesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServicesViewController.storyboard; sourceTree = "<group>"; };
+		DA9954CF27DF8A8100C89D76 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
 		DAA80E63282AD575009A7D73 /* HelpScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreenViewModel.swift; sourceTree = "<group>"; };
 		DAB173CF27D1508A00104761 /* ScreenRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRegisterViewController.swift; sourceTree = "<group>"; };
 		DAF0152B27C45B37009E55F6 /* HelpScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpScreenViewController.swift; sourceTree = "<group>"; };
@@ -294,7 +294,7 @@
 			children = (
 				44C17857282C683C000AF2B9 /* NewService */,
 				E18703DB27E94DE7005B3AA9 /* ChangePassword */,
-				DA9954C227DF891E00C89D76 /* NotificationScreen */,
+				DA9954C227DF891E00C89D76 /* ServiceScreen */,
 				E13E5B2327D5ACF7000CB644 /* EditProfile */,
 				E13E5B2227D5ACDE000CB644 /* HelpScreen */,
 				E13E5B2127D5ACC7000CB644 /* ScreenRegister */,
@@ -559,7 +559,7 @@
 		DA107B3F2828AD1400F40F22 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DA9954CF27DF8A8100C89D76 /* NotificationViewController.swift */,
+				DA9954CF27DF8A8100C89D76 /* ServicesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -567,7 +567,7 @@
 		DA107B402828AD1A00F40F22 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DA9954CD27DF8A2D00C89D76 /* NotificationViewController.storyboard */,
+				DA9954CD27DF8A2D00C89D76 /* ServicesViewController.storyboard */,
 				DA9954C327DF892800C89D76 /* Cell */,
 			);
 			path = View;
@@ -629,7 +629,7 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		DA9954C227DF891E00C89D76 /* NotificationScreen */ = {
+		DA9954C227DF891E00C89D76 /* ServiceScreen */ = {
 			isa = PBXGroup;
 			children = (
 				DA107B402828AD1A00F40F22 /* View */,
@@ -637,14 +637,14 @@
 				DA107B3E2828AD0C00F40F22 /* ViewModel */,
 				DA9954C427DF892C00C89D76 /* Model */,
 			);
-			path = NotificationScreen;
+			path = ServiceScreen;
 			sourceTree = "<group>";
 		};
 		DA9954C327DF892800C89D76 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				DA9954C727DF899600C89D76 /* NotificationTableViewCell.swift */,
-				DA9954C827DF899600C89D76 /* NotificationTableViewCell.xib */,
+				DA9954C727DF899600C89D76 /* ServiceTableViewCell.swift */,
+				DA9954C827DF899600C89D76 /* ServiceTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1011,7 +1011,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E162E08327ADF54000C6AD32 /* LaunchScreen.storyboard in Resources */,
-				DA9954CE27DF8A2D00C89D76 /* NotificationViewController.storyboard in Resources */,
+				DA9954CE27DF8A2D00C89D76 /* ServicesViewController.storyboard in Resources */,
 				44CB762927E941C800A029FA /* GenderTableViewCell.xib in Resources */,
 				44CB763427E941FD00A029FA /* FilterStoryboard.storyboard in Resources */,
 				442DD11E27D05D0900C4F033 /* UserProfileViewController.storyboard in Resources */,
@@ -1022,7 +1022,7 @@
 				E13E5B2727D6EBD0000CB644 /* HelpScreenViewController.storyboard in Resources */,
 				E13E5B4027D700C9000CB644 /* SF-Pro-Text-Bold.otf in Resources */,
 				E18703DF27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard in Resources */,
-				DA9954CA27DF899600C89D76 /* NotificationTableViewCell.xib in Resources */,
+				DA9954CA27DF899600C89D76 /* ServiceTableViewCell.xib in Resources */,
 				E13E5B2527D6EBA6000CB644 /* ProfileEditViewController.storyboard in Resources */,
 				E13E5B3827D7005E000CB644 /* SF-Pro-Text-Semibold.otf in Resources */,
 				A212221927D13E9700B24208 /* listOfProfessionals.storyboard in Resources */,
@@ -1119,7 +1119,7 @@
 				A284A53E282C881600D4241C /* HistoryService.swift in Sources */,
 				E162E07B27ADF53E00C6AD32 /* LoginViewController.swift in Sources */,
 				A27E7BB2282D8B6B0039C3F7 /* ServiceViewModel.swift in Sources */,
-				DA9954C927DF899600C89D76 /* NotificationTableViewCell.swift in Sources */,
+				DA9954C927DF899600C89D76 /* ServiceTableViewCell.swift in Sources */,
 				44FA259E28177CB7006C1CFB /* ServicesCollectionViewCell.swift in Sources */,
 				44CB761F27E941B600A029FA /* PlaceCollectionViewCell.swift in Sources */,
 				E162E07727ADF53E00C6AD32 /* AppDelegate.swift in Sources */,
@@ -1157,8 +1157,7 @@
 				A212221F27D13EE500B24208 /* MyCustomCell.swift in Sources */,
 				E18703DA27E9210A005B3AA9 /* MainScreen.swift in Sources */,
 				A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */,
-				0476018A2849920900C417DE /* UIResponder+Extension.swift in Sources */,
-				DA9954D027DF8A8100C89D76 /* NotificationViewController.swift in Sources */,
+				DA9954D027DF8A8100C89D76 /* ServicesViewController.swift in Sources */,
 				A284A53B282C832000D4241C /* ListViewModel.swift in Sources */,
 				A2F799D827DC6CC8005A53A3 /* Model.swift in Sources */,
 				A212221327D13E5300B24208 /* requestServiceViewController.swift in Sources */,

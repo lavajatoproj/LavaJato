@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--NotificationViewController-->
+        <!--ServicesViewController-->
         <scene sceneID="svM-c8-WAZ">
             <objects>
-                <viewControllerPlaceholder storyboardName="NotificationViewController" id="BOT-9x-kaN" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ServicesViewController" id="BOT-9x-kaN" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="JGz-yg-QBU"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dmS-bZ-5AY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -388,7 +388,7 @@
                         <outlet property="tappedMyServiceButton" destination="U2j-KJ-Z2T" id="1vx-Cm-Av2"/>
                         <outlet property="tappedRecomendButton" destination="p1o-0R-MAO" id="bHF-QE-Rah"/>
                         <outlet property="userImageView" destination="iyf-Mu-SeB" id="9J8-KD-Ell"/>
-                        <segue destination="BOT-9x-kaN" kind="show" identifier="notificationSegue" id="Wnc-5k-UgM"/>
+                        <segue destination="BOT-9x-kaN" kind="show" identifier="ServicesSegue" id="Wnc-5k-UgM"/>
                         <segue destination="9Dx-YO-fqB" kind="show" identifier="myServices" id="GuJ-sl-Wce"/>
                         <segue destination="A9D-wy-DN1" kind="show" id="rEc-3z-YS6"/>
                         <segue destination="59H-Fn-VK9" kind="show" id="Xdz-s3-xvG"/>

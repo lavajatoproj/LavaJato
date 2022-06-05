@@ -9,6 +9,8 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseStorage
+import FirebaseStorageUI
+import TLCustomMask
 
 class ProfileEditViewController: UIViewController {
     
@@ -19,6 +21,7 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var postalCodeTextField: UITextField!
     @IBOutlet weak var adressTextField: UITextField!
     @IBOutlet weak var numberAdressTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var changeServicesButton: UIButton!
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
@@ -41,6 +44,9 @@ class ProfileEditViewController: UIViewController {
     var state:String?
     var gender:String?
     var serverState:Bool?
+    var myView = UIView()
+    var customMask = TLCustomMask()
+    var customMaskPostalCode = TLCustomMask()
     
     func getProfileData(){
         let user = self.firestore.collection("users").document(self.idUserLog ?? "")
@@ -82,7 +88,6 @@ class ProfileEditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.getFunc()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -105,6 +110,8 @@ class ProfileEditViewController: UIViewController {
         if let idUser = auth?.currentUser?.uid{
             self.idUserLog = idUser
         }
+        customMask.formattingPattern = "($$)$$$$$-$$$$"
+        customMaskPostalCode.formattingPattern = "$$$$$-$$$"
     }
     
     func saveUserDefaults(value: Any, key: String){
@@ -131,6 +138,7 @@ class ProfileEditViewController: UIViewController {
         self.postalCodeTextField.delegate = self
         self.adressTextField.delegate = self
         self.numberAdressTextField.delegate = self
+        self.cityTextField.delegate = self
         self.viewModelEditProfile.textfieldStyle(textField: self.nameTextField, color: UIColor.ColorDefault)
         self.viewModelEditProfile.textfieldStyle(textField: self.numberTextField, color: UIColor.ColorDefault)
         self.viewModelEditProfile.textfieldStyle(textField: self.emailTextField, color: UIColor.ColorDefault)
@@ -138,6 +146,7 @@ class ProfileEditViewController: UIViewController {
         self.viewModelEditProfile.textfieldStyle(textField: self.postalCodeTextField, color: UIColor.ColorDefault)
         self.viewModelEditProfile.textfieldStyle(textField: self.adressTextField, color: UIColor.ColorDefault)
         self.viewModelEditProfile.textfieldStyle(textField: self.numberAdressTextField, color: UIColor.ColorDefault)
+        self.viewModelEditProfile.textfieldStyle(textField: self.cityTextField, color: UIColor.ColorDefault)
         
         
         self.nameTextField.textColor = UIColor.darkGray
@@ -161,7 +170,7 @@ class ProfileEditViewController: UIViewController {
     }
     
     func activeSaveButton(){
-        if self.numberTextField.text != "" && self.dateTextField.text != "" && self.postalCodeTextField.text != "" && self.numberTextField.textColor != UIColor.red && self.postalCodeTextField.textColor != UIColor.red{
+        if self.numberTextField.text != "" && self.dateTextField.text != "" && self.postalCodeTextField.text != "" && self.cityTextField.text != "" && self.cityTextField.textColor != UIColor.red && self.numberTextField.textColor != UIColor.red && self.postalCodeTextField.textColor != UIColor.red{
             self.enableSaveButton()
         }else{
             self.disableSaveButton()
@@ -170,8 +179,7 @@ class ProfileEditViewController: UIViewController {
     
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
-        
-        if self.numberTextField.text == "" || self.numberTextField.textColor == UIColor.red || self.postalCodeTextField.text == "" || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.text == "" || self.adressTextField.textColor == UIColor.red || self.numberAdressTextField.text == "" || self.numberAdressTextField.textColor == UIColor.red {
+        if self.numberTextField.text == "" || self.numberTextField.textColor == UIColor.red || self.postalCodeTextField.text == "" || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.text == "" || self.adressTextField.textColor == UIColor.red || self.numberAdressTextField.text == "" || self.cityTextField.text == "" || self.numberAdressTextField.textColor == UIColor.red {
             self.alert(title: "Atenção", message: "Verificar campos")
             self.activeSaveButton()
         }else{
@@ -285,6 +293,19 @@ extension ProfileEditViewController:UITextFieldDelegate{
     func Style(){
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
+    }
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        if textField == self.numberTextField{
+        self.numberTextField.text = customMask.formatStringWithRange(range: range, string: string)
+            return false
+        }
+        if textField == self.postalCodeTextField{
+        self.postalCodeTextField.text = customMaskPostalCode.formatStringWithRange(range: range, string: string)
+            return false
+        }
+        return true
     }
 }
 

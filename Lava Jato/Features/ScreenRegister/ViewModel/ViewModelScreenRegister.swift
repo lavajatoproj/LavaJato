@@ -102,13 +102,5 @@ class ViewModelScreenRegister{
         return false
     }
     
-//    public func validation(nameTextField:UITextField, emailTextField:UITextField, numberTextField:UITextField, documentTextField:UITextField, dateTextField:UITextField, password:UITextField, confirmPassword:UITextField, postalCode:UITextField, adress:UITextField, numberAdress:UITextField, checkBox:Bool, registerButton:UIButton, genderButton:UIButton, statusButton:UIButton, stateButton:UIButton){
-//        if nameTextField.text != "" && numberTextField.text != "" && dateTextField.text != "" && documentTextField.text != "" &&  genderButton.titleLabel?.text != "Selecione" && statusButton.titleLabel?.text != "Selecione" && emailTextField.text != "" && checkBox == true && nameTextField.textColor == UIColor.black && emailTextField.textColor == UIColor.black && numberTextField.textColor == UIColor.black && documentTextField.textColor == UIColor.black && password.textColor == UIColor.black && confirmPassword.textColor == UIColor.black && stateButton.titleLabel?.text != "Selecione"{
-//            registerButton.isEnabled = true
-//        }else{
-//            registerButton.isEnabled = false
-//        }
-//
-//    }
 }
 
