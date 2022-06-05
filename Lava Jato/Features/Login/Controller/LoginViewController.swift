@@ -159,7 +159,7 @@ class LoginViewController: UIViewController{
     }
     
     @IBAction func btGoogle(_ sender: Any) {
-        let signInConfig = GIDConfiguration.init(clientID: "152072972170-kofmt4judceejf77qocrujucbs98s2m4.apps.googleusercontent.com")
+        let signInConfig = GIDConfiguration.init(clientID: "456295585489-uf4bjrguns0u77n4vk8sm4s7uph736l0.apps.googleusercontent.com")
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { user, error in guard error == nil else { return }
             self.performSegue(withIdentifier: "MainScreenSegue", sender: nil)
         }

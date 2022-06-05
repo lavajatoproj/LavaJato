@@ -47,7 +47,6 @@
 		A27E7BB2282D8B6B0039C3F7 /* ServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27E7BB1282D8B6B0039C3F7 /* ServiceViewModel.swift */; };
 		A284A53B282C832000D4241C /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284A53A282C832000D4241C /* ListViewModel.swift */; };
 		A284A53E282C881600D4241C /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A284A53D282C881600D4241C /* HistoryService.swift */; };
-		A28C301A283F8E14001CF104 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A28C3019283F8E14001CF104 /* GoogleService-Info.plist */; };
 		A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F799CC27DC6A49005A53A3 /* CustomRowTableViewCell.swift */; };
 		A2F799CF27DC6A49005A53A3 /* CustomRowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2F799CD27DC6A49005A53A3 /* CustomRowTableViewCell.xib */; };
 		A2F799D827DC6CC8005A53A3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F799D727DC6CC8005A53A3 /* Model.swift */; };
@@ -89,6 +88,7 @@
 		E162E07B27ADF53E00C6AD32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162E07A27ADF53E00C6AD32 /* LoginViewController.swift */; };
 		E162E08027ADF54000C6AD32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E162E07F27ADF54000C6AD32 /* Assets.xcassets */; };
 		E162E08327ADF54000C6AD32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E162E08127ADF54000C6AD32 /* LaunchScreen.storyboard */; };
+		E17CE620284C26910018B3B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E17CE61F284C26900018B3B3 /* GoogleService-Info.plist */; };
 		E18703DA27E9210A005B3AA9 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18703D927E9210A005B3AA9 /* MainScreen.swift */; };
 		E18703DD27E94E39005B3AA9 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18703DC27E94E39005B3AA9 /* ChangePasswordViewController.swift */; };
 		E18703DF27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18703DE27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard */; };
@@ -137,7 +137,6 @@
 		A27E7BB1282D8B6B0039C3F7 /* ServiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewModel.swift; sourceTree = "<group>"; };
 		A284A53A282C832000D4241C /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		A284A53D282C881600D4241C /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
-		A28C3019283F8E14001CF104 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A2F799CC27DC6A49005A53A3 /* CustomRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRowTableViewCell.swift; sourceTree = "<group>"; };
 		A2F799CD27DC6A49005A53A3 /* CustomRowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomRowTableViewCell.xib; sourceTree = "<group>"; };
 		A2F799D727DC6CC8005A53A3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -181,6 +180,7 @@
 		E162E07F27ADF54000C6AD32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E162E08227ADF54000C6AD32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E162E08427ADF54000C6AD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E17CE61F284C26900018B3B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E18703D927E9210A005B3AA9 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		E18703DC27E94E39005B3AA9 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		E18703DE27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
@@ -805,7 +805,7 @@
 				E162E07F27ADF54000C6AD32 /* Assets.xcassets */,
 				E162E08127ADF54000C6AD32 /* LaunchScreen.storyboard */,
 				E162E08427ADF54000C6AD32 /* Info.plist */,
-				A28C3019283F8E14001CF104 /* GoogleService-Info.plist */,
+				E17CE61F284C26900018B3B3 /* GoogleService-Info.plist */,
 			);
 			path = "Lava Jato";
 			sourceTree = "<group>";
@@ -1023,8 +1023,8 @@
 				A212221127D13E3500B24208 /* requestService.storyboard in Resources */,
 				E15CA71627D52E5B002355B9 /* LoginViewController.storyboard in Resources */,
 				E13E5B3A27D70086000CB644 /* SF-Pro-Text-Light.otf in Resources */,
+				E17CE620284C26910018B3B3 /* GoogleService-Info.plist in Resources */,
 				E15CA71927D52F1D002355B9 /* ResetPasswordViewController.storyboard in Resources */,
-				A28C301A283F8E14001CF104 /* GoogleService-Info.plist in Resources */,
 				44CB761E27E941B600A029FA /* PlaceCollectionViewCell.xib in Resources */,
 				A212222027D13EE500B24208 /* MyCustomCell.xib in Resources */,
 				E13E5B3C27D700A1000CB644 /* SF-Pro-Text-Medium.otf in Resources */,

@@ -9,7 +9,15 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.152072972170-kofmt4judceejf77qocrujucbs98s2m4</string>
+				<string>com.googleusercontent.apps.456295585489-uf4bjrguns0u77n4vk8sm4s7uph736l0</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.456295585489-uf4bjrguns0u77n4vk8sm4s7uph736l0</string>
 			</array>
 		</dict>
 	</array>
