@@ -25,7 +25,7 @@ class requestServiceViewController: UIViewController {
     @IBOutlet weak var EndButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel:RequestViewModel = RequestViewModel()
+//    var viewModel:RequestViewModel = RequestViewModel()
     
     var user: Dictionary<String, Any>?
     var auth: Auth?
@@ -33,22 +33,26 @@ class requestServiceViewController: UIViewController {
     
     private var alert:AlertController?
     
-    func configInitials(){
+    func configInitials(){}
         
-        func viewDidLoad() {
-            super.viewDidLoad()
-            self.auth = Auth.auth()
-            self.firestore = Firestore.firestore()
-            self.EndButton.layer.cornerRadius = 10
-            self.valueLabel.text = "-"
-            self.serviceLabel.text = "-"
-            if let name = user?["name"] as? String{
-                self.nameProfessionalLabel.text = name
-            }
-            if let url = user?["profileImage"] as? String{
-                self.professionalImageView.sd_setImage(with: URL(string: url), completed: nil)
-            }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.auth = Auth.auth()
+        self.firestore = Firestore.firestore()
+        self.EndButton.layer.cornerRadius = 10
+        self.valueLabel.text = "-"
+        self.serviceLabel.text = "-"
+        self.professionalImageView.contentMode = .scaleAspectFill
+        self.professionalImageView.layer.cornerRadius = professionalImageView.frame.height / 2
+        self.professionalImageView.clipsToBounds = true
+        if let name = user?["name"] as? String{
+            self.nameProfessionalLabel.text = name
         }
+        if let url = user?["profileImage"] as? String{
+            self.professionalImageView.sd_setImage(with: URL(string: url), completed: nil)
+        }
+        
+    }
         
         
         func tappedEndButton(_ sender: UIButton) {
@@ -73,7 +77,7 @@ class requestServiceViewController: UIViewController {
         }
         
         func addService(){
-            self.viewModel.listService()
+//            self.viewModel.listService()
         }
         
         func Style(){
@@ -81,7 +85,7 @@ class requestServiceViewController: UIViewController {
             navigationController?.navigationBar.titleTextAttributes = textAtributes
         }
     }
-}
+
     extension requestServiceViewController: UITableViewDelegate, UITableViewDataSource{
         
         func numberOfSections(in tableView: UITableView) -> Int {
@@ -99,14 +103,14 @@ class requestServiceViewController: UIViewController {
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             if indexPath.row == 0{
                 let cell = tableView.dequeueReusableCell(withIdentifier: cellTableViewCell.identifier, for: indexPath) as? cellTableViewCell
-//                cell?.setupCell(product: self.viewModel.listServices[indexPath.section].title)
+//                cell?.setupCell(product: self.viewModel.listServices[indexPath.section].)
                 cell?.productLabel.textAlignment = .center
                 cell?.back2View.layer.borderWidth = 0.0
                 cell?.arrowImageView.isHidden = false
                 return cell ?? UITableViewCell()
             }else{
                 let cell = tableView.dequeueReusableCell(withIdentifier: cellTableViewCell.identifier, for: indexPath) as? cellTableViewCell
-                cell?.setupCell(product: self.viewModel.listServices[indexPath.section].service[indexPath.row])
+//                cell?.setupCell(product: self.viewModel.listServices[indexPath.section].service[indexPath.row])
                 cell?.productLabel.textAlignment = .left
                 cell?.back2View.layer.borderWidth = 2.0
                 cell?.back2View.layer.borderColor = UIColor.ColorDefault.cgColor

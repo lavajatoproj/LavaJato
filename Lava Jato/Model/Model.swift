@@ -15,8 +15,6 @@ struct Services{
     var price: [String]
 }
 
-
-
 struct Services2{
     var value: Bool
     var house: Bool
