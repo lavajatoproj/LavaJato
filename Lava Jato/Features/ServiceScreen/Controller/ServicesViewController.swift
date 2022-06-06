@@ -10,13 +10,16 @@ import UIKit
 class ServicesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroudView: UIImageView!
-    
     @IBOutlet weak var segmentedControlSwitch: UISegmentedControl!
     
     private var viewModelServices:ViewModelServices = ViewModelServices()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getFuncs()
+    }
+    
+    func getFuncs(){
         self.configTableView()
         self.viewModelServices.appendData()
         self.configSegmentControl()

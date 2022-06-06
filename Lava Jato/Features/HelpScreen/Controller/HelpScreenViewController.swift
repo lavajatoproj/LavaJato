@@ -16,10 +16,15 @@ class HelpScreenViewController: UIViewController, MFMailComposeViewControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.getFuncs()
+    }
+    
+    func getFuncs(){
         self.backgroundImageView.layer.cornerRadius = 15.0
         Style()
         self.alert = AlertController(controller: self)
     }
+    
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
     }
@@ -36,11 +41,7 @@ class HelpScreenViewController: UIViewController, MFMailComposeViewControllerDel
             })
         }
     }
-    func Style(){
-        let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
-        navigationController?.navigationBar.titleTextAttributes = textAtributes
-    }
-    @IBAction func buttonWhats(_ sender: Any) {
+    func openWhatsApp(){
         let urlWhats = "https://wa.me/5511987625312?text=Bem vindo(a) ao Chat da Lava Jato"
         if let urlString = urlWhats.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed){
             if let whatsappURL = URL(string: urlString) {
@@ -57,6 +58,13 @@ class HelpScreenViewController: UIViewController, MFMailComposeViewControllerDel
                 }
             }
         }
+    }
+    func Style(){
+        let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
+        navigationController?.navigationBar.titleTextAttributes = textAtributes
+    }
+    @IBAction func buttonWhats(_ sender: Any) {
+        self.openWhatsApp()
     }
     
     @IBAction func btEmail(_ sender: Any) {
