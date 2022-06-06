@@ -105,7 +105,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPY-8k-k3h">
-                                <rect key="frame" x="205" y="529" width="84" height="74"/>
+                                <rect key="frame" x="215" y="529" width="84" height="74"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="loginGoogle">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
@@ -115,7 +115,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TB0-M5-Qg7">
-                                <rect key="frame" x="125" y="529" width="84" height="74"/>
+                                <rect key="frame" x="115" y="529" width="84" height="74"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="loginFace"/>
                                 <connections>
@@ -160,11 +160,11 @@
                             <constraint firstItem="qf8-qH-4ez" firstAttribute="leading" secondItem="LT6-K7-MEb" secondAttribute="leading" constant="40" id="hNA-JT-D4u"/>
                             <constraint firstItem="LT6-K7-MEb" firstAttribute="trailing" secondItem="qf8-qH-4ez" secondAttribute="trailing" constant="40" id="i3F-jE-jer"/>
                             <constraint firstItem="9eb-xb-DRX" firstAttribute="top" secondItem="LT6-K7-MEb" secondAttribute="top" constant="-100" id="jZi-VW-JU4"/>
-                            <constraint firstItem="TB0-M5-Qg7" firstAttribute="centerX" secondItem="e76-do-izW" secondAttribute="centerX" constant="-40" id="jfH-g8-5Be"/>
+                            <constraint firstItem="TB0-M5-Qg7" firstAttribute="centerX" secondItem="e76-do-izW" secondAttribute="centerX" constant="-50" id="jfH-g8-5Be"/>
                             <constraint firstItem="LT6-K7-MEb" firstAttribute="trailing" secondItem="9eb-xb-DRX" secondAttribute="trailing" id="l26-LN-wDW"/>
                             <constraint firstItem="cHC-hS-hhb" firstAttribute="top" secondItem="LT6-K7-MEb" secondAttribute="top" constant="60" id="lVc-M4-AkY"/>
                             <constraint firstItem="gYS-BG-EUB" firstAttribute="centerY" secondItem="P1U-qE-vra" secondAttribute="centerY" constant="-1" id="mh0-0k-26g"/>
-                            <constraint firstItem="fPY-8k-k3h" firstAttribute="centerX" secondItem="e76-do-izW" secondAttribute="centerX" constant="40" id="pFy-8P-sUA"/>
+                            <constraint firstItem="fPY-8k-k3h" firstAttribute="centerX" secondItem="e76-do-izW" secondAttribute="centerX" constant="50" id="pFy-8P-sUA"/>
                             <constraint firstItem="cHC-hS-hhb" firstAttribute="leading" secondItem="LT6-K7-MEb" secondAttribute="leading" constant="20" id="quj-qi-ALR"/>
                             <constraint firstItem="P1U-qE-vra" firstAttribute="top" secondItem="UQ5-zM-Lo6" secondAttribute="bottom" constant="20" id="rMn-aX-l8n"/>
                             <constraint firstItem="UQ5-zM-Lo6" firstAttribute="leading" secondItem="LT6-K7-MEb" secondAttribute="leading" constant="40" id="y36-UN-h1W"/>

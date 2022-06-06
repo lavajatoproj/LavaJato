@@ -10,6 +10,8 @@ import Foundation
 import Firebase
 import FirebaseAuth
 import GoogleSignIn
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController{
     
@@ -27,8 +29,13 @@ class LoginViewController: UIViewController{
         self.callFuncs()
         self.tfEmail.text = "c@f.com"
         self.tfPassword.text = "cf1234"
+        
+        if let token = AccessToken.current,
+            !token.isExpired {
+            // User is logged in, do work such as go to next view controller.
+        }
     }
-    
+        
     func callFuncs(){
         self.auth = Auth.auth()
         self.setupLayout()
@@ -166,6 +173,7 @@ class LoginViewController: UIViewController{
     }
     
     @IBAction func btFaceLogin(_ sender: Any) {
+        self.performSegue(withIdentifier: "MainScreenSegue", sender: nil)
         
         
     }

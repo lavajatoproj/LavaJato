@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>2741918216117074</key>
+	<string>APP-ID</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -12,19 +14,13 @@
 				<string>com.googleusercontent.apps.456295585489-uf4bjrguns0u77n4vk8sm4s7uph736l0</string>
 			</array>
 		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.456295585489-uf4bjrguns0u77n4vk8sm4s7uph736l0</string>
-			</array>
-		</dict>
 	</array>
+	<key>FacebookDisplayName</key>
+	<string>Lava-Jato</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
-		<string>whatsapp</string>
-		<string>email</string>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
@@ -45,5 +41,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>a429cd9932ac27688cc37fd36bb391d1</key>
+	<string>CLIENT-TOKEN</string>
 </dict>
 </plist>

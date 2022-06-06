@@ -6,7 +6,8 @@ target 'Lava Jato' do
 	use_frameworks!
 	pod 'GoogleMaps', '6.0.1'
 	pod 'GooglePlaces'
-	pod 'FBSDKLoginKit'
+	pod 'FBSDKCoreKit'
+ 	pod 'FBSDKLoginKit'
 	pod 'Firebase'
 	pod 'Firebase/Auth'
   pod 'Firebase/Analytics'

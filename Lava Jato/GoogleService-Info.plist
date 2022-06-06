@@ -30,5 +30,33 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:456295585489:ios:6f85b7f551fd502fb617f0</string>
+    <key>CLIENT_ID</key>
+    <string>2217086249-qjcs92bsf85996di6m76sbaams2mqt4t.apps.googleusercontent.com</string>
+    <key>REVERSED_CLIENT_ID</key>
+    <string>com.googleusercontent.apps.2217086249-qjcs92bsf85996di6m76sbaams2mqt4t</string>
+    <key>API_KEY</key>
+    <string>AIzaSyCLnT3f7tMA04NxKzjXeeKQNcz2-uhITfI</string>
+    <key>GCM_SENDER_ID</key>
+    <string>2217086249</string>
+    <key>PLIST_VERSION</key>
+    <string>1</string>
+    <key>BUNDLE_ID</key>
+    <string>junior.Lava-Jato</string>
+    <key>PROJECT_ID</key>
+    <string>facebooklogin-2824f</string>
+    <key>STORAGE_BUCKET</key>
+    <string>facebooklogin-2824f.appspot.com</string>
+    <key>IS_ADS_ENABLED</key>
+    <false></false>
+    <key>IS_ANALYTICS_ENABLED</key>
+    <false></false>
+    <key>IS_APPINVITE_ENABLED</key>
+    <true></true>
+    <key>IS_GCM_ENABLED</key>
+    <true></true>
+    <key>IS_SIGNIN_ENABLED</key>
+    <true></true>
+    <key>GOOGLE_APP_ID</key>
+    <string>1:2217086249:ios:aa552f10b428026cf87b38</string>
 </dict>
 </plist>
