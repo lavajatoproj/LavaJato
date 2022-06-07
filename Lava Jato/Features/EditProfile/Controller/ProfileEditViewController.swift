@@ -9,6 +9,8 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseStorage
+import FirebaseStorageUI
+import TLCustomMask
 
 class ProfileEditViewController: UIViewController {
     
@@ -19,6 +21,7 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var postalCodeTextField: UITextField!
     @IBOutlet weak var adressTextField: UITextField!
     @IBOutlet weak var numberAdressTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var changeServicesButton: UIButton!
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
@@ -26,7 +29,6 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var profileImageView:UIImageView!
     @IBOutlet weak var editPhotoButton:UIButton!
     @IBOutlet weak var serviceImageview: UIImageView!
-    
     private var viewModelEditProfile:ViewModelEditProfile = ViewModelEditProfile()
     private var alert:AlertController?
     var imagePicker = UIImagePickerController()
@@ -41,7 +43,38 @@ class ProfileEditViewController: UIViewController {
     var state:String?
     var gender:String?
     var serverState:Bool?
+    var myView = UIView()
+    var customMask = TLCustomMask()
+    var customMaskPostalCode = TLCustomMask()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.getFuncs()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.getProfileData()
+    }
+    
+    func getFuncs(){
+        self.firestore = Firestore.firestore()
+        self.auth = Auth.auth()
+//        self.storage = Storage.storage()
+        Style()
+        self.hideKeyboardWhenTappedAround()
+        self.configTextField()
+        self.configPhotoPicker()
+        self.alert = AlertController(controller: self)
+        self.enableSaveButton()
+        self.profileImageView.contentMode = .scaleAspectFill
+        self.viewModelEditProfile.cornerRadius(image: profileImageView)
+        self.profileImageView.clipsToBounds = true
+        if let idUser = auth?.currentUser?.uid{
+            self.idUserLog = idUser
+        }
+        customMask.formattingPattern = "($$)$$$$$-$$$$"
+        customMaskPostalCode.formattingPattern = "$$$$$-$$$"
+    }
     func getProfileData(){
         let user = self.firestore.collection("users").document(self.idUserLog ?? "")
         user.getDocument(completion: { documentSnapshot, error in
@@ -79,34 +112,6 @@ class ProfileEditViewController: UIViewController {
         })
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.getFunc()
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.getProfileData()
-    }
-    
-    func getFunc(){
-        self.firestore = Firestore.firestore()
-        self.auth = Auth.auth()
-//        self.storage = Storage.storage()
-        Style()
-        self.hideKeyboardWhenTappedAround()
-        self.configTextField()
-        self.configPhotoPicker()
-        self.alert = AlertController(controller: self)
-        self.enableSaveButton()
-        self.profileImageView.contentMode = .scaleAspectFill
-        self.viewModelEditProfile.cornerRadius(image: profileImageView)
-        self.profileImageView.clipsToBounds = true
-        if let idUser = auth?.currentUser?.uid{
-            self.idUserLog = idUser
-        }
-    }
-    
     func saveUserDefaults(value: Any, key: String){
         UserDefaults.standard.set(value, forKey: key)
     }
@@ -131,6 +136,7 @@ class ProfileEditViewController: UIViewController {
         self.postalCodeTextField.delegate = self
         self.adressTextField.delegate = self
         self.numberAdressTextField.delegate = self
+        self.cityTextField.delegate = self
         self.viewModelEditProfile.textfieldStyle(textField: self.nameTextField, color: UIColor.ColorDefault)
         self.viewModelEditProfile.textfieldStyle(textField: self.numberTextField, color: UIColor.ColorDefault)
         self.viewModelEditProfile.textfieldStyle(textField: self.emailTextField, color: UIColor.ColorDefault)
@@ -138,14 +144,10 @@ class ProfileEditViewController: UIViewController {
         self.viewModelEditProfile.textfieldStyle(textField: self.postalCodeTextField, color: UIColor.ColorDefault)
         self.viewModelEditProfile.textfieldStyle(textField: self.adressTextField, color: UIColor.ColorDefault)
         self.viewModelEditProfile.textfieldStyle(textField: self.numberAdressTextField, color: UIColor.ColorDefault)
-        
-        
-        self.nameTextField.textColor = UIColor.darkGray
-        self.emailTextField.textColor = UIColor.darkGray
-        self.dateTextField.textColor = UIColor.darkGray
-        self.nameTextField.isEnabled = false
-        self.emailTextField.isEnabled = false
-        self.dateTextField.isEnabled = false
+        self.viewModelEditProfile.textfieldStyle(textField: self.cityTextField, color: UIColor.ColorDefault)
+        self.viewModelEditProfile.disableTextField(textField: self.nameTextField)
+        self.viewModelEditProfile.disableTextField(textField: self.emailTextField)
+        self.viewModelEditProfile.disableTextField(textField: self.dateTextField)
     }
     
     func alert(title:String, message:String){
@@ -161,21 +163,21 @@ class ProfileEditViewController: UIViewController {
     }
     
     func activeSaveButton(){
-        if self.numberTextField.text != "" && self.dateTextField.text != "" && self.postalCodeTextField.text != "" && self.numberTextField.textColor != UIColor.red && self.postalCodeTextField.textColor != UIColor.red{
+        if self.numberTextField.text != "" && self.dateTextField.text != "" && self.postalCodeTextField.text != "" && self.cityTextField.text != "" && self.cityTextField.textColor != UIColor.red && self.numberTextField.textColor != UIColor.red && self.postalCodeTextField.textColor != UIColor.red{
             self.enableSaveButton()
         }else{
             self.disableSaveButton()
         }
     }
-    
-    
     @IBAction func tappedSaveButton(_ sender: UIButton) {
-        
-        if self.numberTextField.text == "" || self.numberTextField.textColor == UIColor.red || self.postalCodeTextField.text == "" || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.text == "" || self.adressTextField.textColor == UIColor.red || self.numberAdressTextField.text == "" || self.numberAdressTextField.textColor == UIColor.red {
+        if self.numberTextField.text == "" || self.numberTextField.textColor == UIColor.red || self.postalCodeTextField.text == "" || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.text == "" || self.adressTextField.textColor == UIColor.red || self.numberAdressTextField.text == "" || self.cityTextField.text == "" || self.numberAdressTextField.textColor == UIColor.red {
             self.alert(title: "Atenção", message: "Verificar campos")
             self.activeSaveButton()
         }else{
             self.saveProfileImage()
+            self.alert?.showAlert(title: "Concluído", message: "Alterações salvas com sucesso!", titleButton: "Aceitar", completion: { value in
+                self.navigationController?.popToRootViewController(animated: true)
+            })
         }
 
     }
@@ -201,7 +203,6 @@ class ProfileEditViewController: UIViewController {
 
     func saveProfileImage(){
         guard let image = self.profileImageView.image?.jpegData(compressionQuality: 0.8) else {return}
-
         let imagePath = "userImages/\(UUID().uuidString).jpg"
         let imageRef = storage.child(imagePath)
 
@@ -241,21 +242,11 @@ class ProfileEditViewController: UIViewController {
     
     
     @IBAction func postalCodeAct(_ sender: UITextField) {
-        let text = self.postalCodeTextField.text ?? ""
-        if text.isValidPostalCode() {
-            self.postalCodeTextField.textColor = UIColor.black
-        } else {
-            self.postalCodeTextField.textColor = UIColor.red
-        }
+        self.viewModelEditProfile.validatePostalCode(textField: self.postalCodeTextField)
     }
     
     @IBAction func phoneAct(_ sender: Any) {
-        let text = self.numberTextField.text ?? ""
-        if text.filterPhoneNumber().isValidPhone() {
-            self.numberTextField.textColor = UIColor.black
-        } else {
-            self.numberTextField.textColor = UIColor.red
-        }
+        self.viewModelEditProfile.validatePhone(textField: self.numberTextField)
     }
     
     @IBAction func tappedEditPhoto(_ sender: UIButton) {
@@ -285,6 +276,19 @@ extension ProfileEditViewController:UITextFieldDelegate{
     func Style(){
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
+    }
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        if textField == self.numberTextField{
+        self.numberTextField.text = customMask.formatStringWithRange(range: range, string: string)
+            return false
+        }
+        if textField == self.postalCodeTextField{
+        self.postalCodeTextField.text = customMaskPostalCode.formatStringWithRange(range: range, string: string)
+            return false
+        }
+        return true
     }
 }
 

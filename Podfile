@@ -17,5 +17,7 @@ target 'Lava Jato' do
 	pod 'CPF-CNPJ-Validator'
 	pod 'DropDown'
   pod 'Alamofire'
-  
+	pod 'TLCustomMask'
+	pod 'IQKeyboardManager'
+
 end

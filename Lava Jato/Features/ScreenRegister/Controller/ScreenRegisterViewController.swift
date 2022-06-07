@@ -11,6 +11,7 @@ import DropDown
 import FirebaseAuth
 import FirebaseFirestore
 import SafariServices
+import TLCustomMask
 
 class ScreenRegisterViewController: UIViewController {
     @IBOutlet weak var nameRegisterTextField: UITextField!
@@ -23,6 +24,7 @@ class ScreenRegisterViewController: UIViewController {
     @IBOutlet weak var postalCodeTextField: UITextField!
     @IBOutlet weak var adressTextField: UITextField!
     @IBOutlet weak var adressNumberTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var checkBox: UIButton!
     @IBOutlet weak var passwordValidationLabel: UILabel!
@@ -39,14 +41,8 @@ class ScreenRegisterViewController: UIViewController {
     var auth: Auth?
     var firestore: Firestore?
     var serverSwitchState:Bool = false
-    
-    func serverSwitch(){
-            if self.switchButton.isOn == true{
-                self.serverSwitchState = true
-            }else{
-                self.serverSwitchState = false
-            }
-        }
+    var customMask = TLCustomMask()
+    var customMaskPostalCode = TLCustomMask()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +72,7 @@ class ScreenRegisterViewController: UIViewController {
         self.postalCodeTextField.delegate = self
         self.adressTextField.delegate = self
         self.adressNumberTextField.delegate = self
+        self.cityTextField.delegate = self
         self.viewModelScreenRegister.textfieldStyle(textField: self.nameRegisterTextField, color: UIColor.ColorDefault)
         self.viewModelScreenRegister.textfieldStyle(textField: self.emailRegisterTextField, color: UIColor.ColorDefault)
         self.viewModelScreenRegister.textfieldStyle(textField: self.numberRegisterTextField, color: UIColor.ColorDefault)
@@ -86,17 +83,19 @@ class ScreenRegisterViewController: UIViewController {
         self.viewModelScreenRegister.textfieldStyle(textField: self.postalCodeTextField, color: UIColor.ColorDefault)
         self.viewModelScreenRegister.textfieldStyle(textField: self.adressTextField, color: UIColor.ColorDefault)
         self.viewModelScreenRegister.textfieldStyle(textField: self.adressNumberTextField, color: UIColor.ColorDefault)
-
+        self.viewModelScreenRegister.textfieldStyle(textField: self.cityTextField, color: UIColor.ColorDefault)
+        customMask.formattingPattern = "($$)$$$$$-$$$$"
+        customMaskPostalCode.formattingPattern = "$$$$$-$$$"
     }
-
+    
     func configButton(){
         self.viewModelScreenRegister.buttonStyle(button: self.selectStatusButton)
         self.viewModelScreenRegister.buttonStyle(button: self.selectGenderButton)
     }
     
     func configPassword(){
-        self.passwordTextField.isSecureTextEntry = true
-        self.confirmPasswordTextField.isSecureTextEntry = true
+        self.viewModelScreenRegister.textFieldSecurity(textField: self.passwordTextField, value: true)
+        self.viewModelScreenRegister.textFieldSecurity(textField: self.confirmPasswordTextField, value: true)
         self.seePasswordButton.setBackgroundImage(UIImage(named: "eyes_off"), for: UIControl.State.normal)
     }
     
@@ -193,39 +192,46 @@ class ScreenRegisterViewController: UIViewController {
     }
     
     func validations(){
-        if self.nameRegisterTextField.textColor == UIColor.red || self.numberRegisterTextField.textColor == UIColor.red || self.dateRegisterTextField.textColor == UIColor.red || self.documentRegisterTextField.textColor == UIColor.red || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.textColor == UIColor.red || self.adressNumberTextField.textColor == UIColor.red || self.passwordTextField.textColor == UIColor.red || self.nameRegisterTextField.text == "" || self.confirmPasswordTextField.textColor == UIColor.red || self.numberRegisterTextField.text == "" || self.passwordTextField.text == "" || self.postalCodeTextField.text == "" || self.adressTextField.text == "" || self.adressNumberTextField.text == "" || self.confirmPasswordTextField.text == "" || self.dateRegisterTextField.text == "" || self.documentRegisterTextField.text == "" || self.selectGenderButton.titleLabel?.text == "Sexo" || self.emailRegisterTextField.text == "" || self.selectStatusButton.titleLabel?.text == "Estado Civil" && self.checkboxFlag == true && self.passwordValidationLabel.text == "Senhas não conferem" && self.passwordValidationLabel.text != "Minimo 6 caracteres"{
+        if self.nameRegisterTextField.textColor == UIColor.red || self.numberRegisterTextField.textColor == UIColor.red || self.dateRegisterTextField.textColor == UIColor.red || self.documentRegisterTextField.textColor == UIColor.red || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.textColor == UIColor.red || self.adressNumberTextField.textColor == UIColor.red || self.passwordTextField.textColor == UIColor.red || self.cityTextField.textColor == UIColor.red || self.nameRegisterTextField.text == "" || self.confirmPasswordTextField.textColor == UIColor.red || self.numberRegisterTextField.text == "" || self.passwordTextField.text == "" || self.postalCodeTextField.text == "" || self.adressTextField.text == "" || self.adressNumberTextField.text == "" || self.confirmPasswordTextField.text == "" || self.dateRegisterTextField.text == "" || self.cityTextField.text == "" || self.documentRegisterTextField.text == "" || self.selectGenderButton.titleLabel?.text == "Sexo" || self.emailRegisterTextField.text == "" || self.selectStatusButton.titleLabel?.text == "Estado Civil" && self.checkboxFlag == true && self.passwordValidationLabel.text == "Senhas não conferem" && self.passwordValidationLabel.text != "Minimo 6 caracteres"{
             self.registerButton.isEnabled = false
         }else{
             self.registerButton.isEnabled = true
         }
     }
+    func serverSwitch(){
+        if self.switchButton.isOn == true{
+            self.serverSwitchState = true
+        }else{
+            self.serverSwitchState = false
+        }
+    }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-            self.serverSwitch()
+        self.serverSwitch()
         if let name = self.nameRegisterTextField.text, let email = self.emailRegisterTextField.text, let password = self.passwordTextField.text, let cellNumber = self.numberRegisterTextField.text, let born = self.dateRegisterTextField.text, let document = self.documentRegisterTextField.text, let cep = self.postalCodeTextField.text, let state = self.selectStatusButton.titleLabel?.text, let gender = self.selectGenderButton.titleLabel?.text, let adress = self.adressTextField.text, let numberAdress = self.adressNumberTextField.text{
-    
-                    self.auth?.createUser(withEmail: email, password: password) { (data, error) in
-                        if error == nil{
-                            if let idUser = data?.user.uid{
-                                self.firestore?.collection("users")
-                                    .document( idUser )
-                                    .setData([
-                                        "name": name,
-                                        "email": email,
-                                        "cellNumber": cellNumber,
-                                        "born": born,
-                                        "document": document,
-                                        "cep": cep,
-                                        "state": state,
-                                        "gender": gender,
-                                        "server": self.serverSwitchState,
-                                        "adress": adress,
-                                        "numberAdress": numberAdress,
-                                        "id": idUser,
-                                    ])
-                            }
-                        }
+            
+            self.auth?.createUser(withEmail: email, password: password) { (data, error) in
+                if error == nil{
+                    if let idUser = data?.user.uid{
+                        self.firestore?.collection("users")
+                            .document( idUser )
+                            .setData([
+                                "name": name,
+                                "email": email,
+                                "cellNumber": cellNumber,
+                                "born": born,
+                                "document": document,
+                                "cep": cep,
+                                "state": state,
+                                "gender": gender,
+                                "server": self.serverSwitchState,
+                                "adress": adress,
+                                "numberAdress": numberAdress,
+                                "id": idUser,
+                            ])
                     }
+                }
+            }
             dismiss(animated: true, completion: nil)
         }else{
             print("Error")
@@ -242,32 +248,12 @@ class ScreenRegisterViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAtributes
     }
     
-    @IBAction func nameAct(_ sender: Any) {
-        let text = self.nameRegisterTextField.text ?? ""
-        if text.isValidName() {
-            self.nameRegisterTextField.textColor = UIColor.black
-        } else {
-            self.nameRegisterTextField.textColor = UIColor.red
-        }
-    }
-    
-    
     @IBAction func postalCodeAct(_ sender: UITextField) {
-        let text = self.postalCodeTextField.text ?? ""
-        if text.isValidPostalCode() {
-            self.postalCodeTextField.textColor = UIColor.black
-        } else {
-            self.postalCodeTextField.textColor = UIColor.red
-        }
+        self.viewModelScreenRegister.validatePostalCode(textField: self.postalCodeTextField)
     }
     
     @IBAction func emailAct(_ sender: Any) {
-        let text = self.emailRegisterTextField.text ?? ""
-        if text.isValidEmail() {
-            self.emailRegisterTextField.textColor = UIColor.black
-        } else {
-            self.emailRegisterTextField.textColor = UIColor.red
-        }
+        self.viewModelScreenRegister.validateEMail(textField: self.emailRegisterTextField)
     }
     
     @IBAction func passwordValidate2(_ sender: Any) {
@@ -311,15 +297,7 @@ class ScreenRegisterViewController: UIViewController {
     
     
     @IBAction func phoneAct(_ sender: Any) {
-        let text = self.numberRegisterTextField.text ?? ""
-        if text.filterPhoneNumber().isValidPhone() {
-            self.numberRegisterTextField.textColor = UIColor.black
-            self.numberValidation.textColor = UIColor.clear
-        } else {
-            self.numberRegisterTextField.textColor = UIColor.red
-            self.numberValidation.textColor = UIColor.red
-            self.numberValidation.text = "Ex: (DD)9099-0909"
-        }
+        self.viewModelScreenRegister.validatePhone(textField: self.numberRegisterTextField, validation: self.numberValidation)
     }
     
     @IBAction func cpfValidate(_ sender: UITextField) {
@@ -340,35 +318,38 @@ extension ScreenRegisterViewController:UITextFieldDelegate{
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == nameRegisterTextField {
-              textField.resignFirstResponder()
-              self.emailRegisterTextField.becomeFirstResponder()
-          } else if textField == emailRegisterTextField {
-              textField.resignFirstResponder()
-              self.passwordTextField.becomeFirstResponder()
-          } else if textField == passwordTextField {
-              textField.resignFirstResponder()
-              self.confirmPasswordTextField.becomeFirstResponder()
-          }  else if textField == confirmPasswordTextField {
-              textField.resignFirstResponder()
-              self.numberRegisterTextField.becomeFirstResponder()
-          }  else if textField == numberRegisterTextField {
-              textField.resignFirstResponder()
-              self.postalCodeTextField.becomeFirstResponder()
-          }  else if textField == postalCodeTextField {
-              textField.resignFirstResponder()
-              self.adressTextField.becomeFirstResponder()
-          }  else if textField == adressTextField {
-              textField.resignFirstResponder()
-              self.adressNumberTextField.becomeFirstResponder()
-          }  else if textField == adressNumberTextField {
-              textField.resignFirstResponder()
-              self.dateRegisterTextField.becomeFirstResponder()
-          }  else if textField == dateRegisterTextField {
-              textField.resignFirstResponder()
-              self.documentRegisterTextField.becomeFirstResponder()
-          }  else {
-              textField.resignFirstResponder()
-          }
+            textField.resignFirstResponder()
+            self.emailRegisterTextField.becomeFirstResponder()
+        } else if textField == emailRegisterTextField {
+            textField.resignFirstResponder()
+            self.passwordTextField.becomeFirstResponder()
+        } else if textField == passwordTextField {
+            textField.resignFirstResponder()
+            self.confirmPasswordTextField.becomeFirstResponder()
+        }  else if textField == confirmPasswordTextField {
+            textField.resignFirstResponder()
+            self.numberRegisterTextField.becomeFirstResponder()
+        }  else if textField == numberRegisterTextField {
+            textField.resignFirstResponder()
+            self.postalCodeTextField.becomeFirstResponder()
+        }  else if textField == postalCodeTextField {
+            textField.resignFirstResponder()
+            self.adressTextField.becomeFirstResponder()
+        }  else if textField == adressTextField {
+            textField.resignFirstResponder()
+            self.adressNumberTextField.becomeFirstResponder()
+        }  else if textField == adressNumberTextField {
+            textField.resignFirstResponder()
+            self.cityTextField.becomeFirstResponder()
+        }else if textField == cityTextField{
+            textField.resignFirstResponder()
+            self.dateRegisterTextField.becomeFirstResponder()
+        }else if textField == dateRegisterTextField {
+            textField.resignFirstResponder()
+            self.documentRegisterTextField.becomeFirstResponder()
+        }  else {
+            textField.resignFirstResponder()
+        }
         cpfValidate(self.documentRegisterTextField)
         self.validations()
         self.setButtonColor()
@@ -376,7 +357,19 @@ extension ScreenRegisterViewController:UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
-    
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        if textField == self.numberRegisterTextField{
+            self.numberRegisterTextField.text = customMask.formatStringWithRange(range: range, string: string)
+            return false
+        }
+        if textField == self.postalCodeTextField{
+            self.postalCodeTextField.text = customMaskPostalCode.formatStringWithRange(range: range, string: string)
+            return false
+        }
+        return true
+    }
 }
 extension ScreenRegisterViewController {
     public func hideKeyboard() {
@@ -388,6 +381,7 @@ extension ScreenRegisterViewController {
     @objc private func dismiKeyboard() {
         self.validations()
         self.validationCheckBox()
+        self.viewModelScreenRegister.validateBirthday(textField: self.dateRegisterTextField)
         view.endEditing(true)
     }
     

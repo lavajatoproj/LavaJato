@@ -59,5 +59,28 @@ class ViewModelEditProfile {
         stateDropDown.show()
     }
     
+    public func disableTextField(textField:UITextField){
+        textField.isEnabled = false
+        textField.textColor = UIColor.darkGray
+
+    }
+    
+    public func validatePostalCode(textField:UITextField){
+        let text = textField.text ?? ""
+        if text.isValidPostalCode() {
+            textField.textColor = UIColor.black
+        } else {
+            textField.textColor = UIColor.red
+        }
+    }
+    public func validatePhone(textField:UITextField){
+        let text = textField.text ?? ""
+        if text.filterPhoneNumber().isValidPhone() {
+            textField.textColor = UIColor.black
+        } else {
+            textField.textColor = UIColor.red
+        }
+    }
+    
 }
 
