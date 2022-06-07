@@ -83,8 +83,9 @@ extension NewServiceViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let user = self.users[indexPath.row]
-//        performSegue(withIdentifier: "requestService", sender: user)
+        tableView.deselectRow(at: indexPath, animated: true)
+        let user = self.viewModel.listUserFilter [indexPath.row]
+        performSegue(withIdentifier: "requestService", sender: user)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

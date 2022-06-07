@@ -30,7 +30,7 @@ class NewServiceViewModel{
     private let firestore = Firestore.firestore()
     
     private var serviceProviders:[Professionals] = []
-    private var listUserFilter:[Professionals] = []
+    public var listUserFilter:[Professionals] = []
     
     private var professionalMen:Bool = true
     private var professionalFemale:Bool = true
