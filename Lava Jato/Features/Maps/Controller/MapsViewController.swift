@@ -12,18 +12,15 @@ import CoreLocation
 
 class MapsViewController: UIViewController{
     
-    let locationManager = CLLocationManager()
-    
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet weak var txtSearch: UITextField!
     
-    @IBAction func locationTapped(_ sender: Any) {
-        gotoPlaces()
-        getCurrentLocation()
-    }
+    let locationManager = CLLocationManager()
+    var locationValue:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mapView.delegate = self
         
         //Configuração adicional após carregar a visualização.
         //Google Maps SDK: COMPASS
@@ -32,6 +29,39 @@ class MapsViewController: UIViewController{
         //Google Maps SDK: User's Location
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
+    }
+    
+    @IBAction func tappedFilterButton(_ sender: UIButton) {
+        print(locationValue)
+    }
+    
+    
+    @IBAction func locationTapped(_ sender: Any) {
+        gotoPlaces()
+        getCurrentLocation()
+    }
+    
+    func reverseGeocode(coordinate: CLLocationCoordinate2D) {
+      // 1
+      let geocoder = GMSGeocoder()
+
+      // 2
+      geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
+        guard
+          let address = response?.firstResult(),
+          let lines = address.lines
+          else {
+            return
+        }
+
+        // 3
+          self.locationValue = lines.joined(separator: "\n")
+
+        // 4
+        UIView.animate(withDuration: 0.25) {
+          self.view.layoutIfNeeded()
+        }
+      }
     }
 
     func gotoPlaces() {
@@ -58,6 +88,12 @@ class MapsViewController: UIViewController{
     func Style(){
         let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
         navigationController?.navigationBar.titleTextAttributes = textAtributes
+    }
+}
+
+extension MapsViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+      reverseGeocode(coordinate: position.target)
     }
 }
 
