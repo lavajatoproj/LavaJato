@@ -94,8 +94,6 @@ class ScreenRegisterViewController: UIViewController {
     }
     
     func configPassword(){
-        //        self.passwordTextField.isSecureTextEntry = true
-        //        self.confirmPasswordTextField.isSecureTextEntry = true
         self.viewModelScreenRegister.textFieldSecurity(textField: self.passwordTextField, value: true)
         self.viewModelScreenRegister.textFieldSecurity(textField: self.confirmPasswordTextField, value: true)
         self.seePasswordButton.setBackgroundImage(UIImage(named: "eyes_off"), for: UIControl.State.normal)
