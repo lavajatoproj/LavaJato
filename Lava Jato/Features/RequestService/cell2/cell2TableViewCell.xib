@@ -17,14 +17,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite observações do pedido" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rzC-qt-soN">
-                        <rect key="frame" x="20" y="0.0" width="315" height="113"/>
+                        <rect key="frame" x="20" y="10" width="315" height="103"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="rzC-qt-soN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ngp-7C-pYI"/>
+                    <constraint firstItem="rzC-qt-soN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Ngp-7C-pYI"/>
                     <constraint firstItem="rzC-qt-soN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="bCx-qd-ogE"/>
                     <constraint firstAttribute="bottom" secondItem="rzC-qt-soN" secondAttribute="bottom" id="frS-JK-sOm"/>
                     <constraint firstAttribute="trailing" secondItem="rzC-qt-soN" secondAttribute="trailing" constant="20" id="meR-pJ-Mzo"/>
@@ -35,7 +35,7 @@
             <connections>
                 <outlet property="observTextField" destination="rzC-qt-soN" id="ygv-7z-a2T"/>
             </connections>
-            <point key="canvasLocation" x="209" y="-1"/>
+            <point key="canvasLocation" x="-4" y="-34"/>
         </tableViewCell>
     </objects>
 </document>
