@@ -12,8 +12,6 @@ import DropDown
 
 private let statusDropDown = DropDown()
 private let genderDropDown = DropDown()
-private let stateDropDown = DropDown()
-
 
 class ViewModelScreenRegister{
     

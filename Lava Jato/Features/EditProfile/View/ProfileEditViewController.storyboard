@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kqS-JS-xWW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kqS-JS-xWW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="295" width="414" height="567"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bcC-BQ-LTf">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="847"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="892"/>
                                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <textField contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zf4-eB-7vG">
@@ -324,7 +324,7 @@
                                     <constraint firstItem="Zf4-eB-7vG" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="leU-3q-yXl"/>
                                     <constraint firstItem="0YP-zH-ucB" firstAttribute="centerX" secondItem="VhG-PR-Znm" secondAttribute="centerX" id="lqw-1o-7A2"/>
                                     <constraint firstItem="ICv-KT-P2U" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="njM-g5-G9G"/>
-                                    <constraint firstItem="bcC-BQ-LTf" firstAttribute="height" secondItem="oek-BX-J4y" secondAttribute="height" priority="550" constant="280" id="oVv-Ua-HBV"/>
+                                    <constraint firstItem="bcC-BQ-LTf" firstAttribute="height" secondItem="oek-BX-J4y" secondAttribute="height" priority="550" constant="325" id="oVv-Ua-HBV"/>
                                     <constraint firstItem="Ius-If-pjX" firstAttribute="centerX" secondItem="oek-BX-J4y" secondAttribute="centerX" id="pEf-Ok-EyX"/>
                                     <constraint firstItem="bcC-BQ-LTf" firstAttribute="top" secondItem="oek-BX-J4y" secondAttribute="top" id="qu7-Zb-sbE"/>
                                     <constraint firstItem="VhG-PR-Znm" firstAttribute="centerX" secondItem="Ius-If-pjX" secondAttribute="centerX" id="rC5-gs-NY3"/>

@@ -59,6 +59,7 @@
 		DA57F342284EFB9200A10550 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047601892849920900C417DE /* UIResponder+Extension.swift */; };
 		DA57F34A284EFD9B00A10550 /* PaymmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57F347284EFD9B00A10550 /* PaymmentViewController.swift */; };
 		DA57F34B284EFD9B00A10550 /* PaymmentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA57F349284EFD9B00A10550 /* PaymmentViewController.storyboard */; };
+		DA625172284F7A1A001FFE31 /* PaymmentScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA625171284F7A1A001FFE31 /* PaymmentScreenViewModel.swift */; };
 		DA72E19F2847D8DA00730217 /* OpenURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA72E19E2847D8DA00730217 /* OpenURL.swift */; };
 		DA9954C627DF895700C89D76 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954C527DF895700C89D76 /* Profile.swift */; };
 		DA9954C927DF899600C89D76 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954C727DF899600C89D76 /* ServiceTableViewCell.swift */; };
@@ -151,6 +152,7 @@
 		DA23ECCA2828BA5500C9E4FD /* ViewModelScreenRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelScreenRegister.swift; sourceTree = "<group>"; };
 		DA57F347284EFD9B00A10550 /* PaymmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymmentViewController.swift; sourceTree = "<group>"; };
 		DA57F349284EFD9B00A10550 /* PaymmentViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PaymmentViewController.storyboard; sourceTree = "<group>"; };
+		DA625171284F7A1A001FFE31 /* PaymmentScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymmentScreenViewModel.swift; sourceTree = "<group>"; };
 		DA72E19E2847D8DA00730217 /* OpenURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURL.swift; sourceTree = "<group>"; };
 		DA9954C527DF895700C89D76 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		DA9954C727DF899600C89D76 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
@@ -623,6 +625,7 @@
 		DA57F345284EFD9B00A10550 /* PaymmentScreen */ = {
 			isa = PBXGroup;
 			children = (
+				DA625170284F79F8001FFE31 /* ViewModel */,
 				DA57F346284EFD9B00A10550 /* Controller */,
 				DA57F348284EFD9B00A10550 /* View */,
 			);
@@ -643,6 +646,14 @@
 				DA57F349284EFD9B00A10550 /* PaymmentViewController.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		DA625170284F79F8001FFE31 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA625171284F7A1A001FFE31 /* PaymmentScreenViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DA9954C227DF891E00C89D76 /* ServiceScreen */ = {
@@ -1133,6 +1144,7 @@
 				DA57F342284EFB9200A10550 /* UIResponder+Extension.swift in Sources */,
 				E15CA72027D56A2E002355B9 /* MapsViewController.swift in Sources */,
 				DA23ECCB2828BA5500C9E4FD /* ViewModelScreenRegister.swift in Sources */,
+				DA625172284F7A1A001FFE31 /* PaymmentScreenViewModel.swift in Sources */,
 				DA57F34A284EFD9B00A10550 /* PaymmentViewController.swift in Sources */,
 				A284A53E282C881600D4241C /* HistoryService.swift in Sources */,
 				E162E07B27ADF53E00C6AD32 /* LoginViewController.swift in Sources */,

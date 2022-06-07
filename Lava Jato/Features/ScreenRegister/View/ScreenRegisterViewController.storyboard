@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fKe-at-6IC">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="1088"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="1168"/>
                                         <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <textField contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome completo" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1Mj-NK-kJ9">
@@ -440,7 +440,7 @@
                                     <constraint firstItem="YTI-XS-LYM" firstAttribute="centerX" secondItem="8Wm-WC-fRS" secondAttribute="centerX" id="rD7-Ar-5v4"/>
                                     <constraint firstItem="0vO-Kg-Z3j" firstAttribute="centerX" secondItem="8Wm-WC-fRS" secondAttribute="centerX" id="sQM-lp-WOs"/>
                                     <constraint firstItem="zxx-Dc-40e" firstAttribute="top" secondItem="J5G-TU-VUE" secondAttribute="bottom" id="sWX-Hb-CkM"/>
-                                    <constraint firstItem="fKe-at-6IC" firstAttribute="height" secondItem="8Wm-WC-fRS" secondAttribute="height" priority="550" constant="270" id="tWr-yg-VBG"/>
+                                    <constraint firstItem="fKe-at-6IC" firstAttribute="height" secondItem="8Wm-WC-fRS" secondAttribute="height" priority="550" constant="350" id="tWr-yg-VBG"/>
                                     <constraint firstItem="17o-3d-p7H" firstAttribute="centerX" secondItem="8Wm-WC-fRS" secondAttribute="centerX" id="ut3-Ka-18a"/>
                                     <constraint firstItem="HIb-v2-v1f" firstAttribute="trailing" secondItem="seT-hL-d48" secondAttribute="trailing" constant="-10" id="wus-gt-GSU"/>
                                     <constraint firstItem="seT-hL-d48" firstAttribute="centerX" secondItem="8Wm-WC-fRS" secondAttribute="centerX" id="xDW-k9-Krw"/>
