@@ -11,6 +11,7 @@ import FirebaseFirestore
 import FirebaseStorage
 import FirebaseStorageUI
 import TLCustomMask
+import ShimmerSwift
 
 class ProfileEditViewController: UIViewController {
     
@@ -47,14 +48,23 @@ class ProfileEditViewController: UIViewController {
     var customMask = TLCustomMask()
     var customMaskPostalCode = TLCustomMask()
     
-    override func viewDidLoad() {
+    override func viewDidLoad()  {
         super.viewDidLoad()
         self.getFuncs()
+        let shimmerView = ShimmeringView(frame: self.profileImageView.frame)
+        self.view.addSubview(shimmerView)
+        shimmerView.contentView = profileImageView
+        shimmerView.isShimmering = true
+        shimmerView.shimmerSpeed = 200
+        shimmerView.shimmerOpacity = 0.0
+        shimmerView.shimmerPauseDuration = 0.0
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.getProfileData()
+
     }
+    
     
     func getFuncs(){
         self.firestore = Firestore.firestore()

@@ -19,5 +19,5 @@ target 'Lava Jato' do
   pod 'Alamofire'
 	pod 'TLCustomMask'
 	pod 'IQKeyboardManager'
-
+	pod 'ShimmerSwift'
 end
