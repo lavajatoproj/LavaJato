@@ -57,6 +57,8 @@
 		DA12C77A27D105BA00B6F080 /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA12C77927D105BA00B6F080 /* ProfileEditViewController.swift */; };
 		DA23ECCB2828BA5500C9E4FD /* ViewModelScreenRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA23ECCA2828BA5500C9E4FD /* ViewModelScreenRegister.swift */; };
 		DA57F342284EFB9200A10550 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047601892849920900C417DE /* UIResponder+Extension.swift */; };
+		DA57F34A284EFD9B00A10550 /* PaymmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA57F347284EFD9B00A10550 /* PaymmentViewController.swift */; };
+		DA57F34B284EFD9B00A10550 /* PaymmentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA57F349284EFD9B00A10550 /* PaymmentViewController.storyboard */; };
 		DA72E19F2847D8DA00730217 /* OpenURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA72E19E2847D8DA00730217 /* OpenURL.swift */; };
 		DA9954C627DF895700C89D76 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954C527DF895700C89D76 /* Profile.swift */; };
 		DA9954C927DF899600C89D76 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9954C727DF899600C89D76 /* ServiceTableViewCell.swift */; };
@@ -147,6 +149,8 @@
 		DA107B4A2828AFED00F40F22 /* ViewModelEditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelEditProfile.swift; sourceTree = "<group>"; };
 		DA12C77927D105BA00B6F080 /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		DA23ECCA2828BA5500C9E4FD /* ViewModelScreenRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelScreenRegister.swift; sourceTree = "<group>"; };
+		DA57F347284EFD9B00A10550 /* PaymmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymmentViewController.swift; sourceTree = "<group>"; };
+		DA57F349284EFD9B00A10550 /* PaymmentViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PaymmentViewController.storyboard; sourceTree = "<group>"; };
 		DA72E19E2847D8DA00730217 /* OpenURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURL.swift; sourceTree = "<group>"; };
 		DA9954C527DF895700C89D76 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		DA9954C727DF899600C89D76 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 		443BAE8D27BF454800751C16 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				DA57F345284EFD9B00A10550 /* PaymmentScreen */,
 				44C17857282C683C000AF2B9 /* NewService */,
 				E18703DB27E94DE7005B3AA9 /* ChangePassword */,
 				DA9954C227DF891E00C89D76 /* ServiceScreen */,
@@ -613,6 +618,31 @@
 				DAB173CF27D1508A00104761 /* ScreenRegisterViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA57F345284EFD9B00A10550 /* PaymmentScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DA57F346284EFD9B00A10550 /* Controller */,
+				DA57F348284EFD9B00A10550 /* View */,
+			);
+			path = PaymmentScreen;
+			sourceTree = "<group>";
+		};
+		DA57F346284EFD9B00A10550 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA57F347284EFD9B00A10550 /* PaymmentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA57F348284EFD9B00A10550 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA57F349284EFD9B00A10550 /* PaymmentViewController.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DA9954C227DF891E00C89D76 /* ServiceScreen */ = {
@@ -1018,6 +1048,7 @@
 				E162E08027ADF54000C6AD32 /* Assets.xcassets in Resources */,
 				44CB762427E941C200A029FA /* PriceTableViewCell.xib in Resources */,
 				44FA259F28177CB7006C1CFB /* ServicesCollectionViewCell.xib in Resources */,
+				DA57F34B284EFD9B00A10550 /* PaymmentViewController.storyboard in Resources */,
 				44A1D92A282A056E0058A4F8 /* Users.json in Resources */,
 				444B7E132831818D007D996E /* NewServiceTableViewCell.xib in Resources */,
 				A212221127D13E3500B24208 /* requestService.storyboard in Resources */,
@@ -1102,6 +1133,7 @@
 				DA57F342284EFB9200A10550 /* UIResponder+Extension.swift in Sources */,
 				E15CA72027D56A2E002355B9 /* MapsViewController.swift in Sources */,
 				DA23ECCB2828BA5500C9E4FD /* ViewModelScreenRegister.swift in Sources */,
+				DA57F34A284EFD9B00A10550 /* PaymmentViewController.swift in Sources */,
 				A284A53E282C881600D4241C /* HistoryService.swift in Sources */,
 				E162E07B27ADF53E00C6AD32 /* LoginViewController.swift in Sources */,
 				A27E7BB2282D8B6B0039C3F7 /* ServiceViewModel.swift in Sources */,
