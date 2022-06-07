@@ -19,49 +19,72 @@ class FilterViewModel{
         self.delegate = delegate
     }
     
-    
-    private var listerPrice:[ProfilePrice] = []
-    private var listGender:[ProfileGender] = []
-    
-    func configPrice(){
-        self.listerPrice.append(ProfilePrice(price: "Valor do serviço", priceMin: "R$20,00", priceMax: "R$800,00", place: "Onde você prefere fazer o serviço?"));
-        self.listerPrice.append(ProfilePrice(price: "Valor do serviço", priceMin: "R$20,00", priceMax: "R$800,00", place: "Onde você prefere fazer o serviço?"))
-    }
-    
-    func configGender(){
-        self.listGender.append(ProfileGender(nameM: "Profissionais homem", nameF: "Profissionais mulher"));
-        self.listGender.append(ProfileGender(nameM: "Profissionais homem", nameF: "Profissionais mulher"))
-    }
-                               
-    func loadPrice(indexPath:IndexPath) -> ProfilePrice{
-            return self.listerPrice[indexPath.row]
-        }
-                               
-    func loadGender(indexPath:IndexPath) -> ProfileGender{
-            return self.listGender[indexPath.row]
-      }
-    
-    func callFunc(){
-        self.configPrice()
-        self.configGender()
-    }
-    
-    var coutArray:Int {
-        return self.listGender.count
-    }
-        var isFirstCell:Bool{
-        return self.listGender.isEmpty
-    }
 
-    var indexPath = IndexPath()
+    
+    init(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double){
+        self.professionalMen = professionalMen
+        self.professionalFemale = professionalFemale
+        self.currentPriceMin = currentPriceMin
+        self.currentPriceMax = currentPriceMax
+    }
+    
+    private var professionalMen:Bool
+    private var professionalFemale:Bool
+    private var currentPriceMin:Double
+    private var currentPriceMax:Double
+    
+    public var getProfessionalMen:Bool{
+        return self.professionalMen
+    }
+    
+    public var getProfessionalFemale:Bool{
+        return self.professionalFemale
+    }
+    
+    public var getCurrentPriceMin:Double{
+        return self.currentPriceMin
+    }
+    
+    public var getCurrentPriceMax:Double{
+        return self.currentPriceMax
+    }
+    
+    public var getGender: ProfileGender{
+        return ProfileGender(stateM: self.professionalMen,stateF: self.professionalFemale)
+    }
+    
+    public var getPrice: ProfilePrice{
+        return ProfilePrice(currentPriceMin: self.currentPriceMin, currentPriceMax: self.currentPriceMax)
+    }
+    
+    var countArray:Int {
+        return 2
+    }
+    
+    func loadHeighForRow(indexPath:IndexPath)-> CGFloat{
+        if indexPath.row == 0 {
+            return 166.0
+        }else{
+            return 466.0
+        }
+    }
+    
+    public func setResult(priceMin: Double, priceMax: Double, type: String){
+        self.currentPriceMin = priceMin
+        self.currentPriceMax = priceMax
+        //TO DO: TYPE
+    }
+    
+    public func setStateSexo(stateM: Bool, stateF: Bool){
+        self.professionalMen = stateM
+        self.professionalFemale = stateF
+        //TO DO: TYPE
+    }
     
     
-    // Linha 74 FilterViewController
-//
- 
 }
-    
- 
+
+
 
 
 

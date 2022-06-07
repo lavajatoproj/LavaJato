@@ -33,7 +33,6 @@ class MyCustomCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         confIniciais()
         
     }

@@ -115,7 +115,9 @@ class myServicesViewController: UIViewController{
                         "service": "Lavagem Simples",
                         "price": self.servicePrice,
                         "value": self.serviceValue,
-                        "house": self.serviceHouse
+                        "house": self.serviceHouse,
+//                        "userImage": self.userImageView as Any,
+                        "userName" : self.nameLabel.text
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")

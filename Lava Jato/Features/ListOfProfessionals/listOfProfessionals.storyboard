@@ -28,7 +28,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha o profissional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NX-x6-uB4">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha o profissional" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NX-x6-uB4">
                                         <rect key="frame" x="20" y="71" width="374" height="36"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="26"/>
                                         <color key="textColor" name="ColorDefault"/>
@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="2765.217391304348" y="81.696428571428569"/>
         </scene>
-        <!--FilterStoryboard-->
+        <!--FilterViewController-->
         <scene sceneID="FDK-P2-9ro">
             <objects>
-                <viewControllerPlaceholder storyboardName="FilterStoryboard" id="T6R-Bu-Cdl" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="FilterViewController" id="T6R-Bu-Cdl" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Fhg-4q-ID9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRw-LF-KKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

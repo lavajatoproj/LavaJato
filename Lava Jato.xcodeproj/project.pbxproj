@@ -13,7 +13,6 @@
 		443BAE9827BF4DE400751C16 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443BAE9727BF4DE400751C16 /* MainScreen.storyboard */; };
 		444B7E0E28317C46007D996E /* ModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444B7E0D28317C46007D996E /* ModelService.swift */; };
 		444B7E122831818D007D996E /* NewServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444B7E102831818D007D996E /* NewServiceTableViewCell.swift */; };
-		444B7E132831818D007D996E /* NewServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 444B7E112831818D007D996E /* NewServiceTableViewCell.xib */; };
 		444B7E1B28318BF7007D996E /* NewServiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444B7E1A28318BF7007D996E /* NewServiceViewModel.swift */; };
 		44779A94282D838D00289C7E /* NewServiceStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44779A93282D838D00289C7E /* NewServiceStoryBoard.storyboard */; };
 		449EFAA727DE3AF4002111DE /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449EFAA627DE3AF3002111DE /* UserProfileViewController.swift */; };
@@ -28,7 +27,8 @@
 		44CB762827E941C800A029FA /* GenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB762627E941C800A029FA /* GenderTableViewCell.swift */; };
 		44CB762927E941C800A029FA /* GenderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CB762727E941C800A029FA /* GenderTableViewCell.xib */; };
 		44CB763227E941F700A029FA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB763127E941F700A029FA /* FilterViewController.swift */; };
-		44CB763427E941FD00A029FA /* FilterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CB763327E941FD00A029FA /* FilterStoryboard.storyboard */; };
+		44CB763427E941FD00A029FA /* FilterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CB763327E941FD00A029FA /* FilterViewController.storyboard */; };
+		44D3C061284EC5A6005CB252 /* NewServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 444B7E112831818D007D996E /* NewServiceTableViewCell.xib */; };
 		44FA259E28177CB7006C1CFB /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA259C28177CB7006C1CFB /* ServicesCollectionViewCell.swift */; };
 		44FA259F28177CB7006C1CFB /* ServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44FA259D28177CB7006C1CFB /* ServicesCollectionViewCell.xib */; };
 		A20B841827DF051B00F29991 /* cellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20B841627DF051B00F29991 /* cellTableViewCell.swift */; };
@@ -91,7 +91,7 @@
 		E162E07B27ADF53E00C6AD32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162E07A27ADF53E00C6AD32 /* LoginViewController.swift */; };
 		E162E08027ADF54000C6AD32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E162E07F27ADF54000C6AD32 /* Assets.xcassets */; };
 		E162E08327ADF54000C6AD32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E162E08127ADF54000C6AD32 /* LaunchScreen.storyboard */; };
-		E18703DA27E9210A005B3AA9 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18703D927E9210A005B3AA9 /* MainScreen.swift */; };
+		E18703DA27E9210A005B3AA9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18703D927E9210A005B3AA9 /* HomeViewController.swift */; };
 		E18703DD27E94E39005B3AA9 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18703DC27E94E39005B3AA9 /* ChangePasswordViewController.swift */; };
 		E18703DF27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E18703DE27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard */; };
 /* End PBXBuildFile section */
@@ -120,7 +120,7 @@
 		44CB762627E941C800A029FA /* GenderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderTableViewCell.swift; sourceTree = "<group>"; };
 		44CB762727E941C800A029FA /* GenderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenderTableViewCell.xib; sourceTree = "<group>"; };
 		44CB763127E941F700A029FA /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
-		44CB763327E941FD00A029FA /* FilterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FilterStoryboard.storyboard; sourceTree = "<group>"; };
+		44CB763327E941FD00A029FA /* FilterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FilterViewController.storyboard; sourceTree = "<group>"; };
 		44FA259C28177CB7006C1CFB /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		44FA259D28177CB7006C1CFB /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
 		69F0FE173FB565D60EF8D8F4 /* Pods-Lava Jato.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lava Jato.release.xcconfig"; path = "Target Support Files/Pods-Lava Jato/Pods-Lava Jato.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		E162E07F27ADF54000C6AD32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E162E08227ADF54000C6AD32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E162E08427ADF54000C6AD32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E18703D927E9210A005B3AA9 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		E18703D927E9210A005B3AA9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E18703DC27E94E39005B3AA9 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		E18703DE27E94E5E005B3AA9 /* ChangePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangePasswordViewController.storyboard; sourceTree = "<group>"; };
 		F1B8CAC749444354C565C54F /* Pods-Lava Jato.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lava Jato.debug.xcconfig"; path = "Target Support Files/Pods-Lava Jato/Pods-Lava Jato.debug.xcconfig"; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 				44CB761B27E941B600A029FA /* PlaceCell */,
 				44CB762027E941C200A029FA /* PriceCell */,
 				44CB762527E941C800A029FA /* ElementCell */,
-				44CB763327E941FD00A029FA /* FilterStoryboard.storyboard */,
+				44CB763327E941FD00A029FA /* FilterViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 		44177A412828895700496587 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E18703D927E9210A005B3AA9 /* MainScreen.swift */,
+				E18703D927E9210A005B3AA9 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1026,10 +1026,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D3C061284EC5A6005CB252 /* NewServiceTableViewCell.xib in Resources */,
 				E162E08327ADF54000C6AD32 /* LaunchScreen.storyboard in Resources */,
 				DA9954CE27DF8A2D00C89D76 /* ServicesViewController.storyboard in Resources */,
 				44CB762927E941C800A029FA /* GenderTableViewCell.xib in Resources */,
-				44CB763427E941FD00A029FA /* FilterStoryboard.storyboard in Resources */,
+				44CB763427E941FD00A029FA /* FilterViewController.storyboard in Resources */,
 				442DD11E27D05D0900C4F033 /* UserProfileViewController.storyboard in Resources */,
 				E13E5B2027D5965B000CB644 /* ErrorConection.storyboard in Resources */,
 				E13E5B2927D6EBF6000CB644 /* ScreenRegisterViewController.storyboard in Resources */,
@@ -1050,7 +1051,6 @@
 				44FA259F28177CB7006C1CFB /* ServicesCollectionViewCell.xib in Resources */,
 				DA57F34B284EFD9B00A10550 /* PaymmentViewController.storyboard in Resources */,
 				44A1D92A282A056E0058A4F8 /* Users.json in Resources */,
-				444B7E132831818D007D996E /* NewServiceTableViewCell.xib in Resources */,
 				A212221127D13E3500B24208 /* requestService.storyboard in Resources */,
 				E15CA71627D52E5B002355B9 /* LoginViewController.storyboard in Resources */,
 				E13E5B3A27D70086000CB644 /* SF-Pro-Text-Light.otf in Resources */,
@@ -1172,7 +1172,7 @@
 				444B7E1B28318BF7007D996E /* NewServiceViewModel.swift in Sources */,
 				DA107B3D2828ACD100F40F22 /* AlertController.swift in Sources */,
 				A212221F27D13EE500B24208 /* MyCustomCell.swift in Sources */,
-				E18703DA27E9210A005B3AA9 /* MainScreen.swift in Sources */,
+				E18703DA27E9210A005B3AA9 /* HomeViewController.swift in Sources */,
 				A2F799CE27DC6A49005A53A3 /* CustomRowTableViewCell.swift in Sources */,
 				DA9954D027DF8A8100C89D76 /* ServicesViewController.swift in Sources */,
 				A284A53B282C832000D4241C /* ListViewModel.swift in Sources */,

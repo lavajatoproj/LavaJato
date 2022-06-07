@@ -12,22 +12,21 @@ import FirebaseStorageUI
 
 class UserProfileViewController: UIViewController {
     
-   
-    @IBOutlet weak var silenceButton: UIButton!
     
+    @IBOutlet weak var silenceButton: UIButton!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var muteImageView: UIImageView!
-    @IBOutlet weak var tappedMyServiceButton: UIButton!
     @IBOutlet weak var tappedHelpButton: UIButton!
-    @IBOutlet weak var tappedRecomendButton: UIButton!
     @IBOutlet weak var tappedLogoutButton: UIButton!
     @IBOutlet weak var notificationButton: UIButton!
+    @IBOutlet weak var recomendButton: UIButton!
+    
     
     var firestore: Firestore?
     var auth: Auth?
-//    var users: [Dictionary<String, Any>] = []
     var idUserLog: String?
+    var alert:AlertController?
     
     func getProfileData(){
         let user = self.firestore?.collection("users").document(self.idUserLog ?? "")
@@ -39,9 +38,8 @@ class UserProfileViewController: UIViewController {
                 if let url = data?["profileImage"] as? String{
                     self.userImageView.sd_setImage(with: URL(string: url), completed: nil)
                 }
-                }
             }
-        )
+        } )
     }
     
     override func viewDidLoad() {
@@ -52,20 +50,24 @@ class UserProfileViewController: UIViewController {
         if let idUser = auth?.currentUser?.uid{
             self.idUserLog = idUser
         }
+        
         self.userImageView.contentMode = .scaleAspectFill
         self.userImageView.layer.cornerRadius = userImageView.frame.height / 2
         self.userImageView.clipsToBounds = true
+        
+        self.alert = AlertController(controller: self)
     }
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
         self.getProfileData()
     }
-
-    @IBAction func tappedMyServiceButton(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "ProfileEditViewController", bundle: nil)
-        let vC = storyboard.instantiateViewController(withIdentifier: "ProfileEditViewController")
-        navigationController?.pushViewController(vC, animated: true)
+    
+    @IBAction func tappedRecomendButton(_ sender: UIButton) {
+        print("Indique o App")
     }
     
     @IBAction func tappedHelpButton(_ sender: UIButton) {
@@ -74,12 +76,16 @@ class UserProfileViewController: UIViewController {
         navigationController?.pushViewController(vC, animated: true)
     }
     
-    @IBAction func tappedRecomendButton(_ sender: UIButton) {
-        self.presentShareSheet()
-    }
     
     @IBAction func tappedLogoutButton(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        do {
+            try auth?.signOut()
+            let storyboard = UIStoryboard(name: "LoginViewController", bundle: nil)
+            let vC = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+            navigationController?.pushViewController(vC, animated: true)
+        } catch _ {
+            self.alert(title:"Ops", message: "Error ao desconectar")
+        }
     }
     
     @IBAction func tappedEditProfile(_ sender: UIButton) {
@@ -91,9 +97,9 @@ class UserProfileViewController: UIViewController {
     @IBAction func tappedActiveSilence(_ sender: UIButton) {
         self.silenceButton.isSelected = !self.silenceButton.isSelected
         if self.silenceButton.isSelected {
-           self.silenceButton.setImage(UIImage(named: "mute32"), for: .normal)
+            self.silenceButton.setImage(UIImage(named: "mute32"), for: .normal)
         } else {
-           self.silenceButton.setImage(UIImage(named: "volume32"), for: .normal)
+            self.silenceButton.setImage(UIImage(named: "volume32"), for: .normal)
         }
         
     }
@@ -109,6 +115,7 @@ class UserProfileViewController: UIViewController {
         self.silenceButton.setImage(UIImage(named: "volume32"), for: .normal)
     }
     
+    
     func presentShareSheet(){
         let text = "Um novo conceito em cuidado com seu veículo."
         let image = UIImage(named: "AppIcon") ?? UIImage()
@@ -120,5 +127,12 @@ class UserProfileViewController: UIViewController {
         
     }
     
+    
+    func alert(title:String, message:String){
+        let alertController:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok:UIAlertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(ok)
+        self.present(alertController, animated: true, completion: nil)
+    }
     
 }

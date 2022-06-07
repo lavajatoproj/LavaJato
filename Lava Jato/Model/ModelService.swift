@@ -8,11 +8,15 @@
 import Foundation
 import UIKit
 
+
+//TO DO: ADD GENDER E O TYPE
 struct Professionals{
     var userImage:UIImage
     var userName:String
-    var userRate:Double
-    var userServices:[WashServices]
+    var id:String
+    var price:Double
+    var house:Bool
+    var service:String
 }
 
 
@@ -25,4 +29,9 @@ struct WashServices{
     var ecoWash:Bool
     var airPurification:Bool
     var sanitation:Bool
+}
+
+
+struct ServiceList{
+    var typeService:String
 }
