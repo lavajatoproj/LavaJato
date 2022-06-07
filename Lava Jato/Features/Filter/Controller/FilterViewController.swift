@@ -59,7 +59,7 @@ extension FilterViewController:UITableViewDataSource{
         } else {
             let cellV = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.identifier, for: indexPath) as? PriceTableViewCell
             cellV?.setupCell(setup: self.viewModel.loadPrice(indexPath:indexPath))
-            self.priceLimit = cellV?.makePrice
+//            self.priceLimit = cellV?.makePrice
             return cellV ?? UITableViewCell()
         }
     }

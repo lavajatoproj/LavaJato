@@ -26,20 +26,21 @@ class NewServiceViewModel{
     private var infos: Users?
     
     let fireStore = Firestore.firestore()
-    var newService:NewServiceViewController = NewServiceViewController()
+    var newService:NewServiceViewController?
     var professionals:[Professionals] = []
     
-    func getFireBaseData(){
-        fireStore.collection("users").getDocuments { snapshot, error in
+    func getFireBaseData(washType:String){
+        fireStore.collection(washType).getDocuments { snapshot, error in
             if error == nil{
                 if let snapshot = snapshot {
                     DispatchQueue.main.async {
                         self.professionals = snapshot.documents.map({ document in
-                            return Professionals(userImage: document["profileImage"] as? UIImage ?? UIImage(),
+                            return Professionals(
+                                userImage: document["profileImage"] as? UIImage ?? UIImage(),
                                                  userName: document["name"] as? String ?? "")
                         })
+                        self.newService?.tableView.reloadData()
                     }
-                    self.newService.tableView.reloadData()
                 }
             }
         }
@@ -65,5 +66,6 @@ class NewServiceViewModel{
         }
     }
     
-    
 }
+
+

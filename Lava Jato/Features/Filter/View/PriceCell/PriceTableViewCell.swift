@@ -28,7 +28,7 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     @IBOutlet weak var bannetCollectionView: UICollectionView!
     @IBOutlet weak var viewResultButton: UIButton!
     
-    var makePrice:String?
+//    var makePrice:String?
     
     static let identifier:String = "PriceTableViewCell"
     static func nib()->UINib{
@@ -57,9 +57,9 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
         
     }
     
-    func takePrice(){
-        self.makePrice = priceMax.text
-    }
+//    func takePrice(){
+//        self.makePrice = priceMax.text
+//    }
     
     @IBAction func tappedViewResultButton(_ sender: UIButton) {
         

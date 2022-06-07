@@ -16,12 +16,22 @@ class NewServiceViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var serviceProviders:[Professionals] = []
+    var typeWash:String
     
-    private var newServiceViewModel:NewServiceViewModel = NewServiceViewModel()
-    //    private var listViewModel:ListViewModel = ListViewModel()
+    private var newServiceViewModel:NewServiceViewModel?
     private var infos: Users?
     var firestore: Firestore?
     var users: [Dictionary<String, Any>] = []
+    private var mainController:HomeViewController = HomeViewController()
+    
+    init?(typeWash:String, coder: NSCoder){
+        self.typeWash = typeWash
+        super.init(coder: coder)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,50 +39,55 @@ class NewServiceViewController: UIViewController {
         self.setup()
         self.configItems()
         self.searchBar.delegate = self
+        self.getServiceProviders(typeWash: typeWash)
+      
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        self.listOfUsers()
+        print(typeWash)
+      
+        
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.newServiceViewModel.getFireBaseData()
+//        self.newServiceViewModel?.getFireBaseData()
     }
     
     
     func setup(){
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.register(MyCustomCell.nib(), forCellReuseIdentifier: MyCustomCell.identifier)
+        self.tableView.register(NewServiceTableViewCell.nib(), forCellReuseIdentifier: NewServiceTableViewCell.identifier)
     }
     
-    func listOfUsers(){
-        self.users.removeAll()
-        self.tableView.reloadData()
+    func getServiceProviders(typeWash:String){
         
-        firestore?.collection("users").getDocuments{ snapshotResult, error in
-            if let snapshot = snapshotResult{
-                for document in snapshot.documents {
-                    let data = document.data()
-                    let servers = data["server"]
-                    if servers as? Int == 1{
-                        self.users.append(data)
+        firestore?.collection(typeWash).getDocuments { snapshot, error in
+            if error == nil{
+                if let snapshot = snapshot {
+                    DispatchQueue.main.async {
+                        self.serviceProviders = snapshot.documents.map({ document in
+                            return Professionals(
+                                userImage: document["profileImage"] as? UIImage ?? UIImage(),
+                                userName: document["userName"] as? String ?? "")
+                        })
+                        print( self.serviceProviders)
+        
+                        self.tableView.reloadData()
                     }
+        
                 }
-                self.tableView.reloadData()
             }
         }
+        
     }
-    
-   
-    
-  
-    
+        
+ 
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "requestService"{
             let viewDestine = segue.destination as? requestServiceViewController
-            
             viewDestine?.user = sender as? Dictionary
         }
     }
@@ -109,37 +124,23 @@ class NewServiceViewController: UIViewController {
 extension NewServiceViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.users.count
+        return self.serviceProviders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: NewServiceTableViewCell? = tableView.dequeueReusableCell(withIdentifier: NewServiceTableViewCell.identifier, for: indexPath) as? NewServiceTableViewCell
-        cell?.setupCell(data: newServiceViewModel.professionals[indexPath.row])
-        
-        
-        
-//
-//        let user = self.users[indexPath.row]
-//
-//        let name  = user["name"] as? String
-//        if let url = user["profileImage"] as? String{
-//            cell?.pictureImageView.sd_setImage(with: URL(string: url), completed: nil)
-//        }else{
-//            cell?.pictureImageView.image = UIImage(systemName: "person.circle.fill")
-//        }
-//
-//        cell?.nameLabel.text = name
-        
-        //        cell?.setupCell(data: self.listViewModel.loadUsers(indexPath: indexPath))
-        
+        cell?.setupCell(data: serviceProviders[indexPath.row])
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        let selectedRow = self.listViewModel.loadUsers(indexPath: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
         let user = self.users[indexPath.row]
         performSegue(withIdentifier: "requestService", sender: user)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 138
     }
     
 }
@@ -153,10 +154,8 @@ extension NewServiceViewController: UISearchBarDelegate{
             }
         }
     }
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText == ""{
-            listOfUsers()
         }
     }
 }
