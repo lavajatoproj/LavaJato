@@ -17,5 +17,4 @@ class RequestViewModel{
         self.listServices.append(Server(opened: false, title: "Forma", service: [ "","Levarei ao local", "Buscar aqui", "Serviço em domicílio"]))
         self.listServices.append(Server(opened: false, title: "", service: [""]))
     }
-
 }

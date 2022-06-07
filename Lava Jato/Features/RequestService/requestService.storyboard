@@ -59,36 +59,36 @@
                                 <rect key="frame" x="0.0" y="219" width="414" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTi-Xq-OfU">
-                                        <rect key="frame" x="20" y="46" width="150" height="31"/>
+                                        <rect key="frame" x="20" y="40" width="120" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="7Lm-aF-Vr1"/>
+                                            <constraint firstAttribute="width" constant="120" id="7Lm-aF-Vr1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
-                                        <color key="textColor" red="0.92443007229999996" green="0.74569165709999996" blue="0.3175045252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serviço" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5B-HN-tsw">
-                                        <rect key="frame" x="20" y="5" width="150" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serviço:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5B-HN-tsw">
+                                        <rect key="frame" x="20" y="5" width="120" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="8wl-yX-Qr3"/>
+                                            <constraint firstAttribute="width" constant="120" id="8wl-yX-Qr3"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
-                                        <color key="textColor" red="0.92443007229999996" green="0.74569165709999996" blue="0.3175045252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4g-sl-i7v">
-                                        <rect key="frame" x="190" y="10" width="214" height="25"/>
+                                        <rect key="frame" x="160" y="5" width="244" height="25"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
-                                        <color key="textColor" red="0.92443007229999996" green="0.74569165709999996" blue="0.3175045252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unT-SO-5A2">
-                                        <rect key="frame" x="190" y="45" width="214" height="31"/>
+                                        <rect key="frame" x="160" y="40" width="244" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="OrV-79-5Va"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
-                                        <color key="textColor" red="0.92443007229999996" green="0.74569165709999996" blue="0.3175045252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -102,15 +102,15 @@
                                     <constraint firstItem="m5B-HN-tsw" firstAttribute="leading" secondItem="HAc-dY-xnF" secondAttribute="leading" constant="20" id="cTh-Zw-dWT"/>
                                     <constraint firstAttribute="trailing" secondItem="H4g-sl-i7v" secondAttribute="trailing" constant="10" id="fj8-tv-pZr"/>
                                     <constraint firstAttribute="height" constant="90" id="i9l-Ol-nqj"/>
-                                    <constraint firstItem="H4g-sl-i7v" firstAttribute="top" secondItem="HAc-dY-xnF" secondAttribute="top" constant="10" id="k3d-t5-lXw"/>
+                                    <constraint firstItem="H4g-sl-i7v" firstAttribute="top" secondItem="HAc-dY-xnF" secondAttribute="top" constant="5" id="k3d-t5-lXw"/>
                                     <constraint firstItem="H4g-sl-i7v" firstAttribute="leading" secondItem="m5B-HN-tsw" secondAttribute="trailing" constant="20" id="wrA-9c-qRX"/>
                                     <constraint firstItem="unT-SO-5A2" firstAttribute="leading" secondItem="UTi-Xq-OfU" secondAttribute="trailing" constant="20" id="y9J-4K-LbT"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="São Paulo - SP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pe-YW-fcT">
-                                <rect key="frame" x="149" y="182" width="116.5" height="25"/>
+                                <rect key="frame" x="142" y="182" width="130" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="116.5" id="K3N-ph-cVK"/>
+                                    <constraint firstAttribute="width" constant="130" id="K3N-ph-cVK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                 <color key="textColor" red="0.92443007229999996" green="0.74569165709999996" blue="0.3175045252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -130,7 +130,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ecJ-1t-wY1">
-                                <rect key="frame" x="116" y="184" width="25" height="20.5"/>
+                                <rect key="frame" x="109" y="184" width="25" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="OHs-xW-HXi"/>
                                     <constraint firstAttribute="width" constant="25" id="ZaF-FG-pLx"/>
@@ -169,6 +169,7 @@
                         <outlet property="EndButton" destination="PHB-12-Upb" id="CUr-if-frG"/>
                         <outlet property="background1ImageView" destination="7si-K5-nYr" id="nCa-OS-FQH"/>
                         <outlet property="background2View" destination="mHS-gx-uQR" id="40k-A2-vkB"/>
+                        <outlet property="houseLabel" destination="unT-SO-5A2" id="b9f-BV-ju1"/>
                         <outlet property="locationImageView" destination="ecJ-1t-wY1" id="aeC-MP-xqI"/>
                         <outlet property="locationLabel" destination="2pe-YW-fcT" id="KH2-zy-w5X"/>
                         <outlet property="nameProfessionalLabel" destination="Sqc-l6-son" id="LRA-Ar-fa4"/>
@@ -177,7 +178,6 @@
                         <outlet property="service1Label" destination="m5B-HN-tsw" id="4cq-LQ-8C0"/>
                         <outlet property="serviceLabel" destination="H4g-sl-i7v" id="LxK-Hs-FKi"/>
                         <outlet property="tableView" destination="RaP-GL-hSf" id="1Qt-yC-0Ph"/>
-                        <outlet property="valueLabel" destination="unT-SO-5A2" id="b9f-BV-ju1"/>
                         <segue destination="D9y-NM-DeU" kind="show" identifier="MainScreen" id="Cin-yd-vkm"/>
                     </connections>
                 </viewController>

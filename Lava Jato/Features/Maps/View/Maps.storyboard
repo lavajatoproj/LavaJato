@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,6 +40,14 @@
                                     <action selector="locationTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DYb-fz-T2N"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLg-9u-Tga">
+                                <rect key="frame" x="150" y="811" width="114" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Filtrar"/>
+                                <connections>
+                                    <action selector="tappedFilterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="st3-qm-E21"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -52,7 +60,10 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="j1x-qP-jdq" secondAttribute="trailing" id="Jav-Su-cPQ"/>
                             <constraint firstItem="j1x-qP-jdq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="VvY-zm-a30"/>
                             <constraint firstItem="jUW-qA-u4h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WVh-BN-wXA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bLg-9u-Tga" secondAttribute="trailing" constant="150" id="YI9-FG-JcV"/>
                             <constraint firstItem="j1x-qP-jdq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="b11-cw-GQG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="bLg-9u-Tga" secondAttribute="bottom" constant="20" id="b87-fR-Frr"/>
+                            <constraint firstItem="bLg-9u-Tga" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="150" id="cAV-QF-A6j"/>
                             <constraint firstItem="6Oh-1K-phN" firstAttribute="leading" secondItem="uZd-bf-puc" secondAttribute="leading" id="ger-OE-Me8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jUW-qA-u4h" secondAttribute="trailing" id="l39-XP-eLt"/>
                             <constraint firstItem="uZd-bf-puc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="n6u-C2-Kjm"/>
