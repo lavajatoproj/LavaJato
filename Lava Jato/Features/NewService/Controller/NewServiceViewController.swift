@@ -19,11 +19,7 @@ class NewServiceViewController: UIViewController {
     var serviceProviders:[Professionals] = []
     var typeWash:String
     
-    private var newServiceViewModel:NewServiceViewModel?
-    private var infos: Users?
-    var firestore: Firestore?
-    var users: [Dictionary<String, Any>] = []
-    private var mainController:HomeViewController = HomeViewController()
+    private var viewModel:NewServiceViewModel = NewServiceViewModel()
     
     init?(typeWash:String, coder: NSCoder){
         self.typeWash = typeWash
@@ -35,55 +31,18 @@ class NewServiceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.firestore = Firestore.firestore()
         self.setup()
         self.configItems()
         self.searchBar.delegate = self
-        self.getServiceProviders(typeWash: typeWash)
-      
+        self.viewModel.delegate(delegate: self)
+        self.viewModel.getFireBaseData(washType: typeWash)
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        print(typeWash)
-      
-        
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-//        self.newServiceViewModel?.getFireBaseData()
-    }
-    
     
     func setup(){
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(NewServiceTableViewCell.nib(), forCellReuseIdentifier: NewServiceTableViewCell.identifier)
     }
-    
-    func getServiceProviders(typeWash:String){
-        
-        firestore?.collection(typeWash).getDocuments { snapshot, error in
-            if error == nil{
-                if let snapshot = snapshot {
-                    DispatchQueue.main.async {
-                        self.serviceProviders = snapshot.documents.map({ document in
-                            return Professionals(
-                                userImage: document["profileImage"] as? UIImage ?? UIImage(),
-                                userName: document["userName"] as? String ?? "")
-                        })
-                        print( self.serviceProviders)
-        
-                        self.tableView.reloadData()
-                    }
-        
-                }
-            }
-        }
-        
-    }
-        
- 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "requestService"{
@@ -92,22 +51,12 @@ class NewServiceViewController: UIViewController {
         }
     }
     
-    func searchUsers(text: String ){
-        let listFilter: [Dictionary<String, Any>] = self.users
-        self.users.removeAll()
-        
-        for item in listFilter{
-            if let name = item["name"] as? String{
-                if name.lowercased().contains(text.lowercased()){
-                    self.users.append(item)
-                }
-            }
-        }
-        self.tableView.reloadData()
-    }
-    
     @objc private func tapFilter(){
-        performSegue(withIdentifier: "filter", sender: nil)
+        let vc:FilterViewController? = UIStoryboard(name: "FilterViewController", bundle: nil).instantiateViewController(identifier: "FilterViewController") { coder -> FilterViewController? in
+            return FilterViewController(professionalMen: self.viewModel.getProfessionalMen, professionalFemale: self.viewModel.getProfessionalFemale, currentPriceMin: self.viewModel.getCurrentPriceMin,currentPriceMax: self.viewModel.getCurrentPriceMax, coder: coder)
+        }
+        vc?.delegate(delegate: self)
+        self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     func configItems(){
@@ -124,19 +73,18 @@ class NewServiceViewController: UIViewController {
 extension NewServiceViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.serviceProviders.count
+        return self.viewModel.countElemented
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: NewServiceTableViewCell? = tableView.dequeueReusableCell(withIdentifier: NewServiceTableViewCell.identifier, for: indexPath) as? NewServiceTableViewCell
-        cell?.setupCell(data: serviceProviders[indexPath.row])
+        cell?.setupCell(data: self.viewModel.loudCurrentProfessional(indexPath: indexPath))
         return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let user = self.users[indexPath.row]
-        performSegue(withIdentifier: "requestService", sender: user)
+//        let user = self.users[indexPath.row]
+//        performSegue(withIdentifier: "requestService", sender: user)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -146,137 +94,36 @@ extension NewServiceViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension NewServiceViewController: UISearchBarDelegate{
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-        if let textSearch = searchBar.text{
-            if textSearch != ""{
-                searchUsers(text: textSearch )
-            }
-        }
-    }
+
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText == ""{
+        if let textSearch = searchBar.text{
+            self.viewModel.searchUsers(text: textSearch)
+            self.tableView.reloadData()
         }
     }
 }
 
 
+extension NewServiceViewController:FilterViewControllerDelegate{
+    func resultFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double) {
+        self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax)
+        self.tableView.reloadData()
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//    @IBOutlet weak var searchSearchBar: UISearchBar!
-//    @IBOutlet weak var titleLabel: UILabel!
-//    @IBOutlet weak var tableView: UITableView!
-//
-//    private var newServiceViewModel:NewServiceViewModel = NewServiceViewModel()
-//    private var infos: Users?
-//
-//
-//    private var arrayNames2:[Professionals] = [
-//        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Thiago", userRate: 4.5, userServices: [.init(simpleWash: true, completWash: true, washPolishing: true, dryWash: true, steamWash: false, ecoWash: false, airPurification: false, sanitation: true)]),
-//        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Bruno", userRate: 4.5, userServices: [.init(simpleWash: false, completWash: false, washPolishing: false, dryWash: false, steamWash: false, ecoWash: true, airPurification: false, sanitation: true)]),
-//        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Olivia", userRate: 4.5, userServices: [.init(simpleWash: false, completWash: true, washPolishing: true, dryWash: true, steamWash: false, ecoWash: true, airPurification: false, sanitation: true)]),
-//        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Fred", userRate: 4.5, userServices: [.init(simpleWash: true, completWash: true, washPolishing: true, dryWash: true, steamWash: true, ecoWash: false, airPurification: false, sanitation: true)]),
-//        Professionals(userImage: UIImage(systemName:"person.circle") ?? UIImage(), userName: "Joao", userRate: 4.5, userServices: [.init(simpleWash: false, completWash: true, washPolishing: true, dryWash: true, steamWash: true, ecoWash: true, airPurification: true, sanitation: true)])
-//
-//    ]
-//
-//    public var filterArray:[Professionals] = []
-//
-//    func setup(){
-////        searchTextField.leftViewMode = UITextField.ViewMode.always
-//        let search = UIImageView(frame: CGRect(x: 10, y: 0, width: 20, height: 20))
-//        let image = UIImage.init(systemName: "magnifyingglass")
-//        search.image = image
-//        let searchView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 20))
-//        searchView.addSubview(search)
-////        searchTextField.leftView = searchView
-//    }
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        self.setup()
-//        self.configItems()
-//        self.configtableView()
-//    }
-//
-//    @objc private func tapFilter(){
-//        performSegue(withIdentifier: "filter", sender: nil)
-//    }
-//
-//    private func configtableView(){
-//        self.tableView.dataSource = self
-//        self.tableView.delegate = self
-//        self.tableView.register(UINib(nibName: "NewServiceCell", bundle: nil), forCellReuseIdentifier: "NewServiceCell")
-//    }
-//
-//    func configItems(){
-//        self.navigationController?.navigationBar.tintColor = UIColor.ColorDefault
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-//            image: UIImage(named: "filter"),
-//            style: .done,
-//            target: self,
-//            action: #selector(tapFilter)
-//        )
-//    }
-//}
-//
-//
-//extension NewServiceViewController: NewServiceViewModelDelegate{
-//
-//    func success() {
-//        self.setup()
-//        tableView.reloadData()
-//    }
-//
-//    func error() {
-//        print(#function)
-//    }
-//}
-//
-//
-//
-//extension NewServiceViewController:UITableViewDataSource,UITableViewDelegate{
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return newServiceViewModel.countElements
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell: MyCustomCell? = tableView.dequeueReusableCell(withIdentifier: MyCustomCell.identifier, for: indexPath) as? MyCustomCell
-////        cell?.setUpCell(professionals:filterArray[indexPath.row])
-////        cell?.setupCell(data: self.newServiceViewModel.loadUsers(indexPath: indexPath))
-//        return cell ?? UITableViewCell()
-//    }
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let selectedRow = self.newServiceViewModel.loadUsers(indexPath: indexPath)
-//        performSegue(withIdentifier: "requestService", sender: selectedRow)
-//        tableView.deselectRow(at: indexPath, animated: false)
-//    }
-//}
-//
-//
-//
-//
-
-
+extension NewServiceViewController:NewServiceViewModelDelegate{
+    func success() {
+        
+    }
+    
+    func error() {
+        
+    }
+    
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+}

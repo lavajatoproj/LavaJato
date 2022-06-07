@@ -62,16 +62,14 @@ let dataPlace: [ProfileBanner] = [
 // MARK: - ProfilePrice
 
 struct ProfilePrice{
-    let price:String
-    var priceMin:String
-    var priceMax:String
-    let place:String
+    var currentPriceMin:Double
+    var currentPriceMax:Double
 }
 
 // MARK: - ProfileGenre
 
 struct ProfileGender{
-    let nameM:String
-    let nameF:String
+    let stateM:Bool
+    let stateF:Bool
 }
 

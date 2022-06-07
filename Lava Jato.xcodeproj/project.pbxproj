@@ -27,7 +27,7 @@
 		44CB762827E941C800A029FA /* GenderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB762627E941C800A029FA /* GenderTableViewCell.swift */; };
 		44CB762927E941C800A029FA /* GenderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CB762727E941C800A029FA /* GenderTableViewCell.xib */; };
 		44CB763227E941F700A029FA /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CB763127E941F700A029FA /* FilterViewController.swift */; };
-		44CB763427E941FD00A029FA /* FilterStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CB763327E941FD00A029FA /* FilterStoryboard.storyboard */; };
+		44CB763427E941FD00A029FA /* FilterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CB763327E941FD00A029FA /* FilterViewController.storyboard */; };
 		44D3C061284EC5A6005CB252 /* NewServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 444B7E112831818D007D996E /* NewServiceTableViewCell.xib */; };
 		44FA259E28177CB7006C1CFB /* ServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA259C28177CB7006C1CFB /* ServicesCollectionViewCell.swift */; };
 		44FA259F28177CB7006C1CFB /* ServicesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44FA259D28177CB7006C1CFB /* ServicesCollectionViewCell.xib */; };
@@ -120,7 +120,7 @@
 		44CB762627E941C800A029FA /* GenderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderTableViewCell.swift; sourceTree = "<group>"; };
 		44CB762727E941C800A029FA /* GenderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenderTableViewCell.xib; sourceTree = "<group>"; };
 		44CB763127E941F700A029FA /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
-		44CB763327E941FD00A029FA /* FilterStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FilterStoryboard.storyboard; sourceTree = "<group>"; };
+		44CB763327E941FD00A029FA /* FilterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FilterViewController.storyboard; sourceTree = "<group>"; };
 		44FA259C28177CB7006C1CFB /* ServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		44FA259D28177CB7006C1CFB /* ServicesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollectionViewCell.xib; sourceTree = "<group>"; };
 		69F0FE173FB565D60EF8D8F4 /* Pods-Lava Jato.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lava Jato.release.xcconfig"; path = "Target Support Files/Pods-Lava Jato/Pods-Lava Jato.release.xcconfig"; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 				44CB761B27E941B600A029FA /* PlaceCell */,
 				44CB762027E941C200A029FA /* PriceCell */,
 				44CB762527E941C800A029FA /* ElementCell */,
-				44CB763327E941FD00A029FA /* FilterStoryboard.storyboard */,
+				44CB763327E941FD00A029FA /* FilterViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1030,7 +1030,7 @@
 				E162E08327ADF54000C6AD32 /* LaunchScreen.storyboard in Resources */,
 				DA9954CE27DF8A2D00C89D76 /* ServicesViewController.storyboard in Resources */,
 				44CB762927E941C800A029FA /* GenderTableViewCell.xib in Resources */,
-				44CB763427E941FD00A029FA /* FilterStoryboard.storyboard in Resources */,
+				44CB763427E941FD00A029FA /* FilterViewController.storyboard in Resources */,
 				442DD11E27D05D0900C4F033 /* UserProfileViewController.storyboard in Resources */,
 				E13E5B2027D5965B000CB644 /* ErrorConection.storyboard in Resources */,
 				E13E5B2927D6EBF6000CB644 /* ScreenRegisterViewController.storyboard in Resources */,

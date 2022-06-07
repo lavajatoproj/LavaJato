@@ -8,27 +8,22 @@
 import UIKit
 
 protocol PriceTableViewCellDelegate:AnyObject{
-    func takePrice()
+    func result(priceMin:Double,priceMax:Double,type:String)
 }
-
 
 class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate{
     
-    private weak var delegate:PriceTableViewCellDelegate?
-    public func delegate(delegate:PriceTableViewCellDelegate?){
-        self.delegate = delegate
-    }
-    
-    
-    @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var selectSlider: UISlider!
-    @IBOutlet weak var priceMin: UILabel!
-    @IBOutlet weak var priceMax: UILabel!
+    @IBOutlet weak var priceMinTextField: UITextField!
+    @IBOutlet weak var priceMaxTextField: UITextField!
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var bannetCollectionView: UICollectionView!
     @IBOutlet weak var viewResultButton: UIButton!
     
-//    var makePrice:String?
+    private weak var delegate:PriceTableViewCellDelegate?
+    
+    public func delegate(delegate:PriceTableViewCellDelegate?){
+        self.delegate = delegate
+    }
     
     static let identifier:String = "PriceTableViewCell"
     static func nib()->UINib{
@@ -47,33 +42,18 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
         //Register
         bannetCollectionView.register(UINib(nibName: "PlaceCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PlaceCollectionViewCell")
         bannetCollectionView.dataSource = self
+        self.priceMaxTextField.delegate = self
+        self.priceMinTextField.delegate = self
     }
-    
-    
-    @IBAction func selectSlider(_ sender: UISlider) {
-        let choose = Int(sender.value/10) * 10
-            sender.setValue(Float(choose), animated: false)
-        self.priceMax.text = "R$\(choose),00"
-        
-    }
-    
-//    func takePrice(){
-//        self.makePrice = priceMax.text
-//    }
     
     @IBAction func tappedViewResultButton(_ sender: UIButton) {
-        
+        self.delegate?.result(priceMin: Double(self.priceMinTextField.text ?? "") ?? 0.0, priceMax: Double(self.priceMaxTextField.text ?? "") ?? 0.0,type: "Tipo do servico")
     }
-    
     
     public func setupCell(setup:ProfilePrice){
-        self.priceLabel.text = setup.price
-        self.priceMin.text = setup.priceMin
-        self.priceMax.text = setup.priceMax
-        self.placeLabel.text = setup.place
+        self.priceMinTextField.text = String(setup.currentPriceMin)
+        self.priceMaxTextField.text = String(setup.currentPriceMax)
     }
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataPlace.count
@@ -84,6 +64,15 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
         cellC?.setupCell(with: dataPlace[indexPath.row])
         return cellC ?? UICollectionViewCell()
     }
+}
+
+extension PriceTableViewCell:UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 }
 
 

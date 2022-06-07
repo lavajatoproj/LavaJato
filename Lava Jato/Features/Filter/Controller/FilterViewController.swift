@@ -7,12 +7,23 @@
 
 import UIKit
 
+protocol FilterViewControllerDelegate:AnyObject{
+    func resultFilter(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double)
+}
+
 class FilterViewController: UIViewController{
     
     @IBOutlet weak var callMapsButton: UIButton!
     @IBOutlet weak var tViewTableView: UITableView!
     
-    private var viewModel:FilterViewModel = FilterViewModel()
+    
+    private weak var delegate:FilterViewControllerDelegate?
+    
+    public func delegate(delegate:FilterViewControllerDelegate?){
+        self.delegate = delegate
+    }
+    
+    private var viewModel:FilterViewModel
     
     var nameCity:String?
     var profMan:Bool?
@@ -20,10 +31,18 @@ class FilterViewController: UIViewController{
     var priceLimit:String?
 //    var placeService
     
+    //Falta o Type e tambem a localidade
+    init?(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double, coder: NSCoder){
+        self.viewModel = FilterViewModel(professionalMen: professionalMen, professionalFemale: professionalFemale,currentPriceMin:currentPriceMin,currentPriceMax: currentPriceMax)
+        super.init(coder: coder)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.settingsTView()
-        self.viewModel.callFunc()
         self.navigationController?.navigationBar.tintColor = UIColor.ColorDefault
     }
     
@@ -48,23 +67,39 @@ extension FilterViewController:UITableViewDelegate{}
 extension FilterViewController:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.coutArray
+        return self.viewModel.countArray
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: GenderTableViewCell.identifier, for: indexPath) as? GenderTableViewCell
-            cell?.setupCell(profile: self.viewModel.loadGender(indexPath: indexPath))
+            cell?.setupCell(profile: self.viewModel.getGender)
+            cell?.delegate(delegate: self)
             return cell ?? UITableViewCell()
         } else {
             let cellV = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.identifier, for: indexPath) as? PriceTableViewCell
-            cellV?.setupCell(setup: self.viewModel.loadPrice(indexPath:indexPath))
-//            self.priceLimit = cellV?.makePrice
+            cellV?.setupCell(setup: self.viewModel.getPrice)
+            cellV?.delegate(delegate: self)
             return cellV ?? UITableViewCell()
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.loadHeighForRow(indexPath: indexPath)
+    }
+    
+}
+
+extension FilterViewController:GenderTableViewCellDelegate{
+    func tappedSwitch(stateM: Bool, stateF: Bool) {
+        self.viewModel.setStateSexo(stateM: stateM, stateF: stateF)
+    }
+}
+
+extension FilterViewController:PriceTableViewCellDelegate{
+    func result(priceMin: Double, priceMax: Double, type: String) {
+        self.viewModel.setResult(priceMin: priceMin, priceMax: priceMax, type: type)
+        self.delegate?.resultFilter(professionalMen: self.viewModel.getProfessionalMen, professionalFemale: self.viewModel.getProfessionalFemale, currentPriceMin: self.viewModel.getCurrentPriceMin, currentPriceMax: self.viewModel.getCurrentPriceMax)
+        self.navigationController?.popViewController(animated: true)
     }
 }

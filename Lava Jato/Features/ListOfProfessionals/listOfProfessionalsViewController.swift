@@ -16,7 +16,7 @@ class listOfProfessionalsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     
-//    private var listViewModel:ListViewModel = ListViewModel()
+    private var viewModel:ListViewModel = ListViewModel()
     private var infos: Users?
     var firestore: Firestore?
     var users: [Dictionary<String, Any>] = []
@@ -48,8 +48,8 @@ class listOfProfessionalsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.listViewModel.fetchHistory()
-//        self.listViewModel.delegate(delegate: self)
+//      self.listViewModel.fetchHistory()
+//      self.listViewModel.delegate(delegate: self)
         self.firestore = Firestore.firestore()
         self.setup()
         self.configItems()
@@ -82,9 +82,18 @@ class listOfProfessionalsViewController: UIViewController {
         self.tableView.reloadData()
     }
     
+    
+    // MARK: - inicio da alteração
+    // adicionado novo forma para chamar e voltar o filtro
     @objc private func tapFilter(){
-        performSegue(withIdentifier: "filter", sender: nil)
+        let vc:FilterViewController? = UIStoryboard(name: "FilterViewController", bundle: nil).instantiateViewController(identifier: "FilterViewController") { coder -> FilterViewController? in
+            return FilterViewController(professionalMen: self.viewModel.getProfessionalMen, professionalFemale: self.viewModel.getProfessionalFemale, currentPriceMin: self.viewModel.getCurrentPriceMin,currentPriceMax: self.viewModel.getCurrentPriceMax, coder: coder)
+        }
+        vc?.delegate(delegate: self)
+        self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
+    //MARK: -  Fim da alteração
+    
     
     
     func configItems(){
@@ -97,10 +106,10 @@ class listOfProfessionalsViewController: UIViewController {
         )
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let vcRequest = segue.destination as? requestServiceViewController
-//        vcRequest?.nameProfessional = titleLabel.text ?? "salve"
-//    }
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        let vcRequest = segue.destination as? requestServiceViewController
+    //        vcRequest?.nameProfessional = titleLabel.text ?? "salve"
+    //    }
     
 }
 
@@ -125,7 +134,7 @@ extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MyCustomCell? = tableView.dequeueReusableCell(withIdentifier: MyCustomCell.identifier, for: indexPath) as? MyCustomCell
-     
+        
         
         
         let user = self.users[indexPath.row]
@@ -138,7 +147,7 @@ extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDat
         
         cell?.nameLabel.text = name
         
-//        cell?.setupCell(data: self.listViewModel.loadUsers(indexPath: indexPath))
+        //        cell?.setupCell(data: self.listViewModel.loadUsers(indexPath: indexPath))
         
         return cell ?? UITableViewCell()
     }
@@ -146,7 +155,7 @@ extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDat
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let selectedRow = self.listViewModel.loadUsers(indexPath: indexPath)
+        //        let selectedRow = self.listViewModel.loadUsers(indexPath: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
         let user = self.users[indexPath.row]
         performSegue(withIdentifier: "requestService", sender: user)
@@ -172,4 +181,12 @@ extension listOfProfessionalsViewController: UISearchBarDelegate{
         }
     }
     
+}
+
+// MARK: -  Criado extension para receber delegate
+extension listOfProfessionalsViewController:FilterViewControllerDelegate{
+    func resultFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double) {
+        self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax)
+        self.tableView.reloadData()
+    }
 }

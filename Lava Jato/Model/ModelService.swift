@@ -8,9 +8,15 @@
 import Foundation
 import UIKit
 
+
+//TO DO: ADD GENDER E O TYPE
 struct Professionals{
     var userImage:UIImage
     var userName:String
+    var id:String
+    var price:Double
+    var house:Bool
+    var service:String
 }
 
 

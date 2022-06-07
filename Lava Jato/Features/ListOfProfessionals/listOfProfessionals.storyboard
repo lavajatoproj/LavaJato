@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="2765.217391304348" y="81.696428571428569"/>
         </scene>
-        <!--FilterStoryboard-->
+        <!--FilterViewController-->
         <scene sceneID="FDK-P2-9ro">
             <objects>
-                <viewControllerPlaceholder storyboardName="FilterStoryboard" id="T6R-Bu-Cdl" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="FilterViewController" id="T6R-Bu-Cdl" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Fhg-4q-ID9"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRw-LF-KKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
