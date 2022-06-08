@@ -83,8 +83,10 @@ class ProfileEditViewController: UIViewController {
                 self.numberTextField.text = dataNumber as? String
                 let dataEmail = data?["email"]
                 self.emailTextField.text = dataEmail as? String
-                let dataCity = data?["cep"]
-                self.postalCodeTextField.text = dataCity as? String
+                let dataCity = data?["city"]
+                self.cityTextField.text = dataCity as? String
+                let dataCep = data?["cep"]
+                self.postalCodeTextField.text = dataCep as? String
                 let dataAdress = data?["adress"]
                 self.adressTextField.text = dataAdress as? String
                 let dataAdressNumber = data?["numberAdress"]
@@ -166,7 +168,7 @@ class ProfileEditViewController: UIViewController {
         }
     }
     
-    func saveData(name:String, profileImage:String, email: String, cellNumber: String, born: String, document:String, cep:String, state:String, gender:String, server:Bool, adress:String, numberAdress:String){
+    func saveData(name:String, profileImage:String, email: String, cellNumber: String, born: String, document:String, cep:String, state:String, gender:String, server:Bool, adress:String, numberAdress:String, city:String){
         self.firestore.collection("users").document( self.idUserLog ?? "" )
             .setData([
                 "profileImage": profileImage,
@@ -176,6 +178,7 @@ class ProfileEditViewController: UIViewController {
                 "born": born,
                 "document": document,
                 "cep": cep,
+                "city": city,
                 "state": state,
                 "gender": gender,
                 "server": server,
@@ -212,7 +215,7 @@ class ProfileEditViewController: UIViewController {
     }
     
     func completionRegister(with url:String = ""){
-        self.saveData(name: self.nameTextField.text ?? "", profileImage: url, email: self.emailTextField.text ?? "", cellNumber: self.numberTextField.text ?? "", born: self.dateTextField.text ?? "", document: self.document ?? "", cep: self.postalCodeTextField.text ?? "", state: self.state ?? "", gender: self.gender ?? "", server: self.serverState ?? false, adress: self.adressTextField.text ?? "", numberAdress: self.numberAdressTextField.text ?? "")
+        self.saveData(name: self.nameTextField.text ?? "", profileImage: url, email: self.emailTextField.text ?? "", cellNumber: self.numberTextField.text ?? "", born: self.dateTextField.text ?? "", document: self.document ?? "", cep: self.postalCodeTextField.text ?? "", state: self.state ?? "", gender: self.gender ?? "", server: self.serverState ?? false, adress: self.adressTextField.text ?? "", numberAdress: self.numberAdressTextField.text ?? "", city: self.cityTextField.text ?? "")
     }
     @IBAction func tappedSaveButton(_ sender: UIButton) {
         if self.numberTextField.text == "" || self.numberTextField.textColor == UIColor.red || self.postalCodeTextField.text == "" || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.text == "" || self.adressTextField.textColor == UIColor.red || self.numberAdressTextField.text == "" || self.cityTextField.text == "" || self.numberAdressTextField.textColor == UIColor.red {
@@ -231,7 +234,7 @@ class ProfileEditViewController: UIViewController {
     }
     
     @IBAction func tappedChangeService(_ sender: UIButton) {
-        self.viewModelEditProfile.instantiateVC(nameVC: "myServices", navigation: navigationController ?? UINavigationController())
+        self.viewModelEditProfile.instantiateVC(nameVC: "MyServices", navigation: navigationController ?? UINavigationController())
     }
     
     

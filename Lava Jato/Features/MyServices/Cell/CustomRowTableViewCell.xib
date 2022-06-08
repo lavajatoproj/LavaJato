@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="156" id="KGk-i7-Jjw" customClass="CustomRowTableViewCell" customModule="Lava_Jato" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="384" height="156"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="189" id="KGk-i7-Jjw" customClass="CustomRowTableViewCell" customModule="Lava_Jato" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="189"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="384" height="156"/>
+                <rect key="frame" x="0.0" y="0.0" width="384" height="189"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="s0G-Z3-5iv">
@@ -26,14 +26,11 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzS-Vb-VQV">
                         <rect key="frame" x="20" y="17" width="285" height="31"/>
                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="22"/>
-                        <color key="textColor" red="0.0" green="0.21859122580000001" blue="0.51684874300000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HDD-GF-iHI">
-                        <rect key="frame" x="167.5" y="108" width="51" height="31"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="49" id="7Eq-5e-vyj"/>
-                        </constraints>
+                        <rect key="frame" x="38" y="135.5" width="51" height="31"/>
                         <color key="onTintColor" red="0.0" green="0.21859122580000001" blue="0.51684874300000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
                             <action selector="tappedHouseSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="9W1-xc-bVy"/>
@@ -44,39 +41,68 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Busca em casa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS4-Zz-GWF">
-                        <rect key="frame" x="20" y="113" width="139.5" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Busca em casa" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS4-Zz-GWF">
+                        <rect key="frame" x="20" y="113" width="85" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nMH-i0-A3x">
+                        <rect key="frame" x="167.5" y="135.5" width="51" height="31"/>
+                        <color key="onTintColor" red="0.0" green="0.21859122580000001" blue="0.51684874300000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tem local" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFN-HM-lPP">
+                        <rect key="frame" x="165" y="113" width="54" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gK3-dg-96L">
+                        <rect key="frame" x="292" y="135.5" width="51" height="31"/>
+                        <color key="onTintColor" red="0.0" green="0.21859122580000001" blue="0.51684874300000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vai na residência" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9q-aC-ZEg">
+                        <rect key="frame" x="268.5" y="113" width="95.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="HDD-GF-iHI" firstAttribute="centerX" secondItem="pS4-Zz-GWF" secondAttribute="centerX" id="66c-Eh-ciN"/>
+                    <constraint firstItem="Z9q-aC-ZEg" firstAttribute="top" secondItem="Rhb-Us-0oH" secondAttribute="bottom" constant="14" id="6jM-HU-l53"/>
+                    <constraint firstItem="Z9q-aC-ZEg" firstAttribute="trailing" secondItem="Rhb-Us-0oH" secondAttribute="trailing" id="8dn-Mc-P3R"/>
+                    <constraint firstItem="nMH-i0-A3x" firstAttribute="centerX" secondItem="NFN-HM-lPP" secondAttribute="centerX" id="AnH-HG-wKP"/>
                     <constraint firstItem="pS4-Zz-GWF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Chz-fn-57N"/>
                     <constraint firstItem="CzS-Vb-VQV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="ENw-Tq-iDZ"/>
                     <constraint firstAttribute="trailing" secondItem="Rhb-Us-0oH" secondAttribute="trailing" constant="20" id="EeL-nv-nxg"/>
                     <constraint firstItem="Rhb-Us-0oH" firstAttribute="top" secondItem="CzS-Vb-VQV" secondAttribute="bottom" constant="17" id="HxR-RN-q6O"/>
-                    <constraint firstItem="HDD-GF-iHI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Sja-7e-u6r"/>
+                    <constraint firstItem="NFN-HM-lPP" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="JJi-y2-QZK"/>
+                    <constraint firstItem="gK3-dg-96L" firstAttribute="centerX" secondItem="Z9q-aC-ZEg" secondAttribute="centerX" id="OI6-8Z-Aeq"/>
+                    <constraint firstItem="nMH-i0-A3x" firstAttribute="top" secondItem="NFN-HM-lPP" secondAttribute="bottom" constant="8" symbolic="YES" id="UAi-1C-iKK"/>
                     <constraint firstItem="Rhb-Us-0oH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Vog-LA-uum"/>
+                    <constraint firstItem="NFN-HM-lPP" firstAttribute="top" secondItem="Rhb-Us-0oH" secondAttribute="bottom" constant="14" id="Wdf-yQ-wSb"/>
                     <constraint firstItem="s0G-Z3-5iv" firstAttribute="leading" secondItem="CzS-Vb-VQV" secondAttribute="trailing" constant="10" id="ciC-99-GW9"/>
                     <constraint firstItem="pS4-Zz-GWF" firstAttribute="top" secondItem="Rhb-Us-0oH" secondAttribute="bottom" constant="14" id="fRs-vj-K5B"/>
-                    <constraint firstItem="HDD-GF-iHI" firstAttribute="top" secondItem="Rhb-Us-0oH" secondAttribute="bottom" constant="9" id="lCn-7l-y7l"/>
-                    <constraint firstItem="HDD-GF-iHI" firstAttribute="leading" secondItem="pS4-Zz-GWF" secondAttribute="trailing" constant="8" symbolic="YES" id="nPk-YW-JT4"/>
+                    <constraint firstItem="HDD-GF-iHI" firstAttribute="top" secondItem="pS4-Zz-GWF" secondAttribute="bottom" constant="8" symbolic="YES" id="iaj-LP-0qd"/>
                     <constraint firstItem="CzS-Vb-VQV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nze-zJ-ka8"/>
                     <constraint firstAttribute="trailing" secondItem="s0G-Z3-5iv" secondAttribute="trailing" constant="20" id="oHe-6I-qtt"/>
                     <constraint firstItem="s0G-Z3-5iv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="pux-1V-dvR"/>
+                    <constraint firstItem="gK3-dg-96L" firstAttribute="top" secondItem="Z9q-aC-ZEg" secondAttribute="bottom" constant="8" symbolic="YES" id="yVy-g8-m6M"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="goHouseSwitch" destination="gK3-dg-96L" id="Llf-hk-chk"/>
+                <outlet property="haveLocationSwitch" destination="nMH-i0-A3x" id="n3L-bP-Yo3"/>
                 <outlet property="houseSwitch" destination="HDD-GF-iHI" id="UhU-kB-lQa"/>
                 <outlet property="priceTextField" destination="Rhb-Us-0oH" id="vKf-yH-1Bg"/>
                 <outlet property="productLabel" destination="CzS-Vb-VQV" id="Cy6-nB-KBg"/>
                 <outlet property="serviceSwitch" destination="s0G-Z3-5iv" id="xaj-LO-nzH"/>
             </connections>
-            <point key="canvasLocation" x="260.86956521739131" y="77.678571428571431"/>
+            <point key="canvasLocation" x="26" y="73"/>
         </tableViewCell>
     </objects>
 </document>

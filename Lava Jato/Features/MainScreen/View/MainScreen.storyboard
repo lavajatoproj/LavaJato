@@ -77,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="4345" y="-101"/>
         </scene>
-        <!--listOfProfessionals-->
+        <!--ListOfProfessionals-->
         <scene sceneID="cyC-Sx-dHM">
             <objects>
-                <viewControllerPlaceholder storyboardName="listOfProfessionals" id="P9Y-ZF-Gc8" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="ListOfProfessionals" id="P9Y-ZF-Gc8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="j3e-xl-nAB"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GwA-8R-wlj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

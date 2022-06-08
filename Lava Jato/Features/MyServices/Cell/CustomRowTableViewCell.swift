@@ -16,7 +16,9 @@ class CustomRowTableViewCell: UITableViewCell {
     @IBOutlet weak var productLabel: UILabel!
     @IBOutlet weak var serviceSwitch: UISwitch!
     @IBOutlet weak var houseSwitch: UISwitch!
+    @IBOutlet weak var goHouseSwitch: UISwitch!
     @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var haveLocationSwitch: UISwitch!
     
     static let identifier:String = "CustomRowTableViewCell"
     

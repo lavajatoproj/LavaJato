@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseFirestore
 
-class listOfProfessionalsViewController: UIViewController {
+class ListOfProfessionalsViewController: UIViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var background2View: UIView!
@@ -62,7 +62,7 @@ class listOfProfessionalsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "requestService"{
-            let viewDestine = segue.destination as? requestServiceViewController
+            let viewDestine = segue.destination as? RequestServiceViewController
             
             viewDestine?.user = sender as? Dictionary
         }
@@ -126,7 +126,7 @@ class listOfProfessionalsViewController: UIViewController {
 //    
 //}
 
-extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDataSource {
+extension ListOfProfessionalsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.users.count
@@ -163,7 +163,7 @@ extension listOfProfessionalsViewController: UITableViewDelegate, UITableViewDat
     
 }
 
-extension listOfProfessionalsViewController: UISearchBarDelegate{
+extension ListOfProfessionalsViewController: UISearchBarDelegate{
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
@@ -184,7 +184,7 @@ extension listOfProfessionalsViewController: UISearchBarDelegate{
 }
 
 // MARK: -  Criado extension para receber delegate
-extension listOfProfessionalsViewController:FilterViewControllerDelegate{
+extension ListOfProfessionalsViewController:FilterViewControllerDelegate{
     func clearFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double) {
         self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax)
         self.tableView.reloadData()

@@ -7,15 +7,13 @@
 
 import UIKit
 
-class cellTableViewCell: UITableViewCell {
+class CellTableViewCell: UITableViewCell {
 
     @IBOutlet weak var productLabel: UILabel!
     @IBOutlet weak var back2View: UIView!
     @IBOutlet weak var arrowImageView: UIImageView!
-    @IBOutlet weak var observTextField: UITextField!
     
-    static let identifier:String = "cellTableViewCell"
-    
+    static let identifier:String = "CellTableViewCell"
     static func nib() -> UINib{
         return UINib(nibName: self.identifier, bundle: nil)
     }
@@ -23,7 +21,6 @@ class cellTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.back2View.layer.cornerRadius = 15
-        self.observTextField.isHidden = false
     }
     
     public func setupCell(product:String){

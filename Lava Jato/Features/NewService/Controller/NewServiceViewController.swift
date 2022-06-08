@@ -46,7 +46,7 @@ class NewServiceViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "requestService"{
-            let viewDestine = segue.destination as? requestServiceViewController
+            let viewDestine = segue.destination as? RequestServiceViewController
             viewDestine?.user = sender as? Dictionary
         }
     }
