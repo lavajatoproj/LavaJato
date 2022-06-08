@@ -20,6 +20,10 @@ class ListOfProfessionalsViewController: UIViewController {
     private var infos: Users?
     var firestore: Firestore?
     var users: [Dictionary<String, Any>] = []
+    var serviceProviders:[Professionals] = []
+    var listUserFilter:[Professionals] = []
+    var professionals:Professionals?
+//    var user:Professionals
     
     
     func setup(){
@@ -34,14 +38,34 @@ class ListOfProfessionalsViewController: UIViewController {
         
         firestore?.collection("users").getDocuments{ snapshotResult, error in
             if let snapshot = snapshotResult{
-                for document in snapshot.documents {
-                    let data = document.data()
-                    let servers = data["server"]
-                    if servers as? Int == 1{
-                        self.users.append(data)
-                    }
+                DispatchQueue.main.async {
+                    self.serviceProviders = snapshot.documents.map({ document in
+                        return Professionals(
+                            userImage: document["profileImage"] as? String ?? "",
+                            userName: document["name"] as? String ?? "",
+                            id: document["id"] as? String ?? "",
+                            price: document["price"] as? Double ?? 0.0,
+                            homeService: document["house"] as? Bool ?? false,
+                            serviceType: document["service"] as? String ?? "",
+                            searchService: document["house"] as? Bool ?? false,
+                            takeService: document["house"] as? Bool ?? false,
+                            professionalGender: document["gender"] as? String ?? "",
+                            localCity: document["city"] as? String ?? ""
+                        )
+                    })
+                    print( self.serviceProviders)
+                    self.listUserFilter = self.serviceProviders
+                  //TO DO: Delegate
+                    self.tableView.reloadData()
                 }
-                self.tableView.reloadData()
+//                for document in snapshot.documents {
+//                    let data = document.data()
+//                    let servers = data["server"]
+//                    if servers as? Int == 1{
+//                        self.users.append(data)
+//                    }
+//                }
+//                self.tableView.reloadData()
             }
         }
     }
@@ -61,10 +85,10 @@ class ListOfProfessionalsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "requestService"{
+        if segue.identifier == "RequestService"{
             let viewDestine = segue.destination as? RequestServiceViewController
             
-            viewDestine?.user = sender as? Dictionary
+            viewDestine?.userData = self.professionals
         }
     }
     
@@ -129,17 +153,15 @@ class ListOfProfessionalsViewController: UIViewController {
 extension ListOfProfessionalsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.users.count
+        return self.listUserFilter.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MyCustomCell? = tableView.dequeueReusableCell(withIdentifier: MyCustomCell.identifier, for: indexPath) as? MyCustomCell
         
-        
-        
-        let user = self.users[indexPath.row]
-        let name = user["name"] as? String
-        if let url = user["profileImage"] as? String{
+        let user = self.listUserFilter[indexPath.row]
+        let name = user.userName
+        if let url = user.userImage as? String{
             cell?.pictureImageView.sd_setImage(with: URL(string: url), completed: nil)
         }else{
             cell?.pictureImageView.image = UIImage(systemName: "person.circle.fill")
@@ -157,8 +179,8 @@ extension ListOfProfessionalsViewController: UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        let selectedRow = self.listViewModel.loadUsers(indexPath: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
-        let user = self.users[indexPath.row]
-        performSegue(withIdentifier: "requestService", sender: user)
+        self.professionals = self.listUserFilter[indexPath.row]
+        performSegue(withIdentifier: "RequestService", sender: self.professionals)
     }
     
 }

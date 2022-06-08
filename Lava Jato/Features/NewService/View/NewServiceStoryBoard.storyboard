@@ -69,7 +69,7 @@
                         <outlet property="searchBar" destination="PrW-EC-Db3" id="MR6-zc-OhX"/>
                         <outlet property="tableView" destination="MKb-l9-udQ" id="2f8-WO-jW2"/>
                         <outlet property="titleLabel" destination="bFy-fm-vho" id="3Ea-u9-AoM"/>
-                        <segue destination="oAq-bC-xv8" kind="show" identifier="requestService" id="fRh-FZ-yEA"/>
+                        <segue destination="oAq-bC-xv8" kind="show" identifier="RequestService" id="fRh-FZ-yEA"/>
                         <segue destination="Q9q-e6-CwW" kind="show" identifier="filter" id="WaO-vo-kQ4"/>
                     </connections>
                 </viewController>

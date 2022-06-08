@@ -24,5 +24,4 @@ struct RegisterUser: Codable {
     var cpf: String?
     var maritalStatus: String?
     var iconImage, note: String?
-
 }

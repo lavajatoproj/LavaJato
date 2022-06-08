@@ -32,6 +32,8 @@ class NewServiceViewModel{
     private var serviceProviders:[Professionals] = []
     public var listUserFilter:[Professionals] = []
     
+    var users: [Dictionary<String, Any>] = []
+    
     private var professionalMen:Bool = true
     private var professionalFemale:Bool = true
     private var currentPriceMin:Double = 0.0
@@ -60,14 +62,18 @@ class NewServiceViewModel{
                 if let snapshot = snapshot {
                     DispatchQueue.main.async {
                         self.serviceProviders = snapshot.documents.map({ document in
-//                            let url = document["profileImage"] as? String
                             return Professionals(
                                 userImage: document["profileImage"] as? String ?? "",
-                                userName: document["userName"] as? String ?? "",
-                                id: document["userID"] as? String ?? "",
+                                userName: document["nameData"] as? String ?? "",
+                                id: document["id"] as? String ?? "",
                                 price: document["price"] as? Double ?? 0.0,
                                 homeService: document["house"] as? Bool ?? false,
-                                serviceType: document["service"] as? String ?? "")
+                                serviceType: document["service"] as? String ?? "",
+                                searchService: document["house"] as? Bool ?? false,
+                                takeService: document["service"] as? Bool ?? false,
+                                professionalGender: document["genderData"] as? String ?? "",
+                                localCity: document["cityData"] as? String ?? ""
+                            )
                         })
                         print( self.serviceProviders)
                         self.listUserFilter = self.serviceProviders
@@ -78,6 +84,19 @@ class NewServiceViewModel{
             }
         }
     }
+    
+//    public func getFireBaseData(washType:String){
+//        firestore.collection(washType).getDocuments{ snapshotResult, error in
+//            if let snapshot = snapshotResult{
+//                for document in snapshot.documents {
+//                    let data = document.data()
+//                        self.users.append(data)
+//                    let name = data["nameData"]
+//                    let email = data["emailData"]
+//                }
+//            }
+//        }
+//    }
     
     
     public var countElements:Int{

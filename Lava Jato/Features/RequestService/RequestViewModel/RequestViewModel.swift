@@ -14,8 +14,7 @@ class RequestViewModel{
 
     func listService(){
         self.listServices.append(Server(opened: false, title: "Serviços", service: ["","Lavagem Simples", "Lavagem Completa", "Lavagem + Polimento","Lavagem a seco","Lavagem a vapor","Variação: Ecolavagem","Purificação de ar","Higienização"]))
-        self.listServices.append(Server(opened: false, title: "Forma", service: [ "","Levarei ao local", "Buscar aqui", "Serviço em domicílio"]))
+        self.listServices.append(Server(opened: false, title: "Local do serviço", service: [ "","Levarei ao local", "Buscar aqui", "Serviço em domicílio"]))
         self.listServices.append(Server(opened: false, title: "", service: [""]))
     }
-
 }

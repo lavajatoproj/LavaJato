@@ -8,9 +8,7 @@
 import UIKit
 import FirebaseFirestore
 
-
 class NewServiceViewController: UIViewController {
-    
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -18,6 +16,7 @@ class NewServiceViewController: UIViewController {
     
     var serviceProviders:[Professionals] = []
     var typeWash:String
+    var user:Professionals?
     
     private var viewModel:NewServiceViewModel = NewServiceViewModel()
     
@@ -45,9 +44,9 @@ class NewServiceViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "requestService"{
+        if segue.identifier == "RequestService"{
             let viewDestine = segue.destination as? RequestServiceViewController
-            viewDestine?.user = sender as? Dictionary
+            viewDestine?.professionalsFilter = self.user
         }
     }
     
@@ -84,8 +83,9 @@ extension NewServiceViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let user = self.viewModel.listUserFilter [indexPath.row]
-        performSegue(withIdentifier: "requestService", sender: user)
+        self.user = self.viewModel.listUserFilter[indexPath.row]
+//        print(user)
+        performSegue(withIdentifier: "RequestService", sender: user)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
