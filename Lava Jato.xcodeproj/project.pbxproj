@@ -470,8 +470,8 @@
 			isa = PBXGroup;
 			children = (
 				A27E7BAD282D80D90039C3F7 /* RequestViewModel */,
-				A212221027D13E3500B24208 /* RequestService.storyboard */,
 				A212221227D13E5300B24208 /* RequestServiceViewController.swift */,
+				A212221027D13E3500B24208 /* RequestService.storyboard */,
 				A20B840C27DED68700F29991 /* Cell1 */,
 				A275B14B2850697D0088237C /* NewCell */,
 			);

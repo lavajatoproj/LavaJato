@@ -55,8 +55,6 @@ class CustomRowTableViewCell: UITableViewCell {
         guard let cell = sender.next(CustomRowTableViewCell.self), let indexPath = cell.indexPath else { return}
         self.delegate?.updateCustomRowCell(index: indexPath, product: Services2(value: self.serviceSwitch.isOn, house: sender.isOn, service: self.productLabel.text ?? "", price: self.priceTextField.text ?? ""))
     }
-    
-    
 }
 
 extension CustomRowTableViewCell:UITextFieldDelegate{
