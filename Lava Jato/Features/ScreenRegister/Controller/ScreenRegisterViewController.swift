@@ -54,7 +54,6 @@ class ScreenRegisterViewController: UIViewController {
         self.hideKeyboard()
         self.configTextField()
         self.createDatePicker()
-        self.registerButton.isEnabled = false
         self.configButton()
         self.configPassword()
         self.auth = Auth.auth()
@@ -89,6 +88,7 @@ class ScreenRegisterViewController: UIViewController {
     }
     
     func configButton(){
+        self.registerButton.isEnabled = false
         self.viewModelScreenRegister.buttonStyle(button: self.selectStatusButton)
         self.viewModelScreenRegister.buttonStyle(button: self.selectGenderButton)
     }
@@ -115,6 +115,7 @@ class ScreenRegisterViewController: UIViewController {
     func saveUserDefaults(value: Any, key: String){
         UserDefaults.standard.set(value, forKey: key)
     }
+    
     public func createDatePicker(){
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
@@ -122,6 +123,7 @@ class ScreenRegisterViewController: UIViewController {
         dateRegisterTextField.inputView = datePicker
         dateRegisterTextField.inputAccessoryView = createToolbar()
     }
+    
     func createToolbar () -> UIToolbar {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -138,31 +140,6 @@ class ScreenRegisterViewController: UIViewController {
         self.dateRegisterTextField.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
-    
-    @IBAction func tappedCheckBox(_ sender: UIButton) {
-        if (checkboxFlag == false){
-            sender.setBackgroundImage(UIImage(named: "checkbox"), for: UIControl.State.normal)
-            checkboxFlag = true
-        }else{
-            sender.setBackgroundImage(UIImage(named: "checkbox1"), for: UIControl.State.normal)
-            checkboxFlag = false
-        }
-        self.validationCheckBox()
-    }
-    @IBAction func showPassword(_ sender: UIButton) {
-        if (seePassword == false){
-            self.passwordTextField.isSecureTextEntry = true
-            self.confirmPasswordTextField.isSecureTextEntry = true
-            sender.setBackgroundImage(UIImage(named: "eyes_off"), for: UIControl.State.normal)
-            self.seePassword = true
-        }else{
-            self.passwordTextField.isSecureTextEntry = false
-            self.confirmPasswordTextField.isSecureTextEntry = false
-            sender.setBackgroundImage(UIImage(named: "eyes_on"), for: UIControl.State.normal)
-            seePassword = false
-        }
-    }
-    
     func validationCheckBox(){
         if self.checkboxFlag == true {
             if self.nameRegisterTextField.textColor != UIColor.red && self.numberRegisterTextField.textColor != UIColor.red && self.dateRegisterTextField.textColor != UIColor.red && self.documentRegisterTextField.textColor != UIColor.red && self.passwordTextField.textColor != UIColor.red && self.confirmPasswordTextField.textColor != UIColor.red && self.postalCodeTextField.textColor != UIColor.red && self.adressTextField.textColor != UIColor.red && self.adressNumberTextField.textColor != UIColor.red && self.nameRegisterTextField.text != "" && self.numberRegisterTextField.text != "" && self.passwordTextField.text != "" && self.confirmPasswordTextField.text != "" && self.dateRegisterTextField.text != "" && self.documentRegisterTextField.text != "" && self.postalCodeTextField.text != "" && self.adressTextField.text != "" && self.adressNumberTextField.text != "" && self.selectGenderButton.titleLabel?.text != "Sexo" && self.emailRegisterTextField.text != "" && self.selectStatusButton.titleLabel?.text != "Estado Civil" && self.passwordValidationLabel.text != "Senhas não conferem" && self.passwordValidationLabel.text != "Minimo 6 caracteres"{
@@ -205,6 +182,34 @@ class ScreenRegisterViewController: UIViewController {
             self.serverSwitchState = false
         }
     }
+    func Style(){
+        let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
+        navigationController?.navigationBar.titleTextAttributes = textAtributes
+    }
+    
+    @IBAction func tappedCheckBox(_ sender: UIButton) {
+        if (checkboxFlag == false){
+            sender.setBackgroundImage(UIImage(named: "checkbox"), for: UIControl.State.normal)
+            checkboxFlag = true
+        }else{
+            sender.setBackgroundImage(UIImage(named: "checkbox1"), for: UIControl.State.normal)
+            checkboxFlag = false
+        }
+        self.validationCheckBox()
+    }
+    @IBAction func showPassword(_ sender: UIButton) {
+        if (seePassword == false){
+            self.passwordTextField.isSecureTextEntry = true
+            self.confirmPasswordTextField.isSecureTextEntry = true
+            sender.setBackgroundImage(UIImage(named: "eyes_off"), for: UIControl.State.normal)
+            self.seePassword = true
+        }else{
+            self.passwordTextField.isSecureTextEntry = false
+            self.confirmPasswordTextField.isSecureTextEntry = false
+            sender.setBackgroundImage(UIImage(named: "eyes_on"), for: UIControl.State.normal)
+            seePassword = false
+        }
+    }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         self.serverSwitch()
@@ -241,11 +246,6 @@ class ScreenRegisterViewController: UIViewController {
     
     @IBAction func tappedBackLogin(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
-    }
-    
-    func Style(){
-        let textAtributes = [NSAttributedString.Key.foregroundColor:UIColor.ColorDefault]
-        navigationController?.navigationBar.titleTextAttributes = textAtributes
     }
     
     @IBAction func postalCodeAct(_ sender: UITextField) {

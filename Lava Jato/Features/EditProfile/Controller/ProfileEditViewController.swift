@@ -32,7 +32,7 @@ class ProfileEditViewController: UIViewController {
     private var viewModelEditProfile:ViewModelEditProfile = ViewModelEditProfile()
     private var alert:AlertController?
     var imagePicker = UIImagePickerController()
-    var valueStateButton:String?
+    var valueStateButton:String? //verificar -------------------------------------------
     var firestore = Firestore.firestore()
     let storage = Storage.storage().reference()
     var auth: Auth?
@@ -43,23 +43,19 @@ class ProfileEditViewController: UIViewController {
     var state:String?
     var gender:String?
     var serverState:Bool?
-    var myView = UIView()
     var customMask = TLCustomMask()
     var customMaskPostalCode = TLCustomMask()
     
-    override func viewDidLoad() {
+    override func viewDidLoad()  {
         super.viewDidLoad()
         self.getFuncs()
     }
-    
     override func viewDidAppear(_ animated: Bool) {
         self.getProfileData()
     }
-    
     func getFuncs(){
         self.firestore = Firestore.firestore()
         self.auth = Auth.auth()
-//        self.storage = Storage.storage()
         Style()
         self.hideKeyboardWhenTappedAround()
         self.configTextField()
@@ -169,45 +165,33 @@ class ProfileEditViewController: UIViewController {
             self.disableSaveButton()
         }
     }
-    @IBAction func tappedSaveButton(_ sender: UIButton) {
-        if self.numberTextField.text == "" || self.numberTextField.textColor == UIColor.red || self.postalCodeTextField.text == "" || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.text == "" || self.adressTextField.textColor == UIColor.red || self.numberAdressTextField.text == "" || self.cityTextField.text == "" || self.numberAdressTextField.textColor == UIColor.red {
-            self.alert(title: "Atenção", message: "Verificar campos")
-            self.activeSaveButton()
-        }else{
-            self.saveProfileImage()
-            self.alert?.showAlert(title: "Concluído", message: "Alterações salvas com sucesso!", titleButton: "Aceitar", completion: { value in
-                self.navigationController?.popToRootViewController(animated: true)
-            })
-        }
-
-    }
-
+    
     func saveData(name:String, profileImage:String, email: String, cellNumber: String, born: String, document:String, cep:String, state:String, gender:String, server:Bool, adress:String, numberAdress:String){
         self.firestore.collection("users").document( self.idUserLog ?? "" )
             .setData([
-            "profileImage": profileImage,
-            "name": name,
-            "email": email,
-            "cellNumber": cellNumber,
-            "born": born,
-            "document": document,
-            "cep": cep,
-            "state": state,
-            "gender": gender,
-            "server": server,
-            "adress": adress,
-            "numberAdress": numberAdress,
-            "id": idUserLog ?? "",
-        ])
+                "profileImage": profileImage,
+                "name": name,
+                "email": email,
+                "cellNumber": cellNumber,
+                "born": born,
+                "document": document,
+                "cep": cep,
+                "state": state,
+                "gender": gender,
+                "server": server,
+                "adress": adress,
+                "numberAdress": numberAdress,
+                "id": idUserLog ?? "",
+            ])
     }
-
+    
     func saveProfileImage(){
         guard let image = self.profileImageView.image?.jpegData(compressionQuality: 0.8) else {return}
         let imagePath = "userImages/\(UUID().uuidString).jpg"
         let imageRef = storage.child(imagePath)
-
+        
         imageRef.putData(image, metadata: nil) { metadata, error in
-
+            
             if error == nil && metadata != nil {
                 imageRef.downloadURL { url, error in
                     if error == nil{
@@ -226,11 +210,22 @@ class ProfileEditViewController: UIViewController {
             }
         }
     }
-
+    
     func completionRegister(with url:String = ""){
         self.saveData(name: self.nameTextField.text ?? "", profileImage: url, email: self.emailTextField.text ?? "", cellNumber: self.numberTextField.text ?? "", born: self.dateTextField.text ?? "", document: self.document ?? "", cep: self.postalCodeTextField.text ?? "", state: self.state ?? "", gender: self.gender ?? "", server: self.serverState ?? false, adress: self.adressTextField.text ?? "", numberAdress: self.numberAdressTextField.text ?? "")
     }
-    
+    @IBAction func tappedSaveButton(_ sender: UIButton) {
+        if self.numberTextField.text == "" || self.numberTextField.textColor == UIColor.red || self.postalCodeTextField.text == "" || self.postalCodeTextField.textColor == UIColor.red || self.adressTextField.text == "" || self.adressTextField.textColor == UIColor.red || self.numberAdressTextField.text == "" || self.cityTextField.text == "" || self.numberAdressTextField.textColor == UIColor.red {
+            self.alert(title: "Atenção", message: "Verificar campos")
+            self.activeSaveButton()
+        }else{
+            self.saveProfileImage()
+            self.alert?.showAlert(title: "Concluído", message: "Alterações salvas com sucesso!", titleButton: "Aceitar", completion: { value in
+                self.navigationController?.popToRootViewController(animated: true)
+            })
+        }
+    }
+
     @IBAction func tappedChangePassword(_ sender: UIButton) {
         self.viewModelEditProfile.instantiateVC(nameVC: "ChangePasswordViewController", navigation: navigationController ?? UINavigationController())
     }
@@ -281,11 +276,11 @@ extension ProfileEditViewController:UITextFieldDelegate{
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
         if textField == self.numberTextField{
-        self.numberTextField.text = customMask.formatStringWithRange(range: range, string: string)
+            self.numberTextField.text = customMask.formatStringWithRange(range: range, string: string)
             return false
         }
         if textField == self.postalCodeTextField{
-        self.postalCodeTextField.text = customMaskPostalCode.formatStringWithRange(range: range, string: string)
+            self.postalCodeTextField.text = customMaskPostalCode.formatStringWithRange(range: range, string: string)
             return false
         }
         return true

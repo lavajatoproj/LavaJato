@@ -279,6 +279,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ShimmerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>TLCustomMask.xcscheme</key>
 		<dict>
 			<key>isShown</key>

@@ -10,7 +10,6 @@ import TLCustomMask
 
 class PaymmentViewController: UIViewController {
     
-
     @IBOutlet weak var nameCardTextField: UITextField!
     @IBOutlet weak var numberCardTextField: UITextField!
     @IBOutlet weak var dateCardTextField: UITextField!
@@ -21,25 +20,17 @@ class PaymmentViewController: UIViewController {
     @IBOutlet weak var cvvTF: UITextField!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var confirmButton: UIButton!
-    
     var numberCustomMask = TLCustomMask()
     var validateCard = TLCustomMask()
     var cvvCard = TLCustomMask()
+    let paymmentScreenViewModel:PaymmentScreenViewModel = PaymmentScreenViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        configTextField()
+        self.configTextField()
     }
     
-    public func textfieldStyle(textField:UITextField, color:UIColor){
-        let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0, y: textField.frame.height - 2, width: textField.frame.width, height: 2)
-        bottomLine.backgroundColor = color.cgColor
-        textField.backgroundColor = .clear
-        textField.borderStyle = .none
-        textField.layer.addSublayer(bottomLine)
-    }
     func configTextField(){
         self.nameCardTextField.delegate = self
         self.numberCardTextField.delegate = self
@@ -53,18 +44,26 @@ class PaymmentViewController: UIViewController {
         self.numberCardTextField.borderStyle = .none
         self.dateCardTextField.borderStyle = .none
         self.cvvCardTextField.borderStyle = .none
-        self.textfieldStyle(textField: nameTF, color: UIColor.ColorDefault)
-        self.textfieldStyle(textField: numberTF, color: UIColor.ColorDefault)
-        self.textfieldStyle(textField: expirationTF, color: UIColor.ColorDefault)
-        self.textfieldStyle(textField: cvvTF, color: UIColor.ColorDefault)
-        self.confirmButton.isEnabled = false
-        self.nameCardTextField.isEnabled = false
-        self.numberCardTextField.isEnabled = false
-        self.dateCardTextField.isEnabled = false
-        self.cvvCardTextField.isEnabled = false
+        self.paymmentScreenViewModel.textfieldStyle(textField: self.nameTF, color: UIColor.ColorDefault)
+        self.paymmentScreenViewModel.textfieldStyle(textField: self.numberTF, color: UIColor.ColorDefault)
+        self.paymmentScreenViewModel.textfieldStyle(textField: self.expirationTF, color: UIColor.ColorDefault)
+        self.paymmentScreenViewModel.textfieldStyle(textField: self.cvvTF, color: UIColor.ColorDefault)
+        self.paymmentScreenViewModel.disableItem(textField: .none, button: self.confirmButton, state: false)
+        self.paymmentScreenViewModel.disableItem(textField: self.numberCardTextField, button: .none, state: false)
+        self.paymmentScreenViewModel.disableItem(textField: self.numberCardTextField, button: .none, state: false)
+        self.paymmentScreenViewModel.disableItem(textField: self.dateCardTextField, button: .none, state: false)
+        self.paymmentScreenViewModel.disableItem(textField: self.cvvCardTextField, button: .none, state: false)
         numberCustomMask.formattingPattern = "$$$$ $$$$ $$$$ $$$$"
         validateCard.formattingPattern = "$$/$$"
         cvvCard.formattingPattern = "$$$"
+    }
+    
+    func alert(title:String, message:String){
+        let alertController:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok:UIAlertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        
+        alertController.addAction(ok)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func setCardText(){
@@ -73,8 +72,9 @@ class PaymmentViewController: UIViewController {
         self.dateCardTextField.text = self.expirationTF.text
         self.cvvCardTextField.text = self.cvvTF.text
     }
+    
     func validateTF(){
-        if nameTF.text == "" || numberTF.text == "" || expirationTF.text == "" || cvvTF.text == "" {
+        if self.nameTF.text == "" || self.numberTF.text == "" || self.expirationTF.text == "" || self.cvvTF.text == "" || self.nameTF.layer.borderColor == UIColor.red.cgColor || self.numberTF.layer.borderColor == UIColor.red.cgColor || self.expirationTF.layer.borderColor == UIColor.red.cgColor || self.cvvTF.layer.borderColor == UIColor.red.cgColor {
             self.confirmButton.isEnabled = false
         }else{
             self.confirmButton.isEnabled = true
@@ -86,19 +86,39 @@ class PaymmentViewController: UIViewController {
     }
     
     @IBAction func tappedConfirmButton(_ sender: UIButton) {
+        self.alert(title: "Concluído", message: "Seu pagamento está sendo processado!")
     }
     
 }
 extension PaymmentViewController:UITextFieldDelegate{
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        self.validateTF()
-    }
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.paymmentScreenViewModel.textfieldStyle(textField: textField, color: UIColor.blue)
         setCardText()
         self.validateTF()
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text == ""{
+            self.paymmentScreenViewModel.textfieldStyle(textField: textField, color: UIColor.red)
+        }else{
+            self.paymmentScreenViewModel.textfieldStyle(textField: textField, color: UIColor.ColorDefault)
+        }
+        self.validateTF()
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.nameTF {
+            textField.resignFirstResponder()
+            self.numberTF.becomeFirstResponder()
+        } else if textField == self.numberTF {
+            textField.resignFirstResponder()
+            self.expirationTF.becomeFirstResponder()
+        } else if textField == self.expirationTF {
+            textField.resignFirstResponder()
+            self.cvvTF.becomeFirstResponder()
+        }  else{
+            textField.resignFirstResponder()
+        }
         textField.resignFirstResponder()
         setCardText()
         self.validateTF()
@@ -119,7 +139,6 @@ extension PaymmentViewController:UITextFieldDelegate{
             self.cvvTF.text = cvvCard.formatStringWithRange(range: range, string: string)
             return false
         }
-        
         return true
     }
 }
