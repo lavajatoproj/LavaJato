@@ -110,6 +110,13 @@ extension NewServiceViewController:FilterViewControllerDelegate{
         self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax)
         self.tableView.reloadData()
     }
+    
+//    func clearFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double) {
+//        self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax)
+//        self.tableView.reloadData()
+//    }
+    
+    
 }
 
 extension NewServiceViewController:NewServiceViewModelDelegate{

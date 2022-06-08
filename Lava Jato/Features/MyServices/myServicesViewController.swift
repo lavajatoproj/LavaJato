@@ -115,9 +115,9 @@ class myServicesViewController: UIViewController{
                         "service": "Lavagem Simples",
                         "price": self.servicePrice,
                         "value": self.serviceValue,
-                        "house": self.serviceHouse,
+                        "homeService": self.serviceHouse,
 //                        "userImage": self.userImageView as Any,
-                        "userName" : self.nameLabel.text
+                        "name": self.nameLabel.text
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
@@ -130,7 +130,8 @@ class myServicesViewController: UIViewController{
                         "service1": "Lavagem Completa",
                         "price1": self.servicePrice1,
                         "value1": self.serviceValue1,
-                        "house1": self.serviceHouse1
+                        "house1": self.serviceHouse1,
+                        "name1": nameLabel.text
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
@@ -143,7 +144,8 @@ class myServicesViewController: UIViewController{
                         "service2": "Lavagem + Polimento",
                         "price2": self.servicePrice2,
                         "value2": self.serviceValue2,
-                        "house2": self.serviceHouse2
+                        "house2": self.serviceHouse2,
+                        "name2": nameLabel.text
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
@@ -156,7 +158,8 @@ class myServicesViewController: UIViewController{
                         "service3": "Lavagem a seco",
                         "price3": self.servicePrice3,
                         "value3": self.serviceValue3,
-                        "house3": self.serviceHouse3
+                        "house3": self.serviceHouse3,
+                        "name3": nameLabel.text
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
@@ -169,7 +172,8 @@ class myServicesViewController: UIViewController{
                         "service4": "Lavagem a vapor",
                         "price4": self.servicePrice4,
                         "value4": self.serviceValue4,
-                        "house4": self.serviceHouse4
+                        "house4": self.serviceHouse4,
+                        "name4": nameLabel.text
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
@@ -182,7 +186,8 @@ class myServicesViewController: UIViewController{
                         "service5": "Variação: Ecolavagem",
                         "price5": self.servicePrice5,
                         "value5": self.serviceValue5,
-                        "house5": self.serviceHouse5
+                        "house5": self.serviceHouse5,
+                        "name5": nameLabel.text
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
@@ -195,7 +200,8 @@ class myServicesViewController: UIViewController{
                         "service6": "Purificação de ar",
                         "price6": self.servicePrice6,
                         "value6": self.serviceValue6,
-                        "house6": self.serviceHouse6
+                        "house6": self.serviceHouse6,
+                        "name6": nameLabel.text
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
@@ -208,7 +214,8 @@ class myServicesViewController: UIViewController{
                         "service7": "Higienização",
                         "price7": self.servicePrice7,
                         "value7": self.serviceValue7,
-                        "house7": self.serviceHouse7
+                        "house7": self.serviceHouse7,
+                        "name7": nameLabel.text
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")

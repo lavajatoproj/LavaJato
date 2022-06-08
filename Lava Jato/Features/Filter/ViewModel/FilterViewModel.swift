@@ -26,12 +26,15 @@ class FilterViewModel{
         self.professionalFemale = professionalFemale
         self.currentPriceMin = currentPriceMin
         self.currentPriceMax = currentPriceMax
+        
     }
     
     private var professionalMen:Bool
     private var professionalFemale:Bool
     private var currentPriceMin:Double
     private var currentPriceMax:Double
+   
+    
     
     public var getProfessionalMen:Bool{
         return self.professionalMen
@@ -57,6 +60,8 @@ class FilterViewModel{
         return ProfilePrice(currentPriceMin: self.currentPriceMin, currentPriceMax: self.currentPriceMax)
     }
     
+    
+    
     var countArray:Int {
         return 2
     }
@@ -65,7 +70,7 @@ class FilterViewModel{
         if indexPath.row == 0 {
             return 166.0
         }else{
-            return 466.0
+            return 510.0
         }
     }
     
@@ -74,6 +79,8 @@ class FilterViewModel{
         self.currentPriceMax = priceMax
         //TO DO: TYPE
     }
+    
+    
     
     public func setStateSexo(stateM: Bool, stateF: Bool){
         self.professionalMen = stateM

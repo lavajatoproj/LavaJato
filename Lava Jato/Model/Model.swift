@@ -50,13 +50,14 @@ let service: [Service] = [
 // MARK: - ProfileBanner
 
 struct ProfileBanner {
-    let imgA:UIImage
+    var imgA:UIImage
+    var isSelect:Bool
 }
       
-let dataPlace: [ProfileBanner] = [
-    ProfileBanner(imgA: #imageLiteral(resourceName: "emCasa")),
-    ProfileBanner(imgA: #imageLiteral(resourceName: "busque")),
-    ProfileBanner(imgA: #imageLiteral(resourceName: "levar"))
+var dataPlace: [ProfileBanner] = [
+    ProfileBanner(imgA: #imageLiteral(resourceName: "frame16.png"), isSelect: false),
+    ProfileBanner(imgA: #imageLiteral(resourceName: "frame17.png"), isSelect: false),
+    ProfileBanner(imgA: #imageLiteral(resourceName: "frame18.png"), isSelect: false)
 ]
 
 // MARK: - ProfilePrice
