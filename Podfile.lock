@@ -803,7 +803,7 @@ PODS:
   - GoogleMaps/Maps (6.0.1):
     - GoogleMaps/Base
   - GooglePlaces (6.2.1)
-  - GoogleSignIn (6.2.1):
+  - GoogleSignIn (6.2.2):
     - AppAuth (~> 1.5)
     - GTMAppAuth (~> 1.3)
     - GTMSessionFetcher/Core (~> 1.1)
@@ -1015,7 +1015,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 5fffe35792f8b96ec8d6775f5eccd83c998d5a3b
   GoogleMaps: c213fc2334b7374144cede914da779b99be0ab74
   GooglePlaces: 94974aa119573d5acc2a35a699948dac838abd73
-  GoogleSignIn: 9c69f4188921d8f789816e4c99ba2a1f5f868ddc
+  GoogleSignIn: 3c68388ac221f379676e8f1cb115df3aaf73b93f
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   "gRPC-C++": 9675f953ace2b3de7c506039d77be1f2e77a8db2
   gRPC-Core: 943e491cb0d45598b0b0eb9e910c88080369290b
@@ -1032,4 +1032,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: f17b461ed35025d5f02c39ee6f6078f4b5012592
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

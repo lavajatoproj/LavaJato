@@ -84,12 +84,14 @@ class MyServicesViewController: UIViewController{
     var cityData:String?
     var id:String?
     var url:String?
+    var profileImage:String?
     
     func getProfileData(){
         let user = self.firestore?.collection("users").document(self.idUserLog ?? "")
         user?.getDocument(completion: { documentSnapshot, error in
             if error == nil{
                 let data = documentSnapshot?.data()
+                self.id = data?["id"] as? String
                 self.nameData = data?["name"] as? String
                 self.nameLabel.text = self.nameData
                 self.numberData = data?["cellNumber"] as? String
@@ -103,8 +105,10 @@ class MyServicesViewController: UIViewController{
                 self.documentData = data?["document"] as? String
                 self.stateData = data?["state"] as? String
                 self.genderData = data?["gender"] as? String
-                if let url = data?["profileImage"] as? String{
-                    self.userImageView.sd_setImage(with: URL(string: url), completed: nil)
+                self.url = data?["profileImage"] as? String
+                self.profileImage = self.url
+                if self.profileImage == self.url{
+                    self.userImageView.sd_setImage(with: URL(string: self.url ?? ""), completed: nil)
                 }else{
                     self.userImageView.image = UIImage(systemName: "person.circle.fill")
                 }
@@ -137,7 +141,7 @@ class MyServicesViewController: UIViewController{
             
             let idUser = userLog.uid
             
-            if self.serviceValue == true{
+//            if self.serviceValue == true{
                 self.firestore?.collection("lavagemSimples")
                     .document(idUser)
                     .setData([
@@ -157,18 +161,18 @@ class MyServicesViewController: UIViewController{
                         "genderData": self.genderData as Any,
                         "cityData": self.cityData as Any,
                         "id": self.id as Any,
-                        "url": self.url as Any,
+                        "profileImage": self.url as Any,
                     ]) { (error) in
                         if error == nil{
                             print("deu bom")
                         }
                     }
-            }else{
-                self.firestore?.collection("lavagemSimples")
-                    .document(idUser).delete()
-            }
+//            }else{
+//                self.firestore?.collection("lavagemSimples")
+//                    .document(idUser).delete()
+//            }
             
-            if self.serviceValue1 == true{
+//            if self.serviceValue1 == true{
                 self.firestore?.collection("lavagemCompleta")
                     .document(idUser)
                     .setData([
@@ -194,12 +198,12 @@ class MyServicesViewController: UIViewController{
                             print("deu bom")
                         }
                     }
-            }else{
-                self.firestore?.collection("lavagemCompleta")
-                    .document(idUser).delete()
-            }
+//            }else{
+//                self.firestore?.collection("lavagemCompleta")
+//                    .document(idUser).delete()
+//            }
             
-            if self.serviceValue2 == true{
+//            if self.serviceValue2 == true{
                 self.firestore?.collection("lavagemPolimento")
                     .document(idUser)
                     .setData([
@@ -225,12 +229,12 @@ class MyServicesViewController: UIViewController{
                             print("deu bom")
                         }
                     }
-            }else{
-                self.firestore?.collection("lavagemPolimento")
-                    .document(idUser).delete()
-            }
+//            }else{
+//                self.firestore?.collection("lavagemPolimento")
+//                    .document(idUser).delete()
+//            }
             
-            if self.serviceValue3 == true{
+//            if self.serviceValue3 == true{
                 self.firestore?.collection("lavagemSeco")
                     .document(idUser)
                     .setData([
@@ -256,12 +260,12 @@ class MyServicesViewController: UIViewController{
                             print("deu bom")
                         }
                     }
-            }else{
-                self.firestore?.collection("lavagemSeco")
-                    .document(idUser).delete()
-            }
-            
-            if self.serviceValue4 == true{
+//            }else{
+//                self.firestore?.collection("lavagemSeco")
+//                    .document(idUser).delete()
+//            }
+//
+//            if self.serviceValue4 == true{
                 self.firestore?.collection("lavagemVapor")
                     .document(idUser)
                     .setData([
@@ -287,12 +291,12 @@ class MyServicesViewController: UIViewController{
                             print("deu bom")
                         }
                     }
-            }else{
-                self.firestore?.collection("lavagemVapor")
-                    .document(idUser).delete()
-            }
+//            }else{
+//                self.firestore?.collection("lavagemVapor")
+//                    .document(idUser).delete()
+//            }
             
-            if self.serviceValue5 == true{
+//            if self.serviceValue5 == true{
                 self.firestore?.collection("ecolavagem")
                     .document(idUser)
                     .setData([
@@ -318,12 +322,12 @@ class MyServicesViewController: UIViewController{
                             print("deu bom")
                         }
                     }
-            }else{
-                self.firestore?.collection("ecolavagem")
-                    .document(idUser).delete()
-            }
+//            }else{
+//                self.firestore?.collection("ecolavagem")
+//                    .document(idUser).delete()
+//            }
             
-            if self.serviceValue6 == true{
+//            if self.serviceValue6 == true{
                 self.firestore?.collection("purificacao")
                     .document(idUser)
                     .setData([
@@ -349,12 +353,12 @@ class MyServicesViewController: UIViewController{
                             print("deu bom")
                         }
                     }
-            }else{
-                self.firestore?.collection("purificacao")
-                    .document(idUser).delete()
-            }
+//            }else{
+//                self.firestore?.collection("purificacao")
+//                    .document(idUser).delete()
+//            }
             
-            if self.serviceValue7 == true{
+//            if self.serviceValue7 == true{
                 self.firestore?.collection("higienizacao")
                     .document(idUser)
                     .setData([
@@ -380,10 +384,10 @@ class MyServicesViewController: UIViewController{
                             print("deu bom")
                         }
                     }
-            }else{
-                self.firestore?.collection("higienizacao")
-                    .document(idUser).delete()
-            }
+//            }else{
+//                self.firestore?.collection("higienizacao")
+//                    .document(idUser).delete()
+//            }
         }
         
         //        self.alert?.showAlert(title: "Tem certeza que deseja atualizar?", message: "", titleButton: "Confirmar", completion: { value in

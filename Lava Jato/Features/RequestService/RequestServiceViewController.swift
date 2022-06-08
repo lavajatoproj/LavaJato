@@ -26,9 +26,10 @@ class RequestServiceViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var viewModel:RequestViewModel = RequestViewModel()
+    var userData: Professionals?
+    var professionalsFilter: Professionals?
     var idUser:String?
     
-    var user: Dictionary<String, Any>?
     var auth: Auth?
     var firestore: Firestore?
     
@@ -72,7 +73,6 @@ class RequestServiceViewController: UIViewController {
     var dataPrice7:String?
     var dataService7:String?
     
-    
     private var alert:AlertController?
     
     func configInitials(){}
@@ -89,13 +89,7 @@ class RequestServiceViewController: UIViewController {
         self.professionalImageView.contentMode = .scaleAspectFill
         self.professionalImageView.layer.cornerRadius = professionalImageView.frame.height / 2
         self.professionalImageView.clipsToBounds = true
-        self.idUser = user?["id"] as? String
-        if let name = user?["name"] as? String{
-            self.nameProfessionalLabel.text = name
-        }
-        if let url = user?["profileImage"] as? String{
-            self.professionalImageView.sd_setImage(with: URL(string: url), completed: nil)
-        }
+        self.getNavigationPath()
         self.getData()
         self.getData1()
         self.getData2()
@@ -104,6 +98,24 @@ class RequestServiceViewController: UIViewController {
         self.getData5()
         self.getData6()
         self.getData7()
+    }
+    
+    func getNavigationPath(){
+        if userData != nil{
+            self.getDataProvider(dataProvider: self.userData)
+        }else{
+            self.getDataProvider(dataProvider: self.professionalsFilter)
+        }
+    }
+    
+    func getDataProvider(dataProvider:Professionals?){
+        self.idUser = dataProvider?.id as? String
+        if let name = dataProvider?.userName as? String{
+            self.nameProfessionalLabel.text = name
+        }
+        if let url = dataProvider?.userImage as? String{
+            self.professionalImageView.sd_setImage(with: URL(string: url), completed: nil)
+        }
     }
     
     func getData(){

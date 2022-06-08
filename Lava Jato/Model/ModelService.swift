@@ -17,7 +17,8 @@ struct Professionals{
     var price:Double
     var homeService:Bool
     var serviceType:String
-//    var searchService:Bool
-//    var takeService:Bool
-//    var professionalGender:String
+    var searchService:Bool
+    var takeService:Bool
+    var professionalGender:String
+    var localCity:String
 }
