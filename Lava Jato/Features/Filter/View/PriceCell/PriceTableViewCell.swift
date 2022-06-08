@@ -60,6 +60,8 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
 //        self.delegate?.clear(priceMin: 0.0, priceMax: 0.0, type: "")
         
     }
+    
+    
     public func setupCell(setup:ProfilePrice){
         self.priceMinTextField.text = String(setup.currentPriceMin)
         self.priceMaxTextField.text = String(setup.currentPriceMax)
@@ -73,6 +75,10 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
         let cellC = collectionView.dequeueReusableCell(withReuseIdentifier: "PlaceCollectionViewCell", for: indexPath) as? PlaceCollectionViewCell
         cellC?.setupCell(with: dataPlace[indexPath.row])
         return cellC ?? UICollectionViewCell()
+    }
+    
+    private func selectCel(){
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
