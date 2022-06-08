@@ -7,7 +7,8 @@
 
 import UIKit
 import FirebaseFirestore
-
+import FirebaseAuth
+import FirebaseStorageUI
 
 class NewServiceTableViewCell: UITableViewCell {
 
@@ -23,6 +24,11 @@ class NewServiceTableViewCell: UITableViewCell {
         return UINib(nibName: self.identifier, bundle: nil)
     }
     
+    var user: Dictionary<String, Any>?
+    var auth: Auth?
+    var firestore: Firestore?
+    
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,8 +43,13 @@ class NewServiceTableViewCell: UITableViewCell {
     }
     
     public func setupCell(data:Professionals){
+        if data.userImage != ""{
+            self.pictureImageView.sd_setImage(with: URL(string: data.userImage), completed: nil)
+        }else{
+            pictureImageView.image = UIImage(systemName: "person.circle.fill")
+        }
         self.nameLabel.text = data.userName
-        self.pictureImageView.image = data.userImage
+//        self.pictureImageView. = data.userImage
     }
 
     

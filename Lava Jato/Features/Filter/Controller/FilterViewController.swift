@@ -9,6 +9,7 @@ import UIKit
 
 protocol FilterViewControllerDelegate:AnyObject{
     func resultFilter(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double)
+//    func clearFilter(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double)
 }
 
 class FilterViewController: UIViewController{
@@ -23,6 +24,7 @@ class FilterViewController: UIViewController{
         self.delegate = delegate
     }
     
+    private var placeViewCell:PlaceCollectionViewCell? = PlaceCollectionViewCell()
     private var viewModel:FilterViewModel
     
     var nameCity:String?
@@ -48,7 +50,6 @@ class FilterViewController: UIViewController{
     
     @IBAction func tappedCallMaps(_ sender: UIButton) {
         performSegue(withIdentifier: "maps", sender: nil)
-//        print(self.priceLimit as Any)
     }
     
     // MARK: - Signatures
@@ -59,6 +60,7 @@ class FilterViewController: UIViewController{
         self.tViewTableView.register(GenderTableViewCell.nib(), forCellReuseIdentifier: GenderTableViewCell.identifier)
         self.tViewTableView.register(PriceTableViewCell.nib(), forCellReuseIdentifier: PriceTableViewCell.identifier)
     }
+    
 }
 
 // MARK: - Extension
@@ -96,10 +98,23 @@ extension FilterViewController:GenderTableViewCellDelegate{
     }
 }
 
+//extension FilterViewController:PlaceCollectionViewCellDelegate{
+////    func chooseLocal(localHome: Bool, search: Bool, takeToPlace: Bool) {
+//////        self.viewModel.
+////    }
+//    
+//    
+//}
+
 extension FilterViewController:PriceTableViewCellDelegate{
     func result(priceMin: Double, priceMax: Double, type: String) {
         self.viewModel.setResult(priceMin: priceMin, priceMax: priceMax, type: type)
         self.delegate?.resultFilter(professionalMen: self.viewModel.getProfessionalMen, professionalFemale: self.viewModel.getProfessionalFemale, currentPriceMin: self.viewModel.getCurrentPriceMin, currentPriceMax: self.viewModel.getCurrentPriceMax)
         self.navigationController?.popViewController(animated: true)
     }
+    
+//    func clear(priceMin: Double, priceMax: Double, type: String) {
+//        self.navigationController?.popViewController(animated: true)
+//    }
+    
 }

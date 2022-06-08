@@ -19,18 +19,17 @@ class GenderTableViewCell: UITableViewCell {
     @IBOutlet weak var manSwitch: UISwitch!
     @IBOutlet weak var womanSwitch: UISwitch!
 
+    private weak var delegate:GenderTableViewCellDelegate?
+    public func delegate(delegate:GenderTableViewCellDelegate?){
+        self.delegate = delegate
+    }
+    
     static let identifier:String = "GenderTableViewCell"
     static func nib()->UINib{
         return UINib(nibName: self.identifier, bundle: nil)
     }
     
-    private weak var delegate:GenderTableViewCellDelegate?
-    
-    public func delegate(delegate:GenderTableViewCellDelegate?){
-        self.delegate = delegate
-    }
-    
-    
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         self.manLabel.text = "Profissionais Homens"

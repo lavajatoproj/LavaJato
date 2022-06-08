@@ -73,8 +73,18 @@ extension HomeViewController:UICollectionViewDataSource{
             navigation(typeWash: "lavagemSimples")
         case 1:
             navigation(typeWash: "lavagemCompleta")
-        default:
+        case 2:
             navigation(typeWash: "lavagemPolimento")
+        case 3:
+            navigation(typeWash: "lavagemSeco")
+        case 4:
+            navigation(typeWash: "lavagemVapor")
+        case 5:
+            navigation(typeWash: "ecolavagem")
+        case 6:
+            navigation(typeWash: "purificacao")
+        default:
+            navigation(typeWash: "higienizacao")
         }
     }
 }

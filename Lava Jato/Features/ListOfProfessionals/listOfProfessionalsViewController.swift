@@ -185,6 +185,11 @@ extension listOfProfessionalsViewController: UISearchBarDelegate{
 
 // MARK: -  Criado extension para receber delegate
 extension listOfProfessionalsViewController:FilterViewControllerDelegate{
+    func clearFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double) {
+        self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax)
+        self.tableView.reloadData()
+    }
+    
     func resultFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double) {
         self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax)
         self.tableView.reloadData()

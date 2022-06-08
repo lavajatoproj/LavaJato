@@ -36,6 +36,7 @@ class NewServiceViewModel{
     private var professionalFemale:Bool = true
     private var currentPriceMin:Double = 0.0
     private var currentPriceMax:Double = 0.0
+
     
     public var getProfessionalMen:Bool{
         return self.professionalMen
@@ -59,13 +60,14 @@ class NewServiceViewModel{
                 if let snapshot = snapshot {
                     DispatchQueue.main.async {
                         self.serviceProviders = snapshot.documents.map({ document in
+//                            let url = document["profileImage"] as? String
                             return Professionals(
-                                userImage: document["profileImage"] as? UIImage ?? UIImage(),
+                                userImage: document["profileImage"] as? String ?? "",
                                 userName: document["userName"] as? String ?? "",
                                 id: document["userID"] as? String ?? "",
                                 price: document["price"] as? Double ?? 0.0,
-                                house: document["house"] as? Bool ?? false,
-                                service: document["service"] as? String ?? "")
+                                homeService: document["house"] as? Bool ?? false,
+                                serviceType: document["service"] as? String ?? "")
                         })
                         print( self.serviceProviders)
                         self.listUserFilter = self.serviceProviders
@@ -120,7 +122,8 @@ class NewServiceViewModel{
         self.currentPriceMax = currentPriceMax
         
         //TO DO: Fazer o filter de acordo com oque ele escolheu:
-//        self.listUserFilter = self.serviceProviders.filter({$0.price < currentPriceMax && $0.price > currentPriceMin && $0.userName == "Caio"})
+        self.listUserFilter = self.serviceProviders.filter({$0.price < currentPriceMax && $0.price > currentPriceMin && $0.userName == "Thiago"})
+//        self.listUserFilter = self.serviceProviders.filter({$0.price < currentPriceMax && $0.price > currentPriceMin})
     }
     
     public func clearFilter(){
