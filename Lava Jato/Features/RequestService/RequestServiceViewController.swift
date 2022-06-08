@@ -136,10 +136,10 @@ class RequestServiceViewController: UIViewController {
         data?.getDocument(completion: { documentSnapshot, error in
             if error == nil{
                 let data = documentSnapshot?.data()
-                self.dataValue1 = data?["value1"] as? Bool
-                self.dataHouse1 = data?["house1"] as? Bool
-                self.dataPrice1 = data?["price1"] as? String
-                self.dataService1 = data?["service1"] as? String
+                self.dataValue1 = data?["value"] as? Bool
+                self.dataHouse1 = data?["house"] as? Bool
+                self.dataPrice1 = data?["price"] as? String
+                self.dataService1 = data?["service"] as? String
             }
         })
     }
@@ -149,10 +149,10 @@ class RequestServiceViewController: UIViewController {
         data?.getDocument(completion: { documentSnapshot, error in
             if error == nil{
                 let data = documentSnapshot?.data()
-                self.dataValue2 = data?["value2"] as? Bool
-                self.dataHouse2 = data?["house2"] as? Bool
-                self.dataPrice2 = data?["price2"] as? String
-                self.dataService2 = data?["service2"] as? String
+                self.dataValue2 = data?["value"] as? Bool
+                self.dataHouse2 = data?["house"] as? Bool
+                self.dataPrice2 = data?["price"] as? String
+                self.dataService2 = data?["service"] as? String
             }
         })
     }
@@ -162,10 +162,10 @@ class RequestServiceViewController: UIViewController {
         data?.getDocument(completion: { documentSnapshot, error in
             if error == nil{
                 let data = documentSnapshot?.data()
-                self.dataValue3 = data?["value3"] as? Bool
-                self.dataHouse3 = data?["house3"] as? Bool
-                self.dataPrice3 = data?["price3"] as? String
-                self.dataService3 = data?["service3"] as? String
+                self.dataValue3 = data?["value"] as? Bool
+                self.dataHouse3 = data?["house"] as? Bool
+                self.dataPrice3 = data?["price"] as? String
+                self.dataService3 = data?["service"] as? String
             }
         })
     }
@@ -175,10 +175,10 @@ class RequestServiceViewController: UIViewController {
         data?.getDocument(completion: { documentSnapshot, error in
             if error == nil{
                 let data = documentSnapshot?.data()
-                self.dataValue4 = data?["value4"] as? Bool
-                self.dataHouse4 = data?["house4"] as? Bool
-                self.dataPrice4 = data?["price4"] as? String
-                self.dataService4 = data?["service4"] as? String
+                self.dataValue4 = data?["value"] as? Bool
+                self.dataHouse4 = data?["house"] as? Bool
+                self.dataPrice4 = data?["price"] as? String
+                self.dataService4 = data?["service"] as? String
             }
         })
     }
@@ -188,10 +188,10 @@ class RequestServiceViewController: UIViewController {
         data?.getDocument(completion: { documentSnapshot, error in
             if error == nil{
                 let data = documentSnapshot?.data()
-                self.dataValue5 = data?["value5"] as? Bool
-                self.dataHouse5 = data?["house5"] as? Bool
-                self.dataPrice5 = data?["price5"] as? String
-                self.dataService5 = data?["service5"] as? String
+                self.dataValue5 = data?["value"] as? Bool
+                self.dataHouse5 = data?["house"] as? Bool
+                self.dataPrice5 = data?["price"] as? String
+                self.dataService5 = data?["service"] as? String
             }
         })
     }
@@ -201,10 +201,10 @@ class RequestServiceViewController: UIViewController {
         data?.getDocument(completion: { documentSnapshot, error in
             if error == nil{
                 let data = documentSnapshot?.data()
-                self.dataValue6 = data?["value6"] as? Bool
-                self.dataHouse6 = data?["house6"] as? Bool
-                self.dataPrice6 = data?["price6"] as? String
-                self.dataService6 = data?["service6"] as? String
+                self.dataValue6 = data?["value"] as? Bool
+                self.dataHouse6 = data?["house"] as? Bool
+                self.dataPrice6 = data?["price"] as? String
+                self.dataService6 = data?["service"] as? String
             }
         })
     }
@@ -214,10 +214,10 @@ class RequestServiceViewController: UIViewController {
         data?.getDocument(completion: { documentSnapshot, error in
             if error == nil{
                 let data = documentSnapshot?.data()
-                self.dataValue7 = data?["value7"] as? Bool
-                self.dataHouse7 = data?["house7"] as? Bool
-                self.dataPrice7 = data?["price7"] as? String
-                self.dataService7 = data?["service7"] as? String
+                self.dataValue7 = data?["value"] as? Bool
+                self.dataHouse7 = data?["house"] as? Bool
+                self.dataPrice7 = data?["price"] as? String
+                self.dataService7 = data?["service"] as? String
             }
         })
     }

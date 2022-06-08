@@ -25,8 +25,8 @@ class LoginViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.callFuncs()
-        self.tfEmail.text = "p@c.com"
-        self.tfPassword.text = "pc1234"
+        self.tfEmail.text = "tv@t.com"
+        self.tfPassword.text = "tv1234"
     }
     
     override func viewWillAppear(_ animated: Bool) {
