@@ -57,7 +57,10 @@ class NewServiceViewModel{
     }
     
     public func getFireBaseData(washType:String){
-        self.firestore.collection(washType).getDocuments { snapshot, error in
+        self.listUserFilter.removeAll()
+        self.delegate?.reloadTableView()
+        
+        firestore.collection(washType).getDocuments { snapshot, error in
             if error == nil{
                 if let snapshot = snapshot {
                     DispatchQueue.main.async {
@@ -85,18 +88,6 @@ class NewServiceViewModel{
         }
     }
     
-//    public func getFireBaseData(washType:String){
-//        firestore.collection(washType).getDocuments{ snapshotResult, error in
-//            if let snapshot = snapshotResult{
-//                for document in snapshot.documents {
-//                    let data = document.data()
-//                        self.users.append(data)
-//                    let name = data["nameData"]
-//                    let email = data["emailData"]
-//                }
-//            }
-//        }
-//    }
     
     
     public var countElements:Int{

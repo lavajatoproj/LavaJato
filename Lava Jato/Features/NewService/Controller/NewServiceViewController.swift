@@ -34,6 +34,9 @@ class NewServiceViewController: UIViewController {
         self.configItems()
         self.searchBar.delegate = self
         self.viewModel.delegate(delegate: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.viewModel.getFireBaseData(washType: typeWash)
     }
     
@@ -86,6 +89,7 @@ extension NewServiceViewController: UITableViewDelegate, UITableViewDataSource {
         self.user = self.viewModel.listUserFilter[indexPath.row]
 //        print(user)
         performSegue(withIdentifier: "RequestService", sender: user)
+        self.tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
