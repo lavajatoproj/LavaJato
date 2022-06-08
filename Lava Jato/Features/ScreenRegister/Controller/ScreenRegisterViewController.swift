@@ -213,7 +213,7 @@ class ScreenRegisterViewController: UIViewController {
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         self.serverSwitch()
-        if let name = self.nameRegisterTextField.text, let email = self.emailRegisterTextField.text, let password = self.passwordTextField.text, let cellNumber = self.numberRegisterTextField.text, let born = self.dateRegisterTextField.text, let document = self.documentRegisterTextField.text, let cep = self.postalCodeTextField.text, let state = self.selectStatusButton.titleLabel?.text, let gender = self.selectGenderButton.titleLabel?.text, let adress = self.adressTextField.text, let numberAdress = self.adressNumberTextField.text{
+        if let name = self.nameRegisterTextField.text, let email = self.emailRegisterTextField.text, let password = self.passwordTextField.text, let cellNumber = self.numberRegisterTextField.text, let born = self.dateRegisterTextField.text, let document = self.documentRegisterTextField.text, let cep = self.postalCodeTextField.text, let state = self.selectStatusButton.titleLabel?.text, let gender = self.selectGenderButton.titleLabel?.text, let adress = self.adressTextField.text, let numberAdress = self.adressNumberTextField.text, let city = self.cityTextField.text{
             
             self.auth?.createUser(withEmail: email, password: password) { (data, error) in
                 if error == nil{
@@ -227,6 +227,7 @@ class ScreenRegisterViewController: UIViewController {
                                 "born": born,
                                 "document": document,
                                 "cep": cep,
+                                "city": city,
                                 "state": state,
                                 "gender": gender,
                                 "server": self.serverSwitchState,

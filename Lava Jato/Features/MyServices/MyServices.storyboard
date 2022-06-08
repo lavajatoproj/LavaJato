@@ -13,7 +13,7 @@
         <!--Meus Serviços-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="myServices" id="Y6W-OH-hqX" customClass="myServicesViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyServices" id="Y6W-OH-hqX" customClass="MyServicesViewController" customModule="Lava_Jato" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="0.54570215490480134" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="0.3448608196334334" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ut0-rb-LSQ" firstAttribute="top" secondItem="Vuo-ss-rjR" secondAttribute="bottom" constant="22" id="7Fl-9E-6SP"/>
                                     <constraint firstAttribute="trailing" secondItem="Vuo-ss-rjR" secondAttribute="trailing" id="7ol-OM-ozH"/>
@@ -128,6 +128,7 @@
                     <connections>
                         <outlet property="background" destination="Is9-Sc-fkL" id="V6U-D0-X7R"/>
                         <outlet property="background2" destination="RYd-vd-LMw" id="9lS-m5-xOd"/>
+                        <outlet property="cityLabel" destination="xh7-hB-h2T" id="YTI-ZH-cSs"/>
                         <outlet property="nameLabel" destination="kE6-QL-sHm" id="dCV-HA-rdB"/>
                         <outlet property="tableView" destination="Vuo-ss-rjR" id="hyB-I4-vx6"/>
                         <outlet property="upDateButton" destination="ut0-rb-LSQ" id="a1I-Mh-mfm"/>
