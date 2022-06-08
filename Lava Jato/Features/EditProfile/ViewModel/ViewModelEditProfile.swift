@@ -48,17 +48,6 @@ class ViewModelEditProfile {
         UserDefaults.standard.set(value, forKey: key)
     }
     
-    public func createDropDownState(button:UIButton){
-        stateDropDown.anchorView = button
-        stateDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)
-        stateDropDown.dataSource = ["Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceara", "Distrito Federal", "Espírito Santo", "Goiás","Maranhão","Mato Grosso", "Mato Grosso do Sul", "Minas Gerais", "Pará", "Paraíba", "Paraná", "Pernambuco", "Piauí", "Rio de Janeiro","Rio Grande do Norte","Rio Grande do Sul", "Rondônia", "Roraima", "Santa Catarina", "São Paulo", "Sergipe", "Tocantins"]
-        stateDropDown.selectionAction = { (index, item) in
-            button.setTitle(item, for: .normal)
-//            self.saveUserDefaults(value: button.titleLabel?.text ?? "", key: "userState")
-        }
-        stateDropDown.show()
-    }
-    
     public func disableTextField(textField:UITextField){
         textField.isEnabled = false
         textField.textColor = UIColor.darkGray

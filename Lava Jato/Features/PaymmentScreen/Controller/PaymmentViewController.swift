@@ -31,14 +31,6 @@ class PaymmentViewController: UIViewController {
         self.configTextField()
     }
     
-//    public func textfieldStyle(textField:UITextField, color:UIColor){
-//        let bottomLine = CALayer()
-//        bottomLine.frame = CGRect(x: 0, y: textField.frame.height - 2, width: textField.frame.width, height: 2)
-//        bottomLine.backgroundColor = color.cgColor
-//        textField.backgroundColor = .clear
-//        textField.borderStyle = .none
-//        textField.layer.addSublayer(bottomLine)
-//    }
     func configTextField(){
         self.nameCardTextField.delegate = self
         self.numberCardTextField.delegate = self
@@ -61,12 +53,6 @@ class PaymmentViewController: UIViewController {
         self.paymmentScreenViewModel.disableItem(textField: self.numberCardTextField, button: .none, state: false)
         self.paymmentScreenViewModel.disableItem(textField: self.dateCardTextField, button: .none, state: false)
         self.paymmentScreenViewModel.disableItem(textField: self.cvvCardTextField, button: .none, state: false)
-
-//        self.confirmButton.isEnabled = false
-//        self.nameCardTextField.isEnabled = false
-//        self.numberCardTextField.isEnabled = false
-//        self.dateCardTextField.isEnabled = false
-//        self.cvvCardTextField.isEnabled = false
         numberCustomMask.formattingPattern = "$$$$ $$$$ $$$$ $$$$"
         validateCard.formattingPattern = "$$/$$"
         cvvCard.formattingPattern = "$$$"
@@ -79,6 +65,7 @@ class PaymmentViewController: UIViewController {
         alertController.addAction(ok)
         self.present(alertController, animated: true, completion: nil)
     }
+    
     func setCardText(){
         self.nameCardTextField.text = self.nameTF.text
         self.numberCardTextField.text = self.numberTF.text

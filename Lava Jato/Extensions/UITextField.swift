@@ -7,19 +7,6 @@
 
 import UIKit
 
-extension UITextField{
-    
-    func validateEmail()-> Bool{
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let validateRegex = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        return validateRegex.evaluate(with: self.text)
-    }
-    func validatePhone()-> Bool{
-        let phoneRegex = "^\\(d){2}\\d{5}-\\d{4}$"
-        let validatePhoneRegex =     NSPredicate(format: "SELF MATCHES %@", phoneRegex)
-        return validatePhoneRegex.evaluate(with: self.text)
-    }
-}
 extension String {
     
     var isCPF: Bool {
@@ -78,12 +65,6 @@ extension UIDatePicker {
     
 }
 extension String {
-    func isValidName() -> Bool {
-        let inputRegEx = "^[a-zA-Z\\ ]{10,200}$"
-        let inputpred = NSPredicate(format: "SELF MATCHES %@", inputRegEx)
-        return inputpred.evaluate(with:self)
-    }
-    
     func isValidEmail() -> Bool {
         let inputRegEx = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[A-Za-z]{2,64}"
         let inputpred = NSPredicate(format: "SELF MATCHES %@", inputRegEx)
