@@ -32,7 +32,6 @@ class ProfileEditViewController: UIViewController {
     private var viewModelEditProfile:ViewModelEditProfile = ViewModelEditProfile()
     private var alert:AlertController?
     var imagePicker = UIImagePickerController()
-    var valueStateButton:String? //verificar -------------------------------------------
     var firestore = Firestore.firestore()
     let storage = Storage.storage().reference()
     var auth: Auth?
@@ -50,8 +49,13 @@ class ProfileEditViewController: UIViewController {
         super.viewDidLoad()
         self.getFuncs()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.profileImageView.startShimmering()
+    }
     override func viewDidAppear(_ animated: Bool) {
         self.getProfileData()
+        self.profileImageView.stopShimmering()
     }
     func getFuncs(){
         self.firestore = Firestore.firestore()
