@@ -35,7 +35,6 @@ class FilterViewModel{
     private var currentPriceMax:Double
    
     
-    
     public var getProfessionalMen:Bool{
         return self.professionalMen
     }
