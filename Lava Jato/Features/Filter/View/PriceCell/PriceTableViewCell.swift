@@ -22,6 +22,9 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     @IBOutlet weak var cleanResultButton: UIButton!
     
     
+    var getLocation:Int = 0
+    
+   
     
     private weak var delegate:PriceTableViewCellDelegate?
     public func delegate(delegate:PriceTableViewCellDelegate?){
@@ -77,21 +80,33 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
         return cellC ?? UICollectionViewCell()
     }
     
-    private func selectCel(){
-        
-    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        for (index, value) in dataPlace.enumerated() {
+        for (index, value) in dataPlace.enumerated(){
             if index == indexPath.row{
                 dataPlace[index].isSelect = true
             }else{
                 dataPlace[index].isSelect = false
             }
         }
+        
         collectionView.reloadData()
         
+        if indexPath.item == 0 {
+            self.getLocation = 1
+            print(getLocation)
+        }
+        if indexPath.item == 1 {
+            self.getLocation = 2
+            print(getLocation)
+        }
+        if indexPath.item == 2 {
+            self.getLocation = 3
+            print(getLocation)
+        }
     }
+    
+
 }
 
 extension PriceTableViewCell:UITextFieldDelegate{

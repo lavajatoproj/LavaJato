@@ -50,6 +50,9 @@
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nMH-i0-A3x">
                         <rect key="frame" x="167.5" y="135.5" width="51" height="31"/>
                         <color key="onTintColor" red="0.0" green="0.21859122580000001" blue="0.51684874300000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <action selector="tappedServiceInLoco:" destination="KGk-i7-Jjw" eventType="valueChanged" id="km1-To-L0t"/>
+                        </connections>
                     </switch>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tem local" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFN-HM-lPP">
                         <rect key="frame" x="165" y="113" width="54" height="14.5"/>
@@ -60,6 +63,9 @@
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gK3-dg-96L">
                         <rect key="frame" x="292" y="135.5" width="51" height="31"/>
                         <color key="onTintColor" red="0.0" green="0.21859122580000001" blue="0.51684874300000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <action selector="tappedGoHome:" destination="KGk-i7-Jjw" eventType="valueChanged" id="UCx-N4-6aS"/>
+                        </connections>
                     </switch>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vai na residência" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9q-aC-ZEg">
                         <rect key="frame" x="268.5" y="113" width="95.5" height="14.5"/>

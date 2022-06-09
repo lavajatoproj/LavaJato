@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var cvCollectionView: UICollectionView!
     
-    public var mainViewModel:MainViewModel?
+    public var mainViewModel:HomeViewModel?
     
     private var fireStore = Firestore.firestore()
     

@@ -132,7 +132,7 @@ class NewServiceViewModel{
         self.currentPriceMax = currentPriceMax
         
         //TO DO: Fazer o filter de acordo com oque ele escolheu:
-        self.listUserFilter = self.serviceProviders.filter({$0.price < currentPriceMax && $0.price > currentPriceMin && $0.userName == "Thiago"})
+        self.listUserFilter = self.serviceProviders.filter({$0.price < currentPriceMax && $0.price > currentPriceMin && $0.professionalGender == ""})
 //        self.listUserFilter = self.serviceProviders.filter({$0.price < currentPriceMax && $0.price > currentPriceMin})
     }
     

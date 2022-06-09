@@ -35,7 +35,6 @@ class FilterViewModel{
     private var currentPriceMax:Double
    
     
-    
     public var getProfessionalMen:Bool{
         return self.professionalMen
     }
@@ -59,8 +58,6 @@ class FilterViewModel{
     public var getPrice: ProfilePrice{
         return ProfilePrice(currentPriceMin: self.currentPriceMin, currentPriceMax: self.currentPriceMax)
     }
-    
-    
     
     var countArray:Int {
         return 2
