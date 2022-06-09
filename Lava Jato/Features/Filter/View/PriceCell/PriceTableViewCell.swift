@@ -8,7 +8,7 @@
 import UIKit
 
 protocol PriceTableViewCellDelegate:AnyObject{
-    func result(priceMin:Double,priceMax:Double,type:String)
+    func result(priceMin:Double,priceMax:Double,serviceHome:Bool, serviceLocal:Bool, takeService:Bool)
 //    func clear(priceMin:Double,priceMax:Double,type:String)
 }
 
@@ -56,11 +56,12 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     }
     
     @IBAction func tappedViewResultButton(_ sender: UIButton) {
-        self.delegate?.result(priceMin: Double(self.priceMinTextField.text ?? "Digite o valor mínimo") ?? 0.0, priceMax: Double(self.priceMaxTextField.text ?? "Digite o valor máximo") ?? 0.0,type: "Tipo do servico")
+        self.delegate?.result(priceMin: Double(self.priceMinTextField.text ?? "") ?? 0.0, priceMax: Double(self.priceMaxTextField.text ?? "") ?? 0.0, serviceHome: false,serviceLocal: false, takeService: false)
     }
     
+    // Aplicar botão de limpar 
     @IBAction func tappedCleanResultButton(_ sender: UIButton) {
-//        self.delegate?.clear(priceMin: 0.0, priceMax: 0.0, type: "")
+      
         
     }
     

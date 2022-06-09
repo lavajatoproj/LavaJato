@@ -38,6 +38,9 @@ class NewServiceViewModel{
     private var professionalFemale:Bool = true
     private var currentPriceMin:Double = 0.0
     private var currentPriceMax:Double = 0.0
+    private var homeService:Bool = false
+    private var takeService:Bool = false
+    private var goToLocal:Bool = false
 
     
     public var getProfessionalMen:Bool{
@@ -54,6 +57,18 @@ class NewServiceViewModel{
     
     public var getCurrentPriceMax:Double{
         return self.currentPriceMax
+    }
+    
+    public var getHomeService:Bool{
+        return self.homeService
+    }
+    
+    public var getTakeService:Bool{
+        return self.takeService
+    }
+    
+    public var getGoToService:Bool{
+        return self.goToLocal
     }
     
     public func getFireBaseData(washType:String){
@@ -80,7 +95,6 @@ class NewServiceViewModel{
                         })
                         print( self.serviceProviders)
                         self.listUserFilter = self.serviceProviders
-                      //TO DO: Delegate
                         self.delegate?.reloadTableView()
                     }
                 }
@@ -125,14 +139,28 @@ class NewServiceViewModel{
         return self.listUserFilter[indexPath.row]
     }
     
-    public func setFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double){
+    func loadHeighForRow(indexPath:IndexPath)-> CGFloat{
+       return 138
+    }
+    
+    public func setFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double, homeService:Bool, takeService:Bool, goToService:Bool){
         self.professionalMen = professionalMen
         self.professionalFemale = professionalFemale
         self.currentPriceMin = currentPriceMin
         self.currentPriceMax = currentPriceMax
+        self.homeService = homeService
+        self.takeService = takeService
+        self.goToLocal = goToService
         
-        //TO DO: Fazer o filter de acordo com oque ele escolheu:
-        self.listUserFilter = self.serviceProviders.filter({$0.price < currentPriceMax && $0.price > currentPriceMin && $0.professionalGender == ""})
+        if professionalMen  == true && professionalFemale == true{
+            self.listUserFilter = self.serviceProviders.filter({ $0.professionalGender == "Masculino" || $0.professionalGender == "Feminino"})
+        }else if
+        
+        
+        
+       // self.listUserFilter = self.serviceProviders.filter({ $0.professionalGender == professionalMen && $0.professionalGender == professionalFemale && $0.price < currentPriceMax && $0.price > currentPriceMin && $0.homeService == true && $0.searchService == true && $0.takeService == true })
+        
+        
 //        self.listUserFilter = self.serviceProviders.filter({$0.price < currentPriceMax && $0.price > currentPriceMin})
     }
     
@@ -141,6 +169,9 @@ class NewServiceViewModel{
         self.professionalFemale = true
         self.currentPriceMin = 0.0
         self.currentPriceMax = 0.0
+        self.homeService = false
+        self.takeService = false
+        self.goToLocal = false
     }
     
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FilterViewControllerDelegate:AnyObject{
-    func resultFilter(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double)
+    func resultFilter(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double,homeService:Bool,takeService:Bool,goToService:Bool)
 //    func clearFilter(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double)
 }
 
@@ -34,8 +34,8 @@ class FilterViewController: UIViewController{
 //    var placeService
     
     //Falta o Type e tambem a localidade
-    init?(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double, coder: NSCoder){
-        self.viewModel = FilterViewModel(professionalMen: professionalMen, professionalFemale: professionalFemale,currentPriceMin:currentPriceMin,currentPriceMax: currentPriceMax)
+    init?(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double, currentHomeService:Bool, currentTakeService:Bool, currentGoToLocal:Bool, coder: NSCoder){
+        self.viewModel = FilterViewModel(professionalMen: professionalMen, professionalFemale: professionalFemale,currentPriceMin:currentPriceMin,currentPriceMax: currentPriceMax, currentHomeService: currentHomeService, currentTakeService: currentTakeService, currentGoToLocal: currentGoToLocal)
         super.init(coder: coder)
     }
     required init?(coder: NSCoder) {
@@ -107,9 +107,11 @@ extension FilterViewController:GenderTableViewCellDelegate{
 //}
 
 extension FilterViewController:PriceTableViewCellDelegate{
-    func result(priceMin: Double, priceMax: Double, type: String) {
-        self.viewModel.setResult(priceMin: priceMin, priceMax: priceMax, type: type)
-        self.delegate?.resultFilter(professionalMen: self.viewModel.getProfessionalMen, professionalFemale: self.viewModel.getProfessionalFemale, currentPriceMin: self.viewModel.getCurrentPriceMin, currentPriceMax: self.viewModel.getCurrentPriceMax)
+    
+    func result(priceMin: Double, priceMax: Double, serviceHome:Bool, serviceLocal:Bool, takeService:Bool ) {
+//        self.viewModel.setResult(priceMin: priceMin, priceMax: priceMax, serviceHome: serviceHome, serviceLocal: serviceLocal, takeService: takeService )
+        self.delegate?.resultFilter(professionalMen: self.viewModel.getProfessionalMen, professionalFemale: self.viewModel.getProfessionalFemale, currentPriceMin: self.viewModel.getCurrentPriceMin, currentPriceMax: self.viewModel.getCurrentPriceMax, homeService: self.viewModel.getHomeService, takeService: self.viewModel.getTakeService, goToService: self.viewModel.getGoToService )
+        
         self.navigationController?.popViewController(animated: true)
     }
     

@@ -55,7 +55,7 @@ class NewServiceViewController: UIViewController {
     
     @objc private func tapFilter(){
         let vc:FilterViewController? = UIStoryboard(name: "FilterViewController", bundle: nil).instantiateViewController(identifier: "FilterViewController") { coder -> FilterViewController? in
-            return FilterViewController(professionalMen: self.viewModel.getProfessionalMen, professionalFemale: self.viewModel.getProfessionalFemale, currentPriceMin: self.viewModel.getCurrentPriceMin,currentPriceMax: self.viewModel.getCurrentPriceMax, coder: coder)
+            return FilterViewController(professionalMen: self.viewModel.getProfessionalMen, professionalFemale: self.viewModel.getProfessionalFemale, currentPriceMin: self.viewModel.getCurrentPriceMin,currentPriceMax: self.viewModel.getCurrentPriceMax,currentHomeService: self.viewModel.getHomeService, currentTakeService: self.viewModel.getTakeService, currentGoToLocal: self.viewModel.getGoToService, coder: coder)
         }
         vc?.delegate(delegate: self)
         self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
@@ -93,7 +93,7 @@ extension NewServiceViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 138
+        return viewModel.loadHeighForRow(indexPath: indexPath)
     }
     
 }
@@ -109,11 +109,12 @@ extension NewServiceViewController: UISearchBarDelegate{
 }
 
 
-extension NewServiceViewController:FilterViewControllerDelegate{
-    func resultFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double) {
-        self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax)
+extension NewServiceViewController:FilterViewControllerDelegate{    
+    func resultFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double, homeService:Bool, takeService:Bool, goToService:Bool) {
+        self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax, homeService: homeService, takeService: takeService, goToService: goToService )
         self.tableView.reloadData()
     }
+    
     
 //    func clearFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double) {
 //        self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax)

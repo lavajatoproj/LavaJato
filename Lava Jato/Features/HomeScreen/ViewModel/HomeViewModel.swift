@@ -21,5 +21,10 @@ class HomeViewModel{
             return 510.0
         }
     }
+    
+    func minimumLine(collectionView:UICollectionViewLayout) -> CGFloat{
+        return 15
+        
+    }
 
 }

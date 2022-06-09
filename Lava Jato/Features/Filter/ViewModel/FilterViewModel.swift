@@ -21,11 +21,12 @@ class FilterViewModel{
     
 
     
-    init(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double){
+    init(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double,currentHomeService:Bool,currentTakeService:Bool,currentGoToLocal:Bool){
         self.professionalMen = professionalMen
         self.professionalFemale = professionalFemale
         self.currentPriceMin = currentPriceMin
         self.currentPriceMax = currentPriceMax
+  
         
     }
     
@@ -33,6 +34,9 @@ class FilterViewModel{
     private var professionalFemale:Bool
     private var currentPriceMin:Double
     private var currentPriceMax:Double
+    private var homeService:Bool = false
+    private var takeService:Bool = false
+    private var goToService:Bool = false
    
     
     public var getProfessionalMen:Bool{
@@ -51,12 +55,29 @@ class FilterViewModel{
         return self.currentPriceMax
     }
     
+    public var getHomeService:Bool{
+        return self.homeService
+    }
+    
+    public var getTakeService:Bool{
+        return self.takeService
+    }
+    
+    public var getGoToService:Bool{
+        return self.goToService
+    }
+    
     public var getGender: ProfileGender{
         return ProfileGender(stateM: self.professionalMen,stateF: self.professionalFemale)
     }
     
+    
     public var getPrice: ProfilePrice{
         return ProfilePrice(currentPriceMin: self.currentPriceMin, currentPriceMax: self.currentPriceMax)
+    }
+    
+    public var getLocalForService:ProfileLocalService{
+        return ProfileLocalService(currentHomeService: self.homeService, currentTakeService: self.takeService , currentGoToLocal: self.goToService )
     }
     
     var countArray:Int {
@@ -71,10 +92,11 @@ class FilterViewModel{
         }
     }
     
-    public func setResult(priceMin: Double, priceMax: Double, type: String){
+    public func setResult(priceMin: Double, priceMax: Double, serviceHome:Bool, serviceLocal:Bool, takeService:Bool){
         self.currentPriceMin = priceMin
         self.currentPriceMax = priceMax
-        //TO DO: TYPE
+    
+        
     }
     
     

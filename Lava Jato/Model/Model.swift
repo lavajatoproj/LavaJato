@@ -76,3 +76,10 @@ struct ProfileGender{
     let stateF:Bool
 }
 
+// MARK: - ProfileLocalService
+
+struct ProfileLocalService{
+    let currentHomeService:Bool
+    let currentTakeService:Bool
+    let currentGoToLocal:Bool
+}
