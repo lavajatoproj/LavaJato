@@ -23,6 +23,8 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var recomendButton: UIButton!
     
     
+//    recomendButton
+    
     var firestore: Firestore?
     var auth: Auth?
     var idUserLog: String?
@@ -66,9 +68,7 @@ class UserProfileViewController: UIViewController {
         self.getProfileData()
     }
     
-    @IBAction func tappedRecomendButton(_ sender: UIButton) {
-        print("Indique o App")
-    }
+ 
     
     @IBAction func tappedHelpButton(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "HelpScreenViewController", bundle: nil)
@@ -93,6 +93,12 @@ class UserProfileViewController: UIViewController {
         let vC = storyboard.instantiateViewController(withIdentifier: "ProfileEditViewController")
         navigationController?.pushViewController(vC, animated: true)
     }
+    
+    
+    @IBAction func tappedRecomendButton(_ sender: UIButton) {
+        self.presentShareSheet()
+    }
+    
     
     @IBAction func tappedActiveSilence(_ sender: UIButton) {
         self.silenceButton.isSelected = !self.silenceButton.isSelected
