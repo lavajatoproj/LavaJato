@@ -17,7 +17,7 @@ class ListOfProfessionalsViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     private var viewModel:ListViewModel = ListViewModel()
-    private var infos: Users?
+//    private var infos: Users?
     var firestore: Firestore?
     var users: [Dictionary<String, Any>] = []
     var serviceProviders:[Professionals] = []

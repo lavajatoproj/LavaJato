@@ -24,8 +24,8 @@ class NewServiceViewModel{
         self.delegate = delegate
     }
     
-    private let personService:PersonService = PersonService()
-    private var infos: Users?
+//    private let personService:PersonService = PersonService()
+//    private var infos: Users?
     private let firestore = Firestore.firestore()
     
     private var serviceProviders:[Professionals] = []
