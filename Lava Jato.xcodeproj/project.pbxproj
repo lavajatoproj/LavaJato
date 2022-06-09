@@ -436,10 +436,9 @@
 		A212220D27D13DA200B24208 /* ListOfProfessionals */ = {
 			isa = PBXGroup;
 			children = (
+				DAD9AF2C2852970E00405709 /* Controller */,
+				DAD9AF2B2852970700405709 /* View */,
 				A284A53F282C8D9A00D4241C /* ViewModel */,
-				A212221A27D13EB000B24208 /* ListOfProfessionalsViewController.swift */,
-				A212221827D13E9700B24208 /* ListOfProfessionals.storyboard */,
-				A212221C27D13EB500B24208 /* CellList */,
 			);
 			path = ListOfProfessionals;
 			sourceTree = "<group>";
@@ -447,10 +446,9 @@
 		A212220E27D13DB400B24208 /* MyServices */ = {
 			isa = PBXGroup;
 			children = (
+				DAD9AF2A285296E800405709 /* Controller */,
+				DAD9AF29285296DE00405709 /* View */,
 				A27E7BB0282D8B4B0039C3F7 /* ServiceViewModel */,
-				A212221427D13E6C00B24208 /* MyServices.storyboard */,
-				A212221627D13E7F00B24208 /* MyServicesViewController.swift */,
-				A2F799CB27DC6A1D005A53A3 /* Cell */,
 			);
 			path = MyServices;
 			sourceTree = "<group>";
@@ -458,11 +456,9 @@
 		A212220F27D13E0100B24208 /* RequestService */ = {
 			isa = PBXGroup;
 			children = (
+				DAD9AF28285296CD00405709 /* Controller */,
+				DAD9AF27285296C300405709 /* View */,
 				A27E7BAD282D80D90039C3F7 /* RequestViewModel */,
-				A212221227D13E5300B24208 /* RequestServiceViewController.swift */,
-				A212221027D13E3500B24208 /* RequestService.storyboard */,
-				A20B840C27DED68700F29991 /* Cell1 */,
-				A275B14B2850697D0088237C /* NewCell */,
 			);
 			path = RequestService;
 			sourceTree = "<group>";
@@ -691,6 +687,58 @@
 				DAA80E63282AD575009A7D73 /* HelpScreenViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DAD9AF27285296C300405709 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A275B14B2850697D0088237C /* NewCell */,
+				A20B840C27DED68700F29991 /* Cell1 */,
+				A212221027D13E3500B24208 /* RequestService.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAD9AF28285296CD00405709 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A212221227D13E5300B24208 /* RequestServiceViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAD9AF29285296DE00405709 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A212221427D13E6C00B24208 /* MyServices.storyboard */,
+				A2F799CB27DC6A1D005A53A3 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAD9AF2A285296E800405709 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A212221627D13E7F00B24208 /* MyServicesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAD9AF2B2852970700405709 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A212221C27D13EB500B24208 /* CellList */,
+				A212221827D13E9700B24208 /* ListOfProfessionals.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAD9AF2C2852970E00405709 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A212221A27D13EB000B24208 /* ListOfProfessionalsViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		E13E5B2127D5ACC7000CB644 /* ScreenRegister */ = {

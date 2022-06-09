@@ -102,6 +102,24 @@ class MyServicesViewController: UIViewController{
     var url:String?
     var profileImage:String?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.configInitials()
+        self.addServices()
+        self.configTableView()
+        self.alert = AlertController(controller: self)
+        if let idUser = auth?.currentUser?.uid{
+            self.idUserLog = idUser
+        }
+        self.userImageView.contentMode = .scaleAspectFill
+        self.userImageView.layer.cornerRadius = userImageView.frame.height / 2
+        self.userImageView.clipsToBounds = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.getProfileData()
+    }
+    
     func getProfileData(){
         let user = self.firestore?.collection("users").document(self.idUserLog ?? "")
         user?.getDocument(completion: { documentSnapshot, error in
@@ -133,24 +151,14 @@ class MyServicesViewController: UIViewController{
         )
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.configInitials()
-        self.addServices()
-        self.configTableView()
-        self.alert = AlertController(controller: self)
-        if let idUser = auth?.currentUser?.uid{
-            self.idUserLog = idUser
-        }
-        self.userImageView.contentMode = .scaleAspectFill
-        self.userImageView.layer.cornerRadius = userImageView.frame.height / 2
-        self.userImageView.clipsToBounds = true
+    func alert(title:String, message:String){
+        let alertController:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok:UIAlertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        
+        alertController.addAction(ok)
+        self.present(alertController, animated: true, completion: nil)
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.getProfileData()
-    }
-    
+        
     @IBAction func tappedUpDateButton(_ sender: UIButton) {
 
         if let userLog = self.auth?.currentUser{
@@ -420,276 +428,8 @@ class MyServicesViewController: UIViewController{
                         self.firestore?.collection("higienizacao")
                             .document(idUser).delete()
                     }
+            self.alert(title: "Concluído", message: "Serviços atualizados com sucesso.")
                 }
-        
-// MARK: - Comentado abaixo para testar o código em cima
-        
-        
-//        if let userLog = self.auth?.currentUser{
-//
-//            let idUser = userLog.uid
-//
-////            if self.serviceValue == true{
-//                self.firestore?.collection("lavagemSimples")
-//                    .document(idUser)
-//                    .setData([
-//                        "service": "Lavagem Simples",
-//                        "price": self.servicePrice,
-//                        "value": self.serviceValue,
-//                        "house": self.serviceHouse,
-//                        "nameData": self.nameData as Any,
-//                        "numberData": self.numberData as Any,
-//                        "emailData": self.emailData as Any,
-//                        "cepData": self.cepData as Any,
-//                        "adressData": self.adressData as Any,
-//                        "adressNumberData": self.adressNumberData as Any,
-//                        "bornData": self.bornData as Any,
-//                        "documentData": self.documentData as Any,
-//                        "stateData": self.stateData as Any,
-//                        "genderData": self.genderData as Any,
-//                        "cityData": self.cityData as Any,
-//                        "id": self.id as Any,
-//                        "profileImage": self.url as Any,
-//                    ]) { (error) in
-//                        if error == nil{
-//                            print("deu bom")
-//                        }
-//                    }
-////            }else{
-////                self.firestore?.collection("lavagemSimples")
-////                    .document(idUser).delete()
-////            }
-//
-////            if self.serviceValue1 == true{
-//                self.firestore?.collection("lavagemCompleta")
-//                    .document(idUser)
-//                    .setData([
-//                        "service1": "Lavagem Completa",
-//                        "price1": self.servicePrice1,
-//                        "value1": self.serviceValue1,
-//                        "house1": self.serviceHouse1,
-//                        "nameData": self.nameData as Any,
-//                        "numberData": self.numberData as Any,
-//                        "emailData": self.emailData as Any,
-//                        "cepData": self.cepData as Any,
-//                        "adressData": self.adressData as Any,
-//                        "adressNumberData": self.adressNumberData as Any,
-//                        "bornData": self.bornData as Any,
-//                        "documentData": self.documentData as Any,
-//                        "stateData": self.stateData as Any,
-//                        "genderData": self.genderData as Any,
-//                        "cityData": self.cityData as Any,
-//                        "id": self.id as Any,
-//                        "url": self.url as Any,
-//                    ]) { (error) in
-//                        if error == nil{
-//                            print("deu bom")
-//                        }
-//                    }
-////            }else{
-////                self.firestore?.collection("lavagemCompleta")
-////                    .document(idUser).delete()
-////            }
-//
-////            if self.serviceValue2 == true{
-//                self.firestore?.collection("lavagemPolimento")
-//                    .document(idUser)
-//                    .setData([
-//                        "service2": "Lavagem + Polimento",
-//                        "price2": self.servicePrice2,
-//                        "value2": self.serviceValue2,
-//                        "house2": self.serviceHouse2,
-//                        "nameData": self.nameData as Any,
-//                        "numberData": self.numberData as Any,
-//                        "emailData": self.emailData as Any,
-//                        "cepData": self.cepData as Any,
-//                        "adressData": self.adressData as Any,
-//                        "adressNumberData": self.adressNumberData as Any,
-//                        "bornData": self.bornData as Any,
-//                        "documentData": self.documentData as Any,
-//                        "stateData": self.stateData as Any,
-//                        "genderData": self.genderData as Any,
-//                        "cityData": self.cityData as Any,
-//                        "id": self.id as Any,
-//                        "url": self.url as Any,
-//                    ]) { (error) in
-//                        if error == nil{
-//                            print("deu bom")
-//                        }
-//                    }
-////            }else{
-////                self.firestore?.collection("lavagemPolimento")
-////                    .document(idUser).delete()
-////            }
-//
-////            if self.serviceValue3 == true{
-//                self.firestore?.collection("lavagemSeco")
-//                    .document(idUser)
-//                    .setData([
-//                        "service3": "Lavagem a seco",
-//                        "price3": self.servicePrice3,
-//                        "value3": self.serviceValue3,
-//                        "house3": self.serviceHouse3,
-//                        "nameData": self.nameData as Any,
-//                        "numberData": self.numberData as Any,
-//                        "emailData": self.emailData as Any,
-//                        "cepData": self.cepData as Any,
-//                        "adressData": self.adressData as Any,
-//                        "adressNumberData": self.adressNumberData as Any,
-//                        "bornData": self.bornData as Any,
-//                        "documentData": self.documentData as Any,
-//                        "stateData": self.stateData as Any,
-//                        "genderData": self.genderData as Any,
-//                        "cityData": self.cityData as Any,
-//                        "id": self.id as Any,
-//                        "url": self.url as Any,
-//                    ]) { (error) in
-//                        if error == nil{
-//                            print("deu bom")
-//                        }
-//                    }
-////            }else{
-////                self.firestore?.collection("lavagemSeco")
-////                    .document(idUser).delete()
-////            }
-////
-////            if self.serviceValue4 == true{
-//                self.firestore?.collection("lavagemVapor")
-//                    .document(idUser)
-//                    .setData([
-//                        "service4": "Lavagem a vapor",
-//                        "price4": self.servicePrice4,
-//                        "value4": self.serviceValue4,
-//                        "house4": self.serviceHouse4,
-//                        "nameData": self.nameData as Any,
-//                        "numberData": self.numberData as Any,
-//                        "emailData": self.emailData as Any,
-//                        "cepData": self.cepData as Any,
-//                        "adressData": self.adressData as Any,
-//                        "adressNumberData": self.adressNumberData as Any,
-//                        "bornData": self.bornData as Any,
-//                        "documentData": self.documentData as Any,
-//                        "stateData": self.stateData as Any,
-//                        "genderData": self.genderData as Any,
-//                        "cityData": self.cityData as Any,
-//                        "id": self.id as Any,
-//                        "url": self.url as Any,
-//                    ]) { (error) in
-//                        if error == nil{
-//                            print("deu bom")
-//                        }
-//                    }
-////            }else{
-////                self.firestore?.collection("lavagemVapor")
-////                    .document(idUser).delete()
-////            }
-//
-////            if self.serviceValue5 == true{
-//                self.firestore?.collection("ecolavagem")
-//                    .document(idUser)
-//                    .setData([
-//                        "service5": "Variação: Ecolavagem",
-//                        "price5": self.servicePrice5,
-//                        "value5": self.serviceValue5,
-//                        "house5": self.serviceHouse5,
-//                        "nameData": self.nameData as Any,
-//                        "numberData": self.numberData as Any,
-//                        "emailData": self.emailData as Any,
-//                        "cepData": self.cepData as Any,
-//                        "adressData": self.adressData as Any,
-//                        "adressNumberData": self.adressNumberData as Any,
-//                        "bornData": self.bornData as Any,
-//                        "documentData": self.documentData as Any,
-//                        "stateData": self.stateData as Any,
-//                        "genderData": self.genderData as Any,
-//                        "cityData": self.cityData as Any,
-//                        "id": self.id as Any,
-//                        "url": self.url as Any,
-//                    ]) { (error) in
-//                        if error == nil{
-//                            print("deu bom")
-//                        }
-//                    }
-////            }else{
-////                self.firestore?.collection("ecolavagem")
-////                    .document(idUser).delete()
-////            }
-//
-////            if self.serviceValue6 == true{
-//                self.firestore?.collection("purificacao")
-//                    .document(idUser)
-//                    .setData([
-//                        "service6": "Purificação de ar",
-//                        "price6": self.servicePrice6,
-//                        "value6": self.serviceValue6,
-//                        "house6": self.serviceHouse6,
-//                        "nameData": self.nameData as Any,
-//                        "numberData": self.numberData as Any,
-//                        "emailData": self.emailData as Any,
-//                        "cepData": self.cepData as Any,
-//                        "adressData": self.adressData as Any,
-//                        "adressNumberData": self.adressNumberData as Any,
-//                        "bornData": self.bornData as Any,
-//                        "documentData": self.documentData as Any,
-//                        "stateData": self.stateData as Any,
-//                        "genderData": self.genderData as Any,
-//                        "cityData": self.cityData as Any,
-//                        "id": self.id as Any,
-//                        "url": self.url as Any,
-//                    ]) { (error) in
-//                        if error == nil{
-//                            print("deu bom")
-//                        }
-//                    }
-////            }else{
-////                self.firestore?.collection("purificacao")
-////                    .document(idUser).delete()
-////            }
-//
-////            if self.serviceValue7 == true{
-//                self.firestore?.collection("higienizacao")
-//                    .document(idUser)
-//                    .setData([
-//                        "service7": "Higienização",
-//                        "price7": self.servicePrice7,
-//                        "value7": self.serviceValue7,
-//                        "house7": self.serviceHouse7,
-//                        "nameData": self.nameData as Any,
-//                        "numberData": self.numberData as Any,
-//                        "emailData": self.emailData as Any,
-//                        "cepData": self.cepData as Any,
-//                        "adressData": self.adressData as Any,
-//                        "adressNumberData": self.adressNumberData as Any,
-//                        "bornData": self.bornData as Any,
-//                        "documentData": self.documentData as Any,
-//                        "stateData": self.stateData as Any,
-//                        "genderData": self.genderData as Any,
-//                        "cityData": self.cityData as Any,
-//                        "id": self.id as Any,
-//                        "url": self.url as Any,
-//                    ]) { (error) in
-//                        if error == nil{
-//                            print("deu bom")
-//                        }
-//                    }
-////            }else{
-////                self.firestore?.collection("higienizacao")
-////                    .document(idUser).delete()
-////            }
-//        }
-//
-//        //        self.alert?.showAlert(title: "Tem certeza que deseja atualizar?", message: "", titleButton: "Confirmar", completion: { value in
-//        //            switch value {
-//        //            case .aceitar:
-//        //                let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
-//        //                let vC = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
-//        //                self.navigationController?.pushViewController(vC, animated: true)
-//        //            case .cancel:
-//        //                let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
-//        //                let vC = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
-//        //                self.navigationController?.pushViewController(vC, animated: true)
-//        //            }
-//        //        })
     }
     
     private func addServices(){
@@ -697,13 +437,10 @@ class MyServicesViewController: UIViewController{
     }
 }
 
-
 extension MyServicesViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomRowTableViewCell.identifier, for: indexPath) as? CustomRowTableViewCell
-//        cell?.serviceSwitch.isHidden = false
-//        cell?.houseSwitch.isHidden = false
         cell?.setupCell(product: self.viewModel.listServices[indexPath.row])
         cell?.delegate(delegate: self)
         return cell ?? UITableViewCell()

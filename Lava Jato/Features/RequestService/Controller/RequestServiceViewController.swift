@@ -222,41 +222,11 @@ class RequestServiceViewController: UIViewController {
         })
     }
     
-//    func instantiateVC(){
-//        let selectionVC = UIStoryboard(name: "PaymmentViewController", bundle: nil).instantiateViewController(withIdentifier: "PaymmentViewController") as? PaymmentViewController
-//        selectionVC?.modalPresentationStyle =  .popover
-//        self.present(selectionVC ?? UIViewController(), animated: true, completion: nil)
-//    }
-        
-//        func tappedEndButton(_ sender: UIButton) {
-//            self.serviceLabel.text = "-"
-//            self.valueLabel.text = "-"
-//            instantiateVC()
-//            self.alert?.showAlert(title: "Você será redirecionado para o MercadoPago", message: "Após concluir o pagamento, você receberá um email de confirmação", titleButton: "Confirmar", completion: { value in
-//                switch value {
-//                case .aceitar:
-//                    self.dismiss(animated: true)
-//                case .cancel:
-//                    let storyboard = UIStoryboard(name: "listOfProfessionals", bundle: nil)
-//                    let vC = storyboard.instantiateViewController(withIdentifier: "listOfProfessionals")
-//                    self.navigationController?.pushViewController(vC, animated: true)
-//                }
-//            })
-//        }
-    
     
     @IBAction func tappedRequestButton(_ sender: UIButton) {
         self.serviceLabel.text = "-"
         self.houseLabel.text = "-"
         self.performSegue(withIdentifier: "PaymmentViewController", sender: nil)
-//        self.alert?.showAlert(title: "Você será redirecionado para o MercadoPago", message: "Após concluir o pagamento, você receberá um email de confirmação", titleButton: "Confirmar", completion: { value in
-//            switch value {
-//            case .aceitar:
-//                self.performSegue(withIdentifier: "PaymmentViewController", sender: nil)
-//            case .cancel:
-//                print("Cancelado")
-//            }
-//        })
     }
     
     func configTableView(){

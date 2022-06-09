@@ -17,7 +17,6 @@ class ListOfProfessionalsViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     private var viewModel:ListViewModel = ListViewModel()
-//    private var infos: Users?
     var firestore: Firestore?
     var users: [Dictionary<String, Any>] = []
     var serviceProviders:[Professionals] = []
@@ -55,25 +54,14 @@ class ListOfProfessionalsViewController: UIViewController {
                     })
                     print( self.serviceProviders)
                     self.listUserFilter = self.serviceProviders
-                  //TO DO: Delegate
                     self.tableView.reloadData()
                 }
-//                for document in snapshot.documents {
-//                    let data = document.data()
-//                    let servers = data["server"]
-//                    if servers as? Int == 1{
-//                        self.users.append(data)
-//                    }
-//                }
-//                self.tableView.reloadData()
             }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//      self.listViewModel.fetchHistory()
-//      self.listViewModel.delegate(delegate: self)
         self.firestore = Firestore.firestore()
         self.setup()
         self.configItems()
@@ -107,7 +95,6 @@ class ListOfProfessionalsViewController: UIViewController {
     }
     
     
-    // MARK: - inicio da alteração
     @objc private func tapFilter(){
         let vc:FilterViewController? = UIStoryboard(name: "FilterViewController", bundle: nil).instantiateViewController(identifier: "FilterViewController") { coder -> FilterViewController? in
             return FilterViewController (professionalMen: self.viewModel.getProfessionalMen, professionalFemale: self.viewModel.getProfessionalFemale, currentPriceMin: self.viewModel.getCurrentPriceMin,currentPriceMax: self.viewModel.getCurrentPriceMax,currentHomeService: self.viewModel.getHomeService, currentTakeService: self.viewModel.getTakeService, currentGoToLocal: self.viewModel.getGoToService, coder: coder)
@@ -116,7 +103,6 @@ class ListOfProfessionalsViewController: UIViewController {
         vc?.delegate(delegate: self)
         self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
-    //MARK: -  Fim da alteração
     
     
     
@@ -130,25 +116,7 @@ class ListOfProfessionalsViewController: UIViewController {
         )
     }
     
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        let vcRequest = segue.destination as? requestServiceViewController
-    //        vcRequest?.nameProfessional = titleLabel.text ?? "salve"
-    //    }
-    
 }
-
-//extension listOfProfessionalsViewController: ListViewModelDelegate{
-//
-//    func success() {
-//        self.setup()
-//        tableView.reloadData()
-//    }
-//    
-//    func error() {
-//        print(#function)
-//    }
-//    
-//}
 
 extension ListOfProfessionalsViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -203,7 +171,6 @@ extension ListOfProfessionalsViewController: UISearchBarDelegate{
     }
 }
 
-// MARK: -  Criado extension para receber delegate
 extension ListOfProfessionalsViewController:FilterViewControllerDelegate{
     
     func clearFilter() {

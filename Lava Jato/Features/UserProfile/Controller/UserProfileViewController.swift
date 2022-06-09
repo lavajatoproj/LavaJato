@@ -60,7 +60,12 @@ class UserProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        self.userImageView.startShimmering()
         self.getProfileData()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        self.userImageView.stopShimmering()
     }
     
     @IBAction func tappedHelpButton(_ sender: UIButton) {
