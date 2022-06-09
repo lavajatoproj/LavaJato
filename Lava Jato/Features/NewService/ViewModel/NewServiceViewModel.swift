@@ -24,8 +24,6 @@ class NewServiceViewModel{
         self.delegate = delegate
     }
     
-    private let personService:PersonService = PersonService()
-    private var infos: Users?
     private let firestore = Firestore.firestore()
     
     private var serviceProviders:[Professionals] = []
@@ -95,25 +93,6 @@ class NewServiceViewModel{
                         self.delegate?.reloadTableView()
                     }
                 }
-            }
-        }
-    }
-    
-    public var countElements:Int{
-        return self.infos?.registerUsers?.count ?? 0
-    }
-    
-    public func loadUsers(indexPath: IndexPath) -> RegisterUser{
-        return infos?.registerUsers?[indexPath.row] ?? RegisterUser()
-    }
-    
-    public func fetchHistory(){
-        self.personService.getPersonAlamofire { success, error in
-            if let _success = success{
-                self.infos = _success
-                self.delegate?.success()
-            }else{
-                self.delegate?.error()
             }
         }
     }

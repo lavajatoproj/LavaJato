@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>&quot;O aplicativo deseja acessar sua localização&quot;</string>
+	<key>NSCameraUsageDescription</key>
+	<string>&quot;O aplicativo deseja ter acesso à sua câmera&quot;</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>&quot;O aplicativo deseja ter acesso à sua galeria de fotos&quot;</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>

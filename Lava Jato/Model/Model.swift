@@ -77,3 +77,16 @@ struct ProfileLocalService{
     let currentTakeService:Bool
     let currentGoToLocal:Bool
 }
+
+struct Professionals{
+    var userImage:String
+    var userName:String
+    var id:String
+    var price:Double
+    var homeService:Bool
+    var serviceType:String
+    var goToService:Bool
+    var takeService:Bool
+    var professionalGender:String
+    var localCity:String
+}
