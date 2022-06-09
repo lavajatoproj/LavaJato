@@ -60,8 +60,6 @@ class FilterViewModel{
         return ProfilePrice(currentPriceMin: self.currentPriceMin, currentPriceMax: self.currentPriceMax)
     }
     
-    
-    
     var countArray:Int {
         return 2
     }

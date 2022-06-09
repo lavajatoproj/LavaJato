@@ -27,49 +27,49 @@ class MyServicesViewController: UIViewController{
     var idUserLog:String?
     var serverInfo:String?
     
-    var servicePrice:String = "80,00"
+    var servicePrice:Double = 80.00
     var serviceValue:Bool = false
     var serviceHouse:Bool = false
     var serviceGoInHouse:Bool = false
     var serviceHaveLocation:Bool = false
     
-    var servicePrice1:String = "80,00"
+    var servicePrice1:Double = 80.00
     var serviceValue1:Bool = false
     var serviceHouse1:Bool = false
     var serviceGoInHouse1:Bool = false
     var serviceHaveLocation1:Bool = false
     
-    var servicePrice2:String = "80,00"
+    var servicePrice2:Double = 80.00
     var serviceValue2:Bool = false
     var serviceHouse2:Bool = false
     var serviceGoInHouse2:Bool = false
     var serviceHaveLocation2:Bool = false
     
-    var servicePrice3:String = "80,00"
+    var servicePrice3:Double = 80.00
     var serviceValue3:Bool = false
     var serviceHouse3:Bool = false
     var serviceGoInHouse3:Bool = false
     var serviceHaveLocation3:Bool = false
     
-    var servicePrice4:String = "80,00"
+    var servicePrice4:Double = 80.00
     var serviceValue4:Bool = false
     var serviceHouse4:Bool = false
     var serviceGoInHouse4:Bool = false
     var serviceHaveLocation4:Bool = false
     
-    var servicePrice5:String = "80,00"
+    var servicePrice5:Double = 80.00
     var serviceValue5:Bool = false
     var serviceHouse5:Bool = false
     var serviceGoInHouse5:Bool = false
     var serviceHaveLocation5:Bool = false
     
-    var servicePrice6:String = "80,00"
+    var servicePrice6:Double = 80.00
     var serviceValue6:Bool = false
     var serviceHouse6:Bool = false
     var serviceGoInHouse6:Bool = false
     var serviceHaveLocation6:Bool = false
     
-    var servicePrice7:String = "80,00"
+    var servicePrice7:Double = 80.00
     var serviceValue7:Bool = false
     var serviceHouse7:Bool = false
     var serviceGoInHouse7:Bool = false
@@ -732,34 +732,50 @@ extension MyServicesViewController:CustomRowTableViewCellDelegate{
                 self.servicePrice = product.price
                 self.serviceValue = product.value
                 self.serviceHouse = product.house
+                self.serviceGoInHouse = product.goInHouse
+                self.serviceHaveLocation = product.haveLocation
             } else if index.row == 1{
                 self.servicePrice1 = product.price
                 self.serviceValue1 = product.value
                 self.serviceHouse1 = product.house
+                self.serviceGoInHouse1 = product.goInHouse
+                self.serviceHaveLocation1 = product.haveLocation
             } else if index.row == 2{
                 self.servicePrice2 = product.price
                 self.serviceValue2 = product.value
                 self.serviceHouse2 = product.house
+                self.serviceGoInHouse2 = product.goInHouse
+                self.serviceHaveLocation2 = product.haveLocation
             } else if index.row == 3{
                 self.servicePrice3 = product.price
                 self.serviceValue3 = product.value
                 self.serviceHouse3 = product.house
+                self.serviceGoInHouse3 = product.goInHouse
+                self.serviceHaveLocation3 = product.haveLocation
             } else if index.row == 4{
                 self.servicePrice4 = product.price
                 self.serviceValue4 = product.value
                 self.serviceHouse4 = product.house
+                self.serviceGoInHouse4 = product.goInHouse
+                self.serviceHaveLocation4 = product.haveLocation
             } else if index.row == 5{
                 self.servicePrice5 = product.price
                 self.serviceValue5 = product.value
                 self.serviceHouse5 = product.house
+                self.serviceGoInHouse5 = product.goInHouse
+                self.serviceHaveLocation5 = product.haveLocation
             } else if index.row == 6{
                 self.servicePrice6 = product.price
                 self.serviceValue6 = product.value
                 self.serviceHouse6 = product.house
+                self.serviceGoInHouse6 = product.goInHouse
+                self.serviceHaveLocation6 = product.haveLocation
             } else if index.row == 7{
                 self.servicePrice7 = product.price
                 self.serviceValue7 = product.value
                 self.serviceHouse7 = product.house
+                self.serviceGoInHouse7 = product.goInHouse
+                self.serviceHaveLocation7 = product.haveLocation
             }
     }
 }

@@ -26,20 +26,25 @@ class PlaceCollectionViewCell: UICollectionViewCell {
     }
     
     override func awakeFromNib() {
-        super.awakeFromNib()
-      
+        super.awakeFromNib()      
     }
     
     
+    
     func setupCell(with profilePlace:ProfileBanner){
+//        var selectCell:Bool = false
         self.bannerImageView.image = profilePlace.imgA
         if  profilePlace.isSelect{
             self.bannerImageView.layer.borderWidth = 1.5
             self.bannerImageView.layer.borderColor = UIColor.white.cgColor
+//            selectCell = true
         }else{
             self.bannerImageView.layer.borderWidth = 0
+//            selectCell = false
         }
        
+        
+        
     }
     
 
