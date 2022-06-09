@@ -48,6 +48,9 @@ class ListViewModel{
     private var professionalFemale:Bool = true
     private var currentPriceMin:Double = 0.0
     private var currentPriceMax:Double = 0.0
+    private var homeService:Bool = false
+    private var takeService:Bool = false
+    private var goToLocal:Bool = false
     
     
     public var getProfessionalMen:Bool{
@@ -66,13 +69,38 @@ class ListViewModel{
         return self.currentPriceMax
     }
     
-    public func setFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double){
+    public var getHomeService:Bool{
+        return self.homeService
+    }
+    
+    public var getTakeService:Bool{
+        return self.takeService
+    }
+    
+    public var getGoToService:Bool{
+        return self.goToLocal
+    }
+    
+    public func setFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double, homeService:Bool, takeService:Bool, goToService:Bool){
         self.professionalMen = professionalMen
         self.professionalFemale = professionalFemale
         self.currentPriceMin = currentPriceMin
         self.currentPriceMax = currentPriceMax
+        self.homeService = homeService
+        self.takeService = takeService
+        self.goToLocal = goToService
         
         //TO DO: Fazer o filter de acordo com oque ele escolheu:
         //        self.listUserFilter = self.serviceProviders.filter({$0.price < currentPriceMax && $0.price > currentPriceMin && $0.userName == "Caio"})
+    }
+    
+    public func clearFilter(){
+        self.professionalMen = true
+        self.professionalFemale = true
+        self.currentPriceMin = 0.0
+        self.currentPriceMax = 0.0
+        self.homeService = false
+        self.takeService = false
+        self.goToLocal = false
     }
 }

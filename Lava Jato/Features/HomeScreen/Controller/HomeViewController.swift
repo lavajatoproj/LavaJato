@@ -14,24 +14,17 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var cvCollectionView: UICollectionView!
     
-    public var mainViewModel:HomeViewModel?
+    public var viewModel:HomeViewModel?
     
     private var fireStore = Firestore.firestore()
     
     private var newService:NewServiceViewController?
-    
-    //    var filterArray:[Professionals] = []
     var services:[Professionals] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.settingCV()
-        
     }
-    
-    //    override func viewWillAppear(_ animated: Bool) {
-    //        self.filterArray = []
-    //    }
     
     // MARK: - Signatures
     

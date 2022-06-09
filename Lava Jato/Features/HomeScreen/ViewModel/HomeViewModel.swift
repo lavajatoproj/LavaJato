@@ -9,17 +9,14 @@ import Foundation
 import UIKit
 import FirebaseFirestore
 
-protocol HomeViewModelDelegate:AnyObject{}
+protocol HomeViewModelDelegate:AnyObject{
+    
+}
 
 
 class HomeViewModel{
-    
-    func loadHeighForRow(indexPath:IndexPath)-> CGFloat{
-        if indexPath.row == 0 {
-            return 166.0
-        }else{
-            return 510.0
-        }
-    }
 
+    func minimumLine(collectionView:UICollectionViewLayout) -> CGFloat{
+        return 15
+    }
 }

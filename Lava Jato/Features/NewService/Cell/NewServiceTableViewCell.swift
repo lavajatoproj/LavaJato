@@ -49,9 +49,7 @@ class NewServiceTableViewCell: UITableViewCell {
             pictureImageView.image = UIImage(systemName: "person.circle.fill")
         }
         self.nameLabel.text = data.userName
-//        self.pictureImageView. = data.userImage
-    }
 
-    
+    }    
 }
 

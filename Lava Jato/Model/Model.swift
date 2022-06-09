@@ -55,12 +55,6 @@ struct ProfileBanner {
     var imgA:UIImage
     var isSelect:Bool
 }
-      
-var dataPlace: [ProfileBanner] = [
-    ProfileBanner(imgA: #imageLiteral(resourceName: "frame16.png"), isSelect: false),
-    ProfileBanner(imgA: #imageLiteral(resourceName: "frame17.png"), isSelect: false),
-    ProfileBanner(imgA: #imageLiteral(resourceName: "frame18.png"), isSelect: false)
-]
 
 // MARK: - ProfilePrice
 
@@ -76,3 +70,10 @@ struct ProfileGender{
     let stateF:Bool
 }
 
+// MARK: - ProfileLocalService
+
+struct ProfileLocalService{
+    let currentHomeService:Bool
+    let currentTakeService:Bool
+    let currentGoToLocal:Bool
+}

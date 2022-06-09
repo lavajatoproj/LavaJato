@@ -22,9 +22,6 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var notificationButton: UIButton!
     @IBOutlet weak var recomendButton: UIButton!
     
-    
-//    recomendButton
-    
     var firestore: Firestore?
     var auth: Auth?
     var idUserLog: String?
@@ -61,21 +58,16 @@ class UserProfileViewController: UIViewController {
     }
     
     
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
         self.getProfileData()
     }
-    
- 
     
     @IBAction func tappedHelpButton(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "HelpScreenViewController", bundle: nil)
         let vC = storyboard.instantiateViewController(withIdentifier: "HelpScreenViewController")
         navigationController?.pushViewController(vC, animated: true)
     }
-    
     
     @IBAction func tappedLogoutButton(_ sender: UIButton) {
         do {
@@ -98,7 +90,6 @@ class UserProfileViewController: UIViewController {
     @IBAction func tappedRecomendButton(_ sender: UIButton) {
         self.presentShareSheet()
     }
-    
     
     @IBAction func tappedActiveSilence(_ sender: UIButton) {
         self.silenceButton.isSelected = !self.silenceButton.isSelected
@@ -132,13 +123,11 @@ class UserProfileViewController: UIViewController {
         self.present(activityViewController, animated: true, completion: nil)
         
     }
-    
-    
+        
     func alert(title:String, message:String){
         let alertController:UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let ok:UIAlertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
         alertController.addAction(ok)
         self.present(alertController, animated: true, completion: nil)
     }
-    
 }
