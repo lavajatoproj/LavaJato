@@ -30,34 +30,50 @@ class MyServicesViewController: UIViewController{
     var servicePrice:String = "80,00"
     var serviceValue:Bool = false
     var serviceHouse:Bool = false
+    var serviceGoInHouse:Bool = false
+    var serviceHaveLocation:Bool = false
     
     var servicePrice1:String = "80,00"
     var serviceValue1:Bool = false
     var serviceHouse1:Bool = false
+    var serviceGoInHouse1:Bool = false
+    var serviceHaveLocation1:Bool = false
     
     var servicePrice2:String = "80,00"
     var serviceValue2:Bool = false
     var serviceHouse2:Bool = false
+    var serviceGoInHouse2:Bool = false
+    var serviceHaveLocation2:Bool = false
     
     var servicePrice3:String = "80,00"
     var serviceValue3:Bool = false
     var serviceHouse3:Bool = false
+    var serviceGoInHouse3:Bool = false
+    var serviceHaveLocation3:Bool = false
     
     var servicePrice4:String = "80,00"
     var serviceValue4:Bool = false
     var serviceHouse4:Bool = false
+    var serviceGoInHouse4:Bool = false
+    var serviceHaveLocation4:Bool = false
     
     var servicePrice5:String = "80,00"
     var serviceValue5:Bool = false
     var serviceHouse5:Bool = false
+    var serviceGoInHouse5:Bool = false
+    var serviceHaveLocation5:Bool = false
     
     var servicePrice6:String = "80,00"
     var serviceValue6:Bool = false
     var serviceHouse6:Bool = false
+    var serviceGoInHouse6:Bool = false
+    var serviceHaveLocation6:Bool = false
     
     var servicePrice7:String = "80,00"
     var serviceValue7:Bool = false
     var serviceHouse7:Bool = false
+    var serviceGoInHouse7:Bool = false
+    var serviceHaveLocation7:Bool = false
     
     private func configTableView(){
         self.tableView.delegate = self
@@ -145,6 +161,8 @@ class MyServicesViewController: UIViewController{
                         self.firestore?.collection("lavagemSimples")
                             .document(idUser)
                             .setData([
+                                "goInHouse": self.serviceGoInHouse,
+                                "haveLocation": self.serviceHaveLocation,
                                 "service": "Lavagem Simples",
                                 "price": self.servicePrice,
                                 "value": self.serviceValue,
@@ -176,6 +194,8 @@ class MyServicesViewController: UIViewController{
                         self.firestore?.collection("lavagemCompleta")
                             .document(idUser)
                             .setData([
+                                "goInHouse": self.serviceGoInHouse1,
+                                "haveLocation": self.serviceHaveLocation1,
                                 "service": "Lavagem Completa",
                                 "price": self.servicePrice1,
                                 "value": self.serviceValue1,
@@ -207,6 +227,8 @@ class MyServicesViewController: UIViewController{
                         self.firestore?.collection("lavagemPolimento")
                             .document(idUser)
                             .setData([
+                                "goInHouse": self.serviceGoInHouse2,
+                                "haveLocation": self.serviceHaveLocation2,
                                 "service": "Lavagem + Polimento",
                                 "price": self.servicePrice2,
                                 "value": self.serviceValue2,
@@ -238,6 +260,8 @@ class MyServicesViewController: UIViewController{
                         self.firestore?.collection("lavagemSeco")
                             .document(idUser)
                             .setData([
+                                "goInHouse": self.serviceGoInHouse3,
+                                "haveLocation": self.serviceHaveLocation3,
                                 "service": "Lavagem a seco",
                                 "price": self.servicePrice3,
                                 "value": self.serviceValue3,
@@ -269,6 +293,8 @@ class MyServicesViewController: UIViewController{
                         self.firestore?.collection("lavagemVapor")
                             .document(idUser)
                             .setData([
+                                "goInHouse": self.serviceGoInHouse4,
+                                "haveLocation": self.serviceHaveLocation4,
                                 "service": "Lavagem a vapor",
                                 "price": self.servicePrice4,
                                 "value": self.serviceValue4,
@@ -300,6 +326,8 @@ class MyServicesViewController: UIViewController{
                         self.firestore?.collection("ecolavagem")
                             .document(idUser)
                             .setData([
+                                "goInHouse": self.serviceGoInHouse5,
+                                "haveLocation": self.serviceHaveLocation5,
                                 "service": "Variação: Ecolavagem",
                                 "price": self.servicePrice5,
                                 "value": self.serviceValue5,
@@ -331,6 +359,8 @@ class MyServicesViewController: UIViewController{
                         self.firestore?.collection("purificacao")
                             .document(idUser)
                             .setData([
+                                "goInHouse": self.serviceGoInHouse6,
+                                "haveLocation": self.serviceHaveLocation6,
                                 "service": "Purificação de ar",
                                 "price": self.servicePrice6,
                                 "value": self.serviceValue6,
@@ -362,6 +392,8 @@ class MyServicesViewController: UIViewController{
                         self.firestore?.collection("higienizacao")
                             .document(idUser)
                             .setData([
+                                "goInHouse": self.serviceGoInHouse7,
+                                "haveLocation": self.serviceHaveLocation7,
                                 "service": "Higienização",
                                 "price": self.servicePrice7,
                                 "value": self.serviceValue7,

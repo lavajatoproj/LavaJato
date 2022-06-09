@@ -95,14 +95,14 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="goHouseSwitch" destination="gK3-dg-96L" id="Llf-hk-chk"/>
+                <outlet property="goInHouseSwitch" destination="gK3-dg-96L" id="Llf-hk-chk"/>
                 <outlet property="haveLocationSwitch" destination="nMH-i0-A3x" id="n3L-bP-Yo3"/>
                 <outlet property="houseSwitch" destination="HDD-GF-iHI" id="UhU-kB-lQa"/>
                 <outlet property="priceTextField" destination="Rhb-Us-0oH" id="vKf-yH-1Bg"/>
                 <outlet property="productLabel" destination="CzS-Vb-VQV" id="Cy6-nB-KBg"/>
                 <outlet property="serviceSwitch" destination="s0G-Z3-5iv" id="xaj-LO-nzH"/>
             </connections>
-            <point key="canvasLocation" x="26" y="73"/>
+            <point key="canvasLocation" x="-213" y="137"/>
         </tableViewCell>
     </objects>
 </document>

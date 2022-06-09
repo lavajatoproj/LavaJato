@@ -20,6 +20,8 @@ struct Services2{
     var house: Bool
     var service: String
     var price: String
+    var goInHouse:Bool
+    var haveLocation:Bool
 }
 
 struct Server{
