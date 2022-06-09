@@ -23,7 +23,7 @@ class ListOfProfessionalsViewController: UIViewController {
     var serviceProviders:[Professionals] = []
     var listUserFilter:[Professionals] = []
     var professionals:Professionals?
-//    var user:Professionals
+
     
     
     func setup(){
@@ -47,7 +47,7 @@ class ListOfProfessionalsViewController: UIViewController {
                             price: document["price"] as? Double ?? 0.0,
                             homeService: document["house"] as? Bool ?? false,
                             serviceType: document["service"] as? String ?? "",
-                            searchService: document["house"] as? Bool ?? false,
+                            goToService: document["house"] as? Bool ?? false,
                             takeService: document["house"] as? Bool ?? false,
                             professionalGender: document["gender"] as? String ?? "",
                             localCity: document["city"] as? String ?? ""
@@ -108,13 +108,10 @@ class ListOfProfessionalsViewController: UIViewController {
     
     
     // MARK: - inicio da alteração
-    // adicionado novo forma para chamar e voltar o filtro
     @objc private func tapFilter(){
         let vc:FilterViewController? = UIStoryboard(name: "FilterViewController", bundle: nil).instantiateViewController(identifier: "FilterViewController") { coder -> FilterViewController? in
             return FilterViewController (professionalMen: self.viewModel.getProfessionalMen, professionalFemale: self.viewModel.getProfessionalFemale, currentPriceMin: self.viewModel.getCurrentPriceMin,currentPriceMax: self.viewModel.getCurrentPriceMax,currentHomeService: self.viewModel.getHomeService, currentTakeService: self.viewModel.getTakeService, currentGoToLocal: self.viewModel.getGoToService, coder: coder)
             
-            
-//            (professionalMen: self.viewModel.getProfessionalMen, professionalFemale: self.viewModel.getProfessionalFemale, currentPriceMin: self.viewModel.getCurrentPriceMin,currentPriceMax: self.viewModel.getCurrentPriceMax, homeService: self.viewModel.getHomeService, takeService: self.viewModel.getTakeService, goToService: self.viewModel.getGoToService, coder: coder)
         }
         vc?.delegate(delegate: self)
         self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
@@ -197,7 +194,6 @@ extension ListOfProfessionalsViewController: UISearchBarDelegate{
                 searchUsers(text: textSearch )
             }
         }
-        
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -205,21 +201,18 @@ extension ListOfProfessionalsViewController: UISearchBarDelegate{
             listOfUsers()
         }
     }
-    
 }
 
 // MARK: -  Criado extension para receber delegate
 extension ListOfProfessionalsViewController:FilterViewControllerDelegate{
+    
+    func clearFilter() {
+        self.viewModel.clearFilter()
+    }
+    
     func resultFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double, homeService:Bool, takeService:Bool, goToService:Bool) {
         self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax, homeService: homeService, takeService: takeService, goToService: goToService )
         self.tableView.reloadData()
-        
-        
-        //    func clearFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double) {
-        //        self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax)
-        //        self.tableView.reloadData()
-        //    }
-            
     }
 
 }

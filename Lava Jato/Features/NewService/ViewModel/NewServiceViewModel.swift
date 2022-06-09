@@ -16,7 +16,6 @@ protocol NewServiceViewModelDelegate:AnyObject{
 }
 
 
-
 class NewServiceViewModel{
     
     private weak var delegate: NewServiceViewModelDelegate?
@@ -72,8 +71,6 @@ class NewServiceViewModel{
     }
     
     public func getFireBaseData(washType:String){
-        self.listUserFilter.removeAll()
-        self.delegate?.reloadTableView()
         
         firestore.collection(washType).getDocuments { snapshot, error in
             if error == nil{
@@ -87,7 +84,7 @@ class NewServiceViewModel{
                                 price: document["price"] as? Double ?? 0.0,
                                 homeService: document["house"] as? Bool ?? false,
                                 serviceType: document["service"] as? String ?? "",
-                                searchService: document["house"] as? Bool ?? false,
+                                goToService: document["goInHouse"] as? Bool ?? false,
                                 takeService: document["service"] as? Bool ?? false,
                                 professionalGender: document["genderData"] as? String ?? "",
                                 localCity: document["cityData"] as? String ?? ""
@@ -101,8 +98,6 @@ class NewServiceViewModel{
             }
         }
     }
-    
-    
     
     public var countElements:Int{
         return self.infos?.registerUsers?.count ?? 0
@@ -154,14 +149,18 @@ class NewServiceViewModel{
         
         if professionalMen  == true && professionalFemale == true{
             self.listUserFilter = self.serviceProviders.filter({ $0.professionalGender == "Masculino" || $0.professionalGender == "Feminino"})
-        }else if
+        }else if professionalMen{
+            self.listUserFilter = self.serviceProviders.filter({ $0.professionalGender == "Masculino"})
+        }else{
+            self.listUserFilter = self.serviceProviders.filter({ $0.professionalGender == "Feminino"})
+        }
         
         
+        if !(currentPriceMin == 0 && currentPriceMax == 0) {
+                self.listUserFilter = self.listUserFilter.filter({$0.price < currentPriceMax && $0.price > currentPriceMin})
+        }
         
-       // self.listUserFilter = self.serviceProviders.filter({ $0.professionalGender == professionalMen && $0.professionalGender == professionalFemale && $0.price < currentPriceMax && $0.price > currentPriceMin && $0.homeService == true && $0.searchService == true && $0.takeService == true })
-        
-        
-//        self.listUserFilter = self.serviceProviders.filter({$0.price < currentPriceMax && $0.price > currentPriceMin})
+        self.listUserFilter = self.listUserFilter.filter({$0.homeService == homeService && $0.takeService == takeService && $0.goToService == goToService})
     }
     
     public func clearFilter(){

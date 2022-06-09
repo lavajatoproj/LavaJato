@@ -9,7 +9,7 @@ import UIKit
 
 protocol PriceTableViewCellDelegate:AnyObject{
     func result(priceMin:Double,priceMax:Double,serviceHome:Bool, serviceLocal:Bool, takeService:Bool)
-//    func clear(priceMin:Double,priceMax:Double,type:String)
+    func clean()
 }
 
 class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate{
@@ -20,11 +20,6 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     @IBOutlet weak var bannetCollectionView: UICollectionView!
     @IBOutlet weak var viewResultButton: UIButton!
     @IBOutlet weak var cleanResultButton: UIButton!
-    
-    
-    var getLocation:Int = 0
-    
-   
     
     private weak var delegate:PriceTableViewCellDelegate?
     public func delegate(delegate:PriceTableViewCellDelegate?){
@@ -55,20 +50,21 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
         bannetCollectionView.collectionViewLayout = flowLayout
     }
     
+    private var dataPlace: [ProfileBanner] = []
+    
     @IBAction func tappedViewResultButton(_ sender: UIButton) {
-        self.delegate?.result(priceMin: Double(self.priceMinTextField.text ?? "") ?? 0.0, priceMax: Double(self.priceMaxTextField.text ?? "") ?? 0.0, serviceHome: false,serviceLocal: false, takeService: false)
+        self.delegate?.result(priceMin: Double(self.priceMinTextField.text ?? "") ?? 0.0, priceMax: Double(self.priceMaxTextField.text ?? "") ?? 0.0, serviceHome: dataPlace[1].isSelect,serviceLocal: dataPlace[2].isSelect, takeService: dataPlace[0].isSelect)
     }
     
-    // Aplicar botão de limpar 
     @IBAction func tappedCleanResultButton(_ sender: UIButton) {
-      
-        
+        self.delegate?.clean()
     }
     
     
-    public func setupCell(setup:ProfilePrice){
+    public func setupCell(setup:ProfilePrice,listProfileBanner:[ProfileBanner]){
         self.priceMinTextField.text = String(setup.currentPriceMin)
         self.priceMaxTextField.text = String(setup.currentPriceMax)
+        self.dataPlace = listProfileBanner
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -83,35 +79,16 @@ class PriceTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollect
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        for (index, value) in dataPlace.enumerated(){
+        for (index, _) in dataPlace.enumerated(){
             if index == indexPath.row{
-                dataPlace[index].isSelect = true
-            }else{
-                dataPlace[index].isSelect = false
+                dataPlace[index].isSelect = !dataPlace[index].isSelect
             }
         }
-        
         collectionView.reloadData()
-        
-        if indexPath.item == 0 {
-            self.getLocation = 1
-            print(getLocation)
-        }
-        if indexPath.item == 1 {
-            self.getLocation = 2
-            print(getLocation)
-        }
-        if indexPath.item == 2 {
-            self.getLocation = 3
-            print(getLocation)
-        }
     }
-    
-
 }
 
 extension PriceTableViewCell:UITextFieldDelegate{
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

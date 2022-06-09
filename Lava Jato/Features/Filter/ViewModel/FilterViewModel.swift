@@ -19,25 +19,24 @@ class FilterViewModel{
         self.delegate = delegate
     }
     
-
-    
     init(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double,currentHomeService:Bool,currentTakeService:Bool,currentGoToLocal:Bool){
         self.professionalMen = professionalMen
         self.professionalFemale = professionalFemale
         self.currentPriceMin = currentPriceMin
         self.currentPriceMax = currentPriceMax
-  
-        
+        self.homeService = currentHomeService
+        self.takeService = currentTakeService
+        self.goToService = currentGoToLocal
     }
     
     private var professionalMen:Bool
     private var professionalFemale:Bool
     private var currentPriceMin:Double
     private var currentPriceMax:Double
-    private var homeService:Bool = false
-    private var takeService:Bool = false
-    private var goToService:Bool = false
-   
+    private var homeService:Bool
+    private var takeService:Bool
+    private var goToService:Bool
+    
     
     public var getProfessionalMen:Bool{
         return self.professionalMen
@@ -71,10 +70,15 @@ class FilterViewModel{
         return ProfileGender(stateM: self.professionalMen,stateF: self.professionalFemale)
     }
     
-    
     public var getPrice: ProfilePrice{
         return ProfilePrice(currentPriceMin: self.currentPriceMin, currentPriceMax: self.currentPriceMax)
     }
+    
+    lazy var getProfileBanner: [ProfileBanner] = [
+        ProfileBanner(imgA: #imageLiteral(resourceName: "frame16.png"), isSelect: self.getLocalForService.currentTakeService),
+        ProfileBanner(imgA: #imageLiteral(resourceName: "frame17.png"), isSelect: self.getLocalForService.currentHomeService),
+        ProfileBanner(imgA: #imageLiteral(resourceName: "frame18.png"), isSelect: self.getLocalForService.currentGoToLocal)
+    ]
     
     public var getLocalForService:ProfileLocalService{
         return ProfileLocalService(currentHomeService: self.homeService, currentTakeService: self.takeService , currentGoToLocal: self.goToService )
@@ -92,22 +96,10 @@ class FilterViewModel{
         }
     }
     
-    public func setResult(priceMin: Double, priceMax: Double, serviceHome:Bool, serviceLocal:Bool, takeService:Bool){
-        self.currentPriceMin = priceMin
-        self.currentPriceMax = priceMax
-    
-        
-    }
-    
-    
-    
     public func setStateSexo(stateM: Bool, stateF: Bool){
         self.professionalMen = stateM
         self.professionalFemale = stateF
-        //TO DO: TYPE
     }
-    
-    
 }
 
 

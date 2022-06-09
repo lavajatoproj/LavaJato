@@ -29,7 +29,6 @@ class GenderTableViewCell: UITableViewCell {
         return UINib(nibName: self.identifier, bundle: nil)
     }
     
-   
     override func awakeFromNib() {
         super.awakeFromNib()
         self.manLabel.text = "Profissionais Homens"
@@ -39,6 +38,7 @@ class GenderTableViewCell: UITableViewCell {
     public func setupCell(profile:ProfileGender){
         self.manSwitch.isOn = profile.stateM
         self.womanSwitch.isOn = profile.stateF
+        
     }
     
     private func tappedSwitch(){
@@ -51,6 +51,5 @@ class GenderTableViewCell: UITableViewCell {
     @IBAction func ativoFSwitch(_ sender: UISwitch) {
         self.tappedSwitch()
     }
-    
     
 }

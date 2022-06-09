@@ -9,7 +9,7 @@ import UIKit
 
 protocol FilterViewControllerDelegate:AnyObject{
     func resultFilter(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double,homeService:Bool,takeService:Bool,goToService:Bool)
-//    func clearFilter(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double)
+    func clearFilter()
 }
 
 class FilterViewController: UIViewController{
@@ -31,9 +31,7 @@ class FilterViewController: UIViewController{
     var profMan:Bool?
     var profWon:Bool?
     var priceLimit:String?
-//    var placeService
     
-    //Falta o Type e tambem a localidade
     init?(professionalMen:Bool,professionalFemale:Bool,currentPriceMin:Double,currentPriceMax:Double, currentHomeService:Bool, currentTakeService:Bool, currentGoToLocal:Bool, coder: NSCoder){
         self.viewModel = FilterViewModel(professionalMen: professionalMen, professionalFemale: professionalFemale,currentPriceMin:currentPriceMin,currentPriceMax: currentPriceMax, currentHomeService: currentHomeService, currentTakeService: currentTakeService, currentGoToLocal: currentGoToLocal)
         super.init(coder: coder)
@@ -60,13 +58,10 @@ class FilterViewController: UIViewController{
         self.tViewTableView.register(GenderTableViewCell.nib(), forCellReuseIdentifier: GenderTableViewCell.identifier)
         self.tViewTableView.register(PriceTableViewCell.nib(), forCellReuseIdentifier: PriceTableViewCell.identifier)
     }
-    
 }
 
 // MARK: - Extension
-
-extension FilterViewController:UITableViewDelegate{}
-extension FilterViewController:UITableViewDataSource{
+extension FilterViewController:UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.viewModel.countArray
@@ -80,7 +75,7 @@ extension FilterViewController:UITableViewDataSource{
             return cell ?? UITableViewCell()
         } else {
             let cellV = tableView.dequeueReusableCell(withIdentifier: PriceTableViewCell.identifier, for: indexPath) as? PriceTableViewCell
-            cellV?.setupCell(setup: self.viewModel.getPrice)
+            cellV?.setupCell(setup: self.viewModel.getPrice, listProfileBanner: self.viewModel.getProfileBanner)
             cellV?.delegate(delegate: self)
             return cellV ?? UITableViewCell()
         }
@@ -89,7 +84,6 @@ extension FilterViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.loadHeighForRow(indexPath: indexPath)
     }
-    
 }
 
 extension FilterViewController:GenderTableViewCellDelegate{
@@ -98,25 +92,15 @@ extension FilterViewController:GenderTableViewCellDelegate{
     }
 }
 
-//extension FilterViewController:PlaceCollectionViewCellDelegate{
-////    func chooseLocal(localHome: Bool, search: Bool, takeToPlace: Bool) {
-//////        self.viewModel.
-////    }
-//    
-//    
-//}
-
 extension FilterViewController:PriceTableViewCellDelegate{
     
-    func result(priceMin: Double, priceMax: Double, serviceHome:Bool, serviceLocal:Bool, takeService:Bool ) {
-//        self.viewModel.setResult(priceMin: priceMin, priceMax: priceMax, serviceHome: serviceHome, serviceLocal: serviceLocal, takeService: takeService )
-        self.delegate?.resultFilter(professionalMen: self.viewModel.getProfessionalMen, professionalFemale: self.viewModel.getProfessionalFemale, currentPriceMin: self.viewModel.getCurrentPriceMin, currentPriceMax: self.viewModel.getCurrentPriceMax, homeService: self.viewModel.getHomeService, takeService: self.viewModel.getTakeService, goToService: self.viewModel.getGoToService )
-        
+    func clean() {
+        self.delegate?.clearFilter()
         self.navigationController?.popViewController(animated: true)
     }
     
-//    func clear(priceMin: Double, priceMax: Double, type: String) {
-//        self.navigationController?.popViewController(animated: true)
-//    }
-    
+    func result(priceMin: Double, priceMax: Double, serviceHome:Bool, serviceLocal:Bool, takeService:Bool ) {
+        self.delegate?.resultFilter(professionalMen: self.viewModel.getProfessionalMen, professionalFemale: self.viewModel.getProfessionalFemale, currentPriceMin: priceMin, currentPriceMax: priceMax, homeService: serviceHome, takeService: takeService, goToService: serviceLocal )
+        self.navigationController?.popViewController(animated: true)
+    }
 }

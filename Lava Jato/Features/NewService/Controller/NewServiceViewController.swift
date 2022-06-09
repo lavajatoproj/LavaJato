@@ -30,14 +30,12 @@ class NewServiceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewModel.delegate(delegate: self)
+        self.viewModel.getFireBaseData(washType: typeWash)
         self.setup()
         self.configItems()
         self.searchBar.delegate = self
-        self.viewModel.delegate(delegate: self)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.viewModel.getFireBaseData(washType: typeWash)
+
     }
     
     func setup(){
@@ -87,7 +85,6 @@ extension NewServiceViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         self.user = self.viewModel.listUserFilter[indexPath.row]
-//        print(user)
         performSegue(withIdentifier: "RequestService", sender: user)
         self.tableView.reloadData()
     }
@@ -95,7 +92,6 @@ extension NewServiceViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return viewModel.loadHeighForRow(indexPath: indexPath)
     }
-    
 }
 
 extension NewServiceViewController: UISearchBarDelegate{
@@ -108,20 +104,16 @@ extension NewServiceViewController: UISearchBarDelegate{
     }
 }
 
-
-extension NewServiceViewController:FilterViewControllerDelegate{    
+extension NewServiceViewController:FilterViewControllerDelegate{
+    
+    func clearFilter() {
+        self.viewModel.clearFilter()
+    }
+    
     func resultFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double, homeService:Bool, takeService:Bool, goToService:Bool) {
         self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax, homeService: homeService, takeService: takeService, goToService: goToService )
         self.tableView.reloadData()
     }
-    
-    
-//    func clearFilter(professionalMen: Bool, professionalFemale: Bool, currentPriceMin: Double, currentPriceMax: Double) {
-//        self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax)
-//        self.tableView.reloadData()
-//    }
-    
-    
 }
 
 extension NewServiceViewController:NewServiceViewModelDelegate{
