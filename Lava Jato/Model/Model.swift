@@ -77,6 +77,7 @@ struct ProfileLocalService{
     let currentTakeService:Bool
     let currentGoToLocal:Bool
 }
+
 struct Professionals{
     var userImage:String
     var userName:String
