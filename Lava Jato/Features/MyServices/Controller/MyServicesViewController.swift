@@ -114,11 +114,14 @@ class MyServicesViewController: UIViewController{
         self.userImageView.contentMode = .scaleAspectFill
         self.userImageView.layer.cornerRadius = userImageView.frame.height / 2
         self.userImageView.clipsToBounds = true
+        self.userImageView.startShimmering()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.getProfileData()
+        self.userImageView.stopShimmering()
     }
+    
     
     func getProfileData(){
         let user = self.firestore?.collection("users").document(self.idUserLog ?? "")

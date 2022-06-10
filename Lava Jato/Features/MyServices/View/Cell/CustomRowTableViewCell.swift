@@ -19,7 +19,7 @@ class CustomRowTableViewCell: UITableViewCell {
     @IBOutlet weak var goInHouseSwitch: UISwitch!
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var haveLocationSwitch: UISwitch!
-    
+    @IBOutlet weak var viewCell: UILabel!
     static let identifier:String = "CustomRowTableViewCell"
     
     static func nib() -> UINib{
