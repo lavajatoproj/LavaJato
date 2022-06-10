@@ -621,8 +621,6 @@ PODS:
     - FBSDKCoreKit (= 12.3.2)
   - Firebase (9.1.0):
     - Firebase/Core (= 9.1.0)
-  - Firebase/Analytics (9.1.0):
-    - Firebase/Core
   - Firebase/Auth (9.1.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 9.1.0)
@@ -898,7 +896,6 @@ PODS:
   - SDWebImage (5.12.5):
     - SDWebImage/Core (= 5.12.5)
   - SDWebImage/Core (5.12.5)
-  - ShimmerSwift (2.1.1)
   - TLCustomMask (2.0.0)
 
 DEPENDENCIES:
@@ -907,7 +904,6 @@ DEPENDENCIES:
   - DropDown
   - FBSDKLoginKit
   - Firebase
-  - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Firestore
   - Firebase/Storage
@@ -916,7 +912,6 @@ DEPENDENCIES:
   - GooglePlaces
   - GoogleSignIn
   - IQKeyboardManager
-  - ShimmerSwift
   - TLCustomMask
 
 SPEC REPOS:
@@ -972,7 +967,6 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - SDWebImage
-    - ShimmerSwift
     - TLCustomMask
 
 SPEC CHECKSUMS:
@@ -1027,9 +1021,8 @@ SPEC CHECKSUMS:
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
-  ShimmerSwift: f7ed2daf9c246de8299dfd9e12c6ab465cba9842
   TLCustomMask: 32bcd873851167c2d2a3726b048766b737873710
 
-PODFILE CHECKSUM: f17b461ed35025d5f02c39ee6f6078f4b5012592
+PODFILE CHECKSUM: f8988eb7085d666b9219837b8164a451b6c1de84
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.11.2
