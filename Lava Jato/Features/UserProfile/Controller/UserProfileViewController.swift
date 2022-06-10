@@ -27,20 +27,6 @@ class UserProfileViewController: UIViewController {
     var idUserLog: String?
     var alert:AlertController?
     
-    func getProfileData(){
-        let user = self.firestore?.collection("users").document(self.idUserLog ?? "")
-        user?.getDocument(completion: { documentSnapshot, error in
-            if error == nil{
-                let data = documentSnapshot?.data()
-                let dataName = data?["name"]
-                self.nameLabel.text = dataName as? String
-                if let url = data?["profileImage"] as? String{
-                    self.userImageView.sd_setImage(with: URL(string: url), completed: nil)
-                }
-            }
-        } )
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.Style()
@@ -66,6 +52,20 @@ class UserProfileViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         self.userImageView.stopShimmering()
+    }
+    
+    func getProfileData(){
+        let user = self.firestore?.collection("users").document(self.idUserLog ?? "")
+        user?.getDocument(completion: { documentSnapshot, error in
+            if error == nil{
+                let data = documentSnapshot?.data()
+                let dataName = data?["name"]
+                self.nameLabel.text = dataName as? String
+                if let url = data?["profileImage"] as? String{
+                    self.userImageView.sd_setImage(with: URL(string: url), completed: nil)
+                }
+            }
+        } )
     }
     
     @IBAction func tappedHelpButton(_ sender: UIButton) {

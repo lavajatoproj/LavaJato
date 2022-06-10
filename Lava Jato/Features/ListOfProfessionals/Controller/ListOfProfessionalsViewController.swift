@@ -22,7 +22,7 @@ class ListOfProfessionalsViewController: UIViewController {
     var serviceProviders:[Professionals] = []
     var listUserFilter:[Professionals] = []
     var professionals:Professionals?
-
+    
     
     
     func setup(){
@@ -56,6 +56,14 @@ class ListOfProfessionalsViewController: UIViewController {
                     self.listUserFilter = self.serviceProviders
                     self.tableView.reloadData()
                 }
+                for document in snapshot.documents {
+                    let data = document.data()
+                    let servers = data["server"]
+                    if servers as? Int == 1{
+                        self.users.append(data)
+                    }
+                }
+                self.tableView.reloadData()
             }
         }
     }
@@ -181,5 +189,5 @@ extension ListOfProfessionalsViewController:FilterViewControllerDelegate{
         self.viewModel.setFilter(professionalMen: professionalMen, professionalFemale: professionalFemale, currentPriceMin: currentPriceMin, currentPriceMax: currentPriceMax, homeService: homeService, takeService: takeService, goToService: goToService )
         self.tableView.reloadData()
     }
-
+    
 }

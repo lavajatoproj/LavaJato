@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,6 +16,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="384" height="189"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GbG-Ip-e2s">
+                        <rect key="frame" x="9" y="9" width="366" height="171"/>
+                        <color key="backgroundColor" red="0.04306555796" green="0.22176246490000001" blue="0.47007129139999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="s0G-Z3-5iv">
                         <rect key="frame" x="315" y="17" width="51" height="31"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,12 +85,15 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="GbG-Ip-e2s" secondAttribute="bottom" constant="9" id="3w3-Ag-gy5"/>
                     <constraint firstItem="HDD-GF-iHI" firstAttribute="centerX" secondItem="pS4-Zz-GWF" secondAttribute="centerX" id="66c-Eh-ciN"/>
                     <constraint firstItem="Z9q-aC-ZEg" firstAttribute="top" secondItem="Rhb-Us-0oH" secondAttribute="bottom" constant="14" id="6jM-HU-l53"/>
+                    <constraint firstAttribute="trailing" secondItem="GbG-Ip-e2s" secondAttribute="trailing" constant="9" id="6rF-Af-a43"/>
                     <constraint firstItem="Z9q-aC-ZEg" firstAttribute="trailing" secondItem="Rhb-Us-0oH" secondAttribute="trailing" id="8dn-Mc-P3R"/>
                     <constraint firstItem="nMH-i0-A3x" firstAttribute="centerX" secondItem="NFN-HM-lPP" secondAttribute="centerX" id="AnH-HG-wKP"/>
                     <constraint firstItem="pS4-Zz-GWF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Chz-fn-57N"/>
                     <constraint firstItem="CzS-Vb-VQV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="ENw-Tq-iDZ"/>
+                    <constraint firstItem="GbG-Ip-e2s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="EdS-Y3-zGP"/>
                     <constraint firstAttribute="trailing" secondItem="Rhb-Us-0oH" secondAttribute="trailing" constant="20" id="EeL-nv-nxg"/>
                     <constraint firstItem="Rhb-Us-0oH" firstAttribute="top" secondItem="CzS-Vb-VQV" secondAttribute="bottom" constant="17" id="HxR-RN-q6O"/>
                     <constraint firstItem="NFN-HM-lPP" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="JJi-y2-QZK"/>
@@ -92,6 +104,7 @@
                     <constraint firstItem="s0G-Z3-5iv" firstAttribute="leading" secondItem="CzS-Vb-VQV" secondAttribute="trailing" constant="10" id="ciC-99-GW9"/>
                     <constraint firstItem="pS4-Zz-GWF" firstAttribute="top" secondItem="Rhb-Us-0oH" secondAttribute="bottom" constant="14" id="fRs-vj-K5B"/>
                     <constraint firstItem="HDD-GF-iHI" firstAttribute="top" secondItem="pS4-Zz-GWF" secondAttribute="bottom" constant="8" symbolic="YES" id="iaj-LP-0qd"/>
+                    <constraint firstItem="GbG-Ip-e2s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="mk8-Zr-lrT"/>
                     <constraint firstItem="CzS-Vb-VQV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nze-zJ-ka8"/>
                     <constraint firstAttribute="trailing" secondItem="s0G-Z3-5iv" secondAttribute="trailing" constant="20" id="oHe-6I-qtt"/>
                     <constraint firstItem="s0G-Z3-5iv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="pux-1V-dvR"/>
@@ -107,8 +120,9 @@
                 <outlet property="priceTextField" destination="Rhb-Us-0oH" id="vKf-yH-1Bg"/>
                 <outlet property="productLabel" destination="CzS-Vb-VQV" id="Cy6-nB-KBg"/>
                 <outlet property="serviceSwitch" destination="s0G-Z3-5iv" id="xaj-LO-nzH"/>
+                <outlet property="viewCell" destination="CzS-Vb-VQV" id="MNt-SY-zzz"/>
             </connections>
-            <point key="canvasLocation" x="-213" y="137"/>
+            <point key="canvasLocation" x="-213.04347826086959" y="136.94196428571428"/>
         </tableViewCell>
     </objects>
 </document>

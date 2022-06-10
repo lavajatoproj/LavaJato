@@ -77,7 +77,7 @@ class ViewModelScreenRegister{
     public func createDropDownGender(button:UIButton){
         genderDropDown.anchorView = button
         genderDropDown.bottomOffset = CGPoint(x: 0, y: button.bounds.height)
-        genderDropDown.dataSource = ["Masculino", "Feminino"]
+        genderDropDown.dataSource = ["Masculino", "Feminino", "Outros"]
         genderDropDown.selectionAction = { (index, item) in
             button.setTitle(item, for: .normal)
         }
