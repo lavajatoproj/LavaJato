@@ -11,7 +11,6 @@ import UIKit
 class ServiceViewModel{
     
     var listServices:[Services2] =  []
-    var xuxu:String?
     
     func list(){
         self.listServices.append(Services2(value: false, house: false, service: "Lavagem Simples", price: 80.00, goInHouse: false, haveLocation: false))

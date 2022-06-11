@@ -28,6 +28,7 @@
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="s0G-Z3-5iv">
                         <rect key="frame" x="315" y="17" width="51" height="31"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="onTintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <connections>
                             <action selector="tappedValueSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="9u1-K6-xAg"/>
                         </connections>
@@ -40,7 +41,7 @@
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HDD-GF-iHI">
                         <rect key="frame" x="38" y="135.5" width="51" height="31"/>
-                        <color key="onTintColor" red="0.0" green="0.21859122580000001" blue="0.51684874300000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="onTintColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <connections>
                             <action selector="tappedHouseSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="9W1-xc-bVy"/>
                         </connections>
@@ -58,7 +59,7 @@
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nMH-i0-A3x">
                         <rect key="frame" x="167.5" y="135.5" width="51" height="31"/>
-                        <color key="onTintColor" red="0.0" green="0.21859122580000001" blue="0.51684874300000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="onTintColor" red="0.94967955010000005" green="1" blue="0.95611733290000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
                             <action selector="tappedServiceInLoco:" destination="KGk-i7-Jjw" eventType="valueChanged" id="km1-To-L0t"/>
                         </connections>
@@ -71,7 +72,7 @@
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gK3-dg-96L">
                         <rect key="frame" x="292" y="135.5" width="51" height="31"/>
-                        <color key="onTintColor" red="0.0" green="0.21859122580000001" blue="0.51684874300000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="onTintColor" red="0.94967955010000005" green="1" blue="0.95611733290000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
                             <action selector="tappedGoHome:" destination="KGk-i7-Jjw" eventType="valueChanged" id="UCx-N4-6aS"/>
                         </connections>

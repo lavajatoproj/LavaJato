@@ -171,8 +171,8 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vtj-wm-gZX">
                                         <rect key="frame" x="32" y="724" width="51" height="31"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="onTintColor" red="0.02257066034" green="0.1437063515" blue="0.32811075449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="thumbTintColor" red="0.95686274509803915" green="0.73725490196078436" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="onTintColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="thumbTintColor" red="0.035547579330000002" green="0.1765482505" blue="0.3657643672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </switch>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4A6-8y-swd">
                                         <rect key="frame" x="36" y="765.5" width="20" height="20"/>
@@ -310,9 +310,8 @@
                                             <constraint firstAttribute="width" constant="40" id="FLn-Ng-9ob"/>
                                             <constraint firstAttribute="height" constant="30" id="pel-Kj-nA1"/>
                                         </constraints>
+                                        <color key="tintColor" red="1" green="0.80000000000000004" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="disabled" image="eyes_on"/>
-                                        <state key="selected" image="eyes_off"/>
                                         <connections>
                                             <action selector="showPassword:" destination="pME-Od-2HJ" eventType="touchUpInside" id="wLE-2b-WSx"/>
                                         </connections>
@@ -537,8 +536,6 @@
         <image name="background" width="440" height="926"/>
         <image name="checkbox" width="20" height="20"/>
         <image name="checkbox1" width="20" height="20"/>
-        <image name="eyes_off" width="40" height="40"/>
-        <image name="eyes_on" width="40" height="40"/>
         <namedColor name="ColorDefault">
             <color red="0.9570000171661377" green="0.7369999885559082" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

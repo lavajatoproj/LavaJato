@@ -31,11 +31,9 @@
                                     </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ut0-rb-LSQ">
                                         <rect key="frame" x="135" y="520" width="144" height="34"/>
-                                        <color key="backgroundColor" red="0.07926870137" green="0.21559977529999999" blue="0.4980687499" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.04306555796" green="0.22176246490000001" blue="0.47007129139999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Atualizar">
-                                            <color key="titleColor" name="ColorDefault"/>
-                                        </state>
+                                        <state key="normal" title="Atualizar"/>
                                         <connections>
                                             <action selector="tappedUpDateButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="non-DK-HpP"/>
                                         </connections>
