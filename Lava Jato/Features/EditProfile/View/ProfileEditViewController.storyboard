@@ -230,7 +230,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Alterar Senha">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" red="0.11157868059999999" green="0.2824388444" blue="0.61462736129999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="0.04306555796" green="0.22176246490000001" blue="0.47007129139999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="tappedChangePassword:" destination="kqS-JS-xWW" eventType="touchUpInside" id="AAg-0P-Qtd"/>
@@ -253,7 +253,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Alterar Serviços">
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" red="0.11157868059999999" green="0.2824388444" blue="0.61462736129999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="0.04306555796" green="0.22176246490000001" blue="0.47007129139999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="tappedChangeService:" destination="kqS-JS-xWW" eventType="touchUpInside" id="XwF-S8-KZz"/>

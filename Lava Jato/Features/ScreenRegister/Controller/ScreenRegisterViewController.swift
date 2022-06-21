@@ -96,7 +96,7 @@ class ScreenRegisterViewController: UIViewController {
     func configPassword(){
         self.viewModelScreenRegister.textFieldSecurity(textField: self.passwordTextField, value: true)
         self.viewModelScreenRegister.textFieldSecurity(textField: self.confirmPasswordTextField, value: true)
-        self.seePasswordButton.setBackgroundImage(UIImage(named: "eyes_off"), for: UIControl.State.normal)
+        self.seePasswordButton.setBackgroundImage(UIImage(systemName: "eye.slash"), for: UIControl.State.normal)
     }
     
     func setButtonColor(){
@@ -201,12 +201,12 @@ class ScreenRegisterViewController: UIViewController {
         if (seePassword == false){
             self.passwordTextField.isSecureTextEntry = true
             self.confirmPasswordTextField.isSecureTextEntry = true
-            sender.setBackgroundImage(UIImage(named: "eyes_off"), for: UIControl.State.normal)
+            sender.setBackgroundImage(UIImage(systemName: "eye.slash"), for: UIControl.State.normal)
             self.seePassword = true
         }else{
             self.passwordTextField.isSecureTextEntry = false
             self.confirmPasswordTextField.isSecureTextEntry = false
-            sender.setBackgroundImage(UIImage(named: "eyes_on"), for: UIControl.State.normal)
+            sender.setBackgroundImage(UIImage(systemName: "eye"), for: UIControl.State.normal)
             seePassword = false
         }
     }

@@ -15,7 +15,6 @@ struct Profile{
     let number:String
     let request:String
     let service:String
-    let payment:String
 }
 struct ProfileService{
     let name:String
@@ -24,7 +23,6 @@ struct ProfileService{
     let number:String
     let request:String
     let service:String
-    let payment:String
 }
 
     

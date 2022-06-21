@@ -35,7 +35,6 @@ class ServiceTableViewCell: UITableViewCell {
         self.adressLabel.text = profile.adress
         self.requestLabel.text = profile.request
         self.serviceLabel.text = profile.service
-        self.paymentLabel.text = profile.payment
     }
     public func dataService(profileService:ProfileService){
         self.nameLabel.text = profileService.name
@@ -44,7 +43,6 @@ class ServiceTableViewCell: UITableViewCell {
         self.adressLabel.text = profileService.adress
         self.requestLabel.text = profileService.request
         self.serviceLabel.text = profileService.service
-        self.paymentLabel.text = profileService.payment
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

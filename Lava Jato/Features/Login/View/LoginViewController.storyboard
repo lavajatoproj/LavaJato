@@ -61,7 +61,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qf8-qH-4ez">
                                 <rect key="frame" x="40" y="403" width="334" height="40.5"/>
-                                <color key="backgroundColor" red="0.95686274510000002" green="0.73725490199999999" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.73725490199999999" blue="0.20000000000000001" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Entrar">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
@@ -129,7 +129,7 @@
                                     <constraint firstAttribute="width" constant="40" id="Tdu-vG-vvc"/>
                                     <constraint firstAttribute="height" constant="30" id="vDo-Bf-G4K"/>
                                 </constraints>
-                                <color key="tintColor" red="0.95686274510000002" green="0.73725490199999999" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.95686274510000002" green="0.73725490199999999" blue="0.20000000000000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <connections>
                                     <action selector="tappedShowPassword:" destination="S5w-gv-iWR" eventType="touchUpInside" id="6hs-CI-wwJ"/>
@@ -171,6 +171,13 @@
                             <constraint firstItem="qf8-qH-4ez" firstAttribute="top" secondItem="ohe-lm-ecW" secondAttribute="bottom" constant="40" id="ziE-Av-Mll"/>
                             <constraint firstItem="TB0-M5-Qg7" firstAttribute="top" secondItem="KNt-Lj-FFi" secondAttribute="bottom" constant="20" id="zmR-RY-RpR"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="KNt-Lj-FFi"/>
+                                <exclude reference="fPY-8k-k3h"/>
+                                <exclude reference="TB0-M5-Qg7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="e3W-zL-eg1"/>
                     <connections>
